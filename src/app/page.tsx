@@ -25,7 +25,7 @@ export default function HomePage() {
         className="text-center pt-12 pb-2 animate-in"
         style={{ "--delay": 0 } as React.CSSProperties}
       >
-        <h1 className="text-display">Apple Beta Tracker</h1>
+        <h1 className="text-display">Apple Release Tracker</h1>
         <div className="gradient-line max-w-64 mx-auto mt-5 mb-5" />
         <p className="text-lg text-[var(--text-secondary)] max-w-lg mx-auto leading-relaxed">
           Every beta, RC, and public release date for iOS, iPadOS, macOS,
@@ -40,7 +40,7 @@ export default function HomePage() {
       >
         {[
           { value: allData.length, label: "Versions" },
-          { value: totalMilestones, label: "Milestones" },
+          { value: totalMilestones, label: "Releases" },
           { value: activeBetas.length, label: "Active Betas" },
           { value: platforms.length, label: "Platforms" },
         ].map((s) => (
@@ -83,7 +83,7 @@ export default function HomePage() {
                   <th>Latest</th>
                   <th className="hidden sm:table-cell">Date</th>
                   <th className="hidden md:table-cell">Age</th>
-                  <th className="text-right">Milestones</th>
+                  <th className="text-right">Releases</th>
                 </tr>
               </thead>
               <tbody>
@@ -151,7 +151,7 @@ export default function HomePage() {
               <tr>
                 <th>Version</th>
                 <th>Released</th>
-                <th className="hidden sm:table-cell">Milestones</th>
+                <th className="hidden sm:table-cell">Releases</th>
                 <th className="hidden md:table-cell">Note</th>
               </tr>
             </thead>

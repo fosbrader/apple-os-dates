@@ -27,7 +27,7 @@ export function Header() {
           <span className="text-[var(--text-tertiary)] font-normal text-sm tracking-wide">
             Apple
           </span>
-          <span className="font-semibold text-sm">Beta Tracker</span>
+          <span className="font-semibold text-sm">Release Tracker</span>
         </Link>
 
         <div className="flex items-center gap-1">

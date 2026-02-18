@@ -17,7 +17,7 @@ const TYPE_COLORS = {
 export function MilestoneTimeline({ milestones }: MilestoneTimelineProps) {
   if (!milestones?.length) {
     return (
-      <p className="text-[var(--text-tertiary)]">No milestones recorded.</p>
+      <p className="text-[var(--text-tertiary)]">No releases recorded.</p>
     );
   }
 

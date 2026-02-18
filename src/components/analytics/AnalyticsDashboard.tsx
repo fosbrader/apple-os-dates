@@ -104,9 +104,9 @@ export function AnalyticsDashboard({
       <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[var(--border)] rounded-2xl overflow-hidden">
         {[
           { value: `${stats.avgCycleDays}d`, label: "Avg. Beta Cycle" },
-          { value: stats.avgMilestones, label: "Avg. Milestones" },
+          { value: stats.avgMilestones, label: "Avg. Releases" },
           { value: `${stats.avgInterval}d`, label: "Avg. Between Betas" },
-          { value: stats.totalMilestones, label: "Total Milestones" },
+          { value: stats.totalMilestones, label: "Total Releases" },
         ].map((s) => (
           <div key={s.label} className="bg-[var(--bg)] text-center py-6 px-4">
             <div className="stat-value">{s.value}</div>
@@ -147,7 +147,7 @@ export function AnalyticsDashboard({
         )}
         {stats.mostBetas && (
           <div className="card">
-            <p className="text-label mb-2">Most Milestones</p>
+            <p className="text-label mb-2">Most Releases</p>
             <div className="stat-value mb-1">
               {stats.mostBetas.milestoneCount}
             </div>
@@ -180,7 +180,7 @@ export function AnalyticsDashboard({
               <tr>
                 <th>Version</th>
                 <th>Platform</th>
-                <th className="text-right">Milestones</th>
+                <th className="text-right">Releases</th>
                 <th className="text-right">Cycle (days)</th>
                 <th className="text-right">Avg. Interval</th>
               </tr>

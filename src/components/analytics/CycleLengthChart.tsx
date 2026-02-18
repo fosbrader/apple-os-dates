@@ -28,7 +28,7 @@ export function CycleLengthChart({ versions }: CycleLengthChartProps) {
     const height = 300;
 
     const iosVersions = versions
-      .filter((v) => v.platform === "iOS" && v.cycleDays !== null)
+      .filter((v) => v.platform === "iOS" && v.cycleDays !== null && v.version.endsWith(".0"))
       .sort((a, b) =>
         a.version.localeCompare(b.version, undefined, { numeric: true })
       );
@@ -124,7 +124,7 @@ export function CycleLengthChart({ versions }: CycleLengthChartProps) {
     <div ref={containerRef} className="surface p-4">
       <svg ref={svgRef} />
       <p className="text-xs text-[var(--text-tertiary)] mt-2 text-center">
-        iOS beta cycle duration (Beta 1 to Public release)
+        iOS major version beta cycles (Beta 1 → Public)
       </p>
     </div>
   );

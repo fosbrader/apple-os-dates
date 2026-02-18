@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Sanity Studio — Apple Beta Tracker",
+  title: "Sanity Studio — Apple Release Tracker",
 };
 
 export default function StudioLayout({

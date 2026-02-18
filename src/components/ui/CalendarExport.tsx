@@ -28,7 +28,7 @@ function generateICS(milestones: BetaMilestone[], versionName: string): string {
       `DTEND;VALUE=DATE:${nextDay}`,
       `SUMMARY:${summary}`,
       description ? `DESCRIPTION:${description}` : "",
-      `UID:${versionName}-${m.label}-${date}@apple-beta-tracker`,
+      `UID:${versionName}-${m.label}-${date}@apple-release-tracker`,
       "END:VEVENT",
     ]
       .filter(Boolean)
@@ -38,7 +38,7 @@ function generateICS(milestones: BetaMilestone[], versionName: string): string {
   return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Apple Beta Tracker//EN",
+    "PRODID:-//Apple Release Tracker//EN",
     `X-WR-CALNAME:${versionName} Betas`,
     ...events,
     "END:VCALENDAR",

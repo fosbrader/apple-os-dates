@@ -109,7 +109,7 @@ export default async function VersionDetailPage({
       >
         <div className="bg-[var(--bg)] text-center py-5 px-4">
           <div className="stat-value">{detail.milestones.length}</div>
-          <div className="stat-label">Milestones</div>
+          <div className="stat-label">Releases</div>
         </div>
         <div className="bg-[var(--bg)] text-center py-5 px-4">
           <div className="stat-value">
@@ -138,7 +138,7 @@ export default async function VersionDetailPage({
         className="animate-in"
         style={{ "--delay": 3 } as React.CSSProperties}
       >
-        <h2 className="text-subheading mb-5">Milestones</h2>
+        <h2 className="text-subheading mb-5">Release History</h2>
         <div className="surface p-6">
           <MilestoneTimeline milestones={detail.milestones} />
         </div>

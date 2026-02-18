@@ -17,12 +17,30 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "https://art.bfosler.com"
+  ),
   title: {
-    default: "Apple Beta Tracker",
-    template: "%s | Apple Beta Tracker",
+    default: "Apple Release Tracker",
+    template: "%s | Apple Release Tracker",
   },
   description:
     "Track every Apple OS beta release date — iOS, iPadOS, macOS, watchOS, tvOS, and visionOS",
+  openGraph: {
+    title: "Apple Release Tracker",
+    description:
+      "Every beta, RC, and public release date for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS",
+    siteName: "Apple Release Tracker",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Apple Release Tracker",
+    description:
+      "Every beta, RC, and public release date for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS",
+  },
   icons: {
     icon: "/icon.svg",
     apple: "/icon.svg",
@@ -30,7 +48,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Beta Tracker",
+    title: "Release Tracker",
   },
   manifest: "/manifest.json",
 };

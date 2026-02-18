@@ -316,7 +316,7 @@ function GanttBar({
   return (
     <div
       className="relative h-7 flex items-center"
-      title={`${bar.durationDays} days, ${bar.milestoneCount} milestones`}
+      title={`${bar.durationDays} days, ${bar.milestoneCount} releases`}
     >
       {/* Background track */}
       <div className="absolute inset-y-0.5 left-0 right-0 rounded bg-[var(--bg-subtle)]" />
