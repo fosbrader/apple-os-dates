@@ -1,0 +1,113 @@
+.glassPanel {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.glassCard {
+  composes: glassPanel;
+  padding: 0;
+}
+
+.glassNav {
+  composes: glassPanel;
+  border-radius: 24px;
+}
+
+/* WebGL canvas overlay */
+.glassCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* CSS-only glass fallback — always rendered as base layer */
+.glassFallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: inherit;
+}
+
+/* Rim light effect using pseudo-element gradient */
+.glassRimLight {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  pointer-events: none;
+
+  /* Top highlight */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.0) 40%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+
+  /* Inset shadow for depth */
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 0 rgba(0, 0, 0, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Content sits above all glass layers */
+.glassContent {
+  position: relative;
+  z-index: 3;
+}
+
+/* When WebGL is active, dim the CSS fallback so it doesn't double-blur */
+.glassPanel:has(.glassCanvas) .glassFallback {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: transparent;
+}
+
+/* Hover state */
+.glassCard:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+.glassCard:hover .glassRimLight {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.0) 50%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+  .glassRimLight {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.0) 40%,
+      rgba(100, 150, 255, 0.03) 100%
+    );
+
+    box-shadow:
+      inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 0 rgba(0, 0, 0, 0.2),
+      0 8px 32px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .glassCard:hover {
+    transform: none;
+  }
+}

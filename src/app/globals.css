@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════
+   MERIDIAN — Design System
+   A precision chronograph for Apple beta tracking
+   ═══════════════════════════════════════════════ */
+
+/* ─── Design Tokens: Dark (default) ─── */
+:root {
+  --bg: #09090b;
+  --bg-subtle: #111114;
+  --bg-muted: #1a1a1f;
+  --bg-elevated: #141417;
+
+  --border: #25252a;
+  --border-hover: #3f3f46;
+
+  --text: #fafaf9;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #52525b;
+
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-muted: rgba(59, 130, 246, 0.12);
+
+  --platform-ios: #007AFF;
+  --platform-ipados: #5856D6;
+  --platform-macos: #FF9500;
+  --platform-watchos: #FF3B30;
+  --platform-tvos: #64D2FF;
+  --platform-visionos: #BF5AF2;
+
+  --milestone-beta: #5AC8FA;
+  --milestone-rc: #FF9F0A;
+  --milestone-public: #30D158;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+}
+
+/* ─── Light Theme ─── */
+[data-theme="light"] {
+  --bg: #f8f8f7;
+  --bg-subtle: #f0efee;
+  --bg-muted: #e5e4e2;
+  --bg-elevated: #ffffff;
+  --border: #d4d4d8;
+  --border-hover: #a1a1aa;
+  --text: #1a1a1c;
+  --text-secondary: #57534e;
+  --text-tertiary: #a1a1aa;
+  --accent: #2563eb;
+  --accent-hover: #3b82f6;
+  --accent-muted: rgba(37, 99, 235, 0.08);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f8f8f7;
+    --bg-subtle: #f0efee;
+    --bg-muted: #e5e4e2;
+    --bg-elevated: #ffffff;
+    --border: #d4d4d8;
+    --border-hover: #a1a1aa;
+    --text: #1a1a1c;
+    --text-secondary: #57534e;
+    --text-tertiary: #a1a1aa;
+    --accent: #2563eb;
+    --accent-hover: #3b82f6;
+    --accent-muted: rgba(37, 99, 235, 0.08);
+  }
+}
+
+/* ─── Base (inside @layer so Tailwind utilities can override) ─── */
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+  }
+
+  [data-theme="light"] { color-scheme: light; }
+
+  body {
+    font-family: var(--font-outfit), system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a { color: inherit; text-decoration: none; }
+}
+
+@media (prefers-color-scheme: light) {
+  html:not([data-theme="dark"]) { color-scheme: light; }
+}
+
+/* Dot grid texture */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, var(--border) 0.5px, transparent 0.5px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, black 10%, transparent 70%);
+  opacity: 0.4;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── Typography ─── */
+.text-display {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.text-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.text-subheading {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+.text-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.font-mono {
+  font-family: var(--font-mono), ui-monospace, 'SF Mono', monospace;
+}
+
+/* ─── Card ─── */
+.card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.card-interactive:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-platform {
+  border-left: 3px solid var(--platform-color, var(--accent));
+}
+
+/* ─── Surface ─── */
+.surface {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+}
+
+/* ─── Badge ─── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.badge-platform {
+  color: white;
+  background: var(--platform-color, var(--accent));
+}
+
+.badge-active {
+  background: rgba(90, 200, 250, 0.12);
+  color: var(--milestone-beta);
+  font-size: 0.6875rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.badge-released {
+  background: rgba(48, 209, 88, 0.1);
+  color: var(--milestone-public);
+  font-size: 0.6875rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* ─── Stat ─── */
+.stat-value {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* ─── Data Table ─── */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 0.625rem 1rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table td {
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table tbody tr {
+  transition: background 0.15s;
+}
+
+.data-table tbody tr:hover {
+  background: var(--bg-subtle);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ─── Gradient Line ─── */
+.gradient-line {
+  height: 2px;
+  border-radius: 1px;
+  background: linear-gradient(
+    90deg,
+    var(--platform-ios),
+    var(--platform-ipados),
+    var(--platform-macos),
+    var(--platform-watchos),
+    var(--platform-tvos),
+    var(--platform-visionos),
+    var(--platform-ios)
+  );
+  background-size: 200% 100%;
+  animation: gradient-flow 8s linear infinite;
+}
+
+@keyframes gradient-flow {
+  from { background-position: 0% 0; }
+  to { background-position: 200% 0; }
+}
+
+/* ─── Stagger Animation ─── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fade-up 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--delay, 0) * 60ms);
+}
+
+/* ─── Milestone Colors ─── */
+.milestone-beta { color: var(--milestone-beta); }
+.milestone-rc { color: var(--milestone-rc); }
+.milestone-public { color: var(--milestone-public); }
+
+/* ─── Select / Input ─── */
+select, input[type="number"] {
+  color: var(--text);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+}
+
+option {
+  background: var(--bg-elevated);
+  color: var(--text);
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-hover); }
+
+/* ─── Selection ─── */
+::selection {
+  background: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+/* ─── Focus ─── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ─── Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  .animate-in { animation: none; opacity: 1; }
+  .gradient-line { animation: none; }
+}

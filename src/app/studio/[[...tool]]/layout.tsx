@@ -1,0 +1,23 @@
+export const metadata = {
+  title: "Sanity Studio — Apple Beta Tracker",
+};
+
+export default function StudioLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      style={{
+        height: "100vh",
+        maxHeight: "100dvh",
+        overscrollBehavior: "none",
+        WebkitFontSmoothing: "antialiased",
+        overflow: "hidden",
+      }}
+    >
+      {children}
+    </div>
+  );
+}
