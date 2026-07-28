@@ -1,4 +1,5 @@
 import { defineField, defineType } from "sanity";
+import { uniquePlatformSlug } from "../validation";
 
 export const platform = defineType({
   name: "platform",
@@ -17,7 +18,7 @@ export const platform = defineType({
       title: "Slug",
       type: "slug",
       options: { source: "name", maxLength: 96 },
-      validation: (rule) => rule.required(),
+      validation: (rule) => rule.required().custom(uniquePlatformSlug),
     }),
     defineField({
       name: "icon",
@@ -31,7 +32,7 @@ export const platform = defineType({
       type: "string",
       description: "Hex color for timeline lane (e.g., #007AFF)",
       validation: (rule) =>
-        rule.regex(/^#[0-9A-Fa-f]{6}$/, {
+        rule.required().regex(/^#[0-9A-Fa-f]{6}$/, {
           name: "hex color",
           invert: false,
         }),
@@ -41,7 +42,7 @@ export const platform = defineType({
       title: "Sort Order",
       type: "number",
       description: "Display order (lower numbers first)",
-      validation: (rule) => rule.required(),
+      validation: (rule) => rule.required().integer().min(0),
     }),
   ],
   preview: {

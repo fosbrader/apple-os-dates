@@ -1,19 +1,24 @@
 {
-  "name": "Apple Release Tracker",
+  "id": "/",
+  "name": "Apple OS Release Tracker",
   "short_name": "Release Tracker",
-  "description": "Track every Apple OS beta release date",
-  "start_url": "./",
-  "scope": "./",
+  "description": "Track Apple OS beta, release candidate, and public release dates.",
+  "lang": "en-US",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#0071e3",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#09090b",
+  "theme_color": "#09090b",
   "orientation": "any",
+  "categories": ["utilities", "productivity"],
   "icons": [
     {
-      "src": "icon.svg",
+      "src": "/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
-      "purpose": "any maskable"
+      "purpose": "any"
     }
   ]
 }

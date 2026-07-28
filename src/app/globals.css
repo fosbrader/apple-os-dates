@@ -117,6 +117,18 @@ body > * {
   z-index: 1;
 }
 
+/* Let the embedded Sanity Studio own the viewport instead of the public shell. */
+body:has(#sanity) > header,
+body:has(#sanity) > footer,
+body:has(#sanity)::before {
+  display: none;
+}
+
+body:has(#sanity) > main {
+  max-width: none;
+  padding: 0;
+}
+
 /* ─── Typography ─── */
 .text-display {
   font-size: clamp(2.5rem, 5vw, 3.75rem);

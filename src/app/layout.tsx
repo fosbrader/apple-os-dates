@@ -2,7 +2,12 @@ import type { Metadata, Viewport } from "next";
 import { Outfit, JetBrains_Mono } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { siteOrigin, withBasePath } from "@/lib/site";
+import {
+  siteDescription,
+  siteName,
+  siteOrigin,
+  withBasePath,
+} from "@/lib/site";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -17,36 +22,76 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
+const socialDescription =
+  "Every beta, release candidate, and public release date for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS.";
+const googleVerification =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
+const bingVerification =
+  process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION?.trim();
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin),
+  applicationName: siteName,
   title: {
-    default: "Apple Release Tracker",
-    template: "%s | Apple Release Tracker",
+    default: siteName,
+    template: `%s | ${siteName}`,
   },
-  description:
-    "Track every Apple OS beta release date — iOS, iPadOS, macOS, watchOS, tvOS, and visionOS",
+  description: siteDescription,
+  keywords: [
+    "Apple release dates",
+    "Apple beta releases",
+    "iOS beta dates",
+    "iPadOS beta dates",
+    "macOS beta dates",
+    "watchOS beta dates",
+    "tvOS beta dates",
+    "visionOS beta dates",
+  ],
+  alternates: {
+    canonical: withBasePath("/"),
+  },
   openGraph: {
-    title: "Apple Release Tracker",
-    description:
-      "Every beta, RC, and public release date for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS",
-    siteName: "Apple Release Tracker",
+    title: siteName,
+    description: socialDescription,
+    url: withBasePath("/"),
+    siteName,
     type: "website",
+    locale: "en_US",
     images: [
       {
         url: withBasePath("/opengraph-image.png"),
         width: 1200,
         height: 630,
-        alt: "Apple Release Tracker",
+        alt: siteName,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Apple Release Tracker",
-    description:
-      "Every beta, RC, and public release date for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS",
+    title: siteName,
+    description: socialDescription,
     images: [withBasePath("/opengraph-image.png")],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  verification:
+    googleVerification || bingVerification
+      ? {
+          ...(googleVerification ? { google: googleVerification } : {}),
+          ...(bingVerification
+            ? { other: { "msvalidate.01": bingVerification } }
+            : {}),
+        }
+      : undefined,
   icons: {
     icon: withBasePath("/icon.svg"),
     apple: withBasePath("/icon.svg"),
@@ -57,6 +102,10 @@ export const metadata: Metadata = {
     title: "Release Tracker",
   },
   manifest: withBasePath("/manifest.json"),
+  category: "technology",
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export const viewport: Viewport = {

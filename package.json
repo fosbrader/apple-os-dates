@@ -1,12 +1,13 @@
 {
   "name": "apple-os-dates",
   "version": "1.0.0",
-  "description": "",
+  "description": "Apple operating-system beta and public release date tracker",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint .",
+    "sanity:seed": "sanity exec scripts/seed-sanity.ts --with-user-token"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/fosbrader/apple-os-dates/issues"
   },
-  "homepage": "https://fosbrader.github.io/apple-os-dates/",
+  "homepage": "https://apple-os-dates.vercel.app/",
   "dependencies": {
     "@sanity/image-url": "^2.0.3",
     "@sanity/vision": "^5.10.0",

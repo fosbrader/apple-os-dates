@@ -11,7 +11,7 @@ export const betaMilestone = defineType({
       type: "string",
       description:
         "e.g., Beta 1, Beta 2, RC, RC 2, Public, GM, Public Beta",
-      validation: (rule) => rule.required(),
+      validation: (rule) => rule.required().min(2).max(80),
     }),
     defineField({
       name: "date",
@@ -32,6 +32,7 @@ export const betaMilestone = defineType({
       type: "boolean",
       description: "True for entries like Beta 1 v2",
       initialValue: false,
+      validation: (rule) => rule.required(),
     }),
   ],
   preview: {

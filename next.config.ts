@@ -5,7 +5,6 @@ const basePath =
   configuredBasePath === "/" ? "" : configuredBasePath.replace(/\/+$/, "");
 
 const nextConfig: NextConfig = {
-  output: "export",
   basePath,
   trailingSlash: true,
   images: {

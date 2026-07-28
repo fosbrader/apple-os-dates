@@ -4,22 +4,98 @@ import {
   getActiveBetas,
   getRecentReleases,
   getAnalyticsData,
-} from "@/lib/seed-data";
+} from "@/lib/sanity.fetch";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
+import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
 import { formatDate, timeAgo } from "@/lib/utils";
+import {
+  absoluteUrl,
+  createPageMetadata,
+  latestDate,
+  siteDescription,
+  siteName,
+} from "@/lib/site";
 
-export default function HomePage() {
-  const platforms = getAllPlatforms();
-  const activeBetas = getActiveBetas();
-  const recentReleases = getRecentReleases();
-  const allData = getAnalyticsData();
+export const metadata = createPageMetadata({
+  title: siteName,
+  description: siteDescription,
+  path: "/",
+  absoluteTitle: true,
+});
+
+export default async function HomePage() {
+  const [platforms, activeBetas, recentReleases, allData] = await Promise.all([
+    getAllPlatforms(),
+    getActiveBetas(),
+    getRecentReleases(),
+    getAnalyticsData(),
+  ]);
   const totalMilestones = allData.reduce(
     (sum, v) => sum + v.milestones.length,
     0
   );
+  const milestoneDates = allData.flatMap((version) =>
+    version.milestones.map((milestone) => milestone.date)
+  );
+  const firstMilestoneDate = milestoneDates.reduce<string | undefined>(
+    (earliest, date) => (!earliest || date < earliest ? date : earliest),
+    undefined
+  );
+  const lastMilestoneDate = latestDate(milestoneDates);
+  const dateModified = latestDate(allData.map((version) => version.updatedAt));
+  const canonical = absoluteUrl("/");
+  const websiteId = `${canonical}#website`;
+  const datasetId = `${canonical}#release-dataset`;
+  const structuredData: JsonLdValue = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": websiteId,
+        url: canonical,
+        name: siteName,
+        description: siteDescription,
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "Dataset",
+        "@id": datasetId,
+        name: "Apple OS Release Date Dataset",
+        description:
+          "Historical beta, release candidate, and public release dates across Apple operating systems.",
+        url: canonical,
+        isPartOf: { "@id": websiteId },
+        isAccessibleForFree: true,
+        dateModified,
+        temporalCoverage:
+          firstMilestoneDate && lastMilestoneDate
+            ? `${firstMilestoneDate}/${lastMilestoneDate}`
+            : undefined,
+        keywords: [
+          "Apple OS release dates",
+          "iOS beta dates",
+          "macOS beta dates",
+          "Apple release history",
+        ],
+        variableMeasured: [
+          "Operating system version",
+          "Release milestone",
+          "Release date",
+        ],
+        hasPart: platforms.map((platform) => ({
+          "@type": "Dataset",
+          name: `${platform.name} Release Dates`,
+          description: `Historical beta, release candidate, and public release dates for ${platform.name}.`,
+          url: absoluteUrl(`/${encodeURIComponent(platform.slug.current)}/`),
+        })),
+      },
+    ],
+  };
 
   return (
-    <div className="space-y-16">
+    <>
+      <JsonLd id="home-structured-data" data={structuredData} />
+      <div className="space-y-16">
       {/* Hero */}
       <section
         className="text-center pt-12 pb-2 animate-in"
@@ -194,6 +270,7 @@ export default function HomePage() {
           </table>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

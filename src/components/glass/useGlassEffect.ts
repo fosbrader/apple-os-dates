@@ -85,8 +85,6 @@ export function useGlassEffect(options: UseGlassEffectOptions = {}) {
     // Capture the area behind the panel using a simple approach:
     // Take a screenshot of the body and crop to the panel's area
     // For performance, we use a reduced-quality canvas capture
-    const panel = panelRef.current;
-    const rect = panel.getBoundingClientRect();
     const dpr = Math.min(window.devicePixelRatio, 2);
 
     // Create an offscreen canvas with the page content
@@ -120,7 +118,7 @@ export function useGlassEffect(options: UseGlassEffectOptions = {}) {
     managerRef.current.updateBackgroundTexture(offscreen);
   }, []);
 
-  const renderFrame = useCallback(() => {
+  const renderFrame = useCallback(function renderGlassFrame() {
     if (
       !managerRef.current?.ready ||
       !canvasRef.current ||
@@ -150,7 +148,7 @@ export function useGlassEffect(options: UseGlassEffectOptions = {}) {
     };
 
     managerRef.current.render(canvas, uniforms);
-    rafRef.current = requestAnimationFrame(renderFrame);
+    rafRef.current = requestAnimationFrame(renderGlassFrame);
   }, [
     blurRadius,
     refractionStrength,

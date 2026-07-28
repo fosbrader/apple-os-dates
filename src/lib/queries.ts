@@ -15,6 +15,7 @@ export const allPlatformsQuery = groq`
 export const platformVersionsQuery = groq`
   *[_type == "releaseVersion" && releaseTrain->platform->slug.current == $platform] | order(version desc) {
     _id,
+    "updatedAt": _updatedAt,
     version,
     publicReleaseDate,
     versionNote,
@@ -40,6 +41,7 @@ export const platformVersionsQuery = groq`
 export const versionDetailQuery = groq`
   *[_type == "releaseVersion" && releaseTrain->platform->slug.current == $platform && version == $version][0] {
     _id,
+    "updatedAt": _updatedAt,
     version,
     releaseNotesUrl,
     keyFeatures,
@@ -110,6 +112,7 @@ export const recentReleasesQuery = groq`
 export const timelineDataQuery = groq`
   *[_type == "releaseVersion"] {
     _id,
+    "updatedAt": _updatedAt,
     version,
     publicReleaseDate,
     milestones,
@@ -132,17 +135,63 @@ export const timelineDataQuery = groq`
 export const analyticsDataQuery = groq`
   *[_type == "releaseVersion"] {
     _id,
+    "updatedAt": _updatedAt,
     version,
     publicReleaseDate,
     milestones,
     releaseTrain-> {
+      _id,
+      displayName,
       majorVersion,
       platform-> {
+        _id,
         name,
         slug,
-        color
+        color,
+        sortOrder
       }
     }
+  }
+`;
+
+// Completed releases used by the version-detail comparison and prediction UI.
+export const completedVersionsQuery = groq`
+  *[
+    _type == "releaseVersion" &&
+    defined(publicReleaseDate) &&
+    count(milestones) >= 2 &&
+    releaseTrain->platform->slug.current == $platform &&
+    version != $version
+  ] {
+    _id,
+    version,
+    publicReleaseDate,
+    milestones,
+    releaseTrain-> {
+      _id,
+      displayName,
+      majorVersion,
+      platform-> {
+        _id,
+        name,
+        slug,
+        color,
+        sortOrder
+      }
+    }
+  }
+`;
+
+// Lightweight index for static params and sitemap generation.
+export const allVersionRoutesQuery = groq`
+  *[
+    _type == "releaseVersion" &&
+    defined(version) &&
+    defined(releaseTrain->platform->slug.current)
+  ] {
+    "platform": releaseTrain->platform->slug.current,
+    version,
+    "updatedAt": _updatedAt
   }
 `;
 

@@ -11,7 +11,6 @@ interface VersionInsightsProps {
   version: ReleaseVersion;
   samePlatformVersions: ReleaseVersion[];
   samePositionVersions: ReleaseVersion[];
-  allCompleted: ReleaseVersion[];
 }
 
 interface Insight {
@@ -25,7 +24,6 @@ export function VersionInsights({
   version,
   samePlatformVersions,
   samePositionVersions,
-  allCompleted,
 }: VersionInsightsProps) {
   const isActive = !version.publicReleaseDate;
   const milestones = version.milestones;

@@ -1,12 +1,18 @@
 /**
- * Seeds the Sanity Content Lake with parsed Apple Notes data.
+ * Idempotently imports parsed Apple Notes data into the Sanity Content Lake.
  *
- * Usage: npx tsx scripts/seed-sanity.ts
+ * Missing documents represented in seed-data.json are created at stable,
+ * canonical IDs. Existing documents (including edits made in Studio) and
+ * documents created only in Sanity are never overwritten or deleted.
  *
- * Requires .env.local with NEXT_PUBLIC_SANITY_PROJECT_ID, NEXT_PUBLIC_SANITY_DATASET, SANITY_API_TOKEN
+ * Usage: npm run sanity:seed
+ *
+ * Uses the authenticated Sanity CLI user by default. For non-interactive
+ * automation, it can also be run directly with SANITY_API_TOKEN in .env.local.
  */
 
 import { createClient } from "@sanity/client";
+import { getCliClient } from "sanity/cli";
 import * as fs from "fs";
 import * as path from "path";
 import * as dotenv from "dotenv";
@@ -16,19 +22,29 @@ dotenv.config({ path: path.join(__dirname, "..", ".env.local") });
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || "production";
 const token = process.env.SANITY_API_TOKEN;
+const runningViaSanityExec = Boolean(process.env.SANITY_BASE_PATH);
 
-if (!projectId || !token) {
-  console.error("Missing NEXT_PUBLIC_SANITY_PROJECT_ID or SANITY_API_TOKEN in .env.local");
+if (!projectId || (!runningViaSanityExec && !token)) {
+  console.error(
+    "Missing NEXT_PUBLIC_SANITY_PROJECT_ID, or run with an authenticated Sanity CLI user / SANITY_API_TOKEN"
+  );
   process.exit(1);
 }
 
-const client = createClient({
-  projectId,
-  dataset,
-  token,
-  apiVersion: "2024-01-01",
-  useCdn: false,
-});
+const client = runningViaSanityExec
+  ? getCliClient({
+      projectId,
+      dataset,
+      apiVersion: "2024-01-01",
+      useCdn: false,
+    })
+  : createClient({
+      projectId,
+      dataset,
+      token,
+      apiVersion: "2024-01-01",
+      useCdn: false,
+    });
 
 interface SeedMilestone {
   label: string;
@@ -61,26 +77,17 @@ async function seed() {
   const seedPath = path.join(__dirname, "seed-data.json");
   const data: SeedData = JSON.parse(fs.readFileSync(seedPath, "utf-8"));
 
-  console.log(`Seeding ${data.platforms.length} platforms, ${data.releaseTrains.length} trains, ${data.releaseVersions.length} versions...`);
+  console.log(
+    `Seeding up to ${data.platforms.length} platforms, ${data.releaseTrains.length} trains, and ${data.releaseVersions.length} versions...`
+  );
+  console.log("Existing and CMS-only documents will be preserved.");
 
-  // Delete existing documents first
-  console.log("Clearing existing data...");
-  const existing = await client.fetch(`*[_type in ["platform", "releaseTrain", "releaseVersion"]]._id`);
-  if (existing.length > 0) {
-    let tx = client.transaction();
-    for (const id of existing) {
-      tx = tx.delete(id);
-    }
-    await tx.commit();
-    console.log(`  Deleted ${existing.length} existing documents`);
-  }
-
-  // 1. Create platforms
-  console.log("Creating platforms...");
+  // 1. Create missing platforms at canonical IDs.
+  console.log("Seeding platforms...");
   let tx = client.transaction();
   for (const p of data.platforms) {
     const id = makeId("platform", p.slug);
-    tx = tx.createOrReplace({
+    tx = tx.createIfNotExists({
       _id: id,
       _type: "platform",
       name: p.name,
@@ -90,15 +97,15 @@ async function seed() {
     });
   }
   await tx.commit();
-  console.log(`  Created ${data.platforms.length} platforms`);
+  console.log(`  Checked ${data.platforms.length} platforms`);
 
-  // 2. Create release trains
-  console.log("Creating release trains...");
+  // 2. Create missing release trains at canonical IDs.
+  console.log("Seeding release trains...");
   tx = client.transaction();
   for (const t of data.releaseTrains) {
     const id = makeId("train", t.platform, String(t.majorVersion));
     const platformId = makeId("platform", t.platform.toLowerCase());
-    tx = tx.createOrReplace({
+    tx = tx.createIfNotExists({
       _id: id,
       _type: "releaseTrain",
       platform: { _type: "reference", _ref: platformId },
@@ -108,12 +115,12 @@ async function seed() {
     });
   }
   await tx.commit();
-  console.log(`  Created ${data.releaseTrains.length} release trains`);
+  console.log(`  Checked ${data.releaseTrains.length} release trains`);
 
-  // 3. Create release versions (batch in groups of 50 to avoid request size limits)
-  console.log("Creating release versions...");
+  // 3. Create missing release versions in batches to avoid request-size limits.
+  console.log("Seeding release versions...");
   const BATCH_SIZE = 50;
-  let created = 0;
+  let checked = 0;
 
   for (let i = 0; i < data.releaseVersions.length; i += BATCH_SIZE) {
     const batch = data.releaseVersions.slice(i, i + BATCH_SIZE);
@@ -123,7 +130,7 @@ async function seed() {
       const id = makeId("version", v.platform, v.version);
       const trainId = makeId("train", v.platform, String(v.majorVersion));
 
-      tx = tx.createOrReplace({
+      tx = tx.createIfNotExists({
         _id: id,
         _type: "releaseVersion",
         releaseTrain: { _type: "reference", _ref: trainId },
@@ -143,11 +150,13 @@ async function seed() {
     }
 
     await tx.commit();
-    created += batch.length;
-    console.log(`  Created ${created}/${data.releaseVersions.length} versions`);
+    checked += batch.length;
+    console.log(
+      `  Checked ${checked}/${data.releaseVersions.length} versions`
+    );
   }
 
-  console.log("\nSeed complete!");
+  console.log("\nImport complete!");
 
   // Verify
   const counts = await client.fetch(`{

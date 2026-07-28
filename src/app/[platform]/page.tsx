@@ -1,25 +1,50 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getAllPlatforms, getPlatformVersions } from "@/lib/seed-data";
+import { getAllPlatforms, getPlatformVersions } from "@/lib/sanity.fetch";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
+import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
 import { formatDate } from "@/lib/utils";
+import {
+  absoluteUrl,
+  createPageMetadata,
+  latestDate,
+} from "@/lib/site";
 
-export function generateStaticParams() {
-  const platforms = getAllPlatforms();
+function platformDescription(name: string, versionCount: number): string {
+  return `Browse ${versionCount} ${name} versions with every tracked beta, release candidate, and public release date in one historical index.`;
+}
+
+export async function generateStaticParams() {
+  const platforms = await getAllPlatforms();
   return platforms.map((p) => ({ platform: p.slug.current }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: Promise<{ platform: string }>;
-}) {
-  return params.then(({ platform: slug }) => {
-    const platforms = getAllPlatforms();
-    const platform = platforms.find((p) => p.slug.current === slug);
+}): Promise<Metadata> {
+  const { platform: slug } = await params;
+  const [platforms, versions] = await Promise.all([
+    getAllPlatforms(),
+    getPlatformVersions(slug),
+  ]);
+  const platform = platforms.find(
+    (candidate) => candidate.slug.current === slug
+  );
+
+  if (!platform) {
     return {
-      title: platform ? `${platform.name} Releases` : "Platform",
+      title: "Platform Not Found",
+      robots: { index: false, follow: false },
     };
+  }
+
+  return createPageMetadata({
+    title: `${platform.name} Release Dates`,
+    description: platformDescription(platform.name, versions.length),
+    path: `/${encodeURIComponent(slug)}/`,
   });
 }
 
@@ -29,12 +54,13 @@ export default async function PlatformPage({
   params: Promise<{ platform: string }>;
 }) {
   const { platform: slug } = await params;
-  const platforms = getAllPlatforms();
+  const [platforms, versions] = await Promise.all([
+    getAllPlatforms(),
+    getPlatformVersions(slug),
+  ]);
   const platform = platforms.find((p) => p.slug.current === slug);
 
   if (!platform) notFound();
-
-  const versions = getPlatformVersions(slug);
 
   const grouped = new Map<number, typeof versions>();
   for (const v of versions) {
@@ -46,9 +72,56 @@ export default async function PlatformPage({
   const sortedGroups = Array.from(grouped.entries()).sort(
     ([a], [b]) => b - a
   );
+  const description = platformDescription(platform.name, versions.length);
+  const canonical = absoluteUrl(`/${encodeURIComponent(slug)}/`);
+  const collectionId = `${canonical}#collection`;
+  const itemListId = `${canonical}#versions`;
+  const dateModified = latestDate(versions.map((version) => version.updatedAt));
+  const structuredData: JsonLdValue = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": collectionId,
+        url: canonical,
+        name: `${platform.name} Release Dates`,
+        description,
+        dateModified,
+        isPartOf: { "@id": `${absoluteUrl("/")}#website` },
+        mainEntity: { "@id": itemListId },
+      },
+      {
+        "@type": "ItemList",
+        "@id": itemListId,
+        name: `${platform.name} Versions`,
+        numberOfItems: versions.length,
+        itemListOrder: "https://schema.org/ItemListOrderDescending",
+        itemListElement: versions.map((version, index) => {
+          const versionUrl = absoluteUrl(
+            `/${encodeURIComponent(slug)}/${encodeURIComponent(version.version)}/`
+          );
+
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            item: {
+              "@type": "Dataset",
+              "@id": `${versionUrl}#release-dataset`,
+              url: versionUrl,
+              name: `${platform.name} ${version.version} Release Dates`,
+              description: `Beta, release candidate, and public release milestones for ${platform.name} ${version.version}.`,
+              dateModified: version.updatedAt,
+            },
+          };
+        }),
+      },
+    ],
+  };
 
   return (
-    <div className="space-y-12">
+    <>
+      <JsonLd id={`${slug}-release-collection`} data={structuredData} />
+      <div className="space-y-12">
       {/* Header */}
       <div
         className="flex items-center gap-4 animate-in"
@@ -58,8 +131,7 @@ export default async function PlatformPage({
         <div>
           <h1 className="text-heading">{platform.name} Releases</h1>
           <p className="text-sm text-[var(--text-secondary)]">
-            <span className="font-mono">{versions.length}</span> versions
-            tracked
+            {description}
           </p>
         </div>
       </div>
@@ -140,6 +212,7 @@ export default async function PlatformPage({
           </div>
         </section>
       ))}
-    </div>
+      </div>
+    </>
   );
 }

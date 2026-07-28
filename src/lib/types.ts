@@ -24,6 +24,7 @@ export interface BetaMilestone {
 
 export interface ReleaseVersion {
   _id: string;
+  updatedAt?: string;
   releaseTrain: ReleaseTrain;
   version: string;
   releaseNotesUrl?: string;
@@ -39,6 +40,7 @@ export interface ReleaseVersion {
 
 export interface ReleaseVersionSummary {
   _id: string;
+  updatedAt?: string;
   version: string;
   publicReleaseDate?: string;
   versionNote?: string;
@@ -51,4 +53,15 @@ export interface ReleaseVersionSummary {
     majorVersion: number;
     platform: Platform;
   };
+}
+
+export interface ReleaseVersionRoute {
+  platform: string;
+  version: string;
+  updatedAt?: string;
+}
+
+export interface HistoricalContext {
+  samePlatformVersions: ReleaseVersion[];
+  samePositionVersions: ReleaseVersion[];
 }

@@ -1,4 +1,5 @@
 import { defineField, defineType } from "sanity";
+import { uniqueReleaseTrain } from "../validation";
 
 export const releaseTrain = defineType({
   name: "releaseTrain",
@@ -17,7 +18,8 @@ export const releaseTrain = defineType({
       title: "Major Version",
       type: "number",
       description: "e.g., 18 for iOS 18.x",
-      validation: (rule) => rule.required(),
+      validation: (rule) =>
+        rule.required().integer().positive().custom(uniqueReleaseTrain),
     }),
     defineField({
       name: "displayName",
@@ -38,7 +40,7 @@ export const releaseTrain = defineType({
       title: "Release Year",
       type: "number",
       description: "Year of initial public release",
-      validation: (rule) => rule.required(),
+      validation: (rule) => rule.required().integer().min(2000).max(2100),
     }),
   ],
   preview: {
