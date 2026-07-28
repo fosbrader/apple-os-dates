@@ -4,7 +4,7 @@ Next.js site for browsing Apple operating-system beta, release candidate, and
 public release dates. Release data is managed in Sanity Studio and rendered on
 Vercel with incremental static regeneration.
 
-Production: <https://apple-os-dates.vercel.app/>
+Production: <https://art.bfosler.com/>
 
 ## Local development
 

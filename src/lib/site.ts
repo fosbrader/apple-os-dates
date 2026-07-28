@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const defaultSiteUrl = "https://apple-os-dates.vercel.app";
+const defaultSiteUrl = "https://art.bfosler.com";
 
 export const siteName = "Apple Release Tracker";
 export const siteDescription =
