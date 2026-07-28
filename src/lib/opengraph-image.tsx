@@ -1,9 +1,7 @@
 import { ImageResponse } from "next/og";
+import { siteHost } from "@/lib/site";
 
-export const runtime = "edge";
-export const alt = "Apple Release Tracker";
-export const size = { width: 1200, height: 630 };
-export const contentType = "image/png";
+export const openGraphImageSize = { width: 1200, height: 630 };
 
 const PLATFORMS = [
   { name: "iOS", color: "#007AFF" },
@@ -14,7 +12,7 @@ const PLATFORMS = [
   { name: "visionOS", color: "#6E5494" },
 ];
 
-export default async function Image() {
+export function createOpenGraphImage() {
   return new ImageResponse(
     (
       <div
@@ -170,10 +168,10 @@ export default async function Image() {
             letterSpacing: "0.05em",
           }}
         >
-          art.bfosler.com
+          {siteHost}
         </p>
       </div>
     ),
-    { ...size }
+    { ...openGraphImageSize }
   );
 }
