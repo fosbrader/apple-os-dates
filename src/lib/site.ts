@@ -48,7 +48,7 @@ export const basePath = normalizeBasePath(
 );
 
 export const siteUrl =
-  normalizeSiteUrl(process.env.NEXT_PUBLIC_SITE_URL) ??
+  normalizeSiteUrl(process.env.CANONICAL_SITE_URL) ??
   normalizeSiteUrl(process.env.VERCEL_PROJECT_PRODUCTION_URL) ??
   defaultSiteUrl;
 

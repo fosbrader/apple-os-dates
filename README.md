@@ -39,7 +39,7 @@ Pushing `main` deploys the application through the connected Vercel project.
 GitHub Pages is intentionally not used, so the Vercel production URL remains
 the single canonical host.
 
-Set `NEXT_PUBLIC_SITE_URL` to the custom production domain before attaching
+Set `CANONICAL_SITE_URL` to the custom production domain before attaching
 one, and add that exact origin to Sanity CORS with credentials enabled.
 Optional Google and Bing verification values are documented in
 `.env.local.example`.
