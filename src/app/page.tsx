@@ -7,7 +7,7 @@ import {
 } from "@/lib/sanity.fetch";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
-import { formatDate, timeAgo } from "@/lib/utils";
+import { daysBetween, formatDate, timeAgo } from "@/lib/utils";
 import {
   absoluteUrl,
   createPageMetadata,
@@ -16,8 +16,10 @@ import {
   siteName,
 } from "@/lib/site";
 
+const homeTitle = "Beta Cadence — Apple OS Beta Dates & Forecasts";
+
 export const metadata = createPageMetadata({
-  title: siteName,
+  title: homeTitle,
   description: siteDescription,
   path: "/",
   absoluteTitle: true,
@@ -43,6 +45,19 @@ export default async function HomePage() {
   );
   const lastMilestoneDate = latestDate(milestoneDates);
   const dateModified = latestDate(allData.map((version) => version.updatedAt));
+  const latestActiveMilestoneDate = latestDate(
+    activeBetas.flatMap((version) =>
+      version.milestones.map((milestone) => milestone.date)
+    )
+  );
+  const activeDataAgeDays = latestActiveMilestoneDate
+    ? daysBetween(
+        latestActiveMilestoneDate,
+        new Date().toISOString().slice(0, 10)
+      )
+    : null;
+  const activeDataIsStale =
+    activeDataAgeDays !== null && activeDataAgeDays > 60;
   const canonical = absoluteUrl("/");
   const websiteId = `${canonical}#website`;
   const datasetId = `${canonical}#release-dataset`;
@@ -101,11 +116,11 @@ export default async function HomePage() {
         className="text-center pt-12 pb-2 animate-in"
         style={{ "--delay": 0 } as React.CSSProperties}
       >
-        <h1 className="text-display">Apple Release Tracker</h1>
+        <h1 className="text-display">Beta Cadence</h1>
         <div className="gradient-line max-w-64 mx-auto mt-5 mb-5" />
         <p className="text-lg text-[var(--text-secondary)] max-w-lg mx-auto leading-relaxed">
-          Every beta, RC, and public release date for iOS, iPadOS, macOS,
-          watchOS, tvOS, and visionOS.
+          Browse recorded beta, RC, and public release dates for iOS, iPadOS,
+          macOS, watchOS, tvOS, and visionOS.
         </p>
       </section>
 
@@ -139,6 +154,40 @@ export default async function HomePage() {
         ))}
       </section>
 
+      <section
+        className="surface p-6 sm:p-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between animate-in"
+        style={{ "--delay": 3 } as React.CSSProperties}
+      >
+        <div className="max-w-2xl">
+          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--accent)]">
+            Evidence-based forecasts
+          </p>
+          <h2 className="text-subheading mt-2">
+            Explore likely release windows—not made-up exact dates.
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+            Forecasts use comparable historical beta cycles to show a median
+            estimate, an interquartile date range, sample size, and confidence
+            level. Stale or insufficient data is called out instead of forced
+            into a prediction.
+          </p>
+        </div>
+        <div className="flex shrink-0 flex-wrap gap-3">
+          <Link
+            href="/forecasts"
+            className="inline-flex items-center rounded-lg bg-[var(--accent-cta)] px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--accent-cta-hover)]"
+          >
+            View forecasts
+          </Link>
+          <Link
+            href="/methodology"
+            className="inline-flex items-center rounded-lg surface px-4 py-2 text-sm font-medium text-[var(--accent)] hover:bg-[var(--bg-subtle)]"
+          >
+            How it works
+          </Link>
+        </div>
+      </section>
+
       {/* Active Betas */}
       {activeBetas.length > 0 && (
         <section>
@@ -148,6 +197,20 @@ export default async function HomePage() {
           >
             Active Betas
           </h2>
+          {activeDataIsStale && latestActiveMilestoneDate && (
+            <div className="mb-4 rounded-xl border border-[var(--milestone-rc)]/40 bg-[var(--bg-subtle)] px-4 py-3 text-sm text-[var(--text-secondary)]">
+              The latest recorded active milestone is{" "}
+              <strong className="text-[var(--text)]">
+                {formatDate(latestActiveMilestoneDate)}
+              </strong>
+              . Active-cycle data may be incomplete until newer milestones are
+              added.{" "}
+              <Link href="/contact" className="text-[var(--accent)] hover:underline">
+                Report an update
+              </Link>
+              .
+            </div>
+          )}
           <div
             className="surface overflow-hidden animate-in"
             style={{ "--delay": 4 } as React.CSSProperties}

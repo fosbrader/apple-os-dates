@@ -53,7 +53,7 @@ export default async function TimelinePage() {
       <div className="animate-in" style={{ "--delay": 0 } as React.CSSProperties}>
         <h1 className="text-heading">Release Timeline</h1>
         <p className="text-sm text-[var(--text-secondary)] mt-1">
-          Explore every beta, RC, and public release across all Apple platforms.
+          Explore recorded beta, RC, and public releases across Apple platforms.
         </p>
       </div>
       <div className="animate-in" style={{ "--delay": 1 } as React.CSSProperties}>

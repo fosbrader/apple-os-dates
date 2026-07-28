@@ -98,7 +98,7 @@ export default async function PlatformPage({
         itemListOrder: "https://schema.org/ItemListOrderDescending",
         itemListElement: versions.map((version, index) => {
           const versionUrl = absoluteUrl(
-            `/${encodeURIComponent(slug)}/${encodeURIComponent(version.version)}/`
+            `/${encodeURIComponent(slug)}/${encodeURIComponent(version.version)}`
           );
 
           return {

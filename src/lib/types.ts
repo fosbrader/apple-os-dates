@@ -19,6 +19,8 @@ export interface BetaMilestone {
   label: string;
   date: string;
   note?: string;
+  sourceUrl?: string;
+  sourceLabel?: string;
   isRevision: boolean;
 }
 

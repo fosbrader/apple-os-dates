@@ -50,6 +50,8 @@ interface SeedMilestone {
   label: string;
   date: string;
   note?: string;
+  sourceUrl?: string;
+  sourceLabel?: string;
   isRevision: boolean;
 }
 
@@ -144,6 +146,8 @@ async function seed() {
           label: m.label,
           date: m.date,
           note: m.note || undefined,
+          sourceUrl: m.sourceUrl || undefined,
+          sourceLabel: m.sourceLabel || undefined,
           isRevision: m.isRevision,
         })),
       });

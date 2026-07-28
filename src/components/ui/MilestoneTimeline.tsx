@@ -67,6 +67,16 @@ export function MilestoneTimeline({ milestones }: MilestoneTimelineProps) {
                   {m.note}
                 </span>
               )}
+              {m.sourceUrl && (
+                <a
+                  href={m.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-[var(--accent)] hover:underline"
+                >
+                  {m.sourceLabel || "Source"} &rarr;
+                </a>
+              )}
             </div>
           </div>
         );

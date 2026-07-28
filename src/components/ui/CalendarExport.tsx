@@ -1,9 +1,12 @@
 "use client";
 
 import type { BetaMilestone } from "@/lib/types";
+import { sendAnalyticsEvent } from "@/lib/analytics";
 
 interface CalendarExportProps {
   milestones: BetaMilestone[];
+  platform: string;
+  version: string;
   versionName: string;
 }
 
@@ -28,7 +31,7 @@ function generateICS(milestones: BetaMilestone[], versionName: string): string {
       `DTEND;VALUE=DATE:${nextDay}`,
       `SUMMARY:${summary}`,
       description ? `DESCRIPTION:${description}` : "",
-      `UID:${versionName}-${m.label}-${date}@apple-release-tracker`,
+      `UID:${versionName}-${m.label}-${date}@betacadence.com`,
       "END:VEVENT",
     ]
       .filter(Boolean)
@@ -38,14 +41,19 @@ function generateICS(milestones: BetaMilestone[], versionName: string): string {
   return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Apple Release Tracker//EN",
+    "PRODID:-//Beta Cadence//EN",
     `X-WR-CALNAME:${versionName} Betas`,
     ...events,
     "END:VCALENDAR",
   ].join("\r\n");
 }
 
-export function CalendarExport({ milestones, versionName }: CalendarExportProps) {
+export function CalendarExport({
+  milestones,
+  platform,
+  version,
+  versionName,
+}: CalendarExportProps) {
   function handleExport() {
     const ics = generateICS(milestones, versionName);
     const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
@@ -55,6 +63,11 @@ export function CalendarExport({ milestones, versionName }: CalendarExportProps)
     a.download = `${versionName.replace(/\s+/g, "-").toLowerCase()}-betas.ics`;
     a.click();
     URL.revokeObjectURL(url);
+    sendAnalyticsEvent("calendar_export", {
+      platform,
+      version,
+      calendar_format: "ics",
+    });
   }
 
   return (

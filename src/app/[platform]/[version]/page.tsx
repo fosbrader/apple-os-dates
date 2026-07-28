@@ -10,6 +10,8 @@ import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { MilestoneTimeline } from "@/components/ui/MilestoneTimeline";
 import { CalendarExport } from "@/components/ui/CalendarExport";
 import { VersionInsights } from "@/components/analytics/VersionInsights";
+import { ReleaseViewEvent } from "@/components/analytics/AnalyticsEventTracker";
+import { TrackedReleaseNotesLink } from "@/components/analytics/TrackedReleaseNotesLink";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
 import {
   formatDate,
@@ -29,7 +31,7 @@ function versionDescription(
   publicReleaseDate?: string
 ): string {
   if (publicReleaseDate) {
-    return `See the complete ${platformName} ${version} release timeline: ${milestoneCount} tracked beta and RC milestones through the ${formatDate(publicReleaseDate)} public release.`;
+    return `See the recorded ${platformName} ${version} release timeline: ${milestoneCount} tracked beta and RC milestones through the ${formatDate(publicReleaseDate)} public release.`;
   }
 
   return `Track ${platformName} ${version} through ${milestoneCount} beta and RC milestones, with release dates, cycle analytics, and the latest status.`;
@@ -64,7 +66,7 @@ export async function generateMetadata({
       detail.milestones.length,
       detail.publicReleaseDate
     ),
-    path: `/${encodeURIComponent(slug)}/${encodeURIComponent(ver)}/`,
+    path: `/${encodeURIComponent(slug)}/${encodeURIComponent(ver)}`,
   });
 }
 
@@ -92,7 +94,7 @@ export default async function VersionDetailPage({
     detail.publicReleaseDate
   );
   const canonical = absoluteUrl(
-    `/${encodeURIComponent(slug)}/${encodeURIComponent(ver)}/`
+    `/${encodeURIComponent(slug)}/${encodeURIComponent(ver)}`
   );
   const platformUrl = absoluteUrl(`/${encodeURIComponent(slug)}/`);
   const webpageId = `${canonical}#webpage`;
@@ -169,6 +171,11 @@ export default async function VersionDetailPage({
   return (
     <>
       <JsonLd id="version-structured-data" data={structuredData} />
+      <ReleaseViewEvent
+        platform={platform.name}
+        version={detail.version}
+        releaseStatus={isActive ? "active" : "released"}
+      />
       <div className="space-y-10">
       {/* Breadcrumb */}
       <nav
@@ -280,17 +287,19 @@ export default async function VersionDetailPage({
       >
         <CalendarExport
           milestones={detail.milestones}
+          platform={platform.name}
+          version={detail.version}
           versionName={`${platform.name} ${detail.version}`}
         />
         {detail.releaseNotesUrl && (
-          <a
+          <TrackedReleaseNotesLink
             href={detail.releaseNotesUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            platform={platform.name}
+            version={detail.version}
             className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg surface text-[var(--accent)] hover:bg-[var(--bg-subtle)] transition-colors"
           >
             Release Notes &rarr;
-          </a>
+          </TrackedReleaseNotesLink>
         )}
       </section>
 
@@ -313,14 +322,14 @@ export default async function VersionDetailPage({
           {detail.releaseNotesUrl && (
             <span>
               Source:{" "}
-              <a
+              <TrackedReleaseNotesLink
                 href={detail.releaseNotesUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                platform={platform.name}
+                version={detail.version}
                 className="text-[var(--accent)] hover:underline"
               >
                 Release notes
-              </a>
+              </TrackedReleaseNotesLink>
             </span>
           )}
         </aside>

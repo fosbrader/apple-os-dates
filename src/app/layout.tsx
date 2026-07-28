@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Outfit, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
+import { AnalyticsConsentManager } from "@/components/analytics/AnalyticsConsent";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import {
@@ -8,6 +10,11 @@ import {
   siteOrigin,
   withBasePath,
 } from "@/lib/site";
+import { googleAdsenseAccount } from "@/lib/ads";
+import {
+  publicContactEmail,
+  publicOperatorName,
+} from "@/lib/contact";
 import "./globals.css";
 
 const outfit = Outfit({
@@ -23,11 +30,33 @@ const mono = JetBrains_Mono({
 });
 
 const socialDescription =
-  "Every beta, release candidate, and public release date for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS.";
+  "Browse recorded beta, release candidate, and public release dates for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS.";
 const googleVerification =
   process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 const bingVerification =
   process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION?.trim();
+const configuredGaMeasurementId =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+const gaMeasurementId =
+  configuredGaMeasurementId &&
+  /^G-[A-Z0-9]+$/i.test(configuredGaMeasurementId)
+    ? configuredGaMeasurementId
+    : undefined;
+
+if (configuredGaMeasurementId && !gaMeasurementId) {
+  throw new Error(
+    "NEXT_PUBLIC_GA_MEASUREMENT_ID must be a valid GA4 ID beginning with G-.",
+  );
+}
+
+if (
+  (gaMeasurementId || googleAdsenseAccount) &&
+  (!publicContactEmail || !publicOperatorName)
+) {
+  throw new Error(
+    "SITE_CONTACT_EMAIL and SITE_OPERATOR_NAME are required before GA4 or AdSense verification is enabled.",
+  );
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteOrigin),
@@ -92,6 +121,9 @@ export const metadata: Metadata = {
             : {}),
         }
       : undefined,
+  other: googleAdsenseAccount
+    ? { "google-adsense-account": googleAdsenseAccount }
+    : undefined,
   icons: {
     icon: withBasePath("/icon.svg"),
     apple: withBasePath("/icon.svg"),
@@ -99,7 +131,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Release Tracker",
+    title: siteName,
   },
   manifest: withBasePath("/manifest.json"),
   category: "technology",
@@ -130,11 +162,48 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
+        {gaMeasurementId ? (
+          <Script
+            id="google-consent-defaults"
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                if (!window.location.pathname.startsWith('/studio')) {
+                  window.dataLayer = window.dataLayer || [];
+                  window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+                  window.gtag('consent', 'default', {
+                    analytics_storage: 'denied',
+                    ad_storage: 'denied',
+                    ad_user_data: 'denied',
+                    ad_personalization: 'denied',
+                    wait_for_update: 500
+                  });
+                  window.__betaCadenceConsentDefaultsInitialized = true;
+                  window.__betaCadenceAnalyticsConsent = 'denied';
+                  try {
+                    if (window.localStorage.getItem('apple-release-tracker:analytics-consent') === 'granted') {
+                      window.__betaCadenceAnalyticsConsent = 'granted';
+                      window.gtag('consent', 'update', {
+                        analytics_storage: 'granted',
+                        ad_storage: 'denied',
+                        ad_user_data: 'denied',
+                        ad_personalization: 'denied'
+                      });
+                    }
+                  } catch {}
+                }
+              `,
+            }}
+          />
+        ) : null}
         <Header />
         <main className="max-w-6xl mx-auto px-5 sm:px-6 py-10">
           {children}
         </main>
         <Footer />
+        {gaMeasurementId ? (
+          <AnalyticsConsentManager measurementId={gaMeasurementId} />
+        ) : null}
       </body>
     </html>
   );

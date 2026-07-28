@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import type { Platform, ReleaseVersion } from "@/lib/types";
 import { formatDate, getMilestoneType, daysBetween } from "@/lib/utils";
+import { sendAnalyticsEvent } from "@/lib/analytics";
 
 interface TimelineViewProps {
   data: ReleaseVersion[];
@@ -146,7 +147,11 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
           <label className="text-label">Platform</label>
           <select
             value={selectedPlatform}
-            onChange={(e) => setSelectedPlatform(e.target.value)}
+            onChange={(event) => {
+              const platform = event.target.value;
+              setSelectedPlatform(platform);
+              sendAnalyticsEvent("platform_filter", { platform });
+            }}
             className="px-3 py-1.5 text-sm rounded-lg"
           >
             <option value="all">All</option>

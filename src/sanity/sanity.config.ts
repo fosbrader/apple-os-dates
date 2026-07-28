@@ -7,8 +7,8 @@ import { schemaTypes } from "./schemas";
 import { dataset, projectId } from "./env";
 
 export default defineConfig({
-  name: "apple-beta-tracker",
-  title: "Apple Beta Tracker",
+  name: "beta-cadence",
+  title: "Beta Cadence",
   basePath: "/studio",
   projectId,
   dataset,
@@ -16,7 +16,7 @@ export default defineConfig({
     structureTool({
       structure: (S) =>
         S.list()
-          .title("Apple Release Tracker")
+          .title("Beta Cadence")
           .items([
             S.listItem()
               .title("Release Versions")

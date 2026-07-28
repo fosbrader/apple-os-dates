@@ -96,10 +96,41 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
+      url: absoluteUrl("/forecasts/"),
+      lastModified: siteLastModified,
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
       url: absoluteUrl("/analytics/"),
       lastModified: siteLastModified,
       changeFrequency: "weekly",
       priority: 0.7,
+    },
+    {
+      url: absoluteUrl("/about/"),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: absoluteUrl("/methodology/"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: absoluteUrl("/sources/"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: absoluteUrl("/privacy/"),
+      changeFrequency: "yearly",
+      priority: 0.2,
+    },
+    {
+      url: absoluteUrl("/contact/"),
+      changeFrequency: "yearly",
+      priority: 0.3,
     },
   ];
 
@@ -116,7 +147,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const versionEntries: MetadataRoute.Sitemap = versionRoutes.map((route) => ({
     url: absoluteUrl(
-      `/${pathSegment(route.platform)}/${pathSegment(route.version)}/`
+      `/${pathSegment(route.platform)}/${pathSegment(route.version)}`
     ),
     lastModified: toDate(route.updatedAt),
     changeFrequency: "weekly",

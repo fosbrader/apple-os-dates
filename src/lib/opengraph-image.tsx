@@ -79,7 +79,7 @@ export function createOpenGraphImage() {
                 letterSpacing: "0.05em",
               }}
             >
-              Apple
+              Beta
             </span>
             <span
               style={{
@@ -89,7 +89,7 @@ export function createOpenGraphImage() {
                 letterSpacing: "-0.02em",
               }}
             >
-              Release Tracker
+              Cadence
             </span>
           </div>
 
@@ -112,7 +112,7 @@ export function createOpenGraphImage() {
               marginTop: "8px",
             }}
           >
-            Every beta, RC, and public release date
+            Apple OS release history and forecast ranges
           </p>
         </div>
 

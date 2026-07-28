@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
-const defaultSiteUrl = "https://art.bfosler.com";
+const defaultSiteUrl = "https://www.betacadence.com";
 
-export const siteName = "Apple Release Tracker";
+export const siteName = "Beta Cadence";
 export const siteDescription =
-  "Track Apple OS beta, release candidate, and public release dates for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS.";
+  "Track Apple OS beta cycles, release candidates, public release dates, and history-based forecasts for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS.";
 
 function normalizeBasePath(value: string | undefined): string {
   const trimmed = value?.trim();
@@ -47,10 +47,25 @@ export const basePath = normalizeBasePath(
   process.env.NEXT_PUBLIC_BASE_PATH
 );
 
+const configuredSiteUrl = normalizeSiteUrl(
+  process.env.CANONICAL_SITE_URL
+);
+const configuredSiteOrigin = configuredSiteUrl
+  ? new URL(configuredSiteUrl).origin
+  : null;
+const legacySiteOrigins = new Set(["https://art.bfosler.com"]);
+
+/**
+ * Preview and *.vercel.app deployments intentionally point search metadata at
+ * the one public host. The legacy-domain guard prevents a stale Vercel
+ * environment value from undoing the Beta Cadence migration.
+ */
 export const siteUrl =
-  normalizeSiteUrl(process.env.CANONICAL_SITE_URL) ??
-  normalizeSiteUrl(process.env.VERCEL_PROJECT_PRODUCTION_URL) ??
-  defaultSiteUrl;
+  configuredSiteUrl &&
+  configuredSiteOrigin &&
+  !legacySiteOrigins.has(configuredSiteOrigin)
+    ? configuredSiteUrl
+    : defaultSiteUrl;
 
 const parsedSiteUrl = new URL(siteUrl);
 

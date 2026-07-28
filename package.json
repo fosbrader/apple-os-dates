@@ -1,5 +1,5 @@
 {
-  "name": "apple-os-dates",
+  "name": "beta-cadence",
   "version": "1.0.0",
   "description": "Apple operating-system beta and public release date tracker",
   "scripts": {
@@ -7,6 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "forecast:validate": "tsx scripts/validate-forecasts.ts",
+    "sanity:backfill:2026:check": "sanity exec scripts/backfill-2026-releases.ts --with-user-token",
+    "sanity:backfill:2026:apply": "sanity exec scripts/backfill-2026-releases.ts --with-user-token -- --apply",
     "sanity:seed": "sanity exec scripts/seed-sanity.ts --with-user-token"
   },
   "repository": {
@@ -19,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/fosbrader/apple-os-dates/issues"
   },
-  "homepage": "https://art.bfosler.com/",
+  "homepage": "https://www.betacadence.com/",
   "dependencies": {
     "@sanity/image-url": "^2.0.3",
     "@sanity/vision": "^5.10.0",
