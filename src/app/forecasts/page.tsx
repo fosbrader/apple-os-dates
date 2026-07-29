@@ -14,7 +14,7 @@ import {
   createPageMetadata,
   latestDate,
 } from "@/lib/site";
-import { formatDate } from "@/lib/utils";
+import { daysBetween, formatDate } from "@/lib/utils";
 
 const forecastDescription =
   "Evidence-based Apple OS release windows derived from comparable historical beta cycles, with sample sizes, ranges, backtests, and explicit uncertainty.";
@@ -69,6 +69,52 @@ function DateRange({
   );
 }
 
+function ForecastRange({
+  earliest,
+  median,
+  latest,
+}: {
+  earliest: string;
+  median: string;
+  latest: string;
+}) {
+  const rangeDays = Math.max(daysBetween(earliest, latest), 1);
+  const medianOffset =
+    earliest === latest
+      ? 50
+      : Math.max(
+          0,
+          Math.min(100, (daysBetween(earliest, median) / rangeDays) * 100),
+        );
+
+  return (
+    <div
+      className="forecast-range"
+      role="img"
+      aria-label={`Estimated public release window from ${formatDate(earliest)} to ${formatDate(latest)}, with a historical median of ${formatDate(median)}`}
+    >
+      <div className="forecast-range__heading">
+        <p className="text-label">Estimated public release window</p>
+        <strong>
+          <DateRange earliest={earliest} latest={latest} />
+        </strong>
+      </div>
+      <div className="forecast-range__plot" aria-hidden="true">
+        <span className="forecast-range__band" />
+        <span
+          className="forecast-range__median"
+          style={{ left: `${medianOffset}%` }}
+        />
+      </div>
+      <div className="forecast-range__labels" aria-hidden="true">
+        <span>{formatDate(earliest)}</span>
+        <span>Median · {formatDate(median)}</span>
+        <span>{formatDate(latest)}</span>
+      </div>
+    </div>
+  );
+}
+
 function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
   const platform = forecast.release.releaseTrain.platform;
   const versionHref = `/${platform.slug.current}/${encodeURIComponent(
@@ -81,7 +127,7 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
 
   return (
     <article
-      className="card card-platform space-y-5"
+      className="card card-platform forecast-card space-y-5"
       style={{ "--platform-color": platform.color } as React.CSSProperties}
     >
       {window && forecast.confidence ? (
@@ -125,18 +171,22 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
           <span
             className="ml-auto rounded-full px-2.5 py-1 text-xs font-medium"
             style={CONFIDENCE_STYLES[forecast.confidence]}
-            title={forecast.confidenceReason}
           >
             {CONFIDENCE_LABELS[forecast.confidence]}
           </span>
         )}
+        {forecast.confidenceReason && (
+          <p className="w-full text-xs leading-5 text-[var(--text-tertiary)]">
+            Evidence note: {forecast.confidenceReason}
+          </p>
+        )}
       </header>
 
       <div
-        className={`rounded-xl border p-4 ${
+        className={`forecast-status ${
           forecast.status === "active"
-            ? "border-[var(--border)] bg-[var(--bg-subtle)]"
-            : "border-[color-mix(in_srgb,var(--milestone-rc)_45%,var(--border))] bg-[rgba(255,159,10,0.06)]"
+            ? "forecast-status--active"
+            : "forecast-status--paused"
         }`}
       >
         <p className="text-sm font-semibold">
@@ -152,19 +202,12 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
       </div>
 
       {window && forecast.status === "active" && (
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <div className="surface p-4">
-            <p className="text-label">Estimated public release window</p>
-            <p className="mt-1 font-mono text-base font-semibold">
-              <DateRange
-                earliest={window.earliestDate}
-                latest={window.latestDate}
-              />
-            </p>
-            <p className="mt-1 text-xs text-[var(--text-tertiary)]">
-              Historical median: {formatDate(window.medianDate)}
-            </p>
-          </div>
+        <div className="space-y-3">
+          <ForecastRange
+            earliest={window.earliestDate}
+            median={window.medianDate}
+            latest={window.latestDate}
+          />
 
           {forecast.nextMilestoneWindow && (
             <div className="surface p-4">
@@ -292,26 +335,30 @@ export default async function ForecastsPage() {
   return (
     <>
       <JsonLd id="forecast-structured-data" data={structuredData} />
-      <div className="space-y-10">
+      <div className="space-y-16">
         <header
-          className="animate-in"
+          className="page-intro animate-in"
           style={{ "--delay": 0 } as React.CSSProperties}
         >
-          <p className="text-label">History-based estimates</p>
-          <h1 className="text-heading mt-2">Apple OS Release Forecasts</h1>
-          <p className="mt-2 max-w-3xl text-sm leading-6 text-[var(--text-secondary)]">
-            Public-release and next-milestone windows derived from comparable
-            Apple beta cycles. Every estimate includes its cohort, sample size,
-            historical spread, and a safeguard against stale source data.
-          </p>
-          <p className="mt-3 text-xs text-[var(--text-tertiary)]">
-            Calculated as of <time dateTime={asOfDate}>{formatDate(asOfDate)}</time>.
-            Data refreshes automatically after Sanity updates.
-          </p>
+          <div>
+            <p className="section-kicker">Forecast desk</p>
+            <h1 className="text-heading">Release windows, with receipts.</h1>
+          </div>
+          <div>
+            <p className="page-intro__description">
+              History-based public-release and next-milestone ranges, with the
+              comparison cohort, sample size, spread, confidence, and stale-data
+              safeguards kept visible.
+            </p>
+            <span className="page-intro__meta">
+              Calculated <time dateTime={asOfDate}>{formatDate(asOfDate)}</time>{" "}
+              · Refreshes after Sanity updates
+            </span>
+          </div>
         </header>
 
-        <section
-          className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl bg-[var(--border)] md:grid-cols-4 animate-in"
+        <dl
+          className="metric-rail animate-in"
           style={{ "--delay": 1 } as React.CSSProperties}
           aria-label="Forecast status"
         >
@@ -323,16 +370,17 @@ export default async function ForecastsPage() {
               value: accuracy ? `${accuracy.medianAbsoluteErrorDays}d` : "—",
               label: "Backtest Median Error",
             },
-          ].map((stat) => (
+          ].map((stat, index) => (
             <div
               key={stat.label}
-              className="bg-[var(--bg)] px-4 py-6 text-center"
+              className="metric-rail__item"
+              data-index={String(index + 1).padStart(2, "0")}
             >
-              <div className="stat-value">{stat.value}</div>
-              <div className="stat-label">{stat.label}</div>
+              <dt className="stat-label">{stat.label}</dt>
+              <dd className="stat-value">{stat.value}</dd>
             </div>
           ))}
-        </section>
+        </dl>
 
         {accuracy && (
           <section
@@ -363,11 +411,12 @@ export default async function ForecastsPage() {
 
         {forecasts.length > 0 ? (
           <section className="space-y-5" aria-labelledby="release-forecasts">
-            <div>
-              <h2 id="release-forecasts" className="text-subheading">
-                Current release cycles
-              </h2>
-              <p className="mt-1 text-sm text-[var(--text-secondary)]">
+            <div className="section-heading">
+              <div>
+                <p className="section-kicker">Current cycles</p>
+                <h2 id="release-forecasts">Signals in motion.</h2>
+              </div>
+              <p>
                 Forecasts pause automatically when the latest recorded
                 milestone is more than {FORECAST_STALE_AFTER_DAYS} days old or
                 the entire historical window has elapsed.

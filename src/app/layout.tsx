@@ -143,8 +143,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
-    { media: "(prefers-color-scheme: light)", color: "#f8f8f7" },
+    { media: "(prefers-color-scheme: dark)", color: "#0b0d0f" },
+    { media: "(prefers-color-scheme: light)", color: "#f3f0e8" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -163,6 +163,24 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body>
+        <a className="skip-link" href="#main-content">
+          Skip to content
+        </a>
+        <Script
+          id="theme-initializer"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                var savedTheme = window.localStorage.getItem('theme');
+                if (savedTheme === 'light' || savedTheme === 'dark') {
+                  document.documentElement.setAttribute('data-theme', savedTheme);
+                  document.documentElement.style.colorScheme = savedTheme;
+                }
+              } catch {}
+            `,
+          }}
+        />
         {gaMeasurementId ? (
           <Script
             id="google-consent-defaults"
@@ -198,7 +216,7 @@ export default function RootLayout({
           />
         ) : null}
         <Header />
-        <main className="max-w-6xl mx-auto px-5 sm:px-6 py-10">
+        <main id="main-content" className="site-main">
           {children}
         </main>
         <Footer />

@@ -73,9 +73,12 @@ export function CalendarExport({
   return (
     <button
       onClick={handleExport}
-      className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg surface text-[var(--accent)] hover:bg-[var(--bg-subtle)] transition-colors"
+      type="button"
+      className="button button--primary"
     >
-      Export to Calendar (.ics)
+      Export calendar
+      <span aria-hidden="true">↓</span>
+      <span className="sr-only">as an ICS file</span>
     </button>
   );
 }

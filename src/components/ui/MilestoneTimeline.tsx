@@ -1,86 +1,89 @@
 "use client";
 
 import type { BetaMilestone } from "@/lib/types";
-import { formatDate, getMilestoneType } from "@/lib/utils";
+import { daysBetween, formatDate, getMilestoneType } from "@/lib/utils";
 
 interface MilestoneTimelineProps {
   milestones: BetaMilestone[];
 }
 
-const TYPE_COLORS = {
-  beta: "var(--milestone-beta)",
-  rc: "var(--milestone-rc)",
-  public: "var(--milestone-public)",
-  gm: "var(--milestone-public)",
-};
-
 export function MilestoneTimeline({ milestones }: MilestoneTimelineProps) {
   if (!milestones?.length) {
     return (
-      <p className="text-[var(--text-tertiary)]">No releases recorded.</p>
+      <p className="text-[var(--text-tertiary)]">No milestones recorded.</p>
     );
   }
 
   return (
-    <div className="relative pl-8">
-      {/* Vertical connector line */}
-      <div className="absolute left-[9px] top-3 bottom-3 w-px bg-[var(--border)]" />
-
-      {milestones.map((m, i) => {
-        const type = getMilestoneType(m.label);
-        const color = TYPE_COLORS[type] || TYPE_COLORS.beta;
-        const isFilled = type === "public" || type === "gm";
+    <ol className="milestone-ledger">
+      {milestones.map((milestone, index) => {
+        const type = getMilestoneType(milestone.label);
+        const previous = index > 0 ? milestones[index - 1] : null;
+        const interval = previous
+          ? daysBetween(previous.date, milestone.date)
+          : null;
 
         return (
-          <div
-            key={m._key || i}
-            className="relative flex items-start gap-4 py-2.5 animate-in"
-            style={{ "--delay": i } as React.CSSProperties}
+          <li
+            key={milestone._key || index}
+            className="milestone-ledger__item animate-in"
+            style={{ "--delay": index } as React.CSSProperties}
           >
-            {/* Dot */}
-            <div
-              className="absolute left-[-23px] top-[13px] w-[18px] h-[18px] rounded-full border-2 shrink-0 z-10"
-              style={{
-                borderColor: color,
-                background: isFilled ? color : "var(--bg)",
-              }}
-            />
-
-            {/* Content */}
-            <div className="flex-1 flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
+            <div className="milestone-ledger__rail" aria-hidden="true">
               <span
-                className="font-semibold text-sm"
-                style={{ color }}
-              >
-                {m.label}
-                {m.isRevision && (
-                  <span className="text-[var(--text-tertiary)] text-xs font-normal ml-1">
-                    (rev)
+                className={`milestone-ledger__mark milestone-ledger__mark--${type}`}
+              />
+            </div>
+
+            <div className="milestone-ledger__content">
+              <div className="milestone-ledger__heading">
+                <div>
+                  <span className="milestone-ledger__type">
+                    {type === "public" || type === "gm"
+                      ? "Public milestone"
+                      : type === "rc"
+                        ? "Release candidate"
+                        : "Beta milestone"}
                   </span>
-                )}
-              </span>
-              <span className="font-mono text-sm text-[var(--text-secondary)]">
-                {formatDate(m.date)}
-              </span>
-              {m.note && (
-                <span className="text-xs text-[var(--text-tertiary)] italic">
-                  {m.note}
-                </span>
-              )}
-              {m.sourceUrl && (
-                <a
-                  href={m.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-[var(--accent)] hover:underline"
-                >
-                  {m.sourceLabel || "Source"} &rarr;
-                </a>
+                  <h3>
+                    {milestone.label}
+                    {milestone.isRevision && (
+                      <span className="milestone-ledger__revision">
+                        Revision
+                      </span>
+                    )}
+                  </h3>
+                </div>
+                <time dateTime={milestone.date}>
+                  {formatDate(milestone.date)}
+                </time>
+              </div>
+
+              {(milestone.note || milestone.sourceUrl || interval !== null) && (
+                <div className="milestone-ledger__meta">
+                  {interval !== null && (
+                    <span>
+                      +{interval} {interval === 1 ? "day" : "days"}
+                    </span>
+                  )}
+                  {milestone.note && <p>{milestone.note}</p>}
+                  {milestone.sourceUrl && (
+                    <a
+                      href={milestone.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {milestone.sourceLabel || "Source"}
+                      <span aria-hidden="true"> ↗</span>
+                      <span className="sr-only"> (opens in a new window)</span>
+                    </a>
+                  )}
+                </div>
               )}
             </div>
-          </div>
+          </li>
         );
       })}
-    </div>
+    </ol>
   );
 }

@@ -5,7 +5,6 @@ import {
   getRecentReleases,
   getAnalyticsData,
 } from "@/lib/sanity.fetch";
-import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
 import { daysBetween, formatDate, timeAgo } from "@/lib/utils";
 import {
@@ -33,27 +32,27 @@ export default async function HomePage() {
     getAnalyticsData(),
   ]);
   const totalMilestones = allData.reduce(
-    (sum, v) => sum + v.milestones.length,
-    0
+    (sum, version) => sum + version.milestones.length,
+    0,
   );
   const milestoneDates = allData.flatMap((version) =>
-    version.milestones.map((milestone) => milestone.date)
+    version.milestones.map((milestone) => milestone.date),
   );
   const firstMilestoneDate = milestoneDates.reduce<string | undefined>(
     (earliest, date) => (!earliest || date < earliest ? date : earliest),
-    undefined
+    undefined,
   );
   const lastMilestoneDate = latestDate(milestoneDates);
   const dateModified = latestDate(allData.map((version) => version.updatedAt));
   const latestActiveMilestoneDate = latestDate(
     activeBetas.flatMap((version) =>
-      version.milestones.map((milestone) => milestone.date)
-    )
+      version.milestones.map((milestone) => milestone.date),
+    ),
   );
   const activeDataAgeDays = latestActiveMilestoneDate
     ? daysBetween(
         latestActiveMilestoneDate,
-        new Date().toISOString().slice(0, 10)
+        new Date().toISOString().slice(0, 10),
       )
     : null;
   const activeDataIsStale =
@@ -110,229 +109,320 @@ export default async function HomePage() {
   return (
     <>
       <JsonLd id="home-structured-data" data={structuredData} />
-      <div className="space-y-16">
-      {/* Hero */}
-      <section
-        className="text-center pt-12 pb-2 animate-in"
-        style={{ "--delay": 0 } as React.CSSProperties}
-      >
-        <h1 className="text-display">Beta Cadence</h1>
-        <div className="gradient-line max-w-64 mx-auto mt-5 mb-5" />
-        <p className="text-lg text-[var(--text-secondary)] max-w-lg mx-auto leading-relaxed">
-          Browse recorded beta, RC, and public release dates for iOS, iPadOS,
-          macOS, watchOS, tvOS, and visionOS.
-        </p>
-      </section>
-
-      {/* Stats */}
-      <section
-        className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[var(--border)] rounded-2xl overflow-hidden animate-in"
-        style={{ "--delay": 1 } as React.CSSProperties}
-      >
-        {[
-          { value: allData.length, label: "Versions" },
-          { value: totalMilestones, label: "Releases" },
-          { value: activeBetas.length, label: "Active Betas" },
-          { value: platforms.length, label: "Platforms" },
-        ].map((s) => (
-          <div key={s.label} className="bg-[var(--bg)] text-center py-6 px-4">
-            <div className="stat-value">{s.value}</div>
-            <div className="stat-label">{s.label}</div>
-          </div>
-        ))}
-      </section>
-
-      {/* Platform pills */}
-      <section
-        className="flex flex-wrap gap-2.5 justify-center animate-in"
-        style={{ "--delay": 2 } as React.CSSProperties}
-      >
-        {platforms.map((p) => (
-          <Link key={p._id} href={`/${p.slug.current}`}>
-            <PlatformBadge name={p.name} color={p.color} size="lg" />
-          </Link>
-        ))}
-      </section>
-
-      <section
-        className="surface p-6 sm:p-8 flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between animate-in"
-        style={{ "--delay": 3 } as React.CSSProperties}
-      >
-        <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-wide text-[var(--accent)]">
-            Evidence-based forecasts
-          </p>
-          <h2 className="text-subheading mt-2">
-            Explore likely release windows—not made-up exact dates.
-          </h2>
-          <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-            Forecasts use comparable historical beta cycles to show a median
-            estimate, an interquartile date range, sample size, and confidence
-            level. Stale or insufficient data is called out instead of forced
-            into a prediction.
-          </p>
-        </div>
-        <div className="flex shrink-0 flex-wrap gap-3">
-          <Link
-            href="/forecasts"
-            className="inline-flex items-center rounded-lg bg-[var(--accent-cta)] px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--accent-cta-hover)]"
-          >
-            View forecasts
-          </Link>
-          <Link
-            href="/methodology"
-            className="inline-flex items-center rounded-lg surface px-4 py-2 text-sm font-medium text-[var(--accent)] hover:bg-[var(--bg-subtle)]"
-          >
-            How it works
-          </Link>
-        </div>
-      </section>
-
-      {/* Active Betas */}
-      {activeBetas.length > 0 && (
-        <section>
-          <h2
-            className="text-heading mb-6 animate-in"
-            style={{ "--delay": 3 } as React.CSSProperties}
-          >
-            Active Betas
-          </h2>
-          {activeDataIsStale && latestActiveMilestoneDate && (
-            <div className="mb-4 rounded-xl border border-[var(--milestone-rc)]/40 bg-[var(--bg-subtle)] px-4 py-3 text-sm text-[var(--text-secondary)]">
-              The latest recorded active milestone is{" "}
-              <strong className="text-[var(--text)]">
-                {formatDate(latestActiveMilestoneDate)}
-              </strong>
-              . Active-cycle data may be incomplete until newer milestones are
-              added.{" "}
-              <Link href="/contact" className="text-[var(--accent)] hover:underline">
-                Report an update
+      <div className="home-stack">
+        <section
+          className="home-hero animate-in"
+          style={{ "--delay": 0 } as React.CSSProperties}
+        >
+          <div className="home-hero__copy">
+            <p className="section-kicker">Apple OS release intelligence</p>
+            <h1 className="display-serif">
+              Every beta.
+              <br />
+              <em>Every beat.</em>
+            </h1>
+            <p className="home-hero__dek">
+              A living record of Apple operating-system betas, release
+              candidates, public launches, and evidence-based forecast ranges.
+            </p>
+            <div className="home-hero__actions">
+              <Link href="/forecasts/" className="button button--primary">
+                View release forecasts
+                <span aria-hidden="true">→</span>
               </Link>
-              .
+              <Link href="/timeline/" className="button button--secondary">
+                Explore the timeline
+              </Link>
             </div>
-          )}
-          <div
-            className="surface overflow-hidden animate-in"
-            style={{ "--delay": 4 } as React.CSSProperties}
-          >
-            <table className="data-table">
-              <thead>
-                <tr>
-                  <th>Version</th>
-                  <th>Latest</th>
-                  <th className="hidden sm:table-cell">Date</th>
-                  <th className="hidden md:table-cell">Age</th>
-                  <th className="text-right">Releases</th>
-                </tr>
-              </thead>
-              <tbody>
-                {activeBetas.map((beta) => {
+            <p className="source-note">
+              <span>Independent &amp; unofficial</span>
+              <span>Sanity-sourced index</span>
+              <span>60-second refresh</span>
+            </p>
+          </div>
+
+          <aside className="release-board" aria-label="Current release cycles">
+            <div className="release-board__header">
+              <p>Current cycles</p>
+              <span className="status-pulse" aria-hidden="true" />
+            </div>
+            <div className="release-board__rows">
+              {activeBetas.length > 0 ? (
+                activeBetas.slice(0, 6).map((beta) => {
                   const platform = beta.releaseTrain.platform;
-                  const latest = beta.milestones[beta.milestones.length - 1];
+                  const latest =
+                    beta.milestones[beta.milestones.length - 1];
+
                   return (
-                    <tr key={beta._id}>
-                      <td>
-                        <Link
-                          href={`/${platform.slug.current}/${beta.version}`}
-                          className="flex items-center gap-2.5 group"
-                        >
-                          <span
-                            className="w-2 h-2 rounded-full shrink-0"
-                            style={{ background: platform.color }}
-                          />
-                          <span className="font-medium group-hover:text-[var(--accent)] transition-colors">
+                    <Link
+                      key={beta._id}
+                      href={`/${platform.slug.current}/${beta.version}`}
+                      className="release-board__row"
+                    >
+                      <span className="release-board__identity">
+                        <span
+                          style={{
+                            background: platform.color,
+                            color: platform.color,
+                          }}
+                        />
+                        <span>
+                          <span className="release-board__platform">
                             {platform.name}
                           </span>
-                          <span className="font-mono text-[var(--text-secondary)] text-sm group-hover:text-[var(--accent)] transition-colors">
-                            {beta.version}
+                          <span className="release-board__version">
+                            Version {beta.version}
                           </span>
-                        </Link>
-                      </td>
-                      <td>
-                        {latest && (
-                          <span className="milestone-beta font-medium text-sm">
-                            {latest.label}
-                          </span>
-                        )}
-                      </td>
-                      <td className="hidden sm:table-cell text-[var(--text-secondary)]">
-                        {latest ? formatDate(latest.date) : "—"}
-                      </td>
-                      <td className="hidden md:table-cell text-xs text-[var(--text-tertiary)]">
-                        {latest ? timeAgo(latest.date) : "—"}
-                      </td>
-                      <td className="text-right font-mono text-[var(--text-secondary)]">
-                        {beta.milestones.length}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </section>
-      )}
-
-      {/* Recent Releases */}
-      <section>
-        <h2
-          className="text-heading mb-6 animate-in"
-          style={{ "--delay": 8 } as React.CSSProperties}
-        >
-          Recent Releases
-        </h2>
-        <div
-          className="surface overflow-hidden animate-in"
-          style={{ "--delay": 9 } as React.CSSProperties}
-        >
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th>Version</th>
-                <th>Released</th>
-                <th className="hidden sm:table-cell">Releases</th>
-                <th className="hidden md:table-cell">Note</th>
-              </tr>
-            </thead>
-            <tbody>
-              {recentReleases.map((release) => (
-                <tr key={release._id}>
-                  <td>
-                    <Link
-                      href={`/${release.releaseTrain.platform.slug.current}/${release.version}`}
-                      className="flex items-center gap-2.5"
-                    >
-                      <span
-                        className="w-2 h-2 rounded-full shrink-0"
-                        style={{
-                          background: release.releaseTrain.platform.color,
-                        }}
-                      />
-                      <span className="font-medium">
-                        {release.releaseTrain.platform.name}
+                        </span>
                       </span>
-                      <span className="font-mono text-[var(--text-secondary)] text-sm">
-                        {release.version}
+                      <span className="release-board__milestone">
+                        {latest?.label ?? "Awaiting data"}
                       </span>
                     </Link>
-                  </td>
-                  <td className="text-[var(--text-secondary)]">
+                  );
+                })
+              ) : (
+                <div className="release-board__row">
+                  <span className="release-board__platform">
+                    No active beta cycles
+                  </span>
+                  <span className="release-board__milestone">All clear</span>
+                </div>
+              )}
+            </div>
+            <div className="release-board__footer">
+              <span>{activeBetas.length} cycles tracked</span>
+              <Link href="/forecasts/">Forecast desk ↗</Link>
+            </div>
+          </aside>
+        </section>
+
+        <dl
+          className="metric-rail animate-in"
+          style={{ "--delay": 1 } as React.CSSProperties}
+          aria-label="Dataset overview"
+        >
+          {[
+            { value: allData.length, label: "Versions indexed" },
+            { value: totalMilestones, label: "Milestones recorded" },
+            { value: activeBetas.length, label: "Active cycles" },
+            { value: platforms.length, label: "Platforms covered" },
+          ].map((stat, index) => (
+            <div
+              key={stat.label}
+              className="metric-rail__item"
+              data-index={String(index + 1).padStart(2, "0")}
+            >
+              <dt className="stat-label">{stat.label}</dt>
+              <dd className="stat-value">{stat.value}</dd>
+            </div>
+          ))}
+        </dl>
+
+        <section>
+          <div className="section-heading">
+            <div>
+              <p className="section-kicker">Platform index</p>
+              <h2>Six systems, one release record.</h2>
+            </div>
+            <p>
+              Browse each operating system from its earliest indexed cycle to
+              the newest active beta.
+            </p>
+          </div>
+          <div className="platform-grid">
+            {platforms.map((platform, index) => {
+              const versionCount = allData.filter(
+                (version) =>
+                  version.releaseTrain.platform.slug.current ===
+                  platform.slug.current,
+              ).length;
+
+              return (
+                <Link
+                  key={platform._id}
+                  href={`/${platform.slug.current}`}
+                  className="platform-card"
+                  style={
+                    {
+                      "--platform-color": platform.color,
+                    } as React.CSSProperties
+                  }
+                >
+                  <span className="platform-card__top">
+                    <span className="platform-card__index">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <span className="platform-card__arrow" aria-hidden="true">
+                      ↗
+                    </span>
+                  </span>
+                  <div className="platform-card__bottom">
+                    <div>
+                      <h3>{platform.name}</h3>
+                      <p>{versionCount} versions indexed</p>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
+
+        <section className="forecast-feature">
+          <div className="forecast-feature__copy">
+            <p className="section-kicker">Forecast desk</p>
+            <h2>A range you can inspect, not a date we made up.</h2>
+            <p>
+              Forecasts compare active cycles with relevant historical
+              releases, then publish the median, interquartile window, sample
+              size, confidence, and backtest performance.
+            </p>
+            <div className="forecast-feature__actions">
+              <Link href="/forecasts/" className="button button--primary">
+                Open forecast desk
+                <span aria-hidden="true">→</span>
+              </Link>
+              <Link href="/methodology/" className="button button--secondary">
+                Read the methodology
+              </Link>
+            </div>
+          </div>
+          <div className="forecast-feature__signal" aria-hidden="true">
+            <div className="signal-orbit">
+              <span className="signal-orbit__core">Range</span>
+            </div>
+          </div>
+        </section>
+
+        {activeBetas.length > 0 && (
+          <section>
+            <div className="section-heading">
+              <div>
+                <p className="section-kicker">Live release board</p>
+                <h2>Cycles in motion.</h2>
+              </div>
+              <p>
+                The latest recorded milestone, its age, and the full count for
+                every active operating-system cycle.
+              </p>
+            </div>
+
+            {activeDataIsStale && latestActiveMilestoneDate && (
+              <div className="freshness-notice">
+                <p>
+                  The latest recorded active milestone is{" "}
+                  <strong>{formatDate(latestActiveMilestoneDate)}</strong>.
+                  Active-cycle data may be incomplete until newer milestones
+                  are added. <Link href="/contact/">Report an update</Link>.
+                </p>
+              </div>
+            )}
+
+            <div className="active-cycle-grid">
+              {activeBetas.map((beta) => {
+                const platform = beta.releaseTrain.platform;
+                const latest =
+                  beta.milestones[beta.milestones.length - 1];
+
+                return (
+                  <Link
+                    key={beta._id}
+                    href={`/${platform.slug.current}/${beta.version}`}
+                    className="active-cycle-card"
+                    style={
+                      {
+                        "--platform-color": platform.color,
+                      } as React.CSSProperties
+                    }
+                  >
+                    <div className="active-cycle-card__header">
+                      <span>
+                        <span className="active-cycle-card__name">
+                          {platform.name}
+                        </span>
+                        <span className="active-cycle-card__version">
+                          Version {beta.version}
+                        </span>
+                      </span>
+                      <span className="badge badge-active">In beta</span>
+                    </div>
+                    <div className="active-cycle-card__latest">
+                      <span>Latest recorded milestone</span>
+                      <strong>{latest?.label ?? "Awaiting data"}</strong>
+                      <span
+                        className="active-cycle-card__ticks"
+                        aria-hidden="true"
+                      >
+                        {beta.milestones.slice(-8).map((milestone, index) => (
+                          <span key={milestone._key || index} />
+                        ))}
+                      </span>
+                    </div>
+                    <div className="active-cycle-card__footer">
+                      <p>{latest ? formatDate(latest.date) : "No date"}</p>
+                      <span>
+                        {latest ? timeAgo(latest.date) : "Awaiting data"}
+                        <br />
+                        {beta.milestones.length} milestones
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        <section>
+          <div className="section-heading">
+            <div>
+              <p className="section-kicker">Recently public</p>
+              <h2>Latest arrivals.</h2>
+            </div>
+            <p>
+              The newest public releases in the index, with the full beta and
+              release-candidate record one click away.
+            </p>
+          </div>
+          <div className="release-list">
+            <div className="release-list__header" aria-hidden="true">
+              <span>Version</span>
+              <span>Public release</span>
+              <span>Milestones</span>
+              <span>Editorial note</span>
+            </div>
+            {recentReleases.map((release) => {
+              const platform = release.releaseTrain.platform;
+
+              return (
+                <Link
+                  key={release._id}
+                  href={`/${platform.slug.current}/${release.version}`}
+                  className="release-list__row"
+                >
+                  <span className="release-identity">
+                    <span
+                      className="release-identity__dot"
+                      style={{ background: platform.color }}
+                    />
+                    <span>
+                      <strong>{platform.name}</strong>
+                      <code>{release.version}</code>
+                    </span>
+                  </span>
+                  <span>
                     {release.publicReleaseDate
                       ? formatDate(release.publicReleaseDate)
                       : "—"}
-                  </td>
-                  <td className="hidden sm:table-cell font-mono text-[var(--text-secondary)]">
-                    {release.milestoneCount}
-                  </td>
-                  <td className="hidden md:table-cell text-[var(--text-tertiary)] text-xs">
-                    {release.versionNote || "—"}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+                  </span>
+                  <span className="font-mono">{release.milestoneCount}</span>
+                  <p>{release.versionNote || "—"}</p>
+                </Link>
+              );
+            })}
+          </div>
+        </section>
       </div>
     </>
   );

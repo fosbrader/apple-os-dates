@@ -54,17 +54,20 @@ export function ThemeToggle() {
     window.dispatchEvent(new Event(THEME_CHANGE_EVENT));
   }
 
-  const icon =
-    theme === "dark" ? "\u{263E}" : theme === "light" ? "\u{2600}" : "\u{25D1}";
+  const icon = theme === "dark" ? "●" : theme === "light" ? "○" : "◐";
+  const label =
+    theme === "dark" ? "Dark" : theme === "light" ? "Light" : "System";
 
   return (
     <button
       onClick={cycleTheme}
-      className="w-8 h-8 flex items-center justify-center rounded-lg text-sm text-[var(--text-secondary)] hover:text-[var(--text)] hover:bg-[var(--bg-subtle)] transition-colors"
-      aria-label={`Current theme: ${theme}. Click to toggle.`}
-      title={`Theme: ${theme}`}
+      type="button"
+      className="theme-toggle"
+      aria-label={`Current theme: ${label}. Activate to change theme.`}
+      title={`Theme: ${label}`}
     >
-      {icon}
+      <span aria-hidden="true">{icon}</span>
+      <span className="theme-toggle__label">{label}</span>
     </button>
   );
 }

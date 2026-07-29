@@ -41,21 +41,20 @@ export function ContentPage({
   children,
 }: ContentPageProps) {
   return (
-    <article className="max-w-4xl mx-auto">
+    <article className="content-page">
       <header
-        className="max-w-3xl mb-12 animate-in"
+        className="content-page__header animate-in"
         style={{ "--delay": 0 } as React.CSSProperties}
       >
-        <p className="text-label mb-3">{eyebrow}</p>
-        <h1 className="text-display">{title}</h1>
-        <div className="gradient-line max-w-40 mt-5 mb-5" />
-        <p className="text-lg text-[var(--text-secondary)] leading-relaxed">
-          {description}
-        </p>
+        <div>
+          <p className="section-kicker">{eyebrow}</p>
+          <h1 className="text-display">{title}</h1>
+        </div>
+        <p className="content-page__description">{description}</p>
       </header>
 
       <div
-        className="space-y-10 animate-in"
+        className="content-page__body animate-in"
         style={{ "--delay": 1 } as React.CSSProperties}
       >
         {children}
@@ -70,10 +69,10 @@ export function ContentSection({
   id,
 }: ContentSectionProps) {
   return (
-    <section id={id} className="scroll-mt-24">
-      <h2 className="text-heading mb-4">{title}</h2>
-      <div className="space-y-4 text-[var(--text-secondary)] leading-relaxed">
-        {children}
+    <section id={id} className="content-section">
+      <div>
+        <h2>{title}</h2>
+        <div className="content-section__body">{children}</div>
       </div>
     </section>
   );
@@ -88,25 +87,21 @@ export function Notice({
 
   return (
     <aside
-      className="rounded-xl border p-5"
-      style={{
-        borderColor: style.border,
-        background: style.background,
-      }}
+      className="content-notice"
+      style={
+        {
+          "--notice-border": style.border,
+          "--notice-background": style.background,
+        } as React.CSSProperties
+      }
     >
-      <h2 className="text-subheading mb-2">{title}</h2>
-      <div className="space-y-3 text-sm text-[var(--text-secondary)] leading-relaxed">
-        {children}
-      </div>
+      <h2>{title}</h2>
+      <div className="content-notice__body">{children}</div>
     </aside>
   );
 }
 
-export function OrderedSteps({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export function OrderedSteps({ children }: { children: ReactNode }) {
   return (
     <ol className="space-y-3 list-decimal pl-5 marker:text-[var(--accent)] marker:font-mono">
       {children}

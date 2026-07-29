@@ -19,39 +19,64 @@ const policyLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--border)] mt-16">
-      <div className="max-w-6xl mx-auto px-6 py-10 grid gap-8 sm:grid-cols-[minmax(0,2fr)_repeat(3,minmax(0,1fr))]">
+    <footer className="site-footer">
+      <div className="site-footer__lead">
         <div>
-          <p className="text-sm font-semibold">Beta Cadence</p>
-          <p className="mt-2 max-w-sm text-xs leading-relaxed text-[var(--text-tertiary)]">
-            An independent reference for Apple operating-system beta cycles,
-            release history, and evidence-based forecast ranges. Not affiliated
-            with or endorsed by Apple Inc.
+          <p className="section-kicker">Keep the record accurate</p>
+          <h2>Found a release date that needs a second look?</h2>
+        </div>
+        <Link href="/contact/" className="button button--secondary">
+          Submit a correction
+          <span aria-hidden="true">↗</span>
+        </Link>
+      </div>
+
+      <div className="site-footer__grid">
+        <div className="site-footer__brand">
+          <Link href="/" className="brand-lockup" aria-label="Beta Cadence home">
+            <span className="brand-mark" aria-hidden="true">
+              <span className="brand-mark__orbit" />
+              <span className="brand-mark__core" />
+            </span>
+            <span className="brand-wordmark">
+              <span>Beta</span>
+              <strong>Cadence</strong>
+            </span>
+          </Link>
+          <p>
+            An independent release index for the Apple operating-system
+            ecosystem. Historical dates, transparent forecasts, no rumor mill.
           </p>
         </div>
+
         {[
           { title: "Explore", links: exploreLinks },
           { title: "Project", links: projectLinks },
           { title: "Information", links: policyLinks },
         ].map((group) => (
-          <nav key={group.title} aria-label={group.title}>
-            <p className="text-xs font-semibold uppercase tracking-wide text-[var(--text-secondary)]">
-              {group.title}
-            </p>
-            <ul className="mt-3 space-y-2">
+          <nav
+            key={group.title}
+            aria-label={group.title}
+            className="footer-nav"
+          >
+            <p>{group.title}</p>
+            <ul>
               {group.links.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-xs text-[var(--text-tertiary)] hover:text-[var(--text)]"
-                  >
-                    {link.label}
-                  </Link>
+                  <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>
           </nav>
         ))}
+      </div>
+
+      <div className="site-footer__legal">
+        <p>
+          Not affiliated with or endorsed by Apple Inc. Apple platform names
+          are trademarks of Apple Inc.
+        </p>
+        <p>Built as a public reference · Data maintained in Sanity</p>
       </div>
     </footer>
   );
