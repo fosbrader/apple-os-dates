@@ -1,6 +1,10 @@
 /**
- * Reconciles the launch-critical 2026 release cycles with Apple's official
- * Developer Releases archive.
+ * Legacy launch backfill for the 2026 release cycles.
+ *
+ * This command is superseded by `sanity:history:check` and
+ * `sanity:history:apply`, which reconcile the complete verified chronology.
+ * It remains available as a narrowly guarded audit of its original target
+ * records and must not be used to bypass the history reconciliation plan.
  *
  * The command is a dry run unless `--apply` is passed. Existing records are
  * only eligible for replacement when they match the known one-milestone 26.4
@@ -14,6 +18,11 @@
  */
 
 import { getCliClient } from "sanity/cli";
+import {
+  buildCurrentReleaseTrains,
+  buildCurrentReleaseVersions,
+  currentReleasePlatforms,
+} from "./lib/current-release-cycles";
 
 const apiVersion = "2024-01-01";
 const applyChanges = process.argv.includes("--apply");
@@ -25,39 +34,13 @@ const expectedDataset = "production";
 const expectedTargetCount = 24;
 const maximumCreateCount = 21;
 const maximumUpdateCount = 3;
-const appleReleasesUrl = "https://developer.apple.com/news/releases/";
-
-const platformDefinitions = [
-  { slug: "ios", name: "iOS", archiveSuffix: "a" },
-  { slug: "ipados", name: "iPadOS", archiveSuffix: "b" },
-  { slug: "macos", name: "macOS", archiveSuffix: "c" },
-  { slug: "tvos", name: "tvOS", archiveSuffix: "d" },
-  { slug: "visionos", name: "visionOS", archiveSuffix: "e" },
-  { slug: "watchos", name: "watchOS", archiveSuffix: "f" },
-] as const;
-
-type PlatformSlug = (typeof platformDefinitions)[number]["slug"];
-type PlatformValues = Partial<Record<PlatformSlug, string>>;
-
-interface MilestoneDefinition {
-  label: string;
-  dates: string | PlatformValues;
-  directArchiveIds?: boolean;
-  sourceIds?: PlatformValues;
-  sourceUrl?: string;
-}
-
-interface CycleDefinition {
-  version: "26.4" | "26.5" | "26.6" | "27.0";
-  majorVersion: 26 | 27;
-  milestones: MilestoneDefinition[];
-}
 
 interface SanityMilestone {
   _key: string;
   _type: "betaMilestone";
   label: string;
   date: string;
+  note?: string;
   sourceUrl: string;
   sourceLabel: "Apple Developer";
   isRevision: boolean;
@@ -84,222 +67,6 @@ interface ExistingReleaseDocument {
   milestones?: Array<Partial<SanityMilestone> & { note?: string }>;
 }
 
-const cycles: CycleDefinition[] = [
-  {
-    version: "26.4",
-    majorVersion: 26,
-    milestones: [
-      {
-        label: "Beta 1",
-        dates: "2026-02-16",
-        sourceUrl: "https://developer.apple.com/news/?id=xgkk9w83",
-      },
-      {
-        label: "Beta 2",
-        dates: "2026-02-23",
-        directArchiveIds: true,
-      },
-      {
-        label: "Beta 3",
-        dates: {
-          ios: "2026-03-02",
-          ipados: "2026-03-02",
-          macos: "2026-03-03",
-          tvos: "2026-03-02",
-          visionos: "2026-03-02",
-          watchos: "2026-03-02",
-        },
-        directArchiveIds: true,
-        sourceIds: { macos: "03032026a" },
-      },
-      {
-        label: "Beta 3 v2",
-        dates: {
-          ios: "2026-03-05",
-          ipados: "2026-03-05",
-          watchos: "2026-03-05",
-        },
-        sourceIds: {
-          ios: "03052026a",
-          ipados: "03052026b",
-          watchos: "03052026c",
-        },
-      },
-      {
-        label: "Beta 4",
-        dates: "2026-03-09",
-        directArchiveIds: true,
-      },
-      {
-        label: "RC",
-        dates: "2026-03-18",
-        directArchiveIds: true,
-      },
-      {
-        label: "Public",
-        dates: "2026-03-24",
-        directArchiveIds: true,
-      },
-    ],
-  },
-  {
-    version: "26.5",
-    majorVersion: 26,
-    milestones: [
-      {
-        label: "Beta 1",
-        dates: "2026-03-30",
-        sourceUrl: "https://developer.apple.com/news/?id=z8vzrgzx",
-      },
-      {
-        label: "Beta 1 v2",
-        dates: {
-          ios: "2026-04-03",
-          ipados: "2026-04-03",
-        },
-        sourceIds: {
-          ios: "04032026a",
-          ipados: "04032026b",
-        },
-      },
-      {
-        label: "Beta 2",
-        dates: "2026-04-13",
-        directArchiveIds: true,
-      },
-      {
-        label: "Beta 3",
-        dates: "2026-04-20",
-        directArchiveIds: true,
-      },
-      {
-        label: "Beta 4",
-        dates: "2026-04-27",
-        directArchiveIds: true,
-      },
-      {
-        label: "RC",
-        dates: "2026-05-04",
-        directArchiveIds: true,
-      },
-      {
-        label: "RC 2",
-        dates: {
-          ios: "2026-05-08",
-          ipados: "2026-05-08",
-        },
-        sourceIds: {
-          ios: "05082026a",
-          ipados: "05082026b",
-        },
-      },
-      {
-        label: "Public",
-        dates: "2026-05-11",
-        directArchiveIds: true,
-      },
-    ],
-  },
-  {
-    version: "26.6",
-    majorVersion: 26,
-    milestones: [
-      {
-        label: "Beta 1",
-        dates: "2026-05-26",
-        sourceUrl: "https://developer.apple.com/news/?id=tu7pk9oy",
-      },
-      {
-        label: "Beta 2",
-        dates: "2026-06-15",
-      },
-      {
-        label: "Beta 3",
-        dates: "2026-06-29",
-      },
-      {
-        label: "Beta 4",
-        dates: "2026-07-06",
-      },
-      {
-        label: "Beta 5",
-        dates: "2026-07-13",
-        sourceIds: {
-          ios: "07132026c",
-          ipados: "07132026d",
-          macos: "07132026e",
-          tvos: "07132026f",
-          visionos: "07132026g",
-          watchos: "07132026h",
-        },
-      },
-      {
-        label: "RC",
-        dates: "2026-07-20",
-        directArchiveIds: true,
-      },
-      {
-        label: "Public",
-        dates: "2026-07-27",
-        directArchiveIds: true,
-      },
-    ],
-  },
-  {
-    version: "27.0",
-    majorVersion: 27,
-    milestones: [
-      {
-        label: "Beta 1",
-        dates: "2026-06-08",
-        sourceIds: {
-          ios: "06082026b",
-          ipados: "06082026c",
-          macos: "06082026d",
-          tvos: "06082026e",
-          visionos: "06082026f",
-          watchos: "06082026g",
-        },
-      },
-      {
-        label: "Beta 2",
-        dates: {
-          ios: "2026-06-22",
-          ipados: "2026-06-22",
-          macos: "2026-06-22",
-          tvos: "2026-06-22",
-          visionos: "2026-06-22",
-          watchos: "2026-06-23",
-        },
-      },
-      { label: "Beta 3", dates: "2026-07-06" },
-      {
-        label: "Beta 3 v2",
-        dates: {
-          ipados: "2026-07-13",
-          macos: "2026-07-13",
-        },
-        sourceIds: {
-          ipados: "07132026a",
-          macos: "07132026b",
-        },
-      },
-      {
-        label: "Beta 4",
-        dates: "2026-07-20",
-        sourceIds: {
-          ios: "07202026g",
-          ipados: "07202026h",
-          macos: "07202026i",
-          tvos: "07202026j",
-          visionos: "07202026k",
-          watchos: "07202026l",
-        },
-      },
-    ],
-  },
-];
-
 function makeId(type: string, ...parts: Array<string | number>): string {
   return `${type}-${parts
     .map((part) =>
@@ -308,80 +75,33 @@ function makeId(type: string, ...parts: Array<string | number>): string {
     .join("-")}`;
 }
 
-function valueForPlatform(
-  value: string | PlatformValues | undefined,
-  platform: PlatformSlug,
-): string | undefined {
-  return typeof value === "string" ? value : value?.[platform];
-}
-
-function archiveId(date: string, suffix: string): string {
-  const [year, month, day] = date.split("-");
-  return `${month}${day}${year}${suffix}`;
-}
-
-function milestoneSource(
-  milestone: MilestoneDefinition,
-  platform: (typeof platformDefinitions)[number],
-  date: string,
-): string {
-  const explicitSourceId = milestone.sourceIds?.[platform.slug];
-  if (explicitSourceId) {
-    return `${appleReleasesUrl}?id=${explicitSourceId}`;
-  }
-
-  if (milestone.sourceUrl) {
-    return milestone.sourceUrl;
-  }
-
-  if (milestone.directArchiveIds) {
-    return `${appleReleasesUrl}?id=${archiveId(
-      date,
-      platform.archiveSuffix,
-    )}`;
-  }
-
-  return appleReleasesUrl;
-}
-
 function desiredDocuments(): DesiredReleaseDocument[] {
-  return cycles.flatMap((cycle) =>
-    platformDefinitions.map((platform) => {
-      const milestones = cycle.milestones.flatMap<SanityMilestone>(
-        (milestone, index) => {
-          const date = valueForPlatform(milestone.dates, platform.slug);
-          if (!date) return [];
-
-          return [
-            {
-              _key: `m${index}`,
-              _type: "betaMilestone",
-              label: milestone.label,
-              date,
-              sourceUrl: milestoneSource(milestone, platform, date),
-              sourceLabel: "Apple Developer",
-              isRevision: /\bv\d+\b/i.test(milestone.label),
-            },
-          ];
-        },
-      );
-      const publicReleaseDate = milestones.find(
-        (milestone) => milestone.label === "Public",
-      )?.date;
-
-      return {
-        _id: makeId("version", platform.slug, cycle.version),
-        _type: "releaseVersion",
-        releaseTrain: {
-          _type: "reference",
-          _ref: makeId("train", platform.slug, cycle.majorVersion),
-        },
-        version: cycle.version,
-        ...(publicReleaseDate ? { publicReleaseDate } : {}),
-        milestones,
-      };
-    }),
-  );
+  return buildCurrentReleaseVersions().map((release) => ({
+    _id: makeId("version", release.platformSlug, release.version),
+    _type: "releaseVersion",
+    releaseTrain: {
+      _type: "reference",
+      _ref: makeId(
+        "train",
+        release.platformSlug,
+        release.majorVersion,
+      ),
+    },
+    version: release.version,
+    ...(release.publicReleaseDate
+      ? { publicReleaseDate: release.publicReleaseDate }
+      : {}),
+    milestones: release.milestones.map((milestone) => ({
+      _key: milestone.key,
+      _type: "betaMilestone",
+      label: milestone.label,
+      date: milestone.date,
+      ...(milestone.note ? { note: milestone.note } : {}),
+      sourceUrl: milestone.sourceUrl,
+      sourceLabel: milestone.sourceLabel,
+      isRevision: milestone.isRevision,
+    })),
+  }));
 }
 
 function comparableDesired(document: DesiredReleaseDocument) {
@@ -408,6 +128,7 @@ function comparableMilestone(milestone: Partial<SanityMilestone>) {
     _type: milestone._type,
     label: milestone.label,
     date: milestone.date,
+    note: milestone.note,
     sourceUrl: milestone.sourceUrl,
     sourceLabel: milestone.sourceLabel,
     isRevision: milestone.isRevision,
@@ -489,6 +210,9 @@ async function run() {
   const dataset = clientConfig.dataset;
 
   console.log(`Target: Sanity project ${projectId}, dataset ${dataset}.`);
+  console.warn(
+    "Legacy command: use sanity:history:check/apply for the verified chronology.",
+  );
 
   if (
     projectId !== expectedProjectId ||
@@ -514,7 +238,7 @@ async function run() {
   }
 
   const releaseIds = desired.map((document) => document._id);
-  const requiredTrainIds = platformDefinitions.map((platform) =>
+  const requiredTrainIds = currentReleasePlatforms.map((platform) =>
     makeId("train", platform.slug, 26),
   );
   const existingTrainIds = await client.fetch<string[]>(
@@ -592,17 +316,21 @@ async function run() {
 
   let transaction = client.transaction();
 
-  for (const platform of platformDefinitions) {
+  for (const train of buildCurrentReleaseTrains()) {
     transaction = transaction.createIfNotExists({
-      _id: makeId("train", platform.slug, 27),
+      _id: makeId(
+        "train",
+        train.platformSlug,
+        train.majorVersion,
+      ),
       _type: "releaseTrain",
       platform: {
         _type: "reference",
-        _ref: makeId("platform", platform.slug),
+        _ref: makeId("platform", train.platformSlug),
       },
-      majorVersion: 27,
-      displayName: `${platform.name} 27`,
-      releaseYear: 2026,
+      majorVersion: train.majorVersion,
+      displayName: train.displayName,
+      releaseYear: train.releaseYear,
     });
   }
 

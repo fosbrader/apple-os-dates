@@ -31,7 +31,7 @@ export default defineConfig({
                           .title("Active Betas")
                           .schemaType("releaseVersion")
                           .filter(
-                            '_type == "releaseVersion" && !defined(publicReleaseDate)'
+                            '_type == "releaseVersion" && (releaseStatus == "active" || (!defined(releaseStatus) && !defined(publicReleaseDate)))'
                           )
                           .defaultOrdering([
                             { field: "version", direction: "desc" },
@@ -44,13 +44,26 @@ export default defineConfig({
                           .title("Recently Released")
                           .schemaType("releaseVersion")
                           .filter(
-                            '_type == "releaseVersion" && defined(publicReleaseDate)'
+                            '_type == "releaseVersion" && defined(publicReleaseDate) && (releaseStatus == "released" || !defined(releaseStatus))'
                           )
                           .defaultOrdering([
                             {
                               field: "publicReleaseDate",
                               direction: "desc",
                             },
+                          ])
+                      ),
+                    S.listItem()
+                      .title("Superseded")
+                      .child(
+                        S.documentList()
+                          .title("Superseded")
+                          .schemaType("releaseVersion")
+                          .filter(
+                            '_type == "releaseVersion" && releaseStatus == "superseded"'
+                          )
+                          .defaultOrdering([
+                            { field: "version", direction: "desc" },
                           ])
                       ),
                     S.listItem()

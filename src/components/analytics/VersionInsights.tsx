@@ -1,6 +1,10 @@
 import Link from "next/link";
 import type { ReleaseForecast, ForecastWindow } from "@/lib/forecasts";
-import type { ReleaseVersion } from "@/lib/types";
+import {
+  isActiveRelease,
+  isReleasedRelease,
+  type ReleaseVersion,
+} from "@/lib/types";
 import {
   computeBetaCycleDays,
   computeAverageBetaInterval,
@@ -100,7 +104,8 @@ export function VersionInsights({
   samePlatformVersions,
   samePositionVersions,
 }: VersionInsightsProps) {
-  const isActive = !version.publicReleaseDate;
+  const isActive = isActiveRelease(version);
+  const isReleased = isReleasedRelease(version);
   const milestones = version.milestones;
   const cycleDays = computeBetaCycleDays(version);
 
@@ -249,7 +254,7 @@ export function VersionInsights({
   }
 
   // --- For released versions: compare to historical ---
-  if (!isActive && cycleDays !== null) {
+  if (isReleased && cycleDays !== null) {
     const allCycles = samePlatformVersions
       .map(computeBetaCycleDays)
       .filter((d): d is number => d !== null);
@@ -310,7 +315,7 @@ export function VersionInsights({
 
   // --- Historical comparison table for same-position versions ---
   const comparisonRows = samePositionVersions
-    .filter((v) => v.publicReleaseDate)
+    .filter((v) => isReleasedRelease(v) && v.publicReleaseDate)
     .sort((a, b) =>
       (b.publicReleaseDate || "").localeCompare(a.publicReleaseDate || "")
     )

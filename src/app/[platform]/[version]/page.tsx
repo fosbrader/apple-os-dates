@@ -27,18 +27,31 @@ import {
   siteName,
 } from "@/lib/site";
 import { buildReleaseForecasts } from "@/lib/forecasts";
+import {
+  getReleaseStatus,
+  type ReleaseStatus,
+} from "@/lib/types";
 
 function versionTitle(
   platformName: string,
   version: string,
   milestoneCount: number,
+  releaseStatus: ReleaseStatus,
   publicReleaseDate?: string,
 ): string {
-  if (publicReleaseDate && milestoneCount <= 1) {
+  if (releaseStatus === "superseded") {
+    return `${platformName} ${version} Beta History`;
+  }
+
+  if (
+    releaseStatus === "released" &&
+    publicReleaseDate &&
+    milestoneCount <= 1
+  ) {
     return `${platformName} ${version} Release Date`;
   }
 
-  if (publicReleaseDate) {
+  if (releaseStatus === "released" && publicReleaseDate) {
     return `${platformName} ${version} Beta & Release Dates`;
   }
 
@@ -49,13 +62,22 @@ function versionDescription(
   platformName: string,
   version: string,
   milestoneCount: number,
+  releaseStatus: ReleaseStatus,
   publicReleaseDate?: string,
 ): string {
-  if (publicReleaseDate && milestoneCount <= 1) {
+  if (releaseStatus === "superseded") {
+    return `${platformName} ${version} was superseded before a public release. See its ${milestoneCount} recorded beta and release-candidate milestone${milestoneCount === 1 ? "" : "s"}.`;
+  }
+
+  if (
+    releaseStatus === "released" &&
+    publicReleaseDate &&
+    milestoneCount <= 1
+  ) {
     return `${platformName} ${version} was publicly released on ${formatDate(publicReleaseDate)}. See the recorded release date, source, and historical Apple OS index.`;
   }
 
-  if (publicReleaseDate) {
+  if (releaseStatus === "released" && publicReleaseDate) {
     return `See ${milestoneCount} recorded milestones for ${platformName} ${version}, including beta, RC, and its ${formatDate(publicReleaseDate)} public release.`;
   }
 
@@ -82,18 +104,21 @@ export async function generateMetadata({
   }
 
   const platformName = detail.releaseTrain.platform.name;
+  const releaseStatus = getReleaseStatus(detail);
 
   return createPageMetadata({
     title: versionTitle(
       platformName,
       detail.version,
       detail.milestones.length,
+      releaseStatus,
       detail.publicReleaseDate,
     ),
     description: versionDescription(
       platformName,
       detail.version,
       detail.milestones.length,
+      releaseStatus,
       detail.publicReleaseDate,
     ),
     path: `/${encodeURIComponent(slug)}/${encodeURIComponent(ver)}`,
@@ -113,7 +138,10 @@ export default async function VersionDetailPage({
 
   if (!detail) notFound();
 
-  const versionForecast = !detail.publicReleaseDate
+  const releaseStatus = getReleaseStatus(detail);
+  const isActive = releaseStatus === "active";
+  const isReleased = releaseStatus === "released";
+  const versionForecast = isActive
     ? buildReleaseForecasts(await getAnalyticsData()).find(
         (forecast) => forecast.release._id === detail._id,
       )
@@ -121,17 +149,18 @@ export default async function VersionDetailPage({
   const platform = detail.releaseTrain.platform;
   const cycleDays = computeBetaCycleDays(detail);
   const avgInterval = computeAverageBetaInterval(detail.milestones);
-  const isActive = !detail.publicReleaseDate;
   const description = versionDescription(
     platform.name,
     detail.version,
     detail.milestones.length,
+    releaseStatus,
     detail.publicReleaseDate,
   );
   const pageTitle = versionTitle(
     platform.name,
     detail.version,
     detail.milestones.length,
+    releaseStatus,
     detail.publicReleaseDate,
   );
   const canonical = absoluteUrl(
@@ -148,8 +177,9 @@ export default async function VersionDetailPage({
       ? versionForecast.nextMilestoneWindow ??
         versionForecast.publicReleaseWindow
       : undefined;
-  const summaryStats = isActive
-    ? [
+  const summaryStats =
+    releaseStatus === "active"
+      ? [
         {
           value: lastMilestone?.label ?? "Awaiting data",
           label: "Latest milestone",
@@ -171,7 +201,8 @@ export default async function VersionDetailPage({
           label: "Recorded milestones",
         },
       ]
-    : [
+      : isReleased
+        ? [
         {
           value: detail.milestones.length,
           label: "Recorded milestones",
@@ -190,7 +221,27 @@ export default async function VersionDetailPage({
             : "TBD",
           label: "Public release",
         },
-      ];
+      ]
+        : [
+            {
+              value: detail.milestones.length,
+              label: "Recorded milestones",
+            },
+            {
+              value: avgInterval !== null ? `${avgInterval}d` : "—",
+              label: "Average interval",
+            },
+            {
+              value: lastMilestone
+                ? formatDate(lastMilestone.date)
+                : "—",
+              label: "Last recorded",
+            },
+            {
+              value: "Never shipped",
+              label: "Public release",
+            },
+          ];
   const structuredData: JsonLdValue = {
     "@context": "https://schema.org",
     "@graph": [
@@ -266,7 +317,7 @@ export default async function VersionDetailPage({
       <ReleaseViewEvent
         platform={platform.name}
         version={detail.version}
-        releaseStatus={isActive ? "active" : "released"}
+        releaseStatus={releaseStatus}
       />
       <div className="space-y-16">
         <nav
@@ -303,10 +354,23 @@ export default async function VersionDetailPage({
           </div>
           <div
             className={`version-status ${
-              isActive ? "" : "version-status--released"
+              isReleased ? "version-status--released" : ""
             }`}
+            style={
+              releaseStatus === "superseded"
+                ? {
+                    borderColor: "var(--border-strong)",
+                    background: "var(--bg-subtle)",
+                    color: "var(--text-tertiary)",
+                  }
+                : undefined
+            }
           >
-            {isActive ? "Cycle active" : "Public release"}
+            {isActive
+              ? "Cycle active"
+              : isReleased
+                ? "Public release"
+                : "Superseded"}
           </div>
         </header>
 

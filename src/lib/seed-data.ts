@@ -1,9 +1,14 @@
 import seedDataJson from "../../scripts/seed-data.json";
 import type {
   Platform,
+  ReleaseStatus,
   ReleaseVersion,
   ReleaseVersionSummary,
   ReleaseTrain,
+} from "./types";
+import {
+  isActiveRelease,
+  isReleasedRelease,
 } from "./types";
 
 interface SeedPlatform {
@@ -32,6 +37,7 @@ interface SeedVersion {
   majorVersion: number;
   version: string;
   milestones: SeedMilestone[];
+  releaseStatus?: ReleaseStatus;
   publicReleaseDate?: string;
   versionNote?: string;
   releaseNotesUrl?: string;
@@ -81,6 +87,7 @@ function toReleaseVersion(
     releaseTrain: train,
     version: sv.version,
     releaseNotesUrl: sv.releaseNotesUrl,
+    releaseStatus: sv.releaseStatus,
     publicReleaseDate: sv.publicReleaseDate,
     versionNote: sv.versionNote,
     milestones: sv.milestones.map((m, i) => ({
@@ -97,6 +104,7 @@ function toVersionSummary(rv: ReleaseVersion): ReleaseVersionSummary {
   return {
     _id: rv._id,
     version: rv.version,
+    releaseStatus: rv.releaseStatus,
     publicReleaseDate: rv.publicReleaseDate,
     versionNote: rv.versionNote,
     milestoneCount: rv.milestones.length,
@@ -145,7 +153,7 @@ export function getVersionDetail(
 
 export function getActiveBetas(): ReleaseVersion[] {
   return versions
-    .filter((v) => !v.publicReleaseDate)
+    .filter(isActiveRelease)
     .sort(
       (a, b) =>
         a.releaseTrain.platform.sortOrder - b.releaseTrain.platform.sortOrder
@@ -154,7 +162,7 @@ export function getActiveBetas(): ReleaseVersion[] {
 
 export function getRecentReleases(): ReleaseVersionSummary[] {
   return versions
-    .filter((v) => v.publicReleaseDate)
+    .filter((v) => isReleasedRelease(v) && v.publicReleaseDate)
     .sort((a, b) =>
       (b.publicReleaseDate || "").localeCompare(a.publicReleaseDate || "")
     )
@@ -188,7 +196,10 @@ export function getHistoricalContext(
   allCompleted: ReleaseVersion[];
 } {
   const completed = versions.filter(
-    (v) => v.publicReleaseDate && v.milestones?.length >= 2
+    (v) =>
+      isReleasedRelease(v) &&
+      v.publicReleaseDate &&
+      v.milestones?.length >= 2
   );
 
   const samePlatformVersions = completed.filter(

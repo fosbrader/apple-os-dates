@@ -1,5 +1,9 @@
 import { format, formatDistanceToNow, differenceInDays, parseISO } from "date-fns";
-import type { BetaMilestone, ReleaseVersion } from "./types";
+import {
+  isReleasedRelease,
+  type BetaMilestone,
+  type ReleaseVersion,
+} from "./types";
 
 export function formatDate(dateStr: string): string {
   return format(parseISO(dateStr), "MMM d, yyyy");
@@ -41,7 +45,13 @@ export function getMilestoneColor(label: string): string {
 }
 
 export function computeBetaCycleDays(version: ReleaseVersion): number | null {
-  if (!version.milestones?.length || !version.publicReleaseDate) return null;
+  if (
+    !isReleasedRelease(version) ||
+    !version.milestones?.length ||
+    !version.publicReleaseDate
+  ) {
+    return null;
+  }
   const firstBeta = version.milestones[0];
   if (getMilestoneType(firstBeta.label) !== "beta") return null;
 

@@ -1,7 +1,11 @@
 "use client";
 
 import { useMemo } from "react";
-import type { ReleaseVersion } from "@/lib/types";
+import {
+  isActiveRelease,
+  isReleasedRelease,
+  type ReleaseVersion,
+} from "@/lib/types";
 import { computeAverageBetaInterval, formatDate } from "@/lib/utils";
 import { CountdownTimer } from "@/components/ui/CountdownTimer";
 import { addDays, format } from "date-fns";
@@ -30,7 +34,12 @@ export function PredictionEngine({
 }: PredictionEngineProps) {
   const predictions = useMemo(() => {
     const completedIntervals = historicalData
-      .filter((v) => v.publicReleaseDate && v.milestones?.length >= 3)
+      .filter(
+        (v) =>
+          isReleasedRelease(v) &&
+          v.publicReleaseDate &&
+          v.milestones?.length >= 3,
+      )
       .map((v) => computeAverageBetaInterval(v.milestones))
       .filter((i): i is number => i !== null);
 
@@ -40,7 +49,13 @@ export function PredictionEngine({
         : 14;
 
     const majorCycleDays = historicalData
-      .filter((v) => v.version.endsWith(".0") && v.publicReleaseDate && v.milestones?.length >= 3)
+      .filter(
+        (v) =>
+          isReleasedRelease(v) &&
+          v.version.endsWith(".0") &&
+          v.publicReleaseDate &&
+          v.milestones?.length >= 3,
+      )
       .map((v) => {
         const first = new Date(v.milestones[0].date);
         const pub = new Date(v.publicReleaseDate!);
@@ -54,7 +69,13 @@ export function PredictionEngine({
         : 98;
 
     const minorCycleDays = historicalData
-      .filter((v) => !v.version.endsWith(".0") && v.publicReleaseDate && v.milestones?.length >= 2)
+      .filter(
+        (v) =>
+          isReleasedRelease(v) &&
+          !v.version.endsWith(".0") &&
+          v.publicReleaseDate &&
+          v.milestones?.length >= 2,
+      )
       .map((v) => {
         const first = new Date(v.milestones[0].date);
         const pub = new Date(v.publicReleaseDate!);
@@ -67,7 +88,7 @@ export function PredictionEngine({
         ? minorCycleDays.reduce((a, b) => a + b, 0) / minorCycleDays.length
         : 42;
 
-    return activeBetas.map((beta): Prediction => {
+    return activeBetas.filter(isActiveRelease).map((beta): Prediction => {
       const lastMilestone = beta.milestones[beta.milestones.length - 1];
       const lastDate = new Date(lastMilestone.date);
       const localAvg = computeAverageBetaInterval(beta.milestones);

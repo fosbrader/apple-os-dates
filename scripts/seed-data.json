@@ -40,63 +40,69 @@
   "releaseTrains": [
     {
       "platform": "iOS",
+      "majorVersion": 27,
+      "displayName": "iOS 27",
+      "releaseYear": 2026
+    },
+    {
+      "platform": "iOS",
       "majorVersion": 26,
       "displayName": "iOS 26",
-      "releaseYear": 2026
+      "releaseYear": 2025
     },
     {
       "platform": "iOS",
       "majorVersion": 18,
       "displayName": "iOS 18",
-      "releaseYear": 2025
+      "releaseYear": 2024
     },
     {
       "platform": "iOS",
       "majorVersion": 17,
       "displayName": "iOS 17",
-      "releaseYear": 2024
+      "releaseYear": 2023
     },
     {
       "platform": "iOS",
       "majorVersion": 16,
       "displayName": "iOS 16",
-      "releaseYear": 2023
+      "releaseYear": 2022
     },
     {
       "platform": "iOS",
       "majorVersion": 15,
       "displayName": "iOS 15",
-      "releaseYear": 2022
+      "releaseYear": 2021
     },
     {
       "platform": "iOS",
       "majorVersion": 14,
       "displayName": "iOS 14",
-      "releaseYear": 2021
+      "releaseYear": 2020
     },
     {
       "platform": "iOS",
       "majorVersion": 13,
       "displayName": "iOS 13",
-      "releaseYear": 2020
+      "releaseYear": 2019
     },
     {
       "platform": "iOS",
       "majorVersion": 12,
       "displayName": "iOS 12",
-      "releaseYear": 2019
+      "releaseYear": 2018
     },
     {
       "platform": "iOS",
       "majorVersion": 11,
       "displayName": "iOS 11",
-      "releaseYear": 2018
+      "releaseYear": 2017
     },
     {
       "platform": "iOS",
       "majorVersion": 10,
       "displayName": "iOS 10",
-      "releaseYear": 2017
+      "releaseYear": 2016
     },
     {
       "platform": "iOS",
@@ -154,45 +160,57 @@
     },
     {
       "platform": "iPadOS",
+      "majorVersion": 27,
+      "displayName": "iPadOS 27",
+      "releaseYear": 2026
+    },
+    {
+      "platform": "iPadOS",
       "majorVersion": 26,
       "displayName": "iPadOS 26",
-      "releaseYear": 2026
+      "releaseYear": 2025
     },
     {
       "platform": "iPadOS",
       "majorVersion": 18,
       "displayName": "iPadOS 18",
-      "releaseYear": 2025
+      "releaseYear": 2024
     },
     {
       "platform": "iPadOS",
       "majorVersion": 17,
       "displayName": "iPadOS 17",
-      "releaseYear": 2024
+      "releaseYear": 2023
     },
     {
       "platform": "iPadOS",
       "majorVersion": 16,
       "displayName": "iPadOS 16",
-      "releaseYear": 2023
+      "releaseYear": 2022
     },
     {
       "platform": "iPadOS",
       "majorVersion": 15,
       "displayName": "iPadOS 15",
-      "releaseYear": 2022
+      "releaseYear": 2021
     },
     {
       "platform": "iPadOS",
       "majorVersion": 14,
       "displayName": "iPadOS 14",
-      "releaseYear": 2021
+      "releaseYear": 2020
     },
     {
       "platform": "iPadOS",
       "majorVersion": 13,
       "displayName": "iPadOS 13",
-      "releaseYear": 2020
+      "releaseYear": 2019
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 27,
+      "displayName": "macOS 27",
+      "releaseYear": 2026
     },
     {
       "platform": "macOS",
@@ -235,6 +253,12 @@
       "majorVersion": 10,
       "displayName": "macOS 10",
       "releaseYear": 2001
+    },
+    {
+      "platform": "watchOS",
+      "majorVersion": 27,
+      "displayName": "watchOS 27",
+      "releaseYear": 2026
     },
     {
       "platform": "watchOS",
@@ -310,6 +334,12 @@
     },
     {
       "platform": "tvOS",
+      "majorVersion": 27,
+      "displayName": "tvOS 27",
+      "releaseYear": 2026
+    },
+    {
+      "platform": "tvOS",
       "majorVersion": 26,
       "displayName": "tvOS 26",
       "releaseYear": 2025
@@ -376,6 +406,12 @@
     },
     {
       "platform": "visionOS",
+      "majorVersion": 27,
+      "displayName": "visionOS 27",
+      "releaseYear": 2026
+    },
+    {
+      "platform": "visionOS",
       "majorVersion": 26,
       "displayName": "visionOS 26",
       "releaseYear": 2025
@@ -396,12 +432,52 @@
   "releaseVersions": [
     {
       "platform": "iPadOS",
-      "majorVersion": 26,
-      "version": "26.4",
+      "majorVersion": 27,
+      "version": "27.0",
+      "releaseStatus": "active",
       "milestones": [
         {
           "label": "Beta 1",
-          "date": "2026-02-16",
+          "date": "2026-06-08",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=06082026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-22",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3 v2",
+          "date": "2026-07-13",
+          "note": "Build 24A5380l; also released as Public Beta 1",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07132026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": true
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2026-07-13",
+          "note": "Build 24A5380l",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026h",
+          "sourceLabel": "Apple Developer",
           "isRevision": false
         }
       ]
@@ -409,7 +485,191 @@
     {
       "platform": "iPadOS",
       "majorVersion": 26,
+      "version": "26.6",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-05-26",
+          "sourceUrl": "https://developer.apple.com/news/?id=tu7pk9oy",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-15",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-06-29",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2026-07-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07132026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-07-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07272026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-07-27"
+    },
+    {
+      "platform": "iPadOS",
+      "majorVersion": 26,
+      "version": "26.5",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-03-30",
+          "sourceUrl": "https://developer.apple.com/news/?id=z8vzrgzx",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 1 v2",
+          "date": "2026-04-03",
+          "note": "Build 23F5043k",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04032026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": true
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-04-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04132026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-04-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04202026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-04-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04272026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-05-04",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05042026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2026-05-08",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05082026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-05-11",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05112026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-05-11"
+    },
+    {
+      "platform": "iPadOS",
+      "majorVersion": 26,
+      "version": "26.4",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-02-16",
+          "sourceUrl": "https://developer.apple.com/news/?id=xgkk9w83",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-02-23",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=02232026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-03-02",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03022026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3 v2",
+          "date": "2026-03-05",
+          "note": "Build 23E5223k",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03052026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": true
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-03-09",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03092026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-03-18",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03182026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-03-24",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03242026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-03-24"
+    },
+    {
+      "platform": "iPadOS",
+      "majorVersion": 26,
       "version": "26.3",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -443,6 +703,7 @@
       "platform": "iPadOS",
       "majorVersion": 26,
       "version": "26.2",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -481,6 +742,7 @@
       "platform": "iPadOS",
       "majorVersion": 26,
       "version": "26.1",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -519,16 +781,12 @@
       "platform": "iPadOS",
       "majorVersion": 26,
       "version": "26.0",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
           "date": "2025-06-09",
           "isRevision": false
-        },
-        {
-          "label": "Beta 1 v2",
-          "date": "2025-06-13",
-          "isRevision": true
         },
         {
           "label": "Beta 2",
@@ -548,8 +806,14 @@
         {
           "label": "Beta 4 v2",
           "date": "2025-07-24",
-          "note": "Public Beta Release",
+          "note": "Build 23A5297m",
           "isRevision": true
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2025-07-24",
+          "note": "Build 23A5297m",
+          "isRevision": false
         },
         {
           "label": "Beta 5",
@@ -560,6 +824,12 @@
           "label": "Beta 6",
           "date": "2025-08-11",
           "isRevision": false
+        },
+        {
+          "label": "Beta 6 v2",
+          "date": "2025-08-14",
+          "note": "Build 23A5318f; also released as Public Beta 3",
+          "isRevision": true
         },
         {
           "label": "Beta 7",
@@ -593,6 +863,7 @@
       "platform": "iPadOS",
       "majorVersion": 18,
       "version": "18.6",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -606,6 +877,12 @@
         },
         {
           "label": "Beta 3",
+          "date": "2025-07-14",
+          "note": "Developer beta; build 22G5073b",
+          "isRevision": false
+        },
+        {
+          "label": "Public Beta 3",
           "date": "2025-07-15",
           "isRevision": false
         },
@@ -626,6 +903,7 @@
       "platform": "iPadOS",
       "majorVersion": 18,
       "version": "18.5",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -664,6 +942,7 @@
       "platform": "iPadOS",
       "majorVersion": 18,
       "version": "18.4",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -707,6 +986,7 @@
       "platform": "iPadOS",
       "majorVersion": 18,
       "version": "18.3",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -740,6 +1020,7 @@
       "platform": "iPadOS",
       "majorVersion": 18,
       "version": "18.2",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -783,21 +1064,24 @@
       "platform": "iPadOS",
       "majorVersion": 18,
       "version": "18.1",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
           "date": "2024-07-29",
-          "note": "Apple Intelligence Release",
+          "note": "Apple Intelligence Release; M-series iPads only; build 22B5007p",
           "isRevision": false
         },
         {
           "label": "Beta 2",
           "date": "2024-08-12",
+          "note": "M-series iPads only; build 22B5023e",
           "isRevision": false
         },
         {
           "label": "Beta 3",
           "date": "2024-08-28",
+          "note": "M-series iPads only; build 22B5034e",
           "isRevision": false
         },
         {
@@ -838,6 +1122,7 @@
       "platform": "iPadOS",
       "majorVersion": 18,
       "version": "18.0",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -907,6 +1192,7 @@
       "platform": "iPadOS",
       "majorVersion": 17,
       "version": "17.6",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -945,6 +1231,7 @@
       "platform": "iPadOS",
       "majorVersion": 17,
       "version": "17.5",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -983,10 +1270,16 @@
       "platform": "iPadOS",
       "majorVersion": 17,
       "version": "17.4",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
           "date": "2024-01-25",
+          "isRevision": false
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2024-01-30",
           "isRevision": false
         },
         {
@@ -1021,6 +1314,7 @@
       "platform": "iPadOS",
       "majorVersion": 17,
       "version": "17.3",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1030,7 +1324,7 @@
         {
           "label": "Beta 2",
           "date": "2024-01-03",
-          "note": "iOS Pulled",
+          "note": "Pulled for both iOS and iPadOS",
           "isRevision": false
         },
         {
@@ -1055,6 +1349,7 @@
       "platform": "iPadOS",
       "majorVersion": 17,
       "version": "17.2",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1093,9 +1388,16 @@
       "platform": "iPadOS",
       "majorVersion": 17,
       "version": "17.1",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
+          "date": "2023-09-27",
+          "note": "Developer beta; build 21B5045h",
+          "isRevision": false
+        },
+        {
+          "label": "Public Beta 1",
           "date": "2023-09-28",
           "isRevision": false
         },
@@ -1115,11 +1417,6 @@
           "isRevision": false
         },
         {
-          "label": "RC 2",
-          "date": "2023-10-20",
-          "isRevision": false
-        },
-        {
           "label": "Public",
           "date": "2023-10-25",
           "isRevision": false
@@ -1131,6 +1428,7 @@
       "platform": "iPadOS",
       "majorVersion": 17,
       "version": "17.0",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1145,6 +1443,18 @@
         {
           "label": "Beta 3",
           "date": "2023-07-05",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3 v2",
+          "date": "2023-07-11",
+          "note": "Build 21A5277j",
+          "isRevision": true
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2023-07-12",
+          "note": "Build 21A5277j",
           "isRevision": false
         },
         {
@@ -1194,6 +1504,7 @@
       "platform": "iPadOS",
       "majorVersion": 16,
       "version": "16.6",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1237,6 +1548,7 @@
       "platform": "iPadOS",
       "majorVersion": 16,
       "version": "16.5",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1280,6 +1592,7 @@
       "platform": "iPadOS",
       "majorVersion": 16,
       "version": "16.4",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1318,6 +1631,7 @@
       "platform": "iPadOS",
       "majorVersion": 16,
       "version": "16.3",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1326,6 +1640,12 @@
         },
         {
           "label": "Beta 2",
+          "date": "2023-01-10",
+          "note": "Developer beta; build 20D5035i",
+          "isRevision": false
+        },
+        {
+          "label": "Public Beta 2",
           "date": "2023-01-11",
           "isRevision": false
         },
@@ -1346,6 +1666,7 @@
       "platform": "iPadOS",
       "majorVersion": 16,
       "version": "16.2",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1384,35 +1705,35 @@
       "platform": "iPadOS",
       "majorVersion": 16,
       "version": "16.1",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
           "date": "2022-08-23",
-          "note": "iPadOS",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 1",
-          "date": "2022-09-14",
           "isRevision": false
         },
         {
           "label": "Beta 2",
-          "date": "2022-09-20",
+          "date": "2022-09-14",
           "isRevision": false
         },
         {
           "label": "Beta 3",
-          "date": "2022-09-27",
+          "date": "2022-09-20",
           "isRevision": false
         },
         {
           "label": "Beta 4",
-          "date": "2022-10-04",
+          "date": "2022-09-27",
           "isRevision": false
         },
         {
           "label": "Beta 5",
+          "date": "2022-10-04",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
           "date": "2022-10-11",
           "isRevision": false
         },
@@ -1433,6 +1754,7 @@
       "platform": "iPadOS",
       "majorVersion": 16,
       "version": "16.0",
+      "releaseStatus": "superseded",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1452,8 +1774,12 @@
         {
           "label": "Beta 3 v2",
           "date": "2022-07-11",
-          "note": "Public Beta Release",
           "isRevision": true
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2022-07-11",
+          "isRevision": false
         },
         {
           "label": "Beta 4",
@@ -1469,35 +1795,22 @@
           "label": "Beta 6",
           "date": "2022-08-15",
           "isRevision": false
-        },
-        {
-          "label": "Beta 7",
-          "date": "2022-08-23",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 8",
-          "date": "2022-08-29",
-          "isRevision": false
-        },
-        {
-          "label": "RC",
-          "date": "2022-09-07",
-          "isRevision": false
-        },
-        {
-          "label": "Public",
-          "date": "2022-09-19",
-          "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-09-19"
+      "versionNote": "Superseded by iPadOS 16.1; never publicly released"
     },
     {
       "platform": "iPadOS",
       "majorVersion": 15,
       "version": "15.7",
+      "releaseStatus": "released",
       "milestones": [
+        {
+          "label": "RC",
+          "date": "2022-09-07",
+          "note": "Build 19H12",
+          "isRevision": false
+        },
         {
           "label": "Public",
           "date": "2022-09-12",
@@ -1510,6 +1823,7 @@
       "platform": "iPadOS",
       "majorVersion": 15,
       "version": "15.6",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1542,6 +1856,12 @@
           "isRevision": false
         },
         {
+          "label": "RC 2",
+          "date": "2022-07-15",
+          "note": "Build 19G71",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2022-07-20",
           "isRevision": false
@@ -1553,6 +1873,7 @@
       "platform": "iPadOS",
       "majorVersion": 15,
       "version": "15.5",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1591,6 +1912,7 @@
       "platform": "iPadOS",
       "majorVersion": 15,
       "version": "15.4",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1634,6 +1956,7 @@
       "platform": "iPadOS",
       "majorVersion": 15,
       "version": "15.3",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1662,6 +1985,7 @@
       "platform": "iPadOS",
       "majorVersion": 15,
       "version": "15.2",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1689,11 +2013,6 @@
           "isRevision": false
         },
         {
-          "label": "RC 2",
-          "date": "2021-12-10",
-          "isRevision": false
-        },
-        {
           "label": "Public",
           "date": "2021-12-13",
           "isRevision": false
@@ -1705,6 +2024,7 @@
       "platform": "iPadOS",
       "majorVersion": 15,
       "version": "15.1",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1734,6 +2054,7 @@
         {
           "label": "RC 2",
           "date": "2021-10-21",
+          "note": "Build 19B75; iPad mini 6 only",
           "isRevision": false
         },
         {
@@ -1748,10 +2069,11 @@
       "platform": "iPadOS",
       "majorVersion": 15,
       "version": "15.0",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
-          "date": "2021-06-08",
+          "date": "2021-06-07",
           "isRevision": false
         },
         {
@@ -1762,7 +2084,14 @@
         {
           "label": "Beta 2 Update",
           "date": "2021-06-30",
+          "note": "Build 19A5281j",
           "isRevision": true
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2021-06-30",
+          "note": "Build 19A5281j",
+          "isRevision": false
         },
         {
           "label": "Beta 3",
@@ -1811,6 +2140,7 @@
       "platform": "iPadOS",
       "majorVersion": 14,
       "version": "14.6",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1820,6 +2150,21 @@
         {
           "label": "Beta 2",
           "date": "2021-04-30",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2021-05-10",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2021-05-17",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2021-05-21",
           "isRevision": false
         },
         {
@@ -1834,6 +2179,7 @@
       "platform": "iPadOS",
       "majorVersion": 14,
       "version": "14.5",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1852,6 +2198,12 @@
         },
         {
           "label": "Beta 3",
+          "date": "2021-03-02",
+          "note": "Developer beta; build 18E5164h",
+          "isRevision": false
+        },
+        {
+          "label": "Public Beta 3",
           "date": "2021-03-03",
           "isRevision": false
         },
@@ -1876,6 +2228,11 @@
           "isRevision": false
         },
         {
+          "label": "Beta 8",
+          "date": "2021-04-13",
+          "isRevision": false
+        },
+        {
           "label": "RC",
           "date": "2021-04-20",
           "isRevision": false
@@ -1892,6 +2249,7 @@
       "platform": "iPadOS",
       "majorVersion": 14,
       "version": "14.4",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1920,6 +2278,7 @@
       "platform": "iPadOS",
       "majorVersion": 14,
       "version": "14.3",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1942,6 +2301,12 @@
           "isRevision": false
         },
         {
+          "label": "RC 2",
+          "date": "2020-12-10",
+          "note": "Build 18C66",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2020-12-14",
           "isRevision": false
@@ -1953,6 +2318,7 @@
       "platform": "iPadOS",
       "majorVersion": 14,
       "version": "14.2",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -1967,6 +2333,12 @@
         {
           "label": "Beta 3",
           "date": "2020-10-13",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2020-10-20",
+          "note": "Developer beta; build 18B5083a",
           "isRevision": false
         },
         {
@@ -1985,7 +2357,28 @@
     {
       "platform": "iPadOS",
       "majorVersion": 14,
+      "version": "14.1",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "GM",
+          "date": "2020-10-13",
+          "note": "Build 18A8395",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2020-10-20",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2020-10-20"
+    },
+    {
+      "platform": "iPadOS",
+      "majorVersion": 14,
       "version": "14.0",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -2044,10 +2437,12 @@
       "platform": "iPadOS",
       "majorVersion": 13,
       "version": "13.7",
+      "releaseStatus": "released",
       "milestones": [
         {
-          "label": "GM",
+          "label": "Beta 1",
           "date": "2020-08-26",
+          "note": "Build 17H33",
           "isRevision": false
         },
         {
@@ -2062,10 +2457,12 @@
       "platform": "iPadOS",
       "majorVersion": 13,
       "version": "13.6",
+      "releaseStatus": "released",
       "milestones": [
         {
-          "label": "Beta 1",
+          "label": "13.5.5 Beta 1",
           "date": "2020-06-01",
+          "note": "Build 17G5035d; cycle renamed to 13.6 at Beta 2",
           "isRevision": false
         },
         {
@@ -2095,20 +2492,24 @@
       "platform": "iPadOS",
       "majorVersion": 13,
       "version": "13.5",
+      "releaseStatus": "released",
       "milestones": [
         {
-          "label": "Beta 1",
+          "label": "13.4.5 Beta 1",
           "date": "2020-03-31",
+          "note": "Build 17F5034c",
           "isRevision": false
         },
         {
-          "label": "Beta 2",
+          "label": "13.4.5 Beta 2",
           "date": "2020-04-15",
+          "note": "Build 17F5044d",
           "isRevision": false
         },
         {
           "label": "Beta 3",
           "date": "2020-04-29",
+          "note": "Renamed to 13.5; build 17F5054h",
           "isRevision": false
         },
         {
@@ -2117,8 +2518,9 @@
           "isRevision": false
         },
         {
-          "label": "Beta 5",
-          "date": "2020-05-14",
+          "label": "GM",
+          "date": "2020-05-18",
+          "note": "Build 17F75",
           "isRevision": false
         },
         {
@@ -2133,6 +2535,7 @@
       "platform": "iPadOS",
       "majorVersion": 13,
       "version": "13.4",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -2151,7 +2554,7 @@
         },
         {
           "label": "Beta 4",
-          "date": "2020-03-04",
+          "date": "2020-03-03",
           "isRevision": false
         },
         {
@@ -2160,8 +2563,9 @@
           "isRevision": false
         },
         {
-          "label": "Beta 6",
+          "label": "GM",
           "date": "2020-03-18",
+          "note": "Build 17E255",
           "isRevision": false
         },
         {
@@ -2176,6 +2580,7 @@
       "platform": "iPadOS",
       "majorVersion": 13,
       "version": "13.3",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -2209,6 +2614,7 @@
       "platform": "iPadOS",
       "majorVersion": 13,
       "version": "13.2",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -2242,6 +2648,7 @@
       "platform": "iPadOS",
       "majorVersion": 13,
       "version": "13.1",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 1",
@@ -2275,6 +2682,7 @@
       "platform": "iPadOS",
       "majorVersion": 13,
       "version": "13.0",
+      "releaseStatus": "superseded",
       "milestones": [
         {
           "label": "Beta 1",
@@ -2320,20 +2728,316 @@
           "label": "Beta 8",
           "date": "2019-08-21",
           "isRevision": false
+        }
+      ],
+      "versionNote": "Superseded by iPadOS 13.1; never publicly released"
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 27,
+      "version": "27.0",
+      "releaseStatus": "active",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-06-08",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=06082026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
         },
         {
-          "label": "GM",
-          "date": "2019-09-10",
+          "label": "Beta 2",
+          "date": "2026-06-22",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3 v2",
+          "date": "2026-07-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07132026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": true
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026i",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ]
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 26,
+      "version": "26.6",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-05-26",
+          "sourceUrl": "https://developer.apple.com/news/?id=tu7pk9oy",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-15",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-06-29",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2026-07-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07132026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026c",
+          "sourceLabel": "Apple Developer",
           "isRevision": false
         },
         {
           "label": "Public",
-          "date": "2019-09-19",
-          "note": "iPhone Only",
+          "date": "2026-07-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07272026c",
+          "sourceLabel": "Apple Developer",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-09-19"
+      "publicReleaseDate": "2026-07-27"
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 26,
+      "version": "26.5",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-03-30",
+          "sourceUrl": "https://developer.apple.com/news/?id=z8vzrgzx",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-04-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04132026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-04-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04202026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-04-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04272026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-05-04",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05042026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-05-11",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05112026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-05-11"
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 26,
+      "version": "26.4",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-02-16",
+          "sourceUrl": "https://developer.apple.com/news/?id=xgkk9w83",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-02-23",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=02232026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-03-03",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03032026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-03-09",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03092026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-03-18",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03182026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-03-24",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03242026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-03-24"
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 26,
+      "version": "26.3",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2025-12-15",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-01-12",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-01-26",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-02-04",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-02-11",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-02-11"
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 26,
+      "version": "26.2",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2025-11-06",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2025-11-12",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2025-11-17",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2025-12-03",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2025-12-12",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2025-12-12"
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 26,
+      "version": "26.1",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2025-09-22",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2025-10-06",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2025-10-13",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2025-10-20",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2025-10-28",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2025-11-03",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2025-11-03"
     },
     {
       "platform": "macOS",
@@ -2400,160 +3104,193 @@
     },
     {
       "platform": "macOS",
-      "majorVersion": 26,
-      "version": "26.1",
+      "majorVersion": 15,
+      "version": "15.6",
       "milestones": [
         {
           "label": "Beta 1",
-          "date": "2025-09-22",
+          "date": "2025-06-16",
           "isRevision": false
         },
         {
           "label": "Beta 2",
-          "date": "2025-10-06",
+          "date": "2025-06-30",
           "isRevision": false
         },
         {
           "label": "Beta 3",
-          "date": "2025-10-13",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 4",
-          "date": "2025-10-20",
+          "date": "2025-07-14",
           "isRevision": false
         },
         {
           "label": "RC",
-          "date": "2025-10-28",
+          "date": "2025-07-21",
           "isRevision": false
         },
         {
           "label": "Public",
-          "date": "2025-11-03",
+          "date": "2025-07-29",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-11-03"
-    },
-    {
-      "platform": "macOS",
-      "majorVersion": 26,
-      "version": "26.2",
-      "milestones": [
-        {
-          "label": "Beta 1",
-          "date": "2025-11-06",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 2",
-          "date": "2025-11-12",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 3",
-          "date": "2025-11-17",
-          "isRevision": false
-        },
-        {
-          "label": "RC",
-          "date": "2025-12-03",
-          "isRevision": false
-        },
-        {
-          "label": "Public",
-          "date": "2025-12-12",
-          "isRevision": false
-        }
-      ],
-      "publicReleaseDate": "2025-12-12"
-    },
-    {
-      "platform": "macOS",
-      "majorVersion": 26,
-      "version": "26.3",
-      "milestones": [
-        {
-          "label": "Beta 1",
-          "date": "2025-12-15",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 2",
-          "date": "2026-01-12",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 3",
-          "date": "2026-01-26",
-          "isRevision": false
-        },
-        {
-          "label": "RC",
-          "date": "2026-02-04",
-          "isRevision": false
-        },
-        {
-          "label": "Public",
-          "date": "2026-02-11",
-          "isRevision": false
-        }
-      ],
-      "publicReleaseDate": "2026-02-11"
+      "publicReleaseDate": "2025-07-29"
     },
     {
       "platform": "macOS",
       "majorVersion": 15,
-      "version": "15.0",
+      "version": "15.5",
       "milestones": [
         {
           "label": "Beta 1",
-          "date": "2024-06-10",
+          "date": "2025-04-02",
           "isRevision": false
         },
         {
           "label": "Beta 2",
-          "date": "2024-06-24",
+          "date": "2025-04-14",
           "isRevision": false
         },
         {
           "label": "Beta 3",
-          "date": "2024-07-10",
+          "date": "2025-04-21",
           "isRevision": false
         },
         {
           "label": "Beta 4",
-          "date": "2024-07-23",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 5",
-          "date": "2024-08-05",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 6",
-          "date": "2024-08-12",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 7",
-          "date": "2024-08-20",
+          "date": "2025-04-28",
           "isRevision": false
         },
         {
           "label": "RC",
-          "date": "2024-09-09",
+          "date": "2025-05-06",
           "isRevision": false
         },
         {
           "label": "Public",
-          "date": "2024-09-16",
+          "date": "2025-05-12",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-09-16"
+      "publicReleaseDate": "2025-05-12"
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 15,
+      "version": "15.4",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2025-02-21",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2025-03-03",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2025-03-10",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2025-03-17",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2025-03-24",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2025-03-27",
+          "isRevision": true
+        },
+        {
+          "label": "Public",
+          "date": "2025-03-31",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2025-03-31"
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 15,
+      "version": "15.3",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2024-12-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2025-01-07",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2025-01-16",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2025-01-21",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2025-01-27",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2025-01-27"
+    },
+    {
+      "platform": "macOS",
+      "majorVersion": 15,
+      "version": "15.2",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2024-10-23",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2024-11-04",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2024-11-11",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2024-11-20",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2024-12-05",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2024-12-09",
+          "isRevision": true
+        },
+        {
+          "label": "Public",
+          "date": "2024-12-11",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2024-12-11"
     },
     {
       "platform": "macOS",
@@ -2611,192 +3348,55 @@
     {
       "platform": "macOS",
       "majorVersion": 15,
-      "version": "15.2",
+      "version": "15.0",
       "milestones": [
         {
           "label": "Beta 1",
-          "date": "2024-10-23",
+          "date": "2024-06-10",
           "isRevision": false
         },
         {
           "label": "Beta 2",
-          "date": "2024-11-04",
+          "date": "2024-06-24",
           "isRevision": false
         },
         {
           "label": "Beta 3",
-          "date": "2024-11-11",
+          "date": "2024-07-10",
           "isRevision": false
         },
         {
           "label": "Beta 4",
-          "date": "2024-11-20",
+          "date": "2024-07-23",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2024-08-05",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
+          "date": "2024-08-12",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 7",
+          "date": "2024-08-20",
           "isRevision": false
         },
         {
           "label": "RC",
-          "date": "2024-12-05",
-          "isRevision": false
-        },
-        {
-          "label": "RC 2",
-          "date": "2024-12-09",
-          "isRevision": true
-        },
-        {
-          "label": "Public",
-          "date": "2024-12-11",
-          "isRevision": false
-        }
-      ],
-      "publicReleaseDate": "2024-12-11"
-    },
-    {
-      "platform": "macOS",
-      "majorVersion": 15,
-      "version": "15.3",
-      "milestones": [
-        {
-          "label": "Beta 1",
-          "date": "2024-12-16",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 2",
-          "date": "2025-01-07",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 3",
-          "date": "2025-01-16",
-          "isRevision": false
-        },
-        {
-          "label": "RC",
-          "date": "2025-01-21",
+          "date": "2024-09-09",
           "isRevision": false
         },
         {
           "label": "Public",
-          "date": "2025-01-27",
+          "date": "2024-09-16",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-01-27"
-    },
-    {
-      "platform": "macOS",
-      "majorVersion": 15,
-      "version": "15.4",
-      "milestones": [
-        {
-          "label": "Beta 1",
-          "date": "2025-02-21",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 2",
-          "date": "2025-03-03",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 3",
-          "date": "2025-03-10",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 4",
-          "date": "2025-03-17",
-          "isRevision": false
-        },
-        {
-          "label": "RC",
-          "date": "2025-03-24",
-          "isRevision": false
-        },
-        {
-          "label": "RC 2",
-          "date": "2025-03-27",
-          "isRevision": true
-        },
-        {
-          "label": "Public",
-          "date": "2025-03-31",
-          "isRevision": false
-        }
-      ],
-      "publicReleaseDate": "2025-03-31"
-    },
-    {
-      "platform": "macOS",
-      "majorVersion": 15,
-      "version": "15.5",
-      "milestones": [
-        {
-          "label": "Beta 1",
-          "date": "2025-04-02",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 2",
-          "date": "2025-04-14",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 3",
-          "date": "2025-04-21",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 4",
-          "date": "2025-04-28",
-          "isRevision": false
-        },
-        {
-          "label": "RC",
-          "date": "2025-05-06",
-          "isRevision": false
-        },
-        {
-          "label": "Public",
-          "date": "2025-05-12",
-          "isRevision": false
-        }
-      ],
-      "publicReleaseDate": "2025-05-12"
-    },
-    {
-      "platform": "macOS",
-      "majorVersion": 15,
-      "version": "15.6",
-      "milestones": [
-        {
-          "label": "Beta 1",
-          "date": "2025-06-16",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 2",
-          "date": "2025-06-30",
-          "isRevision": false
-        },
-        {
-          "label": "Beta 3",
-          "date": "2025-07-14",
-          "isRevision": false
-        },
-        {
-          "label": "RC",
-          "date": "2025-07-21",
-          "isRevision": false
-        },
-        {
-          "label": "Public",
-          "date": "2025-07-29",
-          "isRevision": false
-        }
-      ],
-      "publicReleaseDate": "2025-07-29"
+      "publicReleaseDate": "2024-09-16"
     },
     {
       "platform": "macOS",
@@ -3541,7 +4141,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2007-06-29"
+      "publicReleaseDate": "2007-06-29",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3554,7 +4155,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2007-07-31"
+      "publicReleaseDate": "2007-07-31",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3567,7 +4169,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2007-08-21"
+      "publicReleaseDate": "2007-08-21",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3580,7 +4183,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2007-09-14"
+      "publicReleaseDate": "2007-09-14",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3593,7 +4197,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2007-09-27"
+      "publicReleaseDate": "2007-09-27",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3606,7 +4211,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2007-11-12"
+      "publicReleaseDate": "2007-11-12",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3619,7 +4225,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2008-01-15"
+      "publicReleaseDate": "2008-01-15",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3632,7 +4239,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2008-02-26"
+      "publicReleaseDate": "2008-02-26",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3645,7 +4253,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2008-07-15"
+      "publicReleaseDate": "2008-07-15",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3658,7 +4267,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2008-07-11"
+      "publicReleaseDate": "2008-07-11",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3671,7 +4281,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2008-08-04"
+      "publicReleaseDate": "2008-08-04",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3684,7 +4295,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2008-08-18"
+      "publicReleaseDate": "2008-08-18",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3697,7 +4309,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2008-09-12"
+      "publicReleaseDate": "2008-09-12",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3710,7 +4323,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2008-11-21"
+      "publicReleaseDate": "2008-11-21",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3723,7 +4337,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2009-01-27"
+      "publicReleaseDate": "2009-01-27",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3736,7 +4351,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2009-06-17"
+      "publicReleaseDate": "2009-06-17",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3749,7 +4365,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2009-07-31"
+      "publicReleaseDate": "2009-07-31",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3762,7 +4379,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2009-09-09"
+      "publicReleaseDate": "2009-09-09",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3775,7 +4393,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2009-10-08"
+      "publicReleaseDate": "2009-10-08",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3788,7 +4407,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2010-02-02"
+      "publicReleaseDate": "2010-02-02",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3802,7 +4422,8 @@
         }
       ],
       "publicReleaseDate": "2010-04-03",
-      "versionNote": "iPad only"
+      "versionNote": "iPad only",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3815,7 +4436,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2010-06-21"
+      "publicReleaseDate": "2010-06-21",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3828,7 +4450,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2010-07-15"
+      "publicReleaseDate": "2010-07-15",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3841,7 +4464,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2010-08-11"
+      "publicReleaseDate": "2010-08-11",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3854,7 +4478,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2010-09-08"
+      "publicReleaseDate": "2010-09-08",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3867,7 +4492,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2010-11-22"
+      "publicReleaseDate": "2010-11-22",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3880,7 +4506,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2011-03-09"
+      "publicReleaseDate": "2011-03-09",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3893,7 +4520,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2011-03-25"
+      "publicReleaseDate": "2011-03-25",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3906,7 +4534,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2011-04-14"
+      "publicReleaseDate": "2011-04-14",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3919,7 +4548,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2011-05-04"
+      "publicReleaseDate": "2011-05-04",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3932,7 +4562,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2011-07-15"
+      "publicReleaseDate": "2011-07-15",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3945,7 +4576,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2011-07-25"
+      "publicReleaseDate": "2011-07-25",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3958,7 +4590,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2011-10-12"
+      "publicReleaseDate": "2011-10-12",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3971,7 +4604,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2011-11-10"
+      "publicReleaseDate": "2011-11-10",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3984,7 +4618,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2012-03-07"
+      "publicReleaseDate": "2012-03-07",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -3997,7 +4632,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2012-05-07"
+      "publicReleaseDate": "2012-05-07",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4010,7 +4646,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2012-09-19"
+      "publicReleaseDate": "2012-09-19",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4023,7 +4660,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2012-11-01"
+      "publicReleaseDate": "2012-11-01",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4036,7 +4674,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2012-12-18"
+      "publicReleaseDate": "2012-12-18",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4049,7 +4688,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2013-01-28"
+      "publicReleaseDate": "2013-01-28",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4062,7 +4702,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2013-02-11"
+      "publicReleaseDate": "2013-02-11",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4075,7 +4716,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2013-02-19"
+      "publicReleaseDate": "2013-02-19",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4088,7 +4730,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2013-03-19"
+      "publicReleaseDate": "2013-03-19",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4101,7 +4744,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2013-05-02"
+      "publicReleaseDate": "2013-05-02",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4149,7 +4793,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2013-09-18"
+      "publicReleaseDate": "2013-09-18",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4162,7 +4807,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2013-09-20"
+      "publicReleaseDate": "2013-09-20",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4175,7 +4821,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2013-09-26"
+      "publicReleaseDate": "2013-09-26",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4188,7 +4835,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2013-10-23"
+      "publicReleaseDate": "2013-10-23",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4201,7 +4849,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2013-11-14"
+      "publicReleaseDate": "2013-11-14",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4214,7 +4863,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2014-02-21"
+      "publicReleaseDate": "2014-02-21",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4227,7 +4877,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2014-03-10"
+      "publicReleaseDate": "2014-03-10",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4240,7 +4891,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2014-04-22"
+      "publicReleaseDate": "2014-04-22",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4253,7 +4905,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2014-06-30"
+      "publicReleaseDate": "2014-06-30",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4296,7 +4949,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2014-09-17"
+      "publicReleaseDate": "2014-09-17",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4309,7 +4963,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2014-09-24"
+      "publicReleaseDate": "2014-09-24",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4322,7 +4977,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2014-09-25"
+      "publicReleaseDate": "2014-09-25",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4335,7 +4991,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2014-10-20"
+      "publicReleaseDate": "2014-10-20",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4348,7 +5005,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2014-11-17"
+      "publicReleaseDate": "2014-11-17",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4361,7 +5019,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2014-12-09"
+      "publicReleaseDate": "2014-12-09",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4374,7 +5033,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2015-01-27"
+      "publicReleaseDate": "2015-01-27",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4387,7 +5047,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2015-03-09"
+      "publicReleaseDate": "2015-03-09",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4400,7 +5061,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2015-04-08"
+      "publicReleaseDate": "2015-04-08",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4413,7 +5075,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2015-06-30"
+      "publicReleaseDate": "2015-06-30",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4426,7 +5089,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2015-08-13"
+      "publicReleaseDate": "2015-08-13",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4469,7 +5133,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2015-09-16"
+      "publicReleaseDate": "2015-09-16",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4482,7 +5147,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2015-09-23"
+      "publicReleaseDate": "2015-09-23",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4495,7 +5161,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2015-09-30"
+      "publicReleaseDate": "2015-09-30",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4508,7 +5175,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2015-10-21"
+      "publicReleaseDate": "2015-10-21",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4521,7 +5189,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2015-12-08"
+      "publicReleaseDate": "2015-12-08",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4534,7 +5203,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2016-01-19"
+      "publicReleaseDate": "2016-01-19",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4547,7 +5217,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2016-03-21"
+      "publicReleaseDate": "2016-03-21",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4560,7 +5231,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2016-03-31"
+      "publicReleaseDate": "2016-03-31",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4573,7 +5245,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2016-05-16"
+      "publicReleaseDate": "2016-05-16",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4586,7 +5259,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2016-07-18"
+      "publicReleaseDate": "2016-07-18",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4599,7 +5273,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2016-08-25"
+      "publicReleaseDate": "2016-08-25",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4649,15 +5324,19 @@
         {
           "label": "GM",
           "date": "2016-09-07",
-          "isRevision": false
+          "isRevision": false,
+          "note": "iOS 10.0.1 build 14A403"
         },
         {
           "label": "Public",
           "date": "2016-09-13",
-          "isRevision": false
+          "isRevision": false,
+          "note": "iOS 10.0.1 build 14A403"
         }
       ],
-      "publicReleaseDate": "2016-09-13"
+      "publicReleaseDate": "2016-09-13",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/kb/DL1893?viewlocale=en_US&locale=en_US"
     },
     {
       "platform": "iOS",
@@ -4665,12 +5344,40 @@
       "version": "10.1",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2016-09-21",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2016-10-04",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2016-10-10",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2016-10-17",
+          "note": "7/7+ Only",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2016-10-19",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2016-10-24",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2016-10-24"
+      "publicReleaseDate": "2016-10-24",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/kb/DL1893?viewlocale=en_US&locale=en_US"
     },
     {
       "platform": "iOS",
@@ -4678,12 +5385,49 @@
       "version": "10.2",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2016-10-31",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2016-11-07",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2016-11-14",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2016-11-28",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2016-12-02",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
+          "date": "2016-12-05",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 7",
+          "date": "2016-12-07",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2016-12-12",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2016-12-12"
+      "publicReleaseDate": "2016-12-12",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/kb/DL1893?viewlocale=en_US&locale=en_US"
     },
     {
       "platform": "iOS",
@@ -4696,7 +5440,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-01-23"
+      "publicReleaseDate": "2017-01-23",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4704,12 +5449,49 @@
       "version": "10.3",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2017-01-24",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2017-02-06",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2017-02-20",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2017-02-27",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2017-03-08",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
+          "date": "2017-03-13",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 7",
+          "date": "2017-03-16",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2017-03-27",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-03-27"
+      "publicReleaseDate": "2017-03-27",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/kb/DL1893?viewlocale=en_US&locale=en_US"
     },
     {
       "platform": "iOS",
@@ -4722,7 +5504,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-04-03"
+      "publicReleaseDate": "2017-04-03",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4735,7 +5518,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-05-15"
+      "publicReleaseDate": "2017-05-15",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4748,7 +5532,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-07-19"
+      "publicReleaseDate": "2017-07-19",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4763,6 +5548,18 @@
         {
           "label": "Beta 2",
           "date": "2017-06-21",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2 Update",
+          "date": "2017-06-26",
+          "note": "Build 15A5304j; revised developer seed for select older devices",
+          "isRevision": true
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2017-06-26",
+          "note": "Build 15A5304j",
           "isRevision": false
         },
         {
@@ -4816,7 +5613,9 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-09-19"
+      "publicReleaseDate": "2017-09-19",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT208067#114"
     },
     {
       "platform": "iOS",
@@ -4829,7 +5628,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-09-26"
+      "publicReleaseDate": "2017-09-26",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4842,7 +5642,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-10-03"
+      "publicReleaseDate": "2017-10-03",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4855,7 +5656,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-10-11"
+      "publicReleaseDate": "2017-10-11",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4863,12 +5665,39 @@
       "version": "11.1",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2017-09-27",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2017-10-09",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2017-10-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2017-10-20",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2017-10-23",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2017-10-31",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-10-31"
+      "publicReleaseDate": "2017-10-31",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT208067#114"
     },
     {
       "platform": "iOS",
@@ -4881,7 +5710,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-11-09"
+      "publicReleaseDate": "2017-11-09",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4894,7 +5724,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-11-16"
+      "publicReleaseDate": "2017-11-16",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4902,12 +5733,50 @@
       "version": "11.2",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2017-10-30",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2017-11-03",
+          "note": "X only",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2017-11-06",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2017-11-13",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2017-11-17",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2017-11-28",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
+          "date": "2017-12-01",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2017-12-02",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-12-02"
+      "publicReleaseDate": "2017-12-02",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT208067#114"
     },
     {
       "platform": "iOS",
@@ -4920,7 +5789,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2017-12-13"
+      "publicReleaseDate": "2017-12-13",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -4928,12 +5798,44 @@
       "version": "11.3",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2018-01-24",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2018-02-06",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2018-02-20",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2018-03-05",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2018-03-12",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
+          "date": "2018-03-16",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2018-03-29",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2018-03-29"
+      "publicReleaseDate": "2018-03-29",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT208067#114"
     },
     {
       "platform": "iOS",
@@ -4941,12 +5843,44 @@
       "version": "11.4",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2018-04-02",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2018-04-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2018-05-01",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2018-05-07",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2018-05-14",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
+          "date": "2018-05-17",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2018-05-29",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2018-05-29"
+      "publicReleaseDate": "2018-05-29",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT208067#114"
     },
     {
       "platform": "iOS",
@@ -4954,12 +5888,39 @@
       "version": "11.4.1",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2018-05-30",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2018-06-11",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2018-06-18",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2018-06-25",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2018-07-02",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2018-07-09",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2018-07-09"
+      "publicReleaseDate": "2018-07-09",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT208067#114"
     },
     {
       "platform": "iOS",
@@ -4999,7 +5960,8 @@
         {
           "label": "Beta 7",
           "date": "2018-08-13",
-          "isRevision": false
+          "isRevision": false,
+          "note": "pulled"
         },
         {
           "label": "Beta 8",
@@ -5013,17 +5975,17 @@
         },
         {
           "label": "Beta 10",
-          "date": "2018-08-27",
+          "date": "2018-08-23",
           "isRevision": false
         },
         {
           "label": "Beta 11",
-          "date": "2018-08-31",
+          "date": "2018-08-27",
           "isRevision": false
         },
         {
           "label": "Beta 12",
-          "date": "2018-09-04",
+          "date": "2018-08-31",
           "isRevision": false
         },
         {
@@ -5037,7 +5999,9 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2018-09-17"
+      "publicReleaseDate": "2018-09-17",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT209084"
     },
     {
       "platform": "iOS",
@@ -5050,7 +6014,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2018-10-08"
+      "publicReleaseDate": "2018-10-08",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5058,12 +6023,39 @@
       "version": "12.1",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2018-09-18",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2018-10-02",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2018-10-09",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2018-10-15",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2018-10-22",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2018-10-30",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2018-10-30"
+      "publicReleaseDate": "2018-10-30",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT209084"
     },
     {
       "platform": "iOS",
@@ -5071,12 +6063,29 @@
       "version": "12.1.1",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2018-10-31",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2018-11-07",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2018-11-15",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2018-12-05",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2018-12-05"
+      "publicReleaseDate": "2018-12-05",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT209084"
     },
     {
       "platform": "iOS",
@@ -5084,17 +6093,25 @@
       "version": "12.1.2",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2018-12-10",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2018-12-17",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2018-12-17"
+      "publicReleaseDate": "2018-12-17",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT209084"
     },
     {
       "platform": "iOS",
       "majorVersion": 12,
       "version": "12.1.3",
+      "releaseStatus": "released",
       "milestones": [
         {
           "label": "Beta 2",
@@ -5117,7 +6134,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-01-22"
+      "publicReleaseDate": "2019-01-22",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT209084"
     },
     {
       "platform": "iOS",
@@ -5125,12 +6143,44 @@
       "version": "12.2",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2019-01-24",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2019-02-04",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2019-02-19",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2019-03-04",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2019-03-11",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
+          "date": "2019-03-18",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2019-03-25",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-03-25"
+      "publicReleaseDate": "2019-03-25",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT209084"
     },
     {
       "platform": "iOS",
@@ -5138,12 +6188,44 @@
       "version": "12.3",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2019-03-27",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2019-04-08",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2019-04-22",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2019-04-29",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2019-05-07",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
+          "date": "2019-05-10",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2019-05-13",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-05-13"
+      "publicReleaseDate": "2019-05-13",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT209084"
     },
     {
       "platform": "iOS",
@@ -5156,7 +6238,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-05-24"
+      "publicReleaseDate": "2019-05-24",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5164,12 +6247,49 @@
       "version": "12.4",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2019-05-15",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2019-05-20",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2019-05-28",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2019-06-11",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2019-06-24",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
+          "date": "2019-07-09",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 7",
+          "date": "2019-07-16",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2019-07-22",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-07-22"
+      "publicReleaseDate": "2019-07-22",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT209084"
     },
     {
       "platform": "iOS",
@@ -5182,7 +6302,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-08-26"
+      "publicReleaseDate": "2019-08-26",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5196,13 +6317,18 @@
         },
         {
           "label": "Beta 2",
-          "date": "2019-06-18",
+          "date": "2019-06-17",
           "isRevision": false
         },
         {
           "label": "Beta 3",
-          "date": "2019-07-03",
+          "date": "2019-07-02",
           "isRevision": false
+        },
+        {
+          "label": "Beta 3 v2",
+          "date": "2019-07-08",
+          "isRevision": true
         },
         {
           "label": "Beta 4",
@@ -5237,10 +6363,13 @@
         {
           "label": "Public",
           "date": "2019-09-19",
-          "isRevision": false
+          "isRevision": false,
+          "note": "iPhone Only"
         }
       ],
-      "publicReleaseDate": "2019-09-19"
+      "publicReleaseDate": "2019-09-19",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT210393"
     },
     {
       "platform": "iOS",
@@ -5248,12 +6377,34 @@
       "version": "13.1",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2019-08-27",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2019-09-04",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2019-09-10",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2019-09-18",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2019-09-24",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-09-24"
+      "publicReleaseDate": "2019-09-24",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT210393"
     },
     {
       "platform": "iOS",
@@ -5266,7 +6417,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-09-27"
+      "publicReleaseDate": "2019-09-27",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5279,7 +6431,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-09-30"
+      "publicReleaseDate": "2019-09-30",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5292,7 +6445,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-10-15"
+      "publicReleaseDate": "2019-10-15",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5300,12 +6454,34 @@
       "version": "13.2",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2019-10-02",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2019-10-10",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2019-10-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2019-10-23",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2019-10-28",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-10-28"
+      "publicReleaseDate": "2019-10-28",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT210393"
     },
     {
       "platform": "iOS",
@@ -5313,12 +6489,34 @@
       "version": "13.3",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2019-11-05",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2019-11-12",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2019-11-20",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2019-12-05",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2019-12-10",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2019-12-10"
+      "publicReleaseDate": "2019-12-10",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT210393"
     },
     {
       "platform": "iOS",
@@ -5331,7 +6529,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-01-28"
+      "publicReleaseDate": "2020-01-28",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5339,12 +6538,45 @@
       "version": "13.4",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2020-02-05",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2020-02-19",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2020-02-26",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2020-03-03",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2020-03-10",
+          "isRevision": false
+        },
+        {
+          "label": "GM",
+          "date": "2020-03-18",
+          "note": "Build 17E255",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2020-03-24",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-03-24"
+      "publicReleaseDate": "2020-03-24",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT210393"
     },
     {
       "platform": "iOS",
@@ -5357,7 +6589,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-04-07"
+      "publicReleaseDate": "2020-04-07",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5365,12 +6598,43 @@
       "version": "13.5",
       "milestones": [
         {
+          "label": "13.4.5 Beta 1",
+          "date": "2020-03-31",
+          "note": "Build 17F5034c",
+          "isRevision": false
+        },
+        {
+          "label": "13.4.5 Beta 2",
+          "date": "2020-04-15",
+          "note": "Build 17F5044d",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2020-04-29",
+          "note": "Renamed to 13.5; build 17F5054h",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2020-05-06",
+          "isRevision": false
+        },
+        {
+          "label": "GM",
+          "date": "2020-05-18",
+          "note": "Build 17F75",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2020-05-20",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-05-20"
+      "publicReleaseDate": "2020-05-20",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT210393"
     },
     {
       "platform": "iOS",
@@ -5383,7 +6647,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-06-01"
+      "publicReleaseDate": "2020-06-01",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5391,12 +6656,35 @@
       "version": "13.6",
       "milestones": [
         {
+          "label": "13.5.5 Beta 1",
+          "date": "2020-06-01",
+          "note": "Build 17G5035d; cycle renamed to 13.6 at Beta 2",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2020-06-09",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2020-06-30",
+          "isRevision": false
+        },
+        {
+          "label": "GM",
+          "date": "2020-07-09",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2020-07-15",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-07-15"
+      "publicReleaseDate": "2020-07-15",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT210393"
     },
     {
       "platform": "iOS",
@@ -5404,12 +6692,20 @@
       "version": "13.7",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2020-08-26",
+          "note": "Build 17H33",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2020-09-01",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-09-01"
+      "publicReleaseDate": "2020-09-01",
+      "releaseStatus": "released",
+      "releaseNotesUrl": "https://support.apple.com/en-us/HT210393"
     },
     {
       "platform": "iOS",
@@ -5467,7 +6763,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-09-16"
+      "publicReleaseDate": "2020-09-16",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5480,7 +6777,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-09-24"
+      "publicReleaseDate": "2020-09-24",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5488,12 +6786,19 @@
       "version": "14.1",
       "milestones": [
         {
+          "label": "GM",
+          "date": "2020-10-13",
+          "note": "Build 18A8395",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2020-10-20",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-10-20"
+      "publicReleaseDate": "2020-10-20",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5501,12 +6806,39 @@
       "version": "14.2",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2020-09-17",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2020-09-29",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2020-10-13",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2020-10-20",
+          "note": "Developer beta; build 18B5083a",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2020-10-30",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2020-11-05",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-11-05"
+      "publicReleaseDate": "2020-11-05",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5514,12 +6846,39 @@
       "version": "14.3",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2020-11-12",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2020-11-17",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2020-12-02",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2020-12-08",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2020-12-10",
+          "note": "Build 18C66",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2020-12-14",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2020-12-14"
+      "publicReleaseDate": "2020-12-14",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5527,12 +6886,28 @@
       "version": "14.4",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2020-12-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2021-01-13",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2021-01-21",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2021-01-26",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2021-01-26"
+      "publicReleaseDate": "2021-01-26",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5540,12 +6915,69 @@
       "version": "14.5",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2021-02-01",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 1v2",
+          "date": "2021-02-04",
+          "isRevision": true
+        },
+        {
+          "label": "Beta 2",
+          "date": "2021-02-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2021-03-02",
+          "note": "Developer beta; build 18E5164h",
+          "isRevision": false
+        },
+        {
+          "label": "Public Beta 3",
+          "date": "2021-03-03",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2021-03-15",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2021-03-23",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 6",
+          "date": "2021-03-31",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 7",
+          "date": "2021-04-07",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 8",
+          "date": "2021-04-13",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2021-04-20",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2021-04-26",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2021-04-26"
+      "publicReleaseDate": "2021-04-26",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5558,7 +6990,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2021-05-03"
+      "publicReleaseDate": "2021-05-03",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5566,12 +6999,38 @@
       "version": "14.6",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2021-04-22",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2021-04-30",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2021-05-10",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2021-05-17",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2021-05-21",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2021-05-24",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2021-05-24"
+      "publicReleaseDate": "2021-05-24",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5584,7 +7043,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2021-07-19"
+      "publicReleaseDate": "2021-07-19",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5597,7 +7057,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2021-07-26"
+      "publicReleaseDate": "2021-07-26",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5610,7 +7071,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2021-09-13"
+      "publicReleaseDate": "2021-09-13",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5625,6 +7087,18 @@
         {
           "label": "Beta 2",
           "date": "2021-06-24",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2 Update",
+          "date": "2021-06-30",
+          "note": "Build 19A5281j",
+          "isRevision": true
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2021-06-30",
+          "note": "Build 19A5281j",
           "isRevision": false
         },
         {
@@ -5668,7 +7142,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2021-09-20"
+      "publicReleaseDate": "2021-09-20",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5676,12 +7151,38 @@
       "version": "15.1",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2021-09-21",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2021-09-28",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2021-10-06",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2021-10-13",
+          "isRevision": false
+        },
+        {
+          "label": "RC 1",
+          "date": "2021-10-18",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2021-10-25",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2021-10-25"
+      "publicReleaseDate": "2021-10-25",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5689,12 +7190,44 @@
       "version": "15.2",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2021-10-27",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2021-11-09",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2021-11-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2021-12-02",
+          "isRevision": false
+        },
+        {
+          "label": "RC 1",
+          "date": "2021-12-07",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2021-12-10",
+          "note": "Build 19C57; iPhone 13 family only",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2021-12-13",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2021-12-13"
+      "publicReleaseDate": "2021-12-13",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5707,7 +7240,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-01-12"
+      "publicReleaseDate": "2022-01-12",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5715,12 +7249,28 @@
       "version": "15.3",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2021-12-17",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2022-01-12",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2022-01-20",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2022-01-26",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-01-26"
+      "publicReleaseDate": "2022-01-26",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5733,7 +7283,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-02-10"
+      "publicReleaseDate": "2022-02-10",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5741,12 +7292,43 @@
       "version": "15.4",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2022-01-27",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2022-02-08",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2022-02-15",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2022-02-22",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2022-03-01",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2022-03-08",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2022-03-14",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-03-14"
+      "publicReleaseDate": "2022-03-14",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5759,7 +7341,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-03-31"
+      "publicReleaseDate": "2022-03-31",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5767,12 +7350,38 @@
       "version": "15.5",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2022-04-05",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2022-04-19",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2022-04-26",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2022-05-03",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2022-05-12",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2022-05-16",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-05-16"
+      "publicReleaseDate": "2022-05-16",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5780,12 +7389,49 @@
       "version": "15.6",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2022-05-18",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2022-05-31",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2022-06-14",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2022-06-28",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2022-07-05",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2022-07-12",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2022-07-15",
+          "note": "Build 19G71",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2022-07-20",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-07-20"
+      "publicReleaseDate": "2022-07-20",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5798,7 +7444,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-08-17"
+      "publicReleaseDate": "2022-08-17",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5806,12 +7453,19 @@
       "version": "15.7",
       "milestones": [
         {
+          "label": "RC",
+          "date": "2022-09-07",
+          "note": "Build 19H12",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2022-09-12",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-09-12"
+      "publicReleaseDate": "2022-09-12",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5831,6 +7485,16 @@
         {
           "label": "Beta 3",
           "date": "2022-07-06",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3 v2",
+          "date": "2022-07-11",
+          "isRevision": true
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2022-07-11",
           "isRevision": false
         },
         {
@@ -5869,7 +7533,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-09-12"
+      "publicReleaseDate": "2022-09-12",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5882,7 +7547,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-09-14"
+      "publicReleaseDate": "2022-09-14",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5895,7 +7561,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-09-22"
+      "publicReleaseDate": "2022-09-22",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5908,7 +7575,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-10-10"
+      "publicReleaseDate": "2022-10-10",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5916,12 +7584,43 @@
       "version": "16.1",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2022-09-14",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2022-09-20",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2022-09-27",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2022-10-04",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2022-10-11",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2022-10-18",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2022-10-24",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-10-24"
+      "publicReleaseDate": "2022-10-24",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5934,7 +7633,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-11-09"
+      "publicReleaseDate": "2022-11-09",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5947,7 +7647,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-11-30"
+      "publicReleaseDate": "2022-11-30",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5955,12 +7656,38 @@
       "version": "16.2",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2022-10-25",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2022-11-08",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2022-11-15",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2022-12-01",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2022-12-07",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2022-12-13",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2022-12-13"
+      "publicReleaseDate": "2022-12-13",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5968,12 +7695,34 @@
       "version": "16.3",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2022-12-14",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2023-01-10",
+          "note": "Developer beta; build 20D5035i",
+          "isRevision": false
+        },
+        {
+          "label": "Public Beta 2",
+          "date": "2023-01-11",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2023-01-18",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2023-01-23",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-01-23"
+      "publicReleaseDate": "2023-01-23",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5986,7 +7735,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-02-13"
+      "publicReleaseDate": "2023-02-13",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -5994,12 +7744,38 @@
       "version": "16.4",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2023-02-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2023-02-28",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2023-03-07",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2023-03-15",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2023-03-21",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2023-03-27",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-03-27"
+      "publicReleaseDate": "2023-03-27",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6012,7 +7788,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-04-07"
+      "publicReleaseDate": "2023-04-07",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6020,12 +7797,43 @@
       "version": "16.5",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2023-03-28",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2023-04-11",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2023-04-25",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2023-05-02",
+          "isRevision": false
+        },
+        {
+          "label": "RC 1",
+          "date": "2023-05-09",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2023-05-15",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2023-05-18",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-05-18"
+      "publicReleaseDate": "2023-05-18",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6038,7 +7846,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-06-21"
+      "publicReleaseDate": "2023-06-21",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6046,12 +7855,43 @@
       "version": "16.6",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2023-05-19",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2023-05-31",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2023-06-15",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2023-06-27",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2023-07-10",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2023-07-18",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2023-07-24",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-07-24"
+      "publicReleaseDate": "2023-07-24",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6064,7 +7904,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-09-07"
+      "publicReleaseDate": "2023-09-07",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6077,7 +7918,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-09-21"
+      "publicReleaseDate": "2023-09-21",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6102,7 +7944,14 @@
         {
           "label": "Beta 3 v2",
           "date": "2023-07-11",
-          "isRevision": true
+          "isRevision": true,
+          "note": "Build 21A5277j"
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2023-07-12",
+          "note": "Build 21A5277j",
+          "isRevision": false
         },
         {
           "label": "Beta 4",
@@ -6145,7 +7994,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-09-18"
+      "publicReleaseDate": "2023-09-18",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6158,7 +8008,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-09-21"
+      "publicReleaseDate": "2023-09-21",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6171,7 +8022,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-09-26"
+      "publicReleaseDate": "2023-09-26",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6184,7 +8036,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-10-04"
+      "publicReleaseDate": "2023-10-04",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6192,12 +8045,45 @@
       "version": "17.1",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2023-09-27",
+          "note": "Developer beta; build 21B5045h",
+          "isRevision": false
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2023-09-28",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2023-10-03",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2023-10-10",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2023-10-17",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2023-10-20",
+          "note": "Build 21B77; iPhone 15 family only",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2023-10-25",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-10-25"
+      "publicReleaseDate": "2023-10-25",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6210,7 +8096,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-11-07"
+      "publicReleaseDate": "2023-11-07",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6223,7 +8110,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-11-30"
+      "publicReleaseDate": "2023-11-30",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6231,12 +8119,38 @@
       "version": "17.2",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2023-10-26",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2023-11-09",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2023-11-14",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2023-11-28",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2023-12-05",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2023-12-11",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-12-11"
+      "publicReleaseDate": "2023-12-11",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6249,7 +8163,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2023-12-19"
+      "publicReleaseDate": "2023-12-19",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6257,12 +8172,34 @@
       "version": "17.3",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2023-12-12",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2024-01-03",
+          "note": "Pulled for both iOS and iPadOS",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2024-01-09",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2024-01-17",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2024-01-22",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-01-22"
+      "publicReleaseDate": "2024-01-22",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6275,7 +8212,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-02-08"
+      "publicReleaseDate": "2024-02-08",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6283,12 +8221,44 @@
       "version": "17.4",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2024-01-25",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 1 v2",
+          "date": "2024-01-30",
+          "note": "Build 21E5184k; also released as Public Beta 1",
+          "isRevision": true
+        },
+        {
+          "label": "Beta 2",
+          "date": "2024-02-06",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2024-02-13",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2024-02-20",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2024-02-27",
+          "isRevision": false
+        },
+        {
           "label": "Public",
-          "date": "2024-03-07",
+          "date": "2024-03-05",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-03-07"
+      "publicReleaseDate": "2024-03-05",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6301,7 +8271,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-03-21"
+      "publicReleaseDate": "2024-03-21",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6309,12 +8280,38 @@
       "version": "17.5",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2024-04-02",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2024-04-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2024-04-23",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2024-04-30",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2024-05-07",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2024-05-13",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-05-13"
+      "publicReleaseDate": "2024-05-13",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6327,7 +8324,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-05-20"
+      "publicReleaseDate": "2024-05-20",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6335,12 +8333,38 @@
       "version": "17.6",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2024-06-17",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2024-07-01",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2024-07-09",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2024-07-16",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2024-07-23",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2024-07-29",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-07-29"
+      "publicReleaseDate": "2024-07-29",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6353,7 +8377,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-08-07"
+      "publicReleaseDate": "2024-08-07",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6366,7 +8391,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-09-16"
+      "publicReleaseDate": "2024-09-16",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6392,7 +8418,7 @@
           "label": "Beta 3 v2",
           "date": "2024-07-15",
           "isRevision": true,
-          "note": "Public Beta 1"
+          "note": "Public Beta Release"
         },
         {
           "label": "Beta 4",
@@ -6436,7 +8462,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-09-16"
+      "publicReleaseDate": "2024-09-16",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6449,7 +8476,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-10-03"
+      "publicReleaseDate": "2024-10-03",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6459,16 +8487,25 @@
         {
           "label": "Beta 1",
           "date": "2024-07-29",
-          "isRevision": false
+          "isRevision": false,
+          "note": "Apple Intelligence Release; iPhone 15 Pro and iPhone 15 Pro Max only; build 22B5007p"
         },
         {
           "label": "Beta 2",
           "date": "2024-08-12",
-          "isRevision": false
+          "isRevision": false,
+          "note": "iPhone 15 Pro and iPhone 15 Pro Max only; build 22B5023e"
         },
         {
           "label": "Beta 3",
           "date": "2024-08-28",
+          "isRevision": false,
+          "note": "iPhone 15 Pro and iPhone 15 Pro Max only; build 22B5034e"
+        },
+        {
+          "label": "Beta 3",
+          "date": "2024-09-11",
+          "note": "iPhone 16 family only; build 22B5034o",
           "isRevision": false
         },
         {
@@ -6503,7 +8540,9 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-10-28"
+      "publicReleaseDate": "2024-10-28",
+      "releaseStatus": "released",
+      "versionNote": "Apple Intelligence Release"
     },
     {
       "platform": "iOS",
@@ -6516,7 +8555,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-11-19"
+      "publicReleaseDate": "2024-11-19",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6524,12 +8564,43 @@
       "version": "18.2",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2024-10-23",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2024-11-04",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2024-11-11",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2024-11-20",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2024-12-05",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2024-12-09",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2024-12-11",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2024-12-11"
+      "publicReleaseDate": "2024-12-11",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6542,7 +8613,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-01-06"
+      "publicReleaseDate": "2025-01-06",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6550,12 +8622,33 @@
       "version": "18.3",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2024-12-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2025-01-07",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2025-01-16",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2025-01-21",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2025-01-27",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-01-27"
+      "publicReleaseDate": "2025-01-27",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6568,7 +8661,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-02-10"
+      "publicReleaseDate": "2025-02-10",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6581,7 +8675,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-03-11"
+      "publicReleaseDate": "2025-03-11",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6589,12 +8684,43 @@
       "version": "18.4",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2025-02-21",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2025-03-03",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2025-03-10",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2025-03-17",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2025-03-24",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2025-03-28",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2025-03-31",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-03-31"
+      "publicReleaseDate": "2025-03-31",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6607,7 +8733,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-04-16"
+      "publicReleaseDate": "2025-04-16",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6615,12 +8742,38 @@
       "version": "18.5",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2025-04-02",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2025-04-14",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2025-04-21",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2025-04-28",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2025-05-06",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2025-05-12",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-05-12"
+      "publicReleaseDate": "2025-05-12",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6628,12 +8781,39 @@
       "version": "18.6",
       "milestones": [
         {
+          "label": "Beta 1",
+          "date": "2025-06-16",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2025-06-30",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2025-07-14",
+          "note": "Developer beta; build 22G5073b",
+          "isRevision": false
+        },
+        {
+          "label": "Public Beta 3",
+          "date": "2025-07-15",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2025-07-21",
+          "isRevision": false
+        },
+        {
           "label": "Public",
           "date": "2025-07-29",
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-07-29"
+      "publicReleaseDate": "2025-07-29",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6646,7 +8826,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-09-15"
+      "publicReleaseDate": "2025-09-15",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6661,7 +8842,8 @@
         {
           "label": "Beta 1 v2",
           "date": "2025-06-13",
-          "isRevision": true
+          "isRevision": true,
+          "note": "Build 23A5260u; iPhone 15 and iPhone 16 product families only"
         },
         {
           "label": "Beta 2",
@@ -6682,7 +8864,13 @@
           "label": "Beta 4 v2",
           "date": "2025-07-24",
           "isRevision": true,
-          "note": "Public Beta Release"
+          "note": "Build 23A5297m"
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2025-07-24",
+          "note": "Build 23A5297m; iPhone 11 family received corrective build 23A5297n on 7/25",
+          "isRevision": false
         },
         {
           "label": "Beta 5",
@@ -6693,6 +8881,12 @@
           "label": "Beta 6",
           "date": "2025-08-11",
           "isRevision": false
+        },
+        {
+          "label": "Beta 6 v2",
+          "date": "2025-08-14",
+          "note": "Build 23A5318f; also released as Public Beta 3",
+          "isRevision": true
         },
         {
           "label": "Beta 7",
@@ -6720,7 +8914,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-09-15"
+      "publicReleaseDate": "2025-09-15",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6733,7 +8928,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-09-29"
+      "publicReleaseDate": "2025-09-29",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6771,7 +8967,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-11-03"
+      "publicReleaseDate": "2025-11-03",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6809,7 +9006,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2025-12-12"
+      "publicReleaseDate": "2025-12-12",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6822,7 +9020,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2026-01-26"
+      "publicReleaseDate": "2026-01-26",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6855,7 +9054,8 @@
           "isRevision": false
         }
       ],
-      "publicReleaseDate": "2026-02-11"
+      "publicReleaseDate": "2026-02-11",
+      "releaseStatus": "released"
     },
     {
       "platform": "iOS",
@@ -6865,6 +9065,220 @@
         {
           "label": "Beta 1",
           "date": "2026-02-16",
+          "sourceUrl": "https://developer.apple.com/news/?id=xgkk9w83",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-02-23",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=02232026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-03-02",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03022026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3 v2",
+          "date": "2026-03-05",
+          "note": "Build 23E5223k",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03052026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": true
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-03-09",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03092026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-03-18",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03182026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-03-24",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03242026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "releaseStatus": "released",
+      "publicReleaseDate": "2026-03-24"
+    },
+    {
+      "platform": "iOS",
+      "majorVersion": 26,
+      "version": "26.5",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-03-30",
+          "sourceUrl": "https://developer.apple.com/news/?id=z8vzrgzx",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 1 v2",
+          "date": "2026-04-03",
+          "note": "Build 23F5043k",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04032026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": true
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-04-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04132026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-04-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04202026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-04-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04272026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-05-04",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05042026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC 2",
+          "date": "2026-05-08",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05082026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-05-11",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05112026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-05-11"
+    },
+    {
+      "platform": "iOS",
+      "majorVersion": 26,
+      "version": "26.6",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-05-26",
+          "sourceUrl": "https://developer.apple.com/news/?id=tu7pk9oy",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-15",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-06-29",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2026-07-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07132026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-07-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07272026a",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-07-27"
+    },
+    {
+      "platform": "iOS",
+      "majorVersion": 27,
+      "version": "27.0",
+      "releaseStatus": "active",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-06-08",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=06082026b",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-22",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public Beta 1",
+          "date": "2026-07-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026g",
+          "sourceLabel": "Apple Developer",
           "isRevision": false
         }
       ]
@@ -8790,6 +11204,209 @@
         }
       ],
       "publicReleaseDate": "2025-09-15"
+    },
+    {
+      "platform": "watchOS",
+      "majorVersion": 26,
+      "version": "26.4",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-02-16",
+          "sourceUrl": "https://developer.apple.com/news/?id=xgkk9w83",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-02-23",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=02232026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-03-02",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03022026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3 v2",
+          "date": "2026-03-05",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03052026c",
+          "sourceLabel": "Apple Developer",
+          "isRevision": true
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-03-09",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03092026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-03-18",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03182026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-03-24",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03242026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-03-24"
+    },
+    {
+      "platform": "watchOS",
+      "majorVersion": 26,
+      "version": "26.5",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-03-30",
+          "sourceUrl": "https://developer.apple.com/news/?id=z8vzrgzx",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-04-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04132026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-04-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04202026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-04-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04272026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-05-04",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05042026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-05-11",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05112026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-05-11"
+    },
+    {
+      "platform": "watchOS",
+      "majorVersion": 26,
+      "version": "26.6",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-05-26",
+          "sourceUrl": "https://developer.apple.com/news/?id=tu7pk9oy",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-15",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-06-29",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2026-07-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07132026h",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-07-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07272026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-07-27"
+    },
+    {
+      "platform": "watchOS",
+      "majorVersion": 27,
+      "version": "27.0",
+      "releaseStatus": "active",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-06-08",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=06082026g",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-23",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026l",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ]
     },
     {
       "platform": "tvOS",
@@ -10806,6 +13423,347 @@
       "publicReleaseDate": "2025-09-15"
     },
     {
+      "platform": "tvOS",
+      "majorVersion": 26,
+      "version": "26.4",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-02-16",
+          "sourceUrl": "https://developer.apple.com/news/?id=xgkk9w83",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-02-23",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=02232026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-03-02",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03022026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-03-09",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03092026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-03-18",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03182026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-03-24",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03242026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-03-24"
+    },
+    {
+      "platform": "tvOS",
+      "majorVersion": 26,
+      "version": "26.5",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-03-30",
+          "sourceUrl": "https://developer.apple.com/news/?id=z8vzrgzx",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-04-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04132026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-04-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04202026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-04-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04272026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-05-04",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05042026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-05-11",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05112026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-05-11"
+    },
+    {
+      "platform": "tvOS",
+      "majorVersion": 26,
+      "version": "26.6",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-05-26",
+          "sourceUrl": "https://developer.apple.com/news/?id=tu7pk9oy",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-15",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-06-29",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2026-07-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07132026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-07-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07272026d",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-07-27"
+    },
+    {
+      "platform": "tvOS",
+      "majorVersion": 27,
+      "version": "27.0",
+      "releaseStatus": "active",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-06-08",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=06082026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-22",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026j",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ]
+    },
+    {
+      "platform": "visionOS",
+      "majorVersion": 27,
+      "version": "27.0",
+      "releaseStatus": "active",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-06-08",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=06082026f",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-22",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026k",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ]
+    },
+    {
+      "platform": "visionOS",
+      "majorVersion": 26,
+      "version": "26.6",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-05-26",
+          "sourceUrl": "https://developer.apple.com/news/?id=tu7pk9oy",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-06-15",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-06-29",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-07-06",
+          "sourceUrl": "https://developer.apple.com/news/releases/",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 5",
+          "date": "2026-07-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07132026g",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-07-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07202026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-07-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=07272026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-07-27"
+    },
+    {
+      "platform": "visionOS",
+      "majorVersion": 26,
+      "version": "26.5",
+      "releaseStatus": "released",
+      "milestones": [
+        {
+          "label": "Beta 1",
+          "date": "2026-03-30",
+          "sourceUrl": "https://developer.apple.com/news/?id=z8vzrgzx",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-04-13",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04132026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-04-20",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04202026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-04-27",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=04272026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-05-04",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05042026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-05-11",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=05112026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        }
+      ],
+      "publicReleaseDate": "2026-05-11"
+    },
+    {
       "platform": "visionOS",
       "majorVersion": 26,
       "version": "26.4",
@@ -10813,9 +13771,48 @@
         {
           "label": "Beta 1",
           "date": "2026-02-16",
+          "sourceUrl": "https://developer.apple.com/news/?id=xgkk9w83",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 2",
+          "date": "2026-02-23",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=02232026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 3",
+          "date": "2026-03-02",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03022026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Beta 4",
+          "date": "2026-03-09",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03092026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "RC",
+          "date": "2026-03-18",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03182026e",
+          "sourceLabel": "Apple Developer",
+          "isRevision": false
+        },
+        {
+          "label": "Public",
+          "date": "2026-03-24",
+          "sourceUrl": "https://developer.apple.com/news/releases/?id=03242026e",
+          "sourceLabel": "Apple Developer",
           "isRevision": false
         }
-      ]
+      ],
+      "releaseStatus": "released",
+      "publicReleaseDate": "2026-03-24"
     },
     {
       "platform": "visionOS",

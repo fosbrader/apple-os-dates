@@ -7,9 +7,16 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "test": "tsx --test tests/*.test.ts",
+    "data:parse-note": "tsx scripts/parse-apple-notes.ts",
+    "data:build": "tsx scripts/build-release-data.ts --write",
+    "data:build:check": "tsx scripts/build-release-data.ts",
+    "data:validate": "tsx scripts/validate-release-data.ts",
     "forecast:validate": "tsx scripts/validate-forecasts.ts",
     "sanity:backfill:2026:check": "sanity exec scripts/backfill-2026-releases.ts --with-user-token",
     "sanity:backfill:2026:apply": "sanity exec scripts/backfill-2026-releases.ts --with-user-token -- --apply",
+    "sanity:history:check": "sanity exec scripts/reconcile-release-history.ts --with-user-token",
+    "sanity:history:apply": "sanity exec scripts/reconcile-release-history.ts --with-user-token -- --apply",
     "sanity:seed": "sanity exec scripts/seed-sanity.ts --with-user-token"
   },
   "repository": {

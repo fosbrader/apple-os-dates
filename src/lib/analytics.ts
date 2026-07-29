@@ -22,7 +22,7 @@ export interface AnalyticsEventMap {
   view_release: {
     platform: string;
     version: string;
-    release_status: "active" | "released" | "unknown";
+    release_status: "active" | "released" | "superseded" | "unknown";
   };
   view_forecast: {
     platform: string;

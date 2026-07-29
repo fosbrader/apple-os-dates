@@ -6,12 +6,15 @@ interface MilestoneValue {
   date?: string;
 }
 
+type ReleaseStatusValue = "active" | "released" | "superseded";
+
 export const releaseVersion = defineType({
   name: "releaseVersion",
   title: "Release Version",
   type: "document",
   initialValue: {
     milestones: [],
+    releaseStatus: "active",
   },
   fields: [
     defineField({
@@ -33,6 +36,41 @@ export const releaseVersion = defineType({
             name: "Apple OS version",
           })
           .custom(uniqueReleaseVersion),
+    }),
+    defineField({
+      name: "releaseStatus",
+      title: "Release Status",
+      type: "string",
+      description:
+        "Lifecycle state. Superseded cycles ended without a public release.",
+      options: {
+        list: [
+          { title: "Active", value: "active" },
+          { title: "Released", value: "released" },
+          { title: "Superseded", value: "superseded" },
+        ],
+        layout: "radio",
+      },
+      validation: (rule) =>
+        rule.custom((value, context) => {
+          const publicReleaseDate = context.document?.publicReleaseDate as
+            | string
+            | undefined;
+
+          // Existing documents infer their state until explicitly migrated.
+          if (!value) return true;
+          if (!["active", "released", "superseded"].includes(value)) {
+            return "Choose Active, Released, or Superseded.";
+          }
+          if (value === "released" && !publicReleaseDate) {
+            return "Released versions require a public release date.";
+          }
+          if (value !== "released" && publicReleaseDate) {
+            return `${value === "active" ? "Active" : "Superseded"} versions cannot have a public release date.`;
+          }
+
+          return true;
+        }),
     }),
     defineField({
       name: "releaseNotesUrl",
@@ -94,6 +132,10 @@ export const releaseVersion = defineType({
           const milestones =
             (context.document?.milestones as MilestoneValue[] | undefined) ||
             [];
+          const explicitStatus = context.document
+            ?.releaseStatus as ReleaseStatusValue | undefined;
+          const releaseStatus =
+            explicitStatus || (value ? "released" : "active");
           const publicMilestone = milestones.find(
             (milestone) => milestone.label?.trim().toLowerCase() === "public"
           );
@@ -102,6 +144,24 @@ export const releaseVersion = defineType({
           );
           const releaseMilestone = publicMilestone || gmMilestone;
 
+          if (releaseStatus === "superseded") {
+            if (value) {
+              return "Superseded versions cannot have a public release date.";
+            }
+            if (releaseMilestone?.date) {
+              return `Remove the ${releaseMilestone.label} milestone from this superseded cycle.`;
+            }
+            return true;
+          }
+          if (releaseStatus === "active") {
+            if (value) {
+              return "Active versions cannot have a public release date.";
+            }
+            if (releaseMilestone?.date) {
+              return `Remove the ${releaseMilestone.label} milestone or mark this version Released.`;
+            }
+            return true;
+          }
           if (!value && releaseMilestone?.date) {
             return `Enter ${releaseMilestone.date} here so this release is no longer shown as Active.`;
           }
@@ -156,10 +216,18 @@ export const releaseVersion = defineType({
     select: {
       version: "version",
       trainName: "releaseTrain.displayName",
+      releaseStatus: "releaseStatus",
       publicDate: "publicReleaseDate",
     },
-    prepare({ version, trainName, publicDate }) {
-      const status = publicDate ? `Released ${publicDate}` : "In Beta";
+    prepare({ version, trainName, releaseStatus, publicDate }) {
+      const effectiveStatus =
+        releaseStatus || (publicDate ? "released" : "active");
+      const status =
+        effectiveStatus === "superseded"
+          ? "Superseded"
+          : effectiveStatus === "released"
+            ? `Released ${publicDate}`
+            : "In Beta";
       return {
         title: `${trainName || "?"} ${version || ""}`.trim(),
         subtitle: status,

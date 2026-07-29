@@ -2,7 +2,12 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import type { Platform, ReleaseVersion } from "@/lib/types";
+import {
+  getReleaseStatus,
+  type Platform,
+  type ReleaseStatus,
+  type ReleaseVersion,
+} from "@/lib/types";
 import { formatDate, getMilestoneType, daysBetween } from "@/lib/utils";
 import { sendAnalyticsEvent } from "@/lib/analytics";
 
@@ -20,6 +25,7 @@ interface VersionBar {
   endDate: string;
   durationDays: number;
   milestoneCount: number;
+  releaseStatus: ReleaseStatus;
   isActive: boolean;
   milestones: { label: string; date: string; type: string; pct: number }[];
 }
@@ -49,7 +55,11 @@ function MobileTimelineCard({ bar }: { bar: VersionBar }) {
               : "mobile-timeline-card__status"
           }
         >
-          {bar.isActive ? "Active" : "Released"}
+          {bar.releaseStatus === "active"
+            ? "Active"
+            : bar.releaseStatus === "released"
+              ? "Released"
+              : "Superseded"}
         </span>
       </span>
       <dl className="mobile-timeline-card__metrics">
@@ -58,8 +68,18 @@ function MobileTimelineCard({ bar }: { bar: VersionBar }) {
           <dd>{formatDate(bar.startDate)}</dd>
         </div>
         <div>
-          <dt>{bar.isActive ? "Through" : "Public"}</dt>
-          <dd>{bar.isActive ? "Today" : formatDate(bar.endDate)}</dd>
+          <dt>
+            {bar.releaseStatus === "active"
+              ? "Through"
+              : bar.releaseStatus === "released"
+                ? "Public"
+                : "Last seed"}
+          </dt>
+          <dd>
+            {bar.releaseStatus === "active"
+              ? "Today"
+              : formatDate(bar.endDate)}
+          </dd>
         </div>
         <div>
           <dt>Duration</dt>
@@ -80,6 +100,7 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
   const [groupBy, setGroupBy] = useState<GroupKey>("year");
   const [showActive, setShowActive] = useState(true);
   const [showReleased, setShowReleased] = useState(true);
+  const [showSuperseded, setShowSuperseded] = useState(true);
 
   const bars = useMemo(() => {
     const today = new Date().toISOString().split("T")[0];
@@ -92,14 +113,23 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
           v.releaseTrain.platform.slug.current === selectedPlatform
       )
       .filter((v) => {
-        const isActive = !v.publicReleaseDate;
-        if (isActive && !showActive) return false;
-        if (!isActive && !showReleased) return false;
+        const releaseStatus = getReleaseStatus(v);
+        if (releaseStatus === "active" && !showActive) return false;
+        if (releaseStatus === "released" && !showReleased) return false;
+        if (releaseStatus === "superseded" && !showSuperseded) return false;
         return true;
       })
       .map((v): VersionBar => {
+        const releaseStatus = getReleaseStatus(v);
         const startDate = v.milestones[0].date;
-        const endDate = v.publicReleaseDate || today;
+        const lastMilestoneDate =
+          v.milestones[v.milestones.length - 1].date;
+        const endDate =
+          releaseStatus === "active"
+            ? today
+            : releaseStatus === "released"
+              ? v.publicReleaseDate || lastMilestoneDate
+              : lastMilestoneDate;
         const durationDays = Math.max(1, daysBetween(startDate, endDate));
 
         const milestones = v.milestones.map((m) => ({
@@ -121,11 +151,18 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
           endDate,
           durationDays,
           milestoneCount: v.milestones.length,
-          isActive: !v.publicReleaseDate,
+          releaseStatus,
+          isActive: releaseStatus === "active",
           milestones,
         };
       });
-  }, [data, selectedPlatform, showActive, showReleased]);
+  }, [
+    data,
+    selectedPlatform,
+    showActive,
+    showReleased,
+    showSuperseded,
+  ]);
 
   const sorted = useMemo(() => {
     const s = [...bars];
@@ -185,7 +222,9 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
     const p90Index = Math.floor(durations.length * 0.9);
     return Math.max(durations[p90Index], 30);
   }, [bars]);
-  const completedBars = bars.filter((bar) => !bar.isActive);
+  const completedBars = bars.filter(
+    (bar) => bar.releaseStatus === "released",
+  );
   const averageCompletedCycle =
     completedBars.length > 0
       ? `${Math.round(
@@ -271,6 +310,15 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
               className="accent-[var(--milestone-public)]"
             />
             <span>Released</span>
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={showSuperseded}
+              onChange={(e) => setShowSuperseded(e.target.checked)}
+              className="accent-[var(--text-tertiary)]"
+            />
+            <span>Superseded</span>
           </label>
         </fieldset>
       </div>
@@ -397,6 +445,11 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
                           {bar.isActive && (
                             <span className="badge badge-active text-[0.5rem] py-0 px-1.5">
                               ACTIVE
+                            </span>
+                          )}
+                          {bar.releaseStatus === "superseded" && (
+                            <span className="font-mono text-[0.5rem] uppercase tracking-wide text-[var(--text-tertiary)]">
+                              SUPERSEDED
                             </span>
                           )}
                         </Link>

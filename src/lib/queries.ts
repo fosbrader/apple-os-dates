@@ -17,6 +17,7 @@ export const platformVersionsQuery = groq`
     _id,
     "updatedAt": _updatedAt,
     version,
+    releaseStatus,
     publicReleaseDate,
     versionNote,
     "milestoneCount": count(milestones),
@@ -45,6 +46,7 @@ export const versionDetailQuery = groq`
     version,
     releaseNotesUrl,
     keyFeatures,
+    releaseStatus,
     publicReleaseDate,
     versionNote,
     milestones,
@@ -63,11 +65,19 @@ export const versionDetailQuery = groq`
   }
 `;
 
-// Active betas (no public release date yet)
+// Active betas. Legacy records infer status from the absence of a public date.
 export const activeBetasQuery = groq`
-  *[_type == "releaseVersion" && !defined(publicReleaseDate)] {
+  *[
+    _type == "releaseVersion" &&
+    (
+      releaseStatus == "active" ||
+      (!defined(releaseStatus) && !defined(publicReleaseDate))
+    )
+  ] {
     _id,
     version,
+    releaseStatus,
+    publicReleaseDate,
     versionNote,
     milestones,
     releaseTrain-> {
@@ -85,11 +95,19 @@ export const activeBetasQuery = groq`
   } | order(releaseTrain->platform->sortOrder asc)
 `;
 
-// Recent releases (last 10 with public release dates)
+// Recent releases. Explicitly superseded cycles never qualify as released.
 export const recentReleasesQuery = groq`
-  *[_type == "releaseVersion" && defined(publicReleaseDate)] | order(publicReleaseDate desc) [0...10] {
+  *[
+    _type == "releaseVersion" &&
+    defined(publicReleaseDate) &&
+    (
+      releaseStatus == "released" ||
+      !defined(releaseStatus)
+    )
+  ] | order(publicReleaseDate desc) [0...10] {
     _id,
     version,
+    releaseStatus,
     publicReleaseDate,
     versionNote,
     "milestoneCount": count(milestones),
@@ -114,6 +132,7 @@ export const timelineDataQuery = groq`
     _id,
     "updatedAt": _updatedAt,
     version,
+    releaseStatus,
     publicReleaseDate,
     milestones,
     releaseTrain-> {
@@ -137,6 +156,7 @@ export const analyticsDataQuery = groq`
     _id,
     "updatedAt": _updatedAt,
     version,
+    releaseStatus,
     publicReleaseDate,
     milestones,
     releaseTrain-> {
@@ -159,12 +179,14 @@ export const completedVersionsQuery = groq`
   *[
     _type == "releaseVersion" &&
     defined(publicReleaseDate) &&
+    (releaseStatus == "released" || !defined(releaseStatus)) &&
     count(milestones) >= 2 &&
     releaseTrain->platform->slug.current == $platform &&
     version != $version
   ] {
     _id,
     version,
+    releaseStatus,
     publicReleaseDate,
     milestones,
     releaseTrain-> {
