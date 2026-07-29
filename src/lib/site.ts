@@ -5,6 +5,9 @@ const defaultSiteUrl = "https://www.betacadence.com";
 export const siteName = "Beta Cadence";
 export const siteDescription =
   "Track Apple OS beta cycles, release candidates, public release dates, and history-based forecasts for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS.";
+export const socialImagePath = "/social-preview-v2.png";
+export const socialImageAlt =
+  "Beta Cadence — Apple OS beta and release date index";
 
 function normalizeBasePath(value: string | undefined): string {
   const trimmed = value?.trim();
@@ -96,7 +99,7 @@ export function createPageMetadata({
 }: PageMetadataOptions): Metadata {
   const canonical = absoluteUrl(path);
   const socialTitle = absoluteTitle ? title : `${title} | ${siteName}`;
-  const socialImage = absoluteUrl("/opengraph-image.png");
+  const socialImage = absoluteUrl(socialImagePath);
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -116,7 +119,8 @@ export function createPageMetadata({
           url: socialImage,
           width: 1200,
           height: 630,
-          alt: siteName,
+          type: "image/png",
+          alt: socialImageAlt,
         },
       ],
     },
@@ -124,7 +128,7 @@ export function createPageMetadata({
       card: "summary_large_image",
       title: socialTitle,
       description,
-      images: [socialImage],
+      images: [{ url: socialImage, alt: socialImageAlt }],
     },
   };
 }

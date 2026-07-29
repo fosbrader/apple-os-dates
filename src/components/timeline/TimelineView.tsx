@@ -275,7 +275,12 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
             </div>
           )}
 
-          <div className="surface overflow-x-auto">
+          <div
+            className="surface horizontal-scroll horizontal-scroll--table horizontal-scroll--wide overflow-x-auto"
+            role="region"
+            aria-label={`Scrollable release timeline for ${group.label}`}
+            tabIndex={0}
+          >
             <table className="data-table timeline-table">
               <caption className="sr-only">
                 Release cycle durations and recorded milestones for{" "}
@@ -332,6 +337,10 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
               </tbody>
             </table>
           </div>
+          <p className="horizontal-scroll__hint horizontal-scroll__hint--wide">
+            <span aria-hidden="true">↔</span>
+            Scroll horizontally to compare every cycle field.
+          </p>
         </section>
       ))}
     </div>

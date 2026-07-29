@@ -10,7 +10,7 @@ import { publicContactEmail, publicOperatorName } from "@/lib/contact";
 import { absoluteUrl, createPageMetadata } from "@/lib/site";
 
 const pageDescription =
-  "Learn how Beta Cadence uses cookieless Vercel Web Analytics, operational hosting data, dormant consent-based Google Analytics, and any future advertising services.";
+  "Learn how Beta Cadence uses cookieless Vercel Web Analytics, operational hosting data, dormant consent-based GA4, and future advertising services.";
 const lastUpdated = "July 28, 2026";
 
 const linkClass =

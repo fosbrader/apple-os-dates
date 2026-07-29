@@ -7,9 +7,9 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { href: "/", label: "Release index" },
-  { href: "/forecasts", label: "Forecasts" },
-  { href: "/timeline", label: "Timeline" },
-  { href: "/analytics", label: "Analytics" },
+  { href: "/forecasts/", label: "Forecasts" },
+  { href: "/timeline/", label: "Timeline" },
+  { href: "/analytics/", label: "Analytics" },
 ];
 
 export function Header() {

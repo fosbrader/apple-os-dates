@@ -20,7 +20,7 @@ const forecastDescription =
   "Evidence-based Apple OS release windows derived from comparable historical beta cycles, with sample sizes, ranges, backtests, and explicit uncertainty.";
 
 export const metadata = createPageMetadata({
-  title: "Apple OS Release Forecasts",
+  title: "Apple OS Beta Release Forecasts",
   description: forecastDescription,
   path: "/forecasts/",
 });
@@ -118,7 +118,7 @@ function ForecastRange({
 function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
   const platform = forecast.release.releaseTrain.platform;
   const versionHref = `/${platform.slug.current}/${encodeURIComponent(
-    forecast.release.version
+    forecast.release.version,
   )}`;
   const isPaused =
     forecast.status === "paused-stale" ||
@@ -252,7 +252,17 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
             <p className="mt-1 text-sm">{forecast.cohort.label}</p>
             <p className="mt-1 text-xs text-[var(--text-tertiary)]">
               {forecast.cohort.sampleVersions.length} cycles:{" "}
-              {forecast.cohort.sampleVersions.join(", ")}
+              {forecast.cohort.sampleVersions.map((sampleVersion, index) => (
+                <span key={sampleVersion}>
+                  {index > 0 ? ", " : ""}
+                  <Link
+                    href={`/${platform.slug.current}/${encodeURIComponent(sampleVersion)}`}
+                    className="text-[var(--text-secondary)] hover:text-[var(--accent)] hover:underline"
+                  >
+                    {sampleVersion}
+                  </Link>
+                </span>
+              ))}
             </p>
           </div>
           <div>
@@ -305,7 +315,7 @@ export default async function ForecastsPage() {
         "@type": "WebPage",
         "@id": `${canonical}#webpage`,
         url: canonical,
-        name: "Apple OS Release Forecasts",
+        name: "Apple OS Beta Release Forecasts",
         description: forecastDescription,
         dateModified,
         isPartOf: { "@id": `${absoluteUrl("/")}#website` },
@@ -320,6 +330,10 @@ export default async function ForecastsPage() {
           "Descriptive date ranges calculated from comparable historical Apple OS beta cycles. Estimates are independent and are not Apple announcements.",
         dateModified,
         isAccessibleForFree: true,
+        isPartOf: { "@id": `${absoluteUrl("/")}#release-dataset` },
+        isBasedOn: { "@id": `${absoluteUrl("/")}#release-dataset` },
+        creator: { "@id": `${absoluteUrl("/")}#organization` },
+        publisher: { "@id": `${absoluteUrl("/")}#organization` },
         measurementTechnique:
           "Prior milestone to public release intervals summarized with medians and 25th–75th percentile ranges.",
         variableMeasured: [
@@ -342,7 +356,9 @@ export default async function ForecastsPage() {
         >
           <div>
             <p className="section-kicker">Release forecasts</p>
-            <h1 className="text-heading">Forecast release windows</h1>
+            <h1 className="text-heading">
+              Apple OS beta release forecasts
+            </h1>
           </div>
           <div>
             <p className="page-intro__description">

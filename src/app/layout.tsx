@@ -6,6 +6,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import {
   siteDescription,
+  socialImageAlt,
+  socialImagePath,
   siteName,
   siteOrigin,
   withBasePath,
@@ -77,10 +79,11 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: withBasePath("/opengraph-image.png"),
+        url: withBasePath(socialImagePath),
         width: 1200,
         height: 630,
-        alt: siteName,
+        type: "image/png",
+        alt: socialImageAlt,
       },
     ],
   },
@@ -88,7 +91,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteName,
     description: socialDescription,
-    images: [withBasePath("/opengraph-image.png")],
+    images: [
+      {
+        url: withBasePath(socialImagePath),
+        alt: socialImageAlt,
+      },
+    ],
   },
   robots: {
     index: true,
@@ -114,8 +122,30 @@ export const metadata: Metadata = {
     ? { "google-adsense-account": googleAdsenseAccount }
     : undefined,
   icons: {
-    icon: withBasePath("/icon.svg"),
-    apple: withBasePath("/icon.svg"),
+    icon: [
+      {
+        url: withBasePath("/favicon.ico"),
+        sizes: "32x32",
+        type: "image/x-icon",
+      },
+      {
+        url: withBasePath("/icon.svg"),
+        type: "image/svg+xml",
+      },
+      {
+        url: withBasePath("/icons/icon-192.png"),
+        sizes: "192x192",
+        type: "image/png",
+      },
+    ],
+    shortcut: withBasePath("/favicon.ico"),
+    apple: [
+      {
+        url: withBasePath("/apple-icon.png"),
+        sizes: "180x180",
+        type: "image/png",
+      },
+    ],
   },
   appleWebApp: {
     capable: true,

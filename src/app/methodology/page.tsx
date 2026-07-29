@@ -7,7 +7,7 @@ import {
   OrderedSteps,
 } from "@/components/content/ContentPage";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
-import { absoluteUrl, createPageMetadata, siteName } from "@/lib/site";
+import { absoluteUrl, createPageMetadata } from "@/lib/site";
 
 const pageDescription =
   "Understand how Beta Cadence turns historical beta-cycle data into estimated public-release windows, confidence labels, and backtests.";
@@ -16,7 +16,7 @@ const internalLinkClass =
   "text-[var(--accent)] hover:text-[var(--accent-hover)] underline underline-offset-4";
 
 export const metadata = createPageMetadata({
-  title: "Forecast Methodology",
+  title: "Apple OS Release Forecast Methodology",
   description: pageDescription,
   path: "/methodology/",
 });
@@ -25,18 +25,13 @@ export default function MethodologyPage() {
   const canonical = absoluteUrl("/methodology/");
   const structuredData: JsonLdValue = {
     "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "@id": `${canonical}#article`,
+    "@type": "WebPage",
+    "@id": `${canonical}#webpage`,
     url: canonical,
-    headline: "Apple Release Forecast Methodology",
+    name: "Apple OS Release Forecast Methodology",
     description: pageDescription,
     inLanguage: "en-US",
     isPartOf: { "@id": `${absoluteUrl("/")}#website` },
-    publisher: {
-      "@type": "Organization",
-      name: siteName,
-      url: absoluteUrl("/"),
-    },
     about: [
       "Apple operating-system beta cycles",
       "Release-date forecasting",
@@ -49,8 +44,8 @@ export default function MethodologyPage() {
       <JsonLd id="methodology-structured-data" data={structuredData} />
       <ContentPage
         eyebrow="Forecast methodology"
-        title="History suggests a range—not a promise"
-        description="Forecasts summarize what happened after comparable milestones in earlier release cycles. They do not use private information, leaks, or an unpublished Apple schedule."
+        title="Apple OS release forecast methodology"
+        description="History suggests a range—not a promise. Forecasts summarize comparable earlier release cycles without private information, leaks, or an unpublished Apple schedule."
       >
         <Notice title="Read every forecast as an estimate" tone="warning">
           <p>
