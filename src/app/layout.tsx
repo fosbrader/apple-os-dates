@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Outfit, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { AnalyticsConsentManager } from "@/components/analytics/AnalyticsConsent";
+import { VercelWebAnalytics } from "@/components/analytics/VercelWebAnalytics";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import {
@@ -201,6 +202,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <VercelWebAnalytics />
         {gaMeasurementId ? (
           <AnalyticsConsentManager measurementId={gaMeasurementId} />
         ) : null}

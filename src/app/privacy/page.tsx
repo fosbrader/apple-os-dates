@@ -6,18 +6,12 @@ import {
   Notice,
 } from "@/components/content/ContentPage";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
-import {
-  publicContactEmail,
-  publicOperatorName,
-} from "@/lib/contact";
+import { publicContactEmail, publicOperatorName } from "@/lib/contact";
 import { absoluteUrl, createPageMetadata } from "@/lib/site";
 
 const pageDescription =
-  "Learn how Beta Cadence uses consent-based Google Analytics, operational hosting data, local preferences, and any future advertising services.";
+  "Learn how Beta Cadence uses cookieless Vercel Web Analytics, operational hosting data, dormant consent-based Google Analytics, and any future advertising services.";
 const lastUpdated = "July 28, 2026";
-const analyticsConfigured = /^G-[A-Z0-9]+$/i.test(
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() ?? "",
-);
 
 const linkClass =
   "text-[var(--accent)] hover:text-[var(--accent-hover)] underline underline-offset-4";
@@ -50,32 +44,22 @@ export default function PrivacyPage() {
         title="Privacy"
         description="This notice explains what the public site and its service providers may process, why it is used, and the choices available to visitors."
       >
-        {analyticsConfigured ? (
-          <Notice title="Analytics is optional" tone="accent">
-            <p>
-              Google Analytics does not load unless a visitor explicitly
-              accepts analytics. The site’s analytics preference can be changed
-              later. Advertising storage and personalization remain denied.
-            </p>
-          </Notice>
-        ) : (
-          <Notice title="Analytics is not active" tone="accent">
-            <p>
-              Google Analytics is not currently configured, so the site does
-              not load the Google Analytics tag or show an analytics preference
-              control. If optional analytics is activated, it will remain off
-              until a visitor accepts.
-            </p>
-          </Notice>
-        )}
+        <Notice title="Cookieless traffic analytics is active" tone="accent">
+          <p>
+            Vercel Web Analytics measures visits to public pages without setting
+            analytics cookies or showing an opt-in prompt. Google Analytics is
+            currently disabled: no Google tag or Google Analytics preference
+            panel loads, and no site data is sent to Google Analytics.
+          </p>
+        </Notice>
 
         <ContentSection title="Scope">
           <p>
-            This notice covers the public Beta Cadence website and its
-            embedded editor area. Public visitors do not need an account. Site
-            editors authenticate with the separate Sanity and GitHub services,
-            which process editor account information under their own terms and
-            privacy notices.
+            This notice covers the public Beta Cadence website and its embedded
+            editor area. Public visitors do not need an account. Site editors
+            authenticate with the separate Sanity and GitHub services, which
+            process editor account information under their own terms and privacy
+            notices.
           </p>
           <p>
             Beta Cadence is an independently operated website based in the
@@ -90,15 +74,15 @@ export default function PrivacyPage() {
               </>
             ) : (
               <>
-                Before optional analytics or ad-account verification is
-                enabled, the operator’s public identity will be shown here.{" "}
+                The operator’s public identity will be shown here when it is
+                configured.{" "}
               </>
             )}
-            The site operator controls the editorial dataset,
-            analytics configuration, and the purposes described in this
-            notice. Hosting, analytics, content-management, domain, and project
-            providers may act as service providers or as independent
-            controllers under their own notices.
+            The site operator controls the editorial dataset, analytics
+            configuration, and the purposes described in this notice. Hosting,
+            analytics, content-management, domain, and project providers may act
+            as service providers or as independent controllers under their own
+            notices.
           </p>
         </ContentSection>
 
@@ -119,79 +103,72 @@ export default function PrivacyPage() {
           </p>
         </ContentSection>
 
-        <ContentSection title="Google Analytics 4">
+        <ContentSection title="Vercel Web Analytics">
           <p>
-            When a Google Analytics measurement ID is configured, the site
-            offers a clear analytics choice. Consent Mode defaults analytics
-            storage, advertising storage, advertising user data, and ad
-            personalization to denied. The Google Analytics tag does not load
-            until “Accept analytics” is selected. Accepting grants analytics
-            storage only; the advertising settings remain denied.
+            Vercel Web Analytics is active on the public site so the operator
+            can understand overall traffic and which pages are useful. It
+            records a page-view timestamp, the cleaned page URL or dynamic path,
+            the referring page, coarse geographic information, operating system,
+            browser, device type, and the version of Vercel’s analytics script.
+            Beta Cadence removes query strings and fragments from the visited
+            URL before the page-view event is sent.
           </p>
           <p>
-            After consent, Google Analytics may process page URLs and titles,
-            referrers, general device and browser information, approximate
-            location, engagement data, and identifiers used to distinguish
-            visits. The site is designed not to send names, email addresses,
-            credentials, or free-form visitor text to Google Analytics.
+            Vercel uses request information to create an anonymized hash for
+            counting visits without setting a cookie. That hash changes each
+            day, so it is not a persistent identifier. Vercel Web Analytics does
+            not create a persistent cross-site visitor profile. The resulting
+            reports are aggregated, and the site does not use this service to
+            collect names, email addresses, credentials, or free-form visitor
+            text.
           </p>
           <p>
-            As product measurement is connected, structured events may describe
-            actions such as viewing a release or forecast, filtering a
-            platform, exporting a calendar entry, following release notes,
-            interacting with a timeline, sharing a release, or requesting a
-            notification. Event properties are limited to product context such
-            as platform, version, confidence label, sample size, or action
-            type—not the visitor’s typed content.
-          </p>
-          <p>
-            A direct load of the{" "}
-            <span className="font-mono">/studio</span> editor route never
-            initializes Google Analytics or shows the analytics prompt. The
-            public site does not link into Studio. If an unexpected
-            client-side transition enters the editor from an already measured
-            public page, the application forces a full reload to remove the
-            loaded tag.
+            The <span className="font-mono">/studio</span> editor area is
+            excluded from Vercel Web Analytics. The public site does not link
+            into Studio.
           </p>
         </ContentSection>
 
-        <ContentSection title="Your analytics choice">
-          <BulletList>
-            <li>
-              Decline analytics when the preference prompt appears; the Google
-              Analytics tag will remain unloaded.
-            </li>
-            <li>
-              Use the site’s “Analytics preferences” control to change a saved
-              choice. The preference itself is stored in the browser’s local
-              storage so the site can remember it.
-            </li>
-            <li>
-              Clear site storage in the browser to remove the saved preference
-              and any analytics cookies already stored.
-            </li>
-            <li>
-              Google also offers a{" "}
-              <a
-                href="https://tools.google.com/dlpage/gaoptout"
-                target="_blank"
-                rel="noreferrer"
-                className={linkClass}
-              >
-                Google Analytics opt-out browser add-on
-              </a>
-              .
-            </li>
-          </BulletList>
+        <ContentSection title="Google Analytics 4 is dormant">
+          <p>
+            The site retains an implementation of Google Analytics 4 for
+            possible future use, but production Google Analytics is currently
+            disabled. The Google tag does not load, no Google Analytics
+            preference panel is shown, and no page views or events are sent to
+            Google Analytics.
+          </p>
+          <p>
+            If Google Analytics is reactivated, it will be optional. Consent
+            Mode will initially deny analytics storage, advertising storage,
+            advertising user data, and ad personalization. The Google tag will
+            remain unloaded until a visitor selects “Accept analytics.”
+            Accepting will grant analytics storage only; advertising settings
+            will remain denied. A saved choice will be changeable later through
+            an analytics-preferences control.
+          </p>
+          <p>
+            After opt-in, Google Analytics may process page URLs and titles,
+            referrers, general device and browser information, approximate
+            location, engagement data, and identifiers used to distinguish
+            visits. Structured product events may describe actions such as
+            viewing a release or forecast, filtering a platform, exporting a
+            calendar entry, or interacting with a timeline. Event properties
+            will be limited to product context rather than visitor-typed
+            content.
+          </p>
+          <p>
+            The <span className="font-mono">/studio</span> editor route will
+            remain excluded from Google Analytics if it is reactivated.
+          </p>
         </ContentSection>
 
         <ContentSection title="Google Search Console">
           <p>
             Google Search Console provides the site operator with search and
             indexing reports, such as queries, impressions, clicks, ranking
-            position, and crawl issues. It does not require a separate
-            analytics tag on this site. Google independently controls the
-            information it processes when people use Google Search.
+            position, and crawl issues. It does not require a separate analytics
+            tag on this site. Google independently controls the information it
+            processes when people use Google Search.
           </p>
         </ContentSection>
 
@@ -204,23 +181,29 @@ export default function PrivacyPage() {
               public reference.
             </li>
             <li>
-              Optional Google Analytics is processed only after consent. That
-              consent can be withdrawn through “Analytics preferences.”
+              Cookieless Web Analytics is used to understand aggregate traffic
+              and improve the public reference. It does not use analytics
+              cookies or a persistent cross-site visitor identifier.
+            </li>
+            <li>
+              If Google Analytics is reactivated, it will be processed only
+              after opt-in and that choice will be changeable through “Analytics
+              preferences.”
             </li>
             <li>
               Public corrections and feedback are processed because the sender
-              chose to submit them and because reviewing the public dataset is
-              a legitimate editorial interest.
+              chose to submit them and because reviewing the public dataset is a
+              legitimate editorial interest.
             </li>
             <li>
-              Information may also be processed when necessary to comply with
-              a legal obligation or protect the rights and safety of the site,
-              its operator, or others.
+              Information may also be processed when necessary to comply with a
+              legal obligation or protect the rights and safety of the site, its
+              operator, or others.
             </li>
           </BulletList>
           <p>
-            These descriptions are intended to explain the site’s practices,
-            not to limit rights that apply under a visitor’s local law.
+            These descriptions are intended to explain the site’s practices, not
+            to limit rights that apply under a visitor’s local law.
           </p>
         </ContentSection>
 
@@ -250,13 +233,17 @@ export default function PrivacyPage() {
             processing; and to complain to a local data-protection authority.
           </p>
           <p>
-            The on-site analytics control handles consent choices without
-            requiring a request. For another privacy request, use the private
-            role address shown below when configured. A request may require
-            enough information to identify the relevant record and verify that
-            the requester is entitled to it. Beta Cadence cannot directly
-            fulfill requests for information controlled independently by
-            Google, GitHub, Vercel, Cloudflare, Sanity, or another provider.
+            Vercel Web Analytics does not set an analytics-choice cookie or
+            provide an on-site preference panel. Visitors can use browser
+            content-blocking controls if they do not want the analytics script
+            to load. If Google Analytics is reactivated, its on-site control
+            will handle the opt-in choice without requiring a request. For
+            another privacy request, use the private role address shown below
+            when configured. A request may require enough information to
+            identify the relevant record and verify that the requester is
+            entitled to it. Beta Cadence cannot directly fulfill requests for
+            information controlled independently by Google, GitHub, Vercel,
+            Cloudflare, Sanity, or another provider.
           </p>
         </ContentSection>
 
@@ -273,10 +260,7 @@ export default function PrivacyPage() {
           {publicContactEmail ? (
             <p>
               Privacy questions that require a private reply can be sent to{" "}
-              <a
-                href={`mailto:${publicContactEmail}`}
-                className={linkClass}
-              >
+              <a href={`mailto:${publicContactEmail}`} className={linkClass}>
                 {publicContactEmail}
               </a>
               .
@@ -284,11 +268,8 @@ export default function PrivacyPage() {
           ) : (
             <p>
               A dedicated, role-based privacy address will be displayed here
-              when it is configured. Until then, do not put personal
-              information in a public GitHub report.
-              {analyticsConfigured
-                ? " The on-site preference control remains available for analytics choices."
-                : ""}
+              when it is configured. Until then, do not put personal information
+              in a public GitHub report.
             </p>
           )}
         </ContentSection>
@@ -296,10 +277,11 @@ export default function PrivacyPage() {
         <ContentSection title="Service providers and disclosures">
           <p>
             Information is processed by service providers only as needed for
-            hosting, domain delivery and security, editorial content,
-            consented analytics, and project communication. Those providers
-            may process information in countries outside the visitor’s own.
-            They maintain their own privacy notices and legal obligations.
+            hosting, domain delivery and security, editorial content, cookieless
+            traffic analytics, any future consented Google Analytics, and
+            project communication. Those providers may process information in
+            countries outside the visitor’s own. They maintain their own privacy
+            notices and legal obligations.
           </p>
           <BulletList>
             <li>
@@ -310,6 +292,15 @@ export default function PrivacyPage() {
                 className={linkClass}
               >
                 Vercel Privacy Policy
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://vercel.com/docs/analytics/privacy-policy"
+                target="_blank"
+                rel="noreferrer"
+                className={linkClass}
+              >
+                Web Analytics privacy documentation
               </a>
             </li>
             <li>
@@ -365,21 +356,23 @@ export default function PrivacyPage() {
           <p>
             Information may also be disclosed when reasonably necessary to
             comply with law, protect the site or its users, investigate abuse,
-            or complete a legitimate transfer of the project. There is
-            currently no advertising-data sale or cross-context behavioral
-            advertising program on the site.
+            or complete a legitimate transfer of the project. There is currently
+            no advertising-data sale or cross-context behavioral advertising
+            program on the site.
           </p>
         </ContentSection>
 
         <ContentSection title="Retention">
           <p>
-            The analytics choice remains in local browser storage until it is
-            changed or site storage is cleared. Before GA4 is activated, its
-            user-level event-data retention will be configured to two months;
-            aggregated reports may remain available longer. Operational and
-            security records are retained under provider settings for as long
-            as reasonably needed to deliver, secure, and troubleshoot the
-            service.
+            Vercel’s anonymized request hash changes daily. Aggregated Web
+            Analytics reports are retained under the site’s Vercel plan and
+            provider settings. If Google Analytics is reactivated, its saved
+            choice will remain in local browser storage until it is changed or
+            site storage is cleared, and its user-level event-data retention
+            will be configured to two months; aggregated reports may remain
+            available longer. Operational and security records are retained
+            under provider settings for as long as reasonably needed to deliver,
+            secure, and troubleshoot the service.
           </p>
           <p>
             Public GitHub submissions and their revision history can remain

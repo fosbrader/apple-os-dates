@@ -20,8 +20,9 @@ The public site runs at <http://localhost:3000/> and the authenticated editor
 runs at <http://localhost:3000/studio/>.
 
 Copy `.env.local.example` to `.env.local` when you need a Sanity write token,
-analytics, ad-account verification, a public contact address, or a different
-deployment URL.
+dormant GA4 testing, ad-account verification, a public contact address, or a
+different deployment URL. Vercel Web Analytics does not require a local
+environment variable.
 
 ## Content updates
 
@@ -57,7 +58,7 @@ one, and add that exact origin to Sanity CORS with credentials enabled.
 Optional Google and Bing verification values are documented in
 `.env.local.example`.
 
-## Search Console and Google Analytics
+## Search Console and analytics
 
 Prefer a Google Search Console **Domain property** for `betacadence.com`.
 Verify it by adding Google's TXT record in Cloudflare DNS; that covers the apex,
@@ -66,11 +67,23 @@ Verify it by adding Google's TXT record in Cloudflare DNS; that covers the apex,
 needed. After verification, submit
 `https://www.betacadence.com/sitemap.xml`.
 
-For Google Analytics 4, create a web data stream for the canonical production
-domain and set `NEXT_PUBLIC_GA_MEASUREMENT_ID` to its `G-` measurement ID.
-Analytics is privacy-first: Google Consent Mode v2 defaults analytics and
-advertising storage to denied, the Google tag is not loaded until a visitor
-explicitly accepts analytics, and the visitor's choice is stored locally.
+Vercel Web Analytics is the active primary traffic measurement service. It
+collects cookieless, aggregated page views on public routes and requires no
+analytics environment variable. The `/studio` editor is excluded. The
+`beforeSend` hook also strips URL query strings and fragments before an
+analytics event is sent, so those values do not appear in the Web Analytics
+payload.
+
+The Google Analytics 4 implementation remains in the codebase for possible
+future use, but production should leave `NEXT_PUBLIC_GA_MEASUREMENT_ID` unset.
+In that state, no Google tag or Google consent interface loads and no site data
+is sent to Google Analytics.
+
+If GA4 is deliberately reactivated later, create a web data stream for the
+canonical production domain and set `NEXT_PUBLIC_GA_MEASUREMENT_ID` to its `G-`
+measurement ID. Google Consent Mode v2 defaults analytics and advertising
+storage to denied, the Google tag is not loaded until a visitor explicitly
+accepts analytics, and the visitor's choice is stored locally.
 Advertising-related consent remains denied even after analytics is accepted.
 Direct Studio loads never initialize the tag or show the consent prompt. The
 public site does not link into Studio, and an unexpected client-side transition
@@ -85,10 +98,11 @@ Client components can import `sendAnalyticsEvent` from `@/lib/analytics` to
 send one of the typed product events. Event parameters must never contain
 names, email addresses, free-form user text, or other personal data.
 
-Currently wired product events cover release views, forecast views, calendar
-exports, release-notes clicks, and timeline platform filters. Standard GA4
-page-view and engagement measurement is provided by the Google tag after
-consent.
+The dormant GA4 integration has typed product events wired for release views,
+forecast views, calendar exports, release-notes clicks, and timeline platform
+filters. Those events are sent only if GA4 is reactivated and the visitor
+accepts analytics. Standard GA4 page-view and engagement measurement would
+likewise begin only after consent.
 
 ## Forecast validation
 

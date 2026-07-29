@@ -200,7 +200,7 @@ export default function ContactPage() {
             </li>
             <li>
               <Link href="/privacy/" className={externalLinkClass}>
-                Privacy notice and analytics choices
+                Privacy notice and analytics information
               </Link>
             </li>
           </BulletList>
