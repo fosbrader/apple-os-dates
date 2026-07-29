@@ -55,8 +55,8 @@ export default async function TimelinePage() {
           style={{ "--delay": 0 } as React.CSSProperties}
         >
           <div>
-            <p className="section-kicker">Cycle comparison</p>
-            <h1 className="text-heading">The shape of release time.</h1>
+            <p className="section-kicker">Release timeline</p>
+            <h1 className="text-heading">Beta cycle comparison</h1>
           </div>
           <div>
             <p className="page-intro__description">

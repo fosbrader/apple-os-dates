@@ -360,19 +360,17 @@ function GanttBar({
         .join(", ")}`}
     >
       {/* Background track */}
-      <div className="absolute inset-y-0.5 left-0 right-0 rounded bg-[var(--bg-subtle)]" />
+      <div className="absolute inset-y-0.5 left-0 right-0 bg-[var(--bg-subtle)]" />
 
       {/* Duration bar */}
       <div
-        className="relative h-6 rounded"
+        className="relative h-6"
         style={{
           width: `${widthPct}%`,
-          background: bar.isActive
-            ? `linear-gradient(90deg, ${bar.platform.color}25, ${bar.platform.color}60)`
-            : `linear-gradient(90deg, ${bar.platform.color}50, ${bar.platform.color}99)`,
-          boxShadow: bar.durationDays > 30
-            ? `0 0 12px ${bar.platform.color}20`
-            : undefined,
+          background: `color-mix(in srgb, ${bar.platform.color} ${
+            bar.isActive ? 18 : 34
+          }%, transparent)`,
+          borderLeft: `2px solid ${bar.platform.color}`,
         }}
       >
         {/* Milestone markers */}

@@ -134,7 +134,7 @@ export default async function PlatformPage({
           }
         >
           <div className="platform-hero__copy">
-            <p className="section-kicker">Platform release index</p>
+            <p className="section-kicker">Release index</p>
             <h1 className="text-heading">{platform.name}</h1>
             <p>{description}</p>
             {activeVersionCount > 0 && (
@@ -160,7 +160,7 @@ export default async function PlatformPage({
           >
             <div className="section-heading">
               <div>
-                <p className="section-kicker">Major release family</p>
+                <p className="section-kicker">Major versions</p>
                 <h2>
                   {platform.name} {majorVersion}
                 </h2>

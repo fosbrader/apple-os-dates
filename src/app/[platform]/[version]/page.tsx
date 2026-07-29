@@ -259,8 +259,8 @@ export default async function VersionDetailPage({
         >
           <div className="section-heading">
             <div>
-              <p className="section-kicker">Dated record</p>
-              <h2>Release history.</h2>
+              <p className="section-kicker">Milestones</p>
+              <h2>Release history</h2>
             </div>
             <p>
               Every recorded beta, release candidate, revision, and public
@@ -279,7 +279,7 @@ export default async function VersionDetailPage({
           <div className="section-heading">
             <div>
               <p className="section-kicker">Historical context</p>
-              <h2>How this cycle compares.</h2>
+              <h2>Cycle comparison</h2>
             </div>
             <p>
               Pace, intervals, and duration compared with earlier releases on

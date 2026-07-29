@@ -7,8 +7,8 @@ export default function NotFound() {
         <span>404</span>
       </div>
       <div>
-        <p className="section-kicker">Signal not found</p>
-        <h1 className="text-heading">This release record is off the dial.</h1>
+        <p className="section-kicker">Page not found</p>
+        <h1 className="text-heading">We couldn’t find that release record.</h1>
         <p>
           The platform or version may have moved, or it may not exist in the
           public index.

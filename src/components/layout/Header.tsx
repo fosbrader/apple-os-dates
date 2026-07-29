@@ -6,7 +6,7 @@ import { useRef } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
-  { href: "/", label: "Overview" },
+  { href: "/", label: "Release index" },
   { href: "/forecasts", label: "Forecasts" },
   { href: "/timeline", label: "Timeline" },
   { href: "/analytics", label: "Analytics" },
@@ -20,14 +20,10 @@ export function Header() {
     <header className="site-header">
       <div className="site-header__inner">
         <Link href="/" className="brand-lockup" aria-label="Beta Cadence home">
-          <span className="brand-mark" aria-hidden="true">
-            <span className="brand-mark__orbit" />
-            <span className="brand-mark__core" />
-          </span>
           <span className="brand-wordmark">
-            <span>Beta</span>
-            <strong>Cadence</strong>
+            <strong>Beta Cadence</strong>
           </span>
+          <span className="brand-descriptor">Apple OS release index</span>
         </Link>
 
         <div className="site-header__actions">
@@ -86,10 +82,6 @@ export function Header() {
             </nav>
           </details>
 
-          <span className="header-status" aria-label="Dataset status: live">
-            <span className="status-pulse" aria-hidden="true" />
-            Live index
-          </span>
           <ThemeToggle />
         </div>
       </div>

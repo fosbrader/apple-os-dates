@@ -341,8 +341,8 @@ export default async function ForecastsPage() {
           style={{ "--delay": 0 } as React.CSSProperties}
         >
           <div>
-            <p className="section-kicker">Forecast desk</p>
-            <h1 className="text-heading">Release windows, with receipts.</h1>
+            <p className="section-kicker">Release forecasts</p>
+            <h1 className="text-heading">Forecast release windows</h1>
           </div>
           <div>
             <p className="page-intro__description">
@@ -414,7 +414,7 @@ export default async function ForecastsPage() {
             <div className="section-heading">
               <div>
                 <p className="section-kicker">Current cycles</p>
-                <h2 id="release-forecasts">Signals in motion.</h2>
+                <h2 id="release-forecasts">Active forecasts</h2>
               </div>
               <p>
                 Forecasts pause automatically when the latest recorded

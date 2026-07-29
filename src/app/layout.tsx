@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit, JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import { AnalyticsConsentManager } from "@/components/analytics/AnalyticsConsent";
 import { VercelWebAnalytics } from "@/components/analytics/VercelWebAnalytics";
@@ -17,18 +16,7 @@ import {
   publicOperatorName,
 } from "@/lib/contact";
 import "./globals.css";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  display: "swap",
-});
-
-const mono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-});
+import "./ledger.css";
 
 const socialDescription =
   "Browse recorded beta, release candidate, and public release dates for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS.";
@@ -143,8 +131,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: "(prefers-color-scheme: dark)", color: "#0b0d0f" },
-    { media: "(prefers-color-scheme: light)", color: "#f3f0e8" },
+    { media: "(prefers-color-scheme: dark)", color: "#111210" },
+    { media: "(prefers-color-scheme: light)", color: "#f6f5f0" },
   ],
   width: "device-width",
   initialScale: 1,
@@ -159,7 +147,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${outfit.variable} ${mono.variable}`}
       suppressHydrationWarning
     >
       <body>

@@ -63,8 +63,8 @@ export default async function AnalyticsPage() {
           style={{ "--delay": 0 } as React.CSSProperties}
         >
           <div>
-            <p className="section-kicker">Pattern library</p>
-            <h1 className="text-heading">Release history, measured.</h1>
+            <p className="section-kicker">Release analytics</p>
+            <h1 className="text-heading">Release history analytics</h1>
           </div>
           <div>
             <p className="page-intro__description">

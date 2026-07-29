@@ -122,7 +122,7 @@ export function CycleLengthChart({ versions }: CycleLengthChartProps) {
         .attr("height", (version) => y(0) - y(version.cycleDays!))
         .attr("fill", (version) => version.platformColor)
         .attr("opacity", 0.76)
-        .attr("rx", 2);
+        .attr("rx", 0);
 
       const average =
         chartVersions.reduce(

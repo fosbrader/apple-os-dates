@@ -154,8 +154,8 @@ export function AnalyticsDashboard({
 
       <div className="section-heading">
         <div>
-          <p className="section-kicker">Extremes</p>
-          <h2>Records in the selected view.</h2>
+          <p className="section-kicker">Selected view</p>
+          <h2>Cycle records</h2>
         </div>
         <p>
           Longest and shortest completed beta cycles, plus the version with the
@@ -237,7 +237,7 @@ export function AnalyticsDashboard({
         <div className="section-heading">
           <div>
             <p className="section-kicker">Duration series</p>
-            <h2>Beta cycle length.</h2>
+            <h2>Beta cycle duration</h2>
           </div>
           <p>
             Completed major-version cycles, with the average shown as a dashed
@@ -250,8 +250,8 @@ export function AnalyticsDashboard({
       <section>
         <div className="section-heading">
           <div>
-            <p className="section-kicker">Version ledger</p>
-            <h2>All indexed cycles.</h2>
+            <p className="section-kicker">Version data</p>
+            <h2>All indexed cycles</h2>
           </div>
           <p>
             Every version in the selected view. Scroll horizontally on compact

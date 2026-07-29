@@ -21,12 +21,12 @@ export function Footer() {
   return (
     <footer className="site-footer">
       <div className="site-footer__lead">
-        <div>
-          <p className="section-kicker">Keep the record accurate</p>
-          <h2>Found a release date that needs a second look?</h2>
-        </div>
-        <Link href="/contact/" className="button button--secondary">
-          Submit a correction
+        <p>
+          <strong>Corrections are welcome.</strong> If a date or source needs
+          another look, let us know.
+        </p>
+        <Link href="/contact/" className="text-link">
+          Report an issue
           <span aria-hidden="true">↗</span>
         </Link>
       </div>
@@ -34,18 +34,13 @@ export function Footer() {
       <div className="site-footer__grid">
         <div className="site-footer__brand">
           <Link href="/" className="brand-lockup" aria-label="Beta Cadence home">
-            <span className="brand-mark" aria-hidden="true">
-              <span className="brand-mark__orbit" />
-              <span className="brand-mark__core" />
-            </span>
             <span className="brand-wordmark">
-              <span>Beta</span>
-              <strong>Cadence</strong>
+              <strong>Beta Cadence</strong>
             </span>
           </Link>
           <p>
-            An independent release index for the Apple operating-system
-            ecosystem. Historical dates, transparent forecasts, no rumor mill.
+            An independent index of Apple operating-system beta and release
+            dates, with transparent, history-based forecasts.
           </p>
         </div>
 
@@ -76,7 +71,7 @@ export function Footer() {
           Not affiliated with or endorsed by Apple Inc. Apple platform names
           are trademarks of Apple Inc.
         </p>
-        <p>Built as a public reference · Data maintained in Sanity</p>
+        <p>Dates and sources maintained as a public reference.</p>
       </div>
     </footer>
   );
