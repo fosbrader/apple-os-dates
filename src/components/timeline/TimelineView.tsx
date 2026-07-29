@@ -138,21 +138,33 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
     const p90Index = Math.floor(durations.length * 0.9);
     return Math.max(durations[p90Index], 30);
   }, [bars]);
+  const completedBars = bars.filter((bar) => !bar.isActive);
+  const averageCompletedCycle =
+    completedBars.length > 0
+      ? `${Math.round(
+          completedBars.reduce(
+            (sum, bar) => sum + bar.durationDays,
+            0,
+          ) / completedBars.length,
+        )}d`
+      : "—";
 
   return (
     <div className="space-y-6">
-      {/* Controls */}
-      <div className="flex flex-wrap gap-4 items-center">
-        <div className="flex items-center gap-2">
-          <label className="text-label">Platform</label>
+      <div className="filter-bar">
+        <div className="filter-control">
+          <label className="text-label" htmlFor="timeline-platform">
+            Platform
+          </label>
           <select
+            id="timeline-platform"
             value={selectedPlatform}
             onChange={(event) => {
               const platform = event.target.value;
               setSelectedPlatform(platform);
               sendAnalyticsEvent("platform_filter", { platform });
             }}
-            className="px-3 py-1.5 text-sm rounded-lg"
+            className="filter-control__input"
           >
             <option value="all">All</option>
             {platforms.map((p) => (
@@ -162,77 +174,91 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
             ))}
           </select>
         </div>
-        <div className="flex items-center gap-2">
-          <label className="text-label">Sort</label>
+        <div className="filter-control">
+          <label className="text-label" htmlFor="timeline-sort">
+            Sort
+          </label>
           <select
+            id="timeline-sort"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortKey)}
-            className="px-3 py-1.5 text-sm rounded-lg"
+            className="filter-control__input"
           >
             <option value="date">Most Recent</option>
             <option value="duration">Longest Cycle</option>
-            <option value="betas">Most Betas</option>
+            <option value="betas">Most Milestones</option>
             <option value="platform">By Platform</option>
           </select>
         </div>
-        <div className="flex items-center gap-2">
-          <label className="text-label">Group</label>
+        <div className="filter-control">
+          <label className="text-label" htmlFor="timeline-group">
+            Group
+          </label>
           <select
+            id="timeline-group"
             value={groupBy}
             onChange={(e) => setGroupBy(e.target.value as GroupKey)}
-            className="px-3 py-1.5 text-sm rounded-lg"
+            className="filter-control__input"
           >
             <option value="year">By Year</option>
             <option value="platform">By Platform</option>
             <option value="none">Ungrouped</option>
           </select>
         </div>
-        <div className="flex items-center gap-3 ml-auto">
-          <label className="flex items-center gap-1.5 text-xs cursor-pointer">
+        <fieldset className="filter-toggles">
+          <legend className="sr-only">Release status</legend>
+          <label>
             <input
               type="checkbox"
               checked={showActive}
               onChange={(e) => setShowActive(e.target.checked)}
               className="accent-[var(--milestone-beta)]"
             />
-            <span className="text-[var(--milestone-beta)]">Active</span>
+            <span>Active</span>
           </label>
-          <label className="flex items-center gap-1.5 text-xs cursor-pointer">
+          <label>
             <input
               type="checkbox"
               checked={showReleased}
               onChange={(e) => setShowReleased(e.target.checked)}
               className="accent-[var(--milestone-public)]"
             />
-            <span className="text-[var(--milestone-public)]">Released</span>
+            <span>Released</span>
           </label>
-        </div>
+        </fieldset>
       </div>
 
-      {/* Summary */}
-      <div className="grid grid-cols-3 gap-px bg-[var(--border)] rounded-xl overflow-hidden">
-        <div className="bg-[var(--bg)] text-center py-4 px-3">
-          <div className="stat-value text-lg">{bars.length}</div>
-          <div className="stat-label">Versions</div>
-        </div>
-        <div className="bg-[var(--bg)] text-center py-4 px-3">
-          <div className="stat-value text-lg">
-            {bars.filter((b) => b.isActive).length}
-          </div>
-          <div className="stat-label">In Beta</div>
-        </div>
-        <div className="bg-[var(--bg)] text-center py-4 px-3">
-          <div className="stat-value text-lg">
-            {bars.length > 0
-              ? Math.round(
-                  bars.reduce((s, b) => s + b.durationDays, 0) / bars.length
-                )
-              : 0}
-            d
-          </div>
-          <div className="stat-label">Avg. Cycle</div>
-        </div>
+      <div className="timeline-legend" aria-label="Milestone legend">
+        <span>
+          <i className="timeline-legend__mark timeline-legend__mark--beta" />
+          Beta
+        </span>
+        <span>
+          <i className="timeline-legend__mark timeline-legend__mark--rc" />
+          Release candidate
+        </span>
+        <span>
+          <i className="timeline-legend__mark timeline-legend__mark--public" />
+          Public
+        </span>
       </div>
+
+      <dl className="metric-rail metric-rail--three" aria-label="Timeline summary">
+        <div className="metric-rail__item">
+          <dt className="stat-label">Versions</dt>
+          <dd className="stat-value text-lg">{bars.length}</dd>
+        </div>
+        <div className="metric-rail__item">
+          <dt className="stat-label">Active cycles</dt>
+          <dd className="stat-value text-lg">
+            {bars.filter((b) => b.isActive).length}
+          </dd>
+        </div>
+        <div className="metric-rail__item">
+          <dt className="stat-label">Avg. completed cycle</dt>
+          <dd className="stat-value text-lg">{averageCompletedCycle}</dd>
+        </div>
+      </dl>
 
       {/* Timeline groups */}
       {grouped.map((group) => (
@@ -243,19 +269,25 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
                 {group.label}
               </h2>
               <div className="flex-1 h-px bg-[var(--border)]" />
-              <span className="text-label">{group.items.length} versions</span>
+              <span className="text-label">
+                {group.items.length} versions
+              </span>
             </div>
           )}
 
-          <div className="surface overflow-hidden">
-            <table className="data-table">
+          <div className="surface overflow-x-auto">
+            <table className="data-table timeline-table">
+              <caption className="sr-only">
+                Release cycle durations and recorded milestones for{" "}
+                {group.label}
+              </caption>
               <thead>
                 <tr>
-                  <th className="w-36">Version</th>
-                  <th className="hidden sm:table-cell w-24">Started</th>
-                  <th className="hidden md:table-cell w-20 text-right">Days</th>
-                  <th className="hidden sm:table-cell w-16 text-right">Betas</th>
-                  <th>Cycle</th>
+                  <th scope="col" className="w-36">Version</th>
+                  <th scope="col" className="w-24">Started</th>
+                  <th scope="col" className="w-20 text-right">Days</th>
+                  <th scope="col" className="w-20 text-right">Milestones</th>
+                  <th scope="col">Relative cycle</th>
                 </tr>
               </thead>
               <tbody>
@@ -283,13 +315,13 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
                         )}
                       </Link>
                     </td>
-                    <td className="hidden sm:table-cell text-[var(--text-secondary)] text-xs">
+                    <td className="text-[var(--text-secondary)] text-xs">
                       {formatDate(bar.startDate)}
                     </td>
-                    <td className="hidden md:table-cell text-right font-mono text-sm text-[var(--text-secondary)]">
+                    <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
                       {bar.durationDays}
                     </td>
-                    <td className="hidden sm:table-cell text-right font-mono text-sm text-[var(--text-secondary)]">
+                    <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
                       {bar.milestoneCount}
                     </td>
                     <td>
@@ -321,22 +353,24 @@ function GanttBar({
   return (
     <div
       className="relative h-7 flex items-center"
-      title={`${bar.durationDays} days, ${bar.milestoneCount} releases`}
+      title={`${bar.durationDays} days, ${bar.milestoneCount} milestones`}
+      role="img"
+      aria-label={`${bar.durationDays} day cycle with ${bar.milestoneCount} milestones: ${bar.milestones
+        .map((milestone) => `${milestone.label} on ${formatDate(milestone.date)}`)
+        .join(", ")}`}
     >
       {/* Background track */}
-      <div className="absolute inset-y-0.5 left-0 right-0 rounded bg-[var(--bg-subtle)]" />
+      <div className="absolute inset-y-0.5 left-0 right-0 bg-[var(--bg-subtle)]" />
 
       {/* Duration bar */}
       <div
-        className="relative h-6 rounded"
+        className="relative h-6"
         style={{
           width: `${widthPct}%`,
-          background: bar.isActive
-            ? `linear-gradient(90deg, ${bar.platform.color}25, ${bar.platform.color}60)`
-            : `linear-gradient(90deg, ${bar.platform.color}50, ${bar.platform.color}99)`,
-          boxShadow: bar.durationDays > 30
-            ? `0 0 12px ${bar.platform.color}20`
-            : undefined,
+          background: `color-mix(in srgb, ${bar.platform.color} ${
+            bar.isActive ? 18 : 34
+          }%, transparent)`,
+          borderLeft: `2px solid ${bar.platform.color}`,
         }}
       >
         {/* Milestone markers */}
@@ -346,6 +380,7 @@ function GanttBar({
           return (
             <div
               key={i}
+              aria-hidden="true"
               className="absolute top-0 bottom-0"
               style={{
                 left: `${m.pct}%`,
@@ -355,7 +390,7 @@ function GanttBar({
                   ? "var(--milestone-public)"
                   : isRC
                     ? "var(--milestone-rc)"
-                    : "rgba(255,255,255,0.3)",
+                    : "var(--text-tertiary)",
               }}
               title={`${m.label} — ${formatDate(m.date)}`}
             />

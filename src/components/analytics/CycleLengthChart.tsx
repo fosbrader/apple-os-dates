@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import * as d3 from "d3";
 
 interface VersionStat {
@@ -8,123 +8,182 @@ interface VersionStat {
   platformColor: string;
   version: string;
   cycleDays: number | null;
+  publicReleaseDate?: string;
 }
 
 interface CycleLengthChartProps {
   versions: VersionStat[];
 }
 
-const MARGIN = { top: 20, right: 30, bottom: 60, left: 50 };
+const MARGIN = { top: 28, right: 24, bottom: 82, left: 48 };
+const CHART_HEIGHT = 340;
 
 export function CycleLengthChart({ versions }: CycleLengthChartProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const chartVersions = useMemo(
+    () =>
+      versions
+        .filter(
+          (version) =>
+            version.cycleDays !== null && version.version.endsWith(".0"),
+        )
+        .sort((left, right) =>
+          (left.publicReleaseDate || left.version).localeCompare(
+            right.publicReleaseDate || right.version,
+            undefined,
+            { numeric: true },
+          ),
+        )
+        .slice(-30),
+    [versions],
+  );
 
   useEffect(() => {
-    if (!svgRef.current || !containerRef.current || versions.length === 0)
+    const svgElement = svgRef.current;
+    const container = containerRef.current;
+
+    if (!svgElement || !container || chartVersions.length === 0) {
       return;
+    }
 
-    const width = containerRef.current.clientWidth;
-    const height = 300;
+    function renderChart() {
+      const width = Math.max(container!.clientWidth, 560);
+      const svg = d3
+        .select(svgElement)
+        .attr("viewBox", `0 0 ${width} ${CHART_HEIGHT}`)
+        .attr("preserveAspectRatio", "xMidYMid meet");
 
-    const iosVersions = versions
-      .filter((v) => v.platform === "iOS" && v.cycleDays !== null && v.version.endsWith(".0"))
-      .sort((a, b) =>
-        a.version.localeCompare(b.version, undefined, { numeric: true })
+      svg.selectAll("*").remove();
+      svg
+        .append("title")
+        .attr("id", "cycle-chart-title")
+        .text("Beta cycle duration by major version");
+      svg
+        .append("desc")
+        .attr("id", "cycle-chart-description")
+        .text(
+          "Bars compare the number of days from first beta to public release. A dashed line marks the average of the displayed cycles.",
+        );
+
+      const labels = chartVersions.map(
+        (version) => `${version.platform} ${version.version}`,
       );
+      const x = d3
+        .scaleBand()
+        .domain(labels)
+        .range([MARGIN.left, width - MARGIN.right])
+        .padding(0.24);
+      const y = d3
+        .scaleLinear()
+        .domain([
+          0,
+          d3.max(chartVersions, (version) => version.cycleDays!) || 120,
+        ])
+        .nice()
+        .range([CHART_HEIGHT - MARGIN.bottom, MARGIN.top]);
 
-    if (iosVersions.length === 0) return;
+      svg
+        .append("g")
+        .attr("transform", `translate(0,${CHART_HEIGHT - MARGIN.bottom})`)
+        .call(d3.axisBottom(x).tickSizeOuter(0))
+        .attr("color", "var(--border-hover)")
+        .selectAll("text")
+        .attr("fill", "var(--text-secondary)")
+        .attr("transform", "rotate(-48)")
+        .attr("text-anchor", "end")
+        .attr("font-family", "var(--font-mono)")
+        .attr("font-size", "9px");
 
-    const svg = d3
-      .select(svgRef.current)
-      .attr("width", width)
-      .attr("height", height);
+      const yAxis = svg
+        .append("g")
+        .attr("transform", `translate(${MARGIN.left},0)`)
+        .call(d3.axisLeft(y).ticks(5).tickSize(-(width - MARGIN.left - MARGIN.right)));
 
-    svg.selectAll("*").remove();
+      yAxis.attr("color", "var(--border)");
+      yAxis.select(".domain").remove();
+      yAxis
+        .selectAll("text")
+        .attr("fill", "var(--text-tertiary)")
+        .attr("font-family", "var(--font-mono)")
+        .attr("font-size", "9px");
+      yAxis.selectAll(".tick line").attr("stroke-opacity", 0.55);
 
-    const x = d3
-      .scaleBand()
-      .domain(iosVersions.map((v) => v.version))
-      .range([MARGIN.left, width - MARGIN.right])
-      .padding(0.3);
+      svg
+        .selectAll(".cycle-bar")
+        .data(chartVersions)
+        .join("rect")
+        .attr("class", "cycle-bar")
+        .attr("x", (version) =>
+          x(`${version.platform} ${version.version}`)!,
+        )
+        .attr("y", (version) => y(version.cycleDays!))
+        .attr("width", x.bandwidth())
+        .attr("height", (version) => y(0) - y(version.cycleDays!))
+        .attr("fill", (version) => version.platformColor)
+        .attr("opacity", 0.76)
+        .attr("rx", 0);
 
-    const y = d3
-      .scaleLinear()
-      .domain([0, d3.max(iosVersions, (v) => v.cycleDays!) || 120])
-      .nice()
-      .range([height - MARGIN.bottom, MARGIN.top]);
+      const average =
+        chartVersions.reduce(
+          (sum, version) => sum + version.cycleDays!,
+          0,
+        ) / chartVersions.length;
 
-    svg
-      .append("g")
-      .attr("transform", `translate(0,${height - MARGIN.bottom})`)
-      .call(d3.axisBottom(x))
-      .attr("color", "var(--text-tertiary)")
-      .selectAll("text")
-      .attr("fill", "var(--text-secondary)")
-      .attr("transform", "rotate(-45)")
-      .attr("text-anchor", "end")
-      .attr("font-size", "10px");
+      svg
+        .append("line")
+        .attr("x1", MARGIN.left)
+        .attr("x2", width - MARGIN.right)
+        .attr("y1", y(average))
+        .attr("y2", y(average))
+        .attr("stroke", "var(--milestone-rc)")
+        .attr("stroke-width", 1.5)
+        .attr("stroke-dasharray", "5,5");
 
-    svg
-      .append("g")
-      .attr("transform", `translate(${MARGIN.left},0)`)
-      .call(d3.axisLeft(y).ticks(5))
-      .attr("color", "var(--text-tertiary)")
-      .selectAll("text")
-      .attr("fill", "var(--text-secondary)");
+      svg
+        .append("text")
+        .attr("x", width - MARGIN.right)
+        .attr("y", y(average) - 8)
+        .attr("text-anchor", "end")
+        .attr("fill", "var(--milestone-rc)")
+        .attr("font-family", "var(--font-mono)")
+        .attr("font-size", "9px")
+        .text(`AVERAGE ${Math.round(average)} DAYS`);
+    }
 
-    svg
-      .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 12)
-      .attr("x", -(height / 2))
-      .attr("text-anchor", "middle")
-      .attr("fill", "var(--text-tertiary)")
-      .attr("font-size", "11px")
-      .text("Days");
+    renderChart();
+    const resizeObserver = new ResizeObserver(renderChart);
+    resizeObserver.observe(container);
 
-    svg
-      .selectAll(".bar")
-      .data(iosVersions)
-      .join("rect")
-      .attr("class", "bar")
-      .attr("x", (d) => x(d.version)!)
-      .attr("y", (d) => y(d.cycleDays!))
-      .attr("width", x.bandwidth())
-      .attr("height", (d) => y(0) - y(d.cycleDays!))
-      .attr("fill", (d) => d.platformColor)
-      .attr("opacity", 0.7)
-      .attr("rx", 3);
+    return () => resizeObserver.disconnect();
+  }, [chartVersions]);
 
-    const avg =
-      iosVersions.reduce((sum, v) => sum + v.cycleDays!, 0) /
-      iosVersions.length;
+  if (chartVersions.length === 0) {
+    return (
+      <div className="surface p-6 text-sm text-[var(--text-secondary)]">
+        No completed major-version cycles are available in this view.
+      </div>
+    );
+  }
 
-    svg
-      .append("line")
-      .attr("x1", MARGIN.left)
-      .attr("x2", width - MARGIN.right)
-      .attr("y1", y(avg))
-      .attr("y2", y(avg))
-      .attr("stroke", "var(--milestone-rc)")
-      .attr("stroke-dasharray", "4,4")
-      .attr("opacity", 0.6);
-
-    svg
-      .append("text")
-      .attr("x", width - MARGIN.right - 4)
-      .attr("y", y(avg) - 6)
-      .attr("text-anchor", "end")
-      .attr("fill", "var(--milestone-rc)")
-      .attr("font-size", "10px")
-      .text(`avg: ${Math.round(avg)}d`);
-  }, [versions]);
+  const average = Math.round(
+    chartVersions.reduce(
+      (sum, version) => sum + version.cycleDays!,
+      0,
+    ) / chartVersions.length,
+  );
 
   return (
-    <div ref={containerRef} className="surface p-4">
-      <svg ref={svgRef} />
-      <p className="text-xs text-[var(--text-tertiary)] mt-2 text-center">
-        iOS major version beta cycles (Beta 1 → Public)
+    <div ref={containerRef} className="surface overflow-x-auto p-4">
+      <svg
+        ref={svgRef}
+        className="block h-auto min-w-[35rem] w-full"
+        role="img"
+        aria-labelledby="cycle-chart-title cycle-chart-description"
+      />
+      <p className="mt-2 text-center text-xs text-[var(--text-tertiary)]">
+        {chartVersions.length} completed major-version cycles shown; displayed
+        average: {average} days.
       </p>
     </div>
   );

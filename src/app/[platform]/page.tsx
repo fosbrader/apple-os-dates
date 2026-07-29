@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPlatforms, getPlatformVersions } from "@/lib/sanity.fetch";
-import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
 import { formatDate } from "@/lib/utils";
 import {
@@ -72,6 +71,9 @@ export default async function PlatformPage({
   const sortedGroups = Array.from(grouped.entries()).sort(
     ([a], [b]) => b - a
   );
+  const activeVersionCount = versions.filter(
+    (version) => !version.publicReleaseDate,
+  ).length;
   const description = platformDescription(platform.name, versions.length);
   const canonical = absoluteUrl(`/${encodeURIComponent(slug)}/`);
   const collectionId = `${canonical}#collection`;
@@ -121,97 +123,133 @@ export default async function PlatformPage({
   return (
     <>
       <JsonLd id={`${slug}-release-collection`} data={structuredData} />
-      <div className="space-y-12">
-      {/* Header */}
-      <div
-        className="flex items-center gap-4 animate-in"
-        style={{ "--delay": 0 } as React.CSSProperties}
-      >
-        <PlatformBadge name={platform.name} color={platform.color} size="lg" />
-        <div>
-          <h1 className="text-heading">{platform.name} Releases</h1>
-          <p className="text-sm text-[var(--text-secondary)]">
-            {description}
-          </p>
-        </div>
-      </div>
-
-      {/* Version groups */}
-      {sortedGroups.map(([majorVersion, groupVersions], gi) => (
-        <section
-          key={majorVersion}
-          className="animate-in"
-          style={{ "--delay": 1 + gi } as React.CSSProperties}
+      <div className="space-y-16">
+        <header
+          className="platform-hero animate-in"
+          style={
+            {
+              "--delay": 0,
+              "--platform-color": platform.color,
+            } as React.CSSProperties
+          }
         >
-          <div className="flex items-center gap-3 mb-3">
-            <h2 className="text-subheading text-[var(--text-secondary)]">
-              {platform.name} {majorVersion}
-            </h2>
-            <div className="flex-1 h-px bg-[var(--border)]" />
-            <span className="text-label">
-              {groupVersions.length} version
-              {groupVersions.length !== 1 ? "s" : ""}
-            </span>
+          <div className="platform-hero__copy">
+            <p className="section-kicker">Release index</p>
+            <h1 className="text-heading">{platform.name}</h1>
+            <p>{description}</p>
+            {activeVersionCount > 0 && (
+              <p className="mt-5">
+                <span className="badge badge-active">
+                  {activeVersionCount} active{" "}
+                  {activeVersionCount === 1 ? "cycle" : "cycles"}
+                </span>
+              </p>
+            )}
           </div>
+          <div className="platform-hero__meta" aria-label={`${versions.length} indexed versions`}>
+            <strong>{versions.length}</strong>
+            <span>Indexed versions</span>
+          </div>
+        </header>
 
-          <div className="surface overflow-hidden">
-            <table className="data-table">
-              <thead>
-                <tr>
-                  <th>Version</th>
-                  <th>Status</th>
-                  <th className="hidden sm:table-cell">Released</th>
-                  <th className="hidden md:table-cell">First Beta</th>
-                  <th className="text-right">Betas</th>
-                  <th className="hidden lg:table-cell">Note</th>
-                </tr>
-              </thead>
-              <tbody>
-                {groupVersions.map((version, idx) => {
-                  const isActive = !version.publicReleaseDate;
-                  return (
-                    <tr key={`${version._id}-${idx}`}>
-                      <td>
-                        <Link
-                          href={`/${slug}/${version.version}`}
-                          className="inline-flex items-center gap-2 group"
-                        >
-                          <span className="font-mono font-semibold group-hover:text-[var(--accent)] transition-colors">
-                            {version.version}
-                          </span>
-                        </Link>
-                      </td>
-                      <td>
-                        {isActive ? (
-                          <span className="badge badge-active text-[0.625rem]">Active</span>
-                        ) : (
-                          <span className="text-[var(--text-tertiary)] text-xs">Released</span>
-                        )}
-                      </td>
-                      <td className="hidden sm:table-cell text-[var(--text-secondary)]">
-                        {version.publicReleaseDate
-                          ? formatDate(version.publicReleaseDate)
-                          : "—"}
-                      </td>
-                      <td className="hidden md:table-cell text-[var(--text-secondary)]">
-                        {version.firstBetaDate
-                          ? formatDate(version.firstBetaDate)
-                          : "—"}
-                      </td>
-                      <td className="text-right font-mono text-[var(--text-secondary)]">
-                        {version.milestoneCount}
-                      </td>
-                      <td className="hidden lg:table-cell text-xs text-[var(--accent)] italic">
-                        {version.versionNote || ""}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        </section>
-      ))}
+        {sortedGroups.map(([majorVersion, groupVersions], groupIndex) => (
+          <section
+            key={majorVersion}
+            className="animate-in"
+            style={{ "--delay": 1 + groupIndex } as React.CSSProperties}
+          >
+            <div className="section-heading">
+              <div>
+                <p className="section-kicker">Major versions</p>
+                <h2>
+                  {platform.name} {majorVersion}
+                </h2>
+              </div>
+              <p>
+                {groupVersions.length} indexed{" "}
+                {groupVersions.length === 1 ? "version" : "versions"} in this
+                release family.
+              </p>
+            </div>
+
+            <div className="surface overflow-hidden overflow-x-auto">
+              <table className="data-table min-w-[48rem]">
+                <caption className="sr-only">
+                  {platform.name} {majorVersion} release history
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Version</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">
+                      Public release
+                    </th>
+                    <th scope="col">
+                      First beta
+                    </th>
+                    <th scope="col" className="text-right">
+                      Milestones
+                    </th>
+                    <th scope="col">
+                      Note
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {groupVersions.map((version, index) => {
+                    const isActive = !version.publicReleaseDate;
+
+                    return (
+                      <tr key={`${version._id}-${index}`}>
+                        <td>
+                          <Link
+                            href={`/${slug}/${version.version}`}
+                            className="inline-flex items-center gap-2 group"
+                          >
+                            <span className="font-mono font-semibold group-hover:text-[var(--accent)] transition-colors">
+                              {version.version}
+                            </span>
+                            <span
+                              className="text-[var(--text-tertiary)] group-hover:text-[var(--accent)]"
+                              aria-hidden="true"
+                            >
+                              ↗
+                            </span>
+                          </Link>
+                        </td>
+                        <td>
+                          {isActive ? (
+                            <span className="badge badge-active">Active</span>
+                          ) : (
+                            <span className="badge badge-released">
+                              Released
+                            </span>
+                          )}
+                        </td>
+                        <td className="text-[var(--text-secondary)]">
+                          {version.publicReleaseDate
+                            ? formatDate(version.publicReleaseDate)
+                            : "—"}
+                        </td>
+                        <td className="text-[var(--text-secondary)]">
+                          {version.firstBetaDate
+                            ? formatDate(version.firstBetaDate)
+                            : "—"}
+                        </td>
+                        <td className="text-right font-mono text-[var(--text-secondary)]">
+                          {version.milestoneCount}
+                        </td>
+                        <td className="text-xs text-[var(--accent)] italic">
+                          {version.versionNote || "—"}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        ))}
       </div>
     </>
   );

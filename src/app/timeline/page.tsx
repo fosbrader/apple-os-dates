@@ -49,16 +49,32 @@ export default async function TimelinePage() {
   return (
     <>
       <JsonLd id="timeline-structured-data" data={structuredData} />
-      <div className="space-y-8">
-      <div className="animate-in" style={{ "--delay": 0 } as React.CSSProperties}>
-        <h1 className="text-heading">Release Timeline</h1>
-        <p className="text-sm text-[var(--text-secondary)] mt-1">
-          Explore recorded beta, RC, and public releases across Apple platforms.
-        </p>
-      </div>
-      <div className="animate-in" style={{ "--delay": 1 } as React.CSSProperties}>
-        <TimelineView data={data} platforms={platforms} />
-      </div>
+      <div className="space-y-16">
+        <header
+          className="page-intro animate-in"
+          style={{ "--delay": 0 } as React.CSSProperties}
+        >
+          <div>
+            <p className="section-kicker">Release timeline</p>
+            <h1 className="text-heading">Beta cycle comparison</h1>
+          </div>
+          <div>
+            <p className="page-intro__description">
+              Compare recorded beta-to-public cycles across Apple platforms,
+              sort by duration or milestone count, and inspect every marker in
+              the underlying release record.
+            </p>
+            <span className="page-intro__meta">
+              Active bars end at today · Markers show recorded milestones
+            </span>
+          </div>
+        </header>
+        <div
+          className="animate-in"
+          style={{ "--delay": 1 } as React.CSSProperties}
+        >
+          <TimelineView data={data} platforms={platforms} />
+        </div>
       </div>
     </>
   );

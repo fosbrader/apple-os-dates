@@ -57,7 +57,7 @@ export function VersionInsights({
 
       insights.push({
         label: `Historical avg for ${isMajor ? "major" : suffix} releases`,
-        value: `${avgCycle} days, ${avgBetas} betas`,
+        value: `${avgCycle} days, ${avgBetas} milestones`,
         detail: `Based on ${samePositionVersions.length} previous ${version.releaseTrain.platform.name} ${suffix} releases`,
         type: "info",
       });
@@ -141,11 +141,11 @@ export function VersionInsights({
     const isPast = projectedDate < new Date();
 
     insights.push({
-      label: "Projected next beta",
+      label: "Interval-based date reference",
       value: formatDate(projectedStr),
       detail: isPast
-        ? `Based on ${avgInterval}-day average interval (overdue by ${daysBetween(projectedStr, new Date().toISOString().split("T")[0])} days)`
-        : `Based on ${avgInterval}-day average interval for this version`,
+        ? `Historical context only: the ${avgInterval}-day average interval elapsed ${daysBetween(projectedStr, new Date().toISOString().split("T")[0])} days ago`
+        : `Historical context only: based on the ${avgInterval}-day average interval for this version`,
       type: isPast ? "warning" : "info",
     });
   }
@@ -170,9 +170,9 @@ export function VersionInsights({
       const projectedStr = format(projectedRelease, "yyyy-MM-dd");
 
       insights.push({
-        label: "Projected public release",
+        label: "Average-cycle date reference",
         value: formatDate(projectedStr),
-        detail: `Based on ${avgCycle}-day avg cycle for ${isMajor ? "major" : suffix} releases`,
+        detail: `Historical context, not a forecast: based on the ${avgCycle}-day average for ${isMajor ? "major" : suffix} releases`,
         type: "info",
       });
     }
@@ -206,10 +206,10 @@ export function VersionInsights({
       const ahead = milestones.length > avgBetasAtDay;
       insights.push({
         label: `Pace at day ${daysSinceStart}`,
-        value: `${milestones.length} betas (avg: ${avgBetasAtDay.toFixed(1)})`,
+        value: `${milestones.length} milestones (avg: ${avgBetasAtDay.toFixed(1)})`,
         detail: ahead
-          ? `Ahead of pace — previous ${suffix} releases averaged ${avgBetasAtDay.toFixed(1)} betas at this point`
-          : `Behind pace — previous ${suffix} releases averaged ${avgBetasAtDay.toFixed(1)} betas at this point`,
+          ? `Ahead of pace — previous ${suffix} releases averaged ${avgBetasAtDay.toFixed(1)} milestones at this point`
+          : `Behind pace — previous ${suffix} releases averaged ${avgBetasAtDay.toFixed(1)} milestones at this point`,
         type: ahead ? "success" : "warning",
       });
     }
@@ -342,15 +342,19 @@ export function VersionInsights({
           <h3 className="text-label mb-3">
             Previous {suffix} releases ({version.releaseTrain.platform.name})
           </h3>
-          <div className="surface overflow-hidden">
-            <table className="data-table">
+          <div className="surface overflow-x-auto">
+            <table className="data-table min-w-[36rem]">
+              <caption className="sr-only">
+                Previous comparable {version.releaseTrain.platform.name}{" "}
+                releases
+              </caption>
               <thead>
                 <tr>
-                  <th>Version</th>
-                  <th>Year</th>
-                  <th className="text-right">Cycle</th>
-                  <th className="text-right">Betas</th>
-                  <th className="text-right hidden sm:table-cell">
+                  <th scope="col">Version</th>
+                  <th scope="col">Year</th>
+                  <th scope="col" className="text-right">Cycle</th>
+                  <th scope="col" className="text-right">Milestones</th>
+                  <th scope="col" className="text-right">
                     Avg. Interval
                   </th>
                 </tr>
@@ -370,7 +374,7 @@ export function VersionInsights({
                     <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
                       {row.betas}
                     </td>
-                    <td className="text-right font-mono text-sm text-[var(--text-secondary)] hidden sm:table-cell">
+                    <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
                       {row.avgInterval ? `${row.avgInterval}d` : "—"}
                     </td>
                   </tr>

@@ -6,7 +6,6 @@ import {
   getHistoricalContext,
   getVersionDetail,
 } from "@/lib/sanity.fetch";
-import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { MilestoneTimeline } from "@/components/ui/MilestoneTimeline";
 import { CalendarExport } from "@/components/ui/CalendarExport";
 import { VersionInsights } from "@/components/analytics/VersionInsights";
@@ -176,164 +175,180 @@ export default async function VersionDetailPage({
         version={detail.version}
         releaseStatus={isActive ? "active" : "released"}
       />
-      <div className="space-y-10">
-      {/* Breadcrumb */}
-      <nav
-        className="flex items-center gap-2 text-sm text-[var(--text-tertiary)] animate-in"
-        style={{ "--delay": 0 } as React.CSSProperties}
-      >
-        <Link href="/" className="hover:text-[var(--text-secondary)]">
-          Home
-        </Link>
-        <span>/</span>
-        <Link
-          href={`/${slug}`}
-          className="hover:text-[var(--text-secondary)]"
+      <div className="space-y-16">
+        <nav
+          aria-label="Breadcrumb"
+          className="breadcrumb-nav animate-in"
+          style={{ "--delay": 0 } as React.CSSProperties}
         >
-          {platform.name}
-        </Link>
-        <span>/</span>
-        <span
-          className="text-[var(--text)] font-mono"
-          aria-current="page"
-        >
-          {detail.version}
-        </span>
-      </nav>
-
-      {/* Header */}
-      <div
-        className="flex flex-col sm:flex-row sm:items-center gap-4 animate-in"
-        style={{ "--delay": 1 } as React.CSSProperties}
-      >
-        <PlatformBadge name={platform.name} color={platform.color} size="lg" />
-        <div>
-          <h1 className="text-heading">
-            {platform.name}{" "}
-            <span className="font-mono">{detail.version}</span>
-          </h1>
-          {detail.versionNote && (
-            <p className="text-sm text-[var(--accent)] italic mt-0.5">
-              {detail.versionNote}
-            </p>
-          )}
-        </div>
-        {isActive && (
-          <span className="self-start sm:ml-auto badge badge-active text-sm px-4 py-1.5">
-            In Beta
+          <Link href="/">Overview</Link>
+          <span aria-hidden="true">/</span>
+          <Link href={`/${slug}`}>{platform.name}</Link>
+          <span aria-hidden="true">/</span>
+          <span className="text-[var(--text)]" aria-current="page">
+            {detail.version}
           </span>
-        )}
-      </div>
+        </nav>
 
-      {/* Stats */}
-      <div
-        className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[var(--border)] rounded-2xl overflow-hidden animate-in"
-        style={{ "--delay": 2 } as React.CSSProperties}
-      >
-        <div className="bg-[var(--bg)] text-center py-5 px-4">
-          <div className="stat-value">{detail.milestones.length}</div>
-          <div className="stat-label">Releases</div>
-        </div>
-        <div className="bg-[var(--bg)] text-center py-5 px-4">
-          <div className="stat-value">
-            {cycleDays !== null ? `${cycleDays}d` : "—"}
+        <header
+          className="version-hero animate-in"
+          style={
+            {
+              "--delay": 1,
+              "--platform-color": platform.color,
+            } as React.CSSProperties
+          }
+        >
+          <div className="version-hero__title">
+            <p className="section-kicker">Release record</p>
+            <h1>
+              {platform.name} <span>{detail.version}</span>
+            </h1>
+            {detail.versionNote && (
+              <p className="version-hero__note">{detail.versionNote}</p>
+            )}
           </div>
-          <div className="stat-label">Beta Cycle</div>
-        </div>
-        <div className="bg-[var(--bg)] text-center py-5 px-4">
-          <div className="stat-value">
-            {avgInterval !== null ? `${avgInterval}d` : "—"}
+          <div
+            className={`version-status ${
+              isActive ? "" : "version-status--released"
+            }`}
+          >
+            {isActive ? "Cycle active" : "Public release"}
           </div>
-          <div className="stat-label">Avg. Interval</div>
-        </div>
-        <div className="bg-[var(--bg)] text-center py-5 px-4">
-          <div className="stat-value text-xl">
-            {detail.publicReleaseDate
-              ? formatDate(detail.publicReleaseDate)
-              : "TBD"}
+        </header>
+
+        <dl
+          className="metric-rail animate-in"
+          style={{ "--delay": 2 } as React.CSSProperties}
+          aria-label="Release summary"
+        >
+          {[
+            {
+              value: detail.milestones.length,
+              label: "Recorded milestones",
+            },
+            {
+              value: cycleDays !== null ? `${cycleDays}d` : "—",
+              label: "Beta cycle",
+            },
+            {
+              value: avgInterval !== null ? `${avgInterval}d` : "—",
+              label: "Average interval",
+            },
+            {
+              value: detail.publicReleaseDate
+                ? formatDate(detail.publicReleaseDate)
+                : "TBD",
+              label: "Public release",
+            },
+          ].map((stat, index) => (
+            <div
+              key={stat.label}
+              className="metric-rail__item"
+              data-index={String(index + 1).padStart(2, "0")}
+            >
+              <dt className="stat-label">{stat.label}</dt>
+              <dd className="stat-value">{stat.value}</dd>
+            </div>
+          ))}
+        </dl>
+
+        <section
+          className="animate-in"
+          style={{ "--delay": 3 } as React.CSSProperties}
+        >
+          <div className="section-heading">
+            <div>
+              <p className="section-kicker">Milestones</p>
+              <h2>Release history</h2>
+            </div>
+            <p>
+              Every recorded beta, release candidate, revision, and public
+              milestone in chronological order.
+            </p>
           </div>
-          <div className="stat-label">Public Release</div>
-        </div>
-      </div>
+          <div className="surface p-5 sm:p-8">
+            <MilestoneTimeline milestones={detail.milestones} />
+          </div>
+        </section>
 
-      {/* Milestones */}
-      <section
-        className="animate-in"
-        style={{ "--delay": 3 } as React.CSSProperties}
-      >
-        <h2 className="text-subheading mb-5">Release History</h2>
-        <div className="surface p-6">
-          <MilestoneTimeline milestones={detail.milestones} />
-        </div>
-      </section>
+        <section
+          className="animate-in"
+          style={{ "--delay": 4 } as React.CSSProperties}
+        >
+          <div className="section-heading">
+            <div>
+              <p className="section-kicker">Historical context</p>
+              <h2>Cycle comparison</h2>
+            </div>
+            <p>
+              Pace, intervals, and duration compared with earlier releases on
+              the same platform.
+            </p>
+          </div>
+          <VersionInsights
+            version={detail}
+            samePlatformVersions={historical.samePlatformVersions}
+            samePositionVersions={historical.samePositionVersions}
+          />
+        </section>
 
-      {/* Insights & Analytics */}
-      <section
-        className="animate-in"
-        style={{ "--delay": 4 } as React.CSSProperties}
-      >
-        <h2 className="text-subheading mb-5">Insights</h2>
-        <VersionInsights
-          version={detail}
-          samePlatformVersions={historical.samePlatformVersions}
-          samePositionVersions={historical.samePositionVersions}
-        />
-      </section>
-
-      {/* Actions */}
-      <section
-        className="flex flex-wrap gap-3 animate-in"
-        style={{ "--delay": 5 } as React.CSSProperties}
-      >
-        <CalendarExport
-          milestones={detail.milestones}
-          platform={platform.name}
-          version={detail.version}
-          versionName={`${platform.name} ${detail.version}`}
-        />
-        {detail.releaseNotesUrl && (
-          <TrackedReleaseNotesLink
-            href={detail.releaseNotesUrl}
+        <section
+          aria-label="Release actions"
+          className="flex flex-wrap gap-3 animate-in"
+          style={{ "--delay": 5 } as React.CSSProperties}
+        >
+          <CalendarExport
+            milestones={detail.milestones}
             platform={platform.name}
             version={detail.version}
-            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded-lg surface text-[var(--accent)] hover:bg-[var(--bg-subtle)] transition-colors"
-          >
-            Release Notes &rarr;
-          </TrackedReleaseNotesLink>
-        )}
-      </section>
-
-      {(detail.updatedAt || detail.releaseNotesUrl) && (
-        <aside
-          aria-label="Data provenance"
-          className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-[var(--text-tertiary)]"
-        >
-          {detail.updatedAt && (
-            <span>
-              Last updated{" "}
-              <time dateTime={detail.updatedAt}>
-                {formatDate(detail.updatedAt)}
-              </time>
-            </span>
-          )}
-          {detail.updatedAt && detail.releaseNotesUrl && (
-            <span aria-hidden="true">·</span>
-          )}
+            versionName={`${platform.name} ${detail.version}`}
+          />
           {detail.releaseNotesUrl && (
-            <span>
-              Source:{" "}
-              <TrackedReleaseNotesLink
-                href={detail.releaseNotesUrl}
-                platform={platform.name}
-                version={detail.version}
-                className="text-[var(--accent)] hover:underline"
-              >
-                Release notes
-              </TrackedReleaseNotesLink>
-            </span>
+            <TrackedReleaseNotesLink
+              href={detail.releaseNotesUrl}
+              platform={platform.name}
+              version={detail.version}
+              className="button button--secondary"
+            >
+              Official release notes
+              <span aria-hidden="true">↗</span>
+            </TrackedReleaseNotesLink>
           )}
-        </aside>
-      )}
+        </section>
+
+        {(detail.updatedAt || detail.releaseNotesUrl) && (
+          <aside
+            aria-label="Data provenance"
+            className="surface flex flex-wrap items-center gap-x-3 gap-y-1 p-4 text-xs text-[var(--text-tertiary)]"
+          >
+            <span className="text-label">Provenance</span>
+            {detail.updatedAt && (
+              <span>
+                Last updated{" "}
+                <time dateTime={detail.updatedAt}>
+                  {formatDate(detail.updatedAt)}
+                </time>
+              </span>
+            )}
+            {detail.updatedAt && detail.releaseNotesUrl && (
+              <span aria-hidden="true">·</span>
+            )}
+            {detail.releaseNotesUrl && (
+              <span>
+                Source:{" "}
+                <TrackedReleaseNotesLink
+                  href={detail.releaseNotesUrl}
+                  platform={platform.name}
+                  version={detail.version}
+                  className="text-[var(--accent)] hover:underline"
+                >
+                  release notes
+                </TrackedReleaseNotesLink>
+              </span>
+            )}
+          </aside>
+        )}
       </div>
     </>
   );

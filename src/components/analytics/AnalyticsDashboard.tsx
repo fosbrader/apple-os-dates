@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import type { Platform, ReleaseVersion } from "@/lib/types";
 import {
   computeBetaCycleDays,
@@ -26,9 +26,19 @@ interface VersionStats {
 
 export function AnalyticsDashboard({
   data,
+  platforms,
 }: AnalyticsDashboardProps) {
+  const [selectedPlatform, setSelectedPlatform] = useState("all");
+
   const stats = useMemo(() => {
-    const versionStats: VersionStats[] = data
+    const filteredData =
+      selectedPlatform === "all"
+        ? data
+        : data.filter(
+            (version) =>
+              version.releaseTrain.platform.slug.current === selectedPlatform,
+          );
+    const versionStats: VersionStats[] = filteredData
       .filter((v) => v.milestones?.length > 0)
       .map((v) => ({
         platform: v.releaseTrain.platform.name,
@@ -96,33 +106,77 @@ export function AnalyticsDashboard({
         0
       ),
     };
-  }, [data]);
+  }, [data, selectedPlatform]);
 
   return (
     <div className="space-y-10">
-      {/* Summary stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[var(--border)] rounded-2xl overflow-hidden">
-        {[
-          { value: `${stats.avgCycleDays}d`, label: "Avg. Beta Cycle" },
-          { value: stats.avgMilestones, label: "Avg. Releases" },
-          { value: `${stats.avgInterval}d`, label: "Avg. Between Betas" },
-          { value: stats.totalMilestones, label: "Total Releases" },
-        ].map((s) => (
-          <div key={s.label} className="bg-[var(--bg)] text-center py-6 px-4">
-            <div className="stat-value">{s.value}</div>
-            <div className="stat-label">{s.label}</div>
-          </div>
-        ))}
+      <div className="filter-bar">
+        <div className="filter-control">
+          <label className="text-label" htmlFor="analytics-platform">
+            Platform
+          </label>
+          <select
+            id="analytics-platform"
+            value={selectedPlatform}
+            onChange={(event) => setSelectedPlatform(event.target.value)}
+            className="filter-control__input"
+          >
+            <option value="all">All platforms</option>
+            {platforms.map((platform) => (
+              <option key={platform._id} value={platform.slug.current}>
+                {platform.name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <p className="ml-auto max-w-md text-xs text-[var(--text-tertiary)]">
+          Summary metrics, records, chart, and version ledger update together.
+        </p>
       </div>
 
-      {/* Records */}
+      <dl className="metric-rail" aria-label="Release analytics summary">
+        {[
+          { value: `${stats.avgCycleDays}d`, label: "Avg. Beta Cycle" },
+          { value: stats.avgMilestones, label: "Avg. Milestones" },
+          { value: `${stats.avgInterval}d`, label: "Avg. Interval" },
+          { value: stats.totalMilestones, label: "Total Milestones" },
+        ].map((stat, index) => (
+          <div
+            key={stat.label}
+            className="metric-rail__item"
+            data-index={String(index + 1).padStart(2, "0")}
+          >
+            <dt className="stat-label">{stat.label}</dt>
+            <dd className="stat-value">{stat.value}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <div className="section-heading">
+        <div>
+          <p className="section-kicker">Selected view</p>
+          <h2>Cycle records</h2>
+        </div>
+        <p>
+          Longest and shortest completed beta cycles, plus the version with the
+          most recorded milestones.
+        </p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {stats.longest && (
           <div className="card">
             <p className="text-label mb-2">Longest Beta Cycle</p>
             <div className="stat-value mb-1">{stats.longest.cycleDays}d</div>
             <p className="text-sm">
-              <span style={{ color: stats.longest.platformColor }}>
+              <span
+                className="platform-label"
+                style={
+                  {
+                    "--platform-color": stats.longest.platformColor,
+                  } as React.CSSProperties
+                }
+              >
+                <i aria-hidden="true" />
                 {stats.longest.platform}
               </span>{" "}
               <span className="font-mono text-[var(--text-secondary)]">
@@ -136,7 +190,15 @@ export function AnalyticsDashboard({
             <p className="text-label mb-2">Shortest Beta Cycle</p>
             <div className="stat-value mb-1">{stats.shortest.cycleDays}d</div>
             <p className="text-sm">
-              <span style={{ color: stats.shortest.platformColor }}>
+              <span
+                className="platform-label"
+                style={
+                  {
+                    "--platform-color": stats.shortest.platformColor,
+                  } as React.CSSProperties
+                }
+              >
+                <i aria-hidden="true" />
                 {stats.shortest.platform}
               </span>{" "}
               <span className="font-mono text-[var(--text-secondary)]">
@@ -147,12 +209,20 @@ export function AnalyticsDashboard({
         )}
         {stats.mostBetas && (
           <div className="card">
-            <p className="text-label mb-2">Most Releases</p>
+            <p className="text-label mb-2">Most Milestones</p>
             <div className="stat-value mb-1">
               {stats.mostBetas.milestoneCount}
             </div>
             <p className="text-sm">
-              <span style={{ color: stats.mostBetas.platformColor }}>
+              <span
+                className="platform-label"
+                style={
+                  {
+                    "--platform-color": stats.mostBetas.platformColor,
+                  } as React.CSSProperties
+                }
+              >
+                <i aria-hidden="true" />
                 {stats.mostBetas.platform}
               </span>{" "}
               <span className="font-mono text-[var(--text-secondary)]">
@@ -163,26 +233,43 @@ export function AnalyticsDashboard({
         )}
       </div>
 
-      {/* Chart */}
       <section>
-        <h2 className="text-subheading mb-4">
-          Beta Cycle Duration by Version
-        </h2>
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">Duration series</p>
+            <h2>Beta cycle duration</h2>
+          </div>
+          <p>
+            Completed major-version cycles, with the average shown as a dashed
+            reference line.
+          </p>
+        </div>
         <CycleLengthChart versions={stats.completedVersions} />
       </section>
 
-      {/* Table */}
       <section>
-        <h2 className="text-subheading mb-4">All Versions</h2>
+        <div className="section-heading">
+          <div>
+            <p className="section-kicker">Version data</p>
+            <h2>All indexed cycles</h2>
+          </div>
+          <p>
+            Every version in the selected view. Scroll horizontally on compact
+            screens to retain the full record.
+          </p>
+        </div>
         <div className="surface overflow-hidden overflow-x-auto">
-          <table className="data-table">
+          <table className="data-table min-w-[42rem]">
+            <caption className="sr-only">
+              Release analytics for all versions in the selected platform view
+            </caption>
             <thead>
               <tr>
-                <th>Version</th>
-                <th>Platform</th>
-                <th className="text-right">Releases</th>
-                <th className="text-right">Cycle (days)</th>
-                <th className="text-right">Avg. Interval</th>
+                <th scope="col">Version</th>
+                <th scope="col">Platform</th>
+                <th scope="col" className="text-right">Milestones</th>
+                <th scope="col" className="text-right">Cycle (days)</th>
+                <th scope="col" className="text-right">Avg. Interval</th>
               </tr>
             </thead>
             <tbody>
@@ -193,12 +280,19 @@ export function AnalyticsDashboard({
                       a.publicReleaseDate || "9999"
                     )
                 )
-                .slice(0, 50)
                 .map((v, i) => (
                   <tr key={`${v.platform}-${v.version}-${i}`}>
                     <td className="font-mono font-medium">{v.version}</td>
                     <td>
-                      <span style={{ color: v.platformColor }}>
+                      <span
+                        className="platform-label"
+                        style={
+                          {
+                            "--platform-color": v.platformColor,
+                          } as React.CSSProperties
+                        }
+                      >
+                        <i aria-hidden="true" />
                         {v.platform}
                       </span>
                     </td>
