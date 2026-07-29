@@ -64,7 +64,7 @@ function DateRange({
 
   return (
     <>
-      {formatDate(earliest)}–{formatDate(latest)}
+      {formatDate(earliest)} – {formatDate(latest)}
     </>
   );
 }
@@ -124,10 +124,18 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
     forecast.status === "paused-stale" ||
     forecast.status === "paused-window-passed";
   const window = forecast.publicReleaseWindow;
+  const nextWindow = forecast.nextMilestoneWindow;
+  const evidenceSummary = [
+    `${(nextWindow ?? window)?.sampleSize ?? 0} comparable cycles`,
+    nextWindow ? `${nextWindow.labelAgreement}% label agreement` : null,
+    forecast.confidence ? CONFIDENCE_LABELS[forecast.confidence] : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
 
   return (
     <article
-      className="card card-platform forecast-card space-y-5"
+      className="card card-platform forecast-card"
       style={{ "--platform-color": platform.color } as React.CSSProperties}
     >
       {window && forecast.confidence ? (
@@ -138,9 +146,9 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
           sampleSize={window.sampleSize}
         />
       ) : null}
-      <header className="flex flex-wrap items-start gap-3">
-        <div>
-          <div className="flex items-center gap-2">
+      <header className="forecast-card__header">
+        <div className="forecast-card__identity">
+          <div>
             <span
               className="badge badge-platform"
               style={
@@ -157,12 +165,10 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
             </Link>
           </div>
           {forecast.latestMilestone && (
-            <p className="mt-2 text-xs text-[var(--text-tertiary)]">
-              Latest recorded milestone:{" "}
-              <span className="text-[var(--text-secondary)]">
-                {forecast.latestMilestone.label} on{" "}
-                {formatDate(forecast.latestMilestone.date)}
-              </span>
+            <p>
+              Latest: <strong>{forecast.latestMilestone.label}</strong>
+              <span aria-hidden="true"> · </span>
+              {formatDate(forecast.latestMilestone.date)}
             </p>
           )}
         </div>
@@ -175,117 +181,114 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
             {CONFIDENCE_LABELS[forecast.confidence]}
           </span>
         )}
-        {forecast.confidenceReason && (
-          <p className="w-full text-xs leading-5 text-[var(--text-tertiary)]">
-            Evidence note: {forecast.confidenceReason}
-          </p>
-        )}
       </header>
 
-      <div
-        className={`forecast-status ${
-          forecast.status === "active"
-            ? "forecast-status--active"
-            : "forecast-status--paused"
-        }`}
-      >
-        <p className="text-sm font-semibold">
-          {forecast.status === "active"
-            ? "Forecast active"
-            : forecast.status === "insufficient-history"
-              ? "Not enough evidence"
-              : "Forecast paused"}
-        </p>
-        <p className="mt-1 text-sm text-[var(--text-secondary)]">
-          {forecast.statusMessage}
-        </p>
-      </div>
-
-      {window && forecast.status === "active" && (
-        <div className="space-y-3">
-          <ForecastRange
-            earliest={window.earliestDate}
-            median={window.medianDate}
-            latest={window.latestDate}
-          />
-
-          {forecast.nextMilestoneWindow && (
-            <div className="surface p-4">
-              <p className="text-label">
-                Estimated next milestone window
-              </p>
-              <p className="mt-1 font-mono text-base font-semibold">
+      {forecast.status === "active" && (nextWindow || window) && (
+        <div className="forecast-card__windows">
+          {nextWindow && (
+            <div className="forecast-card__next">
+              <p className="text-label">Next milestone forecast</p>
+              <h3>{nextWindow.likelyLabel}</h3>
+              <p className="forecast-card__next-range">
                 <DateRange
-                  earliest={forecast.nextMilestoneWindow.earliestDate}
-                  latest={forecast.nextMilestoneWindow.latestDate}
+                  earliest={nextWindow.earliestDate}
+                  latest={nextWindow.latestDate}
                 />
               </p>
-              <p className="mt-1 text-xs text-[var(--text-tertiary)]">
-                Most often {forecast.nextMilestoneWindow.likelyLabel} (
-                {forecast.nextMilestoneWindow.labelAgreement}% of comparable
-                cycles; n={forecast.nextMilestoneWindow.sampleSize})
+              <p>
+                Historical median {formatDate(nextWindow.medianDate)}
               </p>
             </div>
+          )}
+
+          {window && (
+            <ForecastRange
+              earliest={window.earliestDate}
+              median={window.medianDate}
+              latest={window.latestDate}
+            />
+          )}
+
+          {evidenceSummary && (
+            <p className="forecast-card__summary">{evidenceSummary}</p>
           )}
         </div>
       )}
 
+      {forecast.status !== "active" && (
+        <div className="forecast-status forecast-status--paused">
+          <p className="text-sm font-semibold">
+            {forecast.status === "insufficient-history"
+              ? "Not enough evidence"
+              : "Forecast paused"}
+          </p>
+          <p className="mt-1 text-sm text-[var(--text-secondary)]">
+            {forecast.statusMessage}
+          </p>
+        </div>
+      )}
+
       {window && isPaused && (
-        <div className="surface p-4">
+        <div className="forecast-card__elapsed">
           <p className="text-label">Elapsed historical window</p>
-          <p className="mt-1 font-mono text-sm text-[var(--text-secondary)]">
+          <p>
             <DateRange
               earliest={window.earliestDate}
               latest={window.latestDate}
             />
           </p>
-          <p className="mt-1 text-xs text-[var(--text-tertiary)]">
-            This is shown for transparency, not as an upcoming prediction.
-          </p>
         </div>
       )}
 
-      {forecast.cohort && (
-        <div className="grid grid-cols-1 gap-4 border-t border-[var(--border)] pt-4 md:grid-cols-2">
-          <div>
-            <p className="text-label">Comparable cohort</p>
-            <p className="mt-1 text-sm">{forecast.cohort.label}</p>
-            <p className="mt-1 text-xs text-[var(--text-tertiary)]">
-              {forecast.cohort.sampleVersions.length} cycles:{" "}
-              {forecast.cohort.sampleVersions.map((sampleVersion, index) => (
-                <span key={sampleVersion}>
-                  {index > 0 ? ", " : ""}
+      <details className="forecast-card__details">
+        <summary>Methodology &amp; evidence</summary>
+        <div className="forecast-card__details-body">
+          {forecast.confidenceReason && (
+            <p>
+              <strong>Evidence note.</strong> {forecast.confidenceReason}
+            </p>
+          )}
+          {forecast.status === "active" && (
+            <p>
+              <strong>Safeguard status.</strong> {forecast.statusMessage}
+            </p>
+          )}
+          {forecast.cohort && (
+            <div className="forecast-card__cohort">
+              <p className="text-label">Comparable cohort</p>
+              <p>{forecast.cohort.label}</p>
+              <p className="forecast-card__cohort-links">
+                {forecast.cohort.sampleVersions.map((sampleVersion) => (
                   <Link
+                    key={sampleVersion}
                     href={`/${platform.slug.current}/${encodeURIComponent(sampleVersion)}`}
-                    className="text-[var(--text-secondary)] hover:text-[var(--accent)] hover:underline"
                   >
                     {sampleVersion}
                   </Link>
-                </span>
-              ))}
+                ))}
+              </p>
+            </div>
+          )}
+          {forecast.cohort && (
+            <div>
+              <p className="text-label">Range definition</p>
+              <p>
+                25th–75th percentile of observed days from{" "}
+                {forecast.stageLabel ?? "the matched milestone"} to public
+                release.
+              </p>
+            </div>
+          )}
+          {forecast.backtest && (
+            <p>
+              <strong>Prior-only backtest.</strong>{" "}
+              {forecast.backtest.medianAbsoluteErrorDays}-day median error;{" "}
+              {forecast.backtest.withinRangePercent}% inside the historical
+              range across {forecast.backtest.sampleSize} tests.
             </p>
-          </div>
-          <div>
-            <p className="text-label">Range definition</p>
-            <p className="mt-1 text-sm text-[var(--text-secondary)]">
-              25th–75th percentile of observed days from{" "}
-              {forecast.stageLabel ?? "the matched milestone"} to public
-              release.
-            </p>
-          </div>
+          )}
         </div>
-      )}
-
-      {forecast.backtest && (
-        <div className="text-xs text-[var(--text-tertiary)]">
-          Prior-only backtest for this platform and release class:{" "}
-          <span className="text-[var(--text-secondary)]">
-            {forecast.backtest.medianAbsoluteErrorDays}-day median error;{" "}
-            {forecast.backtest.withinRangePercent}% inside the historical
-            range across {forecast.backtest.sampleSize} tests.
-          </span>
-        </div>
-      )}
+      </details>
     </article>
   );
 }
@@ -364,7 +367,7 @@ export default async function ForecastsPage() {
             <p className="page-intro__description">
               History-based public-release and next-milestone ranges, with the
               comparison cohort, sample size, spread, confidence, and stale-data
-              safeguards kept visible.
+              safeguards available for every estimate.
             </p>
             <span className="page-intro__meta">
               Calculated <time dateTime={asOfDate}>{formatDate(asOfDate)}</time>{" "}
@@ -398,33 +401,6 @@ export default async function ForecastsPage() {
           ))}
         </dl>
 
-        {accuracy && (
-          <section
-            className="surface p-5 animate-in"
-            style={{ "--delay": 2 } as React.CSSProperties}
-            aria-labelledby="backtest-heading"
-          >
-            <h2 id="backtest-heading" className="text-subheading">
-              Historical backtest
-            </h2>
-            <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
-              In {accuracy.sampleSize} rolling tests, each release was estimated
-              using only cycles already public at that point—never later data.
-              The median absolute error was{" "}
-              <strong className="text-[var(--text)]">
-                {accuracy.medianAbsoluteErrorDays} days
-              </strong>
-              , and the actual date fell inside the historical 25th–75th
-              percentile window in{" "}
-              <strong className="text-[var(--text)]">
-                {accuracy.withinRangePercent}%
-              </strong>{" "}
-              of tests. Historical performance is not a promise of future
-              accuracy.
-            </p>
-          </section>
-        )}
-
         {forecasts.length > 0 ? (
           <section className="space-y-5" aria-labelledby="release-forecasts">
             <div className="section-heading">
@@ -453,6 +429,33 @@ export default async function ForecastsPage() {
             <p className="mt-2 text-sm text-[var(--text-secondary)]">
               Forecasts will appear when an unreleased version with a dated
               milestone is added in Sanity.
+            </p>
+          </section>
+        )}
+
+        {accuracy && (
+          <section
+            className="surface p-5 animate-in"
+            style={{ "--delay": 2 } as React.CSSProperties}
+            aria-labelledby="backtest-heading"
+          >
+            <h2 id="backtest-heading" className="text-subheading">
+              Historical backtest
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-[var(--text-secondary)]">
+              In {accuracy.sampleSize} rolling tests, each release was estimated
+              using only cycles already public at that point—never later data.
+              The median absolute error was{" "}
+              <strong className="text-[var(--text)]">
+                {accuracy.medianAbsoluteErrorDays} days
+              </strong>
+              , and the actual date fell inside the historical 25th–75th
+              percentile window in{" "}
+              <strong className="text-[var(--text)]">
+                {accuracy.withinRangePercent}%
+              </strong>{" "}
+              of tests. Historical performance is not a promise of future
+              accuracy.
             </p>
           </section>
         )}

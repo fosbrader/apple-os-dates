@@ -72,6 +72,19 @@ export default async function HomePage() {
         (release) => release.publicReleaseDate === latestPublicReleaseDate,
       )
     : [];
+  const recentReleaseGroups = Array.from(
+    recentReleases
+      .reduce((groups, release) => {
+        const releaseDate = release.publicReleaseDate ?? "undated";
+        const releasesForDate = groups.get(releaseDate) ?? [];
+        releasesForDate.push(release);
+        groups.set(releaseDate, releasesForDate);
+        return groups;
+      }, new Map<string, typeof recentReleases>())
+      .entries(),
+  ).sort(([leftDate], [rightDate]) =>
+    rightDate.localeCompare(leftDate),
+  );
   const canonical = absoluteUrl("/");
   const websiteId = `${canonical}#website`;
   const organizationId = `${canonical}#organization`;
@@ -196,12 +209,23 @@ export default async function HomePage() {
                 as ranges.
               </p>
               <p className="home-index__meta">
-                <span>{allData.length} versions</span>
-                <span>{totalMilestones} milestones</span>
-                <span>{activeBetas.length} active cycles</span>
                 <span>
-                  Updated{" "}
-                  {lastMilestoneDate ? formatDate(lastMilestoneDate) : "—"}
+                  <strong>{allData.length}</strong>
+                  <small>versions</small>
+                </span>
+                <span>
+                  <strong>{totalMilestones}</strong>
+                  <small>milestones</small>
+                </span>
+                <span>
+                  <strong>{activeBetas.length}</strong>
+                  <small>active cycles</small>
+                </span>
+                <span>
+                  <strong>
+                    {lastMilestoneDate ? formatDate(lastMilestoneDate) : "—"}
+                  </strong>
+                  <small>updated</small>
                 </span>
               </p>
               <nav
@@ -329,14 +353,19 @@ export default async function HomePage() {
                         <span className="cycle-snapshot__milestone">
                           <strong>{latest?.label ?? "Awaiting data"}</strong>
                           <small>
+                            {latest && (
+                              <>
+                                <time dateTime={latest.date}>
+                                  {formatDate(latest.date)}
+                                </time>
+                                <span aria-hidden="true"> · </span>
+                              </>
+                            )}
                             {latest ? timeAgo(latest.date) : "No date"}
                             {" · "}
                             {beta.milestones.length} milestones
                           </small>
                         </span>
-                        <time dateTime={latest?.date}>
-                          {latest ? formatDate(latest.date) : "—"}
-                        </time>
                       </Link>
                     );
                   })
@@ -357,7 +386,7 @@ export default async function HomePage() {
           </div>
         </header>
 
-        <section className="index-section">
+        <section className="index-section index-section--releases">
           <div className="index-section__heading">
             <div>
               <h2>Recent public releases</h2>
@@ -367,46 +396,77 @@ export default async function HomePage() {
               </p>
             </div>
           </div>
-          <div className="release-list">
-            <div className="release-list__header" aria-hidden="true">
-              <span>Platform and version</span>
-              <span>Public release</span>
-              <span>Milestones</span>
-              <span>Note</span>
-            </div>
-            {recentReleases.map((release) => {
-              const platform = release.releaseTrain.platform;
-
-              return (
-                <Link
-                  key={release._id}
-                  href={`/${platform.slug.current}/${release.version}`}
-                  className="release-list__row"
-                >
-                  <span className="release-identity">
-                    <span
-                      className="release-identity__dot"
-                      style={{ background: platform.color }}
-                    />
-                    <span>
-                      <strong>{platform.name}</strong>
-                      <code>{release.version}</code>
-                    </span>
-                  </span>
+          <div className="release-cohorts">
+            {recentReleaseGroups.map(([releaseDate, releases], groupIndex) => (
+              <section
+                key={releaseDate}
+                className="release-cohort"
+                aria-labelledby={`release-cohort-${groupIndex}`}
+              >
+                <header className="release-cohort__heading">
+                  <h3 id={`release-cohort-${groupIndex}`}>
+                    <time
+                      dateTime={
+                        releaseDate === "undated" ? undefined : releaseDate
+                      }
+                    >
+                      {releaseDate === "undated"
+                        ? "Date not recorded"
+                        : formatDate(releaseDate)}
+                    </time>
+                  </h3>
                   <span>
-                    {release.publicReleaseDate
-                      ? formatDate(release.publicReleaseDate)
-                      : "—"}
+                    {releases.length}{" "}
+                    {releases.length === 1 ? "release" : "releases"}
                   </span>
-                  <span className="font-mono">{release.milestoneCount}</span>
-                  <p>{release.versionNote || "—"}</p>
-                </Link>
-              );
-            })}
+                </header>
+                <div className="release-cohort__items">
+                  {releases.map((release) => {
+                    const platform = release.releaseTrain.platform;
+
+                    return (
+                      <Link
+                        key={release._id}
+                        href={`/${platform.slug.current}/${release.version}`}
+                        className="release-cohort__item"
+                      >
+                        <span className="release-identity">
+                          <span
+                            className="release-identity__dot"
+                            style={{ background: platform.color }}
+                          />
+                          <span>
+                            <strong>{platform.name}</strong>
+                            <code>{release.version}</code>
+                          </span>
+                        </span>
+                        <span
+                          className="release-cohort__arrow"
+                          aria-hidden="true"
+                        >
+                          ↗
+                        </span>
+                        <span className="release-cohort__meta">
+                          {release.milestoneCount}{" "}
+                          {release.milestoneCount === 1
+                            ? "milestone"
+                            : "milestones"}
+                        </span>
+                        {release.versionNote && (
+                          <p className="release-cohort__note">
+                            {release.versionNote}
+                          </p>
+                        )}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </section>
+            ))}
           </div>
         </section>
 
-        <section className="index-section">
+        <section className="index-section index-section--platforms">
           <div className="index-section__heading">
             <div>
               <h2>Browse by platform</h2>

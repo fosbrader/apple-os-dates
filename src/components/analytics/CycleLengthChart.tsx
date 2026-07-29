@@ -172,31 +172,86 @@ export function CycleLengthChart({ versions }: CycleLengthChartProps) {
       0,
     ) / chartVersions.length,
   );
+  const mobileVersions = chartVersions.slice(-12).reverse();
+  const mobileMaximum = Math.max(
+    ...mobileVersions.map((version) => version.cycleDays!),
+    1,
+  );
+  const mobileAverage = Math.round(
+    mobileVersions.reduce(
+      (sum, version) => sum + version.cycleDays!,
+      0,
+    ) / mobileVersions.length,
+  );
 
   return (
     <div>
-      <div
-        ref={containerRef}
-        className="surface horizontal-scroll horizontal-scroll--medium overflow-x-auto p-4"
-        role="region"
-        aria-label="Scrollable beta cycle duration chart"
-        tabIndex={0}
-      >
-        <svg
-          ref={svgRef}
-          className="block h-auto min-w-[35rem] w-full"
-          role="img"
-          aria-labelledby="cycle-chart-title cycle-chart-description"
-        />
-        <p className="mt-2 text-center text-xs text-[var(--text-tertiary)]">
-          {chartVersions.length} completed major-version cycles shown; displayed
-          average: {average} days.
+      <div className="mobile-cycle-chart">
+        <ol
+          className="mobile-cycle-chart__list"
+          aria-label="Recent beta cycle durations"
+        >
+          {mobileVersions.map((version) => {
+            const label = `${version.platform} ${version.version}`;
+            const width = Math.max(
+              4,
+              (version.cycleDays! / mobileMaximum) * 100,
+            );
+
+            return (
+              <li
+                key={`${version.platform}-${version.version}`}
+                className="mobile-cycle-chart__row"
+              >
+                <span className="mobile-cycle-chart__label">{label}</span>
+                <strong className="mobile-cycle-chart__value font-mono">
+                  {version.cycleDays}d
+                </strong>
+                <span
+                  className="mobile-cycle-chart__track"
+                  aria-hidden="true"
+                >
+                  <i
+                    style={{
+                      background: version.platformColor,
+                      width: `${width}%`,
+                    }}
+                  />
+                </span>
+              </li>
+            );
+          })}
+        </ol>
+        <p className="mobile-cycle-chart__summary">
+          {mobileVersions.length} most recent completed major-version cycles;
+          average: <strong>{mobileAverage} days</strong>.
         </p>
       </div>
-      <p className="horizontal-scroll__hint horizontal-scroll__hint--medium">
-        <span aria-hidden="true">↔</span>
-        Scroll horizontally to explore the full duration series.
-      </p>
+
+      <div className="desktop-cycle-chart">
+        <div
+          ref={containerRef}
+          className="surface horizontal-scroll horizontal-scroll--medium overflow-x-auto p-4"
+          role="region"
+          aria-label="Scrollable beta cycle duration chart"
+          tabIndex={0}
+        >
+          <svg
+            ref={svgRef}
+            className="block h-auto min-w-[35rem] w-full"
+            role="img"
+            aria-labelledby="cycle-chart-title cycle-chart-description"
+          />
+          <p className="mt-2 text-center text-xs text-[var(--text-tertiary)]">
+            {chartVersions.length} completed major-version cycles shown;
+            displayed average: {average} days.
+          </p>
+        </div>
+        <p className="horizontal-scroll__hint horizontal-scroll__hint--medium">
+          <span aria-hidden="true">↔</span>
+          Scroll horizontally to explore the full duration series.
+        </p>
+      </div>
     </div>
   );
 }

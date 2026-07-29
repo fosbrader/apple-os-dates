@@ -107,6 +107,17 @@ export function AnalyticsDashboard({
       ),
     };
   }, [data, selectedPlatform]);
+  const sortedVersionStats = useMemo(
+    () =>
+      [...stats.versionStats].sort((a, b) =>
+        (b.publicReleaseDate || "9999").localeCompare(
+          a.publicReleaseDate || "9999",
+        ),
+      ),
+    [stats.versionStats],
+  );
+  const initialMobileVersionStats = sortedVersionStats.slice(0, 24);
+  const remainingMobileVersionStats = sortedVersionStats.slice(24);
 
   return (
     <div className="space-y-10">
@@ -162,7 +173,7 @@ export function AnalyticsDashboard({
           most recorded milestones.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="analytics-records grid grid-cols-1 md:grid-cols-3 gap-4">
         {stats.longest && (
           <div className="card">
             <p className="text-label mb-2">Longest Beta Cycle</p>
@@ -254,38 +265,62 @@ export function AnalyticsDashboard({
             <h2>All indexed cycles</h2>
           </div>
           <p>
-            Every version in the selected view. Scroll horizontally on compact
-            screens to retain the full record.
+            Milestone totals, cycle duration, and average beta interval for
+            every version in the selected view.
           </p>
         </div>
+
         <div
-          className="surface horizontal-scroll horizontal-scroll--table horizontal-scroll--medium overflow-hidden overflow-x-auto"
-          role="region"
-          aria-label="Scrollable release analytics table"
-          tabIndex={0}
+          className="mobile-analytics-list"
+          aria-label="Release analytics for all versions in the selected platform view"
         >
-          <table className="data-table min-w-[42rem]">
-            <caption className="sr-only">
-              Release analytics for all versions in the selected platform view
-            </caption>
-            <thead>
-              <tr>
-                <th scope="col">Version</th>
-                <th scope="col">Platform</th>
-                <th scope="col" className="text-right">Milestones</th>
-                <th scope="col" className="text-right">Cycle (days)</th>
-                <th scope="col" className="text-right">Avg. Interval</th>
-              </tr>
-            </thead>
-            <tbody>
-              {stats.versionStats
-                .sort(
-                  (a, b) =>
-                    (b.publicReleaseDate || "9999").localeCompare(
-                      a.publicReleaseDate || "9999"
-                    )
-                )
-                .map((v, i) => (
+          <div className="mobile-analytics-list__items">
+            {initialMobileVersionStats.map((version, index) => (
+              <AnalyticsVersionCard
+                key={`${version.platform}-${version.version}-${index}`}
+                version={version}
+              />
+            ))}
+          </div>
+          {remainingMobileVersionStats.length > 0 && (
+            <details className="mobile-analytics-list__more">
+              <summary>
+                Show {remainingMobileVersionStats.length} older cycles
+              </summary>
+              <div className="mobile-analytics-list__items">
+                {remainingMobileVersionStats.map((version, index) => (
+                  <AnalyticsVersionCard
+                    key={`${version.platform}-${version.version}-${index + 24}`}
+                    version={version}
+                  />
+                ))}
+              </div>
+            </details>
+          )}
+        </div>
+
+        <div className="desktop-analytics-table">
+          <div
+            className="surface horizontal-scroll horizontal-scroll--table horizontal-scroll--medium overflow-hidden overflow-x-auto"
+            role="region"
+            aria-label="Scrollable release analytics table"
+            tabIndex={0}
+          >
+            <table className="data-table min-w-[42rem]">
+              <caption className="sr-only">
+                Release analytics for all versions in the selected platform view
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Version</th>
+                  <th scope="col">Platform</th>
+                  <th scope="col" className="text-right">Milestones</th>
+                  <th scope="col" className="text-right">Cycle (days)</th>
+                  <th scope="col" className="text-right">Avg. Interval</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sortedVersionStats.map((v, i) => (
                   <tr key={`${v.platform}-${v.version}-${i}`}>
                     <td className="font-mono font-medium">{v.version}</td>
                     <td>
@@ -312,14 +347,54 @@ export function AnalyticsDashboard({
                     </td>
                   </tr>
                 ))}
-            </tbody>
-          </table>
+              </tbody>
+            </table>
+          </div>
+          <p className="horizontal-scroll__hint horizontal-scroll__hint--medium">
+            <span aria-hidden="true">↔</span>
+            Scroll horizontally to see every analytics field.
+          </p>
         </div>
-        <p className="horizontal-scroll__hint horizontal-scroll__hint--medium">
-          <span aria-hidden="true">↔</span>
-          Scroll horizontally to see every analytics field.
-        </p>
       </section>
     </div>
+  );
+}
+
+function AnalyticsVersionCard({ version }: { version: VersionStats }) {
+  return (
+    <article className="mobile-analytics-card">
+      <header className="mobile-analytics-card__header">
+        <span
+          className="platform-label"
+          style={
+            {
+              "--platform-color": version.platformColor,
+            } as React.CSSProperties
+          }
+        >
+          <i aria-hidden="true" />
+          {version.platform}
+        </span>
+        <strong className="font-mono">{version.version}</strong>
+      </header>
+      <dl className="mobile-analytics-card__metrics">
+        <div>
+          <dt>Milestones</dt>
+          <dd className="font-mono">{version.milestoneCount}</dd>
+        </div>
+        <div>
+          <dt>Cycle</dt>
+          <dd className="font-mono">
+            {version.cycleDays === null ? "—" : `${version.cycleDays} days`}
+          </dd>
+        </div>
+        <div>
+          <dt>Avg. interval</dt>
+          <dd className="font-mono">
+            {version.avgInterval ? `${version.avgInterval} days` : "—"}
+          </dd>
+        </div>
+      </dl>
+    </article>
   );
 }
