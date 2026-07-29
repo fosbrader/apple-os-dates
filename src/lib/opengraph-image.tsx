@@ -3,13 +3,13 @@ import { siteHost } from "@/lib/site";
 
 export const openGraphImageSize = { width: 1200, height: 630 };
 
-const PLATFORMS = [
-  { name: "iOS", color: "#1685FF" },
-  { name: "iPadOS", color: "#7069FF" },
-  { name: "macOS", color: "#FF9F2E" },
-  { name: "watchOS", color: "#FF554D" },
-  { name: "tvOS", color: "#4BC8EA" },
-  { name: "visionOS", color: "#C273FF" },
+const PLATFORM_SIGNALS = [
+  { name: "iOS", color: "#2F7CF6" },
+  { name: "iPadOS", color: "#5B52E8" },
+  { name: "macOS", color: "#A44CE6" },
+  { name: "tvOS", color: "#55C965" },
+  { name: "visionOS", color: "#6D538E" },
+  { name: "watchOS", color: "#F04B43" },
 ];
 
 export function createOpenGraphImage() {
@@ -17,245 +17,310 @@ export function createOpenGraphImage() {
     (
       <div
         style={{
-          position: "relative",
           display: "flex",
           width: "100%",
           height: "100%",
-          overflow: "hidden",
-          background: "#0B0D0F",
-          color: "#F4F1E8",
-          fontFamily: "Arial, sans-serif",
+          flexDirection: "column",
+          padding: "50px 58px 46px",
+          background: "#111210",
+          color: "#EFEEE8",
+          fontFamily: "Arial, Helvetica, sans-serif",
         }}
       >
         <div
           style={{
-            position: "absolute",
-            inset: 0,
             display: "flex",
-            opacity: 0.2,
-            backgroundImage:
-              "linear-gradient(rgba(86,99,108,.32) 1px, transparent 1px), linear-gradient(90deg, rgba(86,99,108,.32) 1px, transparent 1px)",
-            backgroundSize: "72px 72px",
-          }}
-        />
-
-        <div
-          style={{
-            position: "absolute",
-            top: "-360px",
-            left: "120px",
-            display: "flex",
-            width: "820px",
-            height: "820px",
-            borderRadius: "50%",
-            background:
-              "radial-gradient(circle, rgba(216,255,98,.12), transparent 64%)",
-          }}
-        />
-
-        <div
-          style={{
-            position: "relative",
-            display: "flex",
-            width: "100%",
-            height: "100%",
-            padding: "68px 72px 58px",
+            height: "40px",
+            alignItems: "center",
+            justifyContent: "space-between",
           }}
         >
           <div
             style={{
               display: "flex",
-              width: "64%",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              paddingRight: "58px",
+              alignItems: "center",
+              gap: "14px",
             }}
           >
-            <div
+            <strong
               style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "15px",
+                fontSize: "24px",
+                letterSpacing: "-0.04em",
               }}
             >
-              <div
-                style={{
-                  position: "relative",
-                  display: "flex",
-                  width: "38px",
-                  height: "38px",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  border: "1px solid #5C6872",
-                  borderRadius: "50%",
-                }}
-              >
-                <div
-                  style={{
-                    width: "7px",
-                    height: "7px",
-                    borderRadius: "50%",
-                    background: "#F4F1E8",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    top: "-4px",
-                    width: "8px",
-                    height: "8px",
-                    borderRadius: "50%",
-                    background: "#D8FF62",
-                  }}
-                />
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "baseline",
-                  gap: "7px",
-                  fontSize: "24px",
-                  letterSpacing: "-0.04em",
-                }}
-              >
-                <span style={{ color: "#858B8F" }}>Beta</span>
-                <strong>Cadence</strong>
-              </div>
-            </div>
-
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <p
-                style={{
-                  margin: "0 0 20px",
-                  color: "#8BB5FF",
-                  fontSize: "14px",
-                  fontWeight: 700,
-                  letterSpacing: "0.14em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Apple OS release intelligence
-              </p>
-              <h1
-                style={{
-                  margin: 0,
-                  fontFamily: "Georgia, serif",
-                  fontSize: "78px",
-                  fontWeight: 400,
-                  lineHeight: 0.96,
-                  letterSpacing: "-0.055em",
-                }}
-              >
-                Every beta.
-                <br />
-                <span style={{ color: "#858B8F" }}>Every beat.</span>
-              </h1>
-              <p
-                style={{
-                  maxWidth: "580px",
-                  margin: "27px 0 0",
-                  color: "#B8B7B1",
-                  fontSize: "21px",
-                  lineHeight: 1.45,
-                }}
-              >
-                Release history, active cycles, and evidence-based forecast
-                ranges across the Apple OS ecosystem.
-              </p>
-            </div>
-
-            <p
+              Beta Cadence
+            </strong>
+            <span
               style={{
-                margin: 0,
-                color: "#858B8F",
-                fontSize: "14px",
+                width: "1px",
+                height: "22px",
+                margin: "0 3px",
+                background: "#343632",
+              }}
+            />
+            <span
+              style={{
+                color: "#979891",
+                fontFamily: "Courier New, monospace",
+                fontSize: "12px",
                 letterSpacing: "0.08em",
               }}
             >
-              {siteHost} · INDEPENDENT &amp; UNOFFICIAL
+              APPLE OS RELEASE INDEX
+            </span>
+          </div>
+          <span
+            style={{
+              color: "#979891",
+              fontFamily: "Courier New, monospace",
+              fontSize: "12px",
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+            }}
+          >
+            {siteHost}
+          </span>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flex: 1,
+            marginTop: "34px",
+            padding: "34px 0 30px",
+            borderTop: "1px solid #5B5E57",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              width: "65%",
+              flexDirection: "column",
+              justifyContent: "center",
+              paddingRight: "54px",
+            }}
+          >
+            <p
+              style={{
+                margin: "0 0 17px",
+                color: "#979891",
+                fontFamily: "Courier New, monospace",
+                fontSize: "13px",
+                fontWeight: 700,
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
+              }}
+            >
+              Independent release index
+            </p>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                margin: 0,
+                fontSize: "66px",
+                fontWeight: 700,
+                lineHeight: 0.96,
+                letterSpacing: "-0.058em",
+              }}
+            >
+              <span>Apple OS beta and</span>
+              <span>release dates</span>
+            </div>
+            <p
+              style={{
+                maxWidth: "640px",
+                margin: "24px 0 0",
+                color: "#BEBDB7",
+                fontSize: "22px",
+                lineHeight: 1.4,
+              }}
+            >
+              Historical release milestones and methodology-backed forecasts.
             </p>
           </div>
 
           <div
             style={{
               display: "flex",
-              width: "36%",
+              width: "35%",
               flexDirection: "column",
-              alignSelf: "stretch",
-              border: "1px solid #293138",
-              borderRadius: "24px",
-              background: "rgba(17,21,25,.84)",
+              justifyContent: "center",
+              paddingLeft: "38px",
+              borderLeft: "1px solid #343632",
             }}
           >
-            <div
+            <p
               style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                padding: "22px 24px",
-                borderBottom: "1px solid #293138",
-                color: "#858B8F",
+                margin: 0,
+                color: "#979891",
+                fontFamily: "Courier New, monospace",
                 fontSize: "12px",
                 fontWeight: 700,
-                letterSpacing: "0.12em",
+                letterSpacing: "0.1em",
+                textTransform: "uppercase",
               }}
             >
-              <span>PLATFORM INDEX</span>
-              <span
-                style={{
-                  width: "7px",
-                  height: "7px",
-                  borderRadius: "50%",
-                  background: "#54D982",
-                }}
-              />
-            </div>
+              Forecast methodology
+            </p>
             <div
               style={{
                 display: "flex",
-                flex: 1,
                 flexDirection: "column",
+                maxWidth: "340px",
+                margin: "18px 0 0",
+                fontSize: "31px",
+                fontWeight: 650,
+                lineHeight: 1.08,
+                letterSpacing: "-0.04em",
               }}
             >
-              {PLATFORMS.map((platform, index) => (
-                <div
-                  key={platform.name}
+              <span>History-based</span>
+              <span>release ranges</span>
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                width: "100%",
+                flexDirection: "column",
+                marginTop: "55px",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  color: "#979891",
+                  fontFamily: "Courier New, monospace",
+                  fontSize: "10px",
+                  letterSpacing: "0.06em",
+                  textTransform: "uppercase",
+                }}
+              >
+                <span>Earliest</span>
+                <span>Median</span>
+                <span>Latest</span>
+              </div>
+              <div
+                style={{
+                  position: "relative",
+                  display: "flex",
+                  width: "100%",
+                  height: "28px",
+                  alignItems: "center",
+                  marginTop: "8px",
+                }}
+              >
+                <span
                   style={{
-                    display: "flex",
-                    flex: 1,
-                    alignItems: "center",
-                    gap: "15px",
-                    padding: "0 24px",
-                    borderBottom:
-                      index === PLATFORMS.length - 1
-                        ? "none"
-                        : "1px solid #293138",
+                    position: "absolute",
+                    right: 0,
+                    left: 0,
+                    height: "2px",
+                    background: "#5B5E57",
                   }}
-                >
-                  <span
-                    style={{
-                      width: "9px",
-                      height: "9px",
-                      borderRadius: "50%",
-                      background: platform.color,
-                    }}
-                  />
-                  <strong style={{ fontSize: "18px" }}>{platform.name}</strong>
-                  <span
-                    style={{
-                      marginLeft: "auto",
-                      color: "#858B8F",
-                      fontSize: "10px",
-                      fontWeight: 700,
-                      letterSpacing: "0.12em",
-                    }}
-                  >
-                    VIEW
-                  </span>
-                </div>
-              ))}
+                />
+                <span
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    width: "10px",
+                    height: "10px",
+                    border: "2px solid #BEBDB7",
+                    borderRadius: "50%",
+                    background: "#111210",
+                  }}
+                />
+                <span
+                  style={{
+                    position: "absolute",
+                    left: "50%",
+                    width: "14px",
+                    height: "14px",
+                    borderRadius: "50%",
+                    background: "#8BB5E8",
+                    transform: "translateX(-50%)",
+                  }}
+                />
+                <span
+                  style={{
+                    position: "absolute",
+                    right: 0,
+                    width: "10px",
+                    height: "10px",
+                    border: "2px solid #BEBDB7",
+                    borderRadius: "50%",
+                    background: "#111210",
+                  }}
+                />
+              </div>
+              <p
+                style={{
+                  margin: "14px 0 0",
+                  color: "#979891",
+                  fontFamily: "Courier New, monospace",
+                  fontSize: "11px",
+                  lineHeight: 1.45,
+                }}
+              >
+                Comparable prior cycles · medians · backtests
+              </p>
             </div>
           </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            minHeight: "48px",
+            alignItems: "flex-end",
+            justifyContent: "space-between",
+            paddingTop: "22px",
+            borderTop: "1px solid #343632",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "20px",
+            }}
+          >
+            {PLATFORM_SIGNALS.map((platform) => (
+              <span
+                key={platform.name}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "7px",
+                  color: "#BEBDB7",
+                  fontSize: "14px",
+                  fontWeight: 600,
+                }}
+              >
+                <i
+                  style={{
+                    width: "7px",
+                    height: "7px",
+                    borderRadius: "50%",
+                    background: platform.color,
+                  }}
+                />
+                {platform.name}
+              </span>
+            ))}
+          </div>
+          <span
+            style={{
+              color: "#979891",
+              fontFamily: "Courier New, monospace",
+              fontSize: "10px",
+              letterSpacing: "0.04em",
+            }}
+          >
+            INDEPENDENT · NOT AFFILIATED WITH APPLE
+          </span>
         </div>
       </div>
     ),

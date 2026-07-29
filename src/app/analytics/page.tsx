@@ -11,7 +11,7 @@ const analyticsDescription =
   "Compare Apple OS beta-cycle length, release cadence, and historical timing trends across iOS, macOS, watchOS, tvOS, and more.";
 
 export const metadata = createPageMetadata({
-  title: "Apple Release Analytics",
+  title: "Apple OS Release Analytics",
   description: analyticsDescription,
   path: "/analytics/",
 });
@@ -30,7 +30,7 @@ export default async function AnalyticsPage() {
         "@type": "WebPage",
         "@id": `${canonical}#webpage`,
         url: canonical,
-        name: "Apple Release Analytics",
+        name: "Apple OS Release Analytics",
         description: analyticsDescription,
         dateModified,
         isPartOf: { "@id": `${absoluteUrl("/")}#website` },
@@ -45,6 +45,12 @@ export default async function AnalyticsPage() {
           "Calculated beta-cycle lengths, milestone intervals, and release timing comparisons derived from tracked Apple OS release dates.",
         dateModified,
         isAccessibleForFree: true,
+        isPartOf: { "@id": `${absoluteUrl("/")}#release-dataset` },
+        isBasedOn: { "@id": `${absoluteUrl("/")}#release-dataset` },
+        creator: { "@id": `${absoluteUrl("/")}#organization` },
+        publisher: { "@id": `${absoluteUrl("/")}#organization` },
+        measurementTechnique:
+          "Cycle lengths and milestone intervals calculated from the recorded Apple OS release-date dataset.",
         variableMeasured: [
           "Beta cycle length",
           "Milestone interval",
@@ -64,7 +70,7 @@ export default async function AnalyticsPage() {
         >
           <div>
             <p className="section-kicker">Release analytics</p>
-            <h1 className="text-heading">Release history analytics</h1>
+            <h1 className="text-heading">Apple OS release analytics</h1>
           </div>
           <div>
             <p className="page-intro__description">

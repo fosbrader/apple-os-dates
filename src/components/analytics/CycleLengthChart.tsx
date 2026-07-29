@@ -174,16 +174,28 @@ export function CycleLengthChart({ versions }: CycleLengthChartProps) {
   );
 
   return (
-    <div ref={containerRef} className="surface overflow-x-auto p-4">
-      <svg
-        ref={svgRef}
-        className="block h-auto min-w-[35rem] w-full"
-        role="img"
-        aria-labelledby="cycle-chart-title cycle-chart-description"
-      />
-      <p className="mt-2 text-center text-xs text-[var(--text-tertiary)]">
-        {chartVersions.length} completed major-version cycles shown; displayed
-        average: {average} days.
+    <div>
+      <div
+        ref={containerRef}
+        className="surface horizontal-scroll horizontal-scroll--medium overflow-x-auto p-4"
+        role="region"
+        aria-label="Scrollable beta cycle duration chart"
+        tabIndex={0}
+      >
+        <svg
+          ref={svgRef}
+          className="block h-auto min-w-[35rem] w-full"
+          role="img"
+          aria-labelledby="cycle-chart-title cycle-chart-description"
+        />
+        <p className="mt-2 text-center text-xs text-[var(--text-tertiary)]">
+          {chartVersions.length} completed major-version cycles shown; displayed
+          average: {average} days.
+        </p>
+      </div>
+      <p className="horizontal-scroll__hint horizontal-scroll__hint--medium">
+        <span aria-hidden="true">↔</span>
+        Scroll horizontally to explore the full duration series.
       </p>
     </div>
   );

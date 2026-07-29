@@ -1,3 +1,5 @@
+import Link from "next/link";
+import type { ReleaseForecast, ForecastWindow } from "@/lib/forecasts";
 import type { ReleaseVersion } from "@/lib/types";
 import {
   computeBetaCycleDays,
@@ -5,12 +7,12 @@ import {
   daysBetween,
   formatDate,
 } from "@/lib/utils";
-import { addDays, format } from "date-fns";
 
 interface VersionInsightsProps {
   version: ReleaseVersion;
   samePlatformVersions: ReleaseVersion[];
   samePositionVersions: ReleaseVersion[];
+  forecast?: ReleaseForecast;
 }
 
 interface Insight {
@@ -20,15 +22,23 @@ interface Insight {
   type?: "info" | "warning" | "success";
 }
 
+function forecastDateRange(window: ForecastWindow): string {
+  if (window.earliestDate === window.latestDate) {
+    return formatDate(window.earliestDate);
+  }
+
+  return `${formatDate(window.earliestDate)}–${formatDate(window.latestDate)}`;
+}
+
 export function VersionInsights({
   version,
   samePlatformVersions,
   samePositionVersions,
+  forecast,
 }: VersionInsightsProps) {
   const isActive = !version.publicReleaseDate;
   const milestones = version.milestones;
   const cycleDays = computeBetaCycleDays(version);
-  const avgInterval = computeAverageBetaInterval(milestones);
 
   const insights: Insight[] = [];
 
@@ -133,51 +143,6 @@ export function VersionInsights({
     }
   }
 
-  // --- Projected next beta date ---
-  if (isActive && milestones.length >= 2 && avgInterval) {
-    const lastMilestone = milestones[milestones.length - 1];
-    const projectedDate = addDays(new Date(lastMilestone.date), avgInterval);
-    const projectedStr = format(projectedDate, "yyyy-MM-dd");
-    const isPast = projectedDate < new Date();
-
-    insights.push({
-      label: "Interval-based date reference",
-      value: formatDate(projectedStr),
-      detail: isPast
-        ? `Historical context only: the ${avgInterval}-day average interval elapsed ${daysBetween(projectedStr, new Date().toISOString().split("T")[0])} days ago`
-        : `Historical context only: based on the ${avgInterval}-day average interval for this version`,
-      type: isPast ? "warning" : "info",
-    });
-  }
-
-  // --- Projected public release ---
-  if (isActive && milestones.length > 0) {
-    const completedSameType = (
-      isMajor ? samePositionVersions : samePlatformVersions
-    )
-      .map(computeBetaCycleDays)
-      .filter((d): d is number => d !== null);
-
-    if (completedSameType.length > 0) {
-      const avgCycle = Math.round(
-        completedSameType.reduce((a, b) => a + b, 0) /
-          completedSameType.length
-      );
-      const projectedRelease = addDays(
-        new Date(milestones[0].date),
-        avgCycle
-      );
-      const projectedStr = format(projectedRelease, "yyyy-MM-dd");
-
-      insights.push({
-        label: "Average-cycle date reference",
-        value: formatDate(projectedStr),
-        detail: `Historical context, not a forecast: based on the ${avgCycle}-day average for ${isMajor ? "major" : suffix} releases`,
-        type: "info",
-      });
-    }
-  }
-
   // --- Pace comparison: at this point in the cycle, how many betas did others have? ---
   if (isActive && milestones.length > 0) {
     const daysSinceStart = daysBetween(
@@ -203,14 +168,18 @@ export function VersionInsights({
         comparisons.reduce((s, c) => s + c.betasAtDay, 0) /
         comparisons.length;
 
-      const ahead = milestones.length > avgBetasAtDay;
+      const paceDifference = milestones.length - avgBetasAtDay;
+      const ahead = paceDifference > 0.05;
+      const behind = paceDifference < -0.05;
       insights.push({
         label: `Pace at day ${daysSinceStart}`,
         value: `${milestones.length} milestones (avg: ${avgBetasAtDay.toFixed(1)})`,
         detail: ahead
           ? `Ahead of pace — previous ${suffix} releases averaged ${avgBetasAtDay.toFixed(1)} milestones at this point`
-          : `Behind pace — previous ${suffix} releases averaged ${avgBetasAtDay.toFixed(1)} milestones at this point`,
-        type: ahead ? "success" : "warning",
+          : behind
+            ? `Behind pace — previous ${suffix} releases averaged ${avgBetasAtDay.toFixed(1)} milestones at this point`
+            : `In line with pace — previous ${suffix} releases averaged ${avgBetasAtDay.toFixed(1)} milestones at this point`,
+        type: ahead ? "success" : behind ? "warning" : "info",
       });
     }
   }
@@ -291,8 +260,17 @@ export function VersionInsights({
       avgInterval: computeAverageBetaInterval(v.milestones),
       year: v.publicReleaseDate?.slice(0, 4),
     }));
+  const primaryForecastWindow =
+    forecast?.status === "active"
+      ? forecast.nextMilestoneWindow ?? forecast.publicReleaseWindow
+      : null;
+  const isNextMilestoneForecast = Boolean(forecast?.nextMilestoneWindow);
 
-  if (insights.length === 0 && comparisonRows.length === 0) {
+  if (
+    insights.length === 0 &&
+    comparisonRows.length === 0 &&
+    !primaryForecastWindow
+  ) {
     return null;
   }
 
@@ -304,6 +282,78 @@ export function VersionInsights({
 
   return (
     <div className="space-y-6">
+      {forecast && primaryForecastWindow && (
+        <section
+          className="surface border-l-[3px] border-l-[var(--accent)] p-5"
+          aria-labelledby="version-forecast-heading"
+        >
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p className="text-label">Methodology-backed forecast</p>
+              <h3
+                id="version-forecast-heading"
+                className="mt-1 text-base font-semibold"
+              >
+                {isNextMilestoneForecast
+                  ? `Next milestone: ${forecast.nextMilestoneWindow?.likelyLabel}`
+                  : "Estimated public release"}
+              </h3>
+            </div>
+            {forecast.confidence && !isNextMilestoneForecast && (
+              <span className="badge">
+                {forecast.confidence} historical confidence
+              </span>
+            )}
+          </div>
+
+          <p className="mt-3 font-mono text-xl font-semibold tracking-tight">
+            {forecastDateRange(primaryForecastWindow)}
+          </p>
+
+          <dl className="mt-4 grid grid-cols-2 gap-4 border-t border-[var(--border)] pt-4 sm:grid-cols-3">
+            <div>
+              <dt className="text-label">Historical median</dt>
+              <dd className="mt-1 font-mono text-sm">
+                {formatDate(primaryForecastWindow.medianDate)}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-label">Comparable cycles</dt>
+              <dd className="mt-1 font-mono text-sm">
+                {primaryForecastWindow.sampleSize}
+              </dd>
+            </div>
+            {forecast.nextMilestoneWindow && (
+              <div className="col-span-2 sm:col-span-1">
+                <dt className="text-label">Label agreement</dt>
+                <dd className="mt-1 font-mono text-sm">
+                  {forecast.nextMilestoneWindow.labelAgreement}%
+                </dd>
+              </div>
+            )}
+          </dl>
+
+          <p className="mt-4 text-xs leading-5 text-[var(--text-tertiary)]">
+            Calculated from comparable completed cycles. This is an independent
+            estimate, not an Apple announcement.
+          </p>
+          <p className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            <Link
+              href="/forecasts/"
+              className="text-[var(--accent)] hover:underline"
+            >
+              View all forecasts &rarr;
+            </Link>
+            <Link
+              href="/methodology/"
+              className="text-[var(--accent)] hover:underline"
+            >
+              Read the methodology &rarr;
+            </Link>
+          </p>
+        </section>
+      )}
+
       {/* Insight tiles */}
       {insights.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -342,7 +392,12 @@ export function VersionInsights({
           <h3 className="text-label mb-3">
             Previous {suffix} releases ({version.releaseTrain.platform.name})
           </h3>
-          <div className="surface overflow-x-auto">
+          <div
+            className="surface horizontal-scroll horizontal-scroll--table horizontal-scroll--medium overflow-x-auto"
+            role="region"
+            aria-label={`Scrollable comparison of previous ${version.releaseTrain.platform.name} releases`}
+            tabIndex={0}
+          >
             <table className="data-table min-w-[36rem]">
               <caption className="sr-only">
                 Previous comparable {version.releaseTrain.platform.name}{" "}
@@ -363,7 +418,12 @@ export function VersionInsights({
                 {comparisonRows.map((row) => (
                   <tr key={row.name}>
                     <td className="font-mono font-medium text-sm">
-                      {row.name}
+                      <Link
+                        href={`/${row.slug}/${encodeURIComponent(row.version)}`}
+                        className="hover:text-[var(--accent)] hover:underline"
+                      >
+                        {row.name}
+                      </Link>
                     </td>
                     <td className="text-[var(--text-secondary)] text-sm">
                       {row.year}
@@ -382,6 +442,10 @@ export function VersionInsights({
               </tbody>
             </table>
           </div>
+          <p className="horizontal-scroll__hint horizontal-scroll__hint--medium">
+            <span aria-hidden="true">↔</span>
+            Scroll horizontally to compare every historical field.
+          </p>
         </div>
       )}
     </div>

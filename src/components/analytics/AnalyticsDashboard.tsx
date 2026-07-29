@@ -258,7 +258,12 @@ export function AnalyticsDashboard({
             screens to retain the full record.
           </p>
         </div>
-        <div className="surface overflow-hidden overflow-x-auto">
+        <div
+          className="surface horizontal-scroll horizontal-scroll--table horizontal-scroll--medium overflow-hidden overflow-x-auto"
+          role="region"
+          aria-label="Scrollable release analytics table"
+          tabIndex={0}
+        >
           <table className="data-table min-w-[42rem]">
             <caption className="sr-only">
               Release analytics for all versions in the selected platform view
@@ -310,6 +315,10 @@ export function AnalyticsDashboard({
             </tbody>
           </table>
         </div>
+        <p className="horizontal-scroll__hint horizontal-scroll__hint--medium">
+          <span aria-hidden="true">↔</span>
+          Scroll horizontally to see every analytics field.
+        </p>
       </section>
     </div>
   );

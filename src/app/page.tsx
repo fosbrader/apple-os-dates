@@ -13,6 +13,7 @@ import {
   createPageMetadata,
   latestDate,
   siteDescription,
+  siteHost,
   siteName,
 } from "@/lib/site";
 
@@ -73,7 +74,9 @@ export default async function HomePage() {
     : [];
   const canonical = absoluteUrl("/");
   const websiteId = `${canonical}#website`;
+  const organizationId = `${canonical}#organization`;
   const datasetId = `${canonical}#release-dataset`;
+  const organizationLogo = absoluteUrl("/icons/icon-512.png");
   const structuredData: JsonLdValue = {
     "@context": "https://schema.org",
     "@graph": [
@@ -82,8 +85,27 @@ export default async function HomePage() {
         "@id": websiteId,
         url: canonical,
         name: siteName,
+        alternateName: ["BetaCadence", siteHost],
         description: siteDescription,
         inLanguage: "en-US",
+        publisher: { "@id": organizationId },
+      },
+      {
+        "@type": "Organization",
+        "@id": organizationId,
+        url: canonical,
+        name: siteName,
+        alternateName: ["BetaCadence", siteHost],
+        description:
+          "Independent Apple operating-system release-date index and history-based forecasting project.",
+        logo: {
+          "@type": "ImageObject",
+          url: organizationLogo,
+          contentUrl: organizationLogo,
+          width: 512,
+          height: 512,
+        },
+        sameAs: ["https://github.com/fosbrader/apple-os-dates"],
       },
       {
         "@type": "Dataset",
@@ -93,6 +115,8 @@ export default async function HomePage() {
           "Historical beta, release candidate, and public release dates across Apple operating systems.",
         url: canonical,
         isPartOf: { "@id": websiteId },
+        creator: { "@id": organizationId },
+        publisher: { "@id": organizationId },
         isAccessibleForFree: true,
         dateModified,
         temporalCoverage:
@@ -110,6 +134,8 @@ export default async function HomePage() {
           "Release milestone",
           "Release date",
         ],
+        measurementTechnique:
+          "Release dates compiled from official release notes, public announcements, and documented contemporaneous sources.",
         hasPart: platforms.map((platform) => ({
           "@type": "Dataset",
           name: `${platform.name} Release Dates`,
@@ -289,7 +315,7 @@ export default async function HomePage() {
                     return (
                       <Link
                         key={beta._id}
-                        href={`/${platform.slug.current}/${beta.version}`}
+                      href={`/${platform.slug.current}/${beta.version}`}
                         className="cycle-snapshot__row"
                       >
                         <span className="cycle-snapshot__identity">
@@ -398,7 +424,7 @@ export default async function HomePage() {
               return (
                 <Link
                   key={platform._id}
-                  href={`/${platform.slug.current}`}
+                  href={`/${platform.slug.current}/`}
                   className="platform-directory__row"
                 >
                   <span>

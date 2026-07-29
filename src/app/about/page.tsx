@@ -9,7 +9,6 @@ import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
 import {
   absoluteUrl,
   createPageMetadata,
-  siteDescription,
   siteName,
 } from "@/lib/site";
 
@@ -33,13 +32,7 @@ export default function AboutPage() {
     description: pageDescription,
     inLanguage: "en-US",
     isPartOf: { "@id": `${absoluteUrl("/")}#website` },
-    mainEntity: {
-      "@type": "WebSite",
-      "@id": `${absoluteUrl("/")}#website`,
-      name: siteName,
-      url: absoluteUrl("/"),
-      description: siteDescription,
-    },
+    mainEntity: { "@id": `${absoluteUrl("/")}#website` },
   };
 
   return (

@@ -1,20 +1,20 @@
 import Link from "next/link";
 
 const exploreLinks = [
-  { href: "/forecasts", label: "Forecasts" },
-  { href: "/timeline", label: "Timeline" },
-  { href: "/analytics", label: "Analytics" },
+  { href: "/forecasts/", label: "Forecasts" },
+  { href: "/timeline/", label: "Timeline" },
+  { href: "/analytics/", label: "Analytics" },
 ];
 
 const projectLinks = [
-  { href: "/about", label: "About" },
-  { href: "/methodology", label: "Methodology" },
-  { href: "/sources", label: "Sources" },
+  { href: "/about/", label: "About" },
+  { href: "/methodology/", label: "Methodology" },
+  { href: "/sources/", label: "Sources" },
 ];
 
 const policyLinks = [
-  { href: "/privacy", label: "Privacy" },
-  { href: "/contact", label: "Contact" },
+  { href: "/privacy/", label: "Privacy" },
+  { href: "/contact/", label: "Contact" },
 ];
 
 export function Footer() {

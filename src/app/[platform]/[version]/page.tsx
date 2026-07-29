@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getAllVersionRoutes,
+  getAnalyticsData,
   getHistoricalContext,
   getVersionDetail,
 } from "@/lib/sanity.fetch";
@@ -22,18 +23,40 @@ import {
   createPageMetadata,
   siteName,
 } from "@/lib/site";
+import { buildReleaseForecasts } from "@/lib/forecasts";
+
+function versionTitle(
+  platformName: string,
+  version: string,
+  milestoneCount: number,
+  publicReleaseDate?: string,
+): string {
+  if (publicReleaseDate && milestoneCount <= 1) {
+    return `${platformName} ${version} Release Date`;
+  }
+
+  if (publicReleaseDate) {
+    return `${platformName} ${version} Beta & Release Dates`;
+  }
+
+  return `${platformName} ${version} Beta Dates & Forecast`;
+}
 
 function versionDescription(
   platformName: string,
   version: string,
   milestoneCount: number,
-  publicReleaseDate?: string
+  publicReleaseDate?: string,
 ): string {
-  if (publicReleaseDate) {
-    return `See the recorded ${platformName} ${version} release timeline: ${milestoneCount} tracked beta and RC milestones through the ${formatDate(publicReleaseDate)} public release.`;
+  if (publicReleaseDate && milestoneCount <= 1) {
+    return `${platformName} ${version} was publicly released on ${formatDate(publicReleaseDate)}. See the recorded release date, source, and historical Apple OS index.`;
   }
 
-  return `Track ${platformName} ${version} through ${milestoneCount} beta and RC milestones, with release dates, cycle analytics, and the latest status.`;
+  if (publicReleaseDate) {
+    return `See ${milestoneCount} recorded milestones for ${platformName} ${version}, including beta, RC, and its ${formatDate(publicReleaseDate)} public release.`;
+  }
+
+  return `${platformName} ${version} is in beta. Track ${milestoneCount} recorded milestone${milestoneCount === 1 ? "" : "s"}, current cycle analytics, and history-based next-beta and public-release forecasts.`;
 }
 
 export async function generateStaticParams() {
@@ -58,12 +81,17 @@ export async function generateMetadata({
   const platformName = detail.releaseTrain.platform.name;
 
   return createPageMetadata({
-    title: `${platformName} ${detail.version} Release Dates`,
+    title: versionTitle(
+      platformName,
+      detail.version,
+      detail.milestones.length,
+      detail.publicReleaseDate,
+    ),
     description: versionDescription(
       platformName,
       detail.version,
       detail.milestones.length,
-      detail.publicReleaseDate
+      detail.publicReleaseDate,
     ),
     path: `/${encodeURIComponent(slug)}/${encodeURIComponent(ver)}`,
   });
@@ -82,6 +110,11 @@ export default async function VersionDetailPage({
 
   if (!detail) notFound();
 
+  const versionForecast = !detail.publicReleaseDate
+    ? buildReleaseForecasts(await getAnalyticsData()).find(
+        (forecast) => forecast.release._id === detail._id,
+      )
+    : undefined;
   const platform = detail.releaseTrain.platform;
   const cycleDays = computeBetaCycleDays(detail);
   const avgInterval = computeAverageBetaInterval(detail.milestones);
@@ -90,7 +123,13 @@ export default async function VersionDetailPage({
     platform.name,
     detail.version,
     detail.milestones.length,
-    detail.publicReleaseDate
+    detail.publicReleaseDate,
+  );
+  const pageTitle = versionTitle(
+    platform.name,
+    detail.version,
+    detail.milestones.length,
+    detail.publicReleaseDate,
   );
   const canonical = absoluteUrl(
     `/${encodeURIComponent(slug)}/${encodeURIComponent(ver)}`
@@ -108,7 +147,7 @@ export default async function VersionDetailPage({
         "@type": "WebPage",
         "@id": webpageId,
         url: canonical,
-        name: `${platform.name} ${detail.version} Release Dates`,
+        name: pageTitle,
         description,
         dateModified: detail.updatedAt,
         isPartOf: { "@id": `${absoluteUrl("/")}#website` },
@@ -151,6 +190,8 @@ export default async function VersionDetailPage({
             ? `${firstMilestone.date}/${lastMilestone.date}`
             : undefined,
         isAccessibleForFree: true,
+        isPartOf: { "@id": `${absoluteUrl("/")}#release-dataset` },
+        creator: { "@id": `${absoluteUrl("/")}#organization` },
         about: {
           "@type": "SoftwareApplication",
           name: `${platform.name} ${detail.version}`,
@@ -159,10 +200,11 @@ export default async function VersionDetailPage({
         variableMeasured: [
           "Release milestone",
           "Release date",
-          "Beta cycle length",
+          ...(cycleDays !== null ? ["Beta cycle length"] : []),
         ],
-        citation: detail.releaseNotesUrl || undefined,
-        sameAs: detail.releaseNotesUrl || undefined,
+        measurementTechnique:
+          "Release dates compiled from official release notes, public announcements, and documented contemporaneous sources.",
+        isBasedOn: detail.releaseNotesUrl || undefined,
       },
     ],
   };
@@ -183,7 +225,7 @@ export default async function VersionDetailPage({
         >
           <Link href="/">Overview</Link>
           <span aria-hidden="true">/</span>
-          <Link href={`/${slug}`}>{platform.name}</Link>
+          <Link href={`/${slug}/`}>{platform.name}</Link>
           <span aria-hidden="true">/</span>
           <span className="text-[var(--text)]" aria-current="page">
             {detail.version}
@@ -290,6 +332,7 @@ export default async function VersionDetailPage({
             version={detail}
             samePlatformVersions={historical.samePlatformVersions}
             samePositionVersions={historical.samePositionVersions}
+            forecast={versionForecast}
           />
         </section>
 

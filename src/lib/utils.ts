@@ -43,7 +43,10 @@ export function getMilestoneColor(label: string): string {
 export function computeBetaCycleDays(version: ReleaseVersion): number | null {
   if (!version.milestones?.length || !version.publicReleaseDate) return null;
   const firstBeta = version.milestones[0];
-  return daysBetween(firstBeta.date, version.publicReleaseDate);
+  if (getMilestoneType(firstBeta.label) !== "beta") return null;
+
+  const duration = daysBetween(firstBeta.date, version.publicReleaseDate);
+  return duration > 0 ? duration : null;
 }
 
 export function computeAverageBetaInterval(

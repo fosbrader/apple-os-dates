@@ -3,15 +3,39 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPlatforms, getPlatformVersions } from "@/lib/sanity.fetch";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
+import type { ReleaseVersionSummary } from "@/lib/types";
 import { formatDate } from "@/lib/utils";
 import {
   absoluteUrl,
   createPageMetadata,
   latestDate,
+  siteName,
 } from "@/lib/site";
 
-function platformDescription(name: string, versionCount: number): string {
-  return `Browse ${versionCount} ${name} versions with every tracked beta, release candidate, and public release date in one historical index.`;
+function latestPublicVersion(
+  versions: ReleaseVersionSummary[],
+): ReleaseVersionSummary | undefined {
+  return versions
+    .filter((version) => version.publicReleaseDate)
+    .sort((left, right) =>
+      (right.publicReleaseDate ?? "").localeCompare(
+        left.publicReleaseDate ?? "",
+      ),
+    )[0];
+}
+
+function platformDescription(
+  name: string,
+  versions: ReleaseVersionSummary[],
+): string {
+  const latest = latestPublicVersion(versions);
+  const base = `Browse ${versions.length} ${name} versions with every tracked beta, RC, and public release date.`;
+
+  if (!latest?.publicReleaseDate) {
+    return base;
+  }
+
+  return `${base} Latest indexed public release: ${name} ${latest.version} on ${formatDate(latest.publicReleaseDate)}.`;
 }
 
 export async function generateStaticParams() {
@@ -41,8 +65,8 @@ export async function generateMetadata({
   }
 
   return createPageMetadata({
-    title: `${platform.name} Release Dates`,
-    description: platformDescription(platform.name, versions.length),
+    title: `${platform.name} Beta & Release Dates`,
+    description: platformDescription(platform.name, versions),
     path: `/${encodeURIComponent(slug)}/`,
   });
 }
@@ -74,10 +98,11 @@ export default async function PlatformPage({
   const activeVersionCount = versions.filter(
     (version) => !version.publicReleaseDate,
   ).length;
-  const description = platformDescription(platform.name, versions.length);
+  const description = platformDescription(platform.name, versions);
   const canonical = absoluteUrl(`/${encodeURIComponent(slug)}/`);
   const collectionId = `${canonical}#collection`;
   const itemListId = `${canonical}#versions`;
+  const breadcrumbId = `${canonical}#breadcrumb`;
   const dateModified = latestDate(versions.map((version) => version.updatedAt));
   const structuredData: JsonLdValue = {
     "@context": "https://schema.org",
@@ -86,11 +111,30 @@ export default async function PlatformPage({
         "@type": "CollectionPage",
         "@id": collectionId,
         url: canonical,
-        name: `${platform.name} Release Dates`,
+        name: `${platform.name} Beta & Release Dates`,
         description,
         dateModified,
         isPartOf: { "@id": `${absoluteUrl("/")}#website` },
+        breadcrumb: { "@id": breadcrumbId },
         mainEntity: { "@id": itemListId },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": breadcrumbId,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: siteName,
+            item: absoluteUrl("/"),
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: platform.name,
+            item: canonical,
+          },
+        ],
       },
       {
         "@type": "ItemList",
@@ -124,6 +168,17 @@ export default async function PlatformPage({
     <>
       <JsonLd id={`${slug}-release-collection`} data={structuredData} />
       <div className="space-y-16">
+        <nav
+          aria-label="Breadcrumb"
+          className="breadcrumb-nav animate-in"
+          style={{ "--delay": 0 } as React.CSSProperties}
+        >
+          <Link href="/">Overview</Link>
+          <span aria-hidden="true">/</span>
+          <span className="text-[var(--text)]" aria-current="page">
+            {platform.name}
+          </span>
+        </nav>
         <header
           className="platform-hero animate-in"
           style={
@@ -135,7 +190,9 @@ export default async function PlatformPage({
         >
           <div className="platform-hero__copy">
             <p className="section-kicker">Release index</p>
-            <h1 className="text-heading">{platform.name}</h1>
+            <h1 className="text-heading">
+              {platform.name} beta and release dates
+            </h1>
             <p>{description}</p>
             {activeVersionCount > 0 && (
               <p className="mt-5">
@@ -172,7 +229,12 @@ export default async function PlatformPage({
               </p>
             </div>
 
-            <div className="surface overflow-hidden overflow-x-auto">
+            <div
+              className="surface horizontal-scroll horizontal-scroll--table horizontal-scroll--wide overflow-hidden overflow-x-auto"
+              role="region"
+              aria-label={`Scrollable ${platform.name} ${majorVersion} release history`}
+              tabIndex={0}
+            >
               <table className="data-table min-w-[48rem]">
                 <caption className="sr-only">
                   {platform.name} {majorVersion} release history
@@ -248,6 +310,10 @@ export default async function PlatformPage({
                 </tbody>
               </table>
             </div>
+            <p className="horizontal-scroll__hint horizontal-scroll__hint--wide">
+              <span aria-hidden="true">↔</span>
+              Scroll horizontally to see the full release record.
+            </p>
           </section>
         ))}
       </div>

@@ -56,7 +56,7 @@ export default async function TimelinePage() {
         >
           <div>
             <p className="section-kicker">Release timeline</p>
-            <h1 className="text-heading">Beta cycle comparison</h1>
+            <h1 className="text-heading">Apple OS beta release timeline</h1>
           </div>
           <div>
             <p className="page-intro__description">
