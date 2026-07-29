@@ -27,6 +27,53 @@ interface VersionBar {
 type SortKey = "date" | "duration" | "betas" | "platform";
 type GroupKey = "year" | "platform" | "none";
 
+function MobileTimelineCard({ bar }: { bar: VersionBar }) {
+  return (
+    <Link
+      href={`/${bar.slug}/${bar.version}`}
+      className="mobile-timeline-card"
+    >
+      <span className="mobile-timeline-card__header">
+        <span className="mobile-timeline-card__identity">
+          <i
+            aria-hidden="true"
+            style={{ background: bar.platform.color }}
+          />
+          <strong>{bar.platform.name}</strong>
+          <span className="font-mono">{bar.version}</span>
+        </span>
+        <span
+          className={
+            bar.isActive
+              ? "badge badge-active"
+              : "mobile-timeline-card__status"
+          }
+        >
+          {bar.isActive ? "Active" : "Released"}
+        </span>
+      </span>
+      <dl className="mobile-timeline-card__metrics">
+        <div>
+          <dt>Started</dt>
+          <dd>{formatDate(bar.startDate)}</dd>
+        </div>
+        <div>
+          <dt>{bar.isActive ? "Through" : "Public"}</dt>
+          <dd>{bar.isActive ? "Today" : formatDate(bar.endDate)}</dd>
+        </div>
+        <div>
+          <dt>Duration</dt>
+          <dd className="font-mono">{bar.durationDays} days</dd>
+        </div>
+        <div>
+          <dt>Milestones</dt>
+          <dd className="font-mono">{bar.milestoneCount}</dd>
+        </div>
+      </dl>
+    </Link>
+  );
+}
+
 export function TimelineView({ data, platforms }: TimelineViewProps) {
   const [selectedPlatform, setSelectedPlatform] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortKey>("date");
@@ -261,10 +308,10 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
       </dl>
 
       {/* Timeline groups */}
-      {grouped.map((group) => (
+      {grouped.map((group, groupIndex) => (
         <section key={group.key}>
           {groupBy !== "none" && (
-            <div className="flex items-center gap-3 mb-3">
+            <div className="desktop-timeline-group-heading flex items-center gap-3 mb-3">
               <h2 className="text-subheading text-[var(--text-secondary)]">
                 {group.label}
               </h2>
@@ -275,72 +322,107 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
             </div>
           )}
 
-          <div
-            className="surface horizontal-scroll horizontal-scroll--table horizontal-scroll--wide overflow-x-auto"
-            role="region"
-            aria-label={`Scrollable release timeline for ${group.label}`}
-            tabIndex={0}
+          <details
+            className="mobile-timeline-group"
+            open={
+              groupIndex === 0 ||
+              group.items.some((item) => item.isActive)
+            }
           >
-            <table className="data-table timeline-table">
-              <caption className="sr-only">
-                Release cycle durations and recorded milestones for{" "}
-                {group.label}
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col" className="w-36">Version</th>
-                  <th scope="col" className="w-24">Started</th>
-                  <th scope="col" className="w-20 text-right">Days</th>
-                  <th scope="col" className="w-20 text-right">Milestones</th>
-                  <th scope="col">Relative cycle</th>
-                </tr>
-              </thead>
-              <tbody>
-                {group.items.map((bar) => (
-                  <tr key={bar.id}>
-                    <td>
-                      <Link
-                        href={`/${bar.slug}/${bar.version}`}
-                        className="flex items-center gap-2 group"
-                      >
-                        <span
-                          className="w-2 h-2 rounded-full shrink-0"
-                          style={{ background: bar.platform.color }}
-                        />
-                        <span className="font-medium text-sm group-hover:text-[var(--accent)] transition-colors">
-                          {bar.platform.name}
-                        </span>
-                        <span className="font-mono text-sm text-[var(--text-secondary)] group-hover:text-[var(--accent)] transition-colors">
-                          {bar.version}
-                        </span>
-                        {bar.isActive && (
-                          <span className="badge badge-active text-[0.5rem] py-0 px-1.5">
-                            ACTIVE
-                          </span>
-                        )}
-                      </Link>
-                    </td>
-                    <td className="text-[var(--text-secondary)] text-xs">
-                      {formatDate(bar.startDate)}
-                    </td>
-                    <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
-                      {bar.durationDays}
-                    </td>
-                    <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
-                      {bar.milestoneCount}
-                    </td>
-                    <td>
-                      <GanttBar bar={bar} effectiveMax={effectiveMax} />
-                    </td>
+            <summary>
+              <span>{groupBy === "none" ? "All versions" : group.label}</span>
+              <small>{group.items.length} versions</small>
+            </summary>
+            <div
+              className="mobile-timeline-list"
+              aria-label={`Release timeline for ${group.label}`}
+            >
+              {group.items.slice(0, 8).map((bar) => (
+                <MobileTimelineCard key={bar.id} bar={bar} />
+              ))}
+              {group.items.length > 8 && (
+                <details className="mobile-timeline-list__more">
+                  <summary>
+                    Show {group.items.length - 8} more versions
+                  </summary>
+                  <div>
+                    {group.items.slice(8).map((bar) => (
+                      <MobileTimelineCard key={bar.id} bar={bar} />
+                    ))}
+                  </div>
+                </details>
+              )}
+            </div>
+          </details>
+
+          <div className="desktop-timeline-table">
+            <div
+              className="surface horizontal-scroll horizontal-scroll--table horizontal-scroll--wide overflow-x-auto"
+              role="region"
+              aria-label={`Scrollable release timeline for ${group.label}`}
+              tabIndex={0}
+            >
+              <table className="data-table timeline-table">
+                <caption className="sr-only">
+                  Release cycle durations and recorded milestones for{" "}
+                  {group.label}
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col" className="w-36">Version</th>
+                    <th scope="col" className="w-24">Started</th>
+                    <th scope="col" className="w-20 text-right">Days</th>
+                    <th scope="col" className="w-20 text-right">Milestones</th>
+                    <th scope="col">Relative cycle</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {group.items.map((bar) => (
+                    <tr key={bar.id}>
+                      <td>
+                        <Link
+                          href={`/${bar.slug}/${bar.version}`}
+                          className="flex items-center gap-2 group"
+                        >
+                          <span
+                            className="w-2 h-2 rounded-full shrink-0"
+                            style={{ background: bar.platform.color }}
+                          />
+                          <span className="font-medium text-sm group-hover:text-[var(--accent)] transition-colors">
+                            {bar.platform.name}
+                          </span>
+                          <span className="font-mono text-sm text-[var(--text-secondary)] group-hover:text-[var(--accent)] transition-colors">
+                            {bar.version}
+                          </span>
+                          {bar.isActive && (
+                            <span className="badge badge-active text-[0.5rem] py-0 px-1.5">
+                              ACTIVE
+                            </span>
+                          )}
+                        </Link>
+                      </td>
+                      <td className="text-[var(--text-secondary)] text-xs">
+                        {formatDate(bar.startDate)}
+                      </td>
+                      <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
+                        {bar.durationDays}
+                      </td>
+                      <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
+                        {bar.milestoneCount}
+                      </td>
+                      <td>
+                        <GanttBar bar={bar} effectiveMax={effectiveMax} />
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="horizontal-scroll__hint horizontal-scroll__hint--wide">
+              <span aria-hidden="true">↔</span>
+              Scroll horizontally to compare every cycle field.
+            </p>
           </div>
-          <p className="horizontal-scroll__hint horizontal-scroll__hint--wide">
-            <span aria-hidden="true">↔</span>
-            Scroll horizontally to compare every cycle field.
-          </p>
         </section>
       ))}
     </div>

@@ -9,7 +9,10 @@ import {
 } from "@/lib/sanity.fetch";
 import { MilestoneTimeline } from "@/components/ui/MilestoneTimeline";
 import { CalendarExport } from "@/components/ui/CalendarExport";
-import { VersionInsights } from "@/components/analytics/VersionInsights";
+import {
+  VersionForecastCard,
+  VersionInsights,
+} from "@/components/analytics/VersionInsights";
 import { ReleaseViewEvent } from "@/components/analytics/AnalyticsEventTracker";
 import { TrackedReleaseNotesLink } from "@/components/analytics/TrackedReleaseNotesLink";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
@@ -140,6 +143,54 @@ export default async function VersionDetailPage({
   const datasetId = `${canonical}#release-dataset`;
   const firstMilestone = detail.milestones[0];
   const lastMilestone = detail.milestones[detail.milestones.length - 1];
+  const activeForecastWindow =
+    versionForecast?.status === "active"
+      ? versionForecast.nextMilestoneWindow ??
+        versionForecast.publicReleaseWindow
+      : undefined;
+  const summaryStats = isActive
+    ? [
+        {
+          value: lastMilestone?.label ?? "Awaiting data",
+          label: "Latest milestone",
+        },
+        {
+          value: lastMilestone ? formatDate(lastMilestone.date) : "—",
+          label: "Last recorded",
+        },
+        {
+          value:
+            versionForecast?.nextMilestoneWindow?.likelyLabel ??
+            (versionForecast?.publicReleaseWindow
+              ? "Public release"
+              : "Pending"),
+          label: "Next forecast",
+        },
+        {
+          value: detail.milestones.length,
+          label: "Recorded milestones",
+        },
+      ]
+    : [
+        {
+          value: detail.milestones.length,
+          label: "Recorded milestones",
+        },
+        {
+          value: cycleDays !== null ? `${cycleDays}d` : "—",
+          label: "Beta cycle",
+        },
+        {
+          value: avgInterval !== null ? `${avgInterval}d` : "—",
+          label: "Average interval",
+        },
+        {
+          value: detail.publicReleaseDate
+            ? formatDate(detail.publicReleaseDate)
+            : "TBD",
+          label: "Public release",
+        },
+      ];
   const structuredData: JsonLdValue = {
     "@context": "https://schema.org",
     "@graph": [
@@ -264,26 +315,7 @@ export default async function VersionDetailPage({
           style={{ "--delay": 2 } as React.CSSProperties}
           aria-label="Release summary"
         >
-          {[
-            {
-              value: detail.milestones.length,
-              label: "Recorded milestones",
-            },
-            {
-              value: cycleDays !== null ? `${cycleDays}d` : "—",
-              label: "Beta cycle",
-            },
-            {
-              value: avgInterval !== null ? `${avgInterval}d` : "—",
-              label: "Average interval",
-            },
-            {
-              value: detail.publicReleaseDate
-                ? formatDate(detail.publicReleaseDate)
-                : "TBD",
-              label: "Public release",
-            },
-          ].map((stat, index) => (
+          {summaryStats.map((stat, index) => (
             <div
               key={stat.label}
               className="metric-rail__item"
@@ -295,9 +327,18 @@ export default async function VersionDetailPage({
           ))}
         </dl>
 
+        {activeForecastWindow && (
+          <div
+            className="animate-in"
+            style={{ "--delay": 3 } as React.CSSProperties}
+          >
+            <VersionForecastCard forecast={versionForecast} />
+          </div>
+        )}
+
         <section
           className="animate-in"
-          style={{ "--delay": 3 } as React.CSSProperties}
+          style={{ "--delay": 4 } as React.CSSProperties}
         >
           <div className="section-heading">
             <div>
@@ -316,7 +357,7 @@ export default async function VersionDetailPage({
 
         <section
           className="animate-in"
-          style={{ "--delay": 4 } as React.CSSProperties}
+          style={{ "--delay": 5 } as React.CSSProperties}
         >
           <div className="section-heading">
             <div>
@@ -332,14 +373,13 @@ export default async function VersionDetailPage({
             version={detail}
             samePlatformVersions={historical.samePlatformVersions}
             samePositionVersions={historical.samePositionVersions}
-            forecast={versionForecast}
           />
         </section>
 
         <section
           aria-label="Release actions"
           className="flex flex-wrap gap-3 animate-in"
-          style={{ "--delay": 5 } as React.CSSProperties}
+          style={{ "--delay": 6 } as React.CSSProperties}
         >
           <CalendarExport
             milestones={detail.milestones}

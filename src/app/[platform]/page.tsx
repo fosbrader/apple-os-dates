@@ -212,108 +212,141 @@ export default async function PlatformPage({
         {sortedGroups.map(([majorVersion, groupVersions], groupIndex) => (
           <section
             key={majorVersion}
-            className="animate-in"
+            className="platform-version-section animate-in"
             style={{ "--delay": 1 + groupIndex } as React.CSSProperties}
           >
-            <div className="section-heading">
-              <div>
-                <p className="section-kicker">Major versions</p>
-                <h2>
-                  {platform.name} {majorVersion}
-                </h2>
-              </div>
-              <p>
-                {groupVersions.length} indexed{" "}
-                {groupVersions.length === 1 ? "version" : "versions"} in this
-                release family.
-              </p>
-            </div>
-
-            <div
-              className="surface horizontal-scroll horizontal-scroll--table horizontal-scroll--wide overflow-hidden overflow-x-auto"
-              role="region"
-              aria-label={`Scrollable ${platform.name} ${majorVersion} release history`}
-              tabIndex={0}
+            <details
+              className="platform-version-group"
+              open={groupIndex < 2}
             >
-              <table className="data-table min-w-[48rem]">
-                <caption className="sr-only">
-                  {platform.name} {majorVersion} release history
-                </caption>
-                <thead>
-                  <tr>
-                    <th scope="col">Version</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">
-                      Public release
-                    </th>
-                    <th scope="col">
-                      First beta
-                    </th>
-                    <th scope="col" className="text-right">
-                      Milestones
-                    </th>
-                    <th scope="col">
-                      Note
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {groupVersions.map((version, index) => {
-                    const isActive = !version.publicReleaseDate;
+              <summary>
+                <span>
+                  {platform.name} {majorVersion}
+                </span>
+                <small>
+                  {groupVersions.length}{" "}
+                  {groupVersions.length === 1 ? "version" : "versions"}
+                </small>
+              </summary>
 
-                    return (
-                      <tr key={`${version._id}-${index}`}>
-                        <td>
-                          <Link
-                            href={`/${slug}/${version.version}`}
-                            className="inline-flex items-center gap-2 group"
-                          >
-                            <span className="font-mono font-semibold group-hover:text-[var(--accent)] transition-colors">
-                              {version.version}
-                            </span>
-                            <span
-                              className="text-[var(--text-tertiary)] group-hover:text-[var(--accent)]"
-                              aria-hidden="true"
-                            >
-                              ↗
-                            </span>
-                          </Link>
-                        </td>
-                        <td>
-                          {isActive ? (
-                            <span className="badge badge-active">Active</span>
-                          ) : (
-                            <span className="badge badge-released">
-                              Released
-                            </span>
-                          )}
-                        </td>
-                        <td className="text-[var(--text-secondary)]">
-                          {version.publicReleaseDate
-                            ? formatDate(version.publicReleaseDate)
-                            : "—"}
-                        </td>
-                        <td className="text-[var(--text-secondary)]">
-                          {version.firstBetaDate
-                            ? formatDate(version.firstBetaDate)
-                            : "—"}
-                        </td>
-                        <td className="text-right font-mono text-[var(--text-secondary)]">
-                          {version.milestoneCount}
-                        </td>
-                        <td className="text-xs text-[var(--accent)] italic">
-                          {version.versionNote || "—"}
-                        </td>
+              <div className="platform-version-group__content">
+                <div className="section-heading">
+                  <div>
+                    <p className="section-kicker">Major versions</p>
+                    <h2>
+                      {platform.name} {majorVersion}
+                    </h2>
+                  </div>
+                  <p>
+                    {groupVersions.length} indexed{" "}
+                    {groupVersions.length === 1 ? "version" : "versions"} in this
+                    release family.
+                  </p>
+                </div>
+
+                <div
+                  className="surface horizontal-scroll horizontal-scroll--table horizontal-scroll--wide platform-version-table overflow-hidden overflow-x-auto"
+                  role="region"
+                  aria-label={`${platform.name} ${majorVersion} release history`}
+                  tabIndex={0}
+                >
+                  <table className="data-table min-w-[48rem]">
+                    <caption className="sr-only">
+                      {platform.name} {majorVersion} release history
+                    </caption>
+                    <thead>
+                      <tr>
+                        <th scope="col">Version</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">
+                          Public release
+                        </th>
+                        <th scope="col">
+                          First beta
+                        </th>
+                        <th scope="col" className="text-right">
+                          Milestones
+                        </th>
+                        <th scope="col">
+                          Note
+                        </th>
                       </tr>
-                    );
-                  })}
-                </tbody>
-              </table>
-            </div>
-            <p className="horizontal-scroll__hint horizontal-scroll__hint--wide">
-              <span aria-hidden="true">↔</span>
-              Scroll horizontally to see the full release record.
-            </p>
+                    </thead>
+                    <tbody>
+                      {groupVersions.map((version, index) => {
+                        const isActive = !version.publicReleaseDate;
+
+                        return (
+                          <tr key={`${version._id}-${index}`}>
+                            <td data-label="Version">
+                              <Link
+                                href={`/${slug}/${version.version}`}
+                                className="inline-flex items-center gap-2 group"
+                              >
+                                <span className="font-mono font-semibold group-hover:text-[var(--accent)] transition-colors">
+                                  {version.version}
+                                </span>
+                                <span
+                                  className="text-[var(--text-tertiary)] group-hover:text-[var(--accent)]"
+                                  aria-hidden="true"
+                                >
+                                  ↗
+                                </span>
+                              </Link>
+                            </td>
+                            <td data-label="Status">
+                              {isActive ? (
+                                <span className="badge badge-active">Active</span>
+                              ) : (
+                                <span className="badge badge-released">
+                                  Released
+                                </span>
+                              )}
+                            </td>
+                            <td
+                              className="text-[var(--text-secondary)]"
+                              data-label="Public release"
+                            >
+                              {version.publicReleaseDate
+                                ? formatDate(version.publicReleaseDate)
+                                : "Not released"}
+                            </td>
+                            <td
+                              className="text-[var(--text-secondary)]"
+                              data-label="First beta"
+                            >
+                              {version.firstBetaDate
+                                ? formatDate(version.firstBetaDate)
+                                : "—"}
+                            </td>
+                            <td
+                              className="text-right font-mono text-[var(--text-secondary)]"
+                              data-label="Milestones"
+                            >
+                              {version.milestoneCount}
+                            </td>
+                            <td
+                              className={`text-xs text-[var(--accent)] italic ${
+                                version.versionNote
+                                  ? ""
+                                  : "platform-version-table__empty"
+                              }`}
+                              data-label="Note"
+                            >
+                              {version.versionNote}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+                <p className="horizontal-scroll__hint horizontal-scroll__hint--wide">
+                  <span aria-hidden="true">↔</span>
+                  Scroll horizontally to see the full release record.
+                </p>
+              </div>
+            </details>
           </section>
         ))}
       </div>
