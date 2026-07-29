@@ -52,7 +52,7 @@ export function ReleaseViewEvent({
 }: {
   platform: string;
   version: string;
-  releaseStatus: "active" | "released" | "unknown";
+  releaseStatus: "active" | "released" | "superseded" | "unknown";
 }) {
   useConsentGatedEvent(() => {
     sendAnalyticsEvent("view_release", {

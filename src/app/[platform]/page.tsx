@@ -3,7 +3,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPlatforms, getPlatformVersions } from "@/lib/sanity.fetch";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
-import type { ReleaseVersionSummary } from "@/lib/types";
+import {
+  getReleaseStatus,
+  isActiveRelease,
+  isReleasedRelease,
+  type ReleaseVersionSummary,
+} from "@/lib/types";
 import { formatDate } from "@/lib/utils";
 import {
   absoluteUrl,
@@ -16,7 +21,10 @@ function latestPublicVersion(
   versions: ReleaseVersionSummary[],
 ): ReleaseVersionSummary | undefined {
   return versions
-    .filter((version) => version.publicReleaseDate)
+    .filter(
+      (version) =>
+        isReleasedRelease(version) && version.publicReleaseDate,
+    )
     .sort((left, right) =>
       (right.publicReleaseDate ?? "").localeCompare(
         left.publicReleaseDate ?? "",
@@ -96,7 +104,7 @@ export default async function PlatformPage({
     ([a], [b]) => b - a
   );
   const activeVersionCount = versions.filter(
-    (version) => !version.publicReleaseDate,
+    isActiveRelease,
   ).length;
   const description = platformDescription(platform.name, versions);
   const canonical = absoluteUrl(`/${encodeURIComponent(slug)}/`);
@@ -143,6 +151,7 @@ export default async function PlatformPage({
         numberOfItems: versions.length,
         itemListOrder: "https://schema.org/ItemListOrderDescending",
         itemListElement: versions.map((version, index) => {
+          const releaseStatus = getReleaseStatus(version);
           const versionUrl = absoluteUrl(
             `/${encodeURIComponent(slug)}/${encodeURIComponent(version.version)}`
           );
@@ -154,8 +163,14 @@ export default async function PlatformPage({
               "@type": "Dataset",
               "@id": `${versionUrl}#release-dataset`,
               url: versionUrl,
-              name: `${platform.name} ${version.version} Release Dates`,
-              description: `Beta, release candidate, and public release milestones for ${platform.name} ${version.version}.`,
+              name:
+                releaseStatus === "superseded"
+                  ? `${platform.name} ${version.version} Beta History`
+                  : `${platform.name} ${version.version} Release Dates`,
+              description:
+                releaseStatus === "superseded"
+                  ? `Recorded beta and release-candidate milestones for ${platform.name} ${version.version}, which was superseded before public release.`
+                  : `Beta, release candidate, and public release milestones for ${platform.name} ${version.version}.`,
               dateModified: version.updatedAt,
             },
           };
@@ -274,7 +289,7 @@ export default async function PlatformPage({
                     </thead>
                     <tbody>
                       {groupVersions.map((version, index) => {
-                        const isActive = !version.publicReleaseDate;
+                        const releaseStatus = getReleaseStatus(version);
 
                         return (
                           <tr key={`${version._id}-${index}`}>
@@ -295,11 +310,15 @@ export default async function PlatformPage({
                               </Link>
                             </td>
                             <td data-label="Status">
-                              {isActive ? (
+                              {releaseStatus === "active" ? (
                                 <span className="badge badge-active">Active</span>
-                              ) : (
+                              ) : releaseStatus === "released" ? (
                                 <span className="badge badge-released">
                                   Released
+                                </span>
+                              ) : (
+                                <span className="badge border border-[var(--border-strong)] font-mono text-[0.59rem] uppercase tracking-[0.08em] text-[var(--text-tertiary)]">
+                                  Superseded
                                 </span>
                               )}
                             </td>
@@ -307,9 +326,12 @@ export default async function PlatformPage({
                               className="text-[var(--text-secondary)]"
                               data-label="Public release"
                             >
-                              {version.publicReleaseDate
+                              {releaseStatus === "released" &&
+                              version.publicReleaseDate
                                 ? formatDate(version.publicReleaseDate)
-                                : "Not released"}
+                                : releaseStatus === "superseded"
+                                  ? "Never released"
+                                  : "Pending"}
                             </td>
                             <td
                               className="text-[var(--text-secondary)]"

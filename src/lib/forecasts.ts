@@ -1,4 +1,9 @@
-import type { BetaMilestone, ReleaseVersion } from "./types";
+import {
+  isActiveRelease,
+  isReleasedRelease,
+  type BetaMilestone,
+  type ReleaseVersion,
+} from "./types";
 
 const DAY_MS = 86_400_000;
 
@@ -510,11 +515,10 @@ export function buildReleaseForecasts(
 ): ReleaseForecast[] {
   const asOfDay = dateToIsoDay(asOf);
   const completed = releases.filter(
-    (release) => Boolean(release.publicReleaseDate)
+    (release) =>
+      isReleasedRelease(release) && Boolean(release.publicReleaseDate)
   );
-  const active = releases.filter(
-    (release) => !release.publicReleaseDate
-  );
+  const active = releases.filter(isActiveRelease);
 
   return active
     .map((release): ReleaseForecast => {

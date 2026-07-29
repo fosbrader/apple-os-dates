@@ -26,6 +26,21 @@ environment variable.
 
 ## Content updates
 
+The audited local chronology is rebuilt and validated separately from Sanity:
+
+```sh
+npm run data:build
+npm run data:validate
+npm test
+```
+
+`original-apple-note` is the human-reviewed iOS/iPadOS chronology.
+`data:build` overlays those detailed records on the broader supplemental
+dataset, validates dates, lifecycle states, public-release consistency,
+release-train years, and duplicate identities, then writes
+`scripts/seed-data.json`. The old merge path was removed because it replaced
+detailed iOS histories with Public-only records.
+
 ```sh
 npm run sanity:seed
 ```
@@ -35,6 +50,20 @@ After `npx sanity login`, the seed command adds missing records from
 in Studio and never deletes CMS-only records. Routine updates should be made
 through `/studio`; published changes are reflected on the public site within
 about 60 seconds.
+
+Verified historical corrections use a separate dry-run-first reconciler:
+
+```sh
+npm run sanity:history:check
+npm run sanity:history:apply -- --confirm-production --plan-sha <dry-run-sha>
+```
+
+The reconciler is restricted to the production project and dataset, refuses
+open drafts and duplicates, caps its mutation scope, preserves unrelated CMS
+fields and source metadata, uses revision-guarded patches, writes a recoverable
+before-snapshot, and verifies the committed records. Deploy lifecycle-aware
+application code before applying a plan that marks a never-shipped cycle as
+Superseded.
 
 The launch-only 2026 reconciliation is guarded and dry-run-first:
 

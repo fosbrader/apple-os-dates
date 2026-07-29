@@ -31,6 +31,7 @@ export default function SourcesPage() {
     name: "Sources and Editorial Policy",
     description: pageDescription,
     inLanguage: "en-US",
+    dateModified: "2026-07-29",
     isPartOf: { "@id": `${absoluteUrl("/")}#website` },
     about: [
       "Apple operating-system release dates",
@@ -126,6 +127,22 @@ export default function SourcesPage() {
           <p>
             A link identifies where a claim can be checked; it does not imply
             that Apple endorses this project.
+          </p>
+        </ContentSection>
+
+        <ContentSection title="Historical audit status">
+          <p>
+            The iOS and iPadOS chronology was comprehensively re-audited on
+            July 29, 2026. The review checked developer seeds separately from
+            public betas, preserved revised builds and device-limited releases,
+            and marked cycles that never shipped publicly as superseded.
+          </p>
+          <p>
+            Evidence was reconciled across Apple Developer Releases, Apple
+            support and security-release records, Apple-CDN-backed firmware
+            tables, and contemporaneous reporting for withdrawal or
+            device-scope details. Conflicting terminology remains documented
+            in the affected record instead of being silently normalized.
           </p>
         </ContentSection>
 
