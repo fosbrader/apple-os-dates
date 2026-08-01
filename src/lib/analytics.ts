@@ -4,15 +4,15 @@ export const ANALYTICS_CONSENT_STORAGE_KEY =
   "apple-release-tracker:analytics-consent";
 export const ANALYTICS_CONSENT_CHANGE_EVENT =
   "analytics-consent-change";
-export const ANALYTICS_READY_EVENT = "beta-cadence:analytics-ready";
+export const ANALYTICS_READY_EVENT = "version-record:analytics-ready";
 
 declare global {
   interface Window {
     dataLayer?: unknown[];
     gtag?: (...args: unknown[]) => void;
-    __betaCadenceAnalyticsReady?: boolean;
-    __betaCadenceAnalyticsConsent?: AnalyticsConsent;
-    __betaCadenceConsentDefaultsInitialized?: boolean;
+    __versionRecordAnalyticsReady?: boolean;
+    __versionRecordAnalyticsConsent?: AnalyticsConsent;
+    __versionRecordConsentDefaultsInitialized?: boolean;
   }
 }
 
@@ -63,8 +63,8 @@ export function hasAnalyticsConsent(): boolean {
     return false;
   }
 
-  if (window.__betaCadenceAnalyticsConsent) {
-    return window.__betaCadenceAnalyticsConsent === "granted";
+  if (window.__versionRecordAnalyticsConsent) {
+    return window.__versionRecordAnalyticsConsent === "granted";
   }
 
   try {
@@ -80,7 +80,7 @@ export function hasAnalyticsConsent(): boolean {
 export function isAnalyticsReady(): boolean {
   return (
     typeof window !== "undefined" &&
-    window.__betaCadenceAnalyticsReady === true
+    window.__versionRecordAnalyticsReady === true
   );
 }
 

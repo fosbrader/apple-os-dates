@@ -24,6 +24,7 @@ import {
   type ReleaseVersion,
 } from "../src/lib/types";
 import { computeBetaCycleDays } from "../src/lib/utils";
+import { buildTimelineViewModel } from "../src/lib/view-models/timeline";
 
 const platform: Platform = {
   _id: "platform-ios",
@@ -148,6 +149,7 @@ test("Sanity active, recent, and completed queries preserve legacy inference whi
   assert.match(completed, /releaseStatus == "released"/);
   assert.match(completed, /!defined\(releaseStatus\)/);
   assert.match(completed, /defined\(publicReleaseDate\)/);
+  assert.doesNotMatch(completed, /count\(milestones\)/);
 });
 
 test("superseded cycles are neither forecast targets nor historical forecast samples", () => {
@@ -248,11 +250,12 @@ test("a superseded timeline ends at its last recorded seed, not today", () => {
     betaTwo: "2022-08-15",
     status: "superseded",
   });
+  const { bars, platforms } = buildTimelineViewModel(
+    [superseded],
+    [platform],
+  );
   const html = renderToStaticMarkup(
-    createElement(TimelineView, {
-      data: [superseded],
-      platforms: [platform],
-    }),
+    createElement(TimelineView, { bars, platforms }),
   );
 
   assert.match(html, /Last seed/);

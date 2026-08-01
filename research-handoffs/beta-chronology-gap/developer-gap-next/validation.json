@@ -1,0 +1,63 @@
+{
+  "formatVersion": 1,
+  "artifactType": "developerGapPlanValidation",
+  "validatedAt": "2026-07-31T09:14:45.527Z",
+  "validatorInputScope": "Packet-local plan.json only; no shared aggregate, web, Sanity, or production query was read.",
+  "plan": {
+    "path": "research-handoffs/beta-chronology-gap/developer-gap-next/plan.json",
+    "bytes": 146777,
+    "sha256": "ecd4942b0bcd448aba0e2acd2c28dece7f388dd394528ac9a4cfcb6564c6a1a8",
+    "plannedReleaseVersionIdSetSha256": "10d9147a3e4970916b4e35726c61617fa55197d3f310f9ffbe94d120fd740e12"
+  },
+  "counts": {
+    "waveCount": 7,
+    "plannedRowCount": 115,
+    "uniqueReleaseVersionIdCount": 115,
+    "waveCounts": {
+      "developer-modern-high-priority": 10,
+      "developer-legacy-terminology-modeling": 14,
+      "developer-ios-patch-1-4": 20,
+      "developer-ios-patch-5-9": 22,
+      "developer-ios-patch-10-13": 15,
+      "developer-ios-patch-14-16": 16,
+      "developer-ios-patch-17-26": 18
+    },
+    "categoryCounts": {
+      "modernHighPriorityPointOrRelease": 10,
+      "legacyMajorPointTerminologyModeling": 14,
+      "iosPatchHotfixApplicability": 91
+    },
+    "platformCounts": {
+      "iOS": 105,
+      "iPadOS": 2,
+      "macOS": 6,
+      "watchOS": 2
+    },
+    "priorityCounts": {
+      "highestPublicBetaEvidence": 2,
+      "highMajorOrPointRelease": 22,
+      "routinePatchApplicabilityCheck": 91
+    },
+    "separatePriorityPacket": {
+      "parentVersionCount": 4,
+      "chronologyApprovedCandidateIdentityCount": 17,
+      "overlapWithPlannedRows": 0
+    },
+    "versionRowReconciliation": {
+      "totalWithoutProductionDeveloperBeta": 119,
+      "representedBySeparatePriorityPacket": 4,
+      "remainingAndPlanned": 115
+    }
+  },
+  "checks": {
+    "exact115RowPartition": true,
+    "disjointWaveMembership": true,
+    "exactReviewedIdSet": true,
+    "separate17CandidatePacketAccountedFor": true,
+    "noAuthorityExpansion": true,
+    "twoIndependentReviewStagesRequired": true
+  },
+  "errors": [],
+  "warnings": [],
+  "valid": true
+}

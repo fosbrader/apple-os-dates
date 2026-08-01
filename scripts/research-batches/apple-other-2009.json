@@ -1,0 +1,866 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/104189",
+      "title": "Apple security updates (15-Jan-2008 to 03-Dec-2009)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Apple software",
+        "2008",
+        "2009",
+        "release chronology",
+        "security updates"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2008/06/09Apple-Previews-Mac-OS-X-Snow-Leopard-to-Developers/",
+      "title": "Apple Previews Mac OS X Snow Leopard to Developers",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2008-06-09T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Snow Leopard",
+        "10.6",
+        "developer preview"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+      "title": "Apple Unveils Mac OS X Snow Leopard",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2009-06-08T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Snow Leopard",
+        "10.6",
+        "planned availability",
+        "features",
+        "accessibility"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+      "title": "Apple to Ship Mac OS X Snow Leopard on August 28",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2009-08-24T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Snow Leopard",
+        "10.6",
+        "public availability",
+        "features",
+        "pricing"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/112591",
+      "title": "Mac OS X v10.6 Snow Leopard - Technical Specifications",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Mac OS X",
+        "Snow Leopard",
+        "10.6",
+        "technical specifications",
+        "system requirements"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_10.6_Snow_Leopard_VPAT.pdf",
+      "title": "Mac OS X version 10.6 Snow Leopard VPAT (8-2009)",
+      "publisher": "Apple Accessibility",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Mac OS X",
+        "Snow Leopard",
+        "10.6",
+        "accessibility",
+        "VoiceOver",
+        "Multi-Touch"
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-10-6",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "Mac OS X Snow Leopard 10.6 went on sale August 28, 2009. Instead of centering its public story on a long list of new end-user applications, Apple framed the release around refinements, 64-bit system work, multicore and GPU developer technologies, QuickTime X, built-in Exchange support, accessibility, and a smaller installation footprint.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+                "locator": "August 28 availability and launch overview"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+                "locator": "June product framing and accessibility overview"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Development and release"
+          },
+          {
+            "text": "Apple previewed Snow Leopard to developers on June 9, 2008 and said it was expected in about a year. A June 2009 unveiling then announced a September target. The August 24 launch announcement superseded that schedule and established August 28 as the public-sale date; the local milestone labeled Beta 1 is therefore treated as a developer preview, not a public release page.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2008/06/09Apple-Previews-Mac-OS-X-Snow-Leopard-to-Developers/",
+                "locator": "June 9, 2008 developer preview"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+                "locator": "June 8, 2009 planned September availability"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+                "locator": "August 24 announcement and August 28 sale date"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Refinements and core technologies"
+          },
+          {
+            "text": "The retained launch record confirms Finder, Mail, Time Machine, Dock, QuickTime X, Safari, storage-footprint, and 64-bit changes. Grand Central Dispatch and OpenCL expanded the platform's multicore and supported-GPU programming models, but their actual use depended on compatible processors and graphics hardware.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+                "locator": "Launch refinements and core technologies"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112591",
+                "locator": "Feature-specific requirements and key technologies"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Exchange integration"
+          },
+          {
+            "text": "Mail, iCal, and Address Book gained built-in Exchange Server 2007 workflows for email, meetings, contacts, and global address lists. Supported Exchange data could also participate in Spotlight and Quick Look. Apple's retained specification narrows compatibility to Exchange Server 2007 SP1 Update Rollup 4 and requires Autodiscovery for automatic setup.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+                "locator": "Exchange feature description"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112591",
+                "locator": "Feature-specific requirements; Exchange Support"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Accessibility"
+          },
+          {
+            "text": "Apple's June unveiling described VoiceOver navigation through a compatible Multi-Touch trackpad as new in Snow Leopard. The August 2009 accessibility template confirms the 10.6 scope, VoiceOver's built-in role, and gesture input on supported trackpads. The June page also announced wireless and multiple braille-display support, but that more specific claim is retained as article context rather than a structured change because it is not repeated in the surviving August template.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+                "locator": "Accessibility feature announcement"
+              },
+              {
+                "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_10.6_Snow_Leopard_VPAT.pdf",
+                "locator": "Pages 1–2 and 9–10; 10.6 scope, VoiceOver, and gesture support"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Distribution and compatibility"
+          },
+          {
+            "text": "Snow Leopard was sold for installation from DVD through Apple retail, authorized resellers, and online preorder channels. Apple offered a direct Leopard upgrade and a separate Mac Box Set route for Intel-based Tiger systems. The general installation baseline was an Intel Mac, 1 GB of memory, 5 GB of free storage, and a DVD drive, with further requirements attached to individual features.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+                "locator": "Pricing & Availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112591",
+                "locator": "General and feature-specific requirements"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Performance-claim boundary"
+          },
+          {
+            "text": "Mail, Time Machine, Safari, Finder, and disk-space statements are preserved as attributed Apple claims. The final August material supersedes June's different Mail, Time Machine, and space figures, and Apple's test footnotes warn that performance varies with hardware, network conditions, files, data sets, and other factors.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+                "locator": "June performance and storage claims"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+                "locator": "Final performance claims and test footnotes"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Security and version boundary"
+          },
+          {
+            "text": "No launch CVE group is inferred. Apple's archived 2008–2009 security chronology does not list Snow Leopard 10.6 on August 28; its first retained Snow Leopard system entry is 10.6.1 on September 10, followed by 10.6.2 on November 2. Those point releases have no existing local version route in this cohort and their fixes are not projected backward.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104189",
+                "locator": "2009 security table; 10.6.1 and 10.6.2 entries and absence of an August 28 entry"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2008/06/09Apple-Previews-Mac-OS-X-Snow-Leopard-to-Developers/",
+          "locator": "June 9, 2008 developer preview"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+          "locator": "June 8, 2009 unveiling"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+          "locator": "August 24 announcement and August 28 availability"
+        },
+        {
+          "url": "https://support.apple.com/en-us/112591",
+          "locator": "Snow Leopard technical specifications"
+        },
+        {
+          "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_10.6_Snow_Leopard_VPAT.pdf",
+          "locator": "August 2009 Snow Leopard VPAT"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104189",
+          "locator": "2008–2009 security chronology"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:59:50Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-macos-10-6",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Mac OS X Snow Leopard 10.6 went on sale August 28, 2009 with documented system refinements, 64-bit and developer-platform work, QuickTime X, Exchange integration, accessibility improvements, and an Intel-only installation baseline.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple announced on August 24 that Mac OS X Snow Leopard 10.6 would go on sale Friday, August 28 through its retail stores and authorized resellers, with online preorders already open. That dated announcement controls this public event and replaces the June plan to ship in September.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+                "locator": "Public-sale date and distribution channels"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+                "locator": "Superseded September availability plan"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Confirmed shipped scope"
+          },
+          {
+            "text": "The structured entries cover the retained launch record's Finder, Mail, Time Machine, Dock, QuickTime X, Safari, installed-size, 64-bit, Grand Central Dispatch, OpenCL, Exchange, VoiceOver trackpad, installation, and upgrade-path claims. Technical specifications supply hardware and service limits where the launch announcement is broad.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+                "locator": "Launch refinements through Pricing & Availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112591",
+                "locator": "General requirements, feature-specific requirements, and key technologies"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+                "locator": "VoiceOver and Multi-Touch announcement"
+              },
+              {
+                "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_10.6_Snow_Leopard_VPAT.pdf",
+                "locator": "10.6 accessibility and gesture record"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Developer preview versus public evidence"
+          },
+          {
+            "text": "The June 9, 2008 milestone is explicitly documented by Apple as a developer preview. Its planned technologies provide development context, but no article, build number, beta change set, or public availability is attached to that non-public milestone. Only claims confirmed again by launch-era sources appear as public structured changes.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2008/06/09Apple-Previews-Mac-OS-X-Snow-Leopard-to-Developers/",
+                "locator": "Developer-preview framing and planned scope"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+                "locator": "Final public scope and availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112591",
+                "locator": "Retained 10.6 technical scope"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Pre-release figures superseded"
+          },
+          {
+            "text": "Apple's June and August pages use different benchmark and storage numbers. The June page reported separate Mail loading and search figures, an up-to-50-percent initial Time Machine improvement, and up to 6 GB recovered after installation; the final announcement instead reported Mail loading up to twice as fast, Time Machine up to 80 percent faster, and up to 7 GB recovered. The public entries use the later figures and keep both sets identified as Apple-authored claims.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+                "locator": "June performance and space figures"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+                "locator": "Final performance and space figures"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Hardware and service limits"
+          },
+          {
+            "text": "Installing the system required an Intel Mac, 1 GB of memory, 5 GB of free space, and a DVD drive. OpenCL, 64-bit operation, Grand Central Dispatch, QuickTime capture and acceleration, Time Machine, and Exchange each had additional requirements, so the existence of a release-level feature does not imply support on every eligible Mac or server environment.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/112591",
+                "locator": "General requirements and feature-specific requirements"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Accessibility evidence boundary"
+          },
+          {
+            "text": "VoiceOver trackpad navigation is included because Apple's June announcement identifies the integration as new and its August 2009 10.6 accessibility record documents both VoiceOver and Multi-Touch gesture input on supported hardware. The announcement's separate wireless and multiple braille-display statements are not promoted into structured changes because the retained August template does not repeat those specific claims.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+                "locator": "VoiceOver, Multi-Touch, and braille statements"
+              },
+              {
+                "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_10.6_Snow_Leopard_VPAT.pdf",
+                "locator": "Pages 1–2 and 9–10; VoiceOver and supported trackpad gestures"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Version and security boundary"
+          },
+          {
+            "text": "This page represents 10.6 only. Apple's archived security index first lists 10.6.1 on September 10 and 10.6.2 on November 2, while listing no Snow Leopard launch security entry on August 28. Neither point version exists as a local releaseVersion route, so this bundle creates neither and imports no later fixes or build identity.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104189",
+                "locator": "2009 security table; 10.6.1 and 10.6.2 chronology"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2008/06/09Apple-Previews-Mac-OS-X-Snow-Leopard-to-Developers/",
+          "locator": "June 9, 2008 developer preview"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+          "locator": "June 8, 2009 unveiling"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+          "locator": "August 28 public-sale announcement"
+        },
+        {
+          "url": "https://support.apple.com/en-us/112591",
+          "locator": "Snow Leopard technical specifications"
+        },
+        {
+          "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_10.6_Snow_Leopard_VPAT.pdf",
+          "locator": "August 2009 Snow Leopard VPAT"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104189",
+          "locator": "2008–2009 security chronology"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-10-6-finder-responsiveness",
+          "title": "Finder responsiveness refinements",
+          "canonicalSummary": "Snow Leopard included Finder refinements that Apple described as making the file manager more responsive.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple presented Finder responsiveness as part of the release's system-wide refinement program. The claim remains attributed to Apple rather than being treated as an independent performance measurement.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Launch refinements; responsive Finder"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-mail-performance",
+          "title": "Mail loading performance",
+          "canonicalSummary": "Apple said Snow Leopard's Mail could load messages up to twice as fast as Mail on Mac OS X 10.5.8 in its August 2009 prerelease testing.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The public announcement reported an up-to-two-times message-loading result from Apple's own prerelease comparison. Hardware, network, file size, data set, and other variables were explicitly identified as factors, so this is a vendor benchmark rather than a universal result.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Launch refinements and first performance-testing footnote"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+              "locator": "June Mail performance figures",
+              "note": "The June figures were pre-release claims and are retained only as superseded context; the August launch statement controls."
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-time-machine-initial-backup",
+          "title": "Faster initial Time Machine backup",
+          "canonicalSummary": "Apple said Snow Leopard could make Time Machine's initial backup up to 80 percent faster in its August 2009 prerelease testing.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The launch material raised Apple's earlier pre-release estimate and reported an up-to-80-percent improvement for the first backup. It remains a qualified Apple test result, and Time Machine still required a separate drive or Time Capsule.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Launch refinements and first performance-testing footnote"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+              "locator": "June up-to-50-percent Time Machine claim",
+              "note": "Included only to document the figure superseded by the final announcement."
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "Feature-specific requirements; Time Machine"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-dock-expose",
+          "title": "Exposé integration in the Dock",
+          "canonicalSummary": "Snow Leopard integrated Exposé window controls into the Dock.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release connected window overview behavior to Dock interactions, making Exposé part of an existing application-launching and switching surface.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Launch refinements; Dock and Exposé"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-quicktime-x-player",
+          "title": "QuickTime X player",
+          "canonicalSummary": "Snow Leopard introduced QuickTime X with a redesigned player for viewing, recording, trimming, and sharing video.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "QuickTime X consolidated common playback and lightweight creation tasks in a redesigned application. Movie capture depended on a compatible built-in or external camera, and hardware-accelerated H.264 playback required an NVIDIA 9400M graphics processor.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Launch refinements; QuickTime X"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "QuickTime X movie capture and H.264 hardware-acceleration requirements"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-safari-64-bit-performance",
+          "title": "64-bit Safari 4",
+          "canonicalSummary": "Snow Leopard shipped a 64-bit Safari 4 that Apple said was up to 50 percent faster than the 32-bit build in its August 2009 SunSpider testing.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Safari moved into the release's 64-bit system-application set. Apple's speed figure compared prerelease 64-bit and 32-bit Safari 4 with SunSpider and was explicitly subject to system, network, and other variables.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Safari refinement and second performance-testing footnote"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "Feature-specific requirements; 64-bit support"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-safari-plugin-crash-resilience",
+          "title": "Safari plug-in crash resilience",
+          "canonicalSummary": "Apple described Snow Leopard's Safari 4 as resistant to crashes caused by plug-ins.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The browser was designed so a failing plug-in was less likely to take down the full Safari application. Apple's launch page confirms the resilience goal but does not supply a reproducible failure-rate comparison.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Launch refinements; Safari plug-in resilience"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-install-footprint",
+          "title": "Smaller installed footprint",
+          "canonicalSummary": "Apple said Snow Leopard was half the size of the prior release and could free up to 7 GB after installation.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The public launch statement used an up-to-7-GB space-recovery figure. A June announcement had said up to 6 GB, so the later public figure controls and neither number is presented as guaranteed on every Mac.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Installed-size and up-to-7-GB statement"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+              "locator": "June up-to-6-GB statement",
+              "note": "Included only as a superseded pre-release figure."
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-system-apps-64-bit",
+          "title": "64-bit system applications",
+          "canonicalSummary": "Snow Leopard moved Finder, Mail, iCal, iChat, and Safari to 64-bit system applications.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Several high-use built-in applications shipped as 64-bit software for the first time in Apple's OS X line. This claim is limited to the applications Apple named and does not imply that every included application was 64-bit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "64-bit system-application list"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-64-bit-platform-compatibility",
+          "title": "64-bit platform support with 32-bit app compatibility",
+          "canonicalSummary": "Snow Leopard expanded 64-bit processor support while retaining compatibility with 32-bit applications.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple positioned the 64-bit work as a way to use larger memory configurations and improve platform performance and security without requiring existing 32-bit applications to disappear. Actual 64-bit support required a Mac with a 64-bit processor.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "64-bit processor support and 32-bit app compatibility"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "Feature-specific requirements; 64-bit support"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-grand-central-dispatch",
+          "title": "Grand Central Dispatch",
+          "canonicalSummary": "Snow Leopard introduced Grand Central Dispatch as a developer technology for using multicore processors.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Grand Central Dispatch supplied a system-level programming model intended to help software distribute work across multiple processor cores. Apple listed a multicore processor as a requirement for the technology.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Core technologies; Grand Central Dispatch"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "Feature-specific requirements and key technologies; Grand Central Dispatch"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2008/06/09Apple-Previews-Mac-OS-X-Snow-Leopard-to-Developers/",
+              "locator": "2008 code-named Grand Central preview",
+              "note": "Used only to document the technology's pre-launch development trail."
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-opencl",
+          "title": "OpenCL general-purpose GPU computing",
+          "canonicalSummary": "Snow Leopard introduced OpenCL so developers could use supported graphics processors for computing beyond graphics rendering.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "OpenCL exposed a C-based, open-standard approach to general-purpose GPU work. Support was hardware-specific at launch: Apple's retained specification names a finite set of NVIDIA and ATI graphics processors rather than every Snow Leopard-compatible Mac.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Core technologies; OpenCL"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "Feature-specific requirements and key technologies; OpenCL"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2008/06/09Apple-Previews-Mac-OS-X-Snow-Leopard-to-Developers/",
+              "locator": "2008 OpenCL preview",
+              "note": "Used only as development context for the launch-confirmed technology."
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-exchange-mail",
+          "title": "Built-in Exchange email support",
+          "canonicalSummary": "Snow Leopard added Microsoft Exchange Server 2007 email support to Mail.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Mail could send and receive Exchange email without a separate desktop client. Apple's technical specification required Exchange Server 2007 Service Pack 1 Update Rollup 4, with Autodiscovery enabled for automatic setup.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Exchange support; Mail"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "Feature-specific requirements; Exchange Support"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-exchange-calendar",
+          "title": "Exchange meeting support in iCal",
+          "canonicalSummary": "Snow Leopard added Exchange Server 2007 meeting invitations to iCal.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The built-in calendar could create and respond to Exchange meeting invitations. The same Exchange server and Autodiscovery limitations documented for the release applied to this integration.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Exchange support; iCal and meeting invitations"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "Feature-specific requirements; Exchange Support"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-exchange-contacts",
+          "title": "Exchange directory support in Address Book",
+          "canonicalSummary": "Snow Leopard added Exchange Server 2007 contacts and global address lists to Address Book.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Address Book could search and manage Exchange contacts, including access to the organization's global address list, within the built-in Mac contact application.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Exchange support; Address Book and global address lists"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "Feature-specific requirements; Exchange Support"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-exchange-spotlight-quick-look",
+          "title": "Exchange data in Spotlight and Quick Look",
+          "canonicalSummary": "Snow Leopard made supported Exchange information available to Spotlight search and Quick Look previews.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Exchange integration extended beyond the three client applications into OS X search and preview surfaces, allowing supported server-backed information to participate in established system workflows.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Exchange support; Spotlight and Quick Look integration"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-voiceover-multitouch-navigation",
+          "title": "VoiceOver navigation with a Multi-Touch trackpad",
+          "canonicalSummary": "Snow Leopard integrated VoiceOver with compatible Multi-Touch trackpads for finger-based navigation of windows and the desktop.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple's June unveiling identified trackpad navigation as a new Snow Leopard accessibility capability. Its August 2009 accessibility record confirms VoiceOver as the built-in screen reader and documents flick, drag, pinch, and tap input on Macs equipped with a Multi-Touch trackpad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Unveils-Mac-OS-X-Snow-Leopard/",
+              "locator": "Accessibility features; VoiceOver and Multi-Touch"
+            },
+            {
+              "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_10.6_Snow_Leopard_VPAT.pdf",
+              "locator": "Pages 1–2 and 9–10; VoiceOver and Multi-Touch gesture support"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-intel-installation-baseline",
+          "title": "Intel-only installation baseline",
+          "canonicalSummary": "Snow Leopard required an Intel-based Mac, 1 GB of memory, 5 GB of available storage, and a DVD drive for installation.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release's retained technical specification establishes the minimum computer, memory, storage, and installation-media requirements. Individual features imposed additional hardware, peripheral, network, or server requirements.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Pricing & Availability; Intel and memory baseline"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "General requirements"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-6-leopard-tiger-upgrade-path",
+          "title": "Leopard and Tiger upgrade paths",
+          "canonicalSummary": "Apple sold Snow Leopard as a direct upgrade for Leopard users, while Intel Mac users on Tiger were directed to a Mac Box Set bundle.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The initial release used retail and authorized-reseller distribution with online preorders and installation media, not a modern over-the-air rollout. Leopard users could buy Snow Leopard alone; eligible Tiger users were offered a bundle that also contained iLife '09 and iWork '09.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Snow Leopard public-launch announcement or contemporaneous 10.6 documentation to the existing audited public event; earlier material is retained only when a launch-era source confirms the shipped behavior or explains a superseded pre-release claim.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/08/24Apple-to-Ship-Mac-OS-X-Snow-Leopard-on-August-28/",
+              "locator": "Pricing & Availability; Leopard and Tiger upgrade paths"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112591",
+              "locator": "What's in the Box; installation DVD"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:59:50Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

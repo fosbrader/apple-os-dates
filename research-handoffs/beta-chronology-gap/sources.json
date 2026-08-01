@@ -1,0 +1,499 @@
+{
+  "formatVersion": "1.0",
+  "programId": "apple-beta-chronology-gap",
+  "generatedAt": "2026-07-31T02:35:41Z",
+  "accessedAt": "2026-07-30",
+  "custody": {
+    "foundationOnly": true,
+    "rawCapturesAdded": false,
+    "normalizedTextLocksAdded": false,
+    "checksumsAdded": false,
+    "note": "These records establish the program and initial candidates. Completed research waves must add evidence custody required by docs/research-agent-handoff.md."
+  },
+  "sourceClasses": {
+    "firstPartyProgram": "Apple enrollment or program documentation",
+    "firstPartyAnnouncement": "Apple Newsroom announcement",
+    "firstPartyDeveloper": "Apple Developer news, release, or SDK documentation",
+    "contemporaryJournalism": "Dated reporting close to the appearance",
+    "historicalJournalism": "Reporting used to establish an older program boundary"
+  },
+  "sources": [
+    {
+      "id": "source-apple-beta-program-current",
+      "url": "https://beta.apple.com/",
+      "title": "Apple Beta Software Program",
+      "publisher": "Apple",
+      "publishedAt": null,
+      "sourceClass": "firstPartyProgram",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "current platform enrollment cards",
+          "supports": "The program currently lists iOS, iPadOS, macOS, tvOS, watchOS, HomePod software, and AirPods firmware.",
+          "qualification": "The page does not list visionOS; omission is negative evidence, not conclusive proof that no separate distribution exists."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-beta-faq-current",
+      "url": "https://beta.apple.com/en/faq",
+      "title": "FAQ",
+      "publisher": "Apple Beta Software Program",
+      "publishedAt": null,
+      "sourceClass": "firstPartyProgram",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "enrollment and feedback platform lists",
+          "supports": "Apple describes public enrollment and feedback for iPhone, iPad, Mac, Apple TV, HomePod, and Apple Watch.",
+          "qualification": "visionOS is not named."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-iphone-2-beta",
+      "url": "https://www.apple.com/newsroom/2008/03/06Apple-Announces-iPhone-2-0-Software-Beta/",
+      "title": "Apple Announces iPhone 2.0 Software Beta",
+      "publisher": "Apple Newsroom",
+      "publishedAt": "2008-03-06",
+      "sourceClass": "firstPartyAnnouncement",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "announcement and availability paragraphs",
+          "supports": "Apple announced iPhone 2.0 beta software and immediate access for selected developers and enterprise customers."
+        }
+      ]
+    },
+    {
+      "id": "source-macrumors-ios83-public-program",
+      "url": "https://www.macrumors.com/2015/03/12/ios-beta-testing-program/",
+      "title": "Apple Launches New iOS Beta Testing Program, Seeds iOS 8.3 to Testers",
+      "publisher": "MacRumors",
+      "publishedAt": "2015-03-12",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "program launch and iOS 8.3 distribution paragraphs",
+          "supports": "Public iOS testing began with an iOS 8.3 seed on March 12, 2015, corresponding to developer beta 3.",
+          "qualification": "The initial audience was limited; this source preserves the public-program invitation context."
+        }
+      ]
+    },
+    {
+      "id": "source-engadget-ios83-public-program",
+      "url": "https://www.engadget.com/2015-03-12-apple-ios-public-beta.html",
+      "title": "Apple begins public beta testing of iOS",
+      "publisher": "Engadget",
+      "publishedAt": "2015-03-12",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "public program launch report",
+          "supports": "Independent contemporary corroboration that Apple began distributing iOS 8.3 through its public beta program."
+        }
+      ]
+    },
+    {
+      "id": "source-macrumors-ios83-public-beta-2",
+      "url": "https://www.macrumors.com/2015/03/24/apple-seeds-fourth-ios-8-3-beta-to-developers/",
+      "title": "Apple Seeds Fourth iOS 8.3 Beta to Developers, Second Beta to Public Beta Testers",
+      "publisher": "MacRumors",
+      "publishedAt": "2015-03-24",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "headline and public-tester availability paragraph",
+          "supports": "iOS 8.3 Public Beta 2 appeared March 24, 2015 alongside developer beta 4."
+        }
+      ]
+    },
+    {
+      "id": "source-9to5mac-ios84-public-beta-1",
+      "url": "https://9to5mac.com/2015/04/27/apple-releases-ios-8-4-beta-2-to-developers-with-revamped-music-app/",
+      "title": "Apple releases iOS 8.4 beta 2 to developers with revamped Music app",
+      "publisher": "9to5Mac",
+      "publishedAt": "2015-04-27",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "public-beta distribution paragraph",
+          "supports": "The first iOS 8.4 public beta appeared April 27, 2015 and corresponded to developer beta 2."
+        }
+      ]
+    },
+    {
+      "id": "source-9to5mac-ios84-public-beta-2",
+      "url": "https://9to5mac.com/2015/05/11/apple-releases-ios-8-4-beta-3-with-revamped-music-ahead-of-late-june-launch/",
+      "title": "Apple releases iOS 8.4 beta 3 with revamped Music app ahead of late June launch",
+      "publisher": "9to5Mac",
+      "publishedAt": "2015-05-11",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "developer and public distribution paragraph",
+          "supports": "iOS 8.4 Public Beta 2 appeared May 11, 2015 alongside developer beta 3."
+        }
+      ]
+    },
+    {
+      "id": "source-macrumors-ios84-public-beta-3",
+      "url": "https://www.macrumors.com/2015/06/09/apple-seeds-fourth-ios-8-4-beta/",
+      "title": "Apple Seeds Fourth iOS 8.4 Beta With Revamped Music App to Developers and Public Beta Testers",
+      "publisher": "MacRumors",
+      "publishedAt": "2015-06-09",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "headline and audience distribution paragraph",
+          "supports": "iOS 8.4 Public Beta 3 appeared June 9, 2015 alongside developer beta 4."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-ipados-preview-2019",
+      "url": "https://www.apple.com/uk/newsroom/2019/06/the-new-ipados-powers-unique-experiences-designed-for-ipad/",
+      "title": "The new iPadOS powers unique experiences designed for iPad",
+      "publisher": "Apple Newsroom",
+      "publishedAt": "2019-06-03",
+      "sourceClass": "firstPartyAnnouncement",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "availability paragraph",
+          "supports": "Apple made the iPadOS developer preview available June 3 and announced a public beta for later that month."
+        }
+      ]
+    },
+    {
+      "id": "source-macrumors-ipados13-first-public",
+      "url": "https://www.macrumors.com/2019/06/24/apple-releases-ios-13-ipados-public-beta-1/",
+      "title": "Apple Releases First Public Betas of iOS 13 and iPadOS",
+      "publisher": "MacRumors",
+      "publishedAt": "2019-06-24",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "headline and first public-beta availability paragraph",
+          "supports": "iPadOS 13 Public Beta 1 appeared June 24, 2019."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-snow-leopard-preview",
+      "url": "https://www.apple.com/newsroom/2008/06/09Apple-Previews-Mac-OS-X-Snow-Leopard-to-Developers/",
+      "title": "Apple Previews Mac OS X Snow Leopard to Developers",
+      "publisher": "Apple Newsroom",
+      "publishedAt": "2008-06-09",
+      "sourceClass": "firstPartyAnnouncement",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "press release heading and opening paragraphs",
+          "supports": "Apple previewed Mac OS X Snow Leopard to developers on June 9, 2008.",
+          "qualification": "This establishes the current corpus boundary, not the beginning of all Mac developer previews."
+        }
+      ]
+    },
+    {
+      "id": "source-macrumors-snow-leopard-seed",
+      "url": "https://www.macrumors.com/2008/06/10/snow-leopard-seeded-to-wwdc-developers/",
+      "title": "Snow Leopard Seeded to WWDC Developers",
+      "publisher": "MacRumors",
+      "publishedAt": "2008-06-10",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "developer seed report",
+          "supports": "Contemporary corroboration that a Snow Leopard seed was distributed to WWDC developers."
+        }
+      ]
+    },
+    {
+      "id": "source-macworld-osx-1093-beta-seed",
+      "url": "https://www.macworld.com/article/223247/apple-launches-beta-seed-for-os-x-program-for-end-users.html",
+      "title": "Apple launches Beta Seed Program for OS X end users",
+      "publisher": "Macworld",
+      "publishedAt": "2014-04-22",
+      "sourceClass": "historicalJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "program launch and OS X 10.9.3 paragraphs",
+          "supports": "Apple opened a recurring OS X beta seed program to end users with OS X 10.9.3 on April 22, 2014."
+        }
+      ]
+    },
+    {
+      "id": "source-ars-osx-1093-beta-seed",
+      "url": "https://arstechnica.com/gadgets/2014/04/apple-opens-os-x-beta-program-to-the-public-for-10-9-3/",
+      "title": "Apple opens OS X beta program to the public for 10.9.3",
+      "publisher": "Ars Technica",
+      "publishedAt": "2014-04-22",
+      "sourceClass": "historicalJournalism",
+      "liveVerification": "search-index corroborated; direct fetch restricted",
+      "locators": [
+        {
+          "locator": "headline and program description",
+          "supports": "Independent contemporary corroboration of the open OS X 10.9.3 beta program."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-macosx-public-beta-2000",
+      "url": "https://www.apple.com/newsroom/2000/09/13Apple-Releases-Mac-OS-X-Public-Beta/",
+      "title": "Apple Releases Mac OS X Public Beta",
+      "publisher": "Apple Newsroom",
+      "publishedAt": "2000-09-13",
+      "sourceClass": "firstPartyAnnouncement",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "press release heading and availability paragraphs",
+          "supports": "Apple released a separately named Mac OS X Public Beta product in 2000.",
+          "qualification": "This is not automatically equivalent to a recurring publicBeta channel appearance."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-watchos2-preview",
+      "url": "https://www.apple.com/newsroom/2015/06/08Apple-Previews-New-Apple-Watch-Software/",
+      "title": "Apple Previews New Apple Watch Software",
+      "publisher": "Apple Newsroom",
+      "publishedAt": "2015-06-08",
+      "sourceClass": "firstPartyAnnouncement",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "watchOS 2 developer availability paragraphs",
+          "supports": "Apple previewed watchOS 2 and made developer materials available June 8, 2015."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-watchos7-first-public-announcement",
+      "url": "https://www.apple.com/newsroom/2020/06/watchos-7-adds-significant-personalization-health-and-fitness-features-to-apple-watch/",
+      "title": "watchOS 7 adds significant personalization, health, and fitness features to Apple Watch",
+      "publisher": "Apple Newsroom",
+      "publishedAt": "2020-06-22",
+      "sourceClass": "firstPartyAnnouncement",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "availability paragraph",
+          "supports": "Apple announced that watchOS 7 would be offered as a public beta for the first time."
+        }
+      ]
+    },
+    {
+      "id": "source-macrumors-watchos7-first-public",
+      "url": "https://www.macrumors.com/2020/08/10/apple-seeds-watchos-7-public-beta-1/",
+      "title": "Apple Seeds First Public Beta of watchOS 7 to Public Beta Testers",
+      "publisher": "MacRumors",
+      "publishedAt": "2020-08-10",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "headline and availability paragraph",
+          "supports": "watchOS 7 Public Beta 1 appeared August 10, 2020."
+        }
+      ]
+    },
+    {
+      "id": "source-9to5mac-watchos7-first-public",
+      "url": "https://9to5mac.com/2020/08/10/watchos-7-public-beta-release/",
+      "title": "Apple releases watchOS 7 public beta",
+      "publisher": "9to5Mac",
+      "publishedAt": "2020-08-10",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "first public-beta availability report",
+          "supports": "Independent contemporary corroboration of the first watchOS public beta."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-tvos-sdk-2015",
+      "url": "https://developer.apple.com/news/?id=09092015a",
+      "title": "Introducing tvOS",
+      "publisher": "Apple Developer",
+      "publishedAt": "2015-09-09",
+      "sourceClass": "firstPartyDeveloper",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "tvOS SDK introduction",
+          "supports": "Apple introduced the tvOS SDK on September 9, 2015.",
+          "qualification": "An SDK is not itself proof of a device-OS build appearance."
+        }
+      ]
+    },
+    {
+      "id": "source-macrumors-tvos11-first-public",
+      "url": "https://www.macrumors.com/2017/06/26/tvos-11-first-public-beta/",
+      "title": "Apple Seeds First Public Beta of tvOS 11",
+      "publisher": "MacRumors",
+      "publishedAt": "2017-06-26",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "headline and first-time availability paragraph",
+          "supports": "tvOS 11 Public Beta 1 appeared June 26, 2017 and was the first tvOS public beta."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-visionos-sdk-2023",
+      "url": "https://developer.apple.com/news/?id=8sntwknb",
+      "title": "visionOS SDK now available",
+      "publisher": "Apple Developer",
+      "publishedAt": "2023-06-21",
+      "sourceClass": "firstPartyDeveloper",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "Xcode 15 beta 2 and visionOS SDK paragraph",
+          "supports": "Apple made the visionOS SDK and simulator available June 21, 2023.",
+          "qualification": "SDK/simulator availability must not be silently converted into a device build claim."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-visionos27-developer",
+      "url": "https://developer.apple.com/news/releases/?id=06082026f",
+      "title": "visionOS 27.0 beta (24M5291p)",
+      "publisher": "Apple Developer",
+      "publishedAt": "2026-06-08",
+      "sourceClass": "firstPartyDeveloper",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "release entry",
+          "supports": "Apple published a visionOS 27 developer beta release entry on June 8, 2026.",
+          "qualification": "This does not establish a public-beta appearance."
+        }
+      ]
+    },
+    {
+      "id": "source-apple-os27-public-announcement",
+      "url": "https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/",
+      "title": "Apple unveils next generation of Apple Intelligence, Siri AI, and more",
+      "publisher": "Apple Newsroom",
+      "publishedAt": "2026-06-08",
+      "sourceClass": "firstPartyAnnouncement",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "availability paragraph",
+          "supports": "Apple announced developer testing for its new operating systems and a public beta the following month.",
+          "qualification": "The singular generic public-beta language does not establish an exact appearance for every named platform."
+        }
+      ]
+    },
+    {
+      "id": "source-macrumors-macos27-public",
+      "url": "https://www.macrumors.com/2026/07/13/macos-golden-gate-public-beta/",
+      "title": "First macOS Golden Gate Public Beta Now Available",
+      "publisher": "MacRumors",
+      "publishedAt": "2026-07-13",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "headline and opening availability paragraph",
+          "supports": "macOS 27 Public Beta 1 appeared July 13, 2026."
+        }
+      ]
+    },
+    {
+      "id": "source-9to5mac-macos27-public",
+      "url": "https://9to5mac.com/2026/07/13/macos-27-public-beta-now-available-heres-how-to-install-it/",
+      "title": "macOS 27 public beta now available, here's how to install it",
+      "publisher": "9to5Mac",
+      "publishedAt": "2026-07-13",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "headline, opening paragraph, and Public Beta 1 installation heading",
+          "supports": "Independent corroboration of macOS 27 Public Beta 1 on July 13, 2026."
+        }
+      ]
+    },
+    {
+      "id": "source-macrumors-watch-tvos27-public",
+      "url": "https://www.macrumors.com/2026/07/13/watchos-27-public-beta/",
+      "title": "tvOS 27 and watchOS 27 Now Available to Public Beta Testers",
+      "publisher": "MacRumors",
+      "publishedAt": "2026-07-13",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "headline and opening two paragraphs",
+          "supports": "watchOS 27 and tvOS 27 Public Beta 1 appeared July 13, 2026.",
+          "qualification": "The report says they corresponded to developer beta 3; it does not by itself prove byte-for-byte identity."
+        }
+      ]
+    },
+    {
+      "id": "source-9to5mac-watchos27-public",
+      "url": "https://9to5mac.com/2026/07/13/watchos-27-public-beta/",
+      "title": "watchOS 27 public beta is here with Siri AI and smarter Apple Watch features",
+      "publisher": "9to5Mac",
+      "publishedAt": "2026-07-13",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "opening availability paragraph and enrollment steps",
+          "supports": "Independent corroboration that watchOS 27 Public Beta 1 was selectable on July 13, 2026."
+        }
+      ]
+    },
+    {
+      "id": "source-macworld-os27-public",
+      "url": "https://www.macworld.com/article/3190070/the-os-27-public-betas-are-out-now-with-siri-ai-platform-improvements-and-more.html",
+      "title": "The OS 27 public betas are out now with Siri AI, platform improvements, and more",
+      "publisher": "Macworld",
+      "publishedAt": "2026-07-13",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "platform list and public-program paragraph",
+          "supports": "Corroborates July 13 public availability for tvOS 27 and claims public availability for visionOS 27.",
+          "qualification": "The visionOS claim conflicts with Apple's current enrollment-page omission and requires stronger proof."
+        }
+      ]
+    },
+    {
+      "id": "source-appleinsider-os27-public",
+      "url": "https://appleinsider.com/articles/26/07/13/first-ios-27-macos-27-public-betas-are-out-but-you-should-still-be-careful",
+      "title": "First iOS 27, macOS 27 public betas are out",
+      "publisher": "AppleInsider",
+      "publishedAt": "2026-07-13",
+      "sourceClass": "contemporaryJournalism",
+      "liveVerification": "available",
+      "locators": [
+        {
+          "locator": "platform and build availability table",
+          "supports": "Claims a visionOS 27 public beta alongside other OS 27 public betas.",
+          "qualification": "Do not adopt its visionOS or watchOS build strings without independent first-party verification."
+        }
+      ]
+    }
+  ]
+}

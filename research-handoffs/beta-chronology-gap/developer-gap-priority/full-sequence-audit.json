@@ -1,0 +1,375 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-developer-gap-priority",
+  "createdAt": "2026-07-31T05:02:22.270Z",
+  "cycleCount": 4,
+  "positiveIdentityCount": 17,
+  "negativeNextOrdinalTestCount": 4,
+  "skippedOrdinalCount": 0,
+  "withdrawalOrRespinCount": 0,
+  "audits": [
+    {
+      "version": "9.2.1",
+      "releaseVersionId": "version-ios-9-2-1",
+      "stableReleaseDate": "2016-01-19",
+      "observedDeveloperSequence": [
+        {
+          "sequence": 1,
+          "routeAlias": "beta-1",
+          "appearanceDate": "2015-12-16",
+          "candidateId": "candidate:apple:ios:9.2.1:beta-1",
+          "evidenceSourceIds": [
+            "source-ios921-b1-macrumors-dev",
+            "source-ios921-b1-9to5mac-dev"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "9to5Mac"
+          ]
+        },
+        {
+          "sequence": 2,
+          "routeAlias": "beta-2",
+          "appearanceDate": "2016-01-04",
+          "candidateId": "candidate:apple:ios:9.2.1:beta-2",
+          "evidenceSourceIds": [
+            "source-ios921-b2-macrumors-dev",
+            "source-ios921-b2-9to5mac-dev"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "9to5Mac"
+          ]
+        }
+      ],
+      "continuityChecks": {
+        "firstOrdinal": 1,
+        "lastObservedOrdinal": 2,
+        "missingOrdinalsWithinObservedRange": [],
+        "duplicateOrdinals": [],
+        "withdrawalOrRespinsObserved": false,
+        "withdrawalOrRespinsConclusion": "No contemporaneous source in the inspected lineages reported a withdrawal, replacement seed, same-ordinal respin, or return. This is a bounded not-observed result."
+      },
+      "negativeLaterOrdinalAudit": {
+        "testedRouteAlias": "beta-3",
+        "testedSequence": 3,
+        "exactSearchQueries": [
+          "\"iOS 9.2.1 beta 3\" developer",
+          "\"iOS 9.2.1 third beta\" developer"
+        ],
+        "searchResult": "noPositiveContemporarySourceLocated",
+        "closureSourceIds": [
+          "negative-ios921-final-appleinsider"
+        ],
+        "conclusion": "No Beta 3 identity is proposed. The stable-release boundary and retained aggregate sequence evidence close the observed consecutive run at Beta 2.",
+        "limitation": "Negative web searching alone is not treated as proof; the conclusion is paired with the stable-release date and explicit aggregate sequence reporting."
+      },
+      "cycleDisposition": "completeConsecutiveDeveloperSequencePendingReview"
+    },
+    {
+      "version": "10.2.1",
+      "releaseVersionId": "version-ios-10-2-1",
+      "stableReleaseDate": "2017-01-23",
+      "observedDeveloperSequence": [
+        {
+          "sequence": 1,
+          "routeAlias": "beta-1",
+          "appearanceDate": "2016-12-14",
+          "candidateId": "candidate:apple:ios:10.2.1:beta-1",
+          "evidenceSourceIds": [
+            "new-ios1021-b1-idb-direct",
+            "source-ios1021-pb1-macrumors"
+          ],
+          "publisherFamilies": [
+            "iDownloadBlog",
+            "MacRumors"
+          ]
+        },
+        {
+          "sequence": 2,
+          "routeAlias": "beta-2",
+          "appearanceDate": "2016-12-20",
+          "candidateId": "candidate:apple:ios:10.2.1:beta-2",
+          "evidenceSourceIds": [
+            "source-ios1021-pb2-macrumors",
+            "source-ios1021-pb2-appleinsider"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "AppleInsider"
+          ]
+        },
+        {
+          "sequence": 3,
+          "routeAlias": "beta-3",
+          "appearanceDate": "2017-01-09",
+          "candidateId": "candidate:apple:ios:10.2.1:beta-3",
+          "evidenceSourceIds": [
+            "source-ios1021-pb3-macrumors",
+            "source-ios1021-pb3-osxdaily"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "OS X Daily"
+          ]
+        },
+        {
+          "sequence": 4,
+          "routeAlias": "beta-4",
+          "appearanceDate": "2017-01-12",
+          "candidateId": "candidate:apple:ios:10.2.1:beta-4",
+          "evidenceSourceIds": [
+            "source-ios1021-pb4-macrumors",
+            "source-ios1021-pb4-appleinsider"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "AppleInsider"
+          ]
+        }
+      ],
+      "continuityChecks": {
+        "firstOrdinal": 1,
+        "lastObservedOrdinal": 4,
+        "missingOrdinalsWithinObservedRange": [],
+        "duplicateOrdinals": [],
+        "withdrawalOrRespinsObserved": false,
+        "withdrawalOrRespinsConclusion": "No contemporaneous source in the inspected lineages reported a withdrawal, replacement seed, same-ordinal respin, or return. This is a bounded not-observed result."
+      },
+      "negativeLaterOrdinalAudit": {
+        "testedRouteAlias": "beta-5",
+        "testedSequence": 5,
+        "exactSearchQueries": [
+          "\"iOS 10.2.1 beta 5\" developer",
+          "\"iOS 10.2.1 fifth beta\" developer"
+        ],
+        "searchResult": "noPositiveContemporarySourceLocated",
+        "closureSourceIds": [
+          "negative-ios1021-final-appleinsider"
+        ],
+        "conclusion": "No Beta 5 identity is proposed. The stable-release boundary and retained aggregate sequence evidence close the observed consecutive run at Beta 4.",
+        "limitation": "Negative web searching alone is not treated as proof; the conclusion is paired with the stable-release date and explicit aggregate sequence reporting."
+      },
+      "cycleDisposition": "completeConsecutiveDeveloperSequencePendingReview"
+    },
+    {
+      "version": "10.3.2",
+      "releaseVersionId": "version-ios-10-3-2",
+      "stableReleaseDate": "2017-05-15",
+      "observedDeveloperSequence": [
+        {
+          "sequence": 1,
+          "routeAlias": "beta-1",
+          "appearanceDate": "2017-03-28",
+          "candidateId": "candidate:apple:ios:10.3.2:beta-1",
+          "evidenceSourceIds": [
+            "new-ios1032-b1-idb-direct",
+            "source-ios1032-pb1-macrumors"
+          ],
+          "publisherFamilies": [
+            "iDownloadBlog",
+            "MacRumors"
+          ]
+        },
+        {
+          "sequence": 2,
+          "routeAlias": "beta-2",
+          "appearanceDate": "2017-04-10",
+          "candidateId": "candidate:apple:ios:10.3.2:beta-2",
+          "evidenceSourceIds": [
+            "new-ios1032-b2-idb-direct",
+            "source-ios1032-pb2-macrumors"
+          ],
+          "publisherFamilies": [
+            "iDownloadBlog",
+            "MacRumors"
+          ]
+        },
+        {
+          "sequence": 3,
+          "routeAlias": "beta-3",
+          "appearanceDate": "2017-04-17",
+          "candidateId": "candidate:apple:ios:10.3.2:beta-3",
+          "evidenceSourceIds": [
+            "source-ios1032-pb3-macrumors-update",
+            "source-ios1032-pb3-9to5mac"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "9to5Mac"
+          ]
+        },
+        {
+          "sequence": 4,
+          "routeAlias": "beta-4",
+          "appearanceDate": "2017-04-24",
+          "candidateId": "candidate:apple:ios:10.3.2:beta-4",
+          "evidenceSourceIds": [
+            "source-ios1032-pb4-macrumors",
+            "new-ios1032-b4-idb-direct"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "iDownloadBlog"
+          ]
+        },
+        {
+          "sequence": 5,
+          "routeAlias": "beta-5",
+          "appearanceDate": "2017-04-27",
+          "candidateId": "candidate:apple:ios:10.3.2:beta-5",
+          "evidenceSourceIds": [
+            "source-ios1032-pb5-macrumors",
+            "source-ios1032-pb5-macerkopf",
+            "new-ios1032-b5-idb-direct"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "Macerkopf",
+            "iDownloadBlog"
+          ]
+        }
+      ],
+      "continuityChecks": {
+        "firstOrdinal": 1,
+        "lastObservedOrdinal": 5,
+        "missingOrdinalsWithinObservedRange": [],
+        "duplicateOrdinals": [],
+        "withdrawalOrRespinsObserved": false,
+        "withdrawalOrRespinsConclusion": "No contemporaneous source in the inspected lineages reported a withdrawal, replacement seed, same-ordinal respin, or return. This is a bounded not-observed result."
+      },
+      "negativeLaterOrdinalAudit": {
+        "testedRouteAlias": "beta-6",
+        "testedSequence": 6,
+        "exactSearchQueries": [
+          "\"iOS 10.3.2 beta 6\" developer",
+          "\"iOS 10.3.2 sixth beta\" developer"
+        ],
+        "searchResult": "noPositiveContemporarySourceLocated",
+        "closureSourceIds": [
+          "negative-ios1032-final-forbes",
+          "conflict-ios1032-final-macrumors"
+        ],
+        "conclusion": "No Beta 6 identity is proposed. The stable-release boundary and retained aggregate sequence evidence close the observed consecutive run at Beta 5.",
+        "limitation": "Negative web searching alone is not treated as proof; the conclusion is paired with the stable-release date and explicit aggregate sequence reporting."
+      },
+      "cycleDisposition": "completeConsecutiveDeveloperSequencePendingReview"
+    },
+    {
+      "version": "10.3.3",
+      "releaseVersionId": "version-ios-10-3-3",
+      "stableReleaseDate": "2017-07-19",
+      "observedDeveloperSequence": [
+        {
+          "sequence": 1,
+          "routeAlias": "beta-1",
+          "appearanceDate": "2017-05-16",
+          "candidateId": "candidate:apple:ios:10.3.3:beta-1",
+          "evidenceSourceIds": [
+            "new-ios1033-b1-idb-direct",
+            "source-ios1033-pb1-9to5mac"
+          ],
+          "publisherFamilies": [
+            "iDownloadBlog",
+            "9to5Mac"
+          ]
+        },
+        {
+          "sequence": 2,
+          "routeAlias": "beta-2",
+          "appearanceDate": "2017-05-30",
+          "candidateId": "candidate:apple:ios:10.3.3:beta-2",
+          "evidenceSourceIds": [
+            "source-ios1033-pb2-macrumors",
+            "new-ios1033-b2-idb-direct"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "iDownloadBlog"
+          ]
+        },
+        {
+          "sequence": 3,
+          "routeAlias": "beta-3",
+          "appearanceDate": "2017-06-13",
+          "candidateId": "candidate:apple:ios:10.3.3:beta-3",
+          "evidenceSourceIds": [
+            "source-ios1033-pb3-macrumors",
+            "source-ios1033-pb3-macerkopf"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "Macerkopf"
+          ]
+        },
+        {
+          "sequence": 4,
+          "routeAlias": "beta-4",
+          "appearanceDate": "2017-06-22",
+          "candidateId": "candidate:apple:ios:10.3.3:beta-4",
+          "evidenceSourceIds": [
+            "source-ios1033-pb4-macrumors",
+            "source-ios1033-pb4-zollotech-video"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "zollotech"
+          ]
+        },
+        {
+          "sequence": 5,
+          "routeAlias": "beta-5",
+          "appearanceDate": "2017-06-28",
+          "candidateId": "candidate:apple:ios:10.3.3:beta-5",
+          "evidenceSourceIds": [
+            "source-ios1033-pb5-macrumors",
+            "new-ios1033-b5-idb-direct"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "iDownloadBlog"
+          ]
+        },
+        {
+          "sequence": 6,
+          "routeAlias": "beta-6",
+          "appearanceDate": "2017-07-05",
+          "candidateId": "candidate:apple:ios:10.3.3:beta-6",
+          "evidenceSourceIds": [
+            "source-ios1033-pb6-macrumors",
+            "source-ios1033-pb6-macobserver"
+          ],
+          "publisherFamilies": [
+            "MacRumors",
+            "The Mac Observer"
+          ]
+        }
+      ],
+      "continuityChecks": {
+        "firstOrdinal": 1,
+        "lastObservedOrdinal": 6,
+        "missingOrdinalsWithinObservedRange": [],
+        "duplicateOrdinals": [],
+        "withdrawalOrRespinsObserved": false,
+        "withdrawalOrRespinsConclusion": "No contemporaneous source in the inspected lineages reported a withdrawal, replacement seed, same-ordinal respin, or return. This is a bounded not-observed result."
+      },
+      "negativeLaterOrdinalAudit": {
+        "testedRouteAlias": "beta-7",
+        "testedSequence": 7,
+        "exactSearchQueries": [
+          "\"iOS 10.3.3 beta 7\" developer",
+          "\"iOS 10.3.3 seventh beta\" developer"
+        ],
+        "searchResult": "noPositiveContemporarySourceLocated",
+        "closureSourceIds": [
+          "negative-ios1033-final-macrumors",
+          "negative-ios1033-final-forbes"
+        ],
+        "conclusion": "No Beta 7 identity is proposed. The stable-release boundary and retained aggregate sequence evidence close the observed consecutive run at Beta 6.",
+        "limitation": "Negative web searching alone is not treated as proof; the conclusion is paired with the stable-release date and explicit aggregate sequence reporting."
+      },
+      "cycleDisposition": "completeConsecutiveDeveloperSequencePendingReview"
+    }
+  ],
+  "methodology": "Each cycle was reconstructed from Beta 1 through its last supported explicit ordinal, checked for gaps and duplicate ordinals, tested for the next ordinal, bounded by the stable release, and compared with aggregate sequence reporting. Absence searches are recorded as bounded negative evidence, not standalone proof."
+}

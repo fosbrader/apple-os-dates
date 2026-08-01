@@ -1,0 +1,323 @@
+ObjC.import("Foundation");
+ObjC.import("PDFKit");
+
+function normalize(value) {
+  return String(value)
+    .normalize("NFKC")
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .replace(/[®™©]/g, "")
+    .replace(/[\u2010-\u2015]/g, "-")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function fail(message) {
+  throw new Error(message);
+}
+
+function unwrap(value) {
+  return ObjC.unwrap(value);
+}
+
+function words(value) {
+  return normalize(value).match(/[a-z0-9][a-z0-9._:-]*/g) || [];
+}
+
+function run(argv) {
+  if (argv.length !== 2) {
+    fail(
+      "Usage: osascript -l JavaScript audit-ios5-point-prerelease-pdf-state.jxa BUNDLE RAW_DIRECTORY",
+    );
+  }
+
+  var bundlePath = argv[0];
+  var rawDirectory = argv[1];
+  var pdfPath = rawDirectory + "/ios51-beta1.pdf";
+  var bundleData = $.NSData.dataWithContentsOfFile(bundlePath);
+  if (!bundleData) fail("Could not read bundle: " + bundlePath);
+  var bundleText = $.NSString.alloc.initWithDataEncoding(
+    bundleData,
+    $.NSUTF8StringEncoding,
+  );
+  var bundle = JSON.parse(unwrap(bundleText));
+  var pdfUrl = "https://iszene.com/uploads/9ul0quu9psp8mp6ewa3.pdf";
+  var mirroredPdfSource = null;
+  (bundle.sources || []).forEach(function (source) {
+    if (source.url === pdfUrl) mirroredPdfSource = source;
+  });
+  if (
+    !mirroredPdfSource ||
+    mirroredPdfSource.publisher !== "iSzene document mirror" ||
+    mirroredPdfSource.sourceClass !== "archive" ||
+    mirroredPdfSource.author !== "Apple" ||
+    mirroredPdfSource.publishedAt !== "2011-11-29T08:25:14.000Z" ||
+    mirroredPdfSource.title.indexOf("(preserved PDF)") < 0
+  ) {
+    fail("The Apple-authored PDF mirror custody label changed.");
+  }
+
+  var document = $.PDFDocument.alloc.initWithURL(
+    $.NSURL.fileURLWithPath(pdfPath),
+  );
+  if (!document) fail("Could not open PDF: " + pdfPath);
+
+  var pageCount = Number(document.pageCount);
+  if (pageCount !== 3) {
+    fail("Expected three PDF pages; found " + pageCount + ".");
+  }
+  var pageText = [];
+  for (var pageIndex = 0; pageIndex < pageCount; pageIndex += 1) {
+    var page = document.pageAtIndex(pageIndex);
+    if (!page) fail("Could not read PDF page " + (pageIndex + 1) + ".");
+    pageText.push(unwrap(page.string));
+  }
+  var pdfText = pageText.join("\n");
+  var normalizedPdf = normalize(pdfText);
+  var expectedHeading = "iOS SDK Release Notes for iOS 5.1 beta 1";
+  if (normalizedPdf.indexOf(normalize(expectedHeading)) < 0) {
+    fail("The expected Beta 1 heading is absent.");
+  }
+  if (
+    normalizedPdf.indexOf(normalize("(Last updated: 2011-11-17)")) < 0
+  ) {
+    fail("The PDF's pre-seed last-updated marker changed.");
+  }
+  var newMarkerCount = (pdfText.match(/NEW:/g) || []).length;
+  var fixedMarkerCount = (pdfText.match(/FIXED:/g) || []).length;
+  if (
+    newMarkerCount !== 0 ||
+    fixedMarkerCount !== 1 ||
+    normalizedPdf.indexOf(normalize("must now set")) < 0
+  ) {
+    fail(
+      "The Beta 1 delta markers changed: NEW=" +
+        newMarkerCount +
+        "/0; FIXED=" +
+        fixedMarkerCount +
+        "/1.",
+    );
+  }
+
+  var beta1Event = null;
+  (bundle.events || []).forEach(function (event) {
+    if (
+      event.identity &&
+      event.identity.releaseVersionId === "version-ios-5-1" &&
+      event.identity.routeAlias === "beta-1"
+    ) {
+      beta1Event = event;
+    }
+  });
+  if (!beta1Event) fail("The iOS 5.1 Beta 1 event is absent.");
+  var beta1DeltaKeys = (beta1Event.changes || [])
+    .filter(function (change) {
+      return change.inheritance === "delta";
+    })
+    .map(function (change) {
+      return change.key;
+    })
+    .sort();
+  var expectedDeltaKeys = [
+    "ios5-point-prerelease-dns-peer-to-peer-default",
+    "ios5-point-prerelease-newsstand-current-issue-delete",
+  ].sort();
+  if (JSON.stringify(beta1DeltaKeys) !== JSON.stringify(expectedDeltaKeys)) {
+    fail("The exact two-record Beta 1 delta inventory changed.");
+  }
+  var beta1CumulativeKeys = (beta1Event.changes || [])
+    .filter(function (change) {
+      return change.inheritance === "cumulative";
+    })
+    .map(function (change) {
+      return change.key;
+    })
+    .sort();
+  var expectedCumulativeKeys = [
+    "ios5-point-prerelease-game-center-profile-media",
+    "ios5-point-prerelease-icloud-provisioning-profile",
+    "ios5-prerelease-nsmetadataquery-sort",
+    "ios5-prerelease-protected-cloud-data",
+    "ios5-prerelease-cloud-filename-case",
+    "ios5-point-prerelease-movie-player-preparation",
+    "ios5-point-prerelease-shake-shuffle-freeze",
+    "ios5-point-prerelease-xcode-documentation-organizer",
+    "ios5-point-prerelease-uninstall-devtools-running-xcode",
+    "ios5-point-prerelease-network-link-conditioner-launch",
+  ].sort();
+  if (
+    JSON.stringify(beta1CumulativeKeys) !==
+    JSON.stringify(expectedCumulativeKeys)
+  ) {
+    fail("The exact ten-record Beta 1 cumulative inventory changed.");
+  }
+
+  var attributes = document.documentAttributes;
+  var metadataTitle = attributes
+    ? attributes.objectForKey($.PDFDocumentTitleAttribute)
+    : null;
+  var expectedMetadataTitle =
+    "iOS 5.1 Release Notes: iOS SDK Release Notes for iOS 5.1 beta 1";
+  if (
+    !metadataTitle ||
+    normalize(unwrap(metadataTitle)) !== normalize(expectedMetadataTitle)
+  ) {
+    fail("The PDF title metadata changed.");
+  }
+  var creationDate = attributes
+    ? attributes.objectForKey($.PDFDocumentCreationDateAttribute)
+    : null;
+  if (!creationDate) fail("The PDF creation-date metadata is absent.");
+  var calendar = $.NSCalendar.calendarWithIdentifier(
+    $.NSCalendarIdentifierGregorian,
+  );
+  var components = calendar.componentsFromDate(
+    $.NSCalendarUnitYear | $.NSCalendarUnitMonth | $.NSCalendarUnitDay,
+    creationDate,
+  );
+  var creationDateString =
+    String(Number(components.year)).padStart(4, "0") +
+    "-" +
+    String(Number(components.month)).padStart(2, "0") +
+    "-" +
+    String(Number(components.day)).padStart(2, "0");
+  if (creationDateString !== "2011-11-29") {
+    fail(
+      "Expected PDF creation date 2011-11-29; found " +
+        creationDateString +
+        ".",
+    );
+  }
+
+  var locatorAssertions = 0;
+  var missing = [];
+  function auditCitations(value, path) {
+    if (Array.isArray(value)) {
+      value.forEach(function (item, index) {
+        auditCitations(item, path + "[" + index + "]");
+      });
+      return;
+    }
+    if (!value || typeof value !== "object") return;
+    Object.keys(value).forEach(function (key) {
+      var item = value[key];
+      if (key === "citations" && Array.isArray(item)) {
+        item.forEach(function (citation, index) {
+          if (citation.url !== pdfUrl) return;
+          var separator = citation.locator
+            ? citation.locator.indexOf(" — ")
+            : -1;
+          if (separator < 0) {
+            missing.push(path + ".citations[" + index + "]: malformed locator");
+            return;
+          }
+          var locator = normalize(citation.locator.slice(separator + 3));
+          locatorAssertions += 1;
+          if (normalizedPdf.indexOf(locator) < 0) {
+            missing.push(
+              path +
+                ".citations[" +
+                index +
+                ']: PDF lacks "' +
+                locator +
+                '"',
+            );
+          }
+        });
+      } else {
+        auditCitations(item, path + "." + key);
+      }
+    });
+  }
+  auditCitations(bundle, "bundle");
+  if (locatorAssertions < 12) {
+    fail(
+      "Expected at least twelve PDF locator assertions; found " +
+        locatorAssertions +
+        ".",
+    );
+  }
+  if (missing.length > 0) {
+    fail("PDF locator audit failed:\n" + missing.join("\n"));
+  }
+
+  var editorialStrings = [];
+  (bundle.events || []).forEach(function (event) {
+    if (event.summary) editorialStrings.push(event.summary);
+    ((event.article && event.article.blocks) || []).forEach(function (block) {
+      if (block.text) editorialStrings.push(block.text);
+    });
+    (event.changes || []).forEach(function (change) {
+      ["title", "canonicalSummary", "summary", "verificationMethod"].forEach(
+        function (key) {
+          if (change[key]) editorialStrings.push(change[key]);
+        },
+      );
+    });
+  });
+
+  var sourceTokens = words(pdfText);
+  var positions = {};
+  for (var sourceIndex = 0; sourceIndex + 4 <= sourceTokens.length; sourceIndex += 1) {
+    var sourceGram = sourceTokens.slice(sourceIndex, sourceIndex + 4).join("|");
+    if (!positions[sourceGram]) positions[sourceGram] = [];
+    positions[sourceGram].push(sourceIndex);
+  }
+  var maximumOverlapWords = 0;
+  var overlapPhrase = "";
+  var overlapEditorial = "";
+  editorialStrings.forEach(function (editorial) {
+    var tokens = words(editorial);
+    for (var start = 0; start + 4 <= tokens.length; start += 1) {
+      var gram = tokens.slice(start, start + 4).join("|");
+      (positions[gram] || []).forEach(function (sourceStart) {
+        var length = 4;
+        while (
+          start + length < tokens.length &&
+          sourceStart + length < sourceTokens.length &&
+          tokens[start + length] === sourceTokens[sourceStart + length]
+        ) {
+          length += 1;
+        }
+        if (length > maximumOverlapWords) {
+          maximumOverlapWords = length;
+          overlapPhrase = tokens.slice(start, start + length).join(" ");
+          overlapEditorial = editorial;
+        }
+      });
+    }
+  });
+  if (maximumOverlapWords > 5) {
+    fail(
+      'PDF copyright overlap exceeds five words (' +
+        maximumOverlapWords +
+        '): "' +
+        overlapPhrase +
+        '" in "' +
+        overlapEditorial +
+        '".',
+    );
+  }
+
+  return JSON.stringify(
+    {
+      file: "ios51-beta1.pdf",
+      pages: pageCount,
+      heading: expectedHeading,
+      metadataTitle: expectedMetadataTitle,
+      creationDate: creationDateString,
+      lastUpdated: "2011-11-17",
+      newMarkers: newMarkerCount,
+      fixedMarkers: fixedMarkerCount,
+      deltaOccurrences: beta1DeltaKeys.length,
+      cumulativeOccurrences: beta1CumulativeKeys.length,
+      locatorAssertions: locatorAssertions,
+      copyrightFields: editorialStrings.length,
+      maximumOverlapWords: maximumOverlapWords,
+      overlapPhrase: overlapPhrase,
+    },
+    null,
+    2,
+  );
+}

@@ -1,0 +1,795 @@
+{
+  "formatVersion": 1,
+  "batchId": "ios-patch-applicability-2026-07-31",
+  "generatedAt": "2026-07-31T08:09:13.938Z",
+  "attemptedSourceCount": 21,
+  "capturedSourceCount": 21,
+  "failedCaptureCount": 0,
+  "sources": [
+    {
+      "sourceId": "apple-ios-8-release-history",
+      "canonicalUrl": "https://support.apple.com/en-us/102782",
+      "finalUrl": "https://support.apple.com/en-us/102782",
+      "title": "About iOS 8 Updates - Apple Support",
+      "publisher": "Apple",
+      "publisherFamily": "Apple",
+      "publishedAt": null,
+      "accessedAt": "2026-07-31",
+      "sourceClass": "firstPartyStableReleaseHistory",
+      "roles": [
+        "stableReleaseBoundary"
+      ],
+      "supportNote": "First-party grouped iOS release history used only to bound stable releases. Silence on beta chronology is not negative evidence.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-8-release-history.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-8-release-history.json",
+        "rawBytes": 1190068,
+        "rawSha256": "4bd59cbba50295946b1a7d033e36b36c71225970da7396ee175120dddde78597",
+        "selectedBytes": 1128,
+        "selectedSha256": "2d116fb5b5d92ffbdfc65ca6ed8502db6105cb53a2393beef4702606f114dac8",
+        "requiredNeedles": [
+          "iOS 8.4.1"
+        ],
+        "locatorCount": 1,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": false,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": [
+        "Used only for the stable release boundary.",
+        "Absence of beta entries on this page is not evidence that no public beta existed."
+      ]
+    },
+    {
+      "sourceId": "apple-ios-9-release-history",
+      "canonicalUrl": "https://support.apple.com/en-us/103834",
+      "finalUrl": "https://support.apple.com/en-us/103834",
+      "title": "About iOS 9 Updates - Apple Support",
+      "publisher": "Apple",
+      "publisherFamily": "Apple",
+      "publishedAt": null,
+      "accessedAt": "2026-07-31",
+      "sourceClass": "firstPartyStableReleaseHistory",
+      "roles": [
+        "stableReleaseBoundary"
+      ],
+      "supportNote": "First-party grouped iOS release history used only to bound stable releases. Silence on beta chronology is not negative evidence.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-9-release-history.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-9-release-history.json",
+        "rawBytes": 1207306,
+        "rawSha256": "985b244e9a2372f5d39e2882b8d56da647cc2e5876953a661c1e8f05954e7d34",
+        "selectedBytes": 2341,
+        "selectedSha256": "17737d3dee0753e987dd2ec5300e69d7156aef969d556fb12cb29f750f8b43e0",
+        "requiredNeedles": [
+          "iOS 9.0.1",
+          "iOS 9.0.2",
+          "iOS 9.3.1",
+          "iOS 9.3.5"
+        ],
+        "locatorCount": 4,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": false,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": [
+        "Used only for the stable release boundary.",
+        "Absence of beta entries on this page is not evidence that no public beta existed."
+      ]
+    },
+    {
+      "sourceId": "apple-ios-10-release-history",
+      "canonicalUrl": "https://support.apple.com/en-us/102990",
+      "finalUrl": "https://support.apple.com/en-us/102990",
+      "title": "About iOS 10 Updates - Apple Support",
+      "publisher": "Apple",
+      "publisherFamily": "Apple",
+      "publishedAt": null,
+      "accessedAt": "2026-07-31",
+      "sourceClass": "firstPartyStableReleaseHistory",
+      "roles": [
+        "stableReleaseBoundary"
+      ],
+      "supportNote": "First-party grouped iOS release history used only to bound stable releases. Silence on beta chronology is not negative evidence.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-10-release-history.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-10-release-history.json",
+        "rawBytes": 1193520,
+        "rawSha256": "256f54623fd737d18078627cb0a8e410eb771ab8dab39293999f37da6e40c97a",
+        "selectedBytes": 1133,
+        "selectedSha256": "f93b244b2a7844e853e6ca267f11cb0757b152fbf60b52764d903425efbb0b9f",
+        "requiredNeedles": [
+          "iOS 10.3.1"
+        ],
+        "locatorCount": 1,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": false,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": [
+        "Used only for the stable release boundary.",
+        "Absence of beta entries on this page is not evidence that no public beta existed."
+      ]
+    },
+    {
+      "sourceId": "apple-ios-11-release-history",
+      "canonicalUrl": "https://support.apple.com/en-us/102991",
+      "finalUrl": "https://support.apple.com/en-us/102991",
+      "title": "About iOS 11 Updates - Apple Support",
+      "publisher": "Apple",
+      "publisherFamily": "Apple",
+      "publishedAt": null,
+      "accessedAt": "2026-07-31",
+      "sourceClass": "firstPartyStableReleaseHistory",
+      "roles": [
+        "stableReleaseBoundary"
+      ],
+      "supportNote": "First-party grouped iOS release history used only to bound stable releases. Silence on beta chronology is not negative evidence.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-11-release-history.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-11-release-history.json",
+        "rawBytes": 1210969,
+        "rawSha256": "3462e49c5439693a77354800366dc6ff3c7f81a85d33ccb105cd47d423c4613a",
+        "selectedBytes": 3160,
+        "selectedSha256": "d3ed1bd6b167de6bc36008eac389376849293de07d665dfc8bf3c4e980f8a269",
+        "requiredNeedles": [
+          "iOS 11.0.1",
+          "iOS 11.0.2",
+          "iOS 11.0.3",
+          "iOS 11.1.1",
+          "iOS 11.1.2",
+          "iOS 11.2.1"
+        ],
+        "locatorCount": 6,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": false,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": [
+        "Used only for the stable release boundary.",
+        "Absence of beta entries on this page is not evidence that no public beta existed."
+      ]
+    },
+    {
+      "sourceId": "apple-ios-12-release-history",
+      "canonicalUrl": "https://support.apple.com/en-us/118387",
+      "finalUrl": "https://support.apple.com/en-us/118387",
+      "title": "About iOS 12 Updates - Apple Support",
+      "publisher": "Apple",
+      "publisherFamily": "Apple",
+      "publishedAt": null,
+      "accessedAt": "2026-07-31",
+      "sourceClass": "firstPartyStableReleaseHistory",
+      "roles": [
+        "stableReleaseBoundary"
+      ],
+      "supportNote": "First-party grouped iOS release history used only to bound stable releases. Silence on beta chronology is not negative evidence.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-12-release-history.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-12-release-history.json",
+        "rawBytes": 1223921,
+        "rawSha256": "9f14a3f1eaa04bd493084e925d698985118d72f19b1720549afe8733202eb2f0",
+        "selectedBytes": 1945,
+        "selectedSha256": "09536e1c45d52602ccd1024a18580d8416c4281c825c7bd44f69876cc5356f90",
+        "requiredNeedles": [
+          "iOS 12.0.1",
+          "iOS 12.3.1",
+          "iOS 12.4.1"
+        ],
+        "locatorCount": 3,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": false,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": [
+        "Used only for the stable release boundary.",
+        "Absence of beta entries on this page is not evidence that no public beta existed."
+      ]
+    },
+    {
+      "sourceId": "apple-ios-13-release-history",
+      "canonicalUrl": "https://support.apple.com/en-us/118392",
+      "finalUrl": "https://support.apple.com/en-us/118392",
+      "title": "About iOS 13 Updates - Apple Support",
+      "publisher": "Apple",
+      "publisherFamily": "Apple",
+      "publishedAt": null,
+      "accessedAt": "2026-07-31",
+      "sourceClass": "firstPartyStableReleaseHistory",
+      "roles": [
+        "stableReleaseBoundary"
+      ],
+      "supportNote": "First-party grouped iOS release history used only to bound stable releases. Silence on beta chronology is not negative evidence.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-13-release-history.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-13-release-history.json",
+        "rawBytes": 1239508,
+        "rawSha256": "c1af7f03d092a035b4e8d2efa3f8942ab341f40f01bc592107ca5b455b783ad4",
+        "selectedBytes": 3158,
+        "selectedSha256": "ce91b859f82da6f4f0b48b6b3705b0c0956a044f23fc992c9126709df09f60b8",
+        "requiredNeedles": [
+          "iOS 13.1.1",
+          "iOS 13.1.2",
+          "iOS 13.1.3",
+          "iOS 13.3.1",
+          "iOS 13.4.1",
+          "iOS 13.5.1"
+        ],
+        "locatorCount": 6,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": false,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": [
+        "Used only for the stable release boundary.",
+        "Absence of beta entries on this page is not evidence that no public beta existed."
+      ]
+    },
+    {
+      "sourceId": "apple-ios-14-release-history",
+      "canonicalUrl": "https://support.apple.com/en-us/118390",
+      "finalUrl": "https://support.apple.com/en-us/118390",
+      "title": "About iOS 14 Updates - Apple Support",
+      "publisher": "Apple",
+      "publisherFamily": "Apple",
+      "publishedAt": null,
+      "accessedAt": "2026-07-31",
+      "sourceClass": "firstPartyStableReleaseHistory",
+      "roles": [
+        "stableReleaseBoundary"
+      ],
+      "supportNote": "First-party grouped iOS release history used only to bound stable releases. Silence on beta chronology is not negative evidence.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-14-release-history.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-14-release-history.json",
+        "rawBytes": 1237439,
+        "rawSha256": "7fbd037a8cab3d9e6faf2aaacae51d9272d016877fe07250cda4677d73de8372",
+        "selectedBytes": 2347,
+        "selectedSha256": "49e6ab7952cfc828eadc1a13dfb2514b4ac6c3796a19a0a2282872876a9c62dc",
+        "requiredNeedles": [
+          "iOS 14.0.1",
+          "iOS 14.5.1",
+          "iOS 14.7.1",
+          "iOS 14.8"
+        ],
+        "locatorCount": 4,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": false,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": [
+        "Used only for the stable release boundary.",
+        "Absence of beta entries on this page is not evidence that no public beta existed."
+      ]
+    },
+    {
+      "sourceId": "apple-ios-26-release-history",
+      "canonicalUrl": "https://support.apple.com/en-us/123075",
+      "finalUrl": "https://support.apple.com/en-us/123075",
+      "title": "About iOS 26 Updates - Apple Support",
+      "publisher": "Apple",
+      "publisherFamily": "Apple",
+      "publishedAt": null,
+      "accessedAt": "2026-07-31",
+      "sourceClass": "firstPartyStableReleaseHistory",
+      "roles": [
+        "stableReleaseBoundary"
+      ],
+      "supportNote": "First-party grouped iOS release history used only to bound stable releases. Silence on beta chronology is not negative evidence.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-26-release-history.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-26-release-history.json",
+        "rawBytes": 1192801,
+        "rawSha256": "5cec17877f23a96f6a9f4e9937e8c84e2d94a122d3a9e1edffc6bdbf557cd114",
+        "selectedBytes": 1540,
+        "selectedSha256": "255987225f7eb905b13b3fffb4eca20133b7ae6d14c1fd9a00c26f29f5373326",
+        "requiredNeedles": [
+          "iOS 26.0.1",
+          "iOS 26.2.1"
+        ],
+        "locatorCount": 2,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": false,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": [
+        "Used only for the stable release boundary.",
+        "Absence of beta entries on this page is not evidence that no public beta existed."
+      ]
+    },
+    {
+      "sourceId": "bgr-ios-13-3-1-pb1",
+      "canonicalUrl": "https://www.bgr.com/tech/ios-13-3-1-public-beta-1-is-now-available-to-download/",
+      "finalUrl": "https://www.bgr.com/tech/ios-13-3-1-public-beta-1-is-now-available-to-download/",
+      "title": "iOS 13.3.1 Public Beta 1 Is Now Available To Download",
+      "publisher": "BGR",
+      "publisherFamily": "BGR",
+      "publishedAt": "2019-12-18T18:08:26+00:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "exactVersion",
+        "publicChannel",
+        "publicOrdinal",
+        "appearanceDate"
+      ],
+      "supportNote": "Contemporary report explicitly naming iOS 13.3.1 Public Beta 1 and its public availability on December 18, 2019.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/bgr-ios-13-3-1-pb1.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/bgr-ios-13-3-1-pb1.json",
+        "rawBytes": 48190,
+        "rawSha256": "f954f2f56778a2dd230ff5b651041ebac125fbf93f7635cd3ffde78edb6673b1",
+        "selectedBytes": 1657,
+        "selectedSha256": "25c4524f3d469a43b61d0b12f91f999de7f3a2f82c5cb6b08f3d03d215ec93f0",
+        "requiredNeedles": [
+          "iOS 13.3.1 public beta 1",
+          "Dec. 18, 2019"
+        ],
+        "locatorCount": 2,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "cultofmac-ios-13-3-1-pb1",
+      "canonicalUrl": "https://www.cultofmac.com/news/apple-drops-first-ios-13-3-1-public-beta",
+      "finalUrl": "https://www.cultofmac.com/news/apple-drops-first-ios-13-3-1-public-beta",
+      "title": "Apple drops first iOS 13.3.1 public beta | Cult of Mac",
+      "publisher": "Cult of Mac",
+      "publisherFamily": "Cult of Mac",
+      "publishedAt": "2019-12-18T18:53:50+00:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "exactVersion",
+        "publicChannel",
+        "publicOrdinal",
+        "appearanceDate"
+      ],
+      "supportNote": "Independent contemporary report explicitly naming the first iOS 13.3.1 public beta and same-day public availability.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/cultofmac-ios-13-3-1-pb1.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/cultofmac-ios-13-3-1-pb1.json",
+        "rawBytes": 287189,
+        "rawSha256": "9ee364d50cabd3dfe9ec2fc112ece3a698283ea75032d7aaa6460ba7fe23a957",
+        "selectedBytes": 1723,
+        "selectedSha256": "6a3d56a951dceac26f1801ff96e32a4962d3abed034e704a6c605fc633db5310",
+        "requiredNeedles": [
+          "iOS 13.3.1 public beta 1",
+          "December 18, 2019"
+        ],
+        "locatorCount": 2,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "9to5mac-ios-13-3-1-pb2",
+      "canonicalUrl": "https://9to5mac.com/2020/01/14/apple-releasing-second-developer-beta-of-ios-13-3-1-today/",
+      "finalUrl": "https://9to5mac.com/2020/01/14/apple-releasing-second-developer-beta-of-ios-13-3-1-today/",
+      "title": "Apple releases second developer and public betas of iOS 13.3.1, more - 9to5Mac",
+      "publisher": "9to5Mac",
+      "publisherFamily": "9to5Mac",
+      "publishedAt": "2020-01-14T17:57:12+00:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "exactVersion",
+        "publicChannel",
+        "publicOrdinal",
+        "appearanceDate"
+      ],
+      "supportNote": "Contemporary report naming iOS 13.3.1 and stating that the second public beta versions were released that day.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/9to5mac-ios-13-3-1-pb2.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/9to5mac-ios-13-3-1-pb2.json",
+        "rawBytes": 147284,
+        "rawSha256": "57da5e47c795cdaab3937cea93be1c22e0aea51d495a4f4e625ece29557d789a",
+        "selectedBytes": 2179,
+        "selectedSha256": "95c1ecc82c029f2b6540c51cf93ed6858de143943deb846ee77f7fbcd36c2b70",
+        "requiredNeedles": [
+          "iOS 13.3.1",
+          "second public beta versions",
+          "Jan 14 2020"
+        ],
+        "locatorCount": 3,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "forbes-ios-13-3-1-pb2",
+      "canonicalUrl": "https://www.forbes.com/sites/anthonykarcz/2020/01/14/ios-1331-public-beta-2-is-finally-back-after-long-hiatus/",
+      "finalUrl": "https://www.forbes.com/sites/anthonykarcz/2020/01/14/ios-1331-public-beta-2-is-finally-back-after-long-hiatus/",
+      "title": "iOS 13.3.1 Public Beta 2 Is Back After A Long Hiatus",
+      "publisher": "Forbes",
+      "publisherFamily": "Forbes",
+      "publishedAt": "2020-01-14T20:00:00-05:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "exactVersion",
+        "publicChannel",
+        "publicOrdinal",
+        "appearanceDate"
+      ],
+      "supportNote": "Independent contemporary report explicitly naming iOS 13.3.1 Public Beta 2 and the January 14 date.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/forbes-ios-13-3-1-pb2.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/forbes-ios-13-3-1-pb2.json",
+        "rawBytes": 1294665,
+        "rawSha256": "ce463576323d5dc6bf6b836c778b00e91a0a6691b9b9f34c4fb894fe88367022",
+        "selectedBytes": 1752,
+        "selectedSha256": "79d1b16af05e021abf2a5459ddc7fc7183e726ba3b4fa74ebc3a69e4b4e211c4",
+        "requiredNeedles": [
+          "iOS 13.3.1 Public Beta 2",
+          "Jan 14, 2020"
+        ],
+        "locatorCount": 2,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "9to5mac-ios-13-3-1-pb3",
+      "canonicalUrl": "https://9to5mac.com/2020/01/22/apple-releasing-third-developer-beta-of-ios-13-3-1-today/",
+      "finalUrl": "https://9to5mac.com/2020/01/22/apple-releasing-third-developer-beta-of-ios-13-3-1-today/",
+      "title": "Apple releasing third developer beta of iOS 13.3.1 today [U] - 9to5Mac",
+      "publisher": "9to5Mac",
+      "publisherFamily": "9to5Mac",
+      "publishedAt": "2020-01-22T17:56:43+00:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "exactVersion",
+        "publicChannel",
+        "publicOrdinal",
+        "appearanceDate"
+      ],
+      "supportNote": "Contemporary report naming iOS 13.3.1 and stating that the third public beta versions were released that day.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/9to5mac-ios-13-3-1-pb3.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/9to5mac-ios-13-3-1-pb3.json",
+        "rawBytes": 146780,
+        "rawSha256": "e5ee057f543cc56c35a678d89f1db81e044ff7dde26bbd8ec880e15e9929c847",
+        "selectedBytes": 2154,
+        "selectedSha256": "e57ea2223af07ca88455892aea753e29410d8fd49d25cc52efeeaf9125617503",
+        "requiredNeedles": [
+          "iOS 13.3.1",
+          "third public beta versions",
+          "Jan 22 2020"
+        ],
+        "locatorCount": 3,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "kobonemi-ios-13-3-1-pb3",
+      "canonicalUrl": "https://www.kobonemi.com/entry/2020/01/23/iOS13.3.1%E3%81%A8iPadOS_13.3.1_Public_Beta3%E3%81%8C%E5%88%A9%E7%94%A8%E5%8F%AF%E8%83%BD%E3%81%AB",
+      "finalUrl": "https://www.kobonemi.com/entry/2020/01/23/iOS13.3.1%E3%81%A8iPadOS_13.3.1_Public_Beta3%E3%81%8C%E5%88%A9%E7%94%A8%E5%8F%AF%E8%83%BD%E3%81%AB",
+      "title": "iOS13.3.1とiPadOS 13.3.1 Public Beta3が利用可能に - こぼねみ",
+      "publisher": "Kobonemi",
+      "publisherFamily": "Kobonemi",
+      "publishedAt": "2020-01-23T09:12:47+09:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "exactVersion",
+        "publicChannel",
+        "publicOrdinal",
+        "japanCalendarDate"
+      ],
+      "supportNote": "Independent contemporary Japanese report explicitly naming iOS 13.3.1 Public Beta 3. Its January 23 Japan date is consistent with the January 22 Pacific date established by 9to5Mac.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/kobonemi-ios-13-3-1-pb3.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/kobonemi-ios-13-3-1-pb3.json",
+        "rawBytes": 123406,
+        "rawSha256": "7c2aedbc7cdf9c87fac9d70d1aa046f11aa123c5bb5764e907eaad9826cf68fe",
+        "selectedBytes": 2971,
+        "selectedSha256": "3fceb0d838d0556553b4584a93e9adb51787f7533076f647840772523f8b27dd",
+        "requiredNeedles": [
+          "iOS 13.3.1",
+          "Public beta 3",
+          "2020-01-23"
+        ],
+        "locatorCount": 3,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "macrumors-ios-8-4-1-developer-only",
+      "canonicalUrl": "https://www.macrumors.com/2015/07/22/ios-9-beta-app-store-reviews-disabled/",
+      "finalUrl": "https://www.macrumors.com/2015/07/22/ios-9-beta-app-store-reviews-disabled/",
+      "title": "Apple Disables App Store Reviews From Devices Running iOS 9 - MacRumors",
+      "publisher": "MacRumors",
+      "publisherFamily": "MacRumors",
+      "publishedAt": "2015-07-21T22:35:41-07:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "negativeApplicability",
+        "developerOnlyStatement"
+      ],
+      "supportNote": "Contemporary statement that the then-current iOS 8.4.1 pre-release build was available only to developers.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/macrumors-ios-8-4-1-developer-only.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/macrumors-ios-8-4-1-developer-only.json",
+        "rawBytes": 127861,
+        "rawSha256": "1c9c7fb44370ddb0c707911f02bdbc14523d249c81594da58d186b4cf6469303",
+        "selectedBytes": 1751,
+        "selectedSha256": "1c95bd7790b4a0d9276cddb85d36b4e4f353df05fe558536e93a2d4c5e8331fe",
+        "requiredNeedles": [
+          "iOS 8.4.1",
+          "available only to developers"
+        ],
+        "locatorCount": 2,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "osxdaily-ios-8-4-1-beta2-developer",
+      "canonicalUrl": "https://osxdaily.com/2015/07/30/ios-8-4-1-beta-2-released/",
+      "finalUrl": "https://osxdaily.com/2015/07/30/ios-8-4-1-beta-2-released/",
+      "title": "iOS 8.4.1 Beta 2 Released - OS X Daily",
+      "publisher": "OS X Daily",
+      "publisherFamily": "OS X Daily",
+      "publishedAt": "2015-07-30T18:05:04+00:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "negativeApplicability",
+        "developerOnlySequence",
+        "contrast"
+      ],
+      "supportNote": "Contemporary Beta 2 report limited to registered developers and explicitly contrasting the iOS 9 public-beta program.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/osxdaily-ios-8-4-1-beta2-developer.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/osxdaily-ios-8-4-1-beta2-developer.json",
+        "rawBytes": 228129,
+        "rawSha256": "47b817ba564dbe5e5ed0583e57bbf5e9497b0dea57660dbcd1dc8c8d36ecdb93",
+        "selectedBytes": 2066,
+        "selectedSha256": "1894bb065071663261640749f21bbc9665db22897bf50075635045cf1d8948fa",
+        "requiredNeedles": [
+          "iOS 8.4.1 Beta 2",
+          "registered developer program",
+          "iOS 9 betas are available for public beta users"
+        ],
+        "locatorCount": 3,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "idownloadblog-ios-8-4-1-final",
+      "canonicalUrl": "https://www.idownloadblog.com/2015/08/13/apple-releases-ios-8-4-1-to-the-public/",
+      "finalUrl": "https://www.idownloadblog.com/2015/08/13/apple-releases-ios-8-4-1-to-the-public/",
+      "title": "Apple releases iOS 8.4.1: here is what's new",
+      "publisher": "iDownloadBlog",
+      "publisherFamily": "iDownloadBlog",
+      "publishedAt": "2015-08-13T17:03:02+00:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "stableReleaseBoundary",
+        "developerSequenceBoundary"
+      ],
+      "supportNote": "Contemporary final-release boundary that describes the original and second beta without establishing a public label.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/idownloadblog-ios-8-4-1-final.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/idownloadblog-ios-8-4-1-final.json",
+        "rawBytes": 214112,
+        "rawSha256": "2bef9b3fe49565b9a4acb0bcd42dd50b78a2cb8bab731b08956b41617b186b54",
+        "selectedBytes": 2047,
+        "selectedSha256": "bb045b96f50c52e85ef5e89d589094061b96827db239f6f0dc7f58354e1b302e",
+        "requiredNeedles": [
+          "iOS 8.4.1",
+          "beta 2",
+          "released"
+        ],
+        "locatorCount": 3,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "heise-ios-8-4-1-beta2-ambiguous",
+      "canonicalUrl": "/news/iOS-8-4-1-und-Mac-OS-X-10-10-5-als-Beta-2-erhaeltlich-2765975.html",
+      "finalUrl": "https://www.heise.de/news/iOS-8-4-1-und-Mac-OS-X-10-10-5-als-Beta-2-erhaeltlich-2765975.html",
+      "title": "iOS 8.4.1 und Mac OS X 10.10.5 als Beta 2 erhältlich | heise online",
+      "publisher": "Heise",
+      "publisherFamily": "Heise",
+      "publishedAt": "2015-07-31T10:02:00+02:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "conflict",
+        "ambiguousPublicProgramWording"
+      ],
+      "supportNote": "Retained because its combined iOS/macOS headline and public-program wording can be read more broadly than the article's product-specific distribution details.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/heise-ios-8-4-1-beta2-ambiguous.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/heise-ios-8-4-1-beta2-ambiguous.json",
+        "rawBytes": 211927,
+        "rawSha256": "91142bbdbc33efe5f98bb64f7c3537c8988fecff2aed31aa45968a8233cd3f47",
+        "selectedBytes": 2066,
+        "selectedSha256": "88e396052d09278743dde0a5ba2aa3740d46e0fd4fe277af1642b309bc9b0e65",
+        "requiredNeedles": [
+          "iOS 8.4.1",
+          "Beta 2",
+          "Teilnehmer am Public-Beta-Programm"
+        ],
+        "locatorCount": 3,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "iculture-ios-8-4-1-beta2-ambiguous",
+      "canonicalUrl": "https://www.iculture.nl/nieuws/ios-8-4-1-beta-2-downloaden/",
+      "finalUrl": "https://www.iculture.nl/nieuws/ios-8-4-1-beta-2-downloaden/",
+      "title": "iOS 8.4.1 beta 2 nu te downloaden",
+      "publisher": "iCulture",
+      "publisherFamily": "iCulture",
+      "publishedAt": "2015-07-30T17:02:57+00:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "conflict",
+        "ambiguousTesterWording"
+      ],
+      "supportNote": "Retained because it mentions approved testers while directing readers to developer distribution, leaving the public-channel identity ambiguous.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/iculture-ios-8-4-1-beta2-ambiguous.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/iculture-ios-8-4-1-beta2-ambiguous.json",
+        "rawBytes": 493844,
+        "rawSha256": "d703dc3ce6a5e6285629ac6e050670b1227126611d85bc29bf30a17fb219079d",
+        "selectedBytes": 1896,
+        "selectedSha256": "e5cc807ebe53982bfc01d8d06cf86d0128b3c86ce9491099276f603f5bc7cfdb",
+        "requiredNeedles": [
+          "iOS 8.4.1",
+          "beta 2",
+          "goedgekeurde testers"
+        ],
+        "locatorCount": 3,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "9to5mac-ios-14-8-no-beta",
+      "canonicalUrl": "https://9to5mac.com/2021/09/13/apple-releasing-ios-14-8-and-ipados-14-8-to-the-public-today/",
+      "finalUrl": "https://9to5mac.com/2021/09/13/apple-releasing-ios-14-8-and-ipados-14-8-to-the-public-today/",
+      "title": "Apple releasing iOS 14.8 and iPadOS 14.8 to the public today - 9to5Mac",
+      "publisher": "9to5Mac",
+      "publisherFamily": "9to5Mac",
+      "publishedAt": "2021-09-13T16:59:36+00:00",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "negativeApplicability",
+        "releasedWithoutBetaTesting"
+      ],
+      "supportNote": "Direct contemporary statement that iOS 14.8 was not beta tested.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/9to5mac-ios-14-8-no-beta.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/9to5mac-ios-14-8-no-beta.json",
+        "rawBytes": 147349,
+        "rawSha256": "da75b8fe31e666f8bd41557343542db1a6d079c9106672548eb05e4c4acd0782",
+        "selectedBytes": 1415,
+        "selectedSha256": "66cc820b4252f7c2b76f0b436c6e424e3c54f457e54e724febf8e68f24085e82",
+        "requiredNeedles": [
+          "iOS 14.8 was not beta tested"
+        ],
+        "locatorCount": 1,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    },
+    {
+      "sourceId": "idropnews-ios-14-8-no-beta",
+      "canonicalUrl": "https://www.idropnews.com/news/psa-apple-updates-all-of-its-devices-to-swiftly-block-terrifying-spyware/167697/",
+      "finalUrl": "https://www.idropnews.com/news/psa-apple-updates-all-of-its-devices-to-swiftly-block-terrifying-spyware/167697/",
+      "title": "PSA | Apple Updates All of Its Devices to Swiftly Block Terrifying Spyware",
+      "publisher": "iDrop News",
+      "publisherFamily": "iDrop News",
+      "publishedAt": "2021-09-13",
+      "accessedAt": "2026-07-31",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "negativeApplicability",
+        "releasedWithoutBetaTesting"
+      ],
+      "supportNote": "Independent contemporary report that iOS 14.8 arrived without a beta version.",
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/idropnews-ios-14-8-no-beta.html",
+        "selectedPath": "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/idropnews-ios-14-8-no-beta.json",
+        "rawBytes": 214913,
+        "rawSha256": "edcb48897c1cee88c543097da8564b1954c3d553b5094d7195a3f3aa1e64e3c3",
+        "selectedBytes": 1833,
+        "selectedSha256": "746a88564f9300efac7162f59341cf1a9fbfa71d7e35419c269dc27d0568e3d6",
+        "requiredNeedles": [
+          "iOS 14.8",
+          "without a beta version"
+        ],
+        "locatorCount": 2,
+        "captureMethod": "http-html"
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "note": "Multiple pages from one publisher family count as one evidence lineage."
+      },
+      "qualifications": []
+    }
+  ],
+  "copyrightHandling": {
+    "committedLongFormSourceText": false,
+    "note": "The committed ledger stores metadata, claim locators, and hashes. Full captures are local research evidence, not site copy or publication content."
+  }
+}

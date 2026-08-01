@@ -1,0 +1,148 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-point-15-26-followup",
+  "validatedAt": "2026-07-31T07:47:23Z",
+  "validator": "codex-independent-review-macos-point-15-26-followup",
+  "independentOfResearcher": true,
+  "reviewPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/independent-review.json",
+  "reviewBytes": 27110,
+  "reviewSha256": "b6327f1cb7b0bacd283e071f5a55d3a69005a9750b5e669d0db3934b91414b7a",
+  "queryScriptPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/independent-review-query.ts",
+  "queryScriptBytes": 5750,
+  "queryScriptSha256": "565506f8095f02ade3295e9c9c4aa38d87e24c15f9504e6bc9ac9cc2f3da335d",
+  "productionSnapshotPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/independent-review-production-snapshot.json",
+  "productionSnapshotBytes": 28978,
+  "productionSnapshotSha256": "2f61c83109a5332131f70d049cf9a5b20132e1e42f2edb0da36d83478c271e7e",
+  "status": "passedWithSixApprovedTwoBlockedAndDisclosedNonEvidentiaryDrift",
+  "overallAssessment": "readyForIntegrationOfExplicitlyApprovedSubsetOnly",
+  "statistics": {
+    "mappingCount": 8,
+    "candidateReviewCount": 8,
+    "chronologyApprovedCandidateCount": 6,
+    "blockedCandidateCount": 2,
+    "identityCorrectionCount": 0,
+    "supplementPacketLockCountVerified": 35,
+    "supplementRawEvidenceLockCountVerified": 15,
+    "supplementSelectedTextHashCountVerified": 8,
+    "supplementClaimFragmentHashCountDeclared": 0,
+    "pinnedParentDependencyCountVerified": 4,
+    "parentPacketMaterialFileCountVerified": 86,
+    "parentPacketMaterialFileCountDeclared": 87,
+    "parentSharedProgramReadmeDriftCount": 1,
+    "parentRawEvidenceLockCountVerified": 65,
+    "parentSelectedTextHashCountVerified": 65,
+    "parentCandidateIdentityHashCountVerified": 8,
+    "freshProductionExactMatchCount": 0
+  },
+  "checks": {
+    "reviewJsonParsed": true,
+    "candidateIdsUnique": true,
+    "exactMappingCoverage": true,
+    "exactAssignmentCoverage": true,
+    "exactParentBlockedCoverage": true,
+    "approvedAndBlockedPartitionDisjoint": true,
+    "approvedAndBlockedPartitionExhaustive": true,
+    "researchAndReviewApprovedSetsEqual": true,
+    "researchAndReviewBlockedSetsEqual": true,
+    "allCandidateEvidenceArraysPresent": true,
+    "allCandidateEvidenceRefsResolve": true,
+    "allCandidateEvidenceRefsHaveReasons": true,
+    "allApprovedCandidatesHaveTwoIndependentExactLineages": true,
+    "allBlockedCandidatesHaveReasonCodes": true,
+    "blockedCandidatesNotAuthorized": true,
+    "allFiveConflictsAdjudicated": true,
+    "publicOrdinalNeverDerivedFromDeveloperOrdinal": true,
+    "publicOrdinalNeverDerivedFromGenericPublicAvailability": true,
+    "publicOrdinalNeverDerivedFromBuildAlignment": true,
+    "americaLosAngelesDateRuleApplied": true,
+    "allEightParentCandidateAndIdentityHashesReproduced": true,
+    "allFourPinnedParentDependenciesMatchDisk": true,
+    "allSupplementPacketLocksReproduced": true,
+    "allSupplementRawLocksReproduced": true,
+    "allSupplementSelectedTextHashesReproduced": true,
+    "supplementDeclaresNoSeparateClaimFragmentHashes": true,
+    "allParentRawLocksReproduced": true,
+    "allParentSelectedTextHashesReproduced": true,
+    "parentSharedReadmeDriftDisclosedSeparately": true,
+    "parentSharedReadmeContainsNoCandidateOrSourceEvidence": true,
+    "freshPublishedNoCdnProductionQueryCompleted": true,
+    "allSevenTargetParentsFoundInProduction": true,
+    "allEightExactTargetMatchesRemainZero": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildPerformed": false,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "blockedCandidates": [
+    {
+      "candidateId": "candidate:apple:macos:15.3:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": ["monomaniac-153-pb3-followup"],
+      "nonQualifyingSourceIds": ["9to5-153-cycle", "osxdaily-153-pb3"]
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.5:public-beta-3",
+      "reasonCode": "BLOCK_DATE_AND_ORDINAL_CONFLICT",
+      "exactButDifferentDateSourceIds": [
+        "monomaniac-155-pb3-metadata-followup"
+      ],
+      "genericOrConflictingSourceIds": ["9to5-155-cycle", "iculture-155-cycle"]
+    }
+  ],
+  "issuesFound": [
+    {
+      "severity": "medium",
+      "issue": "The selected 9to5Mac macOS 26.5 article contains copied-version typos in the sentence after its Public Beta 3 update.",
+      "affectedCandidateCount": 1,
+      "impact": "Repeating that sentence would introduce incorrect macOS 25.4 and 26.4 version claims.",
+      "resolution": "Approval is limited to the exact 26.5 page context, explicit Public Beta 3 update, April 27 metadata, and independently agreeing Monomaniac source. The typo sentence is excluded."
+    },
+    {
+      "severity": "low",
+      "issue": "The parent packet locked a shared program README that changed after the parent freeze.",
+      "affectedCandidateCount": 0,
+      "impact": "One of 87 parent material-file hashes no longer reproduces, but the drift is outside candidate and evidence custody.",
+      "resolution": "Disclose expected/current bytes and hashes. Do not overwrite or re-freeze the parent. All four pinned parent dependencies, 65 parent raw locks, 65 parent selected-text hashes, and eight parent candidate identity hashes reproduce."
+    }
+  ],
+  "sharedLedgerDrift": {
+    "path": "research-handoffs/beta-chronology-gap/README.md",
+    "expectedBytes": 16913,
+    "expectedSha256": "b203b6b8ddec18b675b6a1ac37b6210282f62d9eccdcce58d420c6089efbc0a0",
+    "currentBytes": 17312,
+    "currentSha256": "ddde9babeeeb0096d9b6fe8b86d88f0948388f689b499d618fccdcf057d1393a",
+    "classification": "nonEvidentiaryProgramLedgerDrift",
+    "chronologyAdjudicationBlocked": false
+  },
+  "productionReconciliation": {
+    "queriedAt": "2026-07-31T07:40:48.366Z",
+    "perspective": "published",
+    "useCdn": false,
+    "projectId": "lh3yswzu",
+    "dataset": "production",
+    "totalReleaseEvents": 2068,
+    "targetVersionCount": 7,
+    "targetParentsFound": 7,
+    "scopedReleaseEvents": 46,
+    "scopedPublicBetaEvents": 0,
+    "macOSPublicBetaEventsAllVersions": 0,
+    "exactRouteMatches": 0,
+    "exactFullMatches": 0,
+    "sanityMutationPerformed": false
+  },
+  "requiredCaveats": [
+    "Only the six explicitly approved identities may enter a later chronology integration queue.",
+    "The two blocked identities require additional exact evidence or a separately frozen corrected-identity review.",
+    "Preserve all source-conflict and 9to5Mac typo qualifications from independent-review.json.",
+    "The shared program README drift is disclosed and non-evidentiary; do not rewrite the frozen parent packet.",
+    "Run another published, useCdn:false exact production query immediately before any separately authorized write."
+  ],
+  "errors": [],
+  "authorization": {
+    "sanityMutationAllowed": false,
+    "pageBuildsAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  }
+}

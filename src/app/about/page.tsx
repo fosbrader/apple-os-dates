@@ -13,10 +13,10 @@ import {
 } from "@/lib/site";
 
 const pageDescription =
-  "Learn what Beta Cadence covers, how the independent project is maintained, and how to report a data correction.";
+  "Learn what Version Record covers, how the independent release archive is maintained, and how to report a correction.";
 
 export const metadata = createPageMetadata({
-  title: "About",
+  title: "About the Independent Release Archive",
   description: pageDescription,
   path: "/about/",
 });
@@ -41,7 +41,7 @@ export default function AboutPage() {
       <ContentPage
         eyebrow="About the project"
         title="A clearer view of Apple’s release cadence"
-        description="Beta Cadence is an independent reference for people who want historical Apple OS release dates and practical context without digging through years of announcements."
+        description="Version Record is an independent, source-backed archive for people researching software releases, builds, changes, and corrections. Apple platforms are the first catalog."
       >
         <Notice title="Independent and unofficial" tone="warning">
           <p>

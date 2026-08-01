@@ -1,0 +1,70 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-ipados-point-15-18",
+  "validatedAt": "2026-07-31T07:09:31.273Z",
+  "status": "passed",
+  "errorCount": 0,
+  "warningCount": 2,
+  "errors": [],
+  "warnings": [
+    "Six iPadOS 16.1 observations are intentionally blocked conflicts; they are not part of the 153-candidate exact-evidence pass set.",
+    "The 34 no-positive coverage rows are reversible non-proposals, not proof that public testing was impossible."
+  ],
+  "checks": {
+    "sharedCandidateRegisterSchemaValid": true,
+    "counts": {
+      "coverageRows": 75,
+      "targetParents": 75,
+      "candidates": 159,
+      "readyCandidates": 153,
+      "conflictedCandidates": 6,
+      "cycles": 41,
+      "notProposed": 38,
+      "conflicts": 21,
+      "sources": 147,
+      "rawLocks": 147
+    },
+    "candidateByPlatform": {
+      "iOS": 81,
+      "iPadOS": 78
+    },
+    "candidateByStatus": {
+      "needsEvidenceReview": 6,
+      "readyForChronologyReview": 153
+    },
+    "production": {
+      "capturedAt": "2026-07-31T07:02:36.823Z",
+      "perspective": "published",
+      "useCdn": false,
+      "totalReleaseEvents": 2068,
+      "scopedReleaseEvents": 301,
+      "scopedPublicBetaEvents": 0,
+      "exactRouteMatches": 0,
+      "exactFullMatches": 0,
+      "missingParents": 0
+    },
+    "selectedEvidenceGate": {
+      "readyCandidateCount": 153,
+      "readyCandidatePassCount": 153,
+      "explicitlyBlockedConflictCount": 6,
+      "pairedPlatformInferenceCount": 0,
+      "developerOrdinalInferenceCount": 0
+    }
+  },
+  "hashes": {
+    "assignmentSha256": "0a085672c00b68c038806136d9e5fd24da8c6aeb92859077a809674dc2420c76",
+    "candidatesSha256": "c0e9af35d9e6171092df598af791f4c7143bdea17af7cbda3afeeec265311282",
+    "sourcesSha256": "bbb0550381cbe2bc13434f2cf48c89a7e360ed2501a428b1bf07b3b6b0e48ed9",
+    "productionSnapshotSha256": "9f13c5ee51d3bda637070fbab037a284f9c202ab11d72bbbd4ec34a402c70445",
+    "rawEvidenceLocksSha256": "1d1bff48f98ee378074b708bf0252c603ad865e132ca05c5fd5b583d706360aa"
+  },
+  "safety": {
+    "independentReviewComplete": false,
+    "chronologyApprovalGranted": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationAuthorized": false,
+    "deploymentPerformed": false
+  }
+}

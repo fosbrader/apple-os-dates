@@ -1,0 +1,342 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-watchos-major-7-26",
+  "reviewedAt": "2026-07-30",
+  "reviewer": "codex-review-ios9-public-betas-independent-review",
+  "independentOfResearcher": true,
+  "verdict": "passWithQualificationsAndThreeBlockedCandidates",
+  "summary": {
+    "candidateCount": 33,
+    "chronologyApprovedCandidateCount": 30,
+    "approvedWithoutQualificationCount": 24,
+    "approvedWithQualificationCount": 6,
+    "blockedCandidateCount": 3,
+    "rejectedCandidateCount": 0,
+    "notProposedDecisionCount": 1,
+    "notProposedDecisionsUpheld": 1
+  },
+  "candidateVerdict": {
+    "chronologyApproved": [
+      "candidate:apple:watchos:7.0:public-beta-1",
+      "candidate:apple:watchos:7.0:public-beta-2",
+      "candidate:apple:watchos:7.0:public-beta-3",
+      "candidate:apple:watchos:7.0:public-beta-4",
+      "candidate:apple:watchos:7.0:public-beta-5",
+      "candidate:apple:watchos:8.0:public-beta-1",
+      "candidate:apple:watchos:8.0:public-beta-2",
+      "candidate:apple:watchos:8.0:public-beta-4",
+      "candidate:apple:watchos:8.0:public-beta-6",
+      "candidate:apple:watchos:8.0:public-beta-7",
+      "candidate:apple:watchos:8.0:public-beta-8",
+      "candidate:apple:watchos:9.0:public-beta-1",
+      "candidate:apple:watchos:9.0:public-beta-2",
+      "candidate:apple:watchos:9.0:public-beta-3",
+      "candidate:apple:watchos:9.0:public-beta-4",
+      "candidate:apple:watchos:9.0:public-beta-5",
+      "candidate:apple:watchos:10.0:public-beta-1",
+      "candidate:apple:watchos:10.0:public-beta-2",
+      "candidate:apple:watchos:10.0:public-beta-3",
+      "candidate:apple:watchos:10.0:public-beta-4",
+      "candidate:apple:watchos:10.0:public-beta-5",
+      "candidate:apple:watchos:10.0:public-beta-6",
+      "candidate:apple:watchos:11.0:public-beta-1",
+      "candidate:apple:watchos:11.0:public-beta-2",
+      "candidate:apple:watchos:11.0:public-beta-3",
+      "candidate:apple:watchos:11.0:public-beta-4",
+      "candidate:apple:watchos:11.0:public-beta-5",
+      "candidate:apple:watchos:26.0:public-beta-1",
+      "candidate:apple:watchos:26.0:public-beta-2",
+      "candidate:apple:watchos:26.0:public-beta-3"
+    ],
+    "approvedWithQualification": [
+      "candidate:apple:watchos:8.0:public-beta-2",
+      "candidate:apple:watchos:8.0:public-beta-4",
+      "candidate:apple:watchos:8.0:public-beta-8",
+      "candidate:apple:watchos:9.0:public-beta-1",
+      "candidate:apple:watchos:10.0:public-beta-2",
+      "candidate:apple:watchos:11.0:public-beta-5"
+    ],
+    "blocked": [
+      "candidate:apple:watchos:26.0:public-beta-4",
+      "candidate:apple:watchos:26.0:public-beta-5",
+      "candidate:apple:watchos:26.0:public-beta-6"
+    ],
+    "rejected": []
+  },
+  "checks": {
+    "jsonParsed": true,
+    "lockedPacketFilesVerified": 6,
+    "lockedPacketHashFailures": 0,
+    "sourceIdsUnique": true,
+    "candidateIdsUnique": true,
+    "assignmentCandidateIdentityMismatches": 0,
+    "allReferencesResolve": true,
+    "rawEvidenceArtifactsReproduced": 49,
+    "rawEvidenceHashFailures": 0,
+    "candidateLocatorsReviewed": 33,
+    "allCandidateChannelsArePublicBeta": true,
+    "buildClaimsApproved": 0,
+    "productionSnapshot": {
+      "capturedAt": "2026-07-31T03:05:12.717Z",
+      "perspective": "published",
+      "exactChecks": 34,
+      "exactMatches": 0,
+      "scopedPublicBetaEvents": 0,
+      "watchOSPublicBetaEventsAllVersions": 0
+    },
+    "sanityMutationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "candidateReviews": [
+    {
+      "candidateId": "candidate:apple:watchos:7.0:public-beta-1",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify watchOS 7 Public Beta 1 on 2020-08-10.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.0:public-beta-2",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify watchOS 7 Public Beta 2 on 2020-08-20.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.0:public-beta-3",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and 9to5Mac independently identify watchOS 7 Public Beta 3 on 2020-08-27.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.0:public-beta-4",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify watchOS 7 Public Beta 4 on 2020-09-03.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.0:public-beta-5",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify watchOS 7 Public Beta 5 on 2020-09-10.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-1",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify watchOS 8 Public Beta 1 on 2021-06-30.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-2",
+      "disposition": "chronologyApprovedWithQualification",
+      "finding": "iCulture explicitly records Public Beta 2 on 2021-07-16. AppleInsider's July 16 update independently records a second public-testing round for the platforms named by the article, including watchOS 8.",
+      "requiredQualification": "The AppleInsider article was originally published on July 14 for the developer seed. Use its retained dateModified value and final update paragraph, not the original publication timestamp or headline, for the July 16 public evidence.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-4",
+      "disposition": "chronologyApprovedWithQualification",
+      "finding": "iCulture and AppleInsider independently label the 2021-07-28 appearance Public Beta 4, and iCulture explicitly says Public Beta 3 was skipped. That outweighs iMore's conflicting Public Beta 3 label.",
+      "requiredQualification": "Preserve the publisher-label conflict. The iMore locator is contradiction evidence and must not be described as supporting Public Beta 4.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-6",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture, AppleInsider, and iMore independently identify watchOS 8 Public Beta 6 on 2021-08-18.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-7",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and iMore explicitly identify Public Beta 7 on 2021-08-26; MacRumors independently corroborates the public appearance and date.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-8",
+      "disposition": "chronologyApprovedWithQualification",
+      "finding": "iCulture records Public Beta 8 on 2021-08-31, and MacRumors independently records the watchOS 8 public availability on that date. iMore independently supplies the Public Beta 8 label but duplicates the prior August 26 date.",
+      "requiredQualification": "Use 2021-08-31 and preserve the iMore duplicate-date conflict. MacRumors corroborates public availability and date, not a separately displayed public ordinal.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.0:public-beta-1",
+      "disposition": "chronologyApprovedWithQualification",
+      "finding": "iCulture records Public Beta 1 on 2022-07-11, and 9to5Mac's retained update explicitly says the first watchOS 9 public beta became available on July 11.",
+      "requiredQualification": "Do not use iMore's July 6 row as date support; it transfers the developer Beta 3 date to the first public-beta label.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.0:public-beta-2",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture, MacRumors, and iMore independently identify watchOS 9 Public Beta 2 on 2022-07-29.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.0:public-beta-3",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture, MacRumors, and iMore independently identify watchOS 9 Public Beta 3 on 2022-08-09.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.0:public-beta-4",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture, MacRumors, and iMore independently identify watchOS 9 Public Beta 4 on 2022-08-16.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.0:public-beta-5",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and iMore independently identify watchOS 9 Public Beta 5 on 2022-08-24.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-1",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify the first watchOS 10 public beta on 2023-07-12.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-2",
+      "disposition": "chronologyApprovedWithQualification",
+      "finding": "iCulture explicitly records Public Beta 2 on 2023-07-31, and MacRumors independently records new watchOS 10 public software on July 31. AppleInsider independently supplies the Public Beta 2 label in a report published August 1.",
+      "requiredQualification": "Use 2023-07-31 and preserve AppleInsider's next-day report as a reporting-lag conflict. MacRumors is appearance/date evidence, not exact public-ordinal evidence.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-3",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and 9to5Mac independently identify watchOS 10 Public Beta 3 on 2023-08-09.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-4",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and Macerkopf explicitly identify watchOS 10 Public Beta 4 on 2023-08-16; 9to5Mac independently corroborates the public appearance and date.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-5",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and iTopnews explicitly identify watchOS 10 Public Beta 5 on 2023-08-23; MacRumors independently corroborates the public appearance and date.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-6",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and AppleInsider independently identify watchOS 10 Public Beta 6 on 2023-08-29.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:11.0:public-beta-1",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify watchOS 11 Public Beta 1 on 2024-07-15.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:11.0:public-beta-2",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify watchOS 11 Public Beta 2 on 2024-07-24.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:11.0:public-beta-3",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify watchOS 11 Public Beta 3 on 2024-08-06.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:11.0:public-beta-4",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify watchOS 11 Public Beta 4 on 2024-08-13.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:11.0:public-beta-5",
+      "disposition": "chronologyApprovedWithQualification",
+      "finding": "iCulture records Public Beta 5 on 2024-08-21. The MacRumors headline and following sentence independently say fifth, outweighing one internal lead sentence that says fourth.",
+      "requiredQualification": "Treat the isolated MacRumors fourth wording as an internal copy error and retain the conflict note.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-1",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and 9to5Mac independently identify the first watchOS 26 public beta on 2025-07-24.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-2",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture and MacRumors independently identify watchOS 26 Public Beta 2 on 2025-08-07.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-3",
+      "disposition": "chronologyApproved",
+      "finding": "iCulture, MacRumors, and 9to5Mac independently identify watchOS 26 Public Beta 3 on 2025-08-14.",
+      "blockers": []
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-4",
+      "disposition": "blocked",
+      "finding": "The Public Beta 4 ordinal is supported, but the retained date evidence remains materially split: iCulture says 2025-08-18 and MacRumors says 2025-08-19.",
+      "blockers": [
+        "Obtain a second independent contemporary source, first-party seed record, or timestamped device evidence that resolves the public availability date."
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-5",
+      "disposition": "blocked",
+      "finding": "The Public Beta 5 ordinal is supported, but AnotherApple reports 2025-08-25 while iCulture reports 2025-08-26 and 9to5Mac gives relative next-day support with a malformed update stamp.",
+      "blockers": [
+        "Obtain first-party or timestamped device evidence, or an additional reliable contemporary report, that resolves August 25 versus August 26."
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-6",
+      "disposition": "blocked",
+      "finding": "iCulture explicitly records Public Beta 6 on 2025-09-02. 9to5Mac corroborates a watchOS 26 public appearance on that date but does not display the public ordinal.",
+      "blockers": [
+        "Obtain a second independent lineage that explicitly identifies the watchOS 26 public release as Public Beta 6."
+      ]
+    }
+  ],
+  "scopeBoundaryReview": {
+    "disposition": "approved",
+    "finding": "Apple's watchOS 7 announcement directly says watchOS would be offered as a public beta for the first time, independently echoed by 9to5Mac. Pre-watchOS 7 major cycles are therefore not applicable to this public-beta chronology."
+  },
+  "notProposedReviews": [
+    {
+      "identity": "watchOS 8.0 Public Beta 5 on 2021-08-12",
+      "disposition": "notProposedUpheld",
+      "finding": "The only affirmative retained row is iCulture's later chronology. Contemporary 9to5Mac reporting says public testers still had to wait after the developer release, the retained MacRumors archive does not record a watchOS public appearance before August 18, and the surviving publisher chronology is internally disputed.",
+      "requiredHandling": "Treat this as a conservative do-not-create decision, not as proof that the appearance was impossible. Reverse it only with affirmative contemporary public-channel evidence."
+    }
+  ],
+  "packetQualifications": [
+    {
+      "subject": "Over-broad candidate evidence descriptions",
+      "severity": "nonBlockingForTheThirtyApprovedIdentities",
+      "finding": "Several candidate evidenceRefs use generic support text that overstates what the cited source proves. In particular, iMore calls the July 28 watchOS 8 appearance Public Beta 3, gives Public Beta 8 the duplicate August 26 date, and gives the first watchOS 9 public beta the developer date of July 6. AppleInsider's watchOS 10 Public Beta 2 report is dated August 1 rather than July 31.",
+      "requiredHandling": "Use the per-candidate findings and qualifications in this review instead of the generic evidenceRef support sentence when building or citing chronology."
+    },
+    {
+      "subject": "Retained evidence boundary",
+      "severity": "nonBlocking",
+      "finding": "The review reproduced the locked files and all 49 raw source hashes. Living chronology pages can change later; the retained captures and hashes are the evidence of record.",
+      "requiredHandling": "Do not replace retained historical claims with silently changed live-page text."
+    },
+    {
+      "subject": "Build fields",
+      "severity": "nonBlocking",
+      "finding": "No build was approved. Some sources mention builds, but this chronology review covers public appearance identity, date, sequence, and channel only.",
+      "requiredHandling": "Keep build absent unless a later, separately reviewed claim directly establishes it for the public distribution."
+    }
+  ],
+  "authorization": {
+    "chronologyApprovedCandidateCount": 30,
+    "chronologyApprovalScope": "Public-beta appearance identity, date, sequence, and channel only, subject to the mandatory qualifications above.",
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "deploymentAllowed": false,
+    "preWriteRequirement": "Rerun exact published-production reconciliation and resolve the three blocked candidates before any separately authorized write that includes them."
+  }
+}

@@ -1,0 +1,3237 @@
+{
+  "formatVersion": "1.0",
+  "programId": "apple-beta-chronology-gap",
+  "generatedAt": "2026-07-31T04:45:12.859Z",
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "note": "Research packet only. Validation and independent review do not authorize Sanity mutation, stable IDs, article/page creation, publication, or deployment."
+  },
+  "summary": {
+    "proposedCandidateCount": 42,
+    "notProposedCount": 12,
+    "byStatus": {
+      "needsEvidenceReview": 42
+    },
+    "byPlatform": {
+      "iOS": 21,
+      "iPadOS": 21
+    },
+    "importantQualification": "Forty-two missing public-beta identities are corroborated by at least two captured independent publisher lineages. The two 26.4 Public Beta 2 candidates retain conflicted ordinalBasis pending independent adjudication because public and developer numbering diverged."
+  },
+  "cohorts": [
+    {
+      "cohortId": "mobile26-point-public-beta",
+      "description": "iOS and iPadOS 26.1–26.6 point-release public-beta appearance chronology.",
+      "candidateCount": 42,
+      "sourcePaths": [
+        "research-handoffs/beta-chronology-gap/mobile26-public/assignment.json",
+        "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+        "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+        "research-handoffs/beta-chronology-gap/mobile26-public/conflicts.json"
+      ],
+      "supersessionRule": "A later packet supersedes an identity only when it supplies captured source evidence, repeats exact production reconciliation, and receives independent chronology review."
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:ios:26.1:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.1",
+      "releaseVersionId": "version-ios-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-09-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-261-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-261-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-itopnews-261-pb1",
+          "locator": "Headline, publication date, and lead explicitly identifying Public Beta 1 of iOS 26.1 and iPadOS 26.1.",
+          "supports": "Independent explicit evidence resolves iCulture's erroneous iPadOS Public Beta 2 label on the same date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.1:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.1",
+      "releaseVersionId": "version-ios-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-07",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-261-pb2",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-261-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.1:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.1",
+      "releaseVersionId": "version-ios-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-14",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-261-pb3",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-261-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.1:public-beta-4",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.1",
+      "releaseVersionId": "version-ios-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-20",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-261-pb4",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-261-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.2:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.2",
+      "releaseVersionId": "version-ios-26-2",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-11-06",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-262-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-262-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.2:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.2",
+      "releaseVersionId": "version-ios-26-2",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-11-18",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-262-pb2",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-262-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.3:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.3",
+      "releaseVersionId": "version-ios-26-3",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-12-17",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-263-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-263-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.3:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.3",
+      "releaseVersionId": "version-ios-26-3",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-01-13",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-263-pb2",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-263-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.3:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.3",
+      "releaseVersionId": "version-ios-26-3",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-01-27",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-263-pb3",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-263-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.4:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.4",
+      "releaseVersionId": "version-ios-26-4",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-02-17",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-264-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-264-pb1-ios",
+          "locator": "Page metadata, headline, and candidate-specific article lead or update paragraph.",
+          "supports": "Contemporary report supports the public-beta identity and appearance chronology."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.4:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.4",
+      "releaseVersionId": "version-ios-26-4",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-03-05",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "conflicted",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-264-pb2",
+          "locator": "Headline, publication timestamp, lead, build paragraph, and paragraph stating that Apple also provided new public betas for iOS 26.4 and iPadOS 26.4.",
+          "supports": "Contemporary report establishes new public releases for both platforms on March 5 alongside revised developer Beta 3. The public ordinal is resolved from the complete public sequence and corroborating sources."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-appleosophy-264-pb2",
+          "locator": "Headline, timestamp, lead, and build paragraph naming both platforms and stating that public betas with the same revised build were released alongside developer Beta 3.",
+          "supports": "Independent publisher corroborates March 5 public availability for both platforms; the exact public ordinal is established by the complete public sequence rather than developer numbering."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-onetech-264-pb2-ios",
+          "locator": "Headline, article lead, and build paragraph explicitly pairing iOS 26.4 developer Beta 3 v2 with iOS 26.4 Public Beta 2.",
+          "supports": "Next-day independent report explicitly corroborates the Public Beta 2 ordinal and revised build relationship for iOS."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "The March 5 public release is corroborated by two editorial lineages, but public numbering diverged from developer numbering after Apple withheld the original developer Beta 2 payload. Independent review must adjudicate the Public Beta 2 ordinal."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.4:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.4",
+      "releaseVersionId": "version-ios-26-4",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-03-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-264-pb3",
+          "locator": "Headline, publication timestamp, lead naming iOS and iPadOS, and the same-day update stating that public beta versions are available.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-264-pb3-ios",
+          "locator": "Timestamp and same-day update stating that the corresponding iOS public beta rolled out a few hours after developer Beta 4.",
+          "supports": "Contemporary report supports the public-beta identity and appearance chronology."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-anotherapple-264-pb3",
+          "locator": "Headline, timestamp, and lead explicitly identifying Public Beta 3 for iOS 26.4 and iPadOS 26.4.",
+          "supports": "Contemporary report supports the public-beta identity and appearance chronology."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.5:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.5",
+      "releaseVersionId": "version-ios-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-03",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-265-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-265-pb1-ios",
+          "locator": "Headline, publication timestamp, lead, and any same-day update identifying the relevant numbered 26.5 public beta.",
+          "supports": "Independent 2026-dated platform-specific evidence resolves iCulture's erroneous 2025 display years."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-265-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.5:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.5",
+      "releaseVersionId": "version-ios-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-14",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-265-pb2",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-265-pb2-ios",
+          "locator": "Headline, publication timestamp, lead, and any same-day update identifying the relevant numbered 26.5 public beta.",
+          "supports": "Independent 2026-dated platform-specific evidence resolves iCulture's erroneous 2025 display years."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-265-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "Independent review must verify the 2026-dated MacRumors and 9to5Mac locators and preserve iCulture's displayed 2025 years as source typos."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.5:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.5",
+      "releaseVersionId": "version-ios-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-21",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-265-pb3",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-265-pb3-ios",
+          "locator": "Headline, publication timestamp, lead, and any same-day update identifying the relevant numbered 26.5 public beta.",
+          "supports": "Independent 2026-dated platform-specific evidence resolves iCulture's erroneous 2025 display years."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-265-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "Independent review must verify the 2026-dated MacRumors and 9to5Mac locators and preserve iCulture's displayed 2025 years as source typos."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.5:public-beta-4",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.5",
+      "releaseVersionId": "version-ios-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-27",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-265-pb4",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-265-pb4-ios",
+          "locator": "Headline, publication timestamp, lead, and any same-day update identifying the relevant numbered 26.5 public beta.",
+          "supports": "Independent 2026-dated platform-specific evidence resolves iCulture's erroneous 2025 display years."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-265-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "Independent review must verify the 2026-dated MacRumors and 9to5Mac locators and preserve iCulture's displayed 2025 years as source typos."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.6:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.6",
+      "releaseVersionId": "version-ios-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-05-28",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-266-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-266-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.6:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.6",
+      "releaseVersionId": "version-ios-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-06-16",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-266-pb2",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-266-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.6:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.6",
+      "releaseVersionId": "version-ios-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-06-30",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-266-pb3",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-266-pb3-ios",
+          "locator": "Original June 29 developer timestamp and June 30 update stating that the corresponding public beta is now available.",
+          "supports": "Independent source separates the June 29 developer seed from the June 30 public appearance."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "Independent review must preserve June 29 as the developer date and June 30 as the public date, rejecting iCulture's June 29 public row."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.6:public-beta-4",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.6",
+      "releaseVersionId": "version-ios-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-07",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-266-pb4",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-266-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:26.6:public-beta-5",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.6",
+      "releaseVersionId": "version-ios-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-13",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-266-pb5",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-266-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-266-pb5-ios",
+          "locator": "Headline, July 13 timestamp, and update or lead identifying the relevant fifth public beta.",
+          "supports": "Independent platform-specific evidence supports the July 13 fifth public appearance."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.1:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.1",
+      "releaseVersionId": "version-ipados-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-09-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-261-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-261-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-itopnews-261-pb1",
+          "locator": "Headline, publication date, and lead explicitly identifying Public Beta 1 of iOS 26.1 and iPadOS 26.1.",
+          "supports": "Independent explicit evidence resolves iCulture's erroneous iPadOS Public Beta 2 label on the same date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "Independent review must confirm that MacRumors and iTopnews override iCulture's erroneous 'Public Beta 2' row label."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.1:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.1",
+      "releaseVersionId": "version-ipados-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-07",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-261-pb2",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-261-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.1:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.1",
+      "releaseVersionId": "version-ipados-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-14",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-261-pb3",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-261-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.1:public-beta-4",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.1",
+      "releaseVersionId": "version-ipados-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-20",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-261-pb4",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-261-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.2:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.2",
+      "releaseVersionId": "version-ipados-26-2",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-11-06",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-262-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-262-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.2:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.2",
+      "releaseVersionId": "version-ipados-26-2",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-11-18",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-262-pb2",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-262-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.3:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.3",
+      "releaseVersionId": "version-ipados-26-3",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-12-17",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-263-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-263-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.3:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.3",
+      "releaseVersionId": "version-ipados-26-3",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-01-13",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-263-pb2",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-263-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.3:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.3",
+      "releaseVersionId": "version-ipados-26-3",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-01-27",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-263-pb3",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-263-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.4:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.4",
+      "releaseVersionId": "version-ipados-26-4",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-02-17",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-264-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-264-pb1-ipados",
+          "locator": "Page metadata, headline, and candidate-specific article lead or update paragraph.",
+          "supports": "Contemporary report supports the public-beta identity and appearance chronology."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.4:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.4",
+      "releaseVersionId": "version-ipados-26-4",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-03-05",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "conflicted",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-264-pb2",
+          "locator": "Headline, publication timestamp, lead, build paragraph, and paragraph stating that Apple also provided new public betas for iOS 26.4 and iPadOS 26.4.",
+          "supports": "Contemporary report establishes new public releases for both platforms on March 5 alongside revised developer Beta 3. The public ordinal is resolved from the complete public sequence and corroborating sources."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-appleosophy-264-pb2",
+          "locator": "Headline, timestamp, lead, and build paragraph naming both platforms and stating that public betas with the same revised build were released alongside developer Beta 3.",
+          "supports": "Independent publisher corroborates March 5 public availability for both platforms; the exact public ordinal is established by the complete public sequence rather than developer numbering."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "The March 5 public release is corroborated by two editorial lineages, but public numbering diverged from developer numbering after Apple withheld the original developer Beta 2 payload. Independent review must adjudicate the Public Beta 2 ordinal."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.4:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.4",
+      "releaseVersionId": "version-ipados-26-4",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-03-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-264-pb3",
+          "locator": "Headline, publication timestamp, lead naming iOS and iPadOS, and the same-day update stating that public beta versions are available.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-264-pb3-ipados",
+          "locator": "Timestamp, iPadOS Beta 4 article body, and update stating that public betas rolled out later the same day.",
+          "supports": "Contemporary report supports the public-beta identity and appearance chronology."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-anotherapple-264-pb3",
+          "locator": "Headline, timestamp, and lead explicitly identifying Public Beta 3 for iOS 26.4 and iPadOS 26.4.",
+          "supports": "Contemporary report supports the public-beta identity and appearance chronology."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.5:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.5",
+      "releaseVersionId": "version-ipados-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-03",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-265-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-265-pb1-ipados",
+          "locator": "Headline, publication timestamp, lead, and any same-day update identifying the relevant numbered 26.5 public beta.",
+          "supports": "Independent 2026-dated platform-specific evidence resolves iCulture's erroneous 2025 display years."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-265-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.5:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.5",
+      "releaseVersionId": "version-ipados-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-14",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-265-pb2",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-265-pb2-ipados",
+          "locator": "Headline, publication timestamp, lead, and any same-day update identifying the relevant numbered 26.5 public beta.",
+          "supports": "Independent 2026-dated platform-specific evidence resolves iCulture's erroneous 2025 display years."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-265-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "Independent review must verify the 2026-dated MacRumors and 9to5Mac locators and preserve iCulture's displayed 2025 years as source typos."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.5:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.5",
+      "releaseVersionId": "version-ipados-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-21",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-265-pb3",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-265-pb3-ipados",
+          "locator": "Headline, publication timestamp, lead, and any same-day update identifying the relevant numbered 26.5 public beta.",
+          "supports": "Independent 2026-dated platform-specific evidence resolves iCulture's erroneous 2025 display years."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-265-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "Independent review must verify the 2026-dated MacRumors and 9to5Mac locators and preserve iCulture's displayed 2025 years as source typos."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.5:public-beta-4",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.5",
+      "releaseVersionId": "version-ipados-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-27",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-265-pb4",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-265-pb4-ipados",
+          "locator": "Headline, publication timestamp, lead, and any same-day update identifying the relevant numbered 26.5 public beta.",
+          "supports": "Independent 2026-dated platform-specific evidence resolves iCulture's erroneous 2025 display years."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-265-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "Independent review must verify the 2026-dated MacRumors and 9to5Mac locators and preserve iCulture's displayed 2025 years as source typos."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.6:public-beta-1",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.6",
+      "releaseVersionId": "version-ipados-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-05-28",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-266-pb1",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-266-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.6:public-beta-2",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.6",
+      "releaseVersionId": "version-ipados-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-06-16",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-266-pb2",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-266-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.6:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.6",
+      "releaseVersionId": "version-ipados-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-06-30",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-266-pb3",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-266-pb3-ipados",
+          "locator": "Original June 29 developer timestamp and June 30 update stating that the corresponding public beta is now available.",
+          "supports": "Independent source separates the June 29 developer seed from the June 30 public appearance."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required.",
+        "Independent review must preserve June 29 as the developer date and June 30 as the public date, rejecting iCulture's June 29 public row."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.6:public-beta-4",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.6",
+      "releaseVersionId": "version-ipados-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-07",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-266-pb4",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-266-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.6:public-beta-5",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.6",
+      "releaseVersionId": "version-ipados-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-13",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:39.022Z",
+        "matchBasis": "Fresh published production query by exact releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no exact, alias, or channel-sequence-date match.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-266-pb5",
+          "locator": "Headline, publication timestamp, and lead explicitly naming the numbered iOS 26.x and iPadOS 26.x public-beta releases.",
+          "supports": "Contemporary report explicitly supports both platform identities, ordinal, public channel, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-266-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Independent rolling chronology supports the listed public sequence except where this packet explicitly records a label, year, omission, or date conflict."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-9to5mac-266-pb5-ipados",
+          "locator": "Headline, July 13 timestamp, and update or lead identifying the relevant fifth public beta.",
+          "supports": "Independent platform-specific evidence supports the July 13 fifth public appearance."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. An independent reviewer must verify the exact identity, both publisher lineages, negative sequence boundary, and listed conflicts before any separate write authorization."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "notProposed": [
+    {
+      "recordId": "not-proposed:apple:ios:26.1:public-beta-5",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-26-1",
+      "apparentIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-28",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 5 is established. The rolling chronology proceeds from the highest retained public ordinal to RC on 2025-10-28. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-261-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ios-26-1",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iOS 26.1 Public Beta 5 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:26.2:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-26-2",
+      "apparentIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-12-03",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 3 is established. The rolling chronology proceeds from the highest retained public ordinal to RC on 2025-12-03. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-262-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ios-26-2",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iOS 26.2 Public Beta 3 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:26.3:public-beta-4",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-26-3",
+      "apparentIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-02-04",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 4 is established. The rolling chronology proceeds from the highest retained public ordinal to RC on 2026-02-04. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-263-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ios-26-3",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iOS 26.3 Public Beta 4 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:26.4:public-beta-4",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-26-4",
+      "apparentIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-03-18",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 4 is established. The complete public sequence ends at Public Beta 3 on March 9 and proceeds to RC on March 18. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-264-rc",
+          "locator": "Headline, timestamp, and lead explicitly identify the March 18 release as the iOS/iPadOS 26.4 Release Candidate.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ios-26-4",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iOS 26.4 Public Beta 4 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:26.5:public-beta-5",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-26-5",
+      "apparentIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-05-04",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 5 is established. The rolling chronology proceeds from the highest retained public ordinal to RC on 2026-05-04. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-265-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ios-26-5",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iOS 26.5 Public Beta 5 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:26.6:public-beta-6",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-26-6",
+      "apparentIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-20",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 6 is established. The rolling chronology proceeds from the highest retained public ordinal to RC on 2026-07-20. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-266-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ios-26-6",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iOS 26.6 Public Beta 6 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ipados:26.1:public-beta-5",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "releaseVersionId": "version-ipados-26-1",
+      "apparentIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-28",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 5 is established. The rolling chronology proceeds from the highest retained public ordinal to RC on 2025-10-28. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-261-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ipados-26-1",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iPadOS 26.1 Public Beta 5 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ipados:26.2:public-beta-3",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "releaseVersionId": "version-ipados-26-2",
+      "apparentIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-12-03",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 3 is established. The rolling chronology proceeds from the highest retained public ordinal to RC on 2025-12-03. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-262-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ipados-26-2",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iPadOS 26.2 Public Beta 3 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ipados:26.3:public-beta-4",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "releaseVersionId": "version-ipados-26-3",
+      "apparentIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-02-04",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 4 is established. The rolling chronology proceeds from the highest retained public ordinal to RC on 2026-02-04. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-263-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ipados-26-3",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iPadOS 26.3 Public Beta 4 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ipados:26.4:public-beta-4",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "releaseVersionId": "version-ipados-26-4",
+      "apparentIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-03-18",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 4 is established. The complete public sequence ends at Public Beta 3 on March 9 and proceeds to RC on March 18. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-macrumors-264-rc",
+          "locator": "Headline, timestamp, and lead explicitly identify the March 18 release as the iOS/iPadOS 26.4 Release Candidate.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ipados-26-4",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iPadOS 26.4 Public Beta 4 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ipados:26.5:public-beta-5",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "releaseVersionId": "version-ipados-26-5",
+      "apparentIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-05-04",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 5 is established. The rolling chronology proceeds from the highest retained public ordinal to RC on 2026-05-04. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-265-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ipados-26-5",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iPadOS 26.5 Public Beta 5 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ipados:26.6:public-beta-6",
+      "originCohortId": "mobile26-point-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "releaseVersionId": "version-ipados-26-6",
+      "apparentIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-20",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 6 is established. The rolling chronology proceeds from the highest retained public ordinal to RC on 2026-07-20. The event on the apparent date is explicitly an RC and must remain in the releaseCandidate channel.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/mobile26-public/sources.json",
+          "sourceId": "source-iculture-266-timeline",
+          "locator": "The iOS and iPadOS beta-history tables, page revision history, and terminal RC/final-release rows. Candidate rows and the documented errors or omissions are bounded by their version-specific table headings.",
+          "supports": "Establishes the terminal RC boundary and excludes the next numbered public-beta identity."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json",
+          "locator": "events and scopedCycles entries for version-ipados-26-6",
+          "supports": "Fresh production chronology independently classifies the terminal seed as releaseCandidate and contains zero scoped publicBeta events."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary publisher page or archived Apple tester screen explicitly identifying iPadOS 26.6 Public Beta 6 before the RC boundary would reopen this negative finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher negative-sequence self-check only; independent review remains pending."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "nextEvidenceWaves": [
+    {
+      "waveId": "mobile26-public-independent-chronology-review",
+      "scope": "Independently verify all 42 identities, two publisher lineages per candidate, 12 negative sequence boundaries, and nine conflict/guardrail records.",
+      "artifactPaths": [
+        "research-handoffs/beta-chronology-gap/mobile26-public/review.json",
+        "research-handoffs/beta-chronology-gap/mobile26-public/report.md",
+        "research-handoffs/beta-chronology-gap/mobile26-public/validation.json"
+      ],
+      "estimatedCandidateCount": 42,
+      "countStatus": "confirmed",
+      "requiredNextStep": "Assign a reviewer who did not perform this research. Do not mutate Sanity unless a later, separate implementation authorization names the approved candidates."
+    }
+  ],
+  "validationStatus": {
+    "status": "passed",
+    "validatedAt": "2026-07-31T04:45:12.859Z",
+    "validator": "research-handoffs/beta-chronology-gap/mobile26-public/validate-packet.mjs",
+    "summaryPath": "research-handoffs/beta-chronology-gap/mobile26-public/validation.json"
+  }
+}

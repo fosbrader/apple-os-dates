@@ -1,0 +1,40 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-point-15-26-followup",
+  "generatedAt": "2026-07-31T07:26:59.463Z",
+  "conflictCount": 5,
+  "unresolvedConflictCount": 2,
+  "resolvedConflictCount": 3,
+  "conflicts": [
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-3",
+      "status": "resolvedForProposedIdentityPendingIndependentReview",
+      "issue": "The parent iCulture chronology gives October 8.",
+      "resolution": "The existing 9to5Mac record and newly retained Monomaniac publisher record independently display Public Beta 3 and both normalize to October 7 Pacific. The iCulture one-day conflict remains disclosed but is not selected."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.3:public-beta-3",
+      "status": "unresolved",
+      "issue": "Only one lineage displays the exact public ordinal and date.",
+      "resolution": "Monomaniac establishes the exact identity; the other retained sources are developer-ordinal or generic beta-program reports and remain excluded."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.5:public-beta-3",
+      "status": "unresolved",
+      "issue": "The proposed April 28 identity conflicts both on date and ordinal.",
+      "resolution": "Monomaniac's public API metadata normalizes to April 29 Pacific for Public Beta 3. April 28 sources are generic public updates or label the appearance Public Beta 4. No correction is proposed without two exact agreeing lineages."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.5:public-beta-3",
+      "status": "resolvedForProposedIdentityPendingIndependentReview",
+      "issue": "The parent iCulture chronology shifts the row to Public Beta 4.",
+      "resolution": "9to5Mac and Monomaniac independently display Public Beta 3 and both establish April 27 Pacific. The conflicting iCulture row remains disclosed but is not selected."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-3",
+      "status": "resolvedForProposedIdentityPendingIndependentReview",
+      "issue": "The parent iCulture chronology uses the June 29 developer-seed day.",
+      "resolution": "MacRumors and Monomaniac independently display Public Beta 3 and both establish June 30 Pacific. The conflated June 29 row remains disclosed but is not selected."
+    }
+  ]
+}

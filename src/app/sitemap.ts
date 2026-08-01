@@ -1,10 +1,20 @@
 import type { MetadataRoute } from "next";
 import {
+  getAllBuildRoutes,
+  getAllEventRoutes,
   getAllPlatforms,
   getAllVersionRoutes,
 } from "@/lib/sanity.fetch";
 import type { ReleaseVersionRoute } from "@/lib/types";
 import { absoluteUrl } from "@/lib/site";
+import {
+  applePlatformPath,
+  releaseBuildPath,
+  releaseEventPath,
+  releaseFamilyPath,
+  releaseMajor,
+  releaseVersionPath,
+} from "@/lib/release-routes";
 
 function toDate(value: string | undefined): Date | undefined {
   if (!value) {
@@ -53,14 +63,17 @@ function uniqueVersionRoutes(
   return Array.from(unique.values());
 }
 
-function pathSegment(value: string): string {
-  return encodeURIComponent(value);
-}
-
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [platforms, fetchedVersionRoutes] = await Promise.all([
+  const [
+    platforms,
+    fetchedVersionRoutes,
+    buildRoutes,
+    eventRoutes,
+  ] = await Promise.all([
     getAllPlatforms(),
     getAllVersionRoutes(),
+    getAllBuildRoutes(),
+    getAllEventRoutes(),
   ]);
   const versionRoutes = uniqueVersionRoutes(fetchedVersionRoutes).sort(
     (left, right) =>
@@ -81,6 +94,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       platformLastModified.set(route.platform, nextPlatformDate);
     }
   }
+  for (const route of [...buildRoutes, ...eventRoutes]) {
+    siteLastModified = newerDate(
+      siteLastModified,
+      toDate(route.updatedAt),
+    );
+  }
 
   const staticEntries: MetadataRoute.Sitemap = [
     {
@@ -88,6 +107,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: siteLastModified,
       changeFrequency: "daily",
       priority: 1,
+    },
+    {
+      url: absoluteUrl("/apple/"),
+      lastModified: siteLastModified,
+      changeFrequency: "daily",
+      priority: 0.95,
+    },
+    {
+      url: absoluteUrl("/search/"),
+      lastModified: siteLastModified,
+      changeFrequency: "daily",
+      priority: 0.8,
     },
     {
       url: absoluteUrl("/timeline/"),
@@ -106,6 +137,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: siteLastModified,
       changeFrequency: "weekly",
       priority: 0.7,
+    },
+    {
+      url: absoluteUrl("/corrections/"),
+      lastModified: siteLastModified,
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+    {
+      url: absoluteUrl("/exports/"),
+      lastModified: siteLastModified,
+      changeFrequency: "weekly",
+      priority: 0.6,
     },
     {
       url: absoluteUrl("/about/"),
@@ -132,13 +175,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: absoluteUrl("/submit/"),
+      changeFrequency: "monthly",
+      priority: 0.3,
+    },
   ];
 
   const platformEntries: MetadataRoute.Sitemap = platforms.map((platform) => {
     const slug = platform.slug.current;
 
     return {
-      url: absoluteUrl(`/${pathSegment(slug)}/`),
+      url: absoluteUrl(applePlatformPath(slug)),
       lastModified: platformLastModified.get(slug),
       changeFrequency: "daily",
       priority: 0.9,
@@ -146,13 +194,79 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   });
 
   const versionEntries: MetadataRoute.Sitemap = versionRoutes.map((route) => ({
-    url: absoluteUrl(
-      `/${pathSegment(route.platform)}/${pathSegment(route.version)}`
-    ),
+    url: absoluteUrl(releaseVersionPath(route.platform, route.version)),
     lastModified: toDate(route.updatedAt),
     changeFrequency: "weekly",
     priority: 0.8,
   }));
 
-  return [...staticEntries, ...platformEntries, ...versionEntries];
+  const familyMap = new Map<
+    string,
+    { platform: string; major: number; updatedAt?: string }
+  >();
+  for (const route of versionRoutes) {
+    const major = releaseMajor(route.version);
+    if (major === null) continue;
+    const key = `${route.platform}:${major}`;
+    const existing = familyMap.get(key);
+    if (
+      !existing ||
+      (route.updatedAt ?? "") > (existing.updatedAt ?? "")
+    ) {
+      familyMap.set(key, {
+        platform: route.platform,
+        major,
+        updatedAt: route.updatedAt,
+      });
+    }
+  }
+  const familyEntries: MetadataRoute.Sitemap = Array.from(
+    familyMap.values(),
+  ).map((family) => ({
+    url: absoluteUrl(
+      releaseFamilyPath(family.platform, family.major),
+    ),
+    lastModified: toDate(family.updatedAt),
+    changeFrequency: "weekly",
+    priority: 0.75,
+  }));
+
+  const buildEntries: MetadataRoute.Sitemap = buildRoutes
+    .filter((route) => route.indexEligible)
+    .map((route) => ({
+      url: absoluteUrl(
+        releaseBuildPath(
+          route.platform,
+          route.version,
+          route.build,
+        ),
+      ),
+      lastModified: toDate(route.updatedAt),
+      changeFrequency: "weekly",
+      priority: 0.75,
+    }));
+
+  const eventEntries: MetadataRoute.Sitemap = eventRoutes
+    .filter((route) => route.indexEligible)
+    .map((route) => ({
+      url: absoluteUrl(
+        releaseEventPath(
+          route.platform,
+          route.version,
+          route.event,
+        ),
+      ),
+      lastModified: toDate(route.updatedAt),
+      changeFrequency: "weekly",
+      priority: 0.7,
+    }));
+
+  return [
+    ...staticEntries,
+    ...platformEntries,
+    ...familyEntries,
+    ...versionEntries,
+    ...buildEntries,
+    ...eventEntries,
+  ];
 }

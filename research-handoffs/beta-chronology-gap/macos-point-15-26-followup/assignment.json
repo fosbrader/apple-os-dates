@@ -1,0 +1,81 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-point-15-26-followup",
+  "createdAt": "2026-07-31T07:26:59.463Z",
+  "createdBy": "codex-macos-point-15-26-followup-researcher",
+  "researchCutoff": "2026-07-31",
+  "timezone": "America/Los_Angeles",
+  "scope": "Research-only supplement for exactly the eight candidates blocked by the frozen macOS 15.x–26.x point-release independent review.",
+  "parentPacket": {
+    "path": "research-handoffs/beta-chronology-gap/macos-point-15-26",
+    "mustRemainUnchanged": true,
+    "dependencies": {
+      "candidates": {
+        "path": "research-handoffs/beta-chronology-gap/macos-point-15-26/candidates.json",
+        "bytes": 121326,
+        "sha256": "c23604e266154cf840241d8524ba1844d40dc71bc8754e3acdc64e45a96ba9f8"
+      },
+      "independentReview": {
+        "path": "research-handoffs/beta-chronology-gap/macos-point-15-26/independent-review.json",
+        "bytes": 74296,
+        "sha256": "8124b7f0bcc06744284fb832cc80cff7e61453b3b6470b150598901e016974a9"
+      },
+      "packetLocks": {
+        "path": "research-handoffs/beta-chronology-gap/macos-point-15-26/packet-locks.json",
+        "bytes": 18525,
+        "sha256": "395595f47cd1e63e99075368895c8f13fc6510f98288c0e1633ee49c8d0b0f9d"
+      },
+      "rawEvidenceLocks": {
+        "path": "research-handoffs/beta-chronology-gap/macos-point-15-26/raw-evidence-locks.json",
+        "bytes": 26147,
+        "sha256": "a00d5f7ba20f557c33b58c5ed831f21e5a89ff194e0204aca333be46e6ba383d"
+      }
+    }
+  },
+  "targets": {
+    "blockedCandidateIds": [
+      "candidate:apple:macos:15.1:public-beta-3",
+      "candidate:apple:macos:15.3:public-beta-3",
+      "candidate:apple:macos:15.4:public-beta-1",
+      "candidate:apple:macos:15.4:public-beta-4",
+      "candidate:apple:macos:15.5:public-beta-3",
+      "candidate:apple:macos:26.4:public-beta-4",
+      "candidate:apple:macos:26.5:public-beta-3",
+      "candidate:apple:macos:26.6:public-beta-3"
+    ],
+    "targetCount": 8
+  },
+  "identityRule": "Each evidence-ready identity requires two independent publisher lineages that each establish exact macOS version, displayed public ordinal, publicBeta channel, and America/Los_Angeles appearance date. Developer ordinals, build alignment, generic public access, comments, and appearance counts are insufficient.",
+  "outcome": {
+    "evidenceReadyPendingIndependentReviewIds": [
+      "candidate:apple:macos:15.1:public-beta-3",
+      "candidate:apple:macos:15.4:public-beta-1",
+      "candidate:apple:macos:15.4:public-beta-4",
+      "candidate:apple:macos:26.4:public-beta-4",
+      "candidate:apple:macos:26.5:public-beta-3",
+      "candidate:apple:macos:26.6:public-beta-3"
+    ],
+    "evidenceReadyCount": 6,
+    "remainsBlockedIds": [
+      "candidate:apple:macos:15.3:public-beta-3",
+      "candidate:apple:macos:15.5:public-beta-3"
+    ],
+    "remainsBlockedCount": 2,
+    "identityCorrectionsProposed": 0
+  },
+  "independentReview": {
+    "status": "pending",
+    "required": true,
+    "researcherMustNotCreateIt": true,
+    "expectedFuturePath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/independent-review.json"
+  },
+  "constraints": {
+    "noParentPacketEdits": true,
+    "noIndependentReviewByResearcher": true,
+    "noSanityWrites": true,
+    "noStableEventIdCreation": true,
+    "noPageWork": true,
+    "noPublication": true,
+    "noDeployment": true
+  }
+}

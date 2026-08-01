@@ -1,0 +1,1432 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-29",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/123075",
+      "title": "About iOS 26 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "26", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/123074",
+      "title": "About iPadOS 26 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iPadOS", "26", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/125326",
+      "title": "About the security content of iOS 26.0.1 and iPadOS 26.0.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2025-09-29T00:00:00Z",
+      "topics": ["iOS", "iPadOS", "26.0.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/125632",
+      "title": "About the security content of iOS 26.1 and iPadOS 26.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "26.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/125884",
+      "title": "About the security content of iOS 26.2 and iPadOS 26.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "26.2", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/126346",
+      "title": "About the security content of iOS 26.3 and iPadOS 26.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "26.3", "security"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2026/01/apple-introduces-new-airtag-with-expanded-range-and-improved-findability/",
+      "title": "Apple introduces new AirTag with expanded range and improved findability",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2026-01-26T00:00:00Z",
+      "topics": ["AirTag", "iOS", "iPadOS", "26.2.1"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-ios-26-0-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123075",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 26.0.1 was the first public maintenance update after iOS 26. Apple documented connectivity failures on the iPhone 17 family, a cellular-registration problem affecting a small number of devices, and unexpected image artifacts under some lighting conditions.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123075",
+                "locator": "iOS 26.0.1"
+              }
+            ]
+          },
+          {
+            "text": "The release also corrected blank custom-tinted icons and a VoiceOver state failure. Its security advisory identifies a separate FontParser bounds issue that could corrupt process memory when a device handled a malicious font.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123075",
+                "locator": "iOS 26.0.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/125326",
+                "locator": "iOS 26.0.1 and iPadOS 26.0.1; FontParser; CVE-2025-43400"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123075",
+          "locator": "iOS 26.0.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125326",
+          "locator": "iOS 26.0.1 and iPadOS 26.0.1; FontParser; CVE-2025-43400"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-26-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123075",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 26.1 added a higher-opacity tinted Liquid Glass appearance, expanded AirPods Live Translation language support, and refined Apple Music playback with track-swipe navigation and AutoMix over AirPlay.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123075",
+                "locator": "iOS 26.1"
+              }
+            ]
+          },
+          {
+            "text": "Local capture gained microphone gain and save-location controls, Fitness added manual workout logging, and Apple revised Camera access, low-bandwidth FaceTime audio, and default child-safety settings. A broad security advisory accompanied the update.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123075",
+                "locator": "iOS 26.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/125632",
+                "locator": "iOS 26.1 and iPadOS 26.1; released November 3, 2025"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123075",
+          "locator": "iOS 26.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125632",
+          "locator": "iOS 26.1 and iPadOS 26.1; released November 3, 2025"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-26-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123074",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iPadOS 26.1 added Slide Over as a resizable windowing option and added microphone-gain and file-location controls for local capture. It also offered a more opaque tinted treatment for Liquid Glass.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123074",
+                "locator": "iPadOS 26.1"
+              }
+            ]
+          },
+          {
+            "text": "Apple Music gained navigation and AirPlay refinements, while Camera access, low-bandwidth FaceTime audio, child-safety defaults, and the Apple Vision Pro app rounded out the documented feature set. Apple separately published a platform-spanning security advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123074",
+                "locator": "iPadOS 26.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/125632",
+                "locator": "iOS 26.1 and iPadOS 26.1; released November 3, 2025"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123074",
+          "locator": "iPadOS 26.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125632",
+          "locator": "iOS 26.1 and iPadOS 26.1; released November 3, 2025"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-26-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123075",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 26.2 expanded Apple Music, Podcasts, and Games, including offline lyrics, generated podcast chapters, mentioned-show links, game-library filters, live challenge banners, and improved support for connected controllers.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123075",
+                "locator": "iOS 26.2"
+              }
+            ]
+          },
+          {
+            "text": "The release also added AirDrop verification codes, urgent Reminder alarms, enhanced U.S. safety alerts, Lock Screen appearance controls, and additions across News, Home, Accessibility, and Freeform. Apple documented two user-facing fixes and a substantial security update.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123075",
+                "locator": "iOS 26.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/125884",
+                "locator": "iOS 26.2 and iPadOS 26.2; released December 12, 2025"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123075",
+          "locator": "iOS 26.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125884",
+          "locator": "iOS 26.2 and iPadOS 26.2; released December 12, 2025"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-26-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123074",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iPadOS 26.2 extended the new windowing system with drag gestures for tiling apps and placing a window into Slide Over. Apple Music, Podcasts, Games, and controller support received the same release-specific additions documented for the iPad.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123074",
+                "locator": "iPadOS 26.2"
+              }
+            ]
+          },
+          {
+            "text": "AirDrop codes, Reminder alarms, Lock Screen opacity, News navigation, Home accessory enrollment, alert flashing, and Freeform tables made up the wider enhancement set. Apple also documented two fixes and a broad security release.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123074",
+                "locator": "iPadOS 26.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/125884",
+                "locator": "iOS 26.2 and iPadOS 26.2; released December 12, 2025"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123074",
+          "locator": "iPadOS 26.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125884",
+          "locator": "iOS 26.2 and iPadOS 26.2; released December 12, 2025"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-26-2-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123075",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 26.2.1 was a focused compatibility update released alongside the second-generation AirTag. Apple’s release note identifies support for the new accessory together with unspecified bug fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123075",
+                "locator": "iOS 26.2.1"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2026/01/apple-introduces-new-airtag-with-expanded-range-and-improved-findability/",
+                "locator": "January 26, 2026; software requirements"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s AirTag announcement documents the new model’s expanded finding range, louder speaker, and compatibility requirement of iOS 26 or later. The software note does not enumerate additional 26.2.1 changes, so none are inferred here.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2026/01/apple-introduces-new-airtag-with-expanded-range-and-improved-findability/",
+                "locator": "January 26, 2026; software requirements"
+              },
+              {
+                "url": "https://support.apple.com/en-us/123075",
+                "locator": "iOS 26.2.1"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123075",
+          "locator": "iOS 26.2.1"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/01/apple-introduces-new-airtag-with-expanded-range-and-improved-findability/",
+          "locator": "January 26, 2026; software requirements"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-26-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123075",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 26.3 was a maintenance and security release. Apple’s consumer note does not itemize feature or bug-fix changes, so the version record does not invent a user-facing feature list.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123075",
+                "locator": "iOS 26.3"
+              }
+            ]
+          },
+          {
+            "text": "The security advisory supplies the concrete technical record across locked-device privacy, sensitive-data access, media processing, kernel and network protections, sandboxing, system services, and WebKit. One dyld entry is carefully limited to Apple’s statement about attacks against versions before iOS 26.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/126346",
+                "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123075",
+          "locator": "iOS 26.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/126346",
+          "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-26-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123074",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iPadOS 26.3 was a maintenance and security release. Apple’s consumer note provides no itemized feature or bug-fix list, so this article stays within the documented evidence.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123074",
+                "locator": "iPadOS 26.3"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s shared advisory records fixes affecting locked-device privacy, sensitive-data access, media and image processing, the kernel, sandbox boundaries, system frameworks, and WebKit on supported iPads.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/126346",
+                "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123074",
+          "locator": "iPadOS 26.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/126346",
+          "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-26-0-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 26.0.1 update corrected early connectivity, cellular, camera, icon, and VoiceOver problems and included one documented FontParser security fix.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123075",
+          "locator": "iOS 26.0.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125326",
+          "locator": "iOS 26.0.1 and iPadOS 26.0.1; FontParser; CVE-2025-43400"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-26-0-1-wireless-disconnects",
+          "title": "iPhone 17-family Wi-Fi and Bluetooth stability",
+          "canonicalSummary": "Apple corrected occasional Wi-Fi and Bluetooth disconnections on the iPhone 17, iPhone Air, and iPhone 17 Pro families.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected occasional Wi-Fi and Bluetooth disconnections on the iPhone 17, iPhone Air, and iPhone 17 Pro families.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.0.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-0-1-cellular-registration",
+          "title": "Post-update cellular registration",
+          "canonicalSummary": "The update fixed a condition that left a small number of iPhones unable to connect to a cellular network after moving to iOS 26.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update fixed a condition that left a small number of iPhones unable to connect to a cellular network after moving to iOS 26.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.0.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-0-1-camera-artifacts",
+          "title": "Lighting-related camera artifacts",
+          "canonicalSummary": "Apple addressed unexpected artifacts in photos taken under some lighting conditions on the iPhone 17, iPhone Air, and iPhone 17 Pro families.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple addressed unexpected artifacts in photos taken under some lighting conditions on the iPhone 17, iPhone Air, and iPhone 17 Pro families.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.0.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-0-1-custom-tint-icons",
+          "title": "Blank custom-tinted app icons",
+          "canonicalSummary": "The release corrected app icons that could appear blank after a user applied a custom tint.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release corrected app icons that could appear blank after a user applied a custom tint.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.0.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-0-1-voiceover-state",
+          "title": "VoiceOver availability after updating",
+          "canonicalSummary": "Apple fixed a post-update state in which VoiceOver could become disabled for some users.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a post-update state in which VoiceOver could become disabled for some users.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.0.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-0-1-fontparser-cve-2025-43400",
+          "title": "FontParser bounds protection",
+          "canonicalSummary": "Apple fixed CVE-2025-43400, an out-of-bounds write reachable through a malicious font that could terminate an app or corrupt process memory.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed CVE-2025-43400, an out-of-bounds write reachable through a malicious font that could terminate an app or corrupt process memory.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125326",
+              "locator": "iOS 26.0.1 and iPadOS 26.0.1; FontParser; CVE-2025-43400"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-26-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 26.1 release added appearance, translation, media, capture, fitness, camera, communications, child-safety, and security improvements.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123075",
+          "locator": "iOS 26.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125632",
+          "locator": "iOS 26.1 and iPadOS 26.1; released November 3, 2025"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-26-1-liquid-glass-tint",
+          "title": "Tinted Liquid Glass appearance",
+          "canonicalSummary": "A new setting let users choose a higher-opacity tinted Liquid Glass treatment instead of the default clear appearance.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "A new setting let users choose a higher-opacity tinted Liquid Glass treatment instead of the default clear appearance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-1-airpods-live-translation-languages",
+          "title": "Additional AirPods Live Translation languages",
+          "canonicalSummary": "Live Translation with compatible AirPods expanded to Chinese, Japanese, Korean, and Italian language support.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Live Translation with compatible AirPods expanded to Chinese, Japanese, Korean, and Italian language support.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-1-apple-music-playback-controls",
+          "title": "Apple Music navigation and AutoMix over AirPlay",
+          "canonicalSummary": "Apple Music added MiniPlayer swipe navigation between tracks and extended AutoMix playback to AirPlay.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple Music added MiniPlayer swipe navigation between tracks and extended AutoMix playback to AirPlay.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-1-local-capture-controls",
+          "title": "Local capture gain and file-location controls",
+          "canonicalSummary": "Local capture added gain control for external USB microphones and let users choose where captured files were saved.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Local capture added gain control for external USB microphones and let users choose where captured files were saved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-1-fitness-camera-controls",
+          "title": "Manual workouts and Lock Screen camera control",
+          "canonicalSummary": "The Fitness app gained direct manual workout logging, and Camera settings added control over the Lock Screen swipe gesture.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Fitness app gained direct manual workout logging, and Camera settings added control over the Lock Screen swipe gesture.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-1-facetime-child-safety",
+          "title": "Low-bandwidth FaceTime and child-safety defaults",
+          "canonicalSummary": "Apple improved FaceTime audio under limited bandwidth and enabled Communication Safety and adult-site filtering by default for existing child accounts in the documented age range.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple improved FaceTime audio under limited bandwidth and enabled Communication Safety and adult-site filtering by default for existing child accounts in the documented age range.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-1-security-hardening",
+          "title": "iOS and iPadOS 26.1 security hardening",
+          "canonicalSummary": "Apple documented a broad security set covering privacy, sandbox boundaries, protected data, locked-device exposure, media handling, system services, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented a broad security set covering privacy, sandbox boundaries, protected data, locked-device exposure, media handling, system services, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125632",
+              "locator": "iOS 26.1 and iPadOS 26.1; released November 3, 2025"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-26-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPadOS 26.1 release added Slide Over, expanded local capture, added appearance and media controls, and shipped platform security repairs.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123074",
+          "locator": "iPadOS 26.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125632",
+          "locator": "iOS 26.1 and iPadOS 26.1; released November 3, 2025"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-26-1-slide-over-windowing",
+          "title": "Resizable Slide Over windowing",
+          "canonicalSummary": "Slide Over became a resizable, always-available window that could be moved offscreen when it was not needed.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Slide Over became a resizable, always-available window that could be moved offscreen when it was not needed.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-1-local-capture-controls",
+          "title": "Local capture gain and file-location controls",
+          "canonicalSummary": "Local capture added gain control for external USB microphones and let users choose where captured files were saved.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Local capture added gain control for external USB microphones and let users choose where captured files were saved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-1-liquid-glass-tint",
+          "title": "Tinted Liquid Glass appearance",
+          "canonicalSummary": "A new setting let users choose a higher-opacity tinted Liquid Glass treatment instead of the default clear appearance.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "A new setting let users choose a higher-opacity tinted Liquid Glass treatment instead of the default clear appearance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-1-apple-music-playback-controls",
+          "title": "Apple Music navigation and AutoMix over AirPlay",
+          "canonicalSummary": "Apple Music added MiniPlayer swipe navigation between tracks and extended AutoMix playback to AirPlay.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple Music added MiniPlayer swipe navigation between tracks and extended AutoMix playback to AirPlay.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-1-camera-facetime-safety-vision",
+          "title": "Camera, FaceTime, safety, and Vision Pro app updates",
+          "canonicalSummary": "The release added a Lock Screen camera-gesture setting, improved low-bandwidth FaceTime audio, enabled documented child-safety defaults, and brought Apple’s Vision Pro app to iPad.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release added a Lock Screen camera-gesture setting, improved low-bandwidth FaceTime audio, enabled documented child-safety defaults, and brought Apple’s Vision Pro app to iPad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-1-security-hardening",
+          "title": "iOS and iPadOS 26.1 security hardening",
+          "canonicalSummary": "Apple documented a broad security set covering privacy, sandbox boundaries, protected data, locked-device exposure, media handling, system services, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented a broad security set covering privacy, sandbox boundaries, protected data, locked-device exposure, media handling, system services, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125632",
+              "locator": "iOS 26.1 and iPadOS 26.1; released November 3, 2025"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-26-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 26.2 release expanded Music, Podcasts, Games, AirDrop, Reminders, safety alerts, home and accessibility tools, and security protections.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123075",
+          "locator": "iOS 26.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125884",
+          "locator": "iOS 26.2 and iPadOS 26.2; released December 12, 2025"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-26-2-apple-music-offline-lyrics",
+          "title": "Apple Music favorites and offline lyrics",
+          "canonicalSummary": "Apple Music surfaced Favorite Songs in Top Picks and made lyrics available offline for downloaded music.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple Music surfaced Favorite Songs in Top Picks and made lyrics available offline for downloaded music.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-2-podcast-navigation-links",
+          "title": "Generated podcast chapters and mentioned-show links",
+          "canonicalSummary": "Podcasts added automatically generated chapter navigation and direct links to other shows mentioned in an episode.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Podcasts added automatically generated chapter navigation and direct links to other shows mentioned in an episode.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-2-games-library-controller-support",
+          "title": "Games filters, challenge banners, and controllers",
+          "canonicalSummary": "Games added library filters and live challenge-leader banners while improving compatibility with connected controllers.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Games added library filters and live challenge-leader banners while improving compatibility with connected controllers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-2-lock-screen-safety-reminders",
+          "title": "Lock Screen opacity, safety alerts, and Reminder alarms",
+          "canonicalSummary": "The release added another Lock Screen time-opacity control, richer U.S. threat alerts, and alarms with snooze and Live Activity support for urgent Reminders.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release added another Lock Screen time-opacity control, richer U.S. threat alerts, and alarms with snooze and Live Activity support for urgent Reminders.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-2-airdrop-verification-codes",
+          "title": "AirDrop verification codes for unknown contacts",
+          "canonicalSummary": "AirDrop could require a receiver-displayed code before completing a transfer with an unknown contact.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "AirDrop could require a receiver-displayed code before completing a transfer with an unknown contact.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-2-news-home-accessibility-freeform",
+          "title": "News, Home, Accessibility, and Freeform additions",
+          "canonicalSummary": "Apple added News section links, multipack Home accessory pairing, screen-flash alerts, and structured tables in Freeform.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple added News section links, multipack Home accessory pairing, screen-flash alerts, and structured tables in Freeform.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-2-music-enterprise-state-fixes",
+          "title": "Music availability and managed-setting fixes",
+          "canonicalSummary": "Apple fixed delayed playback for newly released pre-order albums and a Privacy and Security setting that could incorrectly appear enterprise-managed.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed delayed playback for newly released pre-order albums and a Privacy and Security setting that could incorrectly appear enterprise-managed.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-2-security-hardening",
+          "title": "iOS and iPadOS 26.2 security hardening",
+          "canonicalSummary": "Apple’s advisory records repairs across payment permissions, backup handling, caller identity, file access, media parsing, privacy boundaries, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple’s advisory records repairs across payment permissions, backup handling, caller identity, file access, media parsing, privacy boundaries, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125884",
+              "locator": "iOS 26.2 and iPadOS 26.2; released December 12, 2025"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-26-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPadOS 26.2 release expanded multitasking gestures, media and game apps, AirDrop verification, productivity tools, and platform security.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123074",
+          "locator": "iPadOS 26.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125884",
+          "locator": "iOS 26.2 and iPadOS 26.2; released December 12, 2025"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-26-2-multitasking-drag-gestures",
+          "title": "Drag gestures for tiled and Slide Over windows",
+          "canonicalSummary": "Users could drag an app from the Dock to tile its window or place it into Slide Over.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Users could drag an app from the Dock to tile its window or place it into Slide Over.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-2-apple-music-offline-lyrics",
+          "title": "Apple Music favorites and offline lyrics",
+          "canonicalSummary": "Apple Music surfaced Favorite Songs in Top Picks and made lyrics available offline for downloaded music.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple Music surfaced Favorite Songs in Top Picks and made lyrics available offline for downloaded music.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-2-podcast-navigation-links",
+          "title": "Generated podcast chapters and mentioned-show links",
+          "canonicalSummary": "Podcasts added automatically generated chapter navigation and direct links to other shows mentioned in an episode.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Podcasts added automatically generated chapter navigation and direct links to other shows mentioned in an episode.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-2-games-library-controller-support",
+          "title": "Games filters, challenge banners, and controllers",
+          "canonicalSummary": "Games added library filters and live challenge-leader banners while improving compatibility with connected controllers.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Games added library filters and live challenge-leader banners while improving compatibility with connected controllers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-2-airdrop-reminders-productivity",
+          "title": "AirDrop codes, Reminder alarms, and productivity additions",
+          "canonicalSummary": "The release added AirDrop verification codes, alarms for urgent Reminders, News navigation, Home multipack pairing, screen-flash alerts, and Freeform tables.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release added AirDrop verification codes, alarms for urgent Reminders, News navigation, Home multipack pairing, screen-flash alerts, and Freeform tables.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-2-music-enterprise-state-fixes",
+          "title": "Music availability and managed-setting fixes",
+          "canonicalSummary": "Apple fixed delayed playback for newly released pre-order albums and a Privacy and Security setting that could incorrectly appear enterprise-managed.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed delayed playback for newly released pre-order albums and a Privacy and Security setting that could incorrectly appear enterprise-managed.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123074",
+              "locator": "iPadOS 26.2"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-2-security-hardening",
+          "title": "iOS and iPadOS 26.2 security hardening",
+          "canonicalSummary": "Apple’s advisory records repairs across payment permissions, backup handling, caller identity, file access, media parsing, privacy boundaries, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple’s advisory records repairs across payment permissions, backup handling, caller identity, file access, media parsing, privacy boundaries, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125884",
+              "locator": "iOS 26.2 and iPadOS 26.2; released December 12, 2025"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-26-2-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 26.2.1 release added compatibility with the second-generation AirTag and included unspecified bug fixes without a separate itemized list.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123075",
+          "locator": "iOS 26.2.1"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/01/apple-introduces-new-airtag-with-expanded-range-and-improved-findability/",
+          "locator": "January 26, 2026; software requirements"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-26-2-1-airtag-second-generation",
+          "title": "Second-generation AirTag support",
+          "canonicalSummary": "iOS 26.2.1 added support for Apple’s second-generation AirTag, whose launch documentation describes expanded finding range and a louder speaker.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "iOS 26.2.1 added support for Apple’s second-generation AirTag, whose launch documentation describes expanded finding range and a louder speaker.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123075",
+              "locator": "iOS 26.2.1"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2026/01/apple-introduces-new-airtag-with-expanded-range-and-improved-findability/",
+              "locator": "January 26, 2026; software requirements"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-26-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 26.3 release was a security-heavy maintenance update with no itemized consumer feature list and a wide first-party advisory.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123075",
+          "locator": "iOS 26.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/126346",
+          "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-ipados-26-3-locked-device-privacy",
+          "title": "Locked-device privacy protections",
+          "canonicalSummary": "Apple corrected multiple paths that could expose sensitive information to someone with physical access to a locked device.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected multiple paths that could expose sensitive information to someone with physical access to a locked device.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-3-data-sandbox-privacy",
+          "title": "Sensitive-data, permission, and sandbox hardening",
+          "canonicalSummary": "The advisory documents fixes for inappropriate data access, privacy-preference bypasses, app enumeration, and sandbox escape paths.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The advisory documents fixes for inappropriate data access, privacy-preference bypasses, app enumeration, and sandbox escape paths.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-3-media-memory-processing",
+          "title": "Media and image-processing hardening",
+          "canonicalSummary": "Apple improved bounds and memory handling across audio, image, and other content-processing components.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple improved bounds and memory handling across audio, image, and other content-processing components.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-3-kernel-network-protections",
+          "title": "Kernel, privilege, and network protections",
+          "canonicalSummary": "The release addressed kernel stability, root-privilege, and privileged-network interception issues documented for supported devices.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release addressed kernel stability, root-privilege, and privileged-network interception issues documented for supported devices.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-3-webkit-hardening",
+          "title": "WebKit stability and tracking protections",
+          "canonicalSummary": "Apple documented WebKit fixes for denial of service, process crashes, and tracking through Safari web extensions.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented WebKit fixes for denial of service, process crashes, and tracking through Safari web extensions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-3-dyld-targeted-attack-context",
+          "title": "dyld memory-corruption fix with qualified attack context",
+          "canonicalSummary": "Apple fixed CVE-2026-20700 and said the underlying report concerned an extremely sophisticated attack against specific targeted individuals on versions before iOS 26; this entry does not claim exploitation of iOS 26.3.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed CVE-2026-20700 and said the underlying report concerned an extremely sophisticated attack against specific targeted individuals on versions before iOS 26; this entry does not claim exploitation of iOS 26.3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "dyld — CVE-2026-20700; Apple’s qualified exploitation statement"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-26-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPadOS 26.3 release was a security-heavy maintenance update with no itemized consumer feature list and a wide shared advisory.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/123074",
+          "locator": "iPadOS 26.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/126346",
+          "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-ipados-26-3-locked-device-privacy",
+          "title": "Locked-device privacy protections",
+          "canonicalSummary": "Apple corrected multiple paths that could expose sensitive information to someone with physical access to a locked device.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected multiple paths that could expose sensitive information to someone with physical access to a locked device.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-3-data-sandbox-privacy",
+          "title": "Sensitive-data, permission, and sandbox hardening",
+          "canonicalSummary": "The advisory documents fixes for inappropriate data access, privacy-preference bypasses, app enumeration, and sandbox escape paths.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The advisory documents fixes for inappropriate data access, privacy-preference bypasses, app enumeration, and sandbox escape paths.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-3-media-memory-processing",
+          "title": "Media and image-processing hardening",
+          "canonicalSummary": "Apple improved bounds and memory handling across audio, image, and other content-processing components.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple improved bounds and memory handling across audio, image, and other content-processing components.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-3-kernel-network-protections",
+          "title": "Kernel, privilege, and network protections",
+          "canonicalSummary": "The release addressed kernel stability, root-privilege, and privileged-network interception issues documented for supported devices.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release addressed kernel stability, root-privilege, and privileged-network interception issues documented for supported devices.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ios-ipados-26-3-webkit-hardening",
+          "title": "WebKit stability and tracking protections",
+          "canonicalSummary": "Apple documented WebKit fixes for denial of service, process crashes, and tracking through Safari web extensions.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented WebKit fixes for denial of service, process crashes, and tracking through Safari web extensions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126346",
+              "locator": "iOS 26.3 and iPadOS 26.3; released February 11, 2026"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:12:05Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

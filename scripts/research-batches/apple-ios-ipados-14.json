@@ -1,0 +1,3387 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-29",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/118390",
+      "title": "About iOS 14 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "14", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/108057",
+      "title": "About iPadOS 14 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iPadOS", "14", "consumer release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14-release-notes",
+      "title": "iOS & iPadOS 14 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["iOS", "iPadOS", "14.0", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_2-release-notes",
+      "title": "iOS & iPadOS 14.2 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["iOS", "iPadOS", "14.2", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_3-release-notes",
+      "title": "iOS & iPadOS 14.3 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["iOS", "iPadOS", "14.3", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_4-release-notes",
+      "title": "iOS & iPadOS 14.4 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["iOS", "iPadOS", "14.4", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_5-release-notes",
+      "title": "iOS & iPadOS 14.5 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["iOS", "iPadOS", "14.5", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_5_1-release-notes",
+      "title": "iOS & iPadOS 14.5.1 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["iOS", "iPadOS", "14.5.1", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_6-release-notes",
+      "title": "iOS & iPadOS 14.6 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["iOS", "iPadOS", "14.6", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_7-release-notes",
+      "title": "iOS & iPadOS 14.7 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["iOS", "iPadOS", "14.7", "SDK"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103198",
+      "title": "About the Security Content of iOS 14.0 and iPadOS 14.0",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "14.0", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103121",
+      "title": "About the Security Content of iOS 14.2 and iPadOS 14.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "14.2", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/102844",
+      "title": "About the Security Content of iOS 14.3 and iPadOS 14.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "14.3", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103123",
+      "title": "About the Security Content of iOS 14.4 and iPadOS 14.4",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "14.4", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103125",
+      "title": "About the Security Content of iOS 14.5 and iPadOS 14.5",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "14.5", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103067",
+      "title": "About the Security Content of iOS 14.5.1 and iPadOS 14.5.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "14.5.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103130",
+      "title": "About the Security Content of iOS 14.6 and iPadOS 14.6",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "14.6", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103139",
+      "title": "About the Security Content of iOS 14.7 and iPadOS 14.7",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "14.7", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103145",
+      "title": "About the Security Content of iOS 14.7.1 and iPadOS 14.7.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "14.7.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103150",
+      "title": "About the Security Content of iOS 14.8 and iPadOS 14.8",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "14.8", "security"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2020/09/ios-14-is-available-today/",
+      "title": "iOS 14 Is Available Today",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "topics": ["iOS", "14.0", "launch"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2020/06/ipados-14-introduces-new-features-designed-specifically-for-ipad/",
+      "title": "iPadOS 14 Introduces New Features Designed Specifically for iPad",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "topics": ["iPadOS", "14.0", "preview"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2020/12/apple-fitness-plus-the-future-of-fitness-launches-december-14/",
+      "title": "Apple Fitness+: The Future of Fitness Launches December 14",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "topics": ["iOS", "iPadOS", "14.3", "Apple Fitness+"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2021/04/ios-14-5-offers-unlock-iphone-with-apple-watch-diverse-siri-voices-and-more/",
+      "title": "iOS 14.5 Delivers Unlock iPhone with Apple Watch, More Diverse Siri Voice Options, and New Privacy Controls",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "topics": ["iOS", "14.5", "launch"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2021/04/apple-introduces-airtag/",
+      "title": "Apple Introduces AirTag",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "topics": ["iOS", "iPadOS", "14.5", "AirTag"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-ipados-14-6",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_6-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iPadOS 14.6 added Apple Card Family, paid Podcast subscriptions, and additional AirTag Lost Mode contact options. Voice Control could also unlock an iPad for the first time after a restart.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.6 — Apple Card Family, Podcasts, AirTag and Find My, and Accessibility"
+              }
+            ]
+          },
+          {
+            "text": "The maintenance portion addressed blank Reminders and Bluetooth call-routing problems, while Apple’s separate security bulletin covered media, networking, lock-screen, certificate, WebKit, and Wi-Fi vulnerabilities.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.6 — fixes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103130",
+                "locator": "iOS 14.6 and iPadOS 14.6 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.6"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103130",
+          "locator": "Released May 24, 2021"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_6-release-notes"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-14-5",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_5-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iPadOS 14.5 added AirTag and the wider Find My network, App Tracking Transparency, more inclusive emoji, additional Siri voices, redesigned Podcast discovery, and current-generation game-controller support.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.5 — AirTag and Find My, Emoji, Siri, Podcasts, Gaming, and Privacy"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2021/04/apple-introduces-airtag/",
+                "locator": "Software requirements"
+              }
+            ]
+          },
+          {
+            "text": "Fitness+ could stream to AirPlay 2 displays, Reminders gained sorting and printing, and Apple fixed documented problems across Messages, Mail, Safari, iCloud Keychain, and AirPods switching. Feature and accessory availability varied by device and region.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.5 — Fitness+, Reminders, and fixes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103125",
+                "locator": "iOS 14.5 and iPadOS 14.5 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.5"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103125",
+          "locator": "Released April 26, 2021"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_5-release-notes"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2021/04/apple-introduces-airtag/",
+          "locator": "Requires iPadOS 14.5 or later"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-14-4",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_4-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iPadOS 14.4 was a compact feature and reliability update. Camera could recognize smaller QR codes, and Bluetooth accessories could be classified so headphone audio notifications treated them appropriately.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.4 — improvements"
+              }
+            ]
+          },
+          {
+            "text": "Apple also corrected keyboard delay and wrong-language presentation in Messages. A much broader security bulletin documented changes across system storage, Bluetooth, media parsers, the kernel, WebKit, and other components.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.4 — fixes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103123",
+                "locator": "iOS 14.4 and iPadOS 14.4 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.4"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103123",
+          "locator": "Released January 26, 2021"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_4-release-notes"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-14-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_3-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iPadOS 14.3 enabled Apple Fitness+ on compatible iPads, added AirPods Max support, and introduced App Store privacy summaries supplied by developers. Photos gained Apple ProRAW editing and additional capture controls on supported models.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.3 — Fitness+, AirPods Max, Photos, and Privacy"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2020/12/apple-fitness-plus-the-future-of-fitness-launches-december-14/",
+                "locator": "Getting Started with Apple Fitness+"
+              }
+            ]
+          },
+          {
+            "text": "The TV app was reorganized, App Clip Codes could launch lightweight experiences, air-quality information expanded, and Apple fixed problems in Messages, Spotlight, Bluetooth, accessory setup, and VoiceOver.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.3 — TV app, App Clips, air quality, and fixes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102844",
+                "locator": "iOS 14.3 and iPadOS 14.3 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102844",
+          "locator": "Released December 14, 2020"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_3-release-notes"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2020/12/apple-fitness-plus-the-future-of-fitness-launches-december-14/",
+          "locator": "iPadOS 14.3 requirement"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-14-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_2-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iPadOS 14.2 added more than one hundred emoji, eight wallpapers, LiDAR-assisted people detection in Magnifier, and camera intelligence for the fourth-generation iPad Air. AirPods Pro gained optimized charging.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.2 — emoji, wallpapers, Magnifier, Camera, and AirPods"
+              }
+            ]
+          },
+          {
+            "text": "Home audio expanded through new AirPlay controls, Intercom, and HomePod home-theater support. Apple also corrected documented failures involving the camera, passcode keyboard, Reminders, Photos and Weather widgets, Voice Memos, Netflix playback, and Apple Cash.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.2 — AirPlay, Intercom, HomePod, and fixes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103121",
+                "locator": "iOS 14.2 and iPadOS 14.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103121",
+          "locator": "Released November 5, 2020"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_2-release-notes"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-14-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/108057",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iPadOS 14.1 added 10-bit HDR video playback and editing in Photos on supported iPad models. The remainder of Apple’s public note was a focused set of interface, Mail, media, and managed-file fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.1"
+              }
+            ]
+          },
+          {
+            "text": "Apple fixed undersized Home Screen items, incorrect Mail aliases, intermittent Music library additions, temporarily reduced streaming resolution, and a Files problem that could mark MDM-managed cloud content unavailable. Apple did not publish a dedicated 14.1 security bulletin or developer release-note page in the source set reviewed.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14.1 — improvements and bug fixes"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-14-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iPadOS 14 redesigned app sidebars, toolbars, search, calls, and Siri to preserve more workspace on the iPad’s larger display. Widgets and Smart Stacks added glanceable information without displacing the platform’s app-centered Home Screen model.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14 — Redesigned Experience, Widgets, and Compact Design"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2020/06/ipados-14-introduces-new-features-designed-specifically-for-ipad/",
+                "locator": "Redesigned apps and system interactions"
+              }
+            ]
+          },
+          {
+            "text": "Apple Pencil became a text-input tool through Scribble, while Notes added shape recognition, Smart Selection, and handwriting-aware editing. The release also expanded privacy controls, Maps, Messages, Safari, Home, AirPods, augmented reality, and accessibility.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/108057",
+                "locator": "iPadOS 14 — Scribble, Notes, Privacy, and additional features"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103198",
+                "locator": "iOS 14.0 and iPadOS 14.0 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103198",
+          "locator": "Released September 16, 2020"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14-release-notes"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2020/06/ipados-14-introduces-new-features-designed-specifically-for-ipad/",
+          "locator": "iPadOS 14 preview"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14 reshaped the iPhone Home Screen with resizable widgets, Smart Stacks, and the App Library. Compact calls and Siri, plus Picture in Picture, reduced the number of system interactions that completely replaced the current app.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14 — Widgets, App Library, and Compact Design"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2020/09/ios-14-is-available-today/",
+                "locator": "Redesigned Home Screen Pages and Compact Design"
+              }
+            ]
+          },
+          {
+            "text": "Messages gained pinned threads, mentions, and inline replies; Maps added cycling, EV routing, and Guides; App Clips exposed small task-focused app experiences; and expanded privacy controls made location, photo, microphone, camera, and tracking behavior more visible.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14 — Messages, Maps, App Clips, and Privacy"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103198",
+                "locator": "iOS 14.0 and iPadOS 14.0 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103198",
+          "locator": "Released September 16, 2020"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14-release-notes"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2020/09/ios-14-is-available-today/",
+          "locator": "Available September 16, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-0-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118390",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.0.1 was a focused early-maintenance release. Its most visible correction stopped a restart from resetting the user’s chosen default browser and mail apps.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.0.1 — default browser and mail"
+              }
+            ]
+          },
+          {
+            "text": "Apple also fixed missing camera previews on iPhone 7 models, Wi-Fi connection failures, outgoing mail failures with some providers, and images missing from the News widget. No dedicated Apple security bulletin or developer release-note page was found for this version.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.0.1 — complete fix list"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.0.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118390",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.1 added 10-bit HDR playback and editing in Photos on iPhone 8 and later. Most of the release was a detailed reliability pass across the Home Screen, Mail, calls, Calculator, media, Apple Watch setup, Files, and Wi-Fi.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.1"
+              }
+            ]
+          },
+          {
+            "text": "The public note identifies each affected workflow rather than announcing a broader platform feature set. Apple did not publish a dedicated 14.1 security bulletin or developer release-note page in the first-party source set reviewed.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.1 — complete published note"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_2-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.2 added more than one hundred emoji, eight wallpapers, LiDAR-assisted people detection in Magnifier, MagSafe Leather Sleeve support, AirPods Pro optimized charging, and headphone-level notifications.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.2 — emoji, wallpapers, Magnifier, MagSafe, AirPods, and hearing"
+              }
+            ]
+          },
+          {
+            "text": "Home audio expanded through AirPlay controls, Intercom, and HomePod home-theater output. Apple also fixed a wide reliability set spanning the camera, passcode entry, widgets, Voice Memos, Netflix, Apple Cash, Apple Watch, CarPlay, charging, gaming, and Exposure Notifications.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.2 — AirPlay, Intercom, HomePod, and fixes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103121",
+                "locator": "iOS 14.2 and iPadOS 14.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103121",
+          "locator": "Released November 5, 2020"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_2-release-notes"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_3-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.3 launched Apple Fitness+, added AirPods Max support, and enabled Apple ProRAW capture on iPhone 12 Pro models. App Store pages also began displaying developer-reported privacy summaries.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.3 — Fitness+, AirPods Max, Photos, and Privacy"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2020/12/apple-fitness-plus-the-future-of-fitness-launches-december-14/",
+                "locator": "Fitness+ requires iOS 14.3"
+              }
+            ]
+          },
+          {
+            "text": "The TV app gained a dedicated Apple TV+ tab and revised search, App Clip Codes became camera-launchable, air-quality information expanded, and Apple corrected messaging, Spotlight, Bluetooth, charging, accessory-setup, and VoiceOver problems.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.3 — TV app, App Clips, air quality, and fixes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102844",
+                "locator": "iOS 14.3 and iPadOS 14.3 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102844",
+          "locator": "Released December 14, 2020"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_3-release-notes"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2020/12/apple-fitness-plus-the-future-of-fitness-launches-december-14/",
+          "locator": "Launch date and requirements"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-4",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_4-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.4 improved recognition of small QR codes, let users classify Bluetooth device types for accurate headphone notifications, and warned iPhone 12 owners when the system could not verify a replacement camera as a genuine Apple part.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.4 — improvements"
+              }
+            ]
+          },
+          {
+            "text": "The release fixed HDR photo artifacts, stale Fitness widget data, keyboard delay and language selection, interrupted News audio in CarPlay, and a Switch Control path that could block answering calls from the Lock Screen. Its security bulletin included actively exploited kernel and WebKit issues.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.4 — fixes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103123",
+                "locator": "Kernel and WebKit exploitation notices"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.4"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103123",
+          "locator": "Released January 26, 2021"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_4-release-notes"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-5",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_5-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.5 let Face ID iPhones unlock through a nearby authenticated Apple Watch while the wearer used a face mask, introduced AirTag and Precision Finding, expanded Siri voices and hands-free calling, and added more representative emoji choices.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.5 — Unlock iPhone with Apple Watch, AirTag, Emoji, and Siri"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2021/04/ios-14-5-offers-unlock-iphone-with-apple-watch-diverse-siri-voices-and-more/",
+                "locator": "Unlock, Siri, and Emoji"
+              }
+            ]
+          },
+          {
+            "text": "App Tracking Transparency required permission before covered cross-company tracking, while Podcasts, Maps, Reminders, 5G, gaming, Fitness+, and CarPlay gained additions. Apple also documented fixes across communications, Safari, Keychain, battery reporting, displays, and AirPods switching.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.5 — Privacy, Podcasts, 5G, and fixes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103125",
+                "locator": "iOS 14.5 and iPadOS 14.5 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.5"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103125",
+          "locator": "Released April 26, 2021"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_5-release-notes"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2021/04/ios-14-5-offers-unlock-iphone-with-apple-watch-diverse-siri-voices-and-more/",
+          "locator": "Available April 26, 2021"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-5-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_5_1-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.5.1 corrected an App Tracking Transparency state problem: people who had disabled and later re-enabled requests could fail to receive tracking prompts from apps.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.5.1"
+              }
+            ]
+          },
+          {
+            "text": "The security update fixed two WebKit vulnerabilities that could allow code execution through malicious web content. Apple said both issues may have been actively exploited, making this more than a routine prompt-state patch.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103067",
+                "locator": "WebKit; CVE-2021-30665 and CVE-2021-30663"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.5.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103067",
+          "locator": "Released May 3, 2021"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_5_1-release-notes"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-6",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_6-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.6 introduced Apple Card Family, paid subscriptions in Podcasts, more flexible AirTag Lost Mode contact details, and first-unlock-after-restart support for Voice Control.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.6 — Apple Card Family, Podcasts, AirTag and Find My, and Accessibility"
+              }
+            ]
+          },
+          {
+            "text": "Apple fixed Unlock with Apple Watch, blank Reminders, missing call-blocking extensions, Bluetooth call routing, and reduced startup performance. Developer notes separately document the startup fix and SKAdNetwork 3.0 multi-network postbacks.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.6 — fixes"
+              },
+              {
+                "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_6-release-notes",
+                "locator": "General and SKAdNetwork"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103130",
+                "locator": "iOS 14.6 and iPadOS 14.6 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.6"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103130",
+          "locator": "Released May 24, 2021"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_6-release-notes"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-7",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_7-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.7 added MagSafe Battery Pack support for the iPhone 12 family, Apple Card Family account co-ownership, HomePod timer management from Home, and air-quality data in more countries.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.7 — improvements"
+              }
+            ]
+          },
+          {
+            "text": "Podcasts could filter between all and followed shows, while Apple corrected playlist sharing, Apple Music lossless and Dolby Atmos playback, an iPhone 11 battery-service message, and Braille output in Mail. A separate security bulletin covered privacy, media, kernel, WebKit, and Wi-Fi issues.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.7 — Podcasts and fixes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103139",
+                "locator": "iOS 14.7 security content; released July 19, 2021"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.7"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103139",
+          "locator": "iOS 14.7 released July 19, 2021"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_7-release-notes"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-7-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118390",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.7.1 fixed a specific ecosystem regression: Touch ID iPhones could again unlock a paired Apple Watch through the Unlock with iPhone feature.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.7.1"
+              }
+            ]
+          },
+          {
+            "text": "The same release addressed an IOMobileFrameBuffer memory-corruption vulnerability that could permit kernel-level code execution. Apple said it may have been actively exploited.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103145",
+                "locator": "IOMobileFrameBuffer; CVE-2021-30807"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.7.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103145",
+          "locator": "Released July 26, 2021"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-8",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118390",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 14.8 was a security-focused maintenance release. Apple’s consumer note contains no itemized feature or bug-fix list beyond recommending the security update.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118390",
+                "locator": "iOS 14.8 — complete published note"
+              }
+            ]
+          },
+          {
+            "text": "The security bulletin provides the concrete release story: it includes an actively exploited CoreGraphics path from a malicious PDF to code execution and an actively exploited WebKit use-after-free from malicious web content, among other corrections.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103150",
+                "locator": "CoreGraphics CVE-2021-30860 and WebKit CVE-2021-30858"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.8"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103150",
+          "locator": "Released September 13, 2021"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-14-6",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPadOS 14.6 release combined Apple Card Family, Podcast subscriptions, AirTag and accessibility additions, targeted reliability fixes, and a separately documented security update.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.6"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103130",
+          "locator": "Released May 24, 2021"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-14-6-apple-card-family",
+          "title": "Apple Card Family",
+          "canonicalSummary": "Apple Card accounts could be shared with eligible Family Sharing members using spending controls and shared expense visibility.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple Card Family supported sharing with up to five eligible family members, optional spending controls, expense tracking, and shared credit-building workflows.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.6 — Apple Card Family"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-6-podcast-subscriptions",
+          "title": "Podcast channel and show subscriptions",
+          "canonicalSummary": "Apple Podcasts added paid subscription support for participating channels and individual shows.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Listeners could subscribe to eligible Podcast channels or individual shows through the redesigned service.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.6 — Podcasts"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-6-airtag-lost-mode-email",
+          "title": "AirTag Lost Mode email contact",
+          "canonicalSummary": "Lost Mode could show an email address instead of requiring a phone number for AirTag and Find My network accessories.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Owners could choose an email address as their Lost Mode contact detail for an AirTag or compatible Find My network accessory.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.6 — AirTag and Find My"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-6-voice-control-first-unlock",
+          "title": "Voice Control first unlock after restart",
+          "canonicalSummary": "Voice Control users could unlock an iPad after restart without first completing a touch-based unlock.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The accessibility update allowed a Voice Control user to complete the first unlock after restarting an iPad using only their voice.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.6 — Accessibility"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-6-reminders-bluetooth-call-fixes",
+          "title": "Reminders and Bluetooth call fixes",
+          "canonicalSummary": "Maintenance work corrected blank Reminders rows and Bluetooth disconnections or incorrect audio routing during calls.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed Reminders entries that could appear as blank lines and Bluetooth devices that could disconnect or send call audio to a different device.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.6 — fixes"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-14-5",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPadOS 14.5 release added AirTag, tracking controls, Siri and emoji options, Podcast and controller updates, Fitness+ streaming, and a broad reliability pass.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.5"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103125",
+          "locator": "Released April 26, 2021"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-14-5-airtag-find-my-network",
+          "title": "AirTag and expanded Find My network",
+          "canonicalSummary": "iPadOS added setup, locating, sound playback, and Lost Mode support for AirTag through the Find My ecosystem.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The Find My app could configure and locate AirTag accessories, play their built-in sound, use the wider Find My network, and provide Lost Mode contact details.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.5 — AirTag and Find My"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2021/04/apple-introduces-airtag/",
+              "locator": "Find My and software requirements"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-5-app-tracking-transparency",
+          "title": "App Tracking Transparency",
+          "canonicalSummary": "Covered apps had to request permission before tracking activity across other companies’ apps and websites or accessing the advertising identifier.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "App Tracking Transparency added a system permission prompt and Settings controls for covered cross-company tracking and advertising-identifier access.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.5 — Privacy"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-5-emoji-siri-options",
+          "title": "Expanded emoji and Siri voice options",
+          "canonicalSummary": "The update added individual skin tones for couple emoji, new emoji designs, and a wider selection of Siri voices.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Couple emoji gained separate skin-tone choices, additional faces and symbols arrived, and Siri offered more diverse voice options alongside call announcement features.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.5 — Emoji and Siri"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-5-podcasts-library-discovery",
+          "title": "Podcast library and discovery redesign",
+          "canonicalSummary": "Apple Podcasts reorganized show pages, episode saving, downloads, search categories, and per-show settings.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Redesigned show pages, automatic Library placement for saved episodes, per-show download controls, Top Charts, and category discovery changed how listeners managed Podcasts.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.5 — Podcasts"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-5-game-controllers-fitness-airplay",
+          "title": "Current controllers and Fitness+ AirPlay",
+          "canonicalSummary": "iPad added support for Xbox Series and PlayStation 5 controllers and could stream Fitness+ workouts through AirPlay 2.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Xbox Series X|S and Sony DualSense controllers became compatible, while Fitness+ audio and video could play on supported AirPlay 2 televisions and devices.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.5 — Gaming and Fitness+"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-5-communications-cloud-airpods-fixes",
+          "title": "Communications, cloud, and AirPods fixes",
+          "canonicalSummary": "A grouped reliability pass addressed Messages, Mail, Safari tabs, iCloud Keychain, Reminders, and AirPods switching.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected obscured or unsent Messages, Mail refresh failures, missing iCloud Tabs, Keychain state problems, early Siri reminders, and incorrect or noisy AirPods automatic switching.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.5 — fixes"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-14-4",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPadOS 14.4 release improved QR and Bluetooth handling and corrected two documented keyboard problems.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.4"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103123",
+          "locator": "Released January 26, 2021"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-14-4-small-qr-recognition",
+          "title": "Smaller QR code recognition",
+          "canonicalSummary": "Camera recognition was improved so smaller QR codes could be detected more reliably.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Camera app gained documented support for recognizing smaller QR codes.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.4 — Camera"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-4-bluetooth-device-classification",
+          "title": "Bluetooth device-type classification",
+          "canonicalSummary": "Users could identify a connected Bluetooth accessory type so headphone audio notifications were applied appropriately.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "A Settings control classified Bluetooth device types, helping the system distinguish headphones when calculating audio exposure notifications.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.4 — Bluetooth"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-4-keyboard-delay-suggestions",
+          "title": "Keyboard delay and suggestion fix",
+          "canonicalSummary": "Typing responsiveness and word-suggestion presentation were corrected in the documented failure case.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed an issue in which typing could be delayed and predictive word suggestions might not appear.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.4 — keyboard delay"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-4-messages-keyboard-language",
+          "title": "Messages keyboard-language fix",
+          "canonicalSummary": "Messages presented the keyboard in the expected language after the update.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release corrected a condition in which the keyboard could appear in the wrong language inside Messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.4 — Messages keyboard"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-14-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPadOS 14.3 release launched Fitness+, added AirPods Max and privacy-label support, expanded Photos and TV, and made App Clip Codes directly scannable.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102844",
+          "locator": "Released December 14, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-14-3-apple-fitness-plus",
+          "title": "Apple Fitness+",
+          "canonicalSummary": "Compatible iPads could browse and play the new Apple Watch-linked Fitness+ workout subscription.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "A downloadable Fitness app brought Fitness+ workout browsing, trainers, recommendations, and ten launch workout types to supported iPads paired through the user’s Apple ecosystem.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.3 — Apple Fitness+"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2020/12/apple-fitness-plus-the-future-of-fitness-launches-december-14/",
+              "locator": "Getting Started with Apple Fitness+"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-3-airpods-max-support",
+          "title": "AirPods Max support",
+          "canonicalSummary": "iPadOS added full support for AirPods Max listening modes, adaptive audio behavior, and spatial audio.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "AirPods Max worked with iPad across high-fidelity playback, Adaptive EQ, noise cancellation, Transparency mode, and spatial audio with dynamic head tracking.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.3 — AirPods Max"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-3-photos-proraw-video-controls",
+          "title": "Photos ProRAW editing and capture controls",
+          "canonicalSummary": "Photos could edit Apple ProRAW images, and supported iPads gained additional video-rate and front-camera mirroring controls.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple ProRAW editing joined Photos, alongside 25-fps video recording and mirrored front-camera stills on the supported iPad models Apple listed.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.3 — Photos"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-3-app-store-privacy-labels",
+          "title": "App Store privacy summaries",
+          "canonicalSummary": "App Store product pages displayed developer-reported summaries of an app’s privacy practices.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "A new App Store section summarized privacy practices reported by each app’s developer before download.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.3 — Privacy"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-3-tv-app-redesign",
+          "title": "TV app Apple TV+ tab and search",
+          "canonicalSummary": "The TV app gained a dedicated Apple TV+ destination and broader, more contextual search.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "A new Apple TV+ tab, category browsing, recent searches, suggestions, and cross-catalog result ranking revised TV discovery.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.3 — TV app"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-3-app-clip-code-scanning",
+          "title": "App Clip Code scanning",
+          "canonicalSummary": "Apple-designed App Clip Codes could launch lightweight app experiences from Camera or Control Center.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Camera and Control Center gained support for scanning Apple’s visual App Clip Codes and opening the associated App Clip.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.3 — App Clips"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-14-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPadOS 14.2 release added emoji, wallpapers, device-specific camera intelligence, AirPods charging, connected-home audio features, and a broad group of reliability fixes.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103121",
+          "locator": "Released November 5, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-14-2-emoji-wallpapers",
+          "title": "New emoji and wallpapers",
+          "canonicalSummary": "The system added more than one hundred emoji and eight wallpapers with light and dark variants.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Animals, food, faces, objects, instruments, gender-inclusive designs, and other emoji joined eight new wallpapers that adapted to light or dark appearance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.2 — emoji and wallpapers"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-2-magnifier-people-detection",
+          "title": "Magnifier people detection",
+          "canonicalSummary": "Magnifier used LiDAR on supported iPad Pro models to detect nearby people and estimate their distance.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "People Detection in Magnifier reported how far away nearby people were on LiDAR-equipped iPad Pro models.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.2 — Magnifier"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-2-ipad-air-camera-intelligence",
+          "title": "iPad Air camera Scene Detection and Auto FPS",
+          "canonicalSummary": "The fourth-generation iPad Air gained automatic scene optimization and adaptive video frame-rate behavior.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Scene Detection recognized subjects and adjusted photos, while Auto FPS could lower the recording frame rate for low light and smaller files on iPad Air 4.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.2 — Camera"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-2-airpods-pro-optimized-charging",
+          "title": "AirPods Pro optimized charging",
+          "canonicalSummary": "AirPods Pro charging behavior reduced time spent fully charged to slow long-term battery aging.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Optimized battery charging learned usage patterns and delayed full AirPods Pro charging when appropriate.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.2 — AirPods Pro"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-2-airplay-intercom-homepod-theater",
+          "title": "AirPlay, Intercom, and HomePod home theater",
+          "canonicalSummary": "Connected-home audio gained new AirPlay controls, household Intercom, and HomePod theater output for Apple TV 4K.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "New AirPlay controls managed playback around the home, Intercom sent spoken messages across supported devices, and HomePod could provide stereo, surround, and Dolby Atmos sound for Apple TV 4K.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.2 — AirPlay, Intercom, and HomePod"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-2-camera-passcode-widgets-media-fixes",
+          "title": "Camera, passcode, widgets, and media fixes",
+          "canonicalSummary": "A grouped reliability pass corrected black camera previews, missed passcode touches, stale widgets, interrupted recordings, and black video playback.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a black Camera viewfinder, missed Lock Screen keyboard touches, Reminders timing, Photos and Weather widgets, Voice Memos interruptions, black Netflix playback, and Siri Apple Cash failures.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.2 — fixes"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-14-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPadOS 14.1 release added HDR media support on listed iPads and corrected Home Screen, Mail, Music, streaming, and managed Files behavior.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-14-1-hdr-playback-editing",
+          "title": "10-bit HDR playback and editing",
+          "canonicalSummary": "Supported iPad models could play and edit 10-bit HDR video in Photos.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple added 10-bit HDR playback and Photos editing to the specific iPad Pro, iPad Air, and iPad mini generations listed in its release note.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.1 — 10-bit HDR"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-1-home-screen-item-sizing",
+          "title": "Home Screen item-size fix",
+          "canonicalSummary": "Widgets, folders, and icons returned to their intended Home Screen size.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update addressed a condition in which Home Screen widgets, folders, and icons appeared smaller than intended.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.1 — Home Screen"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-1-mail-alias",
+          "title": "Mail sender-alias fix",
+          "canonicalSummary": "Mail used the selected sending identity instead of an incorrect account alias.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected some outgoing messages that were sent from the wrong Mail alias.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.1 — Mail"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-1-music-library-additions",
+          "title": "Music library-addition fix",
+          "canonicalSummary": "Albums and playlists no longer intermittently blocked adding or downloading songs to the user’s library.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release fixed an intermittent failure to download or add tracks while viewing an album or playlist.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.1 — Music"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-1-streaming-video-resolution",
+          "title": "Streaming video resolution fix",
+          "canonicalSummary": "Streaming video no longer began at an unexpectedly reduced resolution in the documented case.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple resolved a temporary drop in streaming-video resolution at the beginning of playback.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.1 — streaming video"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-1-mdm-files-availability",
+          "title": "Managed Files availability fix",
+          "canonicalSummary": "Files correctly represented content from affected MDM-managed cloud service providers as available.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Files app no longer incorrectly marked some content from MDM-managed cloud providers as unavailable.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14.1 — Files"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-14-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPadOS 14 release redesigned system and app navigation, deepened Apple Pencil handwriting support, expanded search and compact interactions, and added new privacy controls.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/108057",
+          "locator": "iPadOS 14"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103198",
+          "locator": "Released September 16, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-14-redesigned-app-navigation",
+          "title": "Redesigned app navigation",
+          "canonicalSummary": "Sidebars, pull-down menus, date pickers, and toolbars exposed more app functionality without obscuring the main workspace.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple redesigned sidebars and navigation controls across supported apps so more commands and hierarchy remained visible in the iPad’s larger layout.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14 — Redesigned Experience"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-widgets-smart-stacks",
+          "title": "Widgets and Smart Stacks",
+          "canonicalSummary": "Redesigned widgets came in multiple sizes and could be combined into intelligent or user-defined stacks.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Small, medium, and large widgets displayed varying information density, while Smart Stacks used on-device context to surface a likely relevant widget.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14 — Widgets"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-scribble-apple-pencil",
+          "title": "Scribble with Apple Pencil",
+          "canonicalSummary": "Apple Pencil handwriting became direct text input across fields, with on-device conversion and editing gestures.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Scribble let users write into text fields, automatically converted handwriting to typed text, recognized addresses and numbers, and supported scratch-out and selection gestures.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14 — Scribble"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-notes-handwriting-intelligence",
+          "title": "Notes handwriting intelligence",
+          "canonicalSummary": "Notes added shape recognition, Smart Selection, handwriting-aware copy and paste, and automatic spacing.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Hand-drawn shapes could snap into precise forms, handwriting could be selected like typed text, and copied handwriting could be pasted as text into another app.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14 — Notes"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-compact-search-calls-siri",
+          "title": "Compact search, calls, and Siri",
+          "canonicalSummary": "System search, incoming calls, and Siri interactions used smaller presentations that preserved the current app context.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "A compact search field could find and launch content, calls appeared as banners, and Siri results occupied less of the display instead of fully covering the current workspace.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14 — Compact Design and Search"
+            }
+          ]
+        },
+        {
+          "key": "ipados-14-privacy-controls-indicators",
+          "title": "Expanded location, photo, camera, and microphone privacy",
+          "canonicalSummary": "New privacy controls narrowed location and photo access and made camera or microphone use more visible.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Users could share approximate location or selected photos, while status indicators and Control Center disclosure made recent microphone and camera access visible.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/108057",
+              "locator": "iPadOS 14 — Privacy"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14 release rebuilt Home Screen organization, reduced disruptive system UI, expanded Messages and Maps, introduced App Clips, and made app access to sensitive data more visible.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103198",
+          "locator": "Released September 16, 2020"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2020/09/ios-14-is-available-today/",
+          "locator": "Available today"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-home-screen-widgets-app-library",
+          "title": "Home Screen widgets and App Library",
+          "canonicalSummary": "Resizable Home Screen widgets, Smart Stacks, and an automatically organized App Library changed how iPhone apps and information were arranged.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Widgets could sit among apps in multiple sizes or stacks, while App Library grouped every installed app and allowed users to hide Home Screen pages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14 — All-new widgets and App Library"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2020/09/ios-14-is-available-today/",
+              "locator": "Redesigned Home Screen Pages"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-compact-ui-picture-in-picture",
+          "title": "Compact calls and Siri with Picture in Picture",
+          "canonicalSummary": "Calls and Siri stopped monopolizing the screen, while Picture in Picture kept supported video or FaceTime visible over other apps.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Phone and FaceTime calls appeared as banners, Siri used a compact overlay, and Picture in Picture enabled supported video or FaceTime calls during other tasks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14 — Compact design"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2020/09/ios-14-is-available-today/",
+              "locator": "All-New Compact Design for Incoming Calls and Siri"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-messages-pins-mentions-replies",
+          "title": "Pinned conversations, mentions, and inline replies",
+          "canonicalSummary": "Messages made priority threads and busy groups easier to navigate through pins, mentions, and message-level replies.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Up to nine conversations could be pinned, group participants could be mentioned directly, and inline replies created focused subthreads around a particular message.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14 — Messages"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-maps-cycling-ev-guides",
+          "title": "Maps cycling, EV routing, and Guides",
+          "canonicalSummary": "Maps added cycling routes, charging-aware electric vehicle navigation, and curated city recommendations.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Cycling directions considered bike infrastructure and elevation, supported EV routes added charging stops, and Guides collected recommendations from selected publishers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14 — Maps"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-app-clips",
+          "title": "App Clips",
+          "canonicalSummary": "Developers could expose a small, task-focused part of an app that opened quickly without installing the full product first.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "App Clips launched from NFC tags, QR codes, Messages, Maps, or Safari for immediate tasks and could later lead to the full App Store download.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14 — App Clips"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2020/09/ios-14-is-available-today/",
+              "locator": "App Clips Bring New Ways to Discover and Use Apps"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-privacy-controls-indicators",
+          "title": "Expanded location, photo, camera, and microphone privacy",
+          "canonicalSummary": "New controls narrowed location and photo access and made camera or microphone use more visible to the user.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Users could grant approximate location or selected-photo access, while status indicators and Control Center history exposed camera and microphone use more clearly.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14 — Privacy"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2020/09/ios-14-is-available-today/",
+              "locator": "More Transparency and Control with Expanded Privacy Features"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-0-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.0.1 release corrected default-app persistence and four early reliability problems involving camera preview, Wi-Fi, Mail, and the News widget.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.0.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-0-1-default-browser-mail-persistence",
+          "title": "Default browser and mail persistence",
+          "canonicalSummary": "Restarting an iPhone no longer reset the user’s selected default browser and mail applications.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update fixed a restart regression that reverted third-party default browser and mail choices.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.0.1 — default browser and mail"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-0-1-iphone-7-camera-preview",
+          "title": "iPhone 7 camera-preview fix",
+          "canonicalSummary": "Camera preview display was restored on affected iPhone 7 and iPhone 7 Plus devices.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected a condition that could prevent the camera preview from appearing on iPhone 7 models.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.0.1 — Camera"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-0-1-wifi-connection",
+          "title": "Wi-Fi connection fix",
+          "canonicalSummary": "Affected iPhones could connect to Wi-Fi networks again after the update.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release fixed a documented issue that could prevent an iPhone from joining Wi-Fi networks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.0.1 — Wi-Fi"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-0-1-mail-provider-sending",
+          "title": "Mail provider sending fix",
+          "canonicalSummary": "Mail sending succeeded again with providers affected by the documented compatibility problem.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple resolved a failure that could prevent outgoing email through some mail providers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.0.1 — Mail"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-0-1-news-widget-images",
+          "title": "News widget image fix",
+          "canonicalSummary": "Images returned to News widget stories in the affected presentation state.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update addressed a problem that could leave images missing from the News widget.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.0.1 — News widget"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.1 release added HDR media support and corrected interface sizing, Mail, calls, Calculator, streaming, Apple Watch, Files, and Wi-Fi behavior.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-1-hdr-playback-editing",
+          "title": "10-bit HDR playback and editing",
+          "canonicalSummary": "iPhone 8 and later could play and edit 10-bit HDR video in Photos.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple added 10-bit HDR playback and Photos editing on supported iPhones beginning with iPhone 8.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.1 — 10-bit HDR"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-1-home-screen-layout-fixes",
+          "title": "Home Screen sizing and folder-layout fixes",
+          "canonicalSummary": "Home Screen items returned to their expected size and dragging widgets no longer removed apps from folders.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed undersized widgets, folders, and icons plus a drag-and-drop issue that could pull apps out of folders while moving a widget.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.1 — Home Screen"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-1-mail-alias-call-region",
+          "title": "Mail alias and call-region fixes",
+          "canonicalSummary": "Mail used the correct sender alias and incoming calls displayed region information in the documented cases.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release corrected emails sent from an unintended alias and incoming calls that omitted region information.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.1 — Mail and incoming calls"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-1-calculator-zeroes",
+          "title": "Calculator zero-display fix",
+          "canonicalSummary": "Calculator displayed zero digits correctly after the update.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a Calculator issue that could prevent zeroes from appearing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.1 — Calculator"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-1-streaming-video-resolution",
+          "title": "Streaming video resolution fix",
+          "canonicalSummary": "Streaming video no longer began at an unexpectedly reduced resolution in the documented case.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple resolved a temporary drop in streaming-video resolution at the beginning of playback.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.1 — streaming video"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-1-watch-files-wifi-compatibility",
+          "title": "Apple Watch, managed Files, and Wi-Fi fixes",
+          "canonicalSummary": "Family Setup, Apple Watch case labeling, MDM-managed Files, and Ubiquiti Wi-Fi compatibility received targeted corrections.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update fixed some family-member Watch setups, incorrect Watch case material, cloud content shown unavailable in managed Files, and compatibility with Ubiquiti access points.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.1 — Apple Watch, Files, and Wi-Fi"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.2 release added emoji, wallpapers, LiDAR and MagSafe features, hearing and AirPods improvements, connected-home audio, and extensive reliability corrections.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103121",
+          "locator": "Released November 5, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-2-emoji-wallpapers",
+          "title": "New emoji and wallpapers",
+          "canonicalSummary": "The system added more than one hundred emoji and eight wallpapers with light and dark variants.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Animals, food, faces, objects, instruments, gender-inclusive designs, and other emoji joined eight new wallpapers that adapted to light or dark appearance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.2 — emoji and wallpapers"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-2-magnifier-people-detection",
+          "title": "Magnifier people detection",
+          "canonicalSummary": "Magnifier used LiDAR on iPhone 12 Pro models to detect nearby people and estimate their distance.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "People Detection in Magnifier reported how far away nearby people were on LiDAR-equipped iPhone 12 Pro and Pro Max models.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.2 — Magnifier"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-2-magsafe-sleeve-support",
+          "title": "iPhone 12 Leather Sleeve with MagSafe support",
+          "canonicalSummary": "iOS added compatibility for Apple’s Leather Sleeve with MagSafe on the iPhone 12 family.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The update recognized and supported the iPhone 12 Leather Sleeve with MagSafe accessory.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.2 — MagSafe"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-2-airpods-charging-hearing-alerts",
+          "title": "AirPods optimized charging and hearing alerts",
+          "canonicalSummary": "AirPods Pro charging reduced time at full capacity, and headphone notifications warned about potentially harmful audio exposure.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Optimized AirPods Pro charging aimed to slow battery aging, while audio-level notifications alerted users when listening exposure could affect hearing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.2 — AirPods and headphone audio"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-2-airplay-intercom-homepod-theater",
+          "title": "AirPlay, Intercom, and HomePod home theater",
+          "canonicalSummary": "Connected-home audio gained new AirPlay controls, household Intercom, and HomePod theater output for Apple TV 4K.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "New AirPlay controls managed playback around the home, Intercom sent spoken messages across supported devices, and HomePod could provide stereo, surround, and Dolby Atmos sound for Apple TV 4K.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.2 — AirPlay, Intercom, and HomePod"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-2-system-media-watch-fixes",
+          "title": "System, media, and Apple Watch reliability fixes",
+          "canonicalSummary": "A broad maintenance pass covered app order, camera preview, passcode input, widgets, recordings, streaming, Watch data, CarPlay, charging, games, and Exposure Notifications.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected numerous release-specific failures across the Home Screen, Camera, Lock Screen keyboard, Reminders, widgets, Voice Memos, Netflix, Apple Cash, Apple Watch, CarPlay, wireless charging, game frame rates, and Exposure Notifications migration.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.2 — fixes"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.3 release launched Fitness+, added AirPods Max and ProRAW support, introduced App Store privacy summaries, and revised TV and App Clip discovery.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102844",
+          "locator": "Released December 14, 2020"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2020/12/apple-fitness-plus-the-future-of-fitness-launches-december-14/",
+          "locator": "Launch date"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-3-apple-fitness-plus",
+          "title": "Apple Fitness+",
+          "canonicalSummary": "The Fitness app gained Apple Watch-linked studio workouts, trainer guidance, recommendations, and workout metrics.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Fitness+ launched with ten workout categories and integrated supported Apple Watch metrics into guided workouts on iPhone.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.3 — Apple Fitness+"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2020/12/apple-fitness-plus-the-future-of-fitness-launches-december-14/",
+              "locator": "Getting Started with Apple Fitness+"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-3-airpods-max-support",
+          "title": "AirPods Max support",
+          "canonicalSummary": "iOS added full support for AirPods Max listening modes, adaptive audio behavior, and spatial audio.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "AirPods Max worked with iPhone across high-fidelity playback, Adaptive EQ, noise cancellation, Transparency mode, and spatial audio with dynamic head tracking.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.3 — AirPods Max"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-3-apple-proraw",
+          "title": "Apple ProRAW capture and editing",
+          "canonicalSummary": "iPhone 12 Pro models could capture Apple ProRAW images and edit them in Photos.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple ProRAW combined computational photography with a raw image workflow on iPhone 12 Pro and Pro Max, with editing available in Photos.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.3 — Photos and Apple ProRAW"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-3-app-store-privacy-labels",
+          "title": "App Store privacy summaries",
+          "canonicalSummary": "App Store product pages displayed developer-reported summaries of an app’s privacy practices.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "A new App Store section summarized privacy practices reported by each app’s developer before download.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.3 — Privacy"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-3-tv-app-redesign",
+          "title": "TV app Apple TV+ tab and search",
+          "canonicalSummary": "The TV app gained a dedicated Apple TV+ destination and broader, more contextual search.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "A new Apple TV+ tab, category browsing, recent searches, suggestions, and cross-catalog result ranking revised TV discovery.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.3 — TV app"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-3-app-clip-code-scanning",
+          "title": "App Clip Code scanning",
+          "canonicalSummary": "Apple-designed App Clip Codes could launch lightweight app experiences from Camera or Control Center.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Camera and Control Center gained support for scanning Apple’s visual App Clip Codes and opening the associated App Clip.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.3 — App Clips"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-4",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.4 release improved QR and Bluetooth handling, added camera-component verification on iPhone 12 models, and corrected several documented display, input, CarPlay, and accessibility problems.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.4"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103123",
+          "locator": "Released January 26, 2021"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-4-small-qr-recognition",
+          "title": "Smaller QR code recognition",
+          "canonicalSummary": "Camera recognition was improved so smaller QR codes could be detected more reliably.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Camera app gained documented support for recognizing smaller QR codes.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.4 — Camera"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-4-bluetooth-device-classification",
+          "title": "Bluetooth device-type classification",
+          "canonicalSummary": "Users could identify a connected Bluetooth accessory type so headphone audio notifications were applied appropriately.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "A Settings control classified Bluetooth device types, helping the system distinguish headphones when calculating audio exposure notifications.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.4 — Bluetooth"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-4-camera-verification-notice",
+          "title": "iPhone camera verification notice",
+          "canonicalSummary": "Supported iPhone 12 models warned when the installed camera could not be verified as a genuine Apple component.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "iPhone 12, iPhone 12 mini, iPhone 12 Pro, and iPhone 12 Pro Max could display a notification when camera authenticity could not be verified.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.4 — camera verification notification"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-4-hdr-photo-artifacts",
+          "title": "HDR photo artifact fix",
+          "canonicalSummary": "Photos taken with HDR no longer showed the documented image artifacts on iPhone 12 Pro models.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected image artifacts that could appear in HDR photographs captured on iPhone 12 Pro.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.4 — HDR photos"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-4-fitness-widget-keyboard-fixes",
+          "title": "Fitness widget and keyboard fixes",
+          "canonicalSummary": "The Fitness widget refreshed activity data correctly, and typing delays and missing suggestions were addressed.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed delayed Activity data in the Fitness widget, lagging keyboard input, absent word suggestions, and incorrect keyboard language in Messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.4 — Fitness and keyboard fixes"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-4-news-carplay-switch-control-fixes",
+          "title": "News, CarPlay, and Switch Control fixes",
+          "canonicalSummary": "News audio resumed correctly in CarPlay, and Switch Control no longer blocked call answering from the Lock Screen.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The maintenance release addressed News audio that failed to resume after spoken directions in CarPlay and a Switch Control condition that prevented answering calls from the Lock Screen.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.4 — News, CarPlay, and Switch Control fixes"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-5",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.5 release added Apple Watch-assisted unlocking, AirTag, App Tracking Transparency, expanded Siri and emoji choices, 5G improvements, and substantial app and accessory updates.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.5"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103125",
+          "locator": "Released April 26, 2021"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2021/04/ios-14-5-offers-unlock-iphone-with-apple-watch-diverse-siri-voices-and-more/",
+          "locator": "April 26, 2021 announcement"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-5-unlock-with-apple-watch",
+          "title": "Unlock iPhone with Apple Watch",
+          "canonicalSummary": "Face ID users wearing a mask could unlock a supported iPhone with an authenticated nearby Apple Watch.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "On iPhone X and later, an unlocked Apple Watch could provide an alternate authentication path when Face ID detected that the user was wearing a face covering.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.5 — Unlock iPhone with Apple Watch"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2021/04/ios-14-5-offers-unlock-iphone-with-apple-watch-diverse-siri-voices-and-more/",
+              "locator": "Unlock iPhone with Apple Watch"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-5-airtag-precision-finding",
+          "title": "AirTag and Precision Finding",
+          "canonicalSummary": "Find My gained AirTag setup, network locating, Lost Mode, and direction-and-distance guidance on compatible iPhones.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "AirTag support arrived in Find My, including sound playback, crowd-assisted location, Lost Mode contact information, and Precision Finding on U1-equipped iPhone 11 and iPhone 12 models.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.5 — AirTag and Find My"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2021/04/apple-introduces-airtag/",
+              "locator": "Precision Finding and Find My network"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-5-emoji-siri-options",
+          "title": "Expanded emoji and Siri options",
+          "canonicalSummary": "The update expanded emoji representation and Siri voice choices and added more hands-free calling and messaging behavior.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Couple emoji gained individual skin-tone choices, new faces and symbols were added, and Siri offered more diverse voices plus call announcements and emergency-contact calling support.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.5 — Emoji and Siri"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2021/04/ios-14-5-offers-unlock-iphone-with-apple-watch-diverse-siri-voices-and-more/",
+              "locator": "Siri enhancements"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-5-app-tracking-transparency",
+          "title": "App Tracking Transparency",
+          "canonicalSummary": "Covered apps had to request permission before tracking activity across other companies’ apps and websites or accessing the advertising identifier.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "App Tracking Transparency added a system permission prompt and Settings controls for covered cross-company tracking and advertising-identifier access.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.5 — Privacy"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2021/04/ios-14-5-offers-unlock-iphone-with-apple-watch-diverse-siri-voices-and-more/",
+              "locator": "App Tracking Transparency"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-5-iphone-12-5g-improvements",
+          "title": "iPhone 12 5G improvements",
+          "canonicalSummary": "Dual SIM gained 5G support and Smart Data Mode received network optimizations for battery life and data use.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The iPhone 12 family could use 5G with Dual SIM, while Smart Data Mode and international carrier support were refined for coverage, battery life, and data consumption.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.5 — 5G improvements"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-5-apps-controllers-fitness-carplay",
+          "title": "App, controller, Fitness+, and CarPlay updates",
+          "canonicalSummary": "Podcasts, Maps, Reminders, game controllers, Fitness+, and CarPlay received coordinated feature and compatibility updates.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release redesigned Podcasts, enabled Maps incident reporting and ETA sharing, added Reminders sorting and printing, supported current Xbox and PlayStation controllers, streamed Fitness+ through AirPlay 2, and added CarPlay ETA sharing with Siri or keyboard controls.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.5 — Podcasts, Maps, Reminders, Gaming, Fitness+, and CarPlay"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-5-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.5.1 maintenance release corrected an App Tracking Transparency permission-prompt state and fixed two WebKit vulnerabilities that Apple said might have been actively exploited.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.5.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103067",
+          "locator": "Released May 3, 2021"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-5-1-att-prompt-state",
+          "title": "App Tracking Transparency prompt-state fix",
+          "canonicalSummary": "Previously disabled app-level tracking prompts could appear correctly after the system-wide permission setting was enabled.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a condition in which some users who had turned off Allow Apps to Request to Track did not receive app prompts after turning the setting back on.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.5.1 — App Tracking Transparency"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-5-1-webkit-memory-corruption-cve-2021-30663",
+          "title": "WebKit memory corruption fix",
+          "canonicalSummary": "Improved state management addressed a WebKit memory-corruption issue that could allow arbitrary code execution through malicious web content.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed CVE-2021-30663 in WebKit and noted awareness of reports that the issue might have been actively exploited.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103067",
+              "locator": "WebKit — CVE-2021-30663"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-5-1-webkit-use-after-free-cve-2021-30665",
+          "title": "WebKit use-after-free fix",
+          "canonicalSummary": "Improved memory management addressed a WebKit use-after-free issue that could allow arbitrary code execution through malicious web content.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed CVE-2021-30665 in WebKit and noted awareness of reports that the issue might have been actively exploited.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103067",
+              "locator": "WebKit — CVE-2021-30665"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-6",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.6 release introduced Apple Card Family and podcast subscriptions, expanded AirTag and Voice Control behavior, fixed several reliability issues, and delivered developer-facing startup and advertising-attribution changes.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.6"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103130",
+          "locator": "Released May 24, 2021"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_6-release-notes",
+          "locator": "iOS & iPadOS 14.6 Release Notes"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-6-apple-card-family",
+          "title": "Apple Card Family",
+          "canonicalSummary": "Eligible Family Sharing groups could share Apple Card access with spending controls, combined activity, and co-ownership options.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple Card owners could share an account with eligible family members, set limits and controls for participants, and combine credit lines and account history with an eligible co-owner.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.6 — Apple Card Family"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-6-podcast-subscriptions",
+          "title": "Apple Podcasts subscriptions",
+          "canonicalSummary": "Listeners could subscribe to participating podcast channels and individual shows from the Podcasts app.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple added paid subscriptions for participating podcast channels and standalone shows inside the Podcasts app.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.6 — Podcasts"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-6-airtag-lost-mode-contact",
+          "title": "AirTag Lost Mode contact options",
+          "canonicalSummary": "AirTag and Find My accessories in Lost Mode could show an email address instead of a phone number to an NFC reader.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Lost Mode accepted an email address as the displayed contact method, and NFC readers showed a partially masked owner phone number for AirTag.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.6 — AirTag and Find My"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-6-voice-control-first-unlock",
+          "title": "Voice Control first unlock after restart",
+          "canonicalSummary": "Voice Control users could unlock an iPhone after restart without first completing a touch-based unlock.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The accessibility update allowed a Voice Control user to complete the first unlock after restarting an iPhone using only their voice.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.6 — Accessibility"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-6-unlock-reminders-calls-bluetooth-fixes",
+          "title": "Unlock, Reminders, calls, and Bluetooth fixes",
+          "canonicalSummary": "A grouped reliability pass corrected Apple Watch unlocking, blank Reminders rows, extension blocking, and Bluetooth call routing or disconnections.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed Unlock with Apple Watch after Lock iPhone, blank Reminders entries, call-blocking extension visibility, and Bluetooth devices that disconnected or received call audio unexpectedly.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.6 — fixes"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-6-startup-performance",
+          "title": "Startup performance correction",
+          "canonicalSummary": "The release addressed a documented startup-performance problem affecting installed applications.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple’s developer release notes identify an application startup-performance issue as resolved in iOS and iPadOS 14.6.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_6-release-notes",
+              "locator": "Resolved Issues — app startup performance"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-6-skadnetwork-postback",
+          "title": "SKAdNetwork postback updates",
+          "canonicalSummary": "SKAdNetwork added support for sending an install-validation postback to multiple advertising networks.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The 14.6 developer release expanded SKAdNetwork attribution so a winning network and up to five additional networks could receive install-validation postbacks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_6-release-notes",
+              "locator": "SKAdNetwork"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-7",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.7 release added MagSafe Battery Pack support, extended Apple Card Family and Home behavior, broadened air-quality data, refined Podcasts, and fixed several media, battery, and accessibility issues.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.7"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103139",
+          "locator": "Released July 19, 2021"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-14_7-release-notes",
+          "locator": "iOS & iPadOS 14.7 Release Notes"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-7-magsafe-battery-pack",
+          "title": "MagSafe Battery Pack support",
+          "canonicalSummary": "The iPhone 12 family gained system support for Apple’s MagSafe Battery Pack accessory.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "iOS 14.7 added support for attaching and monitoring the MagSafe Battery Pack on iPhone 12, 12 mini, 12 Pro, and 12 Pro Max.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.7 — MagSafe Battery Pack"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-7-apple-card-family-co-owner-limits",
+          "title": "Apple Card Family combined-credit support",
+          "canonicalSummary": "Existing Apple Card users could combine their credit limits and share one co-owned account.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Apple Card Family update let an existing Apple Card user combine credit limits and share a single co-owned account with another existing cardholder.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.7 — Apple Card Family"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-7-homepod-timer-management",
+          "title": "HomePod timer management in Home",
+          "canonicalSummary": "The Home app could create and manage timers on a paired HomePod.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Users gained direct Home-app controls for starting and managing HomePod timers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.7 — Home"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-7-air-quality-regions",
+          "title": "Expanded Weather and Maps air quality",
+          "canonicalSummary": "Air-quality information became available in Weather and Maps for additional countries and regions.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Weather and Maps expanded their air-quality readings to Canada, France, Italy, the Netherlands, South Korea, and Spain.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.7 — air quality"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-7-podcasts-library-filter",
+          "title": "Podcasts library filters",
+          "canonicalSummary": "The Podcasts library could show either all subscribed content or only followed shows.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "A new library filter let listeners switch between all shows and only the shows they followed.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.7 — Podcasts"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-7-music-battery-braille-fixes",
+          "title": "Music, battery-service, and Braille fixes",
+          "canonicalSummary": "A grouped maintenance pass restored Music sharing and battery-service messaging and improved Mail composition with Braille displays.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a missing Apple Music share option, restored a battery-service message that could disappear after reboot on some iPhone 11 models, and corrected invalid Braille-display information while composing Mail messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.7 — fixes"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-7-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.7.1 maintenance release restored Apple Watch unlocking on Touch ID iPhones and corrected an IOMobileFrameBuffer vulnerability Apple said might have been actively exploited.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.7.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103145",
+          "locator": "Released July 26, 2021"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-7-1-touch-id-watch-unlock",
+          "title": "Touch ID iPhone Apple Watch unlock fix",
+          "canonicalSummary": "Touch ID-equipped iPhones could again unlock a paired Apple Watch through the documented iPhone unlock setting.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed an issue that prevented Touch ID iPhone models from unlocking a paired Apple Watch with Unlock with iPhone enabled.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118390",
+              "locator": "iOS 14.7.1 — Unlock with iPhone"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-7-1-iomobileframebuffer-cve-2021-30807",
+          "title": "IOMobileFrameBuffer memory-corruption fix",
+          "canonicalSummary": "Improved memory handling addressed a kernel-privilege escalation issue in IOMobileFrameBuffer.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed CVE-2021-30807 and noted awareness of a report that the memory-corruption vulnerability might have been actively exploited.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103145",
+              "locator": "IOMobileFrameBuffer — CVE-2021-30807"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-14-8",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 14.8 release was a security-focused update that corrected CoreGraphics and WebKit vulnerabilities Apple said might have been actively exploited.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118390",
+          "locator": "iOS 14.8"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103150",
+          "locator": "Released September 13, 2021"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-14-8-coregraphics-cve-2021-30860",
+          "title": "CoreGraphics PDF processing fix",
+          "canonicalSummary": "Improved input validation addressed an integer-overflow issue that could lead to arbitrary code execution when processing a malicious PDF.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed CVE-2021-30860 in CoreGraphics and noted awareness of a report that the issue might have been actively exploited.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103150",
+              "locator": "CoreGraphics — CVE-2021-30860"
+            }
+          ]
+        },
+        {
+          "key": "ios-14-8-webkit-cve-2021-30858",
+          "title": "WebKit use-after-free fix",
+          "canonicalSummary": "Improved memory management addressed a WebKit use-after-free issue that could allow arbitrary code execution through malicious web content.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed CVE-2021-30858 in WebKit and noted awareness of a report that the issue might have been actively exploited.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103150",
+              "locator": "WebKit — CVE-2021-30858"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:00:42Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

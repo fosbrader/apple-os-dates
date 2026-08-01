@@ -1,0 +1,74 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-watchos-major-7-26",
+  "reviewedAt": "2026-07-30",
+  "reviewer": "codex-scope-beta-gap-program-self-check",
+  "independentOfResearcher": false,
+  "verdict": "pendingIndependentReview",
+  "candidateVerdict": {
+    "readyForIndependentChronologyReview": [
+      "candidate:apple:watchos:7.0:public-beta-1",
+      "candidate:apple:watchos:7.0:public-beta-2",
+      "candidate:apple:watchos:7.0:public-beta-3",
+      "candidate:apple:watchos:7.0:public-beta-4",
+      "candidate:apple:watchos:7.0:public-beta-5",
+      "candidate:apple:watchos:8.0:public-beta-1",
+      "candidate:apple:watchos:8.0:public-beta-2",
+      "candidate:apple:watchos:8.0:public-beta-6",
+      "candidate:apple:watchos:8.0:public-beta-7",
+      "candidate:apple:watchos:8.0:public-beta-8",
+      "candidate:apple:watchos:9.0:public-beta-1",
+      "candidate:apple:watchos:9.0:public-beta-2",
+      "candidate:apple:watchos:9.0:public-beta-3",
+      "candidate:apple:watchos:9.0:public-beta-4",
+      "candidate:apple:watchos:9.0:public-beta-5",
+      "candidate:apple:watchos:10.0:public-beta-1",
+      "candidate:apple:watchos:10.0:public-beta-2",
+      "candidate:apple:watchos:10.0:public-beta-3",
+      "candidate:apple:watchos:10.0:public-beta-4",
+      "candidate:apple:watchos:10.0:public-beta-5",
+      "candidate:apple:watchos:10.0:public-beta-6",
+      "candidate:apple:watchos:11.0:public-beta-1",
+      "candidate:apple:watchos:11.0:public-beta-2",
+      "candidate:apple:watchos:11.0:public-beta-3",
+      "candidate:apple:watchos:11.0:public-beta-4",
+      "candidate:apple:watchos:11.0:public-beta-5",
+      "candidate:apple:watchos:26.0:public-beta-1",
+      "candidate:apple:watchos:26.0:public-beta-2",
+      "candidate:apple:watchos:26.0:public-beta-3"
+    ],
+    "needsSecondExactOrdinalLineage": [
+      "candidate:apple:watchos:26.0:public-beta-6"
+    ],
+    "requiresConflictAdjudication": [
+      "candidate:apple:watchos:8.0:public-beta-4",
+      "candidate:apple:watchos:26.0:public-beta-4",
+      "candidate:apple:watchos:26.0:public-beta-5"
+    ]
+  },
+  "checks": {
+    "jsonParsed": true,
+    "sourceIdsUnique": true,
+    "candidateIdsUnique": true,
+    "allReferencesResolve": true,
+    "rawEvidenceArtifactsReproduced": 49,
+    "candidateProductionResultsAligned": true,
+    "allCandidateChannelsArePublicBeta": true,
+    "allCandidateExactProductionMatches": 0,
+    "watchOS8August12Promoted": false,
+    "sanityMutationPerformed": false
+  },
+  "requiredIndependentReview": [
+    "Reproduce every candidate’s primary locator from the retained raw capture.",
+    "Adjudicate the watchOS 8 ordinal and August 12 exclusion before any data write.",
+    "Adjudicate the watchOS 26 Public Beta 4 and 5 date conflicts.",
+    "Obtain a second exact-ordinal lineage for watchOS 26 Public Beta 6, or explicitly approve the one-lineage ordinal evidence gate.",
+    "Repeat exact production reconciliation immediately before any separately authorized Sanity mutation."
+  ],
+  "authorization": {
+    "chronologyApprovedCandidateCount": 0,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "deploymentAllowed": false
+  }
+}

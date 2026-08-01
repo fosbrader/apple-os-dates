@@ -1,0 +1,163 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-2014-2019",
+  "reviewedAt": "2026-07-30",
+  "reviewer": "codex-root-independent-review",
+  "independentOfResearcher": true,
+  "verdict": "partialPassWithRequiredCorrection",
+  "chronologyApprovedCandidateCount": 37,
+  "candidateVerdict": {
+    "chronologyApproved": [
+      "candidate:apple:macos:10.10:public-beta-1",
+      "candidate:apple:macos:10.10:public-beta-2",
+      "candidate:apple:macos:10.10:public-beta-3",
+      "candidate:apple:macos:10.10:public-beta-4",
+      "candidate:apple:macos:10.10:public-beta-5",
+      "candidate:apple:macos:10.10:public-beta-6",
+      "candidate:apple:macos:10.11:public-beta-1",
+      "candidate:apple:macos:10.11:public-beta-2",
+      "candidate:apple:macos:10.11:public-beta-3",
+      "candidate:apple:macos:10.11:public-beta-4",
+      "candidate:apple:macos:10.12:public-beta-1",
+      "candidate:apple:macos:10.12:public-beta-2",
+      "candidate:apple:macos:10.12:public-beta-3",
+      "candidate:apple:macos:10.12:public-beta-4",
+      "candidate:apple:macos:10.12:public-beta-5",
+      "candidate:apple:macos:10.12:public-beta-6",
+      "candidate:apple:macos:10.12:public-beta-7",
+      "candidate:apple:macos:10.13:public-beta-1",
+      "candidate:apple:macos:10.13:public-beta-2",
+      "candidate:apple:macos:10.13:public-beta-3",
+      "candidate:apple:macos:10.13:public-beta-4",
+      "candidate:apple:macos:10.13:public-beta-5",
+      "candidate:apple:macos:10.13:public-beta-6",
+      "candidate:apple:macos:10.13:public-beta-7",
+      "candidate:apple:macos:10.14:public-beta-1",
+      "candidate:apple:macos:10.14:public-beta-2",
+      "candidate:apple:macos:10.14:public-beta-3",
+      "candidate:apple:macos:10.14:public-beta-4",
+      "candidate:apple:macos:10.14:public-beta-5",
+      "candidate:apple:macos:10.14:public-beta-6",
+      "candidate:apple:macos:10.14:public-beta-7",
+      "candidate:apple:macos:10.14:public-beta-8",
+      "candidate:apple:macos:10.15:public-beta-1",
+      "candidate:apple:macos:10.15:public-beta-2",
+      "candidate:apple:macos:10.15:public-beta-3",
+      "candidate:apple:macos:10.15:public-beta-4",
+      "candidate:apple:macos:10.15:public-beta-6"
+    ],
+    "requiresCandidateCorrection": [
+      "candidate:apple:macos:10.15:public-beta-5"
+    ],
+    "needsAdditionalEvidenceOrModeling": [
+      "candidate:apple:macos:10.11:public-beta-5",
+      "candidate:apple:macos:10.13:public-beta-8",
+      "candidate:apple:macos:10.14:public-beta-9",
+      "candidate:apple:macos:10.14:public-beta-10",
+      "candidate:apple:macos:10.15:public-beta-7",
+      "candidate:apple:macos:10.15:public-beta-8",
+      "candidate:apple:macos:10.15:public-beta-9"
+    ]
+  },
+  "checks": {
+    "jsonParsed": true,
+    "candidateIdsUnique": true,
+    "sourceIdsUnique": true,
+    "allEvidenceReferencesResolve": true,
+    "candidateEvidenceReferencesInspected": 76,
+    "uniqueCandidateSourcesInspected": 59,
+    "rawEvidenceArtifactsHashVerified": 57,
+    "renderedWebOnlySourcesInspected": 2,
+    "rawEvidenceHashFailures": 0,
+    "allCandidateChannelsArePublicBeta": true,
+    "publicOrdinalNotInferredFromDeveloperOrdinal": true,
+    "americaLosAngelesDateConventionApplied": true,
+    "productionSnapshotReadOnly": true,
+    "sanityMutationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "decisions": [
+    {
+      "scope": "macOS 10.10 Public Betas 1 through 6",
+      "disposition": "chronologyApproved",
+      "candidateCount": 6,
+      "finding": "MacRumors and OS X Daily independently preserve the public audience, sequence, and Pacific appearance date for the complete Yosemite public-beta sequence."
+    },
+    {
+      "scope": "OS X 10.11 Public Betas 1 through 4",
+      "disposition": "chronologyApproved",
+      "candidateCount": 4,
+      "finding": "MacRumors and OS X Daily independently preserve the public audience, sequence, and Pacific appearance date for the first four El Capitan public betas."
+    },
+    {
+      "scope": "macOS 10.12 Public Betas 1 through 7",
+      "disposition": "chronologyApproved",
+      "candidateCount": 7,
+      "finding": "The retained MacRumors evidence plus independent OS X Daily, iDownloadBlog, MacMagazine, or Macworld evidence supports all seven Sierra identities and dates."
+    },
+    {
+      "scope": "macOS 10.13 Public Betas 1 through 7",
+      "disposition": "chronologyApprovedWithQualification",
+      "candidateCount": 7,
+      "finding": "MacRumors and iCulture's candidate-specific prose independently support the seven High Sierra identities and dates.",
+      "requiredQualification": "Do not use iCulture's typo-prone recap list for Public Beta 1 or Public Beta 7. Its dated prose sections say June 29 and August 28 and agree with MacRumors."
+    },
+    {
+      "scope": "macOS 10.14 Public Betas 1 through 8",
+      "disposition": "chronologyApprovedWithQualification",
+      "candidateCount": 8,
+      "finding": "MacRumors and iCulture support Public Betas 1 through 7. Softpedia's August 27 update and the August 28 JST technical record independently support Public Beta 8.",
+      "requiredQualification": "Normalize the Public Beta 8 appearance to August 27 in America/Los_Angeles; the August 28 Monomaniac date is the Japanese local calendar date."
+    },
+    {
+      "scope": "macOS 10.15 Public Betas 1 through 4 and 6",
+      "disposition": "chronologyApprovedWithQualification",
+      "candidateCount": 5,
+      "finding": "MacRumors and iCulture support Public Betas 1 through 4 and 6. Public Beta 2 and Public Beta 6 use the Pacific appearance date rather than iCulture's following-day European calendar date.",
+      "requiredQualification": "Keep Public Beta 2 at July 3 and Public Beta 6 at August 28 under the packet's America/Los_Angeles convention."
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-5",
+      "disposition": "requiresCandidateCorrection",
+      "finding": "The proposed August 20 date conflicts with the packet's Pacific-date convention. The retained MacRumors article was updated for public availability on August 19, and its discussion records availability at 10:23 a.m. PDT that day. iCulture's August 20 08:32 CEST revision is August 19 23:32 PDT.",
+      "requiredCorrection": {
+        "appearanceDate": "2019-08-19",
+        "conflictRecordRequired": true,
+        "sourceLocatorCorrectionRequired": true
+      }
+    }
+  ],
+  "caveats": [
+    {
+      "subject": "seven unresolved candidates",
+      "severity": "blockingForPromotion",
+      "finding": "El Capitan Public Beta 5 has a same-label withdrawal/replacement conflict, and six late-cycle candidates still lack the required editorial corroboration or conflict resolution.",
+      "requiredHandling": "Keep these seven candidates out of a promotion queue until the packet's existing evidence and modeling blockers are resolved."
+    },
+    {
+      "subject": "unnumbered OS X 10.9.3 program origin",
+      "severity": "blockingForPromotion",
+      "finding": "The April 22, 2014 open Beta Seed Program appearance is historically supported but is not truthfully representable as Public Beta 1, and production has no 10.9.3 release-version parent.",
+      "requiredHandling": "Require a separate version-parent and unnumbered-appearance modeling decision; do not create a numbered beta."
+    },
+    {
+      "subject": "source-claim precision",
+      "severity": "nonBlocking",
+      "finding": "Several developer-seed articles were later updated only to say that a new public beta was available; the independent companion source supplies the explicit public ordinal.",
+      "requiredHandling": "At publication, cite each source only for the fields its text actually states. Do not describe a generic public-availability update as literal-ordinal evidence."
+    },
+    {
+      "subject": "production snapshot age",
+      "severity": "nonBlocking",
+      "finding": "The zero-match production reconciliation is a time-bounded read-only snapshot.",
+      "requiredHandling": "Repeat the exact identity query immediately before any separately authorized Sanity write."
+    }
+  ],
+  "authorization": {
+    "chronologyApprovedCandidateCount": 37,
+    "chronologyApprovalScope": "Public-beta appearance identity, date, sequence, and channel only; all qualifications remain mandatory.",
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "deploymentAllowed": false
+  }
+}

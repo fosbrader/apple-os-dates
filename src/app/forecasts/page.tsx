@@ -15,6 +15,11 @@ import {
   latestDate,
 } from "@/lib/site";
 import { daysBetween, formatDate } from "@/lib/utils";
+import { releaseVersionPath } from "@/lib/release-routes";
+import {
+  appleReleaseDatasetId,
+  factualDataset,
+} from "@/lib/structured-data";
 
 const forecastDescription =
   "Evidence-based Apple OS release windows derived from comparable historical beta cycles, with sample sizes, ranges, backtests, and explicit uncertainty.";
@@ -261,7 +266,10 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
                 {forecast.cohort.sampleVersions.map((sampleVersion) => (
                   <Link
                     key={sampleVersion}
-                    href={`/${platform.slug.current}/${encodeURIComponent(sampleVersion)}`}
+                    href={releaseVersionPath(
+                      platform.slug.current,
+                      sampleVersion,
+                    )}
                   >
                     {sampleVersion}
                   </Link>
@@ -324,8 +332,7 @@ export default async function ForecastsPage() {
         isPartOf: { "@id": `${absoluteUrl("/")}#website` },
         mainEntity: { "@id": `${canonical}#forecast-dataset` },
       },
-      {
-        "@type": "Dataset",
+      factualDataset({
         "@id": `${canonical}#forecast-dataset`,
         url: canonical,
         name: "History-Based Apple OS Release Forecasts",
@@ -333,10 +340,7 @@ export default async function ForecastsPage() {
           "Descriptive date ranges calculated from comparable historical Apple OS beta cycles. Estimates are independent and are not Apple announcements.",
         dateModified,
         isAccessibleForFree: true,
-        isPartOf: { "@id": `${absoluteUrl("/")}#release-dataset` },
-        isBasedOn: { "@id": `${absoluteUrl("/")}#release-dataset` },
-        creator: { "@id": `${absoluteUrl("/")}#organization` },
-        publisher: { "@id": `${absoluteUrl("/")}#organization` },
+        isBasedOn: appleReleaseDatasetId(),
         measurementTechnique:
           "Prior milestone to public release intervals summarized with medians and 25th–75th percentile ranges.",
         variableMeasured: [
@@ -345,7 +349,7 @@ export default async function ForecastsPage() {
           "Historical interquartile date range",
           "Rolling backtest error",
         ],
-      },
+      }),
     ],
   };
 

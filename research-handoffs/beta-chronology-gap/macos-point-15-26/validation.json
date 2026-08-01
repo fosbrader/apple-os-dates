@@ -1,0 +1,64 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-point-15-26",
+  "validatedAt": "2026-07-31T06:41:37.023Z",
+  "validator": "research-handoffs/beta-chronology-gap/macos-point-15-26/validate-packet.mjs",
+  "status": "passed",
+  "errorCount": 0,
+  "warningCount": 0,
+  "checks": {
+    "sharedCandidateRegisterSchemaValid": true,
+    "candidateCount": 40,
+    "candidateCountByVersion": {
+      "15.1": 4,
+      "15.2": 3,
+      "15.3": 3,
+      "15.4": 4,
+      "15.5": 3,
+      "15.6": 1,
+      "26.1": 4,
+      "26.2": 3,
+      "26.3": 3,
+      "26.4": 4,
+      "26.5": 3,
+      "26.6": 5
+    },
+    "datedNotProposedCount": 3,
+    "undatedNegativeFindingCount": 2,
+    "sourceCapture": {
+      "attempted": 65,
+      "captured": 65,
+      "reused": 11,
+      "fresh": 54,
+      "failed": 0
+    },
+    "freezeContract": {
+      "expectedMaterialFileCount": 87,
+      "rawSourceFileCount": 65,
+      "rawEvidenceLockCount": 65,
+      "pendingIndependentReviewExcluded": true,
+      "packetLockSelfExcluded": true,
+      "unlockedResearchBuilderCount": 0
+    },
+    "conflictCount": 9,
+    "production": {
+      "capturedAt": "2026-07-31T06:37:42.659Z",
+      "perspective": "published",
+      "useCdn": false,
+      "exactIdentityCount": 40,
+      "exactRouteMatches": 0,
+      "exactFullMatches": 0,
+      "scopedPublicBetaEvents": 0
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "authorization": {
+    "independentChronologyReviewComplete": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "pageWorkAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  }
+}

@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 
-const defaultSiteUrl = "https://www.betacadence.com";
+const defaultSiteUrl = "https://www.versionrecord.com";
 
-export const siteName = "Beta Cadence";
+export const siteName = "Version Record";
 export const siteDescription =
-  "Track Apple OS beta cycles, release candidates, public release dates, and history-based forecasts for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS.";
-export const socialImagePath = "/social-preview-v2.png";
+  "Independent, source-backed software release histories with beta timelines, builds, release notes, citations, and corrections. Apple is the first catalog.";
+export const socialImagePath = "/og.png";
+export const siteXHandle = "@versionrecordhq";
+export const siteXUrl = "https://x.com/versionrecordhq";
 export const socialImageAlt =
-  "Beta Cadence — Apple OS beta and release date index";
+  "Version Record — a source-backed history of software releases";
 
 function normalizeBasePath(value: string | undefined): string {
   const trimmed = value?.trim();
@@ -56,12 +58,14 @@ const configuredSiteUrl = normalizeSiteUrl(
 const configuredSiteOrigin = configuredSiteUrl
   ? new URL(configuredSiteUrl).origin
   : null;
-const legacySiteOrigins = new Set(["https://art.bfosler.com"]);
+const legacySiteOrigins = new Set([
+  "https://art.bfosler.com",
+]);
 
 /**
  * Preview and *.vercel.app deployments intentionally point search metadata at
  * the one public host. The legacy-domain guard prevents a stale Vercel
- * environment value from undoing the Beta Cadence migration.
+ * environment value from undoing the Version Record migration.
  */
 export const siteUrl =
   configuredSiteUrl &&
@@ -89,6 +93,12 @@ interface PageMetadataOptions {
   description: string;
   path: string;
   absoluteTitle?: boolean;
+  /**
+   * Routes with a file-convention opengraph-image/twitter-image must not
+   * stamp the static og.png: an explicit `images` value in the same
+   * segment outranks the generated image, so those routes pass false.
+   */
+  socialImage?: boolean;
 }
 
 export function createPageMetadata({
@@ -96,10 +106,11 @@ export function createPageMetadata({
   description,
   path,
   absoluteTitle = false,
+  socialImage = true,
 }: PageMetadataOptions): Metadata {
   const canonical = absoluteUrl(path);
   const socialTitle = absoluteTitle ? title : `${title} | ${siteName}`;
-  const socialImage = absoluteUrl(socialImagePath);
+  const socialImageUrl = absoluteUrl(socialImagePath);
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -114,21 +125,28 @@ export function createPageMetadata({
       siteName,
       type: "website",
       locale: "en_US",
-      images: [
-        {
-          url: socialImage,
-          width: 1200,
-          height: 630,
-          type: "image/png",
-          alt: socialImageAlt,
-        },
-      ],
+      ...(socialImage
+        ? {
+            images: [
+              {
+                url: socialImageUrl,
+                width: 1200,
+                height: 630,
+                type: "image/png",
+                alt: socialImageAlt,
+              },
+            ],
+          }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",
+      site: siteXHandle,
       title: socialTitle,
       description,
-      images: [{ url: socialImage, alt: socialImageAlt }],
+      ...(socialImage
+        ? { images: [{ url: socialImageUrl, alt: socialImageAlt }] }
+        : {}),
     },
   };
 }

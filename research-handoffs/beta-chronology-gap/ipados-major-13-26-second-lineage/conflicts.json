@@ -1,0 +1,79 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ipados-major-13-26-second-lineage",
+  "conflictCount": 6,
+  "unresolvedQualificationCount": 3,
+  "conflicts": [
+    {
+      "conflictId": "qualification:imore14-living-chronology-metadata",
+      "candidates": [
+        "candidate:apple:ipados:14.0:public-beta-6",
+        "candidate:apple:ipados:14.0:public-beta-7",
+        "candidate:apple:ipados:14.0:public-beta-8"
+      ],
+      "type": "livingChronologyMetadataLaterThanEntries",
+      "finding": "The live iMore page title and JSON-LD describe its 2021 final rolling update, while the relevant entries are dated 2020 inside the article.",
+      "resolution": "Use the dated h3 entries and following paragraphs for the exact ordinals and dates; do not treat the page-level 2021 publication metadata as any candidate appearance date.",
+      "unresolved": false
+    },
+    {
+      "conflictId": "qualification:imore15-living-chronology-metadata",
+      "candidates": [
+        "candidate:apple:ipados:15.0:public-beta-5",
+        "candidate:apple:ipados:15.0:public-beta-7",
+        "candidate:apple:ipados:15.0:public-beta-8"
+      ],
+      "type": "livingChronologyMetadataLaterThanEntries",
+      "finding": "The live iMore page title and JSON-LD describe its 2022 final rolling update, while the relevant entries are dated 2021 inside the article.",
+      "resolution": "Use the dated h3 entries and following paragraphs for the exact ordinals and dates; do not treat the page-level 2022 publication metadata as any candidate appearance date.",
+      "unresolved": false
+    },
+    {
+      "conflictId": "qualification:iphonetricks-live-host-unavailable",
+      "candidates": [
+        "candidate:apple:ipados:16.0:public-beta-4"
+      ],
+      "type": "liveAccessFailureArchivedEvidence",
+      "finding": "The live iPhoneTricks host currently presents a certificate-name mismatch, and the unverified target returns HTTP 404.",
+      "resolution": "Use the raw Internet Archive identity replay captured at 2022-08-15T22:33:12Z. Preserve the canonical publisher URL, archive URL, raw hash, and access qualification together.",
+      "unresolved": false
+    },
+    {
+      "conflictId": "qualification:ipados17-pb6-reporting-lag",
+      "candidates": [
+        "candidate:apple:ipados:17.0:public-beta-6"
+      ],
+      "type": "followingDayPublication",
+      "frozenAppearanceDate": "2023-08-29",
+      "supplementalPublicationDate": "2023-08-30",
+      "finding": "OS X Daily explicitly identifies iPadOS 17 Public Beta 6 but published on August 30 and does not state an August 29 appearance date.",
+      "resolution": "Use OS X Daily only as the second explicit public-ordinal lineage. Preserve August 29 from the frozen parent evidence and treat August 30 as reporting lag, not a second event.",
+      "unresolved": true,
+      "reviewerAction": "Independent review must carry this qualification into any approval."
+    },
+    {
+      "conflictId": "qualification:ipados18-pb6-reporting-lag",
+      "candidates": [
+        "candidate:apple:ipados:18.0:public-beta-6"
+      ],
+      "type": "followingDayPublication",
+      "frozenAppearanceDate": "2024-08-28",
+      "supplementalPublicationDate": "2024-08-29",
+      "finding": "OS X Daily explicitly identifies iPadOS 18 Public Beta 6 but published on August 29 and does not state an August 28 appearance date.",
+      "resolution": "Use OS X Daily only as the second explicit public-ordinal lineage. Preserve August 28 from the frozen parent evidence and treat August 29 as reporting lag, not a second event.",
+      "unresolved": true,
+      "reviewerAction": "Independent review must carry this qualification into any approval."
+    },
+    {
+      "conflictId": "qualification:ipados18-pb6-osxd-stale-pb5-copy",
+      "candidates": [
+        "candidate:apple:ipados:18.0:public-beta-6"
+      ],
+      "type": "internalSourceOrdinalConflict",
+      "finding": "The OS X Daily headline, lead, install heading, and install step identify Public Beta 6, but the next paragraph says “5th public beta,” apparently stale copy from the prior article.",
+      "resolution": "Use only the consistent Public Beta 6 headline/lead/install locators. Exclude the stale Public Beta 5 paragraph and require the independent reviewer to assess the source with this contradiction visible.",
+      "unresolved": true,
+      "reviewerAction": "Confirm that the repeated PB6 locators are sufficient despite the isolated stale PB5 paragraph."
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-major-12-18-followup",
+  "createdAt": "2026-07-31T05:39:31.000Z",
+  "createdBy": "codex-ios-major-12-18-followup-researcher",
+  "researchCutoff": "2026-07-31",
+  "timezone": "America/Los_Angeles",
+  "scope": "Research-only supplement for the nine candidates, two negative identities, and one existing-production identity blocked by the independent review of the frozen iOS 12.0–18.0 major-cycle public-beta packet.",
+  "parentPacket": {
+    "path": "research-handoffs/beta-chronology-gap/ios-major-12-18",
+    "reviewPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/independent-review.json",
+    "parentValidationSha256": "f8c0d87167bf88e79a22174d5127b9d43fc8b0dcf8a59b02cfb5eb9a6ccbdea3",
+    "parentPacketLocksSha256": "c9801dd46c8dfd3a46ffef34550f914bc0342d9b3c89679dd39ffa15eb18474f",
+    "parentIndependentReviewSha256": "f3a1c9659d6f3db86933c89754c436101e61352bcac330b88e849c8cf828165a",
+    "mustRemainUnchanged": true
+  },
+  "targets": {
+    "blockedCandidateIds": [
+      "candidate:apple:ios:12.0:public-beta-1",
+      "candidate:apple:ios:12.0:public-beta-2",
+      "candidate:apple:ios:12.0:public-beta-3",
+      "candidate:apple:ios:12.0:public-beta-4",
+      "candidate:apple:ios:12.0:public-beta-5",
+      "candidate:apple:ios:14.0:public-beta-1",
+      "candidate:apple:ios:15.0:public-beta-2",
+      "candidate:apple:ios:17.0:public-beta-6",
+      "candidate:apple:ios:18.0:public-beta-5"
+    ],
+    "blockedNotProposedRecordIds": [
+      "not-proposed:apple:ios:14.0:public-beta-2",
+      "not-proposed:apple:ios:15.0:public-beta-3"
+    ],
+    "conflictedExistingMatchIds": [
+      "existing-match:apple:ios:15.0:public-beta-1"
+    ]
+  },
+  "identityRule": "Preserve the public seed label displayed to enrolled devices. First/second public appearance wording is not an ordinal when device-facing or exact contemporary label evidence disagrees. Never infer a public ordinal from a developer ordinal alone.",
+  "evidenceGate": "Each exact version, channel, displayed label, and Pacific appearance date needs first-party evidence or two independent contemporary publisher lineages. A source that says only that a public update became available cannot establish an ordinal.",
+  "deliverables": [
+    "assignment.json",
+    "build-packet.mjs",
+    "fetch-sources.mjs",
+    "fetch-log.json",
+    "sources.json",
+    "raw-evidence-locks.json",
+    "source-role-corrections.json",
+    "production-snapshot.json",
+    "query-production.ts",
+    "supplement.json",
+    "report.md",
+    "validate-packet.mjs",
+    "validation.json",
+    "freeze-packet.mjs",
+    "packet-locks.json"
+  ],
+  "constraints": {
+    "noParentPacketEdits": true,
+    "noIndependentReviewByResearcher": true,
+    "noSanityWrites": true,
+    "noStableEventIdCreation": true,
+    "noPageWork": true,
+    "noPublication": true,
+    "noDeployment": true
+  }
+}

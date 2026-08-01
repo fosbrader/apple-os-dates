@@ -1,0 +1,44 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-ipados-point-12-14",
+  "validatedAt": "2026-07-31T05:18:01.444Z",
+  "validator": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14/validate-packet.mjs",
+  "status": "passed",
+  "checks": {
+    "sharedCandidateRegisterSchemaValid": true,
+    "counts": {
+      "observedAppearances": 118,
+      "candidates": 116,
+      "byPlatform": {
+        "iOS": 75,
+        "iPadOS": 41
+      },
+      "exactExistingMatches": 2,
+      "notProposed": 7,
+      "negativeFindings": 7,
+      "modelGaps": 2,
+      "sources": 122,
+      "conflicts": 13
+    },
+    "sourceCapture": {
+      "attempted": 122,
+      "captured": 122,
+      "reused": 5,
+      "sameDayLocal": 20,
+      "archiveReplay": 4,
+      "freshHttp": 93,
+      "failed": 0,
+      "publisherFamilies": 11
+    },
+    "packetLocks": {
+      "status": "checked",
+      "declaredFileCount": 138,
+      "verifiedFileCount": 138,
+      "uniquePathCount": 138
+    }
+  },
+  "errors": [],
+  "warnings": [],
+  "safetyConclusion": "Automated validation confirms packet integrity only. It does not authorize Sanity mutation, stable ID creation, publication, page builds, or deployment.",
+  "requiredNextStep": "Complete independent chronology review and separately authorize any implementation."
+}

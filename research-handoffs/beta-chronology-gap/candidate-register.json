@@ -1,0 +1,2678 @@
+{
+  "formatVersion": "1.0",
+  "programId": "apple-beta-chronology-gap",
+  "generatedAt": "2026-07-31T02:35:41Z",
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "note": "This is a proposed-identity research register. Chronology approval and publication authorization are separate later decisions."
+  },
+  "summary": {
+    "proposedCandidateCount": 39,
+    "notProposedCount": 2,
+    "byStatus": {
+      "needsEvidenceReview": 33,
+      "readyForChronologyReview": 6
+    },
+    "byPlatform": {
+      "iOS": 33,
+      "macOS": 2,
+      "tvOS": 2,
+      "watchOS": 2
+    },
+    "importantQualification": "Six OS 27 appearances passed independent review and are ready for chronology review; the 33 reusable iOS appearances still need evidence work. The two visionOS records are reviewed exclusions, not event candidates. No record is approved for publication or Sanity mutation."
+  },
+  "cohorts": [
+    {
+      "cohortId": "ios8-ledger-only",
+      "description": "Five iOS 8.3 and 8.4 public-beta identities retained as timeline-only distribution history.",
+      "candidateCount": 5,
+      "sourcePaths": [
+        "scripts/research-batches/apple-ios-8-point-prerelease.md",
+        "scripts/research-batches/build-apple-ios-8-point-prerelease.mjs",
+        "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+        "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/report.md"
+      ],
+      "supersessionRule": "This register supersedes only the prior implication that ledger-only identities needed no further chronology review; the original batch remains authoritative for paired developer content. The reusable-evidence packet is authoritative for current identity status, evidence custody, blockers, and review state."
+    },
+    {
+      "cohortId": "ios11-prior-manifest",
+      "description": "Twenty-eight iOS 11.1 through 11.4.1 public-beta identities retained in an older local manifest but absent from production.",
+      "candidateCount": 28,
+      "sourcePaths": [
+        "scripts/research-batches/apple-ios-11-point-prerelease.json",
+        "research-handoffs/INDEX.md",
+        "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+        "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/report.md"
+      ],
+      "supersessionRule": "This register supersedes the earlier applied-state conclusion. Exact live production reconciliation controls. The reusable-evidence packet is authoritative for current identity status, evidence custody, blockers, and review state."
+    },
+    {
+      "cohortId": "os27-public-beta",
+      "description": "Six macOS, watchOS, and tvOS 27 public betas plus two separately preserved visionOS do-not-create decisions.",
+      "candidateCount": 6,
+      "sourcePaths": [
+        "research-handoffs/beta-chronology-gap/os27/assignment.json",
+        "research-handoffs/beta-chronology-gap/os27/sources.json",
+        "research-handoffs/beta-chronology-gap/os27/candidates.json",
+        "research-handoffs/beta-chronology-gap/os27/conflicts.json",
+        "research-handoffs/beta-chronology-gap/os27/report.md",
+        "research-handoffs/beta-chronology-gap/os27/review.json"
+      ],
+      "supersessionRule": "The complete OS 27 packet supersedes the foundation's earlier three-candidate estimate and its earlier treatment of visionOS as a proposed disputed candidate."
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:ios:8.3:public-beta-1",
+      "originCohortId": "ios8-ledger-only",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "8.3",
+      "releaseVersionId": "version-ios-8-3",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-03-12",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live production inventory contained no publicBeta event for this releaseVersionId and routeAlias.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "foundationSource",
+          "sourceId": "source-macrumors-ios83-public-program",
+          "locator": "candidate-specific identity locator in sources.json",
+          "supports": "Public Beta 1 audience, date, and pairing to beta-3"
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/build-apple-ios-8-point-prerelease.mjs",
+          "locator": "ledgerOnlyRouteSpecs version-ios-8-3/public-beta-1",
+          "supports": "Retained ledger-only identity and paired developer route"
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-8-3-public-beta-1",
+          "locator": "Lead identity paragraph describes the first iOS public-program distribution and its pairing with Developer Beta 3.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-8-3",
+        "routeAlias": "beta-3",
+        "relationship": "Same-day or explicitly corresponding developer distribution; no byte-for-byte claim unless separately proven."
+      },
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:8.3:public-beta-2",
+      "originCohortId": "ios8-ledger-only",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "8.3",
+      "releaseVersionId": "version-ios-8-3",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-03-24",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live production inventory contained no publicBeta event for this releaseVersionId and routeAlias.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "foundationSource",
+          "sourceId": "source-macrumors-ios83-public-beta-2",
+          "locator": "candidate-specific identity locator in sources.json",
+          "supports": "Public Beta 2 audience, date, and pairing to beta-4"
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/build-apple-ios-8-point-prerelease.mjs",
+          "locator": "ledgerOnlyRouteSpecs version-ios-8-3/public-beta-2",
+          "supports": "Retained ledger-only identity and paired developer route"
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-8-3-public-beta-2",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 2 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-8-3",
+        "routeAlias": "beta-4",
+        "relationship": "Same-day or explicitly corresponding developer distribution; no byte-for-byte claim unless separately proven."
+      },
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:8.4:public-beta-1",
+      "originCohortId": "ios8-ledger-only",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "8.4",
+      "releaseVersionId": "version-ios-8-4",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-04-27",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live production inventory contained no publicBeta event for this releaseVersionId and routeAlias.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "foundationSource",
+          "sourceId": "source-9to5mac-ios84-public-beta-1",
+          "locator": "candidate-specific identity locator in sources.json",
+          "supports": "Public Beta 1 audience, date, and pairing to beta-2"
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/build-apple-ios-8-point-prerelease.mjs",
+          "locator": "ledgerOnlyRouteSpecs version-ios-8-4/public-beta-1",
+          "supports": "Retained ledger-only identity and paired developer route"
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-8-4-public-beta-1",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 1 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-8-4",
+        "routeAlias": "beta-2",
+        "relationship": "Same-day or explicitly corresponding developer distribution; no byte-for-byte claim unless separately proven."
+      },
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:8.4:public-beta-2",
+      "originCohortId": "ios8-ledger-only",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "8.4",
+      "releaseVersionId": "version-ios-8-4",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-05-11",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live production inventory contained no publicBeta event for this releaseVersionId and routeAlias.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "foundationSource",
+          "sourceId": "source-9to5mac-ios84-public-beta-2",
+          "locator": "candidate-specific identity locator in sources.json",
+          "supports": "Public Beta 2 audience, date, and pairing to beta-3"
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/build-apple-ios-8-point-prerelease.mjs",
+          "locator": "ledgerOnlyRouteSpecs version-ios-8-4/public-beta-2",
+          "supports": "Retained ledger-only identity and paired developer route"
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-8-4-public-beta-2",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 2 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-8-4",
+        "routeAlias": "beta-3",
+        "relationship": "Same-day or explicitly corresponding developer distribution; no byte-for-byte claim unless separately proven."
+      },
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:8.4:public-beta-3",
+      "originCohortId": "ios8-ledger-only",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "8.4",
+      "releaseVersionId": "version-ios-8-4",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-06-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live production inventory contained no publicBeta event for this releaseVersionId and routeAlias.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "foundationSource",
+          "sourceId": "source-macrumors-ios84-public-beta-3",
+          "locator": "candidate-specific identity locator in sources.json",
+          "supports": "Public Beta 3 audience, date, and pairing to beta-4"
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/build-apple-ios-8-point-prerelease.mjs",
+          "locator": "ledgerOnlyRouteSpecs version-ios-8-4/public-beta-3",
+          "supports": "Retained ledger-only identity and paired developer route"
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-8-4-public-beta-3",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 3 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-8-4",
+        "routeAlias": "beta-4",
+        "relationship": "Same-day or explicitly corresponding developer distribution; no byte-for-byte claim unless separately proven."
+      },
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.1:public-beta-1",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.1",
+      "releaseVersionId": "version-ios-11-1",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-09-28",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-1/public-beta-1; retained source https://www.macrumors.com/2017/09/28/apple-releases-ios-11-1-public-beta/; source locator Public Beta 1 iOS 11.1",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-1-public-beta-1",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 1 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.1:public-beta-1",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.1:public-beta-2",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.1",
+      "releaseVersionId": "version-ios-11-1",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-10-09",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-1/public-beta-2; retained source https://www.macrumors.com/2017/10/09/apple-seeds-ios-11-1-beta-2-to-developers/; source locator Public Beta 2 iOS 11.1",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-1-public-beta-2",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 2 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.1:public-beta-2",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.1:public-beta-3",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.1",
+      "releaseVersionId": "version-ios-11-1",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-10-16",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "inferredFromPairedDeveloper",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-1/public-beta-3; retained source https://www.macrumors.com/2017/10/16/apple-seeds-ios-11-1-beta-3-to-developers/; source locator Public Beta 3 iOS 11.1",
+          "supports": "Public audience and date are explicit; proposed public ordinal is inferred from the paired developer ordinal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-1-public-beta-3",
+          "locator": "Headline names Developer Beta 3; the update paragraph records public distribution without displaying a public ordinal.",
+          "supports": "The retained source confirms the proposed version, date, and public audience, but not the public ordinal."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.1:public-beta-3",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate.",
+        "The retained page does not display the proposed public ordinal; obtain ordinal-specific evidence without deriving it from the developer sequence."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The public audience, version, and date passed independent retained-evidence review. The public ordinal and independent-source gate remain open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.1:public-beta-4",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.1",
+      "releaseVersionId": "version-ios-11-1",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-10-20",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "inferredFromPairedDeveloper",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-1/public-beta-4; retained source https://www.macrumors.com/2017/10/20/apple-seeds-ios-11-1-beta-4-to-developers/; source locator Public Beta 4 iOS 11.1",
+          "supports": "Public audience and date are explicit; proposed public ordinal is inferred from the paired developer ordinal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-1-public-beta-4",
+          "locator": "Headline names Developer Beta 4; the update paragraph records public distribution without displaying a public ordinal.",
+          "supports": "The retained source confirms the proposed version, date, and public audience, but not the public ordinal."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.1:public-beta-4",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate.",
+        "The retained page does not display the proposed public ordinal; obtain ordinal-specific evidence without deriving it from the developer sequence."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The public audience, version, and date passed independent retained-evidence review. The public ordinal and independent-source gate remain open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.1:public-beta-5",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.1",
+      "releaseVersionId": "version-ios-11-1",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-10-23",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-1/public-beta-5; retained source https://www.macrumors.com/2017/10/23/apple-seeds-fifth-beta-of-ios-11-1-to-developers/; source locator Public Beta 5 iOS 11.1",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-1-public-beta-5",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 5 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.1:public-beta-5",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.2:public-beta-1",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.2",
+      "releaseVersionId": "version-ios-11-2",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-11-01",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-2/public-beta-1; retained source https://www.macrumors.com/2017/11/01/apple-first-ios-11-2-public-beta/; source locator Public Beta 1 iOS 11.2",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-2-public-beta-1",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 1 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.2:public-beta-1",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.2:public-beta-2",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.2",
+      "releaseVersionId": "version-ios-11-2",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-11-07",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-2/public-beta-2; retained source https://www.macrumors.com/2017/11/07/apple-releases-ios-11-2-public-beta/; source locator Public Beta 2 iOS 11.2",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-2-public-beta-2",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 2 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.2:public-beta-2",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.2:public-beta-3",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.2",
+      "releaseVersionId": "version-ios-11-2",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-11-13",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "inferredFromPairedDeveloper",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-2/public-beta-3; retained source https://www.macrumors.com/2017/11/13/apple-seeds-ios-11-2-beta-3-to-developers/; source locator Public Beta 3 iOS 11.2",
+          "supports": "Public audience and date are explicit; proposed public ordinal is inferred from the paired developer ordinal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-2-public-beta-3",
+          "locator": "Headline names Developer Beta 3; the update paragraph records public distribution without displaying a public ordinal.",
+          "supports": "The retained source confirms the proposed version, date, and public audience, but not the public ordinal."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.2:public-beta-3",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate.",
+        "The retained page does not display the proposed public ordinal; obtain ordinal-specific evidence without deriving it from the developer sequence."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The public audience, version, and date passed independent retained-evidence review. The public ordinal and independent-source gate remain open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.2:public-beta-4",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.2",
+      "releaseVersionId": "version-ios-11-2",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-11-17",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "inferredFromPairedDeveloper",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-2/public-beta-4; retained source https://www.macrumors.com/2017/11/17/apple-seeds-ios-11-2-beta-4-to-developers/; source locator Public Beta 4 iOS 11.2",
+          "supports": "Public audience and date are explicit; proposed public ordinal is inferred from the paired developer ordinal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-2-public-beta-4",
+          "locator": "Headline names Developer Beta 4; the update paragraph records public distribution without displaying a public ordinal.",
+          "supports": "The retained source confirms the proposed version, date, and public audience, but not the public ordinal."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.2:public-beta-4",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate.",
+        "The retained page does not display the proposed public ordinal; obtain ordinal-specific evidence without deriving it from the developer sequence."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The public audience, version, and date passed independent retained-evidence review. The public ordinal and independent-source gate remain open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.2:public-beta-5",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.2",
+      "releaseVersionId": "version-ios-11-2",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-11-28",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "inferredFromPairedDeveloper",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-2/public-beta-5; retained source https://www.macrumors.com/2017/11/28/apple-seeds-ios-11-2-beta-5-to-developers/; source locator Public Beta 5 iOS 11.2",
+          "supports": "Public audience and date are explicit; proposed public ordinal is inferred from the paired developer ordinal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-2-public-beta-5",
+          "locator": "Headline names Developer Beta 5; the update paragraph records public distribution without displaying a public ordinal.",
+          "supports": "The retained source confirms the proposed version, date, and public audience, but not the public ordinal."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.2:public-beta-5",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate.",
+        "The retained page does not display the proposed public ordinal; obtain ordinal-specific evidence without deriving it from the developer sequence."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The public audience, version, and date passed independent retained-evidence review. The public ordinal and independent-source gate remain open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.2:public-beta-6",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.2",
+      "releaseVersionId": "version-ios-11-2",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-12-01",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-2/public-beta-6; retained source https://www.macrumors.com/2017/12/01/apple-seeds-ios-11-2-beta-6-to-developers/; source locator Public Beta 6 iOS 11.2",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-2-public-beta-6",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 6 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.2:public-beta-6",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.3:public-beta-1",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.3",
+      "releaseVersionId": "version-ios-11-3",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-01-25",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-3/public-beta-1; retained source https://www.macrumors.com/2018/01/25/apple-releases-first-ios-11-3-public-beta/; source locator Public Beta 1 iOS 11.3",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-3-public-beta-1",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 1 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.3:public-beta-1",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.3:public-beta-2",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.3",
+      "releaseVersionId": "version-ios-11-3",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-02-07",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-3/public-beta-2; retained source https://www.macrumors.com/2018/02/07/apple-releases-second-ios-11-3-public-beta/; source locator Public Beta 2 iOS 11.3",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-3-public-beta-2",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 2 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.3:public-beta-2",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.3:public-beta-3",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.3",
+      "releaseVersionId": "version-ios-11-3",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-02-21",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-3/public-beta-3; retained source https://www.macrumors.com/2018/02/21/apple-ios-11-3-public-beta-3/; source locator Public Beta 3 iOS 11.3",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-3-public-beta-3",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 3 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.3:public-beta-3",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.3:public-beta-4",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.3",
+      "releaseVersionId": "version-ios-11-3",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-03-05",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-3/public-beta-4; retained source https://www.macrumors.com/2018/03/05/apple-seeds-ios-11-3-beta-4-to-developers/; source locator Public Beta 4 iOS 11.3",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-3-public-beta-4",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 4 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.3:public-beta-4",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.3:public-beta-5",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.3",
+      "releaseVersionId": "version-ios-11-3",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-03-12",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "inferredFromPairedDeveloper",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-3/public-beta-5; retained source https://www.macrumors.com/2018/03/12/apple-seeds-ios-11-3-beta-5-to-developers/; source locator Public Beta 5 iOS 11.3",
+          "supports": "Public audience and date are explicit; proposed public ordinal is inferred from the paired developer ordinal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-3-public-beta-5",
+          "locator": "Headline names Developer Beta 5; the update paragraph records public distribution without displaying a public ordinal.",
+          "supports": "The retained source confirms the proposed version, date, and public audience, but not the public ordinal."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.3:public-beta-5",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate.",
+        "The retained page does not display the proposed public ordinal; obtain ordinal-specific evidence without deriving it from the developer sequence."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The public audience, version, and date passed independent retained-evidence review. The public ordinal and independent-source gate remain open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.3:public-beta-6",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.3",
+      "releaseVersionId": "version-ios-11-3",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-03-16",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-3/public-beta-6; retained source https://www.macrumors.com/2018/03/16/apple-seeds-ios-11-3-beta-6-to-developers/; source locator Public Beta 6 iOS 11.3",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-3-public-beta-6",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 6 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.3:public-beta-6",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4:public-beta-1",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4",
+      "releaseVersionId": "version-ios-11-4",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-04-03",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4/public-beta-1; retained source https://www.macrumors.com/2018/04/03/apple-releases-ios-11-4-public-beta-1/; source locator Public Beta 1 iOS 11.4",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-public-beta-1",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 1 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4:public-beta-1",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4:public-beta-2",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4",
+      "releaseVersionId": "version-ios-11-4",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-04-17",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4/public-beta-2; retained source https://www.macrumors.com/2018/04/17/apple-releases-ios-11-4-public-beta-2/; source locator Public Beta 2 iOS 11.4",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-public-beta-2",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 2 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4:public-beta-2",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4:public-beta-3",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4",
+      "releaseVersionId": "version-ios-11-4",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-05-01",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "inferredFromPairedDeveloper",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4/public-beta-3; retained source https://www.macrumors.com/2018/05/01/apple-seeds-ios-11-4-beta-4-to-developers/; source locator Public Beta 3 iOS 11.4",
+          "supports": "Public audience and date are explicit; proposed public ordinal is inferred from the paired developer ordinal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-public-beta-3",
+          "locator": "Headline names Developer Beta 3; the update paragraph records public distribution without displaying a public ordinal.",
+          "supports": "The retained source confirms the proposed version, date, and public audience, but not the public ordinal."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4:public-beta-3",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate.",
+        "The retained page does not display the proposed public ordinal; obtain ordinal-specific evidence without deriving it from the developer sequence."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The public audience, version, and date passed independent retained-evidence review. The public ordinal and independent-source gate remain open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4:public-beta-4",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4",
+      "releaseVersionId": "version-ios-11-4",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-05-07",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "inferredFromPairedDeveloper",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4/public-beta-4; retained source https://www.macrumors.com/2018/05/07/apple-seeds-ios-11-4-beta-4-to-developers-2/; source locator Public Beta 4 iOS 11.4",
+          "supports": "Public audience and date are explicit; proposed public ordinal is inferred from the paired developer ordinal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-public-beta-4",
+          "locator": "Headline names Developer Beta 4; the update paragraph records public distribution without displaying a public ordinal.",
+          "supports": "The retained source confirms the proposed version, date, and public audience, but not the public ordinal."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4:public-beta-4",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate.",
+        "The retained page does not display the proposed public ordinal; obtain ordinal-specific evidence without deriving it from the developer sequence."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The public audience, version, and date passed independent retained-evidence review. The public ordinal and independent-source gate remain open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4:public-beta-5",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4",
+      "releaseVersionId": "version-ios-11-4",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-05-14",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "inferredFromPairedDeveloper",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4/public-beta-5; retained source https://www.macrumors.com/2018/05/14/apple-seeds-ios-11-4-beta-5-to-developers/; source locator Public Beta 5 iOS 11.4",
+          "supports": "Public audience and date are explicit; proposed public ordinal is inferred from the paired developer ordinal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-public-beta-5",
+          "locator": "Headline names Developer Beta 5; the update paragraph records public distribution without displaying a public ordinal.",
+          "supports": "The retained source confirms the proposed version, date, and public audience, but not the public ordinal."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4:public-beta-5",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate.",
+        "The retained page does not display the proposed public ordinal; obtain ordinal-specific evidence without deriving it from the developer sequence."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The public audience, version, and date passed independent retained-evidence review. The public ordinal and independent-source gate remain open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4:public-beta-6",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4",
+      "releaseVersionId": "version-ios-11-4",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-05-17",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4/public-beta-6; retained source https://www.macrumors.com/2018/05/17/apple-seeds-ios-11-4-beta-6-to-developers/; source locator Public Beta 6 iOS 11.4",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-public-beta-6",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 6 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4:public-beta-6",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4.1:public-beta-1",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4.1",
+      "releaseVersionId": "version-ios-11-4-1",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-05-31",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4-1/public-beta-1; retained source https://www.macrumors.com/2018/05/31/apple-seeds-ios-11-4-1-public-beta-1/; source locator Public Beta 1 iOS 11.4.1",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-1-public-beta-1",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 1 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4.1:public-beta-1",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4.1:public-beta-2",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4.1",
+      "releaseVersionId": "version-ios-11-4-1",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-06-12",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4-1/public-beta-2; retained source https://www.macrumors.com/2018/06/12/apple-seeds-second-ios-11-4-1-public-beta/; source locator Public Beta 2 iOS 11.4.1",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-1-public-beta-2",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 2 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4.1:public-beta-2",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4.1:public-beta-3",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4.1",
+      "releaseVersionId": "version-ios-11-4-1",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-06-18",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4-1/public-beta-3; retained source https://www.macrumors.com/2018/06/18/apple-seeds-ios-11-4-1-beta-3-to-developers/; source locator Public Beta 3 iOS 11.4.1",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-1-public-beta-3",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 3 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4.1:public-beta-3",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4.1:public-beta-4",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4.1",
+      "releaseVersionId": "version-ios-11-4-1",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-06-25",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4-1/public-beta-4; retained source https://www.macrumors.com/2018/06/25/apple-seeds-ios-11-4-1-beta-4-to-developers/; source locator Public Beta 4 iOS 11.4.1",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-1-public-beta-4",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 4 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4.1:public-beta-4",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:11.4.1:public-beta-5",
+      "originCohortId": "ios11-prior-manifest",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.4.1",
+      "releaseVersionId": "version-ios-11-4-1",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-02",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:35:41Z",
+        "matchBasis": "Exact live comparison by releaseVersionId, channel, and routeAlias found no matching production releaseEvent.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "localEvidence",
+          "localPath": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+          "locator": "events identity version-ios-11-4-1/public-beta-5; retained source https://www.macrumors.com/2018/07/02/apple-seeds-ios-11-4-1-beta-5-to-developers/; source locator Public Beta 5 iOS 11.4.1",
+          "supports": "Public audience, date, and public ordinal are explicit in the retained source."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+          "sourceId": "source-review-candidate-apple-ios-11-4-1-public-beta-5",
+          "locator": "Headline and lead/update identity paragraph explicitly identify Public Beta 5 for the public beta audience.",
+          "supports": "The retained source directly supports the proposed public appearance identity."
+        }
+      ],
+      "priorProposedStableEventId": "event:apple:ios:11.4.1:public-beta-5",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [
+        "This reuse audit has only one independently hash-verified publisher lineage; corroborating evidence must be retained and reviewed under the program gate."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": "codex-review-reusable-public-betas",
+        "reviewedAt": "2026-07-31T02:45:00Z",
+        "notes": "The proposed identity passed independent retained-evidence review against one contemporary publisher. The independent-source gate remains open."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:27.0:public-beta-1",
+      "originCohortId": "os27-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "27.0",
+      "releaseVersionId": "version-macos-27-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-13",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:40:40Z",
+        "matchBasis": "Upstream packet queried all scoped published releaseEvent documents and found zero exact, route-alias, or channel/sequence/date matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-005",
+          "locator": "HTML article metadata and body at lines 168-169 and the article body identify the first macOS 27 public beta on July 13 and the Apple Beta enrollment route.",
+          "supports": "Dedicated same-day report identifies the first macOS 27 public beta and its public-program installation route."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-017",
+          "locator": "Selected evidence identifies macOS 27 beta 3 v2 build 26A5378n on the public-beta day and states other OS 27 public payloads retained beta 3 builds.",
+          "supports": "Contemporaneous report identifies same-day macOS beta 3 v2 build 26A5378n as public betas dropped."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-001",
+          "locator": "HTML lines 197-220: the live public-program description and OS 27 product list include macOS, tvOS, and watchOS, but not visionOS.",
+          "supports": "Apple's public-program surface includes macOS 27."
+        }
+      ],
+      "upstreamPacket": "research-handoffs/beta-chronology-gap/os27/candidates.json",
+      "buildEvidenceStatus": "reportedSharedPayload",
+      "build": {
+        "value": "26A5378n",
+        "confidence": "medium",
+        "existingBuildId": "release-build-b6325b76ecd8703365811fdc",
+        "relationship": "macOS 27 developer beta 3 v2"
+      },
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [],
+      "review": {
+        "required": false,
+        "reviewer": "codex-root",
+        "reviewedAt": "2026-07-30",
+        "notes": "Independent review passed on 2026-07-30; see research-handoffs/beta-chronology-gap/os27/review.json. Publication and Sanity mutation remain unauthorized."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:27.0:public-beta-2",
+      "originCohortId": "os27-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "27.0",
+      "releaseVersionId": "version-macos-27-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-22",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:40:40Z",
+        "matchBasis": "Upstream packet queried all scoped published releaseEvent documents and found zero exact, route-alias, or channel/sequence/date matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-010",
+          "locator": "HTML lines 561, 589-593, and 627 identify macOS public beta 2 on July 22 and build 26A5388g, the same payload as developer beta 4.",
+          "supports": "Dedicated July 22 report identifies Public Beta 2 and build 26A5388g."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-004",
+          "locator": "HTML lines 1599, 1652, 1811, and 1864 identify July 20 developer beta 4 builds for visionOS, watchOS, macOS, and tvOS respectively.",
+          "supports": "Apple identifies 26A5388g as macOS 27 developer beta 4, supporting payload equivalence without proving the public channel by itself."
+        }
+      ],
+      "upstreamPacket": "research-handoffs/beta-chronology-gap/os27/candidates.json",
+      "buildEvidenceStatus": "corroboratedSharedPayload",
+      "build": {
+        "value": "26A5388g",
+        "confidence": "high",
+        "existingBuildId": "release-build-f73dd012ff20b92b591c2317",
+        "relationship": "macOS 27 developer beta 4"
+      },
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [],
+      "review": {
+        "required": false,
+        "reviewer": "codex-root",
+        "reviewedAt": "2026-07-30",
+        "notes": "Independent review passed on 2026-07-30; see research-handoffs/beta-chronology-gap/os27/review.json. Publication and Sanity mutation remain unauthorized."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:27.0:public-beta-1",
+      "originCohortId": "os27-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "27.0",
+      "releaseVersionId": "version-watchos-27-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-13",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:40:40Z",
+        "matchBasis": "Upstream packet queried all scoped published releaseEvent documents and found zero exact, route-alias, or channel/sequence/date matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-006",
+          "locator": "HTML lines 168 and 326-327 identify first tvOS/watchOS public betas on July 13 and say they are the same payloads as developer beta 3.",
+          "supports": "Dedicated same-day report identifies watchOS Public Beta 1 and says it equals developer beta 3."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-011",
+          "locator": "Timeline list near HTML lines 11240-11260 identifies watchOS public beta 1 (July 13, 24R5315i) and public beta 2 (July 22, 24R5325h), paired with developer beta 3/4.",
+          "supports": "Chronology identifies July 13 Public Beta 1 build 24R5315i and pairs it with developer beta 3."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-002",
+          "locator": "HTML line 227 lists enrollable devices; line 242 lists feedback routes. Neither list includes Apple Vision Pro or visionOS.",
+          "supports": "Apple's public-program FAQ explicitly includes Apple Watch enrollment."
+        }
+      ],
+      "upstreamPacket": "research-handoffs/beta-chronology-gap/os27/candidates.json",
+      "buildEvidenceStatus": "corroboratedSharedPayload",
+      "build": {
+        "value": "24R5315i",
+        "confidence": "high",
+        "existingBuildId": "release-build-8bd7c137d9e3e99ff4f06649",
+        "relationship": "watchOS 27 developer beta 3"
+      },
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [],
+      "review": {
+        "required": false,
+        "reviewer": "codex-root",
+        "reviewedAt": "2026-07-30",
+        "notes": "Independent review passed on 2026-07-30; see research-handoffs/beta-chronology-gap/os27/review.json. Publication and Sanity mutation remain unauthorized."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:27.0:public-beta-2",
+      "originCohortId": "os27-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "27.0",
+      "releaseVersionId": "version-watchos-27-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-22",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:40:40Z",
+        "matchBasis": "Upstream packet queried all scoped published releaseEvent documents and found zero exact, route-alias, or channel/sequence/date matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-009",
+          "locator": "HTML lines 168-169 and 315-316 identify the second tvOS/watchOS public betas on July 22.",
+          "supports": "Dedicated July 22 report identifies watchOS Public Beta 2."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-011",
+          "locator": "Timeline list near HTML lines 11240-11260 identifies watchOS public beta 1 (July 13, 24R5315i) and public beta 2 (July 22, 24R5325h), paired with developer beta 3/4.",
+          "supports": "Chronology identifies July 22 Public Beta 2 build 24R5325h."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-004",
+          "locator": "HTML lines 1599, 1652, 1811, and 1864 identify July 20 developer beta 4 builds for visionOS, watchOS, macOS, and tvOS respectively.",
+          "supports": "Apple identifies 24R5325h as watchOS 27 developer beta 4, supporting payload equivalence."
+        }
+      ],
+      "upstreamPacket": "research-handoffs/beta-chronology-gap/os27/candidates.json",
+      "buildEvidenceStatus": "corroboratedSharedPayload",
+      "build": {
+        "value": "24R5325h",
+        "confidence": "high",
+        "existingBuildId": "release-build-fdf843582d3e0d40a26604a7",
+        "relationship": "watchOS 27 developer beta 4"
+      },
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [],
+      "review": {
+        "required": false,
+        "reviewer": "codex-root",
+        "reviewedAt": "2026-07-30",
+        "notes": "Independent review passed on 2026-07-30; see research-handoffs/beta-chronology-gap/os27/review.json. Publication and Sanity mutation remain unauthorized."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:27.0:public-beta-1",
+      "originCohortId": "os27-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "27.0",
+      "releaseVersionId": "version-tvos-27-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-13",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:40:40Z",
+        "matchBasis": "Upstream packet queried all scoped published releaseEvent documents and found zero exact, route-alias, or channel/sequence/date matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-006",
+          "locator": "HTML lines 168 and 326-327 identify first tvOS/watchOS public betas on July 13 and say they are the same payloads as developer beta 3.",
+          "supports": "Dedicated same-day report identifies tvOS Public Beta 1 and says it equals developer beta 3."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-012",
+          "locator": "Timeline list at HTML lines 11246-11258 identifies tvOS public beta 1 (July 13, 24J5315i) and public beta 2 (July 22, 24J5325d), paired with developer beta 3/4.",
+          "supports": "Chronology identifies July 13 Public Beta 1 build 24J5315i and pairs it with developer beta 3."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-002",
+          "locator": "HTML line 227 lists enrollable devices; line 242 lists feedback routes. Neither list includes Apple Vision Pro or visionOS.",
+          "supports": "Apple's public-program FAQ explicitly includes Apple TV enrollment."
+        }
+      ],
+      "upstreamPacket": "research-handoffs/beta-chronology-gap/os27/candidates.json",
+      "buildEvidenceStatus": "corroboratedSharedPayload",
+      "build": {
+        "value": "24J5315i",
+        "confidence": "high",
+        "existingBuildId": "release-build-3ff0f0bb8f4ff8f43f6a9a7d",
+        "relationship": "tvOS 27 developer beta 3"
+      },
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [],
+      "review": {
+        "required": false,
+        "reviewer": "codex-root",
+        "reviewedAt": "2026-07-30",
+        "notes": "Independent review passed on 2026-07-30; see research-handoffs/beta-chronology-gap/os27/review.json. Publication and Sanity mutation remain unauthorized."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:27.0:public-beta-2",
+      "originCohortId": "os27-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "27.0",
+      "releaseVersionId": "version-tvos-27-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-22",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:40:40Z",
+        "matchBasis": "Upstream packet queried all scoped published releaseEvent documents and found zero exact, route-alias, or channel/sequence/date matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-009",
+          "locator": "HTML lines 168-169 and 315-316 identify the second tvOS/watchOS public betas on July 22.",
+          "supports": "Dedicated July 22 report identifies tvOS Public Beta 2."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-012",
+          "locator": "Timeline list at HTML lines 11246-11258 identifies tvOS public beta 1 (July 13, 24J5315i) and public beta 2 (July 22, 24J5325d), paired with developer beta 3/4.",
+          "supports": "Chronology identifies July 22 Public Beta 2 build 24J5325d."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-004",
+          "locator": "HTML lines 1599, 1652, 1811, and 1864 identify July 20 developer beta 4 builds for visionOS, watchOS, macOS, and tvOS respectively.",
+          "supports": "Apple identifies 24J5325d as tvOS 27 developer beta 4, supporting payload equivalence."
+        }
+      ],
+      "upstreamPacket": "research-handoffs/beta-chronology-gap/os27/candidates.json",
+      "buildEvidenceStatus": "corroboratedSharedPayload",
+      "build": {
+        "value": "24J5325d",
+        "confidence": "high",
+        "existingBuildId": "release-build-554bcf80b312c7bdd103d4b1",
+        "relationship": "tvOS 27 developer beta 4"
+      },
+      "contentDisposition": "distinctArticleUndetermined",
+      "blockers": [],
+      "review": {
+        "required": false,
+        "reviewer": "codex-root",
+        "reviewedAt": "2026-07-30",
+        "notes": "Independent review passed on 2026-07-30; see research-handoffs/beta-chronology-gap/os27/review.json. Publication and Sanity mutation remain unauthorized."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "notProposed": [
+    {
+      "recordId": "not-proposed:apple:visionos:27.0:public-beta-1",
+      "originCohortId": "os27-public-beta",
+      "platform": "visionOS",
+      "platformId": "platform-visionos",
+      "releaseVersionId": "version-visionos-27-0",
+      "apparentIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-13",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "publicDistributionNotEstablished",
+      "reason": "Some cross-platform roundups label the developer beta 3 payload as Public Beta 1, but Apple's public-program landing page and FAQ omit Vision Pro, Apple's installation documentation provides only a developer-beta route, and a same-day platform-specialist report explicitly distinguishes the visionOS developer beta from the public wave.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-001",
+          "locator": "HTML lines 197-220: the live public-program description and OS 27 product list include macOS, tvOS, and watchOS, but not visionOS.",
+          "supports": "Supports the developer-only/public-program-omission decision through the research cutoff."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-002",
+          "locator": "HTML line 227 lists enrollable devices; line 242 lists feedback routes. Neither list includes Apple Vision Pro or visionOS.",
+          "supports": "Supports the developer-only/public-program-omission decision through the research cutoff."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-003",
+          "locator": "HTML lines 1210-1219, visionOS beta: choose the developer beta; Vision Pro must use the Apple Account associated with the Apple Developer website.",
+          "supports": "Supports the developer-only/public-program-omission decision through the research cutoff."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-013",
+          "locator": "Article table 'Which Apple public betas are available now?' lists macOS/watchOS/tvOS as available and visionOS as not listed; the following paragraphs explain the Apple-program and developer-route distinction.",
+          "supports": "Supports the developer-only/public-program-omission decision through the research cutoff."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-016",
+          "locator": "HTML line 291, published the evening of July 13, says visionOS has not been included in the public program and refers readers to the visionOS 27 developer beta.",
+          "supports": "Supports the developer-only/public-program-omission decision through the research cutoff."
+        }
+      ],
+      "reversalEvidence": "A dated Apple public-program guide naming visionOS 27, an archived signed-in Apple Beta enrollment screen, or a dated Vision Pro Beta Updates screenshot clearly offering the matching Public Beta would reopen this decision.",
+      "review": {
+        "required": false,
+        "reviewer": "codex-root",
+        "reviewedAt": "2026-07-30",
+        "notes": "Independent review passed the high-confidence do-not-create decision on 2026-07-30; see research-handoffs/beta-chronology-gap/os27/review.json."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:visionos:27.0:public-beta-2",
+      "originCohortId": "os27-public-beta",
+      "platform": "visionOS",
+      "platformId": "platform-visionos",
+      "releaseVersionId": "version-visionos-27-0",
+      "apparentIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-22",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "publicDistributionNotEstablished",
+      "reason": "One living chronology calls the developer beta 4 payload Public Beta 2 while its own installation section says visionOS betas require a developer account and are developer-only. Apple still offered no public-program route for Vision Pro at the research cutoff.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-001",
+          "locator": "HTML lines 197-220: the live public-program description and OS 27 product list include macOS, tvOS, and watchOS, but not visionOS.",
+          "supports": "Supports the internally conflicted developer-only/public-program-omission decision through the research cutoff."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-002",
+          "locator": "HTML line 227 lists enrollable devices; line 242 lists feedback routes. Neither list includes Apple Vision Pro or visionOS.",
+          "supports": "Supports the internally conflicted developer-only/public-program-omission decision through the research cutoff."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-003",
+          "locator": "HTML lines 1210-1219, visionOS beta: choose the developer beta; Vision Pro must use the Apple Account associated with the Apple Developer website.",
+          "supports": "Supports the internally conflicted developer-only/public-program-omission decision through the research cutoff."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-004",
+          "locator": "HTML lines 1599, 1652, 1811, and 1864 identify July 20 developer beta 4 builds for visionOS, watchOS, macOS, and tvOS respectively.",
+          "supports": "Supports the internally conflicted developer-only/public-program-omission decision through the research cutoff."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/os27/sources.json",
+          "sourceId": "source-014",
+          "locator": "HTML lines 11173-11234 claim visionOS public beta 1/2 with developer-equivalent builds, while lines 11195-11199 provide only a developer-account route and say the betas are developer-only.",
+          "supports": "Supports the internally conflicted developer-only/public-program-omission decision through the research cutoff."
+        }
+      ],
+      "reversalEvidence": "A dated Apple public-program guide naming visionOS 27, an archived signed-in Apple Beta enrollment screen, or a dated Vision Pro Beta Updates screenshot clearly offering the matching Public Beta would reopen this decision.",
+      "review": {
+        "required": false,
+        "reviewer": "codex-root",
+        "reviewedAt": "2026-07-30",
+        "notes": "Independent review passed the high-confidence do-not-create decision on 2026-07-30; see research-handoffs/beta-chronology-gap/os27/review.json."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "nextEvidenceWaves": [
+    {
+      "waveId": "ios9-point-public-beta-reuse",
+      "scope": "Enumerate and review iOS 9 point-release public-beta appearances from the retained artifact reservoir.",
+      "artifactPaths": [
+        "tmp/ios9-point-evidence"
+      ],
+      "estimatedCandidateCount": 27,
+      "countStatus": "estimate",
+      "requiredNextStep": "Parse the full sequence, reconcile every exact production identity, resolve public ordinals, and add claim-level source records before registering candidates."
+    },
+    {
+      "waveId": "macos-public-beta-history",
+      "scope": "Audit every macOS public-beta appearance from OS X 10.9.3 forward, across major, point, and patch cycles.",
+      "artifactPaths": [
+        "research-handoffs/beta-chronology-gap/eligibility-matrix.json"
+      ],
+      "estimatedCandidateCount": null,
+      "countStatus": "estimate",
+      "requiredNextStep": "Build version-by-version developer/public sequence tables and document negative evidence; treat the 2000 Public Beta as a separate modeling decision."
+    },
+    {
+      "waveId": "watchos-tvos-public-beta-history",
+      "scope": "Audit watchOS public betas from 7.0 and tvOS public betas from 11.0 across every release cycle.",
+      "artifactPaths": [
+        "research-handoffs/beta-chronology-gap/eligibility-matrix.json"
+      ],
+      "estimatedCandidateCount": null,
+      "countStatus": "estimate",
+      "requiredNextStep": "Enumerate exact appearances, ordinals, dates, respins, withdrawals, and shared-build relationships without inferring one audience from another."
+    },
+    {
+      "waveId": "six-platform-developer-beta-completeness",
+      "scope": "Audit developer-beta completeness for all six modeled platforms at major, point, and patch grain.",
+      "artifactPaths": [
+        "research-handoffs/beta-chronology-gap/baseline.json",
+        "research-handoffs/beta-chronology-gap/eligibility-matrix.json"
+      ],
+      "estimatedCandidateCount": null,
+      "countStatus": "estimate",
+      "requiredNextStep": "Start at each modeled corpus boundary, enumerate every ordinal and revision, and separately scope earlier macOS developer previews."
+    }
+  ],
+  "validationStatus": {
+    "status": "passed",
+    "validatedAt": "2026-07-31T02:54:46.801Z",
+    "validator": "research-handoffs/beta-chronology-gap/validate.mjs",
+    "summaryPath": "research-handoffs/beta-chronology-gap/validation-status.json"
+  }
+}

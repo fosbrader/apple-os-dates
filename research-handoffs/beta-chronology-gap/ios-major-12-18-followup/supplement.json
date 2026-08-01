@@ -1,0 +1,720 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-major-12-18-followup",
+  "generatedAt": "2026-07-31T05:40:43.000Z",
+  "parentPacket": "research-handoffs/beta-chronology-gap/ios-major-12-18",
+  "purpose": "Research-only evidence supplement mapping every independently blocked parent record to exact new evidence, a corrected identity, or a narrowed boundary.",
+  "summary": {
+    "originalRecordCount": 12,
+    "unchangedCandidateRecommendations": 7,
+    "correctedCandidateRecommendations": 2,
+    "notProposedReconsiderations": 2,
+    "existingProductionCorrectionRecommendations": 1
+  },
+  "identityFinding": "The displayed-label rule changes the first iOS 14 public appearance from PB1 to PB2, the first iOS 15 public appearance from PB1 to PB2, and the second iOS 15 public appearance from PB2 to PB3. Appearance order remains useful chronology but is not an ordinal authority.",
+  "mappings": [
+    {
+      "originalRecordId": "candidate:apple:ios:12.0:public-beta-1",
+      "originalRecordKind": "candidate",
+      "platform": "iOS",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "researchRecommendation": "readyForIndependentReviewUnchangedIdentity",
+      "originalIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-06-25",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-06-25",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "The supplement adds an independent contemporary publisher lineage at the exact iOS version, public ordinal, and Pacific appearance date grain.",
+      "evidenceRefs": [
+        {
+          "kind": "parentPacketSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "supports": "Exact parent-packet chronology retained as one publisher lineage."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "appleinsider-ios12-pb1",
+          "supports": "Independent exact version, public ordinal, and Pacific appearance-date evidence."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "iCulture",
+          "AppleInsider"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "snapshotPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/production-snapshot.json"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "candidate:apple:ios:12.0:public-beta-2",
+      "originalRecordKind": "candidate",
+      "platform": "iOS",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "researchRecommendation": "readyForIndependentReviewUnchangedIdentity",
+      "originalIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-05",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-05",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "The supplement adds an independent contemporary publisher lineage at the exact iOS version, public ordinal, and Pacific appearance date grain.",
+      "evidenceRefs": [
+        {
+          "kind": "parentPacketSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "supports": "Exact parent-packet chronology retained as one publisher lineage."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "appleinsider-ios12-pb2",
+          "supports": "Independent exact version, public ordinal, and Pacific appearance-date evidence."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "iCulture",
+          "AppleInsider"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "snapshotPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/production-snapshot.json"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "candidate:apple:ios:12.0:public-beta-3",
+      "originalRecordKind": "candidate",
+      "platform": "iOS",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "researchRecommendation": "readyForIndependentReviewUnchangedIdentity",
+      "originalIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-18",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-18",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "The supplement adds an independent contemporary publisher lineage at the exact iOS version, public ordinal, and Pacific appearance date grain.",
+      "evidenceRefs": [
+        {
+          "kind": "parentPacketSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "supports": "Exact parent-packet chronology retained as one publisher lineage."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "appleinsider-ios12-pb3",
+          "supports": "Independent exact version, public ordinal, and Pacific appearance-date evidence."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "iCulture",
+          "AppleInsider"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "snapshotPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/production-snapshot.json"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "candidate:apple:ios:12.0:public-beta-4",
+      "originalRecordKind": "candidate",
+      "platform": "iOS",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "researchRecommendation": "readyForIndependentReviewUnchangedIdentity",
+      "originalIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-31",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-31",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "The supplement adds an independent contemporary publisher lineage at the exact iOS version, public ordinal, and Pacific appearance date grain.",
+      "evidenceRefs": [
+        {
+          "kind": "parentPacketSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "supports": "Exact parent-packet chronology retained as one publisher lineage."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "9to5mac-ios12-pb4",
+          "supports": "Independent exact version, public ordinal, and Pacific appearance-date evidence."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "iCulture",
+          "9to5Mac"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "snapshotPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/production-snapshot.json"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "candidate:apple:ios:12.0:public-beta-5",
+      "originalRecordKind": "candidate",
+      "platform": "iOS",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "researchRecommendation": "readyForIndependentReviewUnchangedIdentity",
+      "originalIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-06",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-06",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "The supplement adds an independent contemporary publisher lineage at the exact iOS version, public ordinal, and Pacific appearance date grain.",
+      "evidenceRefs": [
+        {
+          "kind": "parentPacketSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "supports": "Exact parent-packet chronology retained as one publisher lineage."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "iphonecanada-ios12-pb5",
+          "supports": "Independent exact version, public ordinal, and Pacific appearance-date evidence."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "iCulture",
+          "iPhone in Canada"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "snapshotPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/production-snapshot.json"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "candidate:apple:ios:14.0:public-beta-1",
+      "originalRecordKind": "candidate",
+      "platform": "iOS",
+      "version": "14.0",
+      "releaseVersionId": "version-ios-14-0",
+      "researchRecommendation": "supersedeWithCorrectedIdentityPendingIndependentReview",
+      "originalIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-09",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-09",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "Two independent installation reports preserve the Software Update label Public Beta 2 for the first July 9 appearance. First-public-beta wording describes appearance order, not the displayed ordinal.",
+      "evidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "iphonecanada-ios14-pb2",
+          "supports": "Direct report of the iOS Software Update label Public Beta 2 on July 9."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "koc-ios14-pb2",
+          "supports": "Independent Software Update walkthrough showing iOS 14 Public Beta 2, timestamp-normalized to July 9 Pacific."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "iPhone in Canada",
+          "KOC / 電腦王阿達"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "confirmedMissingCorrectedIdentity",
+        "snapshotCheckId": "ios14-corrected-pb2-july9"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "candidate:apple:ios:15.0:public-beta-2",
+      "originalRecordKind": "candidate",
+      "platform": "iOS",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "researchRecommendation": "supersedeWithCorrectedIdentityPendingIndependentReview",
+      "originalIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-16",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-16",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "Forbes and Wccftech independently and explicitly label the July 16 public payload Public Beta 3. Second-public-beta wording describes appearance order.",
+      "evidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "forbes-ios15-pb3",
+          "supports": "Exact Public Beta 3 label and July 16 publication date."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "wccftech-ios15-pb3",
+          "supports": "Independent exact Public Beta 3 label and July 16 publication date."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "Forbes",
+          "Wccftech"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "confirmedMissingCorrectedIdentity",
+        "snapshotCheckId": "ios15-corrected-pb3-july16"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "candidate:apple:ios:17.0:public-beta-6",
+      "originalRecordKind": "candidate",
+      "platform": "iOS",
+      "version": "17.0",
+      "releaseVersionId": "version-ios-17-0",
+      "researchRecommendation": "readyForIndependentReviewUnchangedIdentity",
+      "originalIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-29",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-29",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "The supplement adds an independent contemporary publisher lineage at the exact iOS version, public ordinal, and Pacific appearance date grain.",
+      "evidenceRefs": [
+        {
+          "kind": "parentPacketSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios17",
+          "supports": "Exact parent-packet chronology retained as one publisher lineage."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "appleinsider-ios17-pb6",
+          "supports": "Independent exact version, public ordinal, and Pacific appearance-date evidence."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "iCulture",
+          "AppleInsider"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "snapshotPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/production-snapshot.json"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "candidate:apple:ios:18.0:public-beta-5",
+      "originalRecordKind": "candidate",
+      "platform": "iOS",
+      "version": "18.0",
+      "releaseVersionId": "version-ios-18-0",
+      "researchRecommendation": "readyForIndependentReviewUnchangedIdentity",
+      "originalIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-20",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-20",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "The supplement adds an independent contemporary publisher lineage at the exact iOS version, public ordinal, and Pacific appearance date grain.",
+      "evidenceRefs": [
+        {
+          "kind": "parentPacketSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios18",
+          "supports": "Exact parent-packet chronology retained as one publisher lineage."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "9to5mac-ios18-pb5",
+          "supports": "Independent exact version, public ordinal, and Pacific appearance-date evidence."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "iCulture",
+          "9to5Mac"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "snapshotPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/production-snapshot.json"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "not-proposed:apple:ios:14.0:public-beta-2",
+      "originalRecordKind": "notProposed",
+      "platform": "iOS",
+      "version": "14.0",
+      "releaseVersionId": "version-ios-14-0",
+      "researchRecommendation": "withdrawBroadNegativeAndRetainDateSpecificJuly22Boundary",
+      "originalIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-22",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-09",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "Public Beta 2 did exist: it was the July 9 first public appearance. No separately distributed July 22 Public Beta 2 is corroborated; the next public appearance was Public Beta 3 on July 23.",
+      "evidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "iphonecanada-ios14-pb2",
+          "supports": "Direct Software Update label evidence for Public Beta 2 on July 9."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "koc-ios14-pb2",
+          "supports": "Independent Software Update label evidence for Public Beta 2, normalized to July 9 Pacific."
+        },
+        {
+          "kind": "parentPacketSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios14-pb3",
+          "supports": "Parent evidence preserves the next public appearance on July 23, not July 22."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "iPhone in Canada",
+          "KOC / 電腦王阿達"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "noProductionEventForEitherJuly9PB2OrJuly22PB2",
+        "correctedSnapshotCheckId": "ios14-corrected-pb2-july9",
+        "dateSpecificBoundaryCheckId": "ios14-alleged-pb2-july22"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "not-proposed:apple:ios:15.0:public-beta-3",
+      "originalRecordKind": "notProposed",
+      "platform": "iOS",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "researchRecommendation": "withdrawNegativeIdentityPendingIndependentReview",
+      "originalIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-16",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-16",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "The negative is contradicted by two independent contemporary publisher lineages explicitly identifying the July 16 payload as Public Beta 3.",
+      "evidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "forbes-ios15-pb3",
+          "supports": "Exact Public Beta 3 label and July 16 publication date."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "wccftech-ios15-pb3",
+          "supports": "Independent exact Public Beta 3 label and July 16 publication date."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "Forbes",
+          "Wccftech"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "confirmedMissingIdentity",
+        "snapshotCheckId": "ios15-corrected-pb3-july16"
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    },
+    {
+      "originalRecordId": "existing-match:apple:ios:15.0:public-beta-1",
+      "originalRecordKind": "existingMatch",
+      "platform": "iOS",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "researchRecommendation": "productionIdentityCorrectionPendingIndependentReviewAndAuthorization",
+      "originalIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-06-30",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-06-30",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "rationale": "Forbes and iPhone in Canada explicitly identify the June 30 public payload as Public Beta 2. This is the same historical appearance currently stored as PB1 and must never become a duplicate event.",
+      "evidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "forbes-ios15-pb2",
+          "supports": "Exact Public Beta 2 label and June 30 publication date."
+        },
+        {
+          "kind": "supplementSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "iphonecanada-ios15-pb2",
+          "supports": "Independent availability list explicitly naming iOS 15 Public Beta 2 on June 30."
+        }
+      ],
+      "corroboration": {
+        "exactVersionOrdinalDateLineages": 2,
+        "publisherFamilies": [
+          "Forbes",
+          "iPhone in Canada"
+        ],
+        "independentPublisherFamilies": true
+      },
+      "productionReconciliation": {
+        "status": "singleExistingEventNeedsIdentityCorrection",
+        "currentProductionEventId": "release-event-50da2e4e5ec3bdd8fa582ce1",
+        "currentSnapshotCheckId": "ios15-production-pb1-june30",
+        "correctedSnapshotCheckId": "ios15-corrected-pb2-june30",
+        "duplicateCreationForbidden": true
+      },
+      "independentReviewRequired": true,
+      "implementationAuthorized": false
+    }
+  ],
+  "safety": {
+    "independentReviewRequired": true,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "pageWorkAllowed": false,
+    "publicationAuthorized": false,
+    "deploymentAuthorized": false,
+    "researcherPerformedIndependentReview": false
+  }
+}

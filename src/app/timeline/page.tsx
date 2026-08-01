@@ -6,6 +6,8 @@ import {
   createPageMetadata,
   latestDate,
 } from "@/lib/site";
+import { appleReleaseDatasetId } from "@/lib/structured-data";
+import { buildTimelineViewModel } from "@/lib/view-models/timeline";
 
 const timelineDescription =
   "Explore every tracked Apple OS beta, release candidate, and public release date together on one chronological timeline.";
@@ -22,6 +24,7 @@ export default async function TimelinePage() {
     getAllPlatforms(),
   ]);
   const canonical = absoluteUrl("/timeline/");
+  const timeline = buildTimelineViewModel(data, platforms);
   const milestoneDates = data.flatMap((version) =>
     version.milestones.map((milestone) => milestone.date)
   );
@@ -43,7 +46,7 @@ export default async function TimelinePage() {
         ? `${firstMilestoneDate}/${lastMilestoneDate}`
         : undefined,
     isPartOf: { "@id": `${absoluteUrl("/")}#website` },
-    about: { "@id": `${absoluteUrl("/")}#release-dataset` },
+    about: appleReleaseDatasetId(),
   };
 
   return (
@@ -73,7 +76,10 @@ export default async function TimelinePage() {
           className="animate-in"
           style={{ "--delay": 1 } as React.CSSProperties}
         >
-          <TimelineView data={data} platforms={platforms} />
+          <TimelineView
+            bars={timeline.bars}
+            platforms={timeline.platforms}
+          />
         </div>
       </div>
     </>

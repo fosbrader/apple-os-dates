@@ -1,0 +1,343 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-tvos-major-11-26",
+  "reviewedAt": "2026-07-30",
+  "reviewer": "codex-tvos-major-independent-review",
+  "independentOfResearcher": true,
+  "verdict": "passWithOneQualifiedAndTwentyThreeBlockedCandidates",
+  "publicationEligible": false,
+  "sanityMutationAllowed": false,
+  "summary": {
+    "candidateCount": 60,
+    "chronologyApprovedCandidateCount": 37,
+    "approvedWithoutQualificationCount": 36,
+    "approvedWithQualificationCount": 1,
+    "blockedCandidateCount": 23,
+    "blockedNeedsSecondPublisherLineageCount": 20,
+    "blockedConflictAdjudicationCount": 3,
+    "rejectedCandidateCount": 0,
+    "notProposedDecisionCount": 7,
+    "notProposedDecisionsUpheld": 7
+  },
+  "candidateVerdict": {
+    "approved": [
+      "candidate:apple:tvos:11.0:public-beta-1",
+      "candidate:apple:tvos:11.0:public-beta-2",
+      "candidate:apple:tvos:11.0:public-beta-3",
+      "candidate:apple:tvos:11.0:public-beta-4",
+      "candidate:apple:tvos:11.0:public-beta-5",
+      "candidate:apple:tvos:11.0:public-beta-6",
+      "candidate:apple:tvos:11.0:public-beta-7",
+      "candidate:apple:tvos:12.0:public-beta-1",
+      "candidate:apple:tvos:12.0:public-beta-2",
+      "candidate:apple:tvos:12.0:public-beta-3",
+      "candidate:apple:tvos:12.0:public-beta-4",
+      "candidate:apple:tvos:13.0:public-beta-1",
+      "candidate:apple:tvos:13.0:public-beta-2",
+      "candidate:apple:tvos:13.0:public-beta-3",
+      "candidate:apple:tvos:13.0:public-beta-4",
+      "candidate:apple:tvos:13.0:public-beta-5",
+      "candidate:apple:tvos:14.0:public-beta-1",
+      "candidate:apple:tvos:14.0:public-beta-5",
+      "candidate:apple:tvos:14.0:public-beta-6",
+      "candidate:apple:tvos:14.0:public-beta-7",
+      "candidate:apple:tvos:14.0:public-beta-8",
+      "candidate:apple:tvos:15.0:public-beta-4",
+      "candidate:apple:tvos:16.0:public-beta-1",
+      "candidate:apple:tvos:17.0:public-beta-1",
+      "candidate:apple:tvos:17.0:public-beta-2",
+      "candidate:apple:tvos:17.0:public-beta-3",
+      "candidate:apple:tvos:17.0:public-beta-5",
+      "candidate:apple:tvos:17.0:public-beta-6",
+      "candidate:apple:tvos:18.0:public-beta-1",
+      "candidate:apple:tvos:18.0:public-beta-2",
+      "candidate:apple:tvos:18.0:public-beta-3",
+      "candidate:apple:tvos:18.0:public-beta-5",
+      "candidate:apple:tvos:26.0:public-beta-2",
+      "candidate:apple:tvos:26.0:public-beta-3",
+      "candidate:apple:tvos:26.0:public-beta-4",
+      "candidate:apple:tvos:26.0:public-beta-6"
+    ],
+    "qualified": [
+      "candidate:apple:tvos:26.0:public-beta-5"
+    ],
+    "blocked": [
+      "candidate:apple:tvos:11.0:public-beta-8",
+      "candidate:apple:tvos:11.0:public-beta-9",
+      "candidate:apple:tvos:12.0:public-beta-5",
+      "candidate:apple:tvos:12.0:public-beta-6",
+      "candidate:apple:tvos:12.0:public-beta-7",
+      "candidate:apple:tvos:12.0:public-beta-8",
+      "candidate:apple:tvos:13.0:public-beta-6",
+      "candidate:apple:tvos:14.0:public-beta-2",
+      "candidate:apple:tvos:15.0:public-beta-1",
+      "candidate:apple:tvos:15.0:public-beta-2",
+      "candidate:apple:tvos:15.0:public-beta-5",
+      "candidate:apple:tvos:15.0:public-beta-6",
+      "candidate:apple:tvos:15.0:public-beta-7",
+      "candidate:apple:tvos:15.0:public-beta-8",
+      "candidate:apple:tvos:16.0:public-beta-2",
+      "candidate:apple:tvos:16.0:public-beta-3",
+      "candidate:apple:tvos:16.0:public-beta-5",
+      "candidate:apple:tvos:17.0:public-beta-4",
+      "candidate:apple:tvos:18.0:public-beta-4",
+      "candidate:apple:tvos:26.0:public-beta-1",
+      "candidate:apple:tvos:14.0:public-beta-4",
+      "candidate:apple:tvos:16.0:public-beta-4",
+      "candidate:apple:tvos:18.0:public-beta-8"
+    ],
+    "blockedNeedsSecondPublisherLineage": [
+      "candidate:apple:tvos:11.0:public-beta-8",
+      "candidate:apple:tvos:11.0:public-beta-9",
+      "candidate:apple:tvos:12.0:public-beta-5",
+      "candidate:apple:tvos:12.0:public-beta-6",
+      "candidate:apple:tvos:12.0:public-beta-7",
+      "candidate:apple:tvos:12.0:public-beta-8",
+      "candidate:apple:tvos:13.0:public-beta-6",
+      "candidate:apple:tvos:14.0:public-beta-2",
+      "candidate:apple:tvos:15.0:public-beta-1",
+      "candidate:apple:tvos:15.0:public-beta-2",
+      "candidate:apple:tvos:15.0:public-beta-5",
+      "candidate:apple:tvos:15.0:public-beta-6",
+      "candidate:apple:tvos:15.0:public-beta-7",
+      "candidate:apple:tvos:15.0:public-beta-8",
+      "candidate:apple:tvos:16.0:public-beta-2",
+      "candidate:apple:tvos:16.0:public-beta-3",
+      "candidate:apple:tvos:16.0:public-beta-5",
+      "candidate:apple:tvos:17.0:public-beta-4",
+      "candidate:apple:tvos:18.0:public-beta-4",
+      "candidate:apple:tvos:26.0:public-beta-1"
+    ],
+    "blockedConflictAdjudication": [
+      "candidate:apple:tvos:14.0:public-beta-4",
+      "candidate:apple:tvos:16.0:public-beta-4",
+      "candidate:apple:tvos:18.0:public-beta-8"
+    ],
+    "rejected": []
+  },
+  "checks": {
+    "jsonParsed": true,
+    "lockedPacketFilesChecked": 6,
+    "lockedPacketFilesReproduced": 6,
+    "lockedPacketHashFailures": 0,
+    "sourceRecordsChecked": 58,
+    "sourceHashDeclarationsReproduced": 58,
+    "distinctRawEvidencePathsHashed": 36,
+    "rawEvidenceHashFailures": 0,
+    "candidateIdsChecked": 60,
+    "candidateIdsUnique": true,
+    "sourceIdsChecked": 58,
+    "sourceIdsUnique": true,
+    "allCandidateEvidenceReferencesChecked": 105,
+    "allCandidateEvidenceReferencesResolved": 105,
+    "reviewedConfirmedCandidateCount": 37,
+    "reviewedConfirmedCandidateEvidenceReferences": 75,
+    "reviewedConfirmedUniqueSources": 47,
+    "reviewedConfirmedCandidateLocators": 37,
+    "explicitTvOSPlatformChecked": true,
+    "explicitPublicAudienceChecked": true,
+    "explicitDisplayedPublicOrdinalChecked": true,
+    "americaLosAngelesDateConventionApplied": true,
+    "allCandidateChannelsArePublicBeta": true,
+    "publicOrdinalInferredFromDeveloperCount": 0,
+    "buildClaimsApproved": 0,
+    "productionSnapshot": {
+      "queriedAt": "2026-07-31T03:03:34Z",
+      "perspective": "published",
+      "releaseVersionIdsChecked": 9,
+      "candidateReconciliationRecordsChecked": 60,
+      "existingScopedEventsInspected": 96,
+      "scopedPublicBetaEvents": 0,
+      "exactIdentityMatches": 0,
+      "returnedPlatformIdNullCount": 9
+    },
+    "sanityMutationPerformed": false,
+    "deploymentPerformed": false,
+    "productionIdsCreated": 0
+  },
+  "lockedFileVerification": [
+    {
+      "path": "assignment.json",
+      "bytes": 2591,
+      "sha256": "0549939a27d8f6ca38eb7ac547239210c3bac1937a29b2e0f39b8e17202f96a3",
+      "reproduced": true
+    },
+    {
+      "path": "sources.json",
+      "bytes": 80602,
+      "sha256": "b570aa1007d2452d75459c3793cf36f270992199f24e7b6ada4bb5845faa07b8",
+      "reproduced": true
+    },
+    {
+      "path": "candidates.json",
+      "bytes": 174660,
+      "sha256": "8c86ee39301656993b8ab169e99e06da8e034d23f2280f6acdebf35819637cdc",
+      "reproduced": true
+    },
+    {
+      "path": "conflicts.json",
+      "bytes": 5339,
+      "sha256": "f7d8da0ab96d09df4c578a1c7489996888dfb9a0caec6976164cc03a4c7697ef",
+      "reproduced": true
+    },
+    {
+      "path": "report.md",
+      "bytes": 6163,
+      "sha256": "2b13c3dad4dca03faae401f3a6d39eee15e3d9c1ca94a3d3aac0063a0fbe0536",
+      "reproduced": true
+    },
+    {
+      "path": "production-snapshot.json",
+      "bytes": 48840,
+      "sha256": "e05d07ac599a0e0ae9c014b941ecd8af349c2ca1a299961c324ece5bdb9307c9",
+      "reproduced": true
+    }
+  ],
+  "cohortDecisions": [
+    {
+      "scope": "tvOS 11 Public Betas 1 through 7",
+      "candidateCount": 7,
+      "disposition": "approved",
+      "finding": "The retained iCulture chronology and independent 9to5Mac, Wccftech, or iOSHacker evidence explicitly identify tvOS, the public audience, the displayed public ordinal, and an America/Los_Angeles appearance date for all seven candidates."
+    },
+    {
+      "scope": "tvOS 12 Public Betas 1 through 4",
+      "candidateCount": 4,
+      "disposition": "approved",
+      "finding": "9to5Mac and MacRumors independently identify the first four tvOS 12 public-beta appearances and agree on their Pacific calendar dates."
+    },
+    {
+      "scope": "tvOS 13 Public Betas 1 through 5",
+      "candidateCount": 5,
+      "disposition": "approved",
+      "finding": "The iMore history and candidate-specific MacRumors archive entries independently preserve the tvOS 13 public audience, ordinal, and Pacific date for Public Betas 1 through 5."
+    },
+    {
+      "scope": "tvOS 14 Public Beta 1 and Public Betas 5 through 8",
+      "candidateCount": 5,
+      "disposition": "approved",
+      "finding": "MacRumors independently corroborates Public Betas 1 and 5, while the iMore and iCulture histories agree on Public Betas 5 through 8. The skipped Public Beta 3 and conflicted Public Beta 4 are not imported into this approval."
+    },
+    {
+      "scope": "tvOS 15 Public Beta 4",
+      "candidateCount": 1,
+      "disposition": "approved",
+      "finding": "iCulture and AppleInsider independently identify tvOS 15 Public Beta 4 on 2021-07-28. No Public Beta 3 is inferred."
+    },
+    {
+      "scope": "tvOS 16 Public Beta 1",
+      "candidateCount": 1,
+      "disposition": "approved",
+      "finding": "iCulture and 9to5Mac independently identify the first tvOS 16 public beta on 2022-07-11. The later Public Beta 4 versus 6 conflict is not used to extend this approval."
+    },
+    {
+      "scope": "tvOS 17 Public Betas 1, 2, 3, 5, and 6",
+      "candidateCount": 5,
+      "disposition": "approved",
+      "finding": "iCulture and independent 9to5Mac or AppleInsider reports explicitly identify all five retained tvOS 17 public ordinals and Pacific dates."
+    },
+    {
+      "scope": "tvOS 18 Public Betas 1, 2, 3, and 5",
+      "candidateCount": 4,
+      "disposition": "approved",
+      "finding": "iCulture and independent 9to5Mac or BGR reports explicitly identify the tvOS 18 public audience, ordinal, and Pacific date for these four candidates. No Public Beta 6 or 7 is inferred."
+    },
+    {
+      "scope": "tvOS 26 Public Betas 2, 3, 4, and 6",
+      "candidateCount": 4,
+      "disposition": "approved",
+      "finding": "iCulture and independent 9to5Mac or MacRumors evidence explicitly identify tvOS 26 Public Betas 2, 3, 4, and 6 and agree after applying the America/Los_Angeles date convention."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.0:public-beta-5",
+      "candidateCount": 1,
+      "disposition": "approvedWithQualification",
+      "finding": "9to5Mac explicitly identifies tvOS 26 Public Beta 5 on August 25. iCulture's explicit Public Beta 5 revision is timestamped 2025-08-26 07:40 CEST, which is 2025-08-25 22:40 PDT, so the retained sources converge on 2025-08-25 in America/Los_Angeles.",
+      "requiredQualification": "Keep the candidate date at 2025-08-25 and preserve iCulture's August 26 European display. The retained 9to5Mac REST field has no timezone offset, so do not repeat conflicts.json's claim that it literally proves 2:57 p.m. Pacific."
+    },
+    {
+      "scope": "Twenty candidates currently marked unverified",
+      "candidateCount": 20,
+      "disposition": "blocked",
+      "finding": "None has gained a second independent lineage that explicitly supplies the tvOS public ordinal and date. Multiple references in a candidate do not clear the gate when one reference is contextual, shares a lineage, or does not display the public ordinal.",
+      "requiredHandling": "Preserve identityStatus=unverified and keep all twenty out of chronology approval."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.0:public-beta-4",
+      "candidateCount": 1,
+      "disposition": "blocked",
+      "finding": "iCulture displays 2020-08-05 and iMore displays 2020-08-06. The retained packet does not resolve the Pacific appearance date.",
+      "requiredHandling": "Obtain primary timestamped evidence or a second independent candidate-specific report that resolves August 5 versus August 6."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:16.0:public-beta-4",
+      "candidateCount": 1,
+      "disposition": "blocked",
+      "finding": "AppleInsider calls the August 15 public round Public Beta 4, while iCulture labels the same date and build Public Beta 6. The packet's internal-monotonicity argument is useful but is not a second independent explicit-ordinal lineage.",
+      "requiredHandling": "Keep both the Public Beta 4 candidate and the Public Beta 6 non-proposal out of a promotion queue until an additional contemporary source resolves the displayed public label."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:18.0:public-beta-8",
+      "candidateCount": 1,
+      "disposition": "blocked",
+      "finding": "iCulture explicitly supplies Public Beta 8, but MacRumors independently establishes only a same-day public appearance and not a tvOS-specific Public Beta 8 label.",
+      "requiredHandling": "Obtain a second independent tvOS-specific source that explicitly displays Public Beta 8; do not infer Public Beta 6 or 7 from companion-platform numbering."
+    }
+  ],
+  "notProposedReview": {
+    "disposition": "allSevenUpheld",
+    "recordIds": [
+      "not-proposed:apple:tvos:12.0:public-beta-9",
+      "not-proposed:apple:tvos:13.0:public-beta-7",
+      "not-proposed:apple:tvos:14.0:public-beta-3",
+      "not-proposed:apple:tvos:15.0:public-beta-3",
+      "not-proposed:apple:tvos:16.0:public-beta-6",
+      "not-proposed:apple:tvos:18.0:public-beta-6",
+      "not-proposed:apple:tvos:18.0:public-beta-7"
+    ],
+    "finding": "The retained packet does not establish these as distinct public-channel appearances. Developer numbering, companion-platform numbering, and gaps in a public sequence remain insufficient."
+  },
+  "defects": [
+    {
+      "subject": "Distinct raw-artifact count is overstated by the self-check label",
+      "severity": "nonBlockingForChronology",
+      "finding": "validation.json reports rawEvidenceArtifactsReproduced=58. That is the number of source-record hash declarations checked; the 58 records point to 36 distinct raw evidence paths. All 58 declarations and all 36 distinct files reproduce with zero hash failures.",
+      "requiredHandling": "Report both counts in later audits and do not describe 58 as the number of distinct captured files."
+    },
+    {
+      "subject": "tvOS 26 Public Beta 5 timezone precision",
+      "severity": "mandatoryQualificationForOneApprovedCandidate",
+      "finding": "conflicts.json says the retained 9to5Mac record proves 2:57 p.m. Pacific, but its frozen WordPress REST date has no timezone offset. The America/Los_Angeles date is still independently supportable because iCulture's 2025-08-26 07:40 CEST revision converts to 2025-08-25 22:40 PDT.",
+      "requiredHandling": "Use 2025-08-25 for the candidate, retain the European-calendar note, and do not publish the 9to5Mac clock time as a Pacific timestamp without separate timezone evidence."
+    },
+    {
+      "subject": "Source byline metadata is incomplete",
+      "severity": "nonBlockingForChronologyButBlockingForACompleteEditorialSourceLedger",
+      "finding": "The author field is null in 40 of 58 source records, including 29 of the 47 unique sources used by the reviewed 37-candidate cohort. Several retained article captures visibly contain bylines even though sources.json omits them.",
+      "requiredHandling": "Complete or explicitly mark unavailable byline metadata before treating this as an editorial-ready source ledger. This review approves chronology fields only."
+    },
+    {
+      "subject": "Production snapshot platform projection",
+      "severity": "nonBlockingForTheFrozenMissing-IdentityCheck",
+      "finding": "The read-only snapshot resolves all nine exact releaseVersion IDs and their 96 child events, but its projected platformId is null for all nine rows. The zero-publicBeta result therefore rests on the exact version IDs, not on a returned platform reference.",
+      "requiredHandling": "Use a corrected platform projection and rerun exact published-production reconciliation immediately before any separately authorized write."
+    }
+  ],
+  "mandatoryQualifications": [
+    "Chronology approval covers only public-beta appearance identity, displayed public ordinal, America/Los_Angeles date, sequence, and channel. It does not approve builds or article content.",
+    "For tvOS 26 Public Beta 5, preserve the August 26 European display while using 2025-08-25 in America/Los_Angeles; do not describe the timezone-less 9to5Mac REST clock as a literal Pacific timestamp.",
+    "Use candidate-specific headings, timeline rows, publication metadata, and revision timestamps. Generic evidenceRefs.supports prose must not be used to claim more than the cited locator actually states.",
+    "Living chronology pages may change. The retained captures and reproduced hashes are the evidence of record.",
+    "The twenty unverified candidates and three conflict candidates remain blocked exactly as listed; no developer ordinal, build, or companion-platform ordinal may fill their gaps.",
+    "No build is approved. Keep build absent unless separately reviewed direct evidence establishes it for the public distribution.",
+    "The production snapshot is time-bounded. Repeat the exact read-only identity query before any separately authorized mutation."
+  ],
+  "authorization": {
+    "chronologyApprovedCandidateCount": 37,
+    "chronologyApprovalScope": "Public-beta appearance identity, displayed public ordinal, America/Los_Angeles date, sequence, and channel only, subject to all mandatory qualifications.",
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "deploymentAllowed": false
+  }
+}

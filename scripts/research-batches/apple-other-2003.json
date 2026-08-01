@@ -1,0 +1,998 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/101682",
+      "title": "Apple security updates (03-Oct-2003 to 11-Jan-2005)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Apple software",
+        "Mac OS X",
+        "Panther",
+        "10.3",
+        "security",
+        "later-version boundary"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+      "title": "Apple Previews Mac OS X Panther",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2003-06-23T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Panther",
+        "10.3",
+        "preview",
+        "features",
+        "developer technology"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+      "title": "Apple Announces Mac OS X Panther",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2003-10-08T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Panther",
+        "10.3",
+        "public availability",
+        "features",
+        "compatibility"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2003/10/22Apple-Unveils-New-Generation-G4-iBooks-Starting-at-Just-1-099/",
+      "title": "Apple Unveils New Generation G4 iBooks Starting at Just $1,099",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2003-10-22T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Panther",
+        "10.3",
+        "preinstalled release",
+        "automatic networking"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2003/10/23-Night-of-the-Panther-Kicks-Off-at-8-00-p-m-Tomorrow/",
+      "title": "Night of the Panther Kicks Off at 8:00 p.m. Tomorrow",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2003-10-23T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Panther",
+        "10.3",
+        "public release",
+        "pricing",
+        "system requirements"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/106454",
+      "title": "X11 for Mac OS X 1.0",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Mac OS X",
+        "Panther",
+        "10.3",
+        "X11",
+        "optional install",
+        "developer technology"
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-10-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "Mac OS X Panther 10.3 reached the public on October 24, 2003. Its initial client package combined a redesigned Finder, Exposé, iChat AV, Fast User Switching, FileVault, revised productivity applications, broader network interoperability, an updated UNIX foundation, Xcode, and a PowerPC hardware baseline.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+                "locator": "October 24 availability and launch feature list"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/23-Night-of-the-Panther-Kicks-Off-at-8-00-p-m-Tomorrow/",
+                "locator": "October 24 public sale and system requirements"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Development and release"
+          },
+          {
+            "text": "Apple previewed Panther at WWDC on June 23 with an end-of-year target. On October 8 it set availability for Friday, October 24 at 8:00 p.m.; the October 23 launch-eve notice repeated that date and time for Apple retail stores, authorized resellers, and the Apple Store.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+                "locator": "June 23 preview and end-of-year target"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+                "locator": "October 8 announcement and October 24 availability"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/23-Night-of-the-Panther-Kicks-Off-at-8-00-p-m-Tomorrow/",
+                "locator": "October 23 launch-eve notice"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Desktop and communication"
+          },
+          {
+            "text": "Finder reorganized access to local and network locations and added faster search, while Exposé created a visual overview of open windows and a shortcut to the desktop. iChat AV added internet voice and video conversations, and Fast User Switching kept multiple account sessions active.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+                "locator": "Finder, Exposé, iChat AV, and feature list"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+                "locator": "Final-confirmed Finder, Exposé, iChat AV, and switching detail"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Data and productivity"
+          },
+          {
+            "text": "FileVault protected home-directory data with 128-bit encryption. Font Book centralized font management; Preview expanded PDF search and text handling; iDisk synchronized offline work; Mail added spam filtering and threads; and Address Book, faxing, and the bundled application set expanded everyday workflows.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+                "locator": "Other new features list"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+                "locator": "Final-confirmed FileVault and productivity detail"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Networks, UNIX, and development"
+          },
+          {
+            "text": "Panther broadened Windows sharing and added Exchange integration in Mail and Address Book. Apple also documented IPv6, Kerberos, NFS, X11 applications, and refreshed open-source components. X11 1.0 was an optional install on the third Panther CD, while Xcode paired Apple's development interface with GCC 3.3.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+                "locator": "Windows, UNIX, X11, and Xcode feature descriptions"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106454",
+                "locator": "Panther-compatible X11 1.0 optional installation"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Security at launch"
+          },
+          {
+            "text": "Apple's archived chronology explicitly assigns fourteen CVE or CAN identifiers to the initial Mac OS X 10.3 Panther release. The structured record groups those corrections into seven readable deltas covering Finder permissions, kernel and tracing behavior, file sharing and NFS, remote access and credential tools, authentication and privacy, preventive library hardening, and Dock access behind Screen Effects.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/101682",
+                "locator": "Mac OS X 10.3 Panther; CAN-2003-0876 through CAN-2003-0880"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Availability and compatibility"
+          },
+          {
+            "text": "The US suggested retail price was $129 for one user and $199 for a five-user household license. Apple documented a minimum of 128MB of memory, built-in USB, and support across listed PowerPC G3, G4, and G5 Mac families. This was a retail software release, not a staged over-the-air rollout.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+                "locator": "Pricing & Availability; supported Mac families"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/23-Night-of-the-Panther-Kicks-Off-at-8-00-p-m-Tomorrow/",
+                "locator": "Pricing & Availability; PowerPC requirements"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "This article covers only the existing local 10.3 public route. Preview-only items that the retained October or final support sources do not confirm are excluded. Apple's archive separately places QuickTime Java on October 28, Terminal on November 4, and OpenSSL and zlib under a November 19 Panther 10.3.1 security update; none is projected backward, and no missing point release or build is created.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+                "locator": "June preview feature inventory"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101682",
+                "locator": "Security Update 2003-10-28 through Security Update 2003-11-19 for Panther 10.3.1"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+          "locator": "June 23, 2003 preview"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+          "locator": "October 8, 2003 launch announcement"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2003/10/22Apple-Unveils-New-Generation-G4-iBooks-Starting-at-Just-1-099/",
+          "locator": "October 22, 2003 Panther-preinstalled G4 iBook announcement"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2003/10/23-Night-of-the-Panther-Kicks-Off-at-8-00-p-m-Tomorrow/",
+          "locator": "October 23, 2003 launch-eve announcement"
+        },
+        {
+          "url": "https://support.apple.com/en-us/106454",
+          "locator": "X11 for Mac OS X 1.0 Panther support record"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101682",
+          "locator": "Mac OS X 10.3 Panther security section"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:09:36Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-macos-10-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Mac OS X Panther 10.3 reached the public channel on October 24, 2003 with a redesigned Finder, Exposé, iChat AV, FileVault, expanded networking and productivity tools, Xcode, and documented launch-security corrections.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple put Panther on sale at 8:00 p.m. on Friday, October 24, 2003 through its online store, retail stores, and authorized resellers. The local catalog has one matching public milestone and no separate launch build.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+                "locator": "October 24 beginning at 8:00 p.m."
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/23-Night-of-the-Panther-Kicks-Off-at-8-00-p-m-Tomorrow/",
+                "locator": "October 23 notice; sale the following evening"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What this page records"
+          },
+          {
+            "text": "The structured entries synthesize twenty-eight confirmed parts of the initial client package: twenty-one public-package entries, including FileVault as an introduced security feature, plus seven grouped vulnerability-correction deltas. Each entry points to retained first-party Apple material.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+                "locator": "Public-release feature and compatibility inventory"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/22Apple-Unveils-New-Generation-G4-iBooks-Starting-at-Just-1-099/",
+                "locator": "Final Panther automatic-networking description"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106454",
+                "locator": "Final Panther X11 support record"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101682",
+                "locator": "Mac OS X 10.3 Panther security section"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Launch highlights"
+          },
+          {
+            "text": "The release centered on Finder and Exposé for navigation and window management, iChat AV and Fast User Switching for communication and shared Macs, FileVault for home-directory protection, revised Mail and Preview workflows, broader Windows and UNIX interoperability, and Xcode for development.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+                "locator": "Finder through bundled-app launch descriptions"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+                "locator": "Final-confirmed feature detail"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Initial security record"
+          },
+          {
+            "text": "Apple's security archive assigns initial Panther corrections to Finder, the kernel, slpd, ktrace, NFS, zlib, gm4, OpenSSH, nidump, System Preferences, TCP timestamps, Mail, and the Dock. Default-state and theoretical-exposure qualifications are preserved in the grouped change summaries instead of presenting every issue as equally reachable.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/101682",
+                "locator": "Mac OS X 10.3 Panther security section"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Later-update boundary"
+          },
+          {
+            "text": "QuickTime Java on October 28 and Terminal on November 4 were later security updates. The same archive labels a November 19 package for Panther 10.3.1. Because no 10.3.1 version exists in the scoped local catalog and the archive does not establish its exact general-release date, this batch neither creates that point release nor merges its OpenSSL and zlib changes into launch day.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/101682",
+                "locator": "Security Update 2003-10-28, Security Update 2003-11-04, and Security Update 2003-11-19 for Panther 10.3.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Distribution context"
+          },
+          {
+            "text": "Panther used simultaneous retail availability rather than the phased device rollout associated with some modern software tracks. The page records the dated public appearance and product baseline, but it does not turn store events into artificial rollout stages.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+                "locator": "Pricing & Availability"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2003/10/23-Night-of-the-Panther-Kicks-Off-at-8-00-p-m-Tomorrow/",
+                "locator": "US retail and reseller launch context"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+          "locator": "June 23, 2003 preview"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+          "locator": "October 8, 2003 launch announcement"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2003/10/22Apple-Unveils-New-Generation-G4-iBooks-Starting-at-Just-1-099/",
+          "locator": "October 22, 2003 Panther-preinstalled G4 iBook announcement"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2003/10/23-Night-of-the-Panther-Kicks-Off-at-8-00-p-m-Tomorrow/",
+          "locator": "October 23, 2003 launch-eve announcement"
+        },
+        {
+          "url": "https://support.apple.com/en-us/106454",
+          "locator": "X11 for Mac OS X 1.0 Panther support record"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101682",
+          "locator": "Mac OS X 10.3 Panther security section"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-10-3-finder-navigation-network-browsing",
+          "title": "Redesigned Finder navigation and network browsing",
+          "canonicalSummary": "Panther reorganized Finder around faster access to favorite locations, storage, servers, iDisk, and browsable Mac, Windows, and UNIX networks.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The redesigned file browser collected common local and remote locations in one navigation surface and dynamically exposed compatible file servers across several network environments.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Redesigned Finder paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "Finder paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-finder-search",
+          "title": "Faster Finder search",
+          "canonicalSummary": "Finder gained a substantially faster file-search workflow than the one Apple shipped in Mac OS X 10.2.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple advertised Finder searches as up to six times faster than Jaguar. That comparison is preserved as an attributed vendor performance claim, not an independently reproduced benchmark.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Redesigned Finder paragraph; up-to-six-times-faster claim"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-expose-window-management",
+          "title": "Exposé window management",
+          "canonicalSummary": "Exposé introduced an overview that arranged open windows into selectable thumbnails and could temporarily reveal the desktop.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The Quartz-powered interface reduced overlapping windows to an organized view for switching among them, with a separate action that moved windows aside to expose desktop files.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Exposé paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "Exposé paragraphs"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-ichat-av",
+          "title": "iChat AV",
+          "canonicalSummary": "iChat AV added full-screen video conferencing over broadband and internet audio conversations.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Panther integrated real-time voice and video communication into iChat, with Apple's launch materials distinguishing broadband video from lower-bandwidth audio use.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "iChat AV paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "iChat AV paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-fast-user-switching",
+          "title": "Fast User Switching",
+          "canonicalSummary": "Fast User Switching let people move between active accounts without closing running applications or logging out the prior user.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Multiple users could retain active sessions on one Mac while moving the foreground session to a different account.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; Fast User Switching"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "Additional new features; Fast User Switching"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-filevault-home-encryption",
+          "title": "FileVault home-directory encryption",
+          "canonicalSummary": "FileVault introduced transparent 128-bit encryption for the contents of a user's home directory.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The June preview identified the encryption as AES and described on-the-fly operation; the October launch announcement confirms the final 128-bit home-directory protection without relying on the preview alone.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; FileVault"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "FileVault paragraphs"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-font-book",
+          "title": "Font Book",
+          "canonicalSummary": "Font Book added system-level font preview, installation, collection management, activation, and deactivation.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new utility consolidated routine font inspection and management into a bundled application rather than requiring those tasks to be handled separately.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; Font Book"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "Additional new features; Font Book"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-preview-pdf-workflows",
+          "title": "Expanded Preview PDF workflows",
+          "canonicalSummary": "Preview added indexed PDF text search, text selection and copying, URL handling, and PDF 1.4 support.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Panther turned the bundled viewer into a more capable PDF research and extraction tool by making results navigable and allowing text and links to participate in normal document workflows.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; Preview"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "Additional new features; Preview"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-idisk-offline-sync",
+          "title": "Integrated iDisk offline synchronization",
+          "canonicalSummary": "Panther let .Mac users work from a local iDisk copy and synchronize changes after reconnecting.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The operating system cached eligible remote storage locally for offline work and automatically sent changes back to the user's .Mac storage when connectivity returned.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; integrated iDisk"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "Additional new features; integrated iDisk"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-mail-spam-filtering",
+          "title": "Enhanced Mail spam filtering",
+          "canonicalSummary": "Mail gained a more advanced built-in spam-filtering workflow.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple listed improved junk-message detection as one of Panther Mail's two headline public-release changes.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; enhanced Mail"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-mail-threading",
+          "title": "Mail conversation threads",
+          "canonicalSummary": "Mail added conversation threads for reading, filing, or deleting related messages together.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Related messages could be organized as a conversation rather than handled only as separate chronological items.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; enhanced Mail"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "Additional new features; Mail"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-address-book-labels-notifications",
+          "title": "Address Book labels and change notifications",
+          "canonicalSummary": "Address Book added label printing and a way to notify contacts when a user's own details changed.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The contact manager broadened its output and maintenance workflows with printable mailing labels and update notices for personal contact information.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; Address Book"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-integrated-faxing",
+          "title": "Integrated faxing",
+          "canonicalSummary": "Panther integrated fax sending and receiving with printing, cover pages, and Address Book contacts.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Fax operations became part of the operating system's print and contact workflows rather than a disconnected utility path.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; integrated faxing"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "Additional new features; integrated faxing"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-windows-sharing-compatibility",
+          "title": "Expanded Windows sharing compatibility",
+          "canonicalSummary": "Panther expanded interoperability for sharing files, printers, and network services with Windows users.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple positioned Windows coexistence as a client-release capability spanning Finder-visible resources and shared network services; this entry does not import the separate Panther Server feature set.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; Windows compatibility"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "Windows-network compatibility paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-exchange-mail-address-book",
+          "title": "Exchange support in Mail and Address Book",
+          "canonicalSummary": "Mail and Address Book added built-in access to supported Microsoft Exchange email and contact synchronization.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Panther connected Apple's bundled communication applications to Exchange-backed mail and address data, while the retained announcement does not establish support for every Exchange configuration.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; Microsoft Exchange support"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-unix-network-foundation",
+          "title": "Expanded UNIX and network foundation",
+          "canonicalSummary": "Panther updated open-source libraries and commands and expanded IPv6, Kerberos, and NFS support.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The client release refreshed its UNIX base and added or improved standards-oriented networking and authentication components, including an integrated IPv6 stack and a revised NFS implementation.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; UNIX-based foundation"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/06/23Apple-Previews-Mac-OS-X-Panther/",
+              "locator": "UNIX technologies paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-x11-optional-integration",
+          "title": "Optional integrated X11 environment",
+          "canonicalSummary": "Panther included an optional X11 environment with an XFree86 base, Quartz window management, Finder launching, Dock access, and full-screen mode.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple's final support record identifies X11 1.0 as an optional install on the third Panther CD and documents integration points that brought X11 applications into familiar Mac launch and window-management workflows.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; X11 applications"
+            },
+            {
+              "url": "https://support.apple.com/en-us/106454",
+              "locator": "What's New in this Version; Panther optional install"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-xcode-gcc-3-3",
+          "title": "Xcode with GCC 3.3",
+          "canonicalSummary": "Panther introduced the Xcode development environment with an Apple interface over a GCC 3.3-based toolchain.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple presented Xcode as the main application-development environment for taking advantage of Panther-era platform technology.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; Xcode"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-bundled-app-browser-refresh",
+          "title": "Bundled application and browser refresh",
+          "canonicalSummary": "Panther shipped current versions of iSync, iCal, iPhoto, iMovie, iTunes and the iTunes Music Store, with Safari as Apple's default browser.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The operating-system package refreshed Apple's synchronization, calendar, photo, movie, music, store, and web-browsing software alongside the system-level changes.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Other new features; bundled applications and Safari"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-automatic-network-switching",
+          "title": "Automatic network switching",
+          "canonicalSummary": "Panther could detect and switch among available Ethernet, wireless, and modem connections.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple's October 22 G4 iBook announcement describes the capability in final Panther systems that were being sold with 10.3 preinstalled, providing post-preview confirmation of the mobile networking behavior.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/22Apple-Unveils-New-Generation-G4-iBooks-Starting-at-Just-1-099/",
+              "locator": "Panther automatic-networking description"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/23-Night-of-the-Panther-Kicks-Off-at-8-00-p-m-Tomorrow/",
+              "locator": "Panther public availability on October 24"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-powerpc-usb-memory-retail-baseline",
+          "title": "PowerPC, USB, memory, and retail baseline",
+          "canonicalSummary": "The retail Panther client supported listed G3, G4, and G5 Macs with built-in USB and at least 128MB of memory.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple priced the US single-user license at $129 and the five-user family license at $199, while limiting the documented hardware baseline to compatible PowerPC Macs with built-in USB and the required memory.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/08Apple-Announces-Mac-OS-X-Panther/",
+              "locator": "Pricing & Availability; supported Mac families"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2003/10/23-Night-of-the-Panther-Kicks-Off-at-8-00-p-m-Tomorrow/",
+              "locator": "Pricing & Availability; system requirements"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-finder-mounted-volume-permissions-security",
+          "title": "Finder mounted-volume permission preservation",
+          "canonicalSummary": "Panther corrected a Finder flaw that could lose folder permissions when copying from a mounted volume.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple associates CAN-2003-0876 with copies from mounted sources such as disk images and lists the correction directly under the initial Mac OS X 10.3 Panther release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/101682",
+              "locator": "Mac OS X 10.3 Panther; Finder; CAN-2003-0876"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-kernel-tracing-security",
+          "title": "Kernel and tracing protections",
+          "canonicalSummary": "Panther hardened core-file handling, long command arguments, and optional kernel tracing against local disclosure, file overwrite, and denial-of-service risks.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The initial release addressed CAN-2003-0877, CAN-2003-0895, and CVE-2002-0701. Apple's archive notes that core files were disabled by default and describes the ktrace exposure as theoretical and dependent on the optional KTRACE kernel setting.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/101682",
+              "locator": "Mac OS X 10.3 Panther; Kernel and ktrace; CAN-2003-0877, CAN-2003-0895, CVE-2002-0701"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-sharing-nfs-security",
+          "title": "Personal File Sharing and NFS hardening",
+          "canonicalSummary": "Panther corrected a local privilege path in the file-sharing discovery service and an NFS remote lockup condition.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The slpd correction addressed CAN-2003-0878 when Personal File Sharing was enabled, which Apple says was off by default. The NFS correction addressed CVE-2002-0830 involving crafted RPC messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/101682",
+              "locator": "Mac OS X 10.3 Panther; slpd and nfs; CAN-2003-0878, CVE-2002-0830"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-openssh-nidump-security",
+          "title": "OpenSSH and nidump credential protections",
+          "canonicalSummary": "Panther hardened OpenSSH host restrictions and prevented nidump from exposing encrypted login-password data.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple lists CAN-2003-0386 for potentially spoofable OpenSSH restrictions and CAN-2001-1412 for nidump access to crypted login passwords, while also recording the OpenSSH build string shipped in 10.3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/101682",
+              "locator": "Mac OS X 10.3 Panther; OpenSSH and nidump; CAN-2003-0386, CAN-2001-1412"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-authentication-privacy-security",
+          "title": "Preference, Mail, and TCP privacy protections",
+          "canonicalSummary": "Panther added per-pane administrator reauthentication, prevented a Mail authentication downgrade, and randomized the initial TCP timestamp.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The initial release addressed CAN-2003-0883, CAN-2003-0881, and CAN-2003-0882 across secure System Preferences, CRAM-MD5 Mail login behavior, and network uptime disclosure.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/101682",
+              "locator": "Mac OS X 10.3 Panther; System Preferences, TCP timestamp, and Mail; CAN-2003-0883, CAN-2003-0882, CAN-2003-0881"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-zlib-gm4-preventive-security",
+          "title": "zlib and gm4 preventive hardening",
+          "canonicalSummary": "Panther corrected underlying zlib and gm4 issues even though Apple's documented default exposure was limited.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple states that no Mac OS X function used the vulnerable zlib gzprintf function and that no setuid-root program relied on gm4, so CAN-2003-0107 and CAN-2001-1411 are recorded as preventive hardening rather than evidence of an exploited default path.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/101682",
+              "locator": "Mac OS X 10.3 Panther; zlib and gm4; CAN-2003-0107, CAN-2001-1411"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-3-dock-screen-effects-security",
+          "title": "Dock protection behind Screen Effects",
+          "canonicalSummary": "Panther prevented Dock functions from being reached blindly behind Screen Effects when Full Keyboard Access was enabled.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple records the initial 10.3 correction as CAN-2003-0880 and ties the affected path to the Full Keyboard Access setting.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated October 2003 launch material, final Panther support documentation, or the explicit Mac OS X 10.3 Panther section of Apple's archived security chronology to the existing audited 10.3 public-release event. June preview detail is used only when a final source confirms the shipped feature.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/101682",
+              "locator": "Mac OS X 10.3 Panther; Dock; CAN-2003-0880"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:09:36Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

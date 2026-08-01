@@ -1,0 +1,749 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios10-point-public",
+  "reviewedAt": "2026-07-31T04:17:47Z",
+  "reviewer": "codex-review-reusable-public-betas-independent",
+  "independentOfResearcher": true,
+  "verdict": "partialPassWithOneDateCorrectionRejectedAndOneEditorialLineageGap",
+  "summary": {
+    "candidateCount": 34,
+    "chronologyApprovedCandidateCount": 32,
+    "approvedWithoutQualificationCount": 30,
+    "approvedWithQualificationCount": 2,
+    "confirmedMissingCreationCandidateCount": 32,
+    "blockedCandidateCount": 2,
+    "rejectedIdentityCount": 0,
+    "editorialLineageThresholdPassCandidateCount": 33,
+    "dateCorrectionAdjudicationCount": 3,
+    "dateCorrectionApprovedCount": 2,
+    "dateCorrectionRejectedCount": 1,
+    "deviceApplicabilityQualificationCount": 2,
+    "deviceApplicabilityQualificationsUpheld": 2,
+    "rawEvidenceArtifactCount": 77,
+    "selectedEvidenceArtifactCount": 77,
+    "evidenceHashFailureCount": 0
+  },
+  "candidateVerdict": {
+    "chronologyApproved": [
+      "candidate:apple:ios:10.1:public-beta-1",
+      "candidate:apple:ios:10.1:public-beta-2",
+      "candidate:apple:ios:10.1:public-beta-3",
+      "candidate:apple:ios:10.1:public-beta-4",
+      "candidate:apple:ios:10.1:public-beta-5",
+      "candidate:apple:ios:10.2:public-beta-1",
+      "candidate:apple:ios:10.2:public-beta-2",
+      "candidate:apple:ios:10.2:public-beta-4",
+      "candidate:apple:ios:10.2:public-beta-5",
+      "candidate:apple:ios:10.2:public-beta-6",
+      "candidate:apple:ios:10.2:public-beta-7",
+      "candidate:apple:ios:10.2.1:public-beta-1",
+      "candidate:apple:ios:10.2.1:public-beta-2",
+      "candidate:apple:ios:10.2.1:public-beta-4",
+      "candidate:apple:ios:10.3:public-beta-1",
+      "candidate:apple:ios:10.3:public-beta-2",
+      "candidate:apple:ios:10.3:public-beta-3",
+      "candidate:apple:ios:10.3:public-beta-4",
+      "candidate:apple:ios:10.3:public-beta-5",
+      "candidate:apple:ios:10.3:public-beta-6",
+      "candidate:apple:ios:10.3:public-beta-7",
+      "candidate:apple:ios:10.3.2:public-beta-1",
+      "candidate:apple:ios:10.3.2:public-beta-2",
+      "candidate:apple:ios:10.3.2:public-beta-3",
+      "candidate:apple:ios:10.3.2:public-beta-4",
+      "candidate:apple:ios:10.3.2:public-beta-5",
+      "candidate:apple:ios:10.3.3:public-beta-1",
+      "candidate:apple:ios:10.3.3:public-beta-2",
+      "candidate:apple:ios:10.3.3:public-beta-3",
+      "candidate:apple:ios:10.3.3:public-beta-4",
+      "candidate:apple:ios:10.3.3:public-beta-5",
+      "candidate:apple:ios:10.3.3:public-beta-6"
+    ],
+    "approvedWithQualification": [
+      "candidate:apple:ios:10.1:public-beta-5",
+      "candidate:apple:ios:10.3.2:public-beta-1"
+    ],
+    "confirmedMissingCreationCandidates": [
+      "candidate:apple:ios:10.1:public-beta-1",
+      "candidate:apple:ios:10.1:public-beta-2",
+      "candidate:apple:ios:10.1:public-beta-3",
+      "candidate:apple:ios:10.1:public-beta-4",
+      "candidate:apple:ios:10.1:public-beta-5",
+      "candidate:apple:ios:10.2:public-beta-1",
+      "candidate:apple:ios:10.2:public-beta-2",
+      "candidate:apple:ios:10.2:public-beta-4",
+      "candidate:apple:ios:10.2:public-beta-5",
+      "candidate:apple:ios:10.2:public-beta-6",
+      "candidate:apple:ios:10.2:public-beta-7",
+      "candidate:apple:ios:10.2.1:public-beta-1",
+      "candidate:apple:ios:10.2.1:public-beta-2",
+      "candidate:apple:ios:10.2.1:public-beta-4",
+      "candidate:apple:ios:10.3:public-beta-1",
+      "candidate:apple:ios:10.3:public-beta-2",
+      "candidate:apple:ios:10.3:public-beta-3",
+      "candidate:apple:ios:10.3:public-beta-4",
+      "candidate:apple:ios:10.3:public-beta-5",
+      "candidate:apple:ios:10.3:public-beta-6",
+      "candidate:apple:ios:10.3:public-beta-7",
+      "candidate:apple:ios:10.3.2:public-beta-1",
+      "candidate:apple:ios:10.3.2:public-beta-2",
+      "candidate:apple:ios:10.3.2:public-beta-3",
+      "candidate:apple:ios:10.3.2:public-beta-4",
+      "candidate:apple:ios:10.3.2:public-beta-5",
+      "candidate:apple:ios:10.3.3:public-beta-1",
+      "candidate:apple:ios:10.3.3:public-beta-2",
+      "candidate:apple:ios:10.3.3:public-beta-3",
+      "candidate:apple:ios:10.3.3:public-beta-4",
+      "candidate:apple:ios:10.3.3:public-beta-5",
+      "candidate:apple:ios:10.3.3:public-beta-6"
+    ],
+    "blocked": [
+      "candidate:apple:ios:10.2:public-beta-3",
+      "candidate:apple:ios:10.2.1:public-beta-3"
+    ],
+    "rejectedIdentities": []
+  },
+  "checks": {
+    "jsonParsed": true,
+    "candidateIdsUnique": true,
+    "sourceIdsUnique": true,
+    "allEvidenceReferencesResolve": true,
+    "candidateLocatorsReviewed": 34,
+    "evidenceReferencesReviewed": 77,
+    "rawEvidenceArtifactsReproduced": 77,
+    "selectedEvidenceArtifactsReproduced": 77,
+    "rawEvidenceHashFailures": 0,
+    "selectedEvidenceHashFailures": 0,
+    "allCandidateChannelsArePublicBeta": true,
+    "publicOrdinalNotInferredFromDeveloperOrdinal": true,
+    "buildClaimsApproved": 0,
+    "substantiveChangeClaimsApproved": 0,
+    "deviceApplicabilityQualificationsChecked": 2,
+    "dateCorrectionConflictsAdjudicated": 3,
+    "productionSnapshot": {
+      "capturedAt": "2026-07-31T03:55:00.732Z",
+      "perspective": "published",
+      "useCdn": false,
+      "exactChecks": 34,
+      "exactMatches": 0,
+      "scopedPublicBetaEvents": 0
+    },
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "deploymentPerformed": false
+  },
+  "reviewedPacketLocks": {
+    "assignment.json": {
+      "bytes": 16232,
+      "sha256": "15f63e968c5cf062cb593638660eb952d0c7347f9848a1ce4bfb26d431189ea1"
+    },
+    "candidates.json": {
+      "bytes": 101326,
+      "sha256": "4b1dcd4b0f74874bfec84fd2d90e7bc77459a6b6df8e97fb74f77e5436636dde"
+    },
+    "conflicts.json": {
+      "bytes": 10962,
+      "sha256": "fcc0841454315f1108249877f476c7b0857af2b5d2f3d15056b569c342c0d093"
+    },
+    "sources.json": {
+      "bytes": 148633,
+      "sha256": "914fba11b782c8c7d95c8c5a981643577bbeaec19b6f5a48ffe1cf4252befc32"
+    },
+    "production-snapshot.json": {
+      "bytes": 31757,
+      "sha256": "fd1b8d8e3750937af99d7c5c73f82ab0c563d627218bf33f062b7159bbd23f41"
+    },
+    "review.json": {
+      "bytes": 2978,
+      "sha256": "79c5dfae701298708c4223131495f269195621052219ca9a491ad3c5c9cfaaa6"
+    },
+    "validation.json": {
+      "bytes": 4910,
+      "sha256": "8b382f9f21bdbabe992d353107a45fae54dc52b69104ac9ecf5e8d7ad61454c4"
+    },
+    "report.md": {
+      "bytes": 4618,
+      "sha256": "18fdb38c239179f45da98ec4d733c548e19f20728a3eb4bc3aea475f454fd46f"
+    }
+  },
+  "dateCorrectionAdjudications": [
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-3",
+      "suppliedLeadDate": "2016-11-14",
+      "packetProposedDate": "2016-11-15",
+      "disposition": "rejectedPacketCorrectionCandidateBlocked",
+      "finding": "The retained November 15 ThinkApple article says the developer seed arrived 'yesterday' and the public seed was made available shortly afterward. That places the public appearance on November 14, not November 15. The November 15 iDevice.ro and iPhone FAQ pages establish availability by November 15 but do not outweigh this explicit retrospective chronology; the iPhone FAQ body also contains material version-number typos. MacRumors carries a November 14 developer timestamp and an untimestamped public update.",
+      "requiredHandling": "Do not approve or create this candidate with appearanceDate 2016-11-15. Restore 2016-11-14 or produce stronger timestamped contemporary evidence proving a November 15 first appearance, then issue a corrected packet for review."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3:public-beta-4",
+      "suppliedLeadDate": "2017-02-27",
+      "packetProposedDate": "2017-02-28",
+      "disposition": "packetCorrectionApproved",
+      "finding": "Redmond Pie explicitly says the fourth developer seed was issued the prior day and the public seed became available on February 28. iDevice.ro independently reports Public Beta 4 on February 28. The February 27 MacRumors timestamp belongs to the original developer article and its public update is untimestamped.",
+      "requiredHandling": "Use 2017-02-28 for the public appearance and preserve 2017-02-27 only as the paired developer appearance."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:public-beta-3",
+      "suppliedLeadDate": "2017-04-17",
+      "packetProposedDate": "2017-04-18",
+      "disposition": "packetCorrectionApprovedWithSourceTextQualification",
+      "finding": "9to5Mac explicitly states that iOS 10.3.2 Public Beta 3 followed the developer seed by one day and published that report on April 18. iDevice.ro's title and repeated Public Beta 3 references independently support April 18. Its body also contains an isolated 'second public beta' typo, which does not control over the title and surrounding Public Beta 3 text.",
+      "requiredHandling": "Use 2017-04-18 for the public appearance, preserve 2017-04-17 as the developer appearance, and do not repeat the iDevice.ro ordinal typo."
+    }
+  ],
+  "applicabilityQualificationAdjudications": [
+    {
+      "candidateId": "candidate:apple:ios:10.1:public-beta-5",
+      "disposition": "qualificationUpheld",
+      "finding": "MacRumors and iCulture independently identify the fifth public seed as limited to iPhone 7 and iPhone 7 Plus.",
+      "requiredQualification": "Any eventual event page or structured record must state that this seed was limited to iPhone 7 and iPhone 7 Plus; it must not imply availability for every iOS 10-compatible device."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:public-beta-1",
+      "disposition": "qualificationUpheldWithSourceAttributionCorrection",
+      "finding": "AppleInsider explicitly states that the first public seed still lacked 32-bit binaries and names iPhone 5, iPhone 5c, and iPad 4. The retained MacRumors article supports the first public appearance but does not mention the 32-bit omission, despite the broader support claim attached to that source in candidates.json.",
+      "requiredQualification": "Display the initial 32-bit-device omission. Attribute that qualification to AppleInsider, not to the retained MacRumors article, unless additional source text is supplied."
+    }
+  ],
+  "candidateReviews": [
+    {
+      "candidateId": "candidate:apple:ios:10.1:public-beta-1",
+      "appearanceDate": "2016-09-22",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios101-pb1-9to5mac",
+        "source-ios101-pb1-idb"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "9to5Mac",
+        "iDownloadBlog"
+      ],
+      "finding": "Both publishers explicitly identify the first iOS 10.1 public beta on September 22."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.1:public-beta-2",
+      "appearanceDate": "2016-10-05",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios101-pb2-macrumors",
+        "source-ios101-pb2-idevice"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "iDevice.ro"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.1 Public Beta 2 on October 5."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.1:public-beta-3",
+      "appearanceDate": "2016-10-10",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios101-pb3-macrumors",
+        "source-ios101-pb3-macerkopf",
+        "source-ios101-pb3-9to5mac",
+        "source-ios101-pb3-idevice"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "Macerkopf",
+        "iDevice.ro"
+      ],
+      "finding": "MacRumors' October 10 headline identifies the third seed for public testers, and iDevice.ro's October 11 report says the third seed and public version were released the prior night. Macerkopf independently identifies Public Beta 3 in an October 11 update. 9to5Mac supplies general same-day public-channel context but is not needed for the ordinal."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.1:public-beta-4",
+      "appearanceDate": "2016-10-17",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios101-pb4-idb",
+        "source-ios101-pb4-cultofmac"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "iDownloadBlog",
+        "Cult of Mac"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.1 Beta 4 for public testers on October 17."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.1:public-beta-5",
+      "appearanceDate": "2016-10-19",
+      "disposition": "chronologyApprovedWithQualification",
+      "evidenceSourceIdsReviewed": [
+        "source-ios101-pb5-macrumors",
+        "source-ios101-pb5-iculture"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "iCulture"
+      ],
+      "finding": "Both publishers explicitly identify Public Beta 5 on October 19 and limit it to iPhone 7 and iPhone 7 Plus.",
+      "requiredQualification": "Preserve the iPhone 7 and iPhone 7 Plus limitation."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-1",
+      "appearanceDate": "2016-11-01",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios102-pb1-macrumors",
+        "source-ios102-pb1-9to5mac"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "9to5Mac"
+      ],
+      "finding": "Both publishers explicitly identify the first iOS 10.2 public beta on November 1."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-2",
+      "appearanceDate": "2016-11-08",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios102-pb2-macrumors",
+        "source-ios102-pb2-idb"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "iDownloadBlog"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.2 Public Beta 2 on November 8."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-3",
+      "appearanceDate": "2016-11-15",
+      "disposition": "blockedDateConflict",
+      "evidenceSourceIdsReviewed": [
+        "source-ios102-pb3-idevice",
+        "source-ios102-pb3-iphonefaq",
+        "source-ios102-pb3-thinkapple",
+        "source-ios102-pb3-macrumors-update"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "iDevice.ro",
+        "The iPhone FAQ",
+        "ThinkApple",
+        "MacRumors"
+      ],
+      "finding": "The public identity and ordinal are well supported, but the frozen November 15 date is not. ThinkApple's retained chronology places the public release shortly after the November 14 developer seed.",
+      "blockers": [
+        "Correct the appearance date to November 14 or provide stronger timestamped contrary evidence and resubmit the candidate."
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-4",
+      "appearanceDate": "2016-11-28",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios102-pb4-macrumors",
+        "source-ios102-pb4-macerkopf"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "Macerkopf"
+      ],
+      "finding": "Both retained pages explicitly update their fourth-seed reports to record Public Beta 4 availability on the November 28 chronology."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-5",
+      "appearanceDate": "2016-12-02",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios102-pb5-macrumors",
+        "source-ios102-pb5-appleinsider"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "AppleInsider"
+      ],
+      "finding": "Both publishers explicitly identify the fifth iOS 10.2 beta for public testers on December 2."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-6",
+      "appearanceDate": "2016-12-05",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios102-pb6-9to5mac",
+        "source-ios102-pb6-venturebeat"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "9to5Mac",
+        "VentureBeat"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.2 Public Beta 6 on December 5."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-7",
+      "appearanceDate": "2016-12-07",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios102-pb7-9to5mac",
+        "source-ios102-pb7-mobilesyrup"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "9to5Mac",
+        "MobileSyrup"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.2 Public Beta 7 on December 7."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:public-beta-1",
+      "appearanceDate": "2016-12-15",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1021-pb1-macrumors",
+        "source-ios1021-pb1-idb"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "iDownloadBlog"
+      ],
+      "finding": "Both publishers explicitly identify the first iOS 10.2.1 public beta on December 15."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:public-beta-2",
+      "appearanceDate": "2016-12-21",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1021-pb2-macrumors",
+        "source-ios1021-pb2-appleinsider"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "AppleInsider"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.2.1 Public Beta 2 on December 21."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:public-beta-3",
+      "appearanceDate": "2017-01-09",
+      "disposition": "blockedEditorialLineageGap",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1021-pb3-macrumors",
+        "source-ios1021-pb3-idevicecentral-video",
+        "source-ios1021-pb3-osxdaily"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors"
+      ],
+      "nonQualifyingCorroboration": [
+        {
+          "sourceId": "source-ios1021-pb3-idevicecentral-video",
+          "reason": "The contemporaneous video description is a useful first-hand witness but is not a second editorial publisher lineage."
+        },
+        {
+          "sourceId": "source-ios1021-pb3-osxdaily",
+          "reason": "OS X Daily says public versions typically follow and advises patience; it does not state that Public Beta 3 was available."
+        }
+      ],
+      "finding": "MacRumors explicitly records the third public beta, but the packet has only one adequate contemporary editorial publisher lineage for that public identity.",
+      "blockers": [
+        "Obtain a second independent contemporary editorial publisher that explicitly identifies iOS 10.2.1 Public Beta 3 and its appearance date."
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:public-beta-4",
+      "appearanceDate": "2017-01-12",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1021-pb4-macrumors",
+        "source-ios1021-pb4-appleinsider"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "AppleInsider"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.2.1 Beta 4 for public testers on January 12."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3:public-beta-1",
+      "appearanceDate": "2017-01-26",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios103-pb1-macrumors",
+        "source-ios103-pb1-9to5mac"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "9to5Mac"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.3 Public Beta 1 on January 26."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3:public-beta-2",
+      "appearanceDate": "2017-02-07",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios103-pb2-macrumors",
+        "source-ios103-pb2-9to5mac"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "9to5Mac"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.3 Public Beta 2 on February 7."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3:public-beta-3",
+      "appearanceDate": "2017-02-21",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios103-pb3-macrumors",
+        "source-ios103-pb3-9to5mac"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "9to5Mac"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.3 Public Beta 3 on February 21."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3:public-beta-4",
+      "appearanceDate": "2017-02-28",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios103-pb4-redmondpie",
+        "source-ios103-pb4-idevice",
+        "source-ios103-pb4-macrumors-update"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "Redmond Pie",
+        "iDevice.ro",
+        "MacRumors"
+      ],
+      "finding": "Redmond Pie and iDevice.ro explicitly establish Public Beta 4 on February 28, one day after the developer seed; MacRumors preserves the public update on the developer article."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3:public-beta-5",
+      "appearanceDate": "2017-03-08",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios103-pb5-macrumors",
+        "source-ios103-pb5-idevice"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "iDevice.ro"
+      ],
+      "finding": "MacRumors records Public Beta 5 on March 8, and iDevice.ro independently reports the following morning that it appeared during the prior night."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3:public-beta-6",
+      "appearanceDate": "2017-03-13",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios103-pb6-macrumors",
+        "source-ios103-pb6-idevice"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "iDevice.ro"
+      ],
+      "finding": "MacRumors records Public Beta 6 on March 13, and iDevice.ro independently reports the following morning that it appeared during the prior night."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3:public-beta-7",
+      "appearanceDate": "2017-03-16",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios103-pb7-macrumors",
+        "source-ios103-pb7-appleinsider"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "AppleInsider"
+      ],
+      "finding": "Both publishers explicitly identify the seventh iOS 10.3 beta for public testers on March 16."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:public-beta-1",
+      "appearanceDate": "2017-03-29",
+      "disposition": "chronologyApprovedWithQualification",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1032-pb1-macrumors",
+        "source-ios1032-pb1-appleinsider"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "AppleInsider"
+      ],
+      "finding": "Both publishers explicitly identify the first iOS 10.3.2 public beta on March 29. AppleInsider alone in the retained pair supports the 32-bit-binary qualification.",
+      "requiredQualification": "Preserve the initial 32-bit-device omission and attribute it to AppleInsider; do not claim that the retained MacRumors text states it."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:public-beta-2",
+      "appearanceDate": "2017-04-11",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1032-pb2-macrumors",
+        "source-ios1032-pb2-appleinsider"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "AppleInsider"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.3.2 Public Beta 2 on April 11."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:public-beta-3",
+      "appearanceDate": "2017-04-18",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1032-pb3-9to5mac",
+        "source-ios1032-pb3-idevice",
+        "source-ios1032-pb3-macrumors-update"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "9to5Mac",
+        "iDevice.ro",
+        "MacRumors"
+      ],
+      "finding": "9to5Mac and iDevice.ro establish Public Beta 3 on April 18, one day after the developer seed. MacRumors' April 17 timestamp belongs to the developer article.",
+      "requiredQualification": "Ignore the isolated iDevice.ro 'second public beta' body typo and use its Public Beta 3 title and repeated surrounding text."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:public-beta-4",
+      "appearanceDate": "2017-04-24",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1032-pb4-macrumors",
+        "source-ios1032-pb4-idevice"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "iDevice.ro"
+      ],
+      "finding": "MacRumors records Public Beta 4 on April 24, and iDevice.ro's April 25 report says it had been installable since the prior day."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:public-beta-5",
+      "appearanceDate": "2017-04-27",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1032-pb5-macrumors",
+        "source-ios1032-pb5-macerkopf"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "Macerkopf"
+      ],
+      "finding": "Both retained pages explicitly record iOS 10.3.2 Public Beta 5 on the April 27 chronology."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:public-beta-1",
+      "appearanceDate": "2017-05-17",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1033-pb1-macrumors",
+        "source-ios1033-pb1-9to5mac"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "9to5Mac"
+      ],
+      "finding": "Both publishers explicitly identify the first iOS 10.3.3 public beta on May 17."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:public-beta-2",
+      "appearanceDate": "2017-05-30",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1033-pb2-macrumors",
+        "source-ios1033-pb2-9to5mac"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "9to5Mac"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.3.3 Public Beta 2 on May 30."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:public-beta-3",
+      "appearanceDate": "2017-06-13",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1033-pb3-macrumors",
+        "source-ios1033-pb3-macerkopf",
+        "source-ios1033-pb3-zollotech-video"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "Macerkopf"
+      ],
+      "finding": "MacRumors and Macerkopf explicitly identify Public Beta 3 on June 13; the same-day zollotech video is additional first-hand corroboration."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:public-beta-4",
+      "appearanceDate": "2017-06-22",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1033-pb4-macrumors",
+        "source-ios1033-pb4-geekygadgets",
+        "source-ios1033-pb4-zollotech-video"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "Geeky Gadgets"
+      ],
+      "finding": "MacRumors records Public Beta 4 on June 22, Geeky Gadgets independently confirms the fourth beta was available to public-program members, and the June 22 zollotech video independently anchors same-day public availability."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:public-beta-5",
+      "appearanceDate": "2017-06-28",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1033-pb5-macrumors",
+        "source-ios1033-pb5-idevice"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "iDevice.ro"
+      ],
+      "finding": "MacRumors' fifth-seed article contains a public-beta update, and iDevice.ro's June 29 report explicitly says Public Beta 5 had been installable since the prior day."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:public-beta-6",
+      "appearanceDate": "2017-07-05",
+      "disposition": "chronologyApproved",
+      "evidenceSourceIdsReviewed": [
+        "source-ios1033-pb6-macrumors",
+        "source-ios1033-pb6-macobserver"
+      ],
+      "adequateEditorialPublisherFamilies": [
+        "MacRumors",
+        "The Mac Observer"
+      ],
+      "finding": "Both publishers explicitly identify iOS 10.3.3 Beta 6 for public testers on July 5."
+    }
+  ],
+  "packetDefects": [
+    {
+      "severity": "material",
+      "subject": "iOS 10.2 Public Beta 3 date adjudication",
+      "finding": "The frozen packet promotes November 15 even though its retained ThinkApple chronology places the public seed shortly after the November 14 developer seed.",
+      "requiredHandling": "Correct and re-review the candidate before chronology approval."
+    },
+    {
+      "severity": "nonMaterialForIdentity",
+      "subject": "iOS 10.3.2 Public Beta 1 applicability-source attribution",
+      "finding": "candidates.json says both sources support the 32-bit omission, but the retained MacRumors selected text does not mention it. AppleInsider explicitly supports the qualification.",
+      "requiredHandling": "Preserve the qualification but attribute it accurately."
+    },
+    {
+      "severity": "nonMaterial",
+      "subject": "iOS 10.3.2 Public Beta 3 iDevice.ro body typo",
+      "finding": "The title and surrounding text identify Public Beta 3, but one body sentence calls it the second public beta.",
+      "requiredHandling": "Use the title and corroborating 9to5Mac chronology; do not repeat the typo."
+    }
+  ],
+  "authorization": {
+    "chronologyApprovedCandidateCount": 32,
+    "blockedCandidateCount": 2,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "pageBuildAllowed": false,
+    "deploymentAllowed": false,
+    "preWriteRequirement": "Correct and independently re-review the blocked iOS 10.2 Public Beta 3 candidate, obtain a second editorial lineage for iOS 10.2.1 Public Beta 3, and repeat the exact published-production reconciliation immediately before any separately authorized write."
+  }
+}

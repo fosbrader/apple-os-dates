@@ -1,0 +1,105 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-major-12-18-followup",
+  "note": "These are supplement-only corrections to how frozen parent sources may be interpreted. The frozen parent ledger is not edited.",
+  "correctionCount": 10,
+  "corrections": [
+    {
+      "correctionId": "imore-ios12-early-rows-absent",
+      "parentSourceId": "imore-ios12",
+      "affectedRecordIds": [
+        "candidate:apple:ios:12.0:public-beta-1",
+        "candidate:apple:ios:12.0:public-beta-2",
+        "candidate:apple:ios:12.0:public-beta-3",
+        "candidate:apple:ios:12.0:public-beta-4",
+        "candidate:apple:ios:12.0:public-beta-5"
+      ],
+      "correctedAllowedUse": "None for the exact dates or ordinals of Public Betas 1 through 5.",
+      "disallowedUse": "Do not use the retained page as exact early-cycle evidence; those rows are absent."
+    },
+    {
+      "correctionId": "mr-ios14-opening-appearance-not-label",
+      "parentSourceId": "mr-ios14-opening",
+      "affectedRecordIds": [
+        "candidate:apple:ios:14.0:public-beta-1"
+      ],
+      "correctedAllowedUse": "Supports a first public appearance on July 9, 2020 and the public channel.",
+      "disallowedUse": "Does not establish the displayed public ordinal."
+    },
+    {
+      "correctionId": "iculture-ios14-appearance-count-not-label",
+      "parentSourceId": "iculture-ios14",
+      "affectedRecordIds": [
+        "candidate:apple:ios:14.0:public-beta-1",
+        "not-proposed:apple:ios:14.0:public-beta-2"
+      ],
+      "correctedAllowedUse": "Supports appearance chronology and later-cycle labels subject to the frozen conflict notes.",
+      "disallowedUse": "Its Public Beta 1 wording cannot override direct Software Update evidence for Public Beta 2 on July 9."
+    },
+    {
+      "correctionId": "mr-ios15-opening-appearance-not-label",
+      "parentSourceId": "mr-ios15-opening",
+      "affectedRecordIds": [
+        "existing-match:apple:ios:15.0:public-beta-1"
+      ],
+      "correctedAllowedUse": "Supports the first public appearance on June 30, 2021 and the public channel.",
+      "disallowedUse": "Does not establish the displayed public ordinal."
+    },
+    {
+      "correctionId": "mr-ios15-second-appearance-not-label",
+      "parentSourceId": "mr-ios15-pb2",
+      "affectedRecordIds": [
+        "candidate:apple:ios:15.0:public-beta-2"
+      ],
+      "correctedAllowedUse": "Supports a second public appearance on July 16, 2021 and the public channel.",
+      "disallowedUse": "Does not establish that the displayed label was Public Beta 2."
+    },
+    {
+      "correctionId": "iculture-ios15-appearance-count-not-label",
+      "parentSourceId": "iculture-ios15",
+      "affectedRecordIds": [
+        "existing-match:apple:ios:15.0:public-beta-1",
+        "candidate:apple:ios:15.0:public-beta-2",
+        "not-proposed:apple:ios:15.0:public-beta-3"
+      ],
+      "correctedAllowedUse": "Supports the dates and order of the June 30 and July 16 public appearances.",
+      "disallowedUse": "Its PB1/PB2 appearance-count labels cannot override exact contemporary PB2/PB3 label evidence."
+    },
+    {
+      "correctionId": "idb-ios15-second-appearance-not-label",
+      "parentSourceId": "idb-ios15-pb2",
+      "affectedRecordIds": [
+        "candidate:apple:ios:15.0:public-beta-2"
+      ],
+      "correctedAllowedUse": "Supports the second iOS 15 public appearance on July 16, 2021.",
+      "disallowedUse": "Second-appearance wording is not device-facing Public Beta 2 label evidence."
+    },
+    {
+      "correctionId": "mr-ios17-pb6-public-availability-only",
+      "parentSourceId": "mr-ios17-pb6",
+      "affectedRecordIds": [
+        "candidate:apple:ios:17.0:public-beta-6"
+      ],
+      "correctedAllowedUse": "Supports dated public availability paired with Developer Beta 8.",
+      "disallowedUse": "Developer Beta 8 does not establish public ordinal 6."
+    },
+    {
+      "correctionId": "mr-ios18-pb5-public-availability-only",
+      "parentSourceId": "mr-ios18-pb5",
+      "affectedRecordIds": [
+        "candidate:apple:ios:18.0:public-beta-5"
+      ],
+      "correctedAllowedUse": "Supports dated public availability paired with Developer Beta 7.",
+      "disallowedUse": "Developer Beta 7 does not establish public ordinal 5."
+    },
+    {
+      "correctionId": "osxd-ios18-pb5-later-report",
+      "parentSourceId": "osxd-ios18-pb5",
+      "affectedRecordIds": [
+        "candidate:apple:ios:18.0:public-beta-5"
+      ],
+      "correctedAllowedUse": "Supports the Public Beta 5 identity as a later report.",
+      "disallowedUse": "Its August 21 article date is not the August 20 Pacific appearance date."
+    }
+  ]
+}

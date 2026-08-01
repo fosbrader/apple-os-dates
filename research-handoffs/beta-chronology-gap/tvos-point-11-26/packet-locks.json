@@ -1,0 +1,1533 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-tvos-point-11-26",
+  "frozenAt": "2026-07-31T08:27:28.076Z",
+  "materialFileCount": 377,
+  "packetFileCount": 21,
+  "evidenceFileCount": 356,
+  "locks": {
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/assignment.json": {
+      "bytes": 3063,
+      "sha256": "c1179e747f13d242853130ad4f7682a482094be8cbd44aeb8811924dfe3b3049"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/scoped-coverage-snapshot.json": {
+      "bytes": 15041,
+      "sha256": "f79d55a61c65c95fe6f3ffd7b69e8c67b24501817d0d0712082dacd06ac8ff24"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/source-query-log.json": {
+      "bytes": 41999,
+      "sha256": "7188e09722798b9b9cab7bf6d72c628f4e7b856633bc87b401972605228f5430"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/sources.json": {
+      "bytes": 558501,
+      "sha256": "98fb4a5450194fef12dfc45637ceba5ccd446431ec4270733995bf1c38fe1fa9"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/raw-evidence-locks.json": {
+      "bytes": 88345,
+      "sha256": "95a46008b787e5f86bd71de643c9e6e9f5e03d7e4cb53da2185c86bf2e435207"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/production-snapshot.json": {
+      "bytes": 147744,
+      "sha256": "7fefa86f0ba9c6affbc07d6be82644b2b3229b659d866b9b27088f6bf9d34038"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/applicability-audit.json": {
+      "bytes": 125517,
+      "sha256": "da45734623b8f1a676c9b1f06e3da69800654ed3928d9b12520c1c4c5eccf484"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/negative-findings.json": {
+      "bytes": 6614,
+      "sha256": "d9ab9dc074e257e2983b74240c3662eac3a140cf800e4cbdb2cb09c54aa84f91"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/conflicts.json": {
+      "bytes": 2286,
+      "sha256": "8d571b37e38715a5bbf3eb3bf7e86d3b2de767089fc22b300d6910f200972597"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/candidates.json": {
+      "bytes": 272863,
+      "sha256": "b110d51e9d04e00337dd8dd7d1dfed4bdc56163d73a6343dc55acec64ae2d5f5"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/review-status.json": {
+      "bytes": 702,
+      "sha256": "94864d65ad8bc51960d1cdfa3bff78a15a4647301ba85ad2630ce87ac13676ed"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/self-review.json": {
+      "bytes": 895,
+      "sha256": "c39219be7d0061ce9a28eae7c163d85e2f6b444244d419dddc630af2ffa10e34"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/report.md": {
+      "bytes": 3444,
+      "sha256": "30c78fce527f3820c843b9db89aa4b99a53a6ff3de052afa7f31ae9dc0bda5c5"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/validation.json": {
+      "bytes": 1768,
+      "sha256": "4aed0aa7954e33de78487c5f9c6787b256c9284944c1753fda6bbc2304b2b97f"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/research-data.mjs": {
+      "bytes": 26810,
+      "sha256": "32c17a3726d598ae10fcab2d74fc27c898f25ab80a6b40ae26ab55cee318ea37"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/source-specs.mjs": {
+      "bytes": 24186,
+      "sha256": "d9ad0fc98c3575a75cd377fece3e4360fcfd22314bec5fbb228fe1ef63d2edf0"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/fetch-sources.mjs": {
+      "bytes": 5792,
+      "sha256": "d3beb9840dce6b8ef83dc0a2d4cb67693ba126a279cb9946012308115dc353fb"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/query-production.ts": {
+      "bytes": 5174,
+      "sha256": "7dab2b1a4fdc75ee196b1aa1e1cc5e078ddea3ecd40ca18e420ebc64a5f59468"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/build-packet.mjs": {
+      "bytes": 23411,
+      "sha256": "ffdcd12424c22c335d3a9767909fae41d72c2eb657a4d6fb9fe1cba1d42a7bcd"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/validate-packet.mjs": {
+      "bytes": 17269,
+      "sha256": "306551bcef1913f06a246445331d6c84604e48ac69651641771ae5c874381263"
+    },
+    "research-handoffs/beta-chronology-gap/tvos-point-11-26/freeze-packet.mjs": {
+      "bytes": 5116,
+      "sha256": "b5d1af7b1b31ef6090c9f253cfff7d9096949e0abd3d427b1a4b5c1027d01a74"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/fetch-log.json": {
+      "bytes": 117628,
+      "sha256": "2eea40aab16a69947b31a4837d3be0dc4904d5f066e12cf8ecb51a2e9ce91950"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/production-snapshot.json": {
+      "bytes": 147744,
+      "sha256": "7fefa86f0ba9c6affbc07d6be82644b2b3229b659d866b9b27088f6bf9d34038"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-113-pb1.html": {
+      "bytes": 143374,
+      "sha256": "402ac15f52b407105e6300516aff5cd65d91746c2b352174aa5f35998a3fbb49"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-113-pb1.json": {
+      "bytes": 1277,
+      "sha256": "9658c280f6d1a26ffea1f79c49102c45083cd3816161cd538a67941f0a150dd4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-113-pb5.html": {
+      "bytes": 151145,
+      "sha256": "3c21d6799f92420c7fc82afbe1d314ed1cbf1f2a01f71a9f87b3eb927d1dd849"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-113-pb5.json": {
+      "bytes": 1180,
+      "sha256": "3297599ade58818ba45e64ee5beb71fa794742c3749420df6d0b671b54cfd755"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-152-pb1.html": {
+      "bytes": 147147,
+      "sha256": "fb440fc2994b05bb83c7a81588ac47dae66233b3a2ddfa3a05cd8d15361ba2f2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-152-pb1.json": {
+      "bytes": 845,
+      "sha256": "c41276237b0fdac71e9069d1a35dd31b1ca7ba6a80757998418f21bf1e0413b8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-155-pb2.html": {
+      "bytes": 158107,
+      "sha256": "24e70559aab3bff5e9467bbc3f3ad570d7359cdab7f185b000d8d615aec582fd"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-155-pb2.json": {
+      "bytes": 1100,
+      "sha256": "59d4aa5e4847a3d4c1df3ca7572e441b779f91c5a27caccdf56534f0657f3cb7"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-264-pb1.html": {
+      "bytes": 149458,
+      "sha256": "c59581fb35347601c1a9d724ea3d019bd2962be820874e3261f9fd87cba49537"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-264-pb1.json": {
+      "bytes": 1470,
+      "sha256": "8d999beee1b39b6d42194e346cd7c1894fc51c74d692caaced39c858ac2e9cf2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-264-pb4.html": {
+      "bytes": 149439,
+      "sha256": "21d0bae0f875fa46b6f03b9a43a0be05dcf40ac6ee7dae219fd54a86755a2f90"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-264-pb4.json": {
+      "bytes": 1124,
+      "sha256": "c133683835c84c74b9db2f9f980aba89fb09d67e60d43811ba548cf02ecebf89"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-265-pb1.html": {
+      "bytes": 150573,
+      "sha256": "79f57573eaf4659259269afb93286512cbe1dac1fda65c4fb3b03064f65fb32c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-265-pb1.json": {
+      "bytes": 1293,
+      "sha256": "07948dd41c137f13cdaba58dcfc549b06584caa88422450582a92c84c6e6e055"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-265-pb2.html": {
+      "bytes": 151222,
+      "sha256": "4acb51fbe6f7fb570d2ae7553b7353136a7f56cd0ea067e26e622e4676d3c09a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-265-pb2.json": {
+      "bytes": 1354,
+      "sha256": "f496423792bf15174f985286858decf5644381af2c14d296f6a68e29cdc6a973"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-265-pb3.html": {
+      "bytes": 150766,
+      "sha256": "3bf3287069b12fd11ea1a057bfc2c83bbb4fe298790f168977e16b1f7bf0f466"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-265-pb3.json": {
+      "bytes": 1683,
+      "sha256": "027262c881cb68fbb56846cd26d140858a0e3659eb471a4d70f5502500d0a485"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-265-pb4.html": {
+      "bytes": 150890,
+      "sha256": "b1331b639cb7970b85c1ebed9b1ed9a97a17b8c36dfb0a3137fbc10059565c93"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-265-pb4.json": {
+      "bytes": 1185,
+      "sha256": "6ddb7ecc51ade04dd3ac6d50d3db85e47c976586354c89734da55ea13c94d0c2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-266-pb1.html": {
+      "bytes": 150863,
+      "sha256": "8e1c362e01c427673fbe0df27e339e505812b3e0347dafa265a1ea5d7dc6b2e6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-266-pb1.json": {
+      "bytes": 1540,
+      "sha256": "eeff3e72ba4ec01843face36706d4f42058c9eb7c5246b9a198cd4ab1532ddd0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-266-pb2.html": {
+      "bytes": 154013,
+      "sha256": "8c0e3369b82c6ad154507e32bd09c16b3d5b81e949dcc9d61cd0ebcc05751236"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-266-pb2.json": {
+      "bytes": 1212,
+      "sha256": "ebd64e896d61dcff6ac51b23a532212e25528a7f56d79caff61b273e73f17c0b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-266-pb3.html": {
+      "bytes": 160501,
+      "sha256": "a8b1377cbacc5133ec99ad46f3cd52f84a71d948b3824342e31df74532206d21"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-266-pb3.json": {
+      "bytes": 1008,
+      "sha256": "fd52d8b29ac5f7942fa0c7ecad5e07fdba24e2e1cf504375dc4f8106145012c6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-266-pb5.html": {
+      "bytes": 152233,
+      "sha256": "34d55e38bd1d23f555ee139b51665162d59539b5a18d07005d4bd3fd648cf049"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-266-pb5.json": {
+      "bytes": 1715,
+      "sha256": "db9a55881a80150fe84eb09f89c8fce36beb1bea56a1e15ddd430a0ae6880ef7"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/9to5-tvos11-public-boundary.html": {
+      "bytes": 145911,
+      "sha256": "6eb4e01bd589310474c57165f62db9b81b9a42e6e613f921bb3dcdabb05d77d9"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/9to5-tvos11-public-boundary.json": {
+      "bytes": 1616,
+      "sha256": "33a4138e4e9dfa870b2489b77b2a811d9b4950857f8d486770c5a1528b78cdb6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/buchi-264-pb2.html": {
+      "bytes": 137047,
+      "sha256": "f962e577df63a30f6422f1a81684c197324b68f5e6c60a4f76d2d976f46e22ab"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/buchi-264-pb2.json": {
+      "bytes": 2101,
+      "sha256": "be58d30e8f53c3e0bb87a865e62ca156e910ff4241f20085890686f9c3a15b08"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-111-cycle.html": {
+      "bytes": 504863,
+      "sha256": "af6b74f11ffbc8b3446e9b3b02702ccc62c1d7fe1aa54490483539e3ebfe68aa"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-111-cycle.json": {
+      "bytes": 5536,
+      "sha256": "512a873aa4fc8e7dba8c4c18daf612e8094e694fce525e6c518da23bcd7abd91"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-112-cycle.html": {
+      "bytes": 519367,
+      "sha256": "6110886a6a42f929aa872cf32dbc23868efdb0f1b316b77f866d010392ae222b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-112-cycle.json": {
+      "bytes": 6254,
+      "sha256": "e8b7938cb1094349a9c6c25eb2806297b100dc40b6c4ad8bbba245ae2e30c81b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-1125-cycle.html": {
+      "bytes": 595111,
+      "sha256": "147770ea656c6bd8da25edbdbf4ffcea29a71799d1bf547aed25b66fa5e0e37e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-1125-cycle.json": {
+      "bytes": 2674,
+      "sha256": "1e0475ec5755fdc53476b647e22f7e7c7c424a9fc5657eda72dcccec066122ab"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-113-cycle.html": {
+      "bytes": 541085,
+      "sha256": "6dcb857fffdde622b8af00b80b35e8cb6969ab0543218ca9f2934dbdcacacb00"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-113-cycle.json": {
+      "bytes": 6869,
+      "sha256": "952172afa34ef8faa9c6d5f216520bae36c8fc7789be625d6fa8c56d994d7882"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-114-cycle.html": {
+      "bytes": 634511,
+      "sha256": "45ee5be340c9e2e0fe965e3d24f67f89599fdbde0233d19001c62e8cf593b8c2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-114-cycle.json": {
+      "bytes": 4328,
+      "sha256": "6b0151916eb715be0c64201f36656a9802c7fddc8f8a07d3985d7274a9bc06e2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-121-cycle.html": {
+      "bytes": 502724,
+      "sha256": "ea5976498f6208a13e29f4f2daa3bf480e1a36b41b7362d31f7a397b29716254"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-121-cycle.json": {
+      "bytes": 3597,
+      "sha256": "6687e3f8e509b2383749a73d08e803d4ca9de7612d309053642dafc4aa2a5502"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-1211-cycle.html": {
+      "bytes": 512927,
+      "sha256": "faa9eab261f76e310dd864f382cc71fc790603d2b785ba5ca371873104c93b4e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-1211-cycle.json": {
+      "bytes": 2324,
+      "sha256": "a26669ea0b29600c9fc12a4c1f9d8e9d755e6b9cd74a66c425bb6564cbfbeb52"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-1212-cycle.html": {
+      "bytes": 502267,
+      "sha256": "059388fa9c85ea655e1047b25d7e66d67a9a59f40a65991f3369669cd89776a4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-1212-cycle.json": {
+      "bytes": 1892,
+      "sha256": "40de60bd960da5e13682945f1eb572436cceb1cd8af90600f24d51f87cde1cf3"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-1213-renamed-cycle.html": {
+      "bytes": 513864,
+      "sha256": "210055b866948c747afcea8900b514c50eef7697a78f1f4d8b806e91034980f8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-1213-renamed-cycle.json": {
+      "bytes": 1887,
+      "sha256": "bd11e98df54761e4a3cdee8c95e54e15ea27a8d38c7507bcc27ebcf15a4362f7"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-122-cycle.html": {
+      "bytes": 509630,
+      "sha256": "4613b5347f1cd5495d62f6e80ce3c1213667cbc18093e328e48029651343f613"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-122-cycle.json": {
+      "bytes": 3183,
+      "sha256": "79ad5fecb8484efa4e498b520852fda0071e84c4b50d85a886ec2927ed26acbf"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-123-cycle.html": {
+      "bytes": 515727,
+      "sha256": "9ef8f7cf7e969b0a758d11574707c82688ccaf1bd57a8552247ba8b7aba5357e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-123-cycle.json": {
+      "bytes": 3993,
+      "sha256": "be9f6f749c3f4528e6bbf43f8fd10e4c4936d6984f64bfe14acd5e3b69d54978"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-132-cycle.html": {
+      "bytes": 498157,
+      "sha256": "7575a27f1eaf7803f18904e768843dceeb4f0ea353aa3b6ea7c5723edd1389b5"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-132-cycle.json": {
+      "bytes": 2818,
+      "sha256": "c5b60a62108422b857d85e5d4a6ea3dd4e2a41dc1a363e16c61d84980a1ab33f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-133-cycle.html": {
+      "bytes": 496077,
+      "sha256": "3c3911bde916900c3fc5b1e221d8eb7e0df79f3351757d9907654f2ff7642a14"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-133-cycle.json": {
+      "bytes": 2554,
+      "sha256": "f754005f513ca53de9e1c80d199757c0264513571278a2e1219c6eea4d15f76d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-1331-cycle.html": {
+      "bytes": 519424,
+      "sha256": "0501c7ae7af5e5351e564584806d8b135c65a9c1df68442a3bc9f69d596711a7"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-1331-cycle.json": {
+      "bytes": 2496,
+      "sha256": "c3d6a7c9dba8c2ba8f4b4ebba49d5f4b9385f3757b556b8e8dd376df1279731b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-134-cycle.html": {
+      "bytes": 499836,
+      "sha256": "b8882269d805867f440d4c0fdca2ead913fff26c033c05e1e4b86cbf01546f0e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-134-cycle.json": {
+      "bytes": 2845,
+      "sha256": "26e239390ccdce688fd76e789b8e56631810594aa1317ef6fc9f0da937d2b161"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-1345-cycle.html": {
+      "bytes": 526136,
+      "sha256": "561c3c439e8cf3e34a65387417de40df3f24eef847beb496ca84c87aab4a2b05"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-1345-cycle.json": {
+      "bytes": 1987,
+      "sha256": "9739b6872e5bc74c1b643a4c1b1357b9acc12c10f62c1364a8f309b0d169854c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-142-cycle.html": {
+      "bytes": 498364,
+      "sha256": "e3d194a3c9a845ef819d308a843da86d845efc6537bd326d2d403f1566da91fe"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-142-cycle.json": {
+      "bytes": 3280,
+      "sha256": "e5813517ca8e8405d547b37438d70a639dc10ff371f45100546376983de7d751"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-143-cycle.html": {
+      "bytes": 494356,
+      "sha256": "a350405777962b95196b8e37940029b3048af8d7c9aead33831d27091891b522"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-143-cycle.json": {
+      "bytes": 2947,
+      "sha256": "d47dd57f74b8c2e57af142071f9203abffe2bc49c9654807308ef2021a725723"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-144-cycle.html": {
+      "bytes": 489602,
+      "sha256": "cdae083a0ad0972af0287ebb0d7caee91c3829357860cb9aca3e3397d9ea14b4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-144-cycle.json": {
+      "bytes": 2797,
+      "sha256": "e1ef863c54e01193416225c6386ade82ae9a6fc1e792fcc13bbfb08e4e3115dd"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-145-cycle.html": {
+      "bytes": 503422,
+      "sha256": "08ebd170dee840c8d912bc880c44de5c113b489f71a3504efdd8925a15c1d2a0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-145-cycle.json": {
+      "bytes": 3240,
+      "sha256": "aa5ef4c28df661289a287fa177761e0239ffe98d57f3752849bfd00e9d79e95f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-146-cycle.html": {
+      "bytes": 499520,
+      "sha256": "ae5fef0b503c4cf42796d7530719df0efa37ce1705bdc9edc3d375968d78a814"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-146-cycle.json": {
+      "bytes": 2620,
+      "sha256": "46792eaa3ed5ef6f6cf911ad00ed94c7f3ab1fed598760085e459d7d451c41ff"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-147-cycle.html": {
+      "bytes": 498029,
+      "sha256": "75529a196bf8c734c0118f50643fa726bf399fb60bc33a8190692821aaff0dc5"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-147-cycle.json": {
+      "bytes": 3039,
+      "sha256": "fa5b0a8ebd2cac86c664e4e167df23942f6356319c5028fdd2b382e1c3fa5f84"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-151-cycle.html": {
+      "bytes": 494884,
+      "sha256": "76a73d969433fb047049f85bf43bee95095824b85e5e793d59afa043def9ba32"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-151-cycle.json": {
+      "bytes": 3292,
+      "sha256": "b621862b4929069cd0dc9f5f1dd899778cd7e793ab1c1e163d0d4b23675bd4f1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-152-cycle.html": {
+      "bytes": 498968,
+      "sha256": "a4b814fbb7faa3f33ff8fc0251ee9b065bedb2279c1c52186605a67ff399790c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-152-cycle.json": {
+      "bytes": 3391,
+      "sha256": "b11916b9816c918ca676f363b14a8d361f267ef1df3e2376fac62721907f34e5"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-153-cycle.html": {
+      "bytes": 495344,
+      "sha256": "993c936e0943caba9ae258f73e674c357ff8791844ac52f35c7705821c97b054"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-153-cycle.json": {
+      "bytes": 3344,
+      "sha256": "98bddfe8043779d96f2dadca502aa1fcb07580dbbbde59315a536ad08a8cd9b9"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-154-cycle.html": {
+      "bytes": 499048,
+      "sha256": "0e71fa34b3359cabf8fc78bc2209fd0f81cb2ec6de80cfd28b4e3aa00514411d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-154-cycle.json": {
+      "bytes": 3845,
+      "sha256": "77fcdba509a226fbc7e5eddc6534996ad3fd976cdaa619cfa01073174f570193"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-155-cycle.html": {
+      "bytes": 493353,
+      "sha256": "44d7da06deed6f21d7e88141972cf549e0d4cf7e6bd57e37e9ea5e40f2740363"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-155-cycle.json": {
+      "bytes": 3175,
+      "sha256": "6d2f3af4c1a67b524508b62aa6199cd394308fe1cf1414c212cc37a4a3605ec0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-156-cycle.html": {
+      "bytes": 500079,
+      "sha256": "9448ab222aa5203c37e095f0fb3281df65e14ef381c33e62314f961f1735efb2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-156-cycle.json": {
+      "bytes": 4255,
+      "sha256": "7b376c15bfd4e9a221514b518b3fb52b70c4b15e7df3d87b88de9a9e26755140"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-161-cycle.html": {
+      "bytes": 496167,
+      "sha256": "6066c0fa1042c26efeaf1c6ee5aa1ef9208d871922e278e7666441a1e24a527b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-161-cycle.json": {
+      "bytes": 3500,
+      "sha256": "beaa16798a75398ad64b815d81c58fc7bff4cb54bcc31c04e6c303c7f8a30b65"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iculture-181-cycle.html": {
+      "bytes": 515282,
+      "sha256": "389f6a3915cf1b2a7cc99c24f5a1d0cb1f90b4f698dc11f30bd4bc87812497b3"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iculture-181-cycle.json": {
+      "bytes": 4397,
+      "sha256": "4dabdb9591ccd85c88378a43b69ff6a8c8990a366bc017a84ed9b9e9fc7540e5"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/imore-tvos12-rolling.html": {
+      "bytes": 1067131,
+      "sha256": "792a3f1d88cb095f6dbec9eddd052fa666a58ec115196b0397cab3217155bc92"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/imore-tvos12-rolling.json": {
+      "bytes": 7948,
+      "sha256": "37f9046687c991d1d42a029f569f1eb1f2474bc2aee37e36b7a2bcc44770d939"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/imore-tvos13-rolling.html": {
+      "bytes": 1063510,
+      "sha256": "46267263d80e1eb08535bfe966d9d9ac09eb54e5e1d059b3b85785521b540084"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/imore-tvos13-rolling.json": {
+      "bytes": 5646,
+      "sha256": "4ee11d8396f7a83632841018ad00113b74e293686d5d827b71652f76841259e0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/imore-tvos14-rolling.html": {
+      "bytes": 1052386,
+      "sha256": "0823f06f848151b1c214ea5491f2ea5e4361730681d2b03a166c1f43ca31fb64"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/imore-tvos14-rolling.json": {
+      "bytes": 5986,
+      "sha256": "df0f07de37dd308c98eba4198deea0b3d8fc061305a2390349ba2334acbd398d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/iphonecanada-143-pb2.html": {
+      "bytes": 240481,
+      "sha256": "163b99138434f04080fb91288f3ed5d82343230d990a5f2024e34fe8433a0cb3"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/iphonecanada-143-pb2.json": {
+      "bytes": 1057,
+      "sha256": "6d74bf200d1f65e4e48f66984d901f14bb84be130c8436eaf9c88bd27424561b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/ithinkdiff-145-pb4.html": {
+      "bytes": 177786,
+      "sha256": "88cf41df6e7e5ba2a3ee99ff0b690ed9f10ea326961ce763a66168cad84b2208"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/ithinkdiff-145-pb4.json": {
+      "bytes": 1784,
+      "sha256": "cfd0a4c7f42c96c5e01a2df75b6fb8a7748ceec2fd93e2450f058e6851a3f4ee"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/ithinkdiff-145-pb7.html": {
+      "bytes": 176383,
+      "sha256": "7d5aa4cae33ce7a2e4a4f0f9119d6b484819fe3b248b3201599e7a6457e9055d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/ithinkdiff-145-pb7.json": {
+      "bytes": 1255,
+      "sha256": "abbd1c94cc7bb55364ba6abe544153fd9d2babb8af27d17db8858e256ef67bd1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/ithinkdiff-155-cycle.html": {
+      "bytes": 173329,
+      "sha256": "ac950fe087c1b01216c4fc923c6fe60c1bf97967167374d4923a85b6ba98bea9"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/ithinkdiff-155-cycle.json": {
+      "bytes": 2982,
+      "sha256": "11681834a72c7e7baec0f8f9937e73aa9233f753170da0a673d86de213729d61"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-151-pb2.html": {
+      "bytes": 130643,
+      "sha256": "5bc0dd1ed54b85ac0ea57d52fdd2c4c261ceebf41666211109146c3d3a8bb965"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-151-pb2.json": {
+      "bytes": 1170,
+      "sha256": "49fd877cc6a828242fc6fdb774bea5a07d9d2da6b27105b0e959ee03dfda4fc1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-152-pb3.html": {
+      "bytes": 137576,
+      "sha256": "179691415ac0e8a8b49f3d96e1d88d4953e76effa001ae158845c89aa8ad2987"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-152-pb3.json": {
+      "bytes": 2683,
+      "sha256": "3006cae14ea2d07a96353d61ebc87da344e734a771165129476090acca542a36"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-152-pb4.html": {
+      "bytes": 128165,
+      "sha256": "63c2c57ff10ec93171873cf02f041b34069c73b0f4b801845de06ce58acd9463"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-152-pb4.json": {
+      "bytes": 2259,
+      "sha256": "c1093a91f743bbe2dc55c3c433f09c63f9b321a03d2a002b45f90f895ea12102"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-153-pb1.html": {
+      "bytes": 130775,
+      "sha256": "8f929be0273a14c70d5fad4b6677c0fffb170f027a5392d72f4370e2204a2174"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-153-pb1.json": {
+      "bytes": 2091,
+      "sha256": "4a57b1334ce6009fda84e0897de331595986ce57042515ff884ae8c2f435edf6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-154-pb1.html": {
+      "bytes": 143419,
+      "sha256": "c05947298cd76a3533cbb0289dffc569d98fd079507ae6b221bf275b232e7c30"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-154-pb1.json": {
+      "bytes": 2080,
+      "sha256": "3c63bc1cefbf851725b99572e552d57d8b452888baf9ad8225775f3da785e460"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-154-pb2.html": {
+      "bytes": 140588,
+      "sha256": "7bcc6db6397a80d4fd688e0e641548664b3bddefcc2acbc7569912b66b1c13fd"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-154-pb2.json": {
+      "bytes": 2233,
+      "sha256": "0ad132daf397fcb825de75ad407082eb85b6bbd68d0a0960d4be625590486012"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-154-pb3.html": {
+      "bytes": 137845,
+      "sha256": "cc1a3938c9ec63b041544ce32a8a5e5b21706c7469b284f6334838da6344f8f8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-154-pb3.json": {
+      "bytes": 2217,
+      "sha256": "3ec6b51d7380d3b50bb3d1af2bb316ecc53c9875fdf289475c281d50cc9dbd9e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-154-pb4.html": {
+      "bytes": 135296,
+      "sha256": "10435c83da88ca9f8fd1ac92efc9ef0bbfa9d9f0c6d2568beadbf975eaab8461"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-154-pb4.json": {
+      "bytes": 2559,
+      "sha256": "c0e6e91ab2a55db5d5ca7bf0ea6fc2e706ca656f42bc364b89128c7bab792964"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-155-pb3.html": {
+      "bytes": 134659,
+      "sha256": "971e611374c85a0c003e56d5b5fa4223a985047cd553343ad5aec89b6bc50d5d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-155-pb3.json": {
+      "bytes": 2510,
+      "sha256": "9136ac045538b5ced757a5f281555c3fc2e7bc4eca4f4a8ab09e438295297d1a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-155-pb4.html": {
+      "bytes": 132943,
+      "sha256": "18ba50fe1be5de2144b55c3d124561f8426a81d8c2562d6c480109888c4b5b15"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-155-pb4.json": {
+      "bytes": 2492,
+      "sha256": "837baaa389bd7f5741f1ced83e5a288cca8f2cca64ee9757236afe2872d66ddd"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-156-pb5.html": {
+      "bytes": 132052,
+      "sha256": "6cc3d4968873a3cfae2cc8045727fe1a1fcdb81d6e3f09f612c3435e920a95ef"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-156-pb5.json": {
+      "bytes": 2307,
+      "sha256": "f4c424f439e2a1cf88b160b17f1aea74f1abfe431c85be9d14facbacb0008970"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/kob-161-pb1-negative.html": {
+      "bytes": 141316,
+      "sha256": "ea0902bd0c6ec92c1a27aca095c9117a79d88630332c24d9ec5bcf2e3695bc1e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/kob-161-pb1-negative.json": {
+      "bytes": 1959,
+      "sha256": "e4f9fe00d9f0a30b083d398785e17939faec6aab20483696c28824f269f3a2e1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mactrast-1345-pb4.html": {
+      "bytes": 150562,
+      "sha256": "e9d77eb2160cf9c7a62b6b4d038efa6672d10b2b6bc3e4dd152a6bb2e8f0af01"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mactrast-1345-pb4.json": {
+      "bytes": 1412,
+      "sha256": "3a69d33e4a2ea272c73d44124c441de6d79cc88ddef9a7fda51e28cfe2b374aa"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-73-pb2.html": {
+      "bytes": 158237,
+      "sha256": "8c0468e85b7d163bf42092ef842b5fc0f1ddc1a7263f9896886995bb6a8eafb1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-73-pb2.json": {
+      "bytes": 1145,
+      "sha256": "ee8d2e80bd9aeeabb6ca40d36a05cbea10921f806c40b54ba18dbb725d8db8d4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-74-pb7.html": {
+      "bytes": 148945,
+      "sha256": "83a07d63af6086778d33483570d8fab71dd0961c99005b003f9e215c2e75f4e2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-74-pb7.json": {
+      "bytes": 926,
+      "sha256": "742af7ac17e03de9630bc23e92240cf50db6f6a8bcecbb7a0d4782e0e92f4a7a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-75-pb2.html": {
+      "bytes": 147769,
+      "sha256": "50199922a0d2cc7b697e53b0551ca216580665627bf439bc8e76e07efb419646"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-75-pb2.json": {
+      "bytes": 799,
+      "sha256": "7b04fabe3edd82702561487d39a65d7c2b6b581899bd9e710ca996d2a4971fce"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-75-pb3.html": {
+      "bytes": 149691,
+      "sha256": "780467f09e13751d168bcacaa36467fe10280349618eb3b4689ba1d439828adf"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-75-pb3.json": {
+      "bytes": 868,
+      "sha256": "9a319d84c04c9dbaf397b47e41c631aa28a03c4e03c5274f2f8a73dd9933628f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-76-pb3.html": {
+      "bytes": 158348,
+      "sha256": "7df7321c8612f56d6b243c3f15e259362cae928595d4515e0d4b2519e9ae4a08"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-76-pb3.json": {
+      "bytes": 1465,
+      "sha256": "151c5469d538f636c6656ae1309b9c17a109972c5098a8761b586f20cab42c2d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-76-pb4.html": {
+      "bytes": 146551,
+      "sha256": "86a4496eda95e6be4e7f0df549e73bc609c687c4253c2d87d08cd487fea6123b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-76-pb4.json": {
+      "bytes": 996,
+      "sha256": "f49a562365300559a5b1be3be59ca11de0318acd2af443736c18dc116e1c347b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-81-pb3.html": {
+      "bytes": 147999,
+      "sha256": "4e939c70d42cc9af9f9438d35fe16633e7832331256bedabf91462e8331fc164"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-81-pb3.json": {
+      "bytes": 767,
+      "sha256": "f0750e2e67f4533cc1d59cf0f9e1a5bc5b3f9dbac27a3d9959256f832b3033d4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-83-pb3-dev.html": {
+      "bytes": 147010,
+      "sha256": "701022cf5ad0d5c4b688ef0470a2d0d15cf708cb18c8e2209258df00a682cd8b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-83-pb3-dev.json": {
+      "bytes": 1188,
+      "sha256": "65a8467fbd3b06fd4dbf2eba430b55703e4b1aef7c899cdc36594d00af76e741"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-83-pb4.html": {
+      "bytes": 147914,
+      "sha256": "fbb45f5e2a3d5e6df8babee676b955d52974ec3f694e838123ed71aeebdd52e6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-83-pb4.json": {
+      "bytes": 1326,
+      "sha256": "5d791a41ace52c9560ae7f47b912eb806f98e6625d64a034866db33eb6309981"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-84-pb2.html": {
+      "bytes": 156329,
+      "sha256": "dbf5f6408552fe95b9c2bb5019e97f6fe1a51a7abfc19f43fd4f95371c21a8b3"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-84-pb2.json": {
+      "bytes": 1258,
+      "sha256": "887145575d2ec862fcd550dab6d3e68f0186e08626efb0b68939263c1a56332b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-85-pb4.html": {
+      "bytes": 146531,
+      "sha256": "72d066dd88b05e2eda06c3a04e10f6dad48974e5f4ff1c02e9cf571f35a22884"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-85-pb4.json": {
+      "bytes": 1233,
+      "sha256": "1cd4a936b665f6a69ef87f40b0822f14ac19f26b0d7f1856430150be774ccc89"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-85-pb5.html": {
+      "bytes": 146488,
+      "sha256": "3e3c6ed8bf7bac392b78f19be85424fbef225ddc9b9269df4eada071d014e272"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-85-pb5.json": {
+      "bytes": 1310,
+      "sha256": "f4e0d8dcba3d865e88efdd5efd264d156e01ac9bb34c75186b940d08a1c51bbb"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-86-pb3.html": {
+      "bytes": 147374,
+      "sha256": "4ad7436882db699efe73df302a653724ce3a41b281736cf0fe6c32f35c32ca92"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-86-pb3.json": {
+      "bytes": 948,
+      "sha256": "2235b5a5e4df6dbae5d81c522cf15a2993b31f90dd535b729bb692a781a7fa9c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-86-pb4.html": {
+      "bytes": 147222,
+      "sha256": "608c7a473c1c72227e8e41d6418ef8f060ef203446122eea766f9dc8abd70ee0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-86-pb4.json": {
+      "bytes": 946,
+      "sha256": "b98062e8f9f2251c041318016bdc381e02bca12c74e4bb2d5f1f2ad50581eb3d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-87-pb1.html": {
+      "bytes": 145694,
+      "sha256": "00d524e986caf34fccefabfa9280fdaf628d347cf93e3354171b65c78f31cb0b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-87-pb1.json": {
+      "bytes": 1477,
+      "sha256": "c2f07db24e38fc17c5d260c5d39ede7a7a2800706682371d1c88141804f5b8a7"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-87-pb2.html": {
+      "bytes": 147101,
+      "sha256": "1fb57f8059e5fc2ff957354eaf1b74d429500e4616ab18178c7c52982355bfdb"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-87-pb2.json": {
+      "bytes": 1661,
+      "sha256": "efae4c8e298cb736bd9d10102f061aa4a96523380836d384162e77b7a340909f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-87-pb4.html": {
+      "bytes": 145961,
+      "sha256": "c7cc3c0759b2bf0981ddf093dc30f046ab6f8bda833b3353eebf6e766a50da61"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-87-pb4.json": {
+      "bytes": 1798,
+      "sha256": "7630ee1985d1c8ca19c08d960f82617da9120bba6b47c698e58686d0c2e489e9"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-91-pb2.html": {
+      "bytes": 146424,
+      "sha256": "8c748dac0e8829a0ea7733876e80f111d1a967ce4a90477d8165da3bf30e92a3"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-91-pb2.json": {
+      "bytes": 1801,
+      "sha256": "3ec5c4ee88d3fefca255ec3e75405a71cc943ce9f2367d842b424cb6809663d1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-9to5-91-pb3.html": {
+      "bytes": 146547,
+      "sha256": "12c572239375910b0ced67ad1f4864ddaf31a79e0334f954d3a8adee43106332"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-9to5-91-pb3.json": {
+      "bytes": 1944,
+      "sha256": "e394f726b6194cce1ddefd1f9bf509ea1367f8cb3f4b27c294e2c22b0779c87d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-ithinkdiff-85-cycle.html": {
+      "bytes": 174418,
+      "sha256": "9971081a48c3456774b43b32fe59554bdb03a53c7e0732c41aba9ed15382a7a2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-ithinkdiff-85-cycle.json": {
+      "bytes": 860,
+      "sha256": "b4cc4b0e7828240ab9be0644eb5629d1c09cde43338173ddd67c8c2438c52242"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-ithinkdiff-86-cycle.html": {
+      "bytes": 173677,
+      "sha256": "6a90d003a88a69baeb036f4c9e5fc97ec2e8cfe589537d4030e1c2a49cd57768"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-ithinkdiff-86-cycle.json": {
+      "bytes": 783,
+      "sha256": "1eeda40dec7d7dc6232f34f6b404972e139c2cf7487a3f64a22f47849992b6da"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-kob-74-pb2.html": {
+      "bytes": 128031,
+      "sha256": "cd88a195f8a0a07da767f1378a5ba6d558da4c026b536125e9cbadebe03a0e24"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-kob-74-pb2.json": {
+      "bytes": 1051,
+      "sha256": "e4f1ca344446327a16554fdebcff594e28eaae76389b95f2fbd1bec2b56f712c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-kob-74-pb3.html": {
+      "bytes": 125005,
+      "sha256": "984d25f5a621207096c901ad5dfbb15f4c455f08b51247ba9fbd543433d436d6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-kob-74-pb3.json": {
+      "bytes": 937,
+      "sha256": "48839ff655b9e230ee5db5c927d909788430def5656b130f79e864e6b5186942"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-kob-74-pb5.html": {
+      "bytes": 127913,
+      "sha256": "7def55955f7d65ea3c62a2f4cfac318e4ac1184d912851e0aad93b94e117dede"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-kob-74-pb5.json": {
+      "bytes": 1225,
+      "sha256": "5e8889122e5836af591b9743e7294daa217e347d7aecbb6977545a9ebbc1bc1c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-kob-75-pb1.html": {
+      "bytes": 128431,
+      "sha256": "0ed83b4175e17f66667899d3648713e360c5f9de28570961033149a3db0298e6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-kob-75-pb1.json": {
+      "bytes": 916,
+      "sha256": "be07233054377bb88cedebc6aa50062ed005523ef614c7fb64d4f5cf92ebe366"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-kob-75-pb2.html": {
+      "bytes": 129734,
+      "sha256": "d5907f4cfde2d8f1bae8c210a5eb22802c8f9fd308f9f3f890a65d3896510d75"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-kob-75-pb2.json": {
+      "bytes": 1046,
+      "sha256": "ff565cf5442d00ba28c745b45c1f7d43f4736d18552657aa0affb0fc6e2b60bc"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-kob-76-pb1.html": {
+      "bytes": 130337,
+      "sha256": "c573ed00891854b74183328b49469b235bd0f58dc9e06bb0818985c04744fc91"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-kob-76-pb1.json": {
+      "bytes": 1367,
+      "sha256": "a3397f0686f409759722e23f1319c2fe996ff25782f0fad7be40a01c788e55a9"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-kob-76-pb5.html": {
+      "bytes": 129875,
+      "sha256": "ce47465ddfdf9b7217686aeb5a0d9ec7b83c01ba7453b5a02a952f650ebeb3aa"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-kob-76-pb5.json": {
+      "bytes": 1705,
+      "sha256": "cb72c28fb7c5173bd115095f1666843aa51c6f4be6f2e5a90ffd32c9b783dea2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-kob-81-pb4.html": {
+      "bytes": 130435,
+      "sha256": "f21ef1a577ef7b2cfff87e038b38a7eb4ab70045b2bc5829b9a8d45154a7a0ed"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-kob-81-pb4.json": {
+      "bytes": 1968,
+      "sha256": "c2301a8dc0bf12e87f794846e7e6ec4af13ca877a1796294e94e498f1a517d76"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-macerkopf-74-pb3.html": {
+      "bytes": 70549,
+      "sha256": "f0a99f778d35349c7dbcbef672cfeea729bb5e780f6c4f968f5952bab361da42"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-macerkopf-74-pb3.json": {
+      "bytes": 1092,
+      "sha256": "0e253a91b0ef59a9f08aa6317d5e48e651420b8d170c155c898c57eb826361de"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-macerkopf-83-pb2.html": {
+      "bytes": 71136,
+      "sha256": "53a841d984f783a694fbee276317097dbeb7270671bc5e27cca5af707abeea21"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-macerkopf-83-pb2.json": {
+      "bytes": 2347,
+      "sha256": "cb1c9d35ad0db72760b4007d3c06a3a798bfc285fcfb3bd32168b92149efedbd"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-nishiki-76-pb5.html": {
+      "bytes": 89589,
+      "sha256": "ce29cda4e0ca1142bedf4d822140f86d239e6b0b8f107bf8e5dc59ca16eb8f88"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-nishiki-76-pb5.json": {
+      "bytes": 1037,
+      "sha256": "ae77dc472a07a5f245a2f7e97e1d2c3404fd68d43ec7e948f1f44ca5f615ae36"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mapped-purudo-75-pb3.html": {
+      "bytes": 44059,
+      "sha256": "980003e2caa58364b97e886d95f6eac1b4cfe8620645c68bfb560501f5b49155"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mapped-purudo-75-pb3.json": {
+      "bytes": 1169,
+      "sha256": "c52f917f4cadcd2fcccc2b775eb6ae0d3ea3cef98387da90d477aba3c2ceab02"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-111-pb1.html": {
+      "bytes": 124542,
+      "sha256": "2356a4dffe8235e983def92a28e3a30c6fb8c7a8d10285371100b79aa9d0850d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-111-pb1.json": {
+      "bytes": 1816,
+      "sha256": "aa58e8d4aba4fa31169771d5908d52ba13bd32b64e9b4a73d7735c8fec9ea477"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-111-pb2.html": {
+      "bytes": 124464,
+      "sha256": "60b016cc217c6b36727818d1f17309094a4a7fe7e02fda09fbcc0252c5beb7ad"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-111-pb2.json": {
+      "bytes": 1906,
+      "sha256": "cd5a806890ea9709881c1d18866ac5dc66e4be3b9e333515042de0c200ffe758"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-111-pb3.html": {
+      "bytes": 121779,
+      "sha256": "3eadefaa822f813cd6eb18c6c4a134c36b45c64c8a62a7404034fd0dbeb6ffec"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-111-pb3.json": {
+      "bytes": 1917,
+      "sha256": "0a310fcb47e620235e3c88cea23e01d77851b0077a6e38657ca5e4fa80a488d9"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-111-pb4.html": {
+      "bytes": 113352,
+      "sha256": "dd2e0a86293b62cb0d131b8c118a3bba5c7acd9d15041afa0af9af08e6505a7f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-111-pb4.json": {
+      "bytes": 1943,
+      "sha256": "e1d0d1add61148914e2fd917e68413f40829297f60db593765d0706803e9b238"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-112-pb1.html": {
+      "bytes": 126159,
+      "sha256": "c3f06eeca55ef82441d8fce1a58b5b6d4b51cda0127d13918b59f6af83fa308d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-112-pb1.json": {
+      "bytes": 1732,
+      "sha256": "506bc193a8d67d035e51d8946b269158cd0291ffa375b72ec63b0b06afbd8f29"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-112-pb2.html": {
+      "bytes": 125952,
+      "sha256": "a150b77970e86f21f1d50a92f80f58c8910f3ad51f8dfd67bcdfa3dd186526d8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-112-pb2.json": {
+      "bytes": 1794,
+      "sha256": "c707c3e9ae0c95b8858ca10813305df696821e37d89ca3d5e8e1aed590b6c076"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-112-pb3.html": {
+      "bytes": 121840,
+      "sha256": "b15ed7a435259a98b0c5b8297f2c4f8ee7784b37ee2c704025902ffb38b31c8f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-112-pb3.json": {
+      "bytes": 1736,
+      "sha256": "ec0365d728ee0c910d0cf4b965c9f47af50048b5546ea0adbc2493c9ae72d5ff"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-112-pb4.html": {
+      "bytes": 117146,
+      "sha256": "0d617bca7d4fc692537d2b0e3faaa74a0336177a4ad0db1673f1f9256ffb058e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-112-pb4.json": {
+      "bytes": 1743,
+      "sha256": "fccdc16cfeb22e61a3be46969dbf1bb586ab0719e2966e1020491890ace92ba1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-112-pb5.html": {
+      "bytes": 125913,
+      "sha256": "a6069a26a6f7950a08b2f27544b2218f803239deb8e7cda1b76e8dfca901947f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-112-pb5.json": {
+      "bytes": 1743,
+      "sha256": "19c68dbbd599e4fa608d05b64f04e41259311c676686a93d072a7bba0e0ec7e4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1125-pb1.html": {
+      "bytes": 112815,
+      "sha256": "cea2e2987053400673d5b2e9c9ccd0229975116cf06b1623d12733ddb851ae55"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1125-pb1.json": {
+      "bytes": 1741,
+      "sha256": "0469b737a3c92b54126b1bc7d1d60e582b32e05302eabe684c4641cd28b2d79c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1125-pb2.html": {
+      "bytes": 117276,
+      "sha256": "2fd98712c3e1406cf6623c6802379c7ad3feb1bebbf321959ae05d601165f0c8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1125-pb2.json": {
+      "bytes": 1784,
+      "sha256": "bb2370ab08fc6c16e3d1dd342f13606ecbaa0af52f03916824631570dc0e7491"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1125-pb3.html": {
+      "bytes": 119761,
+      "sha256": "18bf3e825ce3bc3672840e980a3d8ea22754ac27c05e11357d1ad2da8af11151"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1125-pb3.json": {
+      "bytes": 1586,
+      "sha256": "2499fa185a6de72d7a99cd4cd24a941181caba60d65cf6eb249d3fa6cbe15c24"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1125-pb4.html": {
+      "bytes": 121753,
+      "sha256": "8ffccf0f92943500d1bd781c6563ee7602ef0a1265ad9594ecb3895de39d95d5"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1125-pb4.json": {
+      "bytes": 1650,
+      "sha256": "d5331be0763d5aaa35f17c92f24efd78296cfd52f76dc072ed80ca0bf856b072"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1125-pb6.html": {
+      "bytes": 127614,
+      "sha256": "011d8426271c8f4a32691f2797b2b6e710f19ce047303e26a73d4bda19f30768"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1125-pb6.json": {
+      "bytes": 1538,
+      "sha256": "749077e0edc59c0efea70d6b97b7a7af9b860a052a5697169e8b3da8c0a8cc4f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-113-pb1.html": {
+      "bytes": 125537,
+      "sha256": "5bd5ec179f18074076558b011d31e755e599560d6aa22b107bdef8910eed1a24"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-113-pb1.json": {
+      "bytes": 1677,
+      "sha256": "e25d415fcb9ab1126b7eef404a887e83ca1fe0273caef2794853f8ca9075c8fb"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-113-pb2.html": {
+      "bytes": 112807,
+      "sha256": "4a33723b9d80d58c4210756c2e2a10c2c393d3e41b7efc4c3fa59ababb8c9de9"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-113-pb2.json": {
+      "bytes": 1740,
+      "sha256": "f538dc4ee720da23daf7eb579eb58cb80acae72ec302e2b824ca8658aa7af7ed"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-113-pb3.html": {
+      "bytes": 117372,
+      "sha256": "ab044ee9e06736ddb96d342292c833b5d523e3f2984a97b8957da66e2dbb92df"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-113-pb3.json": {
+      "bytes": 2034,
+      "sha256": "3e240649455e9e29f0164f43cd64269df997c08067964a3f503ebcf785986aeb"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-113-pb4.html": {
+      "bytes": 120321,
+      "sha256": "324b425229e46f46816e7764a48f1e9b94e9d0f05a23160574836218e9e86b97"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-113-pb4.json": {
+      "bytes": 2052,
+      "sha256": "8297c51f25dcfaa83a7e3453dcd8abf0171a6a4cff17a185bd365986614a7d45"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-113-pb5.html": {
+      "bytes": 113168,
+      "sha256": "579f275372eff7b74dab654f0b8d5f535ba8b066eac39302ce6635dd122fea61"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-113-pb5.json": {
+      "bytes": 2102,
+      "sha256": "da6c6b7c7e75b374f920bb538eb1b827322749642958a30a85935104838eb8f6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-113-pb6.html": {
+      "bytes": 122729,
+      "sha256": "5952043ccf5a93b0ac974bf868bb6a42f17674a85b489144b703dfff42fd9e18"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-113-pb6.json": {
+      "bytes": 2106,
+      "sha256": "8816604c2a3c946e3ddc1a7a5924440ce1f48d471742e76e41e46042658d097d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-114-pb1.html": {
+      "bytes": 116950,
+      "sha256": "1e2ac47c2c14d10a2d0a1a7fa6d5ce05cebf2e8ff9cec9750d381dbf3bc3380a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-114-pb1.json": {
+      "bytes": 1863,
+      "sha256": "48439cc6ef3c4e20c7d199b39791d7024494732fc9065843e16ba7696f5141c0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-114-pb2.html": {
+      "bytes": 123038,
+      "sha256": "7398368b95a34bbe431bda176a33af90403e7806175692ac6be41c4e5c5704dc"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-114-pb2.json": {
+      "bytes": 1860,
+      "sha256": "fd236e6c1bb1f8a9d0cc60d3089fc6dc2b7cc19fb108654e41f44ff9f4677ea2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-114-pb3.html": {
+      "bytes": 113038,
+      "sha256": "bf5c81531badd711be1c5b75d858532d16b8ac2574db0c951784296f2f465356"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-114-pb3.json": {
+      "bytes": 2083,
+      "sha256": "c22fa2bb8be2056dffa31db237ebea3eb2aff132772c276c23423b9843913c36"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-114-pb4.html": {
+      "bytes": 113292,
+      "sha256": "6639826d9c11f4616e7a701bd64442286edce01264f8c49e9ea46c8238310ce0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-114-pb4.json": {
+      "bytes": 2164,
+      "sha256": "7bf79922fe7a33b516afd7c1f0a82d2088593734932a936a93699abeecfa7941"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-114-pb5.html": {
+      "bytes": 115376,
+      "sha256": "3a99bffacb0dc9f6463a00d12b318a5685c5f789d075587d2dc6f88bf1e87836"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-114-pb5.json": {
+      "bytes": 2193,
+      "sha256": "016519e07ce8735a7a3b3f6c10e6e7d90024399e43386bfeb8945abb8f497d5b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-121-pb1.html": {
+      "bytes": 120081,
+      "sha256": "8921f605c27c53d4f4787f6bc684d37984f39d25599d10de00b82d111f962baf"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-121-pb1.json": {
+      "bytes": 1722,
+      "sha256": "5adf203023b684a1f40291d7f6a41eb914876cfc7f6889be13d832467ba6362c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-121-pb2.html": {
+      "bytes": 125125,
+      "sha256": "36a5a1f71a53107752dc3214fb636eafda4f828d792c4c8d58dd8d6aad659c6a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-121-pb2.json": {
+      "bytes": 1820,
+      "sha256": "3bfddd08fb5dcab8ce0973b4613a6fd5f946c0615cfa030cdc01602c8b8fa1a0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-121-pb3.html": {
+      "bytes": 117545,
+      "sha256": "155e8488ea18062c407c037ea3f86212503ae30b659e80e8d59c9b586049ca20"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-121-pb3.json": {
+      "bytes": 1850,
+      "sha256": "c8eaebc16acb0f5b59871d34dd6ed6d9ba7053c5e81d45eff8ad8d901b601464"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-121-pb4.html": {
+      "bytes": 112965,
+      "sha256": "2536dbdbc6ad2306960b6b5c87790819ec21b39e8cefdd6ea8d131ab44ccd78a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-121-pb4.json": {
+      "bytes": 1869,
+      "sha256": "5185091c6a1cf8b83d99d58d07f6e76c82e4c5ed48b80ded260ceee8e0ace8c6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-121-pb5.html": {
+      "bytes": 115206,
+      "sha256": "0c054ca59388c07be1de7bde16bb059f4c91ce030f0adf22ea30b758a867329c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-121-pb5.json": {
+      "bytes": 1866,
+      "sha256": "a7667c0cc49209873dfed0d7962958ad04232e8424fbcf741abe800b8e6ef9dd"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1211-pb1.html": {
+      "bytes": 118095,
+      "sha256": "e010e24935499a7fe2a9d497187dcfec83efb0a05c71dbcf5e1b2b681e35b4f2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1211-pb1.json": {
+      "bytes": 1729,
+      "sha256": "1f7f30aaa463ed846635c5f908520af33a01a9b40c97054ebbd2657592761d06"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1211-pb2.html": {
+      "bytes": 112913,
+      "sha256": "3b68ecc537bf4b742acbc04e55726eaea40b01c1e2bbc3430138c0d53be57eed"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1211-pb2.json": {
+      "bytes": 1837,
+      "sha256": "7182a83d9f324109dbbee76eb034c3a365242ec0214d2d5fcb6458209e6e378c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1211-pb3.html": {
+      "bytes": 120223,
+      "sha256": "186b2eb1d2613a803d4e45ed09ae76ce04e84f5b5d841fc6cb6f53ead430fbf0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1211-pb3.json": {
+      "bytes": 1844,
+      "sha256": "35a0b6cc8a9d4105f1c12abf183d7a7dda3469361998d242a5bf4582e8efb191"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1211-pb4.html": {
+      "bytes": 117993,
+      "sha256": "d038f3bb762ae6428c342c847caa03dc82bca5c582c37e1763ce7739fd8bb0b0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1211-pb4.json": {
+      "bytes": 2049,
+      "sha256": "39d4e2aac497a159cd6f7c742015b369ce47c3fb8b108a7614b375a3138017e8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1212-pb1.html": {
+      "bytes": 122199,
+      "sha256": "8fb5cdb74997bb49cb96799868d3c14faa0f9df2e80b8642ebfd09c7ab30ed2a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1212-pb1.json": {
+      "bytes": 1580,
+      "sha256": "ef238ee193278b84a6d8d3018459e572e20d22dcb8c8173e934a6d7023ea8d11"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1212-pb2.html": {
+      "bytes": 119946,
+      "sha256": "f9cea920be2a78762c329420d4aa983a8a41f9fe3555569bbc34278ef466d202"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1212-pb2.json": {
+      "bytes": 1961,
+      "sha256": "a535c78422836529569a24c17fb8c1047882b0e648d2dd89728e5e9684c55fb8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1212-pb3.html": {
+      "bytes": 115172,
+      "sha256": "d813d4d2bc342be443625c80f8083e4974844ded2002ceb8a55f867dd269540b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1212-pb3.json": {
+      "bytes": 1945,
+      "sha256": "ab17aaded33d1459ec0323ac266b6a9bb4ac26e60f44f319352f44fecbb0a242"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-122-pb1.html": {
+      "bytes": 129146,
+      "sha256": "663822479caef81756c2d1457f8367daca78fd83fb4aa0a169fa87e8f848553c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-122-pb1.json": {
+      "bytes": 1740,
+      "sha256": "c2f8493fdaa56ec87acaeeaa6a14c8f7b27c901e4e197cdd95f0dd86d30a9c2e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-122-pb2.html": {
+      "bytes": 123736,
+      "sha256": "774602d0b74e3975527f3dc08bb7c17107e9444afc7e2f569e5ab5cd5ad4f316"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-122-pb2.json": {
+      "bytes": 1837,
+      "sha256": "6309f190fdd14433f2cc485b997a42e1bce0e8ddc0313503b109b936471b1dc1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-122-pb3.html": {
+      "bytes": 114866,
+      "sha256": "97e51f2bab4df1fb7bc3701f91c91ee60d0e1c32a1fd422b02c29276adfc75be"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-122-pb3.json": {
+      "bytes": 1835,
+      "sha256": "0bad89ad67c8edf62d9ce217c788b6494a8e4ecc59be08710151d2da0dd03ab8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-122-pb4.html": {
+      "bytes": 116099,
+      "sha256": "e879ec2f28d7dd36a91584cb396891c24b0d9c5de0c00abf12778f18bd5d8e1b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-122-pb4.json": {
+      "bytes": 2093,
+      "sha256": "38f8cd5ae92c6d318ffc050656002953423c5ce9595577b563cbc62c097981d4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-122-pb5.html": {
+      "bytes": 117747,
+      "sha256": "10825097c7a169b92cd5a0c28b8e76c8ddc1cdcf1c55dfb7b06c5138cdb2863c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-122-pb5.json": {
+      "bytes": 1985,
+      "sha256": "79b2e0352c9cac306ec7449df9a5cca36717b40a7432f09dd793f0bfa3549a35"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-122-pb6.html": {
+      "bytes": 113559,
+      "sha256": "b22f5c39cad04efc0c4ef562cfbe0c530eac2accc3a50be0629d2a6582ce4b2e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-122-pb6.json": {
+      "bytes": 1984,
+      "sha256": "72a5e52e3477bfa07b3b635f2714a76fc44cc052e0113937e251b336d6238b09"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-123-pb1.html": {
+      "bytes": 115444,
+      "sha256": "bb1c593ad289fe6db2cfeedad6ad6418f9e58b6190f480300d049a71a96cf541"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-123-pb1.json": {
+      "bytes": 1399,
+      "sha256": "0fe6fa113e1859d4abe3c68e862f2cee657cac32976f9649f352f8a5d890be6e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-123-pb2.html": {
+      "bytes": 117834,
+      "sha256": "5423df57e56a416000bcc26a0d46470b039383642e8b98c4cf39a3c379454d18"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-123-pb2.json": {
+      "bytes": 1604,
+      "sha256": "712550293bf43cf71258a5d9cbb8c0af7de93f1a308c680d1b85c764b9204329"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-123-pb3.html": {
+      "bytes": 115531,
+      "sha256": "b2c61de2340f57f833c0875c3562121c0e004671f4cafa4222c3460a9b72ddbb"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-123-pb3.json": {
+      "bytes": 1580,
+      "sha256": "c17f868e41fdb0c3783b2c647024f18a04e69112e454e5bd1abcaeae4b56f175"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-123-pb4.html": {
+      "bytes": 121314,
+      "sha256": "44637fb67172b8830302a0d38f40c4cdbb86505a5ed8d64af987129f4d313259"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-123-pb4.json": {
+      "bytes": 1613,
+      "sha256": "ee9a444aa06e971977fdb6a162263893284af607a867e320edbd3ade8d254a24"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-123-pb5.html": {
+      "bytes": 117317,
+      "sha256": "a51571cb396df2097a8240e3208351bab6d45ccca0c0a3a70a1a0100a6a2be1f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-123-pb5.json": {
+      "bytes": 1532,
+      "sha256": "53a9965f63b512aee2d247d802cc79ee53b8503bb53449cfb81612d61f87125a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-132-pb1.html": {
+      "bytes": 124804,
+      "sha256": "040b60c68a3fdca947a48c44e31b7147fd5f6325a762829c87eca1a0334b3265"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-132-pb1.json": {
+      "bytes": 1995,
+      "sha256": "8a9642d4b50536b7365752ef161e4c3563961999b28f1b4498bbe9c3e6bd6e1c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-132-pb2.html": {
+      "bytes": 126774,
+      "sha256": "95a176f454358a9c2d0166c52519ece43bb6a6908248f1c6358b12a6538682d5"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-132-pb2.json": {
+      "bytes": 2120,
+      "sha256": "8b477e49adbb47d97c036dc0f50700bcf690b2189a7aff9ffbcae2c00579d8fa"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-132-pb4.html": {
+      "bytes": 125237,
+      "sha256": "ad6ac3ee7315a954dd1eb0045ce3210c3545358f3561c398c02dc3d4e72d1a10"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-132-pb4.json": {
+      "bytes": 2145,
+      "sha256": "4ec359fb5586438d774f26e6e1988dd9be868dc7675cde1baf4c3110470b1113"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-133-pb1.html": {
+      "bytes": 125218,
+      "sha256": "ee676e55b4681fde73a57622cc3dfaa0878df87160915555d566c500f8773ef9"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-133-pb1.json": {
+      "bytes": 1765,
+      "sha256": "769706c293f60d190709ac2933cf64694485d9531daf3b0e5f5df20864419b4a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-133-pb2.html": {
+      "bytes": 120431,
+      "sha256": "ca90822fb56bad222d0c12ad91aefb7111e5fc36cc13923ba44f14bac19b5f00"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-133-pb2.json": {
+      "bytes": 1834,
+      "sha256": "3dda5dc5bf5a011a26b80fa5aa5c4bc7dd4f27fe5a9f00ee06303eaf2c46ff1d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-133-pb4.html": {
+      "bytes": 119941,
+      "sha256": "5417e8b3689dbb349bab5f274191182ddc703ed5924a1d1a3c4e6710f5210971"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-133-pb4.json": {
+      "bytes": 1818,
+      "sha256": "1d583095eafb5d810c3fe8aee181608949b9d598295ba8d87f60a86df13d00e5"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1331-pb1.html": {
+      "bytes": 115493,
+      "sha256": "2492b905f3cbd8e3df414c6f4988bb40740fc26529c860e185b85559bf734cf1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1331-pb1.json": {
+      "bytes": 1827,
+      "sha256": "bde10d7a9fe6e90d2775ffd7ab89c4773db218b1c453c93d2e99b9d428359119"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1331-pb2.html": {
+      "bytes": 115223,
+      "sha256": "bb9ae6c2b48cb8091cb61cfdd36aad0567a9543e36e3da51d0e89c3794793a53"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1331-pb2.json": {
+      "bytes": 1788,
+      "sha256": "df15c7c332e801667a3cada73762c48f665f06fc7fef815098f98fd56dee9c56"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1331-pb3.html": {
+      "bytes": 113360,
+      "sha256": "60ec0ff534ef69aabb481053a194b1a1b28848bfe6b2e3d1be930d355fb72fb4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1331-pb3.json": {
+      "bytes": 1791,
+      "sha256": "94e29f4512b8cc4f4a24bd6f8dd182de7a1bf959162f2341e1d7ae656ee05484"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-134-pb3.html": {
+      "bytes": 115514,
+      "sha256": "6c6c32fb30892df9eee8c0fd9c6d7fb92fdc221773f92613ae568d5027ef49e1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-134-pb3.json": {
+      "bytes": 1703,
+      "sha256": "e3f73a672539a77621e5ca42dfb0baa983f7a00a733fb7df51b2bcb512747843"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-134-pb4.html": {
+      "bytes": 115000,
+      "sha256": "5f2c5dbafcc110944420e603b3cb48932876c111c17c0f3ede36a01d1e2c7e4c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-134-pb4.json": {
+      "bytes": 1698,
+      "sha256": "0456b2888f63f2bf6877565feb028c3cab2870b8574b67cf5bb53d7a38eca064"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-134-pb5.html": {
+      "bytes": 113111,
+      "sha256": "c8f18b1a216cf27514aec6b7c6902f797634d392eb474b79c5f1df76d340755a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-134-pb5.json": {
+      "bytes": 1699,
+      "sha256": "d6d77b34def307346b3e809950ca6e6eb551652edc4b5df50d13df60ca8442bf"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-134-pb6.html": {
+      "bytes": 118584,
+      "sha256": "10be02d09901b4e30b83f5896caa5569926124bd61c6ae9eb02f8bcd32adc23a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-134-pb6.json": {
+      "bytes": 1684,
+      "sha256": "62fba45654b1e53ccfdef7bc0e1ddc1bbc99a68c7f2f20718c93a58a4f4115a6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-1345-pb4.html": {
+      "bytes": 115476,
+      "sha256": "a5e5226893422215a8c9eee0c270981f6ae9ddd3b27643e1e706411be36a33b4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-1345-pb4.json": {
+      "bytes": 1756,
+      "sha256": "ba0ffbaf66ff0055ba287d0f6693acdd17b83240f8d56ce41c14118322b704df"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-143-pb3.html": {
+      "bytes": 123812,
+      "sha256": "245ec424c0f42c014b81e5002cfe2c122b71ba83e75385c734c0a767ec07c30b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-143-pb3.json": {
+      "bytes": 2050,
+      "sha256": "094367c39b2a36f512ad0589eb96aca334ed65f2b55134b7efd3bc794dc40fa0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-144-pb2.html": {
+      "bytes": 127500,
+      "sha256": "70186e72a94cd3b8e015eac4937bef33a44efc2ce17d07fc5fcc0552e7b22388"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-144-pb2.json": {
+      "bytes": 2025,
+      "sha256": "88cc55ba8c72ec8684f556daf02bbf6299c21932ff1fd018c4747df465c0c1b5"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-145-pb7.html": {
+      "bytes": 119599,
+      "sha256": "718cabdb4a84affc92b3c0f6a0b692db278432b752429e819b3c71f207118a74"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-145-pb7.json": {
+      "bytes": 2913,
+      "sha256": "d0d0e454090b7eca966a630e17c59268f93fb98117c92401bbafae96da3566f8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-181-pb3.html": {
+      "bytes": 125363,
+      "sha256": "0258159cd5f81591b24d26294eb9c8b385be6f88df596b9d1dbcc52d27dcc414"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-181-pb3.json": {
+      "bytes": 1812,
+      "sha256": "becce7e37b60107b40d31f78d622558e4b8bc33e83c735301327ae4058c53141"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-264-pb1.html": {
+      "bytes": 124347,
+      "sha256": "32640631c4e394d63dc4dd7306225d2a9bde1259abcab3d7ab0f31b9b499561a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-264-pb1.json": {
+      "bytes": 995,
+      "sha256": "cd20b2fd28134df21ba4d9899b9476fdd90ed32edde569c2bb85d87c03d3324e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-264-pb2.html": {
+      "bytes": 126077,
+      "sha256": "4a9c2c1a3200f41e3dbac9e55b072bb7752e0b6214491ba69010c749c134927a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-264-pb2.json": {
+      "bytes": 1334,
+      "sha256": "006adb0f8364d9651cc08fbeb427bf464ef0a910472629e1f23e12ad93f38aef"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-265-pb1.html": {
+      "bytes": 126832,
+      "sha256": "bc487c49bdc6a8aa77895a08e8b82355c8b596a5efc459235583b52efe937b90"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-265-pb1.json": {
+      "bytes": 1346,
+      "sha256": "1324fbd9eb007f0fd5cfcb6aee26fda19b612bce5f75e4a1bba15a39b5efab7a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-265-pb2.html": {
+      "bytes": 122370,
+      "sha256": "bd5fe5b319c58c4a4a62d01501398ff7f256704718a06146992b10e2c8f5c845"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-265-pb2.json": {
+      "bytes": 1255,
+      "sha256": "4217daab242d1949af8e0e2cdb19b80d528e38def1b8ac46ea3f494f06cdfca0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-266-pb1.html": {
+      "bytes": 125109,
+      "sha256": "05c9edca3e0a53e93557499641327ee36ce7f53fd43ac5980987126b7fb3fd50"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-266-pb1.json": {
+      "bytes": 1226,
+      "sha256": "1e30a408987b1463f2621b83661af58567eab1af5e0bdad9d08eb8aa87ceebe8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-266-pb2.html": {
+      "bytes": 113553,
+      "sha256": "51e68439d6af4aebbd7ddcd05a9cac61be94edd76d06c468be7d9d480489fe01"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-266-pb2.json": {
+      "bytes": 1266,
+      "sha256": "effb883e13042b277334a97cd06552ca4037f8ca8db644fcbd8032918bcfb98f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-266-pb3.html": {
+      "bytes": 122265,
+      "sha256": "52dabcdf680738710544d948f309228df8af9c7280bed3ab025add18aeff69ed"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-266-pb3.json": {
+      "bytes": 1212,
+      "sha256": "09cc609d7ec5d39dc0bd8a4c42d263e3617545e0a578be4469a2779bd16ed149"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/mr-266-pb4.html": {
+      "bytes": 119877,
+      "sha256": "d5ca9d6c6385f663f2361812319785240a3610a026ba2a6d55aea8690a3f0ce2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/mr-266-pb4.json": {
+      "bytes": 1251,
+      "sha256": "b03314fc995371a167079a01dc7cf597722830a94af1f22f43f47ccfcaacfd7d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/osxdaily-144-pb2.html": {
+      "bytes": 228419,
+      "sha256": "d970e2b8400a4ff2b983b575816c52a5211d7351e53351d7d2a6c27f096976c1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/osxdaily-144-pb2.json": {
+      "bytes": 1924,
+      "sha256": "829712c65189d99948c96e7e4e2cecb5ae18ef5d9bee99f1b7d262f09c60bf50"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/purudo-145-pb6.html": {
+      "bytes": 44477,
+      "sha256": "af7135090334788b7765f98a5bb3e54848d6ddaa96cf2f20a9b64a57a1233907"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/purudo-145-pb6.json": {
+      "bytes": 1532,
+      "sha256": "ebfe1859c9acce768424f0797b88b6371ea3651725aa2af28cd773f20c8dd352"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/tuttotech-265-pb3.html": {
+      "bytes": 284356,
+      "sha256": "dcb709ea24e7d86390159246622e9e0019066e922b663dc6286f29bda7f98f7c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/tuttotech-265-pb3.json": {
+      "bytes": 2654,
+      "sha256": "5473a75a95fded990aa418d288a0b23c6dd3927be8d76d9faee4830b06a4a896"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/raw/wccftech-147-pb1.html": {
+      "bytes": 140381,
+      "sha256": "d0bb3e2e5b4bf1d235bae3dc4849b8d1e528c8962bcd955fb321322e05c8aaa3"
+    },
+    "tmp/research-evidence/beta-chronology-gap/tvos-point-11-26/selected/wccftech-147-pb1.json": {
+      "bytes": 2147,
+      "sha256": "6e05bcfd0771a9cc3bd2faf67b43eb9d4c12f9d1ba11ffc9edbb60e7e06d9076"
+    }
+  },
+  "exclusions": {
+    "self": "research-handoffs/beta-chronology-gap/tvos-point-11-26/packet-locks.json",
+    "independentReview": "research-handoffs/beta-chronology-gap/tvos-point-11-26/independent-review.json",
+    "sharedMutableAggregates": "Shared coverage/register/aggregate files are intentionally excluded. The exact 32 assignment rows are frozen in scoped-coverage-snapshot.json.",
+    "reason": "The lock manifest cannot hash itself. Independent review is pending and must be authored separately."
+  },
+  "safety": {
+    "independentChronologyReviewComplete": false,
+    "chronologyApprovalGranted": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationAuthorized": false,
+    "deploymentPerformed": false
+  }
+}

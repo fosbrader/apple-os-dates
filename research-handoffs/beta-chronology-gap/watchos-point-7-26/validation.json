@@ -1,0 +1,81 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-watchos-point-7-26",
+  "validatedAt": "2026-07-31T07:53:46.696Z",
+  "status": "passed",
+  "errors": [],
+  "warnings": [
+    "Independent chronology review remains pending; this validation grants no Sanity mutation or publication authority.",
+    "Two legacy ONTOP sources use explicitly labeled bounded search-index extracts after direct origin HTTP 522 failures; an independent reviewer must inspect that qualification."
+  ],
+  "checks": {
+    "sharedCandidateRegisterSchemaValid": true,
+    "counts": {
+      "targetParentCount": 16,
+      "researchedIdentityCount": 55,
+      "supportableCandidateCount": 46,
+      "blockedIdentityCount": 9,
+      "negativeFindingCount": 8,
+      "datedNotProposedCount": 7,
+      "conflictCount": 8,
+      "sourceCount": 100
+    },
+    "candidateCountByVersion": {
+      "26.4": 2,
+      "26.5": 3,
+      "26.6": 3,
+      "7.1": 2,
+      "7.2": 1,
+      "7.3": 1,
+      "7.4": 6,
+      "7.5": 3,
+      "7.6": 4,
+      "8.1": 2,
+      "8.3": 3,
+      "8.4": 2,
+      "8.5": 3,
+      "8.6": 2,
+      "8.7": 5,
+      "9.1": 4
+    },
+    "sourceCapture": {
+      "attempted": 100,
+      "captured": 100,
+      "reused": 3,
+      "directHtml": 95,
+      "searchIndexExtracts": 2,
+      "failed": 0
+    },
+    "production": {
+      "capturedAt": "2026-07-31T07:53:46.696Z",
+      "perspective": "published",
+      "useCdn": false,
+      "exactIdentityCount": 55,
+      "exactRouteMatches": 0,
+      "exactFullMatches": 0,
+      "scopedPublicBetaEvents": 0,
+      "allWatchOSPublicBetaEvents": 0
+    },
+    "freezeContract": {
+      "expectedMaterialFileCount": 122,
+      "rawSourceFileCount": 100,
+      "rawEvidenceLockCount": 100,
+      "sharedCoverageMatrixExcluded": true,
+      "pendingIndependentReviewExcluded": true,
+      "packetLockSelfExcluded": true
+    },
+    "safety": {
+      "sanityMutationPerformed": false,
+      "stableEventIdsCreated": 0,
+      "pageBuildsPerformed": 0,
+      "publicationPerformed": false,
+      "deploymentPerformed": false,
+      "sharedCoverageMatrixMutated": false,
+      "independentReviewComplete": false
+    }
+  },
+  "safety": {
+    "validationAuthorizesMutation": false,
+    "validationAuthorizesPublication": false
+  }
+}

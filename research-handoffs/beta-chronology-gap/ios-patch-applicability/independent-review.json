@@ -1,0 +1,642 @@
+{
+  "formatVersion": 1,
+  "batchId": "ios-patch-applicability-2026-07-31",
+  "reviewedAt": "2026-07-31T08:17:07Z",
+  "reviewer": "codex-independent-review-ios-patch-applicability",
+  "independentOfResearcher": true,
+  "status": "passedWithThreeCandidatesOneNotApplicableOneConflictedAndTwentyFourReversible",
+  "reviewedArtifactHashes": {
+    "assignment": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/assignment.json",
+      "bytes": 3091,
+      "sha256": "cf20af1cf947693f2eedc9dd990597263e4ba60d5026747f3821d1bc2062a749"
+    },
+    "scopedCoverageSnapshot": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/scoped-coverage-snapshot.json",
+      "bytes": 12772,
+      "sha256": "0d7cc03431dc55ee185346eb42e66c2ba62ca5ba86642b440f570cc32c72f667"
+    },
+    "sourceQueryLog": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/source-query-log.json",
+      "bytes": 28557,
+      "sha256": "7dcd9bb87d9b641ae604ead52b5e518fb349f8cc34c365e65ed9f374cb0d0248"
+    },
+    "sources": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+      "bytes": 36216,
+      "sha256": "e174ac7e1ad572dcac627b9e9fefbed6635be6e1ec65c71424b2de7003deecdb"
+    },
+    "rawEvidenceLocks": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/raw-evidence-locks.json",
+      "bytes": 11727,
+      "sha256": "cba42cf0d01fa210dff6780716beb02457e927f3fef26c15d460913e7637abd4"
+    },
+    "applicabilityAudit": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/applicability-audit.json",
+      "bytes": 53284,
+      "sha256": "ef50d0e04387d782a55946e96b569c89aa6e3dfbf40bd62ff07d0182fbbafa57"
+    },
+    "conflicts": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/conflicts.json",
+      "bytes": 1641,
+      "sha256": "e5eb307ee001af116da317b0370fe9339a85d9481e3d63a037869302697c7133"
+    },
+    "candidates": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/candidates.json",
+      "bytes": 10239,
+      "sha256": "3062419ce68e3c89d16ce153657ce14c223504dca74e4ec084c38e4d0de44b41"
+    },
+    "packetLocks": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/packet-locks.json",
+      "bytes": 14768,
+      "sha256": "23c6bac767883500103ecdb2108fb10ec49574f39119587da8a56835712aaa98"
+    },
+    "queryScript": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review-query.ts",
+      "bytes": 5923,
+      "sha256": "9409e4202af1fa2485f26a165cbddbc487ea82b05c1bfc7aeaaab31e9e8781fb"
+    },
+    "productionSnapshot": {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review-production-snapshot.json",
+      "bytes": 28581,
+      "sha256": "67e8e233665ce97e4ac4ec4b0da5448e412c008dc0e0632d3d0f3837641f6959"
+    }
+  },
+  "summary": {
+    "parentCount": 27,
+    "candidateCount": 3,
+    "chronologyApprovedCandidateCount": 3,
+    "blockedCandidateCount": 0,
+    "positiveCandidateParentCount": 1,
+    "evidenceBackedNotApplicableCount": 1,
+    "notEstablishedConflictCount": 1,
+    "auditedNoPositiveButReversibleCount": 24,
+    "identityCorrectionCount": 0,
+    "freshExactProductionMatchCount": 0,
+    "finding": "All three iOS 13.3.1 Public Beta identities pass the exact two-lineage gate. iOS 14.8 is independently supported as evidenceBackedNotApplicable. iOS 8.4.1 remains notEstablished because public-program and approved-tester wording conflicts with developer-only reporting. The other twenty-four parents are accepted only as auditedNoPositiveButReversible; none is a historical no-beta conclusion."
+  },
+  "candidateDisposition": {
+    "chronologyApprovedCandidateIds": [
+      "candidate:apple:ios:13.3.1:public-beta-1",
+      "candidate:apple:ios:13.3.1:public-beta-2",
+      "candidate:apple:ios:13.3.1:public-beta-3"
+    ],
+    "blockedCandidateIds": []
+  },
+  "applicabilityDisposition": {
+    "positiveCandidateVersionIds": ["version-ios-13-3-1"],
+    "evidenceBackedNotApplicableVersionIds": ["version-ios-14-8"],
+    "notEstablishedConflictVersionIds": ["version-ios-8-4-1"],
+    "auditedNoPositiveButReversibleVersionIds": [
+      "version-ios-9-0-1",
+      "version-ios-9-0-2",
+      "version-ios-9-3-1",
+      "version-ios-9-3-5",
+      "version-ios-10-3-1",
+      "version-ios-11-0-1",
+      "version-ios-11-0-2",
+      "version-ios-11-0-3",
+      "version-ios-11-1-1",
+      "version-ios-11-1-2",
+      "version-ios-11-2-1",
+      "version-ios-12-0-1",
+      "version-ios-12-3-1",
+      "version-ios-12-4-1",
+      "version-ios-13-1-1",
+      "version-ios-13-1-2",
+      "version-ios-13-1-3",
+      "version-ios-13-4-1",
+      "version-ios-13-5-1",
+      "version-ios-14-0-1",
+      "version-ios-14-5-1",
+      "version-ios-14-7-1",
+      "version-ios-26-0-1",
+      "version-ios-26-2-1"
+    ]
+  },
+  "reasonCodeDefinitions": {
+    "APPROVE_TWO_EXACT_INDEPENDENT_LINEAGES": "Two independent contemporary publisher families each establish the exact version, public audience, displayed public ordinal, and Pacific-normalized date.",
+    "APPROVE_EVIDENCE_BACKED_NOT_APPLICABLE": "Two independent contemporary publisher families explicitly report that the exact release arrived without beta testing.",
+    "BLOCK_NOT_ESTABLISHED_CONFLICT": "The retained evidence neither establishes an exact public identity nor safely establishes that the public channel did not apply.",
+    "ACCEPT_REVERSIBLE_AUDIT_ONLY": "A bounded search found no qualifying positive identity, but search silence and stable-release material cannot become historical negative evidence."
+  },
+  "candidateReviews": [
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-1",
+      "appearanceDate": "2019-12-18",
+      "disposition": "chronologyApproved",
+      "reasonCode": "APPROVE_TWO_EXACT_INDEPENDENT_LINEAGES",
+      "candidateRecordSha256": "0d237ffa24b82cb216cccdb2112bdc04271b8d1f7ab0f939bf9d419c5b1df506",
+      "identityFingerprintSha256": "8d21b9431bf3c5b3488c462c42fe18c3d73cf9f621e077911568418213e450cc",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "bgr-ios-13-3-1-pb1",
+          "publisherFamily": "BGR",
+          "acceptedFor": "iOS 13.3.1 Public Beta 1 on December 18 Pacific",
+          "reason": "The title and body explicitly display iOS 13.3.1 Public Beta 1 and public-program availability; the publisher timestamp normalizes to December 18 in America/Los_Angeles."
+        },
+        {
+          "sourceId": "cultofmac-ios-13-3-1-pb1",
+          "publisherFamily": "Cult of Mac",
+          "acceptedFor": "the first iOS 13.3.1 public beta on December 18 Pacific",
+          "reason": "The independent title and body explicitly identify the first public beta and same-day public availability; the publisher timestamp normalizes to December 18 Pacific."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "bgr-ios-13-3-1-pb1",
+          "publisherFamily": "BGR",
+          "reason": "First complete exact lineage."
+        },
+        {
+          "sourceId": "cultofmac-ios-13-3-1-pb1",
+          "publisherFamily": "Cult of Mac",
+          "reason": "Second complete exact lineage."
+        }
+      ],
+      "excludedEvidenceRefs": [],
+      "pacificNormalization": [
+        {
+          "sourceId": "bgr-ios-13-3-1-pb1",
+          "publishedAt": "2019-12-18T18:08:26+00:00",
+          "appearanceDatePacific": "2019-12-18"
+        },
+        {
+          "sourceId": "cultofmac-ios-13-3-1-pb1",
+          "publishedAt": "2019-12-18T18:53:50+00:00",
+          "appearanceDatePacific": "2019-12-18"
+        }
+      ],
+      "finding": "Both independent sources explicitly establish the complete submitted Public Beta 1 identity."
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-2",
+      "appearanceDate": "2020-01-14",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCode": "APPROVE_TWO_EXACT_INDEPENDENT_LINEAGES",
+      "candidateRecordSha256": "dd5a9b88d65b5419e9349ed44c575b282cfe5f3af2ddba08c8e808f45bf54bba",
+      "identityFingerprintSha256": "5f27caab02911e98b59ef00a3ce6dbcccb0d8b720cbcc5802082e357766fb336",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "9to5mac-ios-13-3-1-pb2",
+          "publisherFamily": "9to5Mac",
+          "acceptedFor": "iOS 13.3.1 second public beta on January 14 Pacific",
+          "reason": "The exact-version page update separately and explicitly says Apple was releasing the second public beta versions that day; the public ordinal is not inferred from its developer-beta label."
+        },
+        {
+          "sourceId": "forbes-ios-13-3-1-pb2",
+          "publisherFamily": "Forbes",
+          "acceptedFor": "iOS 13.3.1 Public Beta 2 on January 14 Pacific",
+          "reason": "The title and article explicitly display Public Beta 2 and same-day release; its timestamp normalizes to January 14 Pacific."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "9to5mac-ios-13-3-1-pb2",
+          "publisherFamily": "9to5Mac",
+          "reason": "First complete exact lineage through the explicit public-beta update."
+        },
+        {
+          "sourceId": "forbes-ios-13-3-1-pb2",
+          "publisherFamily": "Forbes",
+          "reason": "Second complete exact lineage."
+        }
+      ],
+      "excludedEvidenceRefs": [
+        {
+          "sourceId": "9to5mac-ios-13-3-1-pb2",
+          "excludedFor": "deriving the public ordinal from developer beta 2",
+          "reason": "Only the article's explicit 'second public beta versions' statement is public-ordinal evidence."
+        }
+      ],
+      "pacificNormalization": [
+        {
+          "sourceId": "9to5mac-ios-13-3-1-pb2",
+          "publishedAt": "2020-01-14T17:57:12+00:00",
+          "appearanceDatePacific": "2020-01-14"
+        },
+        {
+          "sourceId": "forbes-ios-13-3-1-pb2",
+          "publishedAt": "2020-01-14T20:00:00-05:00",
+          "appearanceDatePacific": "2020-01-14"
+        }
+      ],
+      "finding": "Both independent sources explicitly establish the complete submitted Public Beta 2 identity. The 9to5Mac proof is limited to its explicit public-beta update and exact page context."
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-3",
+      "appearanceDate": "2020-01-22",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCode": "APPROVE_TWO_EXACT_INDEPENDENT_LINEAGES",
+      "candidateRecordSha256": "3f0c49900cae12c547405c7d6169e3ee19f606a30d2e332d54b747e100bf400d",
+      "identityFingerprintSha256": "23ebcc2b933bf3e48115f3d29ff71f1b3e37d2f4ddae620514ce1e70a235c189",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "9to5mac-ios-13-3-1-pb3",
+          "publisherFamily": "9to5Mac",
+          "acceptedFor": "iOS 13.3.1 third public beta on January 22 Pacific",
+          "reason": "The exact-version page update separately and explicitly says Apple was releasing the third public beta versions that day; the public ordinal is not inferred from its developer-beta label."
+        },
+        {
+          "sourceId": "kobonemi-ios-13-3-1-pb3",
+          "publisherFamily": "Kobonemi",
+          "acceptedFor": "iOS 13.3.1 Public Beta 3 on January 22 Pacific",
+          "reason": "The independent Japanese report explicitly displays Public Beta 3 and says it was released on January 23 Japan time. Its 2020-01-23T09:12:47+09:00 publication timestamp normalizes to January 22 in America/Los_Angeles."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "9to5mac-ios-13-3-1-pb3",
+          "publisherFamily": "9to5Mac",
+          "reason": "First complete exact lineage through the explicit public-beta update."
+        },
+        {
+          "sourceId": "kobonemi-ios-13-3-1-pb3",
+          "publisherFamily": "Kobonemi",
+          "reason": "Second complete exact lineage after explicit timezone normalization."
+        }
+      ],
+      "excludedEvidenceRefs": [
+        {
+          "sourceId": "9to5mac-ios-13-3-1-pb3",
+          "excludedFor": "deriving the public ordinal from developer beta 3",
+          "reason": "Only the article's explicit 'third public beta versions' statement is public-ordinal evidence."
+        },
+        {
+          "sourceId": "kobonemi-ios-13-3-1-pb3",
+          "excludedFor": "treating January 23 Japan as a conflicting Pacific date",
+          "reason": "The retained timezone-bearing publisher timestamp converts to January 22 at 4:12 p.m. Pacific."
+        }
+      ],
+      "pacificNormalization": [
+        {
+          "sourceId": "9to5mac-ios-13-3-1-pb3",
+          "publishedAt": "2020-01-22T17:56:43+00:00",
+          "appearanceDatePacific": "2020-01-22"
+        },
+        {
+          "sourceId": "kobonemi-ios-13-3-1-pb3",
+          "publishedAt": "2020-01-23T09:12:47+09:00",
+          "appearanceDatePacific": "2020-01-22"
+        }
+      ],
+      "finding": "Both independent sources explicitly establish the complete submitted Public Beta 3 identity after normalizing the Japanese timestamp to America/Los_Angeles."
+    }
+  ],
+  "specialApplicabilityReviews": [
+    {
+      "version": "14.8",
+      "releaseVersionId": "version-ios-14-8",
+      "researchClassification": "evidenceBackedNotApplicable",
+      "reviewDisposition": "approvedEvidenceBackedNotApplicable",
+      "reasonCode": "APPROVE_EVIDENCE_BACKED_NOT_APPLICABLE",
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "9to5mac-ios-14-8-no-beta",
+          "publisherFamily": "9to5Mac",
+          "reason": "The contemporaneous report directly states that iOS 14.8 was not beta tested."
+        },
+        {
+          "sourceId": "idropnews-ios-14-8-no-beta",
+          "publisherFamily": "iDrop News",
+          "reason": "The independent contemporaneous report says iOS 14.8 arrived without a beta version."
+        }
+      ],
+      "candidateCreationAllowed": false,
+      "historicalConclusion": "No iOS 14.8 public-beta candidate should be created from this audit because two independent contemporary publisher families explicitly establish release without beta testing.",
+      "reversalEvidence": "An Apple artifact or two independent contemporaneous exact iOS 14.8 public-beta identities would require reopening this conclusion."
+    },
+    {
+      "version": "8.4.1",
+      "releaseVersionId": "version-ios-8-4-1",
+      "researchClassification": "notEstablished",
+      "reviewDisposition": "blockedConflictPreserved",
+      "reasonCode": "BLOCK_NOT_ESTABLISHED_CONFLICT",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "macrumors-ios-8-4-1-developer-only",
+          "publisherFamily": "MacRumors",
+          "reason": "Supports developer-only distribution for the reported seed, not a universal public-channel negative."
+        },
+        {
+          "sourceId": "osxdaily-ios-8-4-1-beta2-developer",
+          "publisherFamily": "OS X Daily",
+          "reason": "Supports developer distribution for Beta 2 and contrasts with the iOS 9 public program."
+        },
+        {
+          "sourceId": "heise-ios-8-4-1-beta2-ambiguous",
+          "publisherFamily": "Heise",
+          "reason": "Retains combined-product wording that paid developers and public-program participants could obtain 'the updates.'"
+        },
+        {
+          "sourceId": "iculture-ios-8-4-1-beta2-ambiguous",
+          "publisherFamily": "iCulture",
+          "reason": "Retains approved-tester wording while its download instructions point to developer distribution."
+        }
+      ],
+      "candidateCreationAllowed": false,
+      "historicalNoBetaConclusionAllowed": false,
+      "finding": "No exact public ordinal/date is established, but the Heise and iCulture wording prevents an evidence-backed not-applicable conclusion. The only safe state is notEstablished."
+    }
+  ],
+  "reversibleApplicabilityReviews": [
+    {
+      "version": "9.0.1",
+      "releaseVersionId": "version-ios-9-0-1",
+      "queryLogId": "query:ios:9.0.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-9-release-history"
+    },
+    {
+      "version": "9.0.2",
+      "releaseVersionId": "version-ios-9-0-2",
+      "queryLogId": "query:ios:9.0.2:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-9-release-history"
+    },
+    {
+      "version": "9.3.1",
+      "releaseVersionId": "version-ios-9-3-1",
+      "queryLogId": "query:ios:9.3.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-9-release-history"
+    },
+    {
+      "version": "9.3.5",
+      "releaseVersionId": "version-ios-9-3-5",
+      "queryLogId": "query:ios:9.3.5:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-9-release-history"
+    },
+    {
+      "version": "10.3.1",
+      "releaseVersionId": "version-ios-10-3-1",
+      "queryLogId": "query:ios:10.3.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-10-release-history"
+    },
+    {
+      "version": "11.0.1",
+      "releaseVersionId": "version-ios-11-0-1",
+      "queryLogId": "query:ios:11.0.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-11-release-history"
+    },
+    {
+      "version": "11.0.2",
+      "releaseVersionId": "version-ios-11-0-2",
+      "queryLogId": "query:ios:11.0.2:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-11-release-history"
+    },
+    {
+      "version": "11.0.3",
+      "releaseVersionId": "version-ios-11-0-3",
+      "queryLogId": "query:ios:11.0.3:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-11-release-history"
+    },
+    {
+      "version": "11.1.1",
+      "releaseVersionId": "version-ios-11-1-1",
+      "queryLogId": "query:ios:11.1.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-11-release-history"
+    },
+    {
+      "version": "11.1.2",
+      "releaseVersionId": "version-ios-11-1-2",
+      "queryLogId": "query:ios:11.1.2:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-11-release-history"
+    },
+    {
+      "version": "11.2.1",
+      "releaseVersionId": "version-ios-11-2-1",
+      "queryLogId": "query:ios:11.2.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-11-release-history"
+    },
+    {
+      "version": "12.0.1",
+      "releaseVersionId": "version-ios-12-0-1",
+      "queryLogId": "query:ios:12.0.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-12-release-history"
+    },
+    {
+      "version": "12.3.1",
+      "releaseVersionId": "version-ios-12-3-1",
+      "queryLogId": "query:ios:12.3.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-12-release-history"
+    },
+    {
+      "version": "12.4.1",
+      "releaseVersionId": "version-ios-12-4-1",
+      "queryLogId": "query:ios:12.4.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-12-release-history"
+    },
+    {
+      "version": "13.1.1",
+      "releaseVersionId": "version-ios-13-1-1",
+      "queryLogId": "query:ios:13.1.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-13-release-history"
+    },
+    {
+      "version": "13.1.2",
+      "releaseVersionId": "version-ios-13-1-2",
+      "queryLogId": "query:ios:13.1.2:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-13-release-history"
+    },
+    {
+      "version": "13.1.3",
+      "releaseVersionId": "version-ios-13-1-3",
+      "queryLogId": "query:ios:13.1.3:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-13-release-history"
+    },
+    {
+      "version": "13.4.1",
+      "releaseVersionId": "version-ios-13-4-1",
+      "queryLogId": "query:ios:13.4.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-13-release-history"
+    },
+    {
+      "version": "13.5.1",
+      "releaseVersionId": "version-ios-13-5-1",
+      "queryLogId": "query:ios:13.5.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-13-release-history"
+    },
+    {
+      "version": "14.0.1",
+      "releaseVersionId": "version-ios-14-0-1",
+      "queryLogId": "query:ios:14.0.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-14-release-history"
+    },
+    {
+      "version": "14.5.1",
+      "releaseVersionId": "version-ios-14-5-1",
+      "queryLogId": "query:ios:14.5.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-14-release-history"
+    },
+    {
+      "version": "14.7.1",
+      "releaseVersionId": "version-ios-14-7-1",
+      "queryLogId": "query:ios:14.7.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-14-release-history"
+    },
+    {
+      "version": "26.0.1",
+      "releaseVersionId": "version-ios-26-0-1",
+      "queryLogId": "query:ios:26.0.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-26-release-history"
+    },
+    {
+      "version": "26.2.1",
+      "releaseVersionId": "version-ios-26-2-1",
+      "queryLogId": "query:ios:26.2.1:public-beta-applicability",
+      "stableBoundarySourceId": "apple-ios-26-release-history"
+    }
+  ],
+  "reversibleAuditRule": {
+    "reviewDisposition": "acceptedAsReversibleAuditOnly",
+    "reasonCode": "ACCEPT_REVERSIBLE_AUDIT_ONLY",
+    "candidateCreationAllowed": false,
+    "historicalNoBetaConclusionAllowed": false,
+    "finding": "For every listed row, the query log records only that the bounded search did not locate an exact positive public identity. The stable Apple release-history page establishes the stable release boundary only. Neither that boundary, search silence, nor zero production developer events proves that no public beta existed.",
+    "reopenCondition": "A contemporaneous source explicitly naming an exact public-beta ordinal and date reopens the row; two independent publisher families are required before candidacy."
+  },
+  "sourceAndLineageAudit": {
+    "sourceCount": 21,
+    "uniqueSourceIdCount": 21,
+    "publisherFamilyCount": 12,
+    "rawArtifactCount": 21,
+    "selectedArtifactCount": 21,
+    "locatorCount": 59,
+    "candidateEvidenceReferenceCount": 6,
+    "approvedCandidateLineagePairCount": 3,
+    "allApprovedCandidatesHaveTwoDistinctPublisherFamilies": true,
+    "publicOrdinalDerivedFromDeveloperOrdinal": false,
+    "pairedPlatformUsedAsIOSProof": false,
+    "buildAlignmentUsedAsPublicOrdinalProof": false,
+    "searchSilenceUsedAsHistoricalNegative": false,
+    "stableReleaseNoteUsedAsHistoricalNegative": false,
+    "finding": "All candidate, negative-applicability, conflict, and stable-boundary references resolve to frozen source and selected artifacts. Candidate approval uses explicit public wording, not developer numbering."
+  },
+  "lockedFileVerification": {
+    "packetLocksPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/packet-locks.json",
+    "packetLocksSha256": "23c6bac767883500103ecdb2108fb10ec49574f39119587da8a56835712aaa98",
+    "declaredMaterialFileCount": 63,
+    "verifiedMaterialFileCount": 63,
+    "verifiedMaterialBytes": 13727001,
+    "packetByteFailures": 0,
+    "packetSha256Failures": 0,
+    "rawEvidenceLockCount": 21,
+    "rawEvidenceVerifiedCount": 21,
+    "rawEvidenceBytes": 13381181,
+    "rawByteOrHashFailures": 0,
+    "selectedEvidenceLockCount": 21,
+    "selectedEvidenceVerifiedCount": 21,
+    "selectedEvidenceBytes": 42262,
+    "selectedByteOrHashFailures": 0,
+    "sourceToLockJoinCount": 21,
+    "sourceToLockJoinsVerified": 21,
+    "selectedLocatorSourceCount": 21,
+    "selectedLocatorSourcesVerified": 21,
+    "candidateRecordHashCount": 3,
+    "candidateRecordHashesVerified": 3,
+    "candidateIdentityFingerprintCount": 3,
+    "candidateIdentityFingerprintsVerified": 3,
+    "failures": []
+  },
+  "scopeAndJoinAudit": {
+    "assignmentParentCount": 27,
+    "scopedCoverageRowCount": 27,
+    "queryLogRecordCount": 27,
+    "applicabilityAuditRowCount": 27,
+    "productionParentCheckCount": 27,
+    "assignmentIdsUnique": true,
+    "assignmentToCoverageExact": true,
+    "assignmentToQueryLogExact": true,
+    "assignmentToApplicabilityAuditExact": true,
+    "assignmentToProductionExact": true,
+    "versionLabelsExact": true,
+    "allEvidenceReferencesResolve": true,
+    "sharedCoverageMatrixModifiedByReviewer": false
+  },
+  "productionRecheck": {
+    "queryScriptPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review-query.ts",
+    "snapshotPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review-production-snapshot.json",
+    "queriedAt": "2026-07-31T08:15:47.313Z",
+    "perspective": "published",
+    "useCdn": false,
+    "projectId": "lh3yswzu",
+    "dataset": "production",
+    "candidateCount": 3,
+    "targetVersionCount": 27,
+    "targetParentsFound": 27,
+    "missingParentIds": [],
+    "totalReleaseEvents": 2068,
+    "iosPublicBetaEventsAllVersions": 10,
+    "scopedReleaseEvents": 27,
+    "scopedPublicBetaEvents": 0,
+    "exactRouteIdentityMatchCount": 0,
+    "exactFullCandidateMatchCount": 0,
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "finding": "All twenty-seven release-version parents exist. No scoped public-beta event and no exact route or full candidate identity exists in published production."
+  },
+  "checks": {
+    "reviewJsonParsed": true,
+    "exactTwentySevenParentScope": true,
+    "allTwentySevenQueryLogsInspected": true,
+    "allTwentySevenApplicabilityRowsInspected": true,
+    "candidateIdsUnique": true,
+    "candidateSchemaValid": true,
+    "allThreeCandidateRecordsAndIdentityFingerprintsReproduced": true,
+    "allThreeCandidatesHaveTwoIndependentExactLineages": true,
+    "allCandidateEvidenceReferencesResolve": true,
+    "ios148NegativeApplicabilityHasTwoIndependentExplicitSources": true,
+    "ios841ConflictPreservedAsNotEstablished": true,
+    "allTwentyFourNoPositiveRowsRemainReversible": true,
+    "noReversibleRowBecameHistoricalNegative": true,
+    "publicOrdinalNeverDerivedFromDeveloperOrdinal": true,
+    "publicOrdinalNeverDerivedFromPairedPlatform": true,
+    "publicOrdinalNeverDerivedFromBuildAlignment": true,
+    "americaLosAngelesDateRuleApplied": true,
+    "allSixtyThreePacketLocksReproduced": true,
+    "allTwentyOneRawLocksReproduced": true,
+    "allTwentyOneSelectedLocksAndLocatorsReproduced": true,
+    "freshPublishedNoCdnProductionQueryCompleted": true,
+    "allTwentySevenTargetParentsFoundInProduction": true,
+    "allThreeExactTargetMatchesRemainZero": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "mandatoryQualifications": [
+    "Only the three explicitly approved iOS 13.3.1 candidate identities may enter a later chronology candidate integration queue.",
+    "iOS 14.8 is an evidence-backed do-not-create applicability decision, not a candidate.",
+    "iOS 8.4.1 remains notEstablished. Do not create a public-beta event and do not publish a no-public-beta conclusion from this packet.",
+    "The twenty-four auditedNoPositiveButReversible rows are search-status records, not historical negatives and not evidenceBackedNotApplicable decisions.",
+    "For iOS 13.3.1 Public Beta 2 and 3, use 9to5Mac's explicit public-beta update wording; never derive the public ordinal from the developer-beta labels.",
+    "For Public Beta 3, preserve that January 23 is the Japanese calendar date and January 22 is the America/Los_Angeles date.",
+    "Run another published, useCdn:false exact production query immediately before any separately authorized write."
+  ],
+  "safety": {
+    "researchOnly": true,
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false,
+    "frozenResearchArtifactsModified": false,
+    "sharedAggregateArtifactsModified": false
+  },
+  "authorization": {
+    "researchHandoffAggregationAllowed": true,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "pageBuildsAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  },
+  "verdict": "approvedThreeCandidatesOneNotApplicableOneConflictTwentyFourReversible",
+  "requiredNextGate": {
+    "conflictedVersionRequirement": "Obtain product-specific exact evidence that either establishes an iOS 8.4.1 public appearance or explicitly establishes that the public channel did not apply.",
+    "reversibleVersionRequirement": "Do not close any reversible row without explicit claim-level evidence; two independent exact lineages are required for a positive candidate.",
+    "productionRecheckRequiredBeforeWrite": true,
+    "separateSanityMutationAuthorizationRequired": true,
+    "separatePageBuildAuthorizationRequired": true
+  }
+}

@@ -3,27 +3,84 @@ import type { NextConfig } from "next";
 const configuredBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const basePath =
   configuredBasePath === "/" ? "" : configuredBasePath.replace(/\/+$/, "");
+const applePlatforms = [
+  "ios",
+  "ipados",
+  "macos",
+  "watchos",
+  "tvos",
+  "visionos",
+];
+const legacyHosts = [
+  "apple-os-dates.vercel.app",
+];
+
+/**
+ * Canonical URLs are bimodal: leaf segments containing a period (version
+ * numbers, build slugs) have no trailing slash, everything else does. A
+ * destination with the wrong shape triggers a second trailing-slash
+ * normalization redirect, so each legacy source gets two rules: a
+ * dotted-leaf rule first, then a slash-appending catch-all.
+ */
+function legacyPlatformRedirects(
+  platform: string,
+  destinationPrefix: string,
+  has?: Array<{ type: "host"; value: string }>,
+) {
+  return [
+    {
+      source: `/${platform}/:path*/:leaf([^/]+\\.[^/]+)`,
+      ...(has ? { has } : {}),
+      destination: `${destinationPrefix}/apple/${platform}/:path*/:leaf`,
+      permanent: true,
+    },
+    {
+      source: `/${platform}/:path*`,
+      ...(has ? { has } : {}),
+      destination: `${destinationPrefix}/apple/${platform}/:path*/`,
+      permanent: true,
+    },
+  ];
+}
 
 const nextConfig: NextConfig = {
   basePath,
   trailingSlash: true,
+  // The OG image routes read the vendored fonts at runtime; make sure
+  // serverless output tracing bundles them.
+  outputFileTracingIncludes: {
+    "/**": ["./src/assets/fonts/*.woff"],
+  },
   async redirects() {
     return [
-      {
+      ...legacyHosts.flatMap((host) =>
+        applePlatforms.flatMap((platform) =>
+          legacyPlatformRedirects(
+            platform,
+            "https://www.versionrecord.com",
+            [{ type: "host" as const, value: host }],
+          ),
+        ),
+      ),
+      ...legacyHosts.map((host) => ({
         source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "apple-os-dates.vercel.app",
-          },
-        ],
-        destination: "https://www.betacadence.com/:path*",
+        has: [{ type: "host" as const, value: host }],
+        destination: "https://www.versionrecord.com/:path*",
         permanent: true,
-      },
+      })),
+      ...applePlatforms.flatMap((platform) =>
+        legacyPlatformRedirects(platform, ""),
+      ),
     ];
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.sanity.io",
+      },
+    ],
   },
 };
 

@@ -1,0 +1,846 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+      "transportUrl": "https://developer.apple.com/tutorials/data/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes.json",
+      "title": "iOS & iPadOS 26.6 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["iOS", "iPadOS", "26.6", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-26_6-release-notes",
+      "transportUrl": "https://developer.apple.com/tutorials/data/documentation/macos-release-notes/macos-26_6-release-notes.json",
+      "title": "macOS Tahoe 26.6 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["macOS", "26.6", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-26_6-release-notes",
+      "transportUrl": "https://developer.apple.com/tutorials/data/documentation/tvos-release-notes/tvos-26_6-release-notes.json",
+      "title": "tvOS 26.6 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["tvOS", "26.6", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-26_6-release-notes",
+      "transportUrl": "https://developer.apple.com/tutorials/data/documentation/visionos-release-notes/visionos-26_6-release-notes.json",
+      "title": "visionOS 26.6 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["visionOS", "26.6", "SDK"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-26_6-release-notes",
+      "transportUrl": "https://developer.apple.com/tutorials/data/documentation/watchos-release-notes/watchos-26_6-release-notes.json",
+      "title": "watchOS 26.6 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["watchOS", "26.6", "SDK"]
+    }
+  ],
+  "versions": [],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-26-6",
+        "routeAlias": "rc"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple's iOS 26.6 RC-specific developer note documents HealthKit authorization and statistics, HDR screenshots in Messages, Object Capture, corrupted sticker data, and StoreKit test sessions, without assigning public-only, build-specific, or earlier-beta material to this route.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release candidate documentation"
+          },
+          {
+            "text": "Apple's canonical developer page identifies itself as iOS & iPadOS 26.6 RC Release Notes. This article attaches only the changes enumerated on that RC-labeled page to the existing RC route.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+                "locator": "iOS & iPadOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented RC delta"
+          },
+          {
+            "text": "The canonical developer note still identifies itself as iOS & iPadOS 26.6 RC Release Notes and limits the structured inventory here to HealthKit authorization and statistics, HDR screenshots in Messages, Object Capture, corrupted sticker data, and StoreKit test sessions. Each occurrence below comes from an item Apple places on that RC page.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+                "locator": "iOS & iPadOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "No cumulative public support note, public security advisory, earlier beta snapshot, undocumented behavior, build number, release date, or cross-platform assumption is projected onto this event. The current RC-titled developer note supports the enumerated changes, but it does not provide durable historical artifact metadata.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+                "locator": "iOS & iPadOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+          "locator": "iOS & iPadOS 26.6 RC Release Notes; RC overview and enumerated sections"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-26-6-health-blood-pressure-auth",
+          "title": "Blood-pressure HealthKit authorization fix",
+          "canonicalSummary": "HealthKit now displays the authorization screen correctly when applications request supported blood-pressure data types.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC notes say the authorization sheet now appears for applications requesting the documented systolic or diastolic blood-pressure quantity types.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+              "locator": "HealthKit — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-6-health-weighted-average",
+          "title": "Overlapping-sample HealthKit average fix",
+          "canonicalSummary": "Temporally weighted statistics no longer overstate discrete quantity averages in the documented overlapping-sample case.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected erroneously high temporally weighted averages for discrete quantities when samples overlap in time.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+              "locator": "HealthKit — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-6-messages-hdr-screenshots",
+          "title": "HDR screenshot delivery in Messages",
+          "canonicalSummary": "HDR screenshots no longer become garbled in the documented Messages sending workflow.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC notes identify a fix for HDR screenshots becoming garbled when sent through Messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+              "locator": "Messages — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-6-stickers-sync-recovery",
+          "title": "Synced sticker recovery",
+          "canonicalSummary": "The system can recover from the documented corruption affecting stickers synchronized between devices.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected a corruption state that could hide existing stickers, prevent new stickers, and propagate through iCloud sync.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+              "locator": "Stickers — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-6-object-capture-storekit-simulator",
+          "title": "Object Capture and StoreKit Simulator fixes",
+          "canonicalSummary": "Capture reconstruction reliability and StoreKit test-session connectivity in Simulator were corrected.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC notes separately identify failed Object Capture reconstruction and StoreKit test sessions that could not connect from Simulator.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+              "locator": "Object Capture and StoreKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:44:12Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-26-6",
+        "routeAlias": "rc"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple's iPadOS 26.6 RC-specific developer note documents HealthKit authorization and statistics, HDR screenshots in Messages, Object Capture, corrupted sticker data, and StoreKit test sessions, without assigning public-only, build-specific, or earlier-beta material to this route.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release candidate documentation"
+          },
+          {
+            "text": "Apple's canonical developer page identifies itself as iOS & iPadOS 26.6 RC Release Notes. This article attaches only the changes enumerated on that RC-labeled page to the existing RC route.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+                "locator": "iOS & iPadOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented RC delta"
+          },
+          {
+            "text": "The canonical developer note still identifies itself as iOS & iPadOS 26.6 RC Release Notes and limits the structured inventory here to HealthKit authorization and statistics, HDR screenshots in Messages, Object Capture, corrupted sticker data, and StoreKit test sessions. Each occurrence below comes from an item Apple places on that RC page.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+                "locator": "iOS & iPadOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "No cumulative public support note, public security advisory, earlier beta snapshot, undocumented behavior, build number, release date, or cross-platform assumption is projected onto this event. The current RC-titled developer note supports the enumerated changes, but it does not provide durable historical artifact metadata.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+                "locator": "iOS & iPadOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+          "locator": "iOS & iPadOS 26.6 RC Release Notes; RC overview and enumerated sections"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-26-6-health-blood-pressure-auth",
+          "title": "Blood-pressure HealthKit authorization fix",
+          "canonicalSummary": "HealthKit now displays the authorization screen correctly when applications request supported blood-pressure data types.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC notes say the authorization sheet now appears for applications requesting the documented systolic or diastolic blood-pressure quantity types.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+              "locator": "HealthKit — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-6-health-weighted-average",
+          "title": "Overlapping-sample HealthKit average fix",
+          "canonicalSummary": "Temporally weighted statistics no longer overstate discrete quantity averages in the documented overlapping-sample case.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected erroneously high temporally weighted averages for discrete quantities when samples overlap in time.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+              "locator": "HealthKit — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-6-messages-hdr-screenshots",
+          "title": "HDR screenshot delivery in Messages",
+          "canonicalSummary": "HDR screenshots no longer become garbled in the documented Messages sending workflow.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC notes identify a fix for HDR screenshots becoming garbled when sent through Messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+              "locator": "Messages — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-6-stickers-sync-recovery",
+          "title": "Synced sticker recovery",
+          "canonicalSummary": "The system can recover from the documented corruption affecting stickers synchronized between devices.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected a corruption state that could hide existing stickers, prevent new stickers, and propagate through iCloud sync.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+              "locator": "Stickers — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-6-object-capture-storekit-simulator",
+          "title": "Object Capture and StoreKit Simulator fixes",
+          "canonicalSummary": "Capture reconstruction reliability and StoreKit test-session connectivity in Simulator were corrected.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC notes separately identify failed Object Capture reconstruction and StoreKit test sessions that could not connect from Simulator.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_6-release-notes",
+              "locator": "Object Capture and StoreKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:44:12Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-macos-26-6",
+        "routeAlias": "rc"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple's macOS 26.6 RC-specific developer note documents the encrypted-HFS+ deprecation and fixes for compatibility notices, HealthKit statistics, and HDR screenshots in Messages, without assigning public-only, build-specific, or earlier-beta material to this route.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release candidate documentation"
+          },
+          {
+            "text": "Apple's canonical developer page identifies itself as macOS Tahoe 26.6 RC Release Notes. This article attaches only the changes enumerated on that RC-labeled page to the existing RC route.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/macos-release-notes/macos-26_6-release-notes",
+                "locator": "macOS Tahoe 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented RC delta"
+          },
+          {
+            "text": "The canonical developer note still identifies itself as macOS Tahoe 26.6 RC Release Notes and limits the structured inventory here to the encrypted-HFS+ deprecation and fixes for compatibility notices, HealthKit statistics, and HDR screenshots in Messages. Each occurrence below comes from an item Apple places on that RC page.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/macos-release-notes/macos-26_6-release-notes",
+                "locator": "macOS Tahoe 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "No cumulative public support note, public security advisory, earlier beta snapshot, undocumented behavior, build number, release date, or cross-platform assumption is projected onto this event. The current RC-titled developer note supports the enumerated changes, but it does not provide durable historical artifact metadata.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/macos-release-notes/macos-26_6-release-notes",
+                "locator": "macOS Tahoe 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://developer.apple.com/documentation/macos-release-notes/macos-26_6-release-notes",
+          "locator": "macOS Tahoe 26.6 RC Release Notes; RC overview and enumerated sections"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-26-6-corestorage-deprecation",
+          "title": "Encrypted HFS+ CoreStorage deprecation",
+          "canonicalSummary": "Encrypted HFS+ volumes backed by CoreStorage are deprecated, with support scheduled to end in macOS 28 in favor of encrypted APFS.",
+          "category": "removal",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The RC notes deprecate encrypted HFS+ through CoreStorage, identify macOS 28 as the planned support boundary, and direct external backups toward encrypted APFS.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/macos-release-notes/macos-26_6-release-notes",
+              "locator": "CoreStorage — Deprecations"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-6-intel-only-notice",
+          "title": "False Intel-only compatibility notice fix",
+          "canonicalSummary": "Compatibility notifications no longer misidentify a host application as Intel-only merely because a plug-in loader imports x86 code.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected compatibility notices that blamed a host application when a system plug-in loader was the component loading x86 code.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/macos-release-notes/macos-26_6-release-notes",
+              "locator": "Ecosystem — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-6-health-weighted-average",
+          "title": "Overlapping-sample HealthKit average fix",
+          "canonicalSummary": "Temporally weighted statistics no longer overstate discrete quantity averages in the documented overlapping-sample case.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected erroneously high temporally weighted averages for discrete quantities when samples overlap in time.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/macos-release-notes/macos-26_6-release-notes",
+              "locator": "HealthKit — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-6-messages-hdr-screenshots",
+          "title": "HDR screenshot delivery in Messages",
+          "canonicalSummary": "HDR screenshots no longer become garbled in the documented Messages sending workflow.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC notes identify a fix for HDR screenshots becoming garbled when sent through Messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/macos-release-notes/macos-26_6-release-notes",
+              "locator": "Messages — Resolved Issues"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:44:12Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-26-6",
+        "routeAlias": "rc"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple's tvOS 26.6 RC-specific developer note documents HealthKit temporally weighted statistics and StoreKit test-session connectivity in Simulator, without assigning public-only, build-specific, or earlier-beta material to this route.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release candidate documentation"
+          },
+          {
+            "text": "Apple's canonical developer page identifies itself as tvOS 26.6 RC Release Notes. This article attaches only the changes enumerated on that RC-labeled page to the existing RC route.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-26_6-release-notes",
+                "locator": "tvOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented RC delta"
+          },
+          {
+            "text": "The canonical developer note still identifies itself as tvOS 26.6 RC Release Notes and limits the structured inventory here to HealthKit temporally weighted statistics and StoreKit test-session connectivity in Simulator. Each occurrence below comes from an item Apple places on that RC page.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-26_6-release-notes",
+                "locator": "tvOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "No cumulative public support note, public security advisory, earlier beta snapshot, undocumented behavior, build number, release date, or cross-platform assumption is projected onto this event. The current RC-titled developer note supports the enumerated changes, but it does not provide durable historical artifact metadata.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-26_6-release-notes",
+                "locator": "tvOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-26_6-release-notes",
+          "locator": "tvOS 26.6 RC Release Notes; RC overview and enumerated sections"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-26-6-health-weighted-average",
+          "title": "Overlapping-sample HealthKit average fix",
+          "canonicalSummary": "Temporally weighted statistics no longer overstate discrete quantity averages in the documented overlapping-sample case.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected erroneously high temporally weighted averages for discrete quantities when samples overlap in time.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-26_6-release-notes",
+              "locator": "HealthKit — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "tvos-26-6-storekit-simulator-session",
+          "title": "StoreKit Simulator session connection fix",
+          "canonicalSummary": "StoreKit test sessions can connect to the test environment correctly when run in Simulator.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected StoreKit test sessions that failed because they could not connect to the test environment from Simulator.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-26_6-release-notes",
+              "locator": "StoreKit — Resolved Issues"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:44:12Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-visionos-26-6",
+        "routeAlias": "rc"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple's visionOS 26.6 RC-specific developer note documents HealthKit authorization and temporally weighted statistics plus StoreKit test-session connectivity in Simulator, without assigning public-only, build-specific, or earlier-beta material to this route.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release candidate documentation"
+          },
+          {
+            "text": "Apple's canonical developer page identifies itself as visionOS 26.6 RC Release Notes. This article attaches only the changes enumerated on that RC-labeled page to the existing RC route.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-26_6-release-notes",
+                "locator": "visionOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented RC delta"
+          },
+          {
+            "text": "The canonical developer note still identifies itself as visionOS 26.6 RC Release Notes and limits the structured inventory here to HealthKit authorization and temporally weighted statistics plus StoreKit test-session connectivity in Simulator. Each occurrence below comes from an item Apple places on that RC page.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-26_6-release-notes",
+                "locator": "visionOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "No cumulative public support note, public security advisory, earlier beta snapshot, undocumented behavior, build number, release date, or cross-platform assumption is projected onto this event. The current RC-titled developer note supports the enumerated changes, but it does not provide durable historical artifact metadata.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-26_6-release-notes",
+                "locator": "visionOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-26_6-release-notes",
+          "locator": "visionOS 26.6 RC Release Notes; RC overview and enumerated sections"
+        }
+      ],
+      "changes": [
+        {
+          "key": "visionos-26-6-health-blood-pressure-auth",
+          "title": "Blood-pressure HealthKit authorization fix",
+          "canonicalSummary": "HealthKit now displays the authorization screen correctly when applications request supported blood-pressure data types.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC notes say the authorization sheet now appears for applications requesting the documented systolic or diastolic blood-pressure quantity types.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-26_6-release-notes",
+              "locator": "HealthKit — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-6-health-weighted-average",
+          "title": "Overlapping-sample HealthKit average fix",
+          "canonicalSummary": "Temporally weighted statistics no longer overstate discrete quantity averages in the documented overlapping-sample case.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected erroneously high temporally weighted averages for discrete quantities when samples overlap in time.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-26_6-release-notes",
+              "locator": "HealthKit — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-6-storekit-simulator-session",
+          "title": "StoreKit Simulator session connection fix",
+          "canonicalSummary": "StoreKit test sessions can connect to the test environment correctly when run in Simulator.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected StoreKit test sessions that failed because they could not connect to the test environment from Simulator.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-26_6-release-notes",
+              "locator": "StoreKit — Resolved Issues"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:44:12Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-26-6",
+        "routeAlias": "rc"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple's watchOS 26.6 RC-specific developer note documents HealthKit authorization and temporally weighted statistics plus StoreKit test-session connectivity in Simulator, without assigning public-only, build-specific, or earlier-beta material to this route.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release candidate documentation"
+          },
+          {
+            "text": "Apple's canonical developer page identifies itself as watchOS 26.6 RC Release Notes. This article attaches only the changes enumerated on that RC-labeled page to the existing RC route.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-26_6-release-notes",
+                "locator": "watchOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented RC delta"
+          },
+          {
+            "text": "The canonical developer note still identifies itself as watchOS 26.6 RC Release Notes and limits the structured inventory here to HealthKit authorization and temporally weighted statistics plus StoreKit test-session connectivity in Simulator. Each occurrence below comes from an item Apple places on that RC page.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-26_6-release-notes",
+                "locator": "watchOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "No cumulative public support note, public security advisory, earlier beta snapshot, undocumented behavior, build number, release date, or cross-platform assumption is projected onto this event. The current RC-titled developer note supports the enumerated changes, but it does not provide durable historical artifact metadata.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-26_6-release-notes",
+                "locator": "watchOS 26.6 RC Release Notes; RC overview and enumerated sections"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-26_6-release-notes",
+          "locator": "watchOS 26.6 RC Release Notes; RC overview and enumerated sections"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-26-6-health-blood-pressure-auth",
+          "title": "Blood-pressure HealthKit authorization fix",
+          "canonicalSummary": "HealthKit now displays the authorization screen correctly when applications request supported blood-pressure data types.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC notes say the authorization sheet now appears for applications requesting the documented systolic or diastolic blood-pressure quantity types.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-26_6-release-notes",
+              "locator": "HealthKit — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "watchos-26-6-health-weighted-average",
+          "title": "Overlapping-sample HealthKit average fix",
+          "canonicalSummary": "Temporally weighted statistics no longer overstate discrete quantity averages in the documented overlapping-sample case.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected erroneously high temporally weighted averages for discrete quantities when samples overlap in time.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-26_6-release-notes",
+              "locator": "HealthKit — Resolved Issues"
+            }
+          ]
+        },
+        {
+          "key": "watchos-26-6-storekit-simulator-session",
+          "title": "StoreKit Simulator session connection fix",
+          "canonicalSummary": "StoreKit test sessions can connect to the test environment correctly when run in Simulator.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The RC corrected StoreKit test sessions that failed because they could not connect to the test environment from Simulator.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the canonical Apple Developer note whose title and SDK overview identify the exact 26.6 RC. No earlier beta or public-only source is inherited.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-26_6-release-notes",
+              "locator": "StoreKit — Resolved Issues"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:44:12Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

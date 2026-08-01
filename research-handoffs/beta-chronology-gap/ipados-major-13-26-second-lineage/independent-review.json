@@ -1,0 +1,227 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ipados-major-13-26-second-lineage",
+  "parentBatchId": "beta-chronology-gap-ipados-major-13-26",
+  "reviewedAt": "2026-07-31T04:26:37Z",
+  "reviewer": "codex-root",
+  "independentOfSupplementResearcher": true,
+  "verdict": "passWithMandatorySourceAndDateQualifications",
+  "summary": {
+    "mappedCandidateCount": 9,
+    "chronologyApprovedCandidateCount": 9,
+    "blockedCandidateCount": 0,
+    "directSameDateSupplementCount": 7,
+    "followingDayOrdinalOnlyCount": 2,
+    "supplementalSourceCount": 5,
+    "rawEvidenceArtifactCount": 5,
+    "packetAndEvidenceLockCount": 25,
+    "evidenceHashFailureCount": 0,
+    "productionIdentityMatchCount": 0
+  },
+  "candidateVerdict": {
+    "chronologyApprovedAfterSupplement": [
+      "candidate:apple:ipados:14.0:public-beta-6",
+      "candidate:apple:ipados:14.0:public-beta-7",
+      "candidate:apple:ipados:14.0:public-beta-8",
+      "candidate:apple:ipados:15.0:public-beta-5",
+      "candidate:apple:ipados:15.0:public-beta-7",
+      "candidate:apple:ipados:15.0:public-beta-8",
+      "candidate:apple:ipados:16.0:public-beta-4",
+      "candidate:apple:ipados:17.0:public-beta-6",
+      "candidate:apple:ipados:18.0:public-beta-6"
+    ],
+    "approvedWithMandatoryQualification": [
+      "candidate:apple:ipados:14.0:public-beta-6",
+      "candidate:apple:ipados:14.0:public-beta-7",
+      "candidate:apple:ipados:14.0:public-beta-8",
+      "candidate:apple:ipados:15.0:public-beta-5",
+      "candidate:apple:ipados:15.0:public-beta-7",
+      "candidate:apple:ipados:15.0:public-beta-8",
+      "candidate:apple:ipados:16.0:public-beta-4",
+      "candidate:apple:ipados:17.0:public-beta-6",
+      "candidate:apple:ipados:18.0:public-beta-6"
+    ],
+    "blocked": []
+  },
+  "checks": {
+    "packetJsonParsed": true,
+    "parentBlockedCandidateSetMatchedExactly": true,
+    "frozenParentIdentitiesUnchanged": true,
+    "supplementalSourceIdsUnique": true,
+    "allSupplementalReferencesResolve": true,
+    "allExactClaimTokensInspectedInRawContext": true,
+    "allPublicAudiencesExplicit": true,
+    "allPublicOrdinalsExplicit": true,
+    "livingChronologyEntriesInspected": 6,
+    "archivedSourceInspected": 1,
+    "followingDayOrdinalLocatorsInspected": 2,
+    "internalPb5Pb6ConflictInspected": true,
+    "rawEvidenceArtifactsReproduced": 5,
+    "boundedIdentificationArtifactsReproduced": 5,
+    "packetAndEvidenceLocksReproduced": 25,
+    "lockFailures": 0,
+    "twoIndependentExplicitOrdinalLineagesPerCandidate": true,
+    "appearanceDatesSupportedByCombinedParentAndSupplementEvidence": true,
+    "freshExactProductionMatches": 0,
+    "sanityMutationPerformed": false,
+    "productionIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "deploymentPerformed": false
+  },
+  "candidateReviews": [
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-6",
+      "supplementalSourceId": "imore-ipados14-pb6-pb8",
+      "appearanceDate": "2020-08-25",
+      "disposition": "chronologyApprovedWithSourceQualification",
+      "finding": "The dated iMore history entry explicitly identifies iPadOS 14 Public Beta 6 and Public Beta Software Program availability on the frozen date, independently corroborating iCulture.",
+      "requiredQualificationIds": [
+        "imore14-living-chronology"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-7",
+      "supplementalSourceId": "imore-ipados14-pb6-pb8",
+      "appearanceDate": "2020-09-03",
+      "disposition": "chronologyApprovedWithSourceQualification",
+      "finding": "The dated iMore history entry explicitly identifies iPadOS 14 Public Beta 7 and Public Beta Software Program availability on the frozen date, independently corroborating iCulture.",
+      "requiredQualificationIds": [
+        "imore14-living-chronology"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-8",
+      "supplementalSourceId": "imore-ipados14-pb6-pb8",
+      "appearanceDate": "2020-09-09",
+      "disposition": "chronologyApprovedWithSourceQualification",
+      "finding": "The dated iMore history entry explicitly identifies iPadOS 14 Public Beta 8 and Public Beta Software Program availability on the frozen date, independently corroborating iCulture.",
+      "requiredQualificationIds": [
+        "imore14-living-chronology"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-5",
+      "supplementalSourceId": "imore-ipados15-pb5-pb8",
+      "appearanceDate": "2021-08-11",
+      "disposition": "chronologyApprovedWithSourceQualification",
+      "finding": "The dated iMore history entry explicitly identifies the fifth iPadOS 15 public beta on the frozen date, independently corroborating iCulture.",
+      "requiredQualificationIds": [
+        "imore15-living-chronology"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-7",
+      "supplementalSourceId": "imore-ipados15-pb5-pb8",
+      "appearanceDate": "2021-08-25",
+      "disposition": "chronologyApprovedWithSourceQualification",
+      "finding": "The dated iMore history entry explicitly identifies the seventh iPadOS 15 public beta on the frozen Pacific date, resolving the second-lineage ordinal and date gate.",
+      "requiredQualificationIds": [
+        "imore15-living-chronology"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-8",
+      "supplementalSourceId": "imore-ipados15-pb5-pb8",
+      "appearanceDate": "2021-08-31",
+      "disposition": "chronologyApprovedWithSourceQualification",
+      "finding": "The dated iMore history entry explicitly identifies the eighth iPadOS 15 public beta on the frozen date, independently corroborating iCulture.",
+      "requiredQualificationIds": [
+        "imore15-living-chronology"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.0:public-beta-4",
+      "supplementalSourceId": "iphonetricks-ipados16-pb4",
+      "appearanceDate": "2022-08-15",
+      "disposition": "chronologyApprovedWithArchivedSourceQualification",
+      "finding": "The contemporaneous Internet Archive capture preserves the iPhoneTricks article's explicit iPadOS 16 Public Beta 4 statement and same-day metadata, independently corroborating iCulture.",
+      "requiredQualificationIds": [
+        "iphonetricks-archived-source"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.0:public-beta-6",
+      "supplementalSourceId": "osxd-ipados17-pb6",
+      "appearanceDate": "2023-08-29",
+      "disposition": "chronologyApprovedWithReportingLagQualification",
+      "finding": "OS X Daily repeatedly and explicitly identifies iPadOS 17 Public Beta 6. Its August 30 report supplies the second ordinal lineage only; the August 29 appearance date remains established by the parent evidence.",
+      "requiredQualificationIds": [
+        "ipados17-reporting-lag"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.0:public-beta-6",
+      "supplementalSourceId": "osxd-ipados18-pb6",
+      "appearanceDate": "2024-08-28",
+      "disposition": "chronologyApprovedWithReportingLagAndInternalConflictQualifications",
+      "finding": "The OS X Daily headline, lead, installation heading, and installation step repeatedly identify iPadOS 18 Public Beta 6. Its August 29 report supplies the second ordinal lineage only; the August 28 date remains established by the parent evidence, and the isolated stale Public Beta 5 sentence is excluded.",
+      "requiredQualificationIds": [
+        "ipados18-reporting-lag",
+        "ipados18-osxd-stale-pb5-copy"
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "qualificationId": "imore14-living-chronology",
+      "candidateIds": [
+        "candidate:apple:ipados:14.0:public-beta-6",
+        "candidate:apple:ipados:14.0:public-beta-7",
+        "candidate:apple:ipados:14.0:public-beta-8"
+      ],
+      "requiredHandling": "Use the separately dated 2020 history entries and their following paragraphs. Do not use the rolling page's current 2021 title or page-level metadata as an appearance date."
+    },
+    {
+      "qualificationId": "imore15-living-chronology",
+      "candidateIds": [
+        "candidate:apple:ipados:15.0:public-beta-5",
+        "candidate:apple:ipados:15.0:public-beta-7",
+        "candidate:apple:ipados:15.0:public-beta-8"
+      ],
+      "requiredHandling": "Use the separately dated 2021 history entries and their following paragraphs. Do not use the rolling page's current 2022 title or page-level metadata as an appearance date."
+    },
+    {
+      "qualificationId": "iphonetricks-archived-source",
+      "candidateIds": [
+        "candidate:apple:ipados:16.0:public-beta-4"
+      ],
+      "requiredHandling": "Preserve the canonical publisher URL, contemporaneous Internet Archive URL, capture timestamp, and raw hash together; do not present the currently broken live host as directly verified."
+    },
+    {
+      "qualificationId": "ipados17-reporting-lag",
+      "candidateIds": [
+        "candidate:apple:ipados:17.0:public-beta-6"
+      ],
+      "requiredHandling": "Use OS X Daily for the explicit PB6 ordinal only. Keep 2023-08-29 from the parent date evidence; do not create an August 30 duplicate event."
+    },
+    {
+      "qualificationId": "ipados18-reporting-lag",
+      "candidateIds": [
+        "candidate:apple:ipados:18.0:public-beta-6"
+      ],
+      "requiredHandling": "Use OS X Daily for the explicit PB6 ordinal only. Keep 2024-08-28 from the parent date evidence; do not create an August 29 duplicate event."
+    },
+    {
+      "qualificationId": "ipados18-osxd-stale-pb5-copy",
+      "candidateIds": [
+        "candidate:apple:ipados:18.0:public-beta-6"
+      ],
+      "requiredHandling": "Rely on the consistent PB6 headline, lead, installation heading, and installation step. Exclude and preserve as a conflict the isolated stale sentence that says PB5."
+    }
+  ],
+  "integrity": {
+    "validationSha256": "525ecafd49ccd902a3c27014516f0eaf5f7d3a29c689f1e29988a281b5bba6cf",
+    "validationStatus": "passedSelfCheckPendingIndependentReview",
+    "packetAndEvidenceLocksReproduced": 25,
+    "lockFailures": 0
+  },
+  "authorization": {
+    "chronologyReviewEligibleCandidateCountAdded": 9,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdAllocationAllowed": false,
+    "pageBuildAllowed": false,
+    "deploymentAllowed": false
+  },
+  "nextGate": "Repeat the exact production query immediately before any separately authorized mutation. This review approves chronology evidence only."
+}

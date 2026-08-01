@@ -1,0 +1,2917 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+      "title": "macOS Catalina is available today",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2019-10-07T00:00:00.000Z",
+      "topics": ["macOS", "Catalina", "public availability", "features"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes",
+      "title": "macOS Catalina 10.15 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "author": "Apple",
+      "topics": ["macOS", "Catalina", "SDK", "compatibility", "known issues"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103107",
+      "title": "About the security content of macOS Catalina 10.15",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-10-07T00:00:00.000Z",
+      "topics": ["macOS", "Catalina", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/118393",
+      "title": "About watchOS 5 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["watchOS", "5", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103093",
+      "title": "About the security content of watchOS 5.1.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-01-22T00:00:00.000Z",
+      "topics": ["watchOS", "5.1.3", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103664",
+      "title": "About the security content of watchOS 5.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-03-27T00:00:00.000Z",
+      "topics": ["watchOS", "5.2", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103019",
+      "title": "About the security content of watchOS 5.2.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-05-13T00:00:00.000Z",
+      "topics": ["watchOS", "5.2.1", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/118388",
+      "title": "About watchOS 6 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["watchOS", "6", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103210",
+      "title": "About the security content of watchOS 6",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-09-19T00:00:00.000Z",
+      "topics": ["watchOS", "6.0", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103826",
+      "title": "About the security content of watchOS 6.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-10-29T00:00:00.000Z",
+      "topics": ["watchOS", "6.1", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103212",
+      "title": "About the security content of watchOS 6.1.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-12-10T00:00:00.000Z",
+      "topics": ["watchOS", "6.1.1", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/106336",
+      "title": "About Apple TV 4K and Apple TV HD software updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["tvOS", "Apple TV", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103092",
+      "title": "About the security content of tvOS 12.1.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-01-22T00:00:00.000Z",
+      "topics": ["tvOS", "12.1.2", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103566",
+      "title": "About the security content of tvOS 12.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-03-25T00:00:00.000Z",
+      "topics": ["tvOS", "12.2", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103768",
+      "title": "About the security content of tvOS 12.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-05-13T00:00:00.000Z",
+      "topics": ["tvOS", "12.3", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103022",
+      "title": "About the security content of tvOS 13",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-09-24T00:00:00.000Z",
+      "topics": ["tvOS", "13.0", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103772",
+      "title": "About the security content of tvOS 13.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-10-28T00:00:00.000Z",
+      "topics": ["tvOS", "13.2", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103213",
+      "title": "About the security content of tvOS 13.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2019-12-10T00:00:00.000Z",
+      "topics": ["tvOS", "13.3", "security", "CVE"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-10-15",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "macOS Catalina 10.15 became publicly available on October 7, 2019. It split iTunes into Music, Podcasts, and TV apps; introduced Sidecar, Voice Control, Screen Time, Apple Arcade on Mac, Mac Catalyst, Find My, and stronger system and data protections.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+                "locator": "October 7, 2019; launch features; Availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103107",
+                "locator": "macOS Catalina 10.15 — Released October 7, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "The consumer feature record comes from Apple's launch announcement, developer compatibility details come from the 10.15 SDK notes, and vulnerability repairs come from the version-specific advisory. Later Catalina point-release changes and beta-only known issues are not projected onto 10.15.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+                "locator": "macOS Catalina launch feature sections"
+              },
+              {
+                "url": "https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes",
+                "locator": "macOS Catalina 10.15 Release Notes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103107",
+                "locator": "macOS Catalina 10.15 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+          "locator": "UPDATE October 7, 2019"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes",
+          "locator": "macOS Catalina 10.15 Release Notes"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103107",
+          "locator": "Released October 7, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-5-1-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118393",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 5.1.3 was released on January 22, 2019. Apple's consumer history characterizes it as improvements and bug fixes, while the accompanying advisory documents concrete security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.1.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103093",
+                "locator": "Released January 22, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Apple did not enumerate an individual consumer feature for this point release. The article therefore preserves that limited description and records only the security areas explicitly listed in Apple's advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.1.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103093",
+                "locator": "watchOS 5.1.3 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118393",
+          "locator": "watchOS 5.1.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103093",
+          "locator": "Released January 22, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-5-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118393",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 5.2 was released on March 27, 2019 with ECG and irregular-rhythm notification expansion in Hong Kong and parts of Europe, second-generation AirPods support, real-time text calling, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103664",
+                "locator": "Released March 27, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Health-feature availability remained region- and device-dependent. This record names the regions exactly at the level Apple documented and does not treat later market expansions as part of 5.2.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.2; regional availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103664",
+                "locator": "watchOS 5.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118393",
+          "locator": "watchOS 5.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103664",
+          "locator": "Released March 27, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-5-2-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118393",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 5.2.1 was released on May 13, 2019 with additional ECG and irregular-rhythm markets, a Pride face, an Explorer face fix, insecure Bluetooth accessory restrictions, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.2.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103019",
+                "locator": "Released May 13, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "The health additions applied only in the five countries listed by Apple and on compatible hardware. The Bluetooth statement is recorded as a security compatibility change, without guessing which individual accessories were affected.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.2.1; regional availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103019",
+                "locator": "watchOS 5.2.1 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118393",
+          "locator": "watchOS 5.2.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103019",
+          "locator": "Released May 13, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-6-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118388",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 6.0 launched on September 19, 2019 with Cycle Tracking, Noise, Voice Memos, Audiobooks, a watch-native App Store, Activity trends, new workouts and faces, richer Siri results, and more independent system apps.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103210",
+                "locator": "Released September 19, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Apple's notes mark some capabilities as model- or region-dependent; those constraints remain part of the record. Features introduced by later watchOS 6 point releases are excluded.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6; feature availability notes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103210",
+                "locator": "watchOS 6 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118388",
+          "locator": "watchOS 6"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103210",
+          "locator": "Released September 19, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-6-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118388",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 6.1 was released on October 29, 2019. It added AirPods Pro support, extended watchOS 6 to Apple Watch Series 1 and Series 2, and included improvements, bug fixes, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103826",
+                "locator": "Released October 29, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "The hardware-compatibility expansion is specific to watchOS 6 availability on earlier watch models; it does not imply that every watchOS 6 feature worked on every model.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1; feature availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103826",
+                "locator": "watchOS 6.1 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118388",
+          "locator": "watchOS 6.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103826",
+          "locator": "Released October 29, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-6-1-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118388",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 6.1.1 was released on December 10, 2019 as an explicitly security-focused point release. Apple's advisory supplies the concrete affected components and impact classes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103212",
+                "locator": "Released December 10, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Apple did not publish a separate consumer feature list for 6.1.1. This page therefore records the security work without inventing unrelated performance or feature claims.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103212",
+                "locator": "watchOS 6.1.1 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118388",
+          "locator": "watchOS 6.1.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103212",
+          "locator": "Released December 10, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-12-1-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 12.1.2 was released on January 22, 2019. Apple's consumer history describes general performance and stability improvements, while its security advisory provides the detailed technical record.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.1.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103092",
+                "locator": "Released January 22, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Because Apple did not name an individual consumer feature, this article does not infer one. The structured record separates the documented maintenance statement from the documented security fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.1.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103092",
+                "locator": "tvOS 12.1.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 12.1.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103092",
+          "locator": "Released January 22, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-12-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 12.2 was released on March 25, 2019 with Siri playback requests from iPhone and iPad, Lock Screen access to Apple TV Remote controls on iOS 12.2, maintenance work, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103566",
+                "locator": "Released March 25, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Siri availability varied by region, and Lock Screen remote access depended on iOS 12.2. Those dependencies are retained instead of presenting the features as universal Apple TV behavior.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.2; Siri availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103566",
+                "locator": "tvOS 12.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 12.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103566",
+          "locator": "Released March 25, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-12-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 12.3 was released on May 13, 2019 with a redesigned Apple TV app that unified viewing, channels, store access, and recommendations, plus performance, stability, and security work.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103768",
+                "locator": "Released May 13, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Apple noted that the TV app and its individual features were not available in every country or region. The article describes the documented product design without assuming universal service availability.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.3; regional availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103768",
+                "locator": "tvOS 12.3 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 12.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103768",
+          "locator": "Released May 13, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-13-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 13.0 launched on September 24, 2019 with a full-screen previewing Home screen, multiuser profiles and Control Center, Apple Arcade, broader game-controller support, timed Apple Music lyrics, new underwater screen savers, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103022",
+                "locator": "Released September 24, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "The existing 13.0 route maps to Apple's tvOS 13 launch section. Apple Arcade and other services remained subject to regional availability, and later tvOS 13 maintenance changes are not folded into this event.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13; service availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103022",
+                "locator": "tvOS 13 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103022",
+          "locator": "Released September 24, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-13-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 13.2 was released on October 28, 2019. Apple's consumer history lists general performance and stability improvements, while its advisory documents the release's security work.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103772",
+                "locator": "Released October 28, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "No individual consumer feature is named in Apple's 13.2 section. This page retains that evidence boundary and does not convert security-advisory component names into unsupported user-facing feature claims.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103772",
+                "locator": "tvOS 13.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103772",
+          "locator": "Released October 28, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-13-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 13.3 was released on December 10, 2019. Apple's consumer history records general performance and stability improvements, supplemented by a version-specific security advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103213",
+                "locator": "Released December 10, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Apple did not enumerate a new consumer feature for 13.3. The article therefore records only the documented maintenance classification and the separately documented security areas.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103213",
+                "locator": "tvOS 13.3 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103213",
+          "locator": "Released December 10, 2019"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-macos-10-15",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "macOS 10.15 reached the public channel on 2019-10-07. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "macOS Catalina 10.15 became publicly available on October 7, 2019. It split iTunes into Music, Podcasts, and TV apps; introduced Sidecar, Voice Control, Screen Time, Apple Arcade on Mac, Mac Catalyst, Find My, and stronger system and data protections.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+                "locator": "October 7, 2019; launch features; Availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103107",
+                "locator": "macOS Catalina 10.15 — Released October 7, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "The consumer feature record comes from Apple's launch announcement, developer compatibility details come from the 10.15 SDK notes, and vulnerability repairs come from the version-specific advisory. Later Catalina point-release changes and beta-only known issues are not projected onto 10.15.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+                "locator": "macOS Catalina launch feature sections"
+              },
+              {
+                "url": "https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes",
+                "locator": "macOS Catalina 10.15 Release Notes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103107",
+                "locator": "macOS Catalina 10.15 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+          "locator": "UPDATE October 7, 2019"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes",
+          "locator": "macOS Catalina 10.15 Release Notes"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103107",
+          "locator": "Released October 7, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-10-15-dedicated-media-apps",
+          "title": "Music, Podcasts, and TV replace iTunes",
+          "canonicalSummary": "Separate Music, Podcasts, and TV apps replace iTunes as the primary Mac experiences for those media libraries and services.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Catalina divided iTunes' former media roles among dedicated Music, Podcasts, and TV apps while retaining access to existing libraries and store content.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+              "locator": "New Entertainment Apps: Apple Music, Apple Podcasts and Apple TV"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-sidecar",
+          "title": "Sidecar extends the Mac desktop to iPad",
+          "canonicalSummary": "Sidecar can use a compatible iPad as a second Mac display or as Apple Pencil input for supported Mac apps.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new Sidecar workflow extended or mirrored a Mac workspace on iPad over wired or wireless connections and supported tablet-style Pencil input.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+              "locator": "Sidecar: Expand Mac Workspace and Creativity with iPad"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-voice-control",
+          "title": "System-wide Voice Control",
+          "canonicalSummary": "Voice Control provides on-device speech transcription, editing, and interface navigation across macOS.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Catalina added a voice-driven accessibility system with numbered and gridded controls for navigating apps and editing text without conventional input hardware.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+              "locator": "Accessibility: Empowering Everyone to Get the Most from Their Mac"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-mac-catalyst",
+          "title": "Mac Catalyst app framework",
+          "canonicalSummary": "Mac Catalyst lets developers adapt an iPad app into a native Mac app using shared technologies and project resources.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Catalina and Xcode 11 introduced the public Mac Catalyst path for bringing compatible iPad app code and interfaces to macOS.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+              "locator": "Mac Catalyst: Even More Great Apps on Mac"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-screen-time",
+          "title": "Screen Time arrives on Mac",
+          "canonicalSummary": "Screen Time reports app and website activity and supports Downtime, App Limits, and family controls synchronized through iCloud.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release brought device-use reporting and configurable limits to Mac, including cross-device settings and parental visibility through Family Sharing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+              "locator": "Screen Time: Monitor Mac Activity For The Entire Family"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-apple-arcade",
+          "title": "Apple Arcade on Mac",
+          "canonicalSummary": "The Mac App Store gains an Arcade section for downloading and playing games included with an Apple Arcade subscription.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Catalina added Apple Arcade's subscription catalog to Mac with cross-device game progress and support for common keyboard, mouse, and controller inputs.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+              "locator": "Apple Arcade: Now on Mac App Store"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-find-my",
+          "title": "Combined Find My app and offline finding",
+          "canonicalSummary": "Find My combines device and friend location and can help locate a supported sleeping, offline Mac through nearby Apple devices.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Catalina consolidated Apple's location tools and added privacy-preserving Bluetooth-assisted discovery for a missing compatible Mac that was not online.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+              "locator": "Additional Features in macOS Catalina — Find My"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-read-only-system-volume",
+          "title": "Read-only system volume",
+          "canonicalSummary": "macOS system files run from a dedicated read-only volume separated from writable user data.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Catalina separated protected operating-system content from user data on a read-only system volume to reduce unintended or malicious modification.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+              "locator": "Security and Privacy: More User Control Than Ever"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-expanded-data-permissions",
+          "title": "Expanded app data permissions",
+          "canonicalSummary": "Apps must obtain permission before accessing additional categories of user documents and other protected data.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release broadened consent controls around access to user files and paired them with stronger Gatekeeper checks of downloaded software.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2019/10/macos-catalina-is-available-today/",
+              "locator": "Security and Privacy: More User Control Than Ever"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-no-i386-app-code",
+          "title": "32-bit app execution removed",
+          "canonicalSummary": "Apps that execute i386 code no longer run on macOS 10.15, and remaining 32-bit compatibility stubs are nonfunctional.",
+          "category": "compatibility",
+          "action": "removed",
+          "inheritance": "delta",
+          "summary": "Catalina completed the transition away from 32-bit Mac app execution, requiring applications and embedded executable code to support 64-bit architectures.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes",
+              "locator": "General — Deprecations"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-network-extension-transition",
+          "title": "Network Kernel Extension API deprecated",
+          "canonicalSummary": "The legacy Network Kernel Extension API is deprecated in favor of supported modern networking extension technologies.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple marked the Network Kernel Extension API as deprecated, signaling developers to move network-system integrations to newer extension models.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/macos-release-notes/macos-catalina-10_15-release-notes",
+              "locator": "Networking — Deprecations"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-15-security-repairs",
+          "title": "macOS Catalina 10.15 security repairs",
+          "canonicalSummary": "The launch repaired vulnerabilities across graphics and media parsing, networking and printing, privilege boundaries, the kernel, WebKit, and other system components.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The launch repaired vulnerabilities across graphics and media parsing, networking and printing, privilege boundaries, the kernel, WebKit, and other system components.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103107",
+              "locator": "AMD; Audio; CFNetwork; CoreAudio; CUPS; Foundation; Graphics; Kernel; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-5-1-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 5.1.3 reached the public channel on 2019-01-22. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "watchOS 5.1.3 was released on January 22, 2019. Apple's consumer history characterizes it as improvements and bug fixes, while the accompanying advisory documents concrete security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.1.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103093",
+                "locator": "Released January 22, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "Apple did not enumerate an individual consumer feature for this point release. The article therefore preserves that limited description and records only the security areas explicitly listed in Apple's advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.1.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103093",
+                "locator": "watchOS 5.1.3 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118393",
+          "locator": "watchOS 5.1.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103093",
+          "locator": "Released January 22, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-5-1-3-maintenance",
+          "title": "watchOS 5.1.3 maintenance update",
+          "canonicalSummary": "The point release contains general improvements and bug fixes without a separately named consumer feature.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple described watchOS 5.1.3 as a maintenance release and did not publish a more granular consumer-facing fix list.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118393",
+              "locator": "watchOS 5.1.3"
+            }
+          ]
+        },
+        {
+          "key": "watchos-5-1-3-security-repairs",
+          "title": "watchOS 5.1.3 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities involving key storage, media and language processing, sandbox and kernel boundaries, SQLite, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release repaired vulnerabilities involving key storage, media and language processing, sandbox and kernel boundaries, SQLite, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103093",
+              "locator": "AppleKeyStore; Core Media; IOKit; Kernel; Natural Language Processing; SQLite; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-5-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 5.2 reached the public channel on 2019-03-27. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "watchOS 5.2 was released on March 27, 2019 with ECG and irregular-rhythm notification expansion in Hong Kong and parts of Europe, second-generation AirPods support, real-time text calling, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103664",
+                "locator": "Released March 27, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "Health-feature availability remained region- and device-dependent. This record names the regions exactly at the level Apple documented and does not treat later market expansions as part of 5.2.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.2; regional availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103664",
+                "locator": "watchOS 5.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118393",
+          "locator": "watchOS 5.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103664",
+          "locator": "Released March 27, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-5-2-ecg-regional-expansion",
+          "title": "ECG expands to Hong Kong and parts of Europe",
+          "canonicalSummary": "The ECG app became available on supported Apple Watch models in Hong Kong and specified European regions.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 5.2 expanded the regulated ECG feature beyond its earlier markets to Hong Kong and a set of supported European regions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118393",
+              "locator": "watchOS 5.2 — ECG app availability"
+            }
+          ]
+        },
+        {
+          "key": "watchos-5-2-irregular-rhythm-expansion",
+          "title": "Irregular-rhythm notifications expand regionally",
+          "canonicalSummary": "Irregular-rhythm notifications became available in Hong Kong and specified European regions.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release extended irregular-rhythm notifications to Hong Kong and supported parts of Europe, subject to Apple's regional availability.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118393",
+              "locator": "watchOS 5.2 — Irregular heart rhythm notifications"
+            }
+          ]
+        },
+        {
+          "key": "watchos-5-2-airpods-2-support",
+          "title": "Second-generation AirPods support",
+          "canonicalSummary": "Apple Watch gained compatibility support for the second generation of AirPods.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 5.2 added system support for pairing and using Apple's second-generation AirPods with Apple Watch.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118393",
+              "locator": "watchOS 5.2 — AirPods (2nd generation)"
+            }
+          ]
+        },
+        {
+          "key": "watchos-5-2-rtt-calls",
+          "title": "Real-time text for phone calls",
+          "canonicalSummary": "Phone calls on supported configurations gain real-time text communication support.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The update enabled real-time text during compatible phone calls, adding a live typed communication option on Apple Watch.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118393",
+              "locator": "watchOS 5.2 — real-time text (RTT)"
+            }
+          ]
+        },
+        {
+          "key": "watchos-5-2-security-repairs",
+          "title": "watchOS 5.2 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities across contacts and messages, privacy and passcode handling, privilege boundaries, the kernel, fonts, Siri, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release repaired vulnerabilities across contacts and messages, privacy and passcode handling, privilege boundaries, the kernel, fonts, Siri, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103664",
+              "locator": "Contacts; Kernel; Messages; Passcode; Privacy; Sandbox; Siri; TrueTypeScaler; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-5-2-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 5.2.1 reached the public channel on 2019-05-13. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "watchOS 5.2.1 was released on May 13, 2019 with additional ECG and irregular-rhythm markets, a Pride face, an Explorer face fix, insecure Bluetooth accessory restrictions, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.2.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103019",
+                "locator": "Released May 13, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "The health additions applied only in the five countries listed by Apple and on compatible hardware. The Bluetooth statement is recorded as a security compatibility change, without guessing which individual accessories were affected.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118393",
+                "locator": "watchOS 5.2.1; regional availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103019",
+                "locator": "watchOS 5.2.1 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118393",
+          "locator": "watchOS 5.2.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103019",
+          "locator": "Released May 13, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-5-2-1-ecg-five-countries",
+          "title": "ECG expands to five European countries",
+          "canonicalSummary": "The ECG app became available in Croatia, Czech Republic, Iceland, Poland, and Slovakia on supported watches.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple expanded ECG availability to five additional European markets while retaining compatible-device and regional requirements.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118393",
+              "locator": "watchOS 5.2.1 — ECG app availability"
+            }
+          ]
+        },
+        {
+          "key": "watchos-5-2-1-irregular-rhythm-five-countries",
+          "title": "Irregular-rhythm notifications expand to five countries",
+          "canonicalSummary": "Irregular-rhythm notifications became available in Croatia, Czech Republic, Iceland, Poland, and Slovakia.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release brought irregular-rhythm notifications to the same five newly supported European markets.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118393",
+              "locator": "watchOS 5.2.1 — Irregular heart rhythm notifications"
+            }
+          ]
+        },
+        {
+          "key": "watchos-5-2-1-pride-face",
+          "title": "New Pride watch face",
+          "canonicalSummary": "A new Apple Watch face presents a visual design inspired by the rainbow flag.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 5.2.1 added the year's Pride-themed face to the available Apple Watch face collection.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118393",
+              "locator": "watchOS 5.2.1 — Pride face"
+            }
+          ]
+        },
+        {
+          "key": "watchos-5-2-1-explorer-face-numerals",
+          "title": "Explorer face numeral display fixed",
+          "canonicalSummary": "A display defect that hid numerals on the Explorer watch face for some users was corrected.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update restored missing number markers on the Explorer face for configurations affected by the rendering issue.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118393",
+              "locator": "watchOS 5.2.1 — Explorer face fix"
+            }
+          ]
+        },
+        {
+          "key": "watchos-5-2-1-insecure-bluetooth-accessories",
+          "title": "Insecure Bluetooth accessories disabled",
+          "canonicalSummary": "Accessories that rely on insecure Bluetooth connections are prevented from connecting.",
+          "category": "security",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "watchOS 5.2.1 tightened Bluetooth accessory compatibility by disabling connections Apple classified as insecure.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118393",
+              "locator": "watchOS 5.2.1 — Bluetooth accessory security"
+            }
+          ]
+        },
+        {
+          "key": "watchos-5-2-1-security-repairs",
+          "title": "watchOS 5.2.1 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities in privileged file access, audio and disk-image parsing, the kernel, Mail and Messages handling, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release repaired vulnerabilities in privileged file access, audio and disk-image parsing, the kernel, Mail and Messages handling, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103019",
+              "locator": "AppleFileConduit; CoreAudio; Disk Images; Kernel; Mail; Mail Message Framework; Messages; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-6-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 6.0 reached the public channel on 2019-09-19. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "watchOS 6.0 launched on September 19, 2019 with Cycle Tracking, Noise, Voice Memos, Audiobooks, a watch-native App Store, Activity trends, new workouts and faces, richer Siri results, and more independent system apps.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103210",
+                "locator": "Released September 19, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "Apple's notes mark some capabilities as model- or region-dependent; those constraints remain part of the record. Features introduced by later watchOS 6 point releases are excluded.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6; feature availability notes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103210",
+                "locator": "watchOS 6 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118388",
+          "locator": "watchOS 6"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103210",
+          "locator": "Released September 19, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-6-cycle-tracking",
+          "title": "Cycle Tracking app",
+          "canonicalSummary": "Cycle Tracking records menstrual-cycle information and can provide period and fertile-window predictions and notifications.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 6 added on-watch cycle logging for flow, symptoms, spotting, and optional fertility metrics, with prediction and notification tools.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6 — Cycle Tracking"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-noise-app",
+          "title": "Noise app and exposure notifications",
+          "canonicalSummary": "The Noise app measures environmental sound levels and can warn when sustained exposure may affect hearing.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Supported watches gained live decibel readings and configurable notifications for environmental sound levels that could pose a long-term hearing risk.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6 — Noise"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-voice-memos",
+          "title": "Voice Memos on Apple Watch",
+          "canonicalSummary": "Apple Watch can record, play, rename, and synchronize voice memos through iCloud.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new watch app made it possible to capture and manage voice recordings directly from the wrist and synchronize them with other Apple devices.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6 — Voice Memos"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-audiobooks",
+          "title": "Audiobooks app",
+          "canonicalSummary": "Apple Watch can synchronize and stream audiobooks from a user's Apple Books library.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 6 added audiobook playback with automatic synchronization of current listening and streaming over Wi-Fi or cellular connections.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6 — Audiobooks"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-app-store",
+          "title": "App Store on Apple Watch",
+          "canonicalSummary": "A watch-native App Store supports discovering, reviewing, and installing Apple Watch apps without using the paired iPhone.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release brought app discovery and installation to the watch itself, including curated collections, search, screenshots, reviews, and Sign in with Apple.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6 — App Store"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-activity-trends",
+          "title": "Long-term Activity trends",
+          "canonicalSummary": "Activity trends compare recent movement and fitness metrics with longer-term performance and offer coaching when trends decline.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 6 and the paired iPhone Activity app added trend arrows based on 90-day averages compared with the preceding year.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6 — Activity"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-workout-improvements",
+          "title": "Workout elevation and persistent Stopwatch",
+          "canonicalSummary": "Selected outdoor workouts gain current elevation, and Stopwatch can remain visible on the watch face during a workout.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The update added live elevation to supported outdoor activities and made timing information easier to keep visible during sessions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6 — Workout"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-siri-shazam-web",
+          "title": "Siri song identification and web results",
+          "canonicalSummary": "Siri can identify nearby music with Shazam and display a limited set of web search results on Apple Watch.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "watchOS 6 broadened Siri's on-watch answers with Shazam-based song information and tappable web results formatted for the smaller display.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6 — Siri"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-new-faces-complications",
+          "title": "New faces, chimes, and complications",
+          "canonicalSummary": "New face designs, spoken time, periodic chimes, face reordering, and additional complications expand watch customization.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release introduced several faces for supported models and added timekeeping and complication options, including new app and weather data.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6 — Watch Faces"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-calculator-and-system-apps",
+          "title": "Calculator and expanded independent apps",
+          "canonicalSummary": "Calculator, updated Podcasts, Maps, Now Playing, Find People, and Reminders add more tasks that can be completed directly on Apple Watch.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "watchOS 6 added a calculator with tip and split tools and made several built-in apps more capable without requiring interaction on the paired iPhone.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6 — Other features and improvements"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-0-security-repairs",
+          "title": "watchOS 6 security repairs",
+          "canonicalSummary": "The launch repaired vulnerabilities across audio and text processing, networking, privilege and kernel boundaries, local discovery, WebKit, and wireless privacy.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The launch repaired vulnerabilities across audio and text processing, networking, privilege and kernel boundaries, local discovery, WebKit, and wireless privacy.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103210",
+              "locator": "Audio; CFNetwork; CoreAudio; Foundation; Kernel; mDNSResponder; UIFoundation; WebKit; Wi-Fi"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-6-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 6.1 reached the public channel on 2019-10-29. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "watchOS 6.1 was released on October 29, 2019. It added AirPods Pro support, extended watchOS 6 to Apple Watch Series 1 and Series 2, and included improvements, bug fixes, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103826",
+                "locator": "Released October 29, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "The hardware-compatibility expansion is specific to watchOS 6 availability on earlier watch models; it does not imply that every watchOS 6 feature worked on every model.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1; feature availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103826",
+                "locator": "watchOS 6.1 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118388",
+          "locator": "watchOS 6.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103826",
+          "locator": "Released October 29, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-6-1-airpods-pro",
+          "title": "AirPods Pro support",
+          "canonicalSummary": "Apple Watch gained compatibility support for the first generation of AirPods Pro.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 6.1 added system-level compatibility for Apple's newly introduced AirPods Pro.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6.1 — AirPods Pro"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-1-series-1-2-support",
+          "title": "watchOS 6 reaches Series 1 and Series 2",
+          "canonicalSummary": "Apple Watch Series 1 and Series 2 became eligible to install the watchOS 6 release line.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The 6.1 release expanded watchOS 6 availability to Apple's earlier Series 1 and Series 2 watches.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6.1 — Apple Watch Series 1 and Series 2"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-1-maintenance",
+          "title": "watchOS 6.1 maintenance fixes",
+          "canonicalSummary": "The update includes general improvements and bug fixes in addition to its named compatibility changes.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple classified watchOS 6.1 as including maintenance work but did not enumerate a consumer-facing fix list beyond the named additions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6.1"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-1-security-repairs",
+          "title": "watchOS 6.1 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities in accounts and App Store authentication, AirDrop, audio, contacts, file-system and kernel boundaries, VoiceOver, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release repaired vulnerabilities in accounts and App Store authentication, AirDrop, audio, contacts, file-system and kernel boundaries, VoiceOver, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103826",
+              "locator": "Accounts; AirDrop; App Store; Audio; Contacts; File System Events; Kernel; VoiceOver; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-6-1-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 6.1.1 reached the public channel on 2019-12-10. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "watchOS 6.1.1 was released on December 10, 2019 as an explicitly security-focused point release. Apple's advisory supplies the concrete affected components and impact classes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103212",
+                "locator": "Released December 10, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "Apple did not publish a separate consumer feature list for 6.1.1. This page therefore records the security work without inventing unrelated performance or feature claims.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103212",
+                "locator": "watchOS 6.1.1 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118388",
+          "locator": "watchOS 6.1.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103212",
+          "locator": "Released December 10, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-6-1-1-security-repairs",
+          "title": "watchOS 6.1.1 security repairs",
+          "canonicalSummary": "The release repaired issues involving Siri call routing, network policy, proxy privileges, FaceTime media, the kernel, XML and packet-capture libraries, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release repaired issues involving Siri call routing, network policy, proxy privileges, FaceTime media, the kernel, XML and packet-capture libraries, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103212",
+              "locator": "CallKit; CFNetwork; CFNetwork Proxies; FaceTime; Kernel; libexpat; libpcap; Security; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-12-1-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 12.1.2 reached the public channel on 2019-01-22. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "tvOS 12.1.2 was released on January 22, 2019. Apple's consumer history describes general performance and stability improvements, while its security advisory provides the detailed technical record.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.1.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103092",
+                "locator": "Released January 22, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "Because Apple did not name an individual consumer feature, this article does not infer one. The structured record separates the documented maintenance statement from the documented security fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.1.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103092",
+                "locator": "tvOS 12.1.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 12.1.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103092",
+          "locator": "Released January 22, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-12-1-2-performance-stability",
+          "title": "tvOS 12.1.2 performance and stability work",
+          "canonicalSummary": "The update contains general performance and stability improvements without a separately named consumer feature.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple characterized tvOS 12.1.2 as a maintenance release and did not publish a more granular consumer-facing list.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 12.1.2"
+            }
+          ]
+        },
+        {
+          "key": "tvos-12-1-2-security-repairs",
+          "title": "tvOS 12.1.2 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities involving key storage, animation and media processing, sandbox and kernel boundaries, SQLite, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release repaired vulnerabilities involving key storage, animation and media processing, sandbox and kernel boundaries, SQLite, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103092",
+              "locator": "AppleKeyStore; CoreAnimation; Core Media; IOKit; Kernel; SQLite; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-12-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 12.2 reached the public channel on 2019-03-25. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "tvOS 12.2 was released on March 25, 2019 with Siri playback requests from iPhone and iPad, Lock Screen access to Apple TV Remote controls on iOS 12.2, maintenance work, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103566",
+                "locator": "Released March 25, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "Siri availability varied by region, and Lock Screen remote access depended on iOS 12.2. Those dependencies are retained instead of presenting the features as universal Apple TV behavior.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.2; Siri availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103566",
+                "locator": "tvOS 12.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 12.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103566",
+          "locator": "Released March 25, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-12-2-siri-ios-playback-control",
+          "title": "Siri playback requests from iPhone and iPad",
+          "canonicalSummary": "Siri on a compatible iPhone or iPad can start requested video on Apple TV and control current playback.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "tvOS 12.2 extended cross-device Siri control so a nearby iOS device could request Apple TV content and manage playback.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 12.2 — Siri"
+            }
+          ]
+        },
+        {
+          "key": "tvos-12-2-lock-screen-remote",
+          "title": "Apple TV Remote on the iOS Lock Screen",
+          "canonicalSummary": "An iPhone or iPad running iOS 12.2 can expose Apple TV playback controls directly from its Lock Screen.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The paired iOS 12.2 experience made common Apple TV Remote actions available from the Lock Screen for quicker playback control.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 12.2 — Apple TV Remote"
+            }
+          ]
+        },
+        {
+          "key": "tvos-12-2-performance-stability",
+          "title": "tvOS 12.2 performance and stability work",
+          "canonicalSummary": "The release includes general performance and stability improvements alongside its named remote-control features.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented a general maintenance component for tvOS 12.2 without enumerating the individual fixes.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 12.2"
+            }
+          ]
+        },
+        {
+          "key": "tvos-12-2-security-repairs",
+          "title": "tvOS 12.2 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities across network authentication, privilege and kernel boundaries, privacy and passcode handling, Siri, fonts, sandboxing, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release repaired vulnerabilities across network authentication, privilege and kernel boundaries, privacy and passcode handling, Siri, fonts, sandboxing, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103566",
+              "locator": "802.1X; Kernel; Passcode; Privacy; Sandbox; Siri; TrueTypeScaler; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-12-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 12.3 reached the public channel on 2019-05-13. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "tvOS 12.3 was released on May 13, 2019 with a redesigned Apple TV app that unified viewing, channels, store access, and recommendations, plus performance, stability, and security work.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103768",
+                "locator": "Released May 13, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "Apple noted that the TV app and its individual features were not available in every country or region. The article describes the documented product design without assuming universal service availability.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 12.3; regional availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103768",
+                "locator": "tvOS 12.3 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 12.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103768",
+          "locator": "Released May 13, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-12-3-redesigned-tv-app",
+          "title": "Redesigned Apple TV app",
+          "canonicalSummary": "The Apple TV app consolidates shows, movies, selected channel subscriptions, store purchases and rentals, and personalized recommendations.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "tvOS 12.3 introduced a new TV app structure intended to serve as one viewing hub across personal libraries, channels, the iTunes Store, and recommendations.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 12.3 — Apple TV app"
+            }
+          ]
+        },
+        {
+          "key": "tvos-12-3-performance-stability",
+          "title": "tvOS 12.3 performance and stability work",
+          "canonicalSummary": "The release includes general performance and stability improvements in addition to the redesigned TV app.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented maintenance work for tvOS 12.3 but did not enumerate the individual performance or stability corrections.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 12.3"
+            }
+          ]
+        },
+        {
+          "key": "tvos-12-3-security-repairs",
+          "title": "tvOS 12.3 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities across privileged file access, Bluetooth, audio and disk-image parsing, the kernel, messaging, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release repaired vulnerabilities across privileged file access, Bluetooth, audio and disk-image parsing, the kernel, messaging, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103768",
+              "locator": "AppleFileConduit; Bluetooth; CoreAudio; Disk Images; Kernel; Mail; Messages; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-13-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 13.0 reached the public channel on 2019-09-24. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "tvOS 13.0 launched on September 24, 2019 with a full-screen previewing Home screen, multiuser profiles and Control Center, Apple Arcade, broader game-controller support, timed Apple Music lyrics, new underwater screen savers, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103022",
+                "locator": "Released September 24, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "The existing 13.0 route maps to Apple's tvOS 13 launch section. Apple Arcade and other services remained subject to regional availability, and later tvOS 13 maintenance changes are not folded into this event.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13; service availability note"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103022",
+                "locator": "tvOS 13 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103022",
+          "locator": "Released September 24, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-13-home-screen-previews",
+          "title": "Full-screen Home screen previews",
+          "canonicalSummary": "Top-row apps can present full-screen previews with audio and interactive selections on the Home screen.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "tvOS 13 redesigned top-row presentation around full-screen previews for highlighted movies, music, games, and other supported content.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13 — Home screen"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-multiuser",
+          "title": "Multiuser Apple TV profiles",
+          "canonicalSummary": "Multiple household users can switch to personalized Up Next lists, Apple Music libraries, and other supported experiences.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release added user switching so household members could retain separate media recommendations and listening contexts on one Apple TV.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13 — Multiuser"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-control-center",
+          "title": "Apple TV Control Center",
+          "canonicalSummary": "A Control Center opened from the Siri Remote provides user switching, audio choices, music controls, and sleep access.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "tvOS 13 introduced an overlay for common system tasks and made switching among the new household profiles easier.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13 — Control Center"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-apple-arcade",
+          "title": "Apple Arcade on Apple TV",
+          "canonicalSummary": "Apple TV gains access to games included in an Apple Arcade subscription through its App Store experience.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The launch brought Apple's game-subscription catalog to the television platform with compatible cross-device game access.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13 — Apple Arcade"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-console-controller-support",
+          "title": "PlayStation and Xbox controller support",
+          "canonicalSummary": "Apple TV supports compatible PlayStation DualShock 4 and Xbox Wireless Controller models over Bluetooth.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "tvOS 13 broadened game input beyond existing controllers by adding support for widely used PlayStation and Xbox wireless models.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13 — Game controllers"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-apple-music-timed-lyrics",
+          "title": "Time-synchronized Apple Music lyrics",
+          "canonicalSummary": "Apple Music can display lyrics synchronized with playback and let listeners jump to a selected verse.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Apple Music experience added animated, time-aligned lyrics and direct navigation within a song by selecting a lyric line.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13 — Apple Music"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-underwater-screensavers",
+          "title": "Underwater aerial screen savers",
+          "canonicalSummary": "The Aerial collection gains underwater video from multiple marine locations with location labels and browsing controls.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "tvOS 13 expanded Apple TV's screen-saver library from aerial landscapes to include high-resolution underwater scenes.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13 — Screen savers"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-0-security-repairs",
+          "title": "tvOS 13 security repairs",
+          "canonicalSummary": "The launch repaired vulnerabilities across firmware, audio and text processing, network handling, privilege and kernel boundaries, local discovery, WebKit, and wireless privacy.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The launch repaired vulnerabilities across firmware, audio and text processing, network handling, privilege and kernel boundaries, local discovery, WebKit, and wireless privacy.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103022",
+              "locator": "AppleFirmwareUpdateKext; Audio; CFNetwork; CoreAudio; Kernel; mDNSResponder; UIFoundation; WebKit; Wi-Fi"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-13-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 13.2 reached the public channel on 2019-10-28. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "tvOS 13.2 was released on October 28, 2019. Apple's consumer history lists general performance and stability improvements, while its advisory documents the release's security work.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103772",
+                "locator": "Released October 28, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "No individual consumer feature is named in Apple's 13.2 section. This page retains that evidence boundary and does not convert security-advisory component names into unsupported user-facing feature claims.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103772",
+                "locator": "tvOS 13.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103772",
+          "locator": "Released October 28, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-13-2-performance-stability",
+          "title": "tvOS 13.2 performance and stability work",
+          "canonicalSummary": "The point release contains general performance and stability improvements without a named consumer feature.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented tvOS 13.2 as a maintenance release and did not provide a more granular consumer-facing list.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13.2"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-2-security-repairs",
+          "title": "tvOS 13.2 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities in accounts and App Store authentication, audio and video processing, file-system and kernel boundaries, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release repaired vulnerabilities in accounts and App Store authentication, audio and video processing, file-system and kernel boundaries, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103772",
+              "locator": "Accounts; App Store; Audio; AVEVideoEncoder; File System Events; Kernel; WebKit; WebKit Process Model"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-13-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 13.3 reached the public channel on 2019-12-10. This article records Apple's version-labeled feature or maintenance notes and the accompanying first-party security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "tvOS 13.3 was released on December 10, 2019. Apple's consumer history records general performance and stability improvements, supplemented by a version-specific security advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103213",
+                "locator": "Released December 10, 2019"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What the evidence supports"
+          },
+          {
+            "text": "Apple did not enumerate a new consumer feature for 13.3. The article therefore records only the documented maintenance classification and the separately documented security areas.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103213",
+                "locator": "tvOS 13.3 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103213",
+          "locator": "Released December 10, 2019"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-13-3-performance-stability",
+          "title": "tvOS 13.3 performance and stability work",
+          "canonicalSummary": "The point release contains general performance and stability improvements without a named consumer feature.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented tvOS 13.3 as a maintenance release and did not publish an itemized consumer-facing fix list.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13.3"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-3-security-repairs",
+          "title": "tvOS 13.3 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities in network policy and proxies, FaceTime media, the kernel, XML and packet-capture libraries, privilege boundaries, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release repaired vulnerabilities in network policy and proxies, FaceTime media, the kernel, XML and packet-capture libraries, privilege boundaries, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled consumer, developer, or security documentation to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103213",
+              "locator": "CFNetwork; CFNetwork Proxies; FaceTime; Kernel; libexpat; libpcap; Security; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:43:47Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

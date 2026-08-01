@@ -1,7 +1,7 @@
 {
-  "name": "beta-cadence",
+  "name": "version-record",
   "version": "1.0.0",
-  "description": "Apple operating-system beta and public release date tracker",
+  "description": "Source-backed software release history and notes archive",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -13,11 +13,12 @@
     "data:build:check": "tsx scripts/build-release-data.ts",
     "data:validate": "tsx scripts/validate-release-data.ts",
     "forecast:validate": "tsx scripts/validate-forecasts.ts",
-    "sanity:backfill:2026:check": "sanity exec scripts/backfill-2026-releases.ts --with-user-token",
-    "sanity:backfill:2026:apply": "sanity exec scripts/backfill-2026-releases.ts --with-user-token -- --apply",
+    "migration:events:plan": "tsx scripts/plan-release-event-migration.ts",
+    "research:validate": "node --import tsx scripts/validate-research-batches.ts",
+    "sanity:coverage:report": "sanity exec scripts/report-content-coverage.ts --with-user-token --",
+    "sanity:launch:check": "sanity exec scripts/ingest-launch-content.ts --with-user-token -- --content scripts/apple-launch-content-2026.json",
     "sanity:history:check": "sanity exec scripts/reconcile-release-history.ts --with-user-token",
-    "sanity:history:apply": "sanity exec scripts/reconcile-release-history.ts --with-user-token -- --apply",
-    "sanity:seed": "sanity exec scripts/seed-sanity.ts --with-user-token"
+    "sanity:history:apply": "sanity exec scripts/reconcile-release-history.ts --with-user-token -- --apply"
   },
   "repository": {
     "type": "git",
@@ -29,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/fosbrader/apple-os-dates/issues"
   },
-  "homepage": "https://www.betacadence.com/",
+  "homepage": "https://www.versionrecord.com/",
   "dependencies": {
     "@sanity/image-url": "^2.0.3",
     "@sanity/vision": "^5.10.0",

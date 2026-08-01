@@ -1,0 +1,131 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-ipados-point-12-14-followup",
+  "validatedAt": "2026-07-31T07:11:57.193Z",
+  "validator": "codex-independent-review-ios-ipados-point-12-14-followup",
+  "independentOfResearcher": true,
+  "reviewPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/independent-review.json",
+  "reviewSha256": "01c152fe320e9c94f8ad3abbe5f3ee94502688e85998dab6987332e43736f099",
+  "queryScriptPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/independent-review-query.ts",
+  "queryScriptSha256": "827043ca97fbac03a9fc6ba80202e3aa4fc908b550e2d344fb52212f59a0a0e1",
+  "status": "passedWithThreeBlockedCandidates",
+  "overallAssessment": "readyForIntegrationOfExplicitlyApprovedSubsetOnly",
+  "statistics": {
+    "mappingCount": 40,
+    "candidateReviewCount": 40,
+    "chronologyApprovedCandidateCount": 37,
+    "blockedCandidateCount": 3,
+    "identityCorrectionCount": 0,
+    "sequenceBoundaryReviewCount": 23,
+    "retainedParentExclusionCount": 45,
+    "packetLockCountVerified": 49,
+    "rawEvidenceLockCountVerified": 30,
+    "selectedTextHashCountVerified": 30,
+    "claimEvidenceHashCountVerified": 43,
+    "freshProductionExactMatchCount": 0
+  },
+  "checks": {
+    "reviewJsonParsed": true,
+    "candidateIdsUnique": true,
+    "exactMappingCoverage": true,
+    "approvedAndBlockedPartitionDisjoint": true,
+    "approvedAndBlockedPartitionExhaustive": true,
+    "approvedCountMatchesSummary": true,
+    "blockedCountMatchesSummary": true,
+    "allCandidateEvidenceArraysPresent": true,
+    "allCandidateEvidenceRefsResolve": true,
+    "allCandidateEvidenceRefsHaveReasons": true,
+    "allApprovedCandidatesHaveTwoIndependentExactLineages": true,
+    "allBlockedCandidatesHaveReasonCodes": true,
+    "blockedCandidatesNotAuthorized": true,
+    "parentExclusionsPreserved": true,
+    "pairedPlatformsIndependentlyProven": true,
+    "publicOrdinalNeverDerivedFromDeveloperOrdinal": true,
+    "publicOrdinalNeverDerivedFromGenericPublicAvailability": true,
+    "publicOrdinalNeverDerivedFromBuildAlignment": true,
+    "americaLosAngelesDateRuleApplied": true,
+    "terminalAndSkipBoundariesPreserved": true,
+    "allParentPinsMatchDisk": true,
+    "allPacketLocksReproduced": true,
+    "allRawLocksReproduced": true,
+    "allSelectedTextAndClaimHashesReproduced": true,
+    "freshPublishedNoCdnProductionQueryCompleted": true,
+    "allTargetParentsFoundInProduction": true,
+    "allFortyExactTargetMatchesRemainZero": true,
+    "sanityMutationPerformed": false,
+    "pageBuildPerformed": false,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "blockedCandidates": [
+    {
+      "candidateId": "candidate:apple:ios:14.3:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": ["purudo-ios-ipados-14-3-pb3"],
+      "nonQualifyingSourceIds": ["osxd-ios-ipados-14-3-pb3", "mr-14-3-pb3"]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.3:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": ["purudo-ios-ipados-14-3-pb3"],
+      "nonQualifyingSourceIds": ["osxd-ios-ipados-14-3-pb3", "mr-14-3-pb3"]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.5:public-beta-6",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": ["purudo-ios-ipados-14-5-pb6"],
+      "nonQualifyingSourceIds": ["osxd-ios-ipados-14-5-pb6", "mr-14-5-pb6"]
+    }
+  ],
+  "issuesFound": [
+    {
+      "severity": "high",
+      "issue": "The follow-up research classified OS X Daily's generic beta-number plus public/developer audience wording as displayed public-ordinal evidence.",
+      "affectedCandidateCount": 3,
+      "impact": "Approving those mappings would infer a public ordinal rather than document one.",
+      "resolution": "The independent review blocks the three candidates until a second exact public-ordinal lineage is captured."
+    },
+    {
+      "severity": "low",
+      "issue": "iTopnews has a null structured publishedAt value.",
+      "affectedCandidateCount": 1,
+      "impact": "The date cannot be validated from the structured field alone.",
+      "resolution": "The retained raw article visibly shows 23.03.2021 21:07; the independently timestamped Purudo source corroborates March 23 Pacific."
+    },
+    {
+      "severity": "low",
+      "issue": "The iMore iOS 14 history contains copied version text and a May 11 date disagreement.",
+      "affectedCandidateCount": 3,
+      "impact": "Unqualified use could introduce wrong versions or dates.",
+      "resolution": "Only the exact June 29 iOS 14.7 PB4 heading is selected; May 10 iOS/iPadOS 14.6 PB3 is established by iCulture and Purudo."
+    }
+  ],
+  "productionReconciliation": {
+    "queriedAt": "2026-07-31T07:11:57.193Z",
+    "perspective": "published",
+    "useCdn": false,
+    "projectId": "lh3yswzu",
+    "dataset": "production",
+    "totalReleaseEvents": 2068,
+    "targetVersionCount": 23,
+    "targetParentsFound": 23,
+    "scopedReleaseEvents": 134,
+    "scopedPublicBetaEvents": 2,
+    "exactRouteMatches": 0,
+    "exactFullMatches": 0,
+    "sanityMutationPerformed": false
+  },
+  "requiredCaveats": [
+    "Only the thirty-seven explicitly approved identities may enter a later integration queue.",
+    "The three blocked identities require a second exact independent public-ordinal lineage.",
+    "All parent skips, legacy labels, existing-match exclusions, date qualifications, and terminal boundaries remain mandatory.",
+    "A fresh published, useCdn:false exact production query is still required immediately before any separately authorized write."
+  ],
+  "errors": [],
+  "authorization": {
+    "sanityMutationAllowed": false,
+    "pageBuildsAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  }
+}

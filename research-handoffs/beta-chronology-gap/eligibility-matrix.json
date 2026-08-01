@@ -1,0 +1,283 @@
+{
+  "formatVersion": "1.0",
+  "programId": "apple-beta-chronology-gap",
+  "generatedAt": "2026-07-31T02:35:41Z",
+  "interpretation": {
+    "eligible": "The channel can produce a modeled releaseEvent from this boundary forward when an actual appearance is evidenced.",
+    "notYetEligible": "The named recurring public/developer program had not begun for this modeled platform. Private seeds may still require separate classification.",
+    "unresolved": "Available evidence conflicts or does not establish a reliable channel boundary.",
+    "corpusBoundary": "The earliest event currently modeled by the site; it is not necessarily the first developer preview in the platform's complete history.",
+    "scopeRule": "Eligibility never proves that every version or ordinal existed. Research each major, point, and patch cycle independently."
+  },
+  "platforms": [
+    {
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "developerBeta": {
+        "status": "eligible",
+        "modeledFrom": {
+          "version": "2.0",
+          "appearanceDate": "2008-03-06",
+          "label": "iPhone 2.0 Software Beta"
+        },
+        "boundaryType": "corpusBoundary",
+        "confidence": "high",
+        "anchorSourceIds": [
+          "source-apple-iphone-2-beta"
+        ],
+        "notes": [
+          "The Apple announcement establishes immediate beta availability to selected developers and enterprise customers.",
+          "Do not use this row to deny the existence of earlier internal, partner, or developer previews outside the current model."
+        ]
+      },
+      "publicBeta": {
+        "status": "eligible",
+        "eligibleFrom": {
+          "version": "8.3",
+          "appearanceDate": "2015-03-12",
+          "label": "Public Beta 1"
+        },
+        "boundaryType": "first recurring iOS public-beta program appearance",
+        "confidence": "high",
+        "anchorSourceIds": [
+          "source-macrumors-ios83-public-program",
+          "source-engadget-ios83-public-program"
+        ],
+        "notes": [
+          "Initial access was limited or invitation-based within Apple's public beta program; this still establishes the public channel.",
+          "The first production publicBeta event currently appears at iOS 11.0, so iOS 8.3 through the earlier iOS 11 cycles require gap research."
+        ]
+      },
+      "researchRangeRule": "Audit every major, point, and patch cycle from iOS 2.0 for developer beta and iOS 8.3 for public beta."
+    },
+    {
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "developerBeta": {
+        "status": "eligible",
+        "modeledFrom": {
+          "version": "13.0",
+          "appearanceDate": "2019-06-03",
+          "label": "Developer Preview"
+        },
+        "boundaryType": "first separately named iPadOS cycle",
+        "confidence": "high",
+        "anchorSourceIds": [
+          "source-apple-ipados-preview-2019"
+        ],
+        "notes": [
+          "Pre-iPadOS iPad software betas belong to the iOS platform history and must not be duplicated retroactively as iPadOS events."
+        ]
+      },
+      "publicBeta": {
+        "status": "eligible",
+        "eligibleFrom": {
+          "version": "13.0",
+          "appearanceDate": "2019-06-24",
+          "label": "Public Beta 1"
+        },
+        "boundaryType": "first separately named iPadOS public beta",
+        "confidence": "high",
+        "anchorSourceIds": [
+          "source-apple-ipados-preview-2019",
+          "source-macrumors-ipados13-first-public"
+        ],
+        "notes": [
+          "Apple announced a June developer preview and a public beta the following month; contemporary coverage dates the first public appearance to June 24."
+        ]
+      },
+      "researchRangeRule": "Audit every iPadOS major, point, and patch cycle from iPadOS 13.0 for both channels."
+    },
+    {
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "developerBeta": {
+        "status": "eligible",
+        "modeledFrom": {
+          "version": "10.6",
+          "appearanceDate": "2008-06-09",
+          "label": "Developer Preview"
+        },
+        "boundaryType": "corpusBoundary",
+        "confidence": "high",
+        "anchorSourceIds": [
+          "source-apple-snow-leopard-preview",
+          "source-macrumors-snow-leopard-seed"
+        ],
+        "notes": [
+          "Earlier Mac OS X developer previews likely exist and require a separate corpus-expansion project.",
+          "Do not describe 10.6 as the beginning of Mac developer testing."
+        ]
+      },
+      "publicBeta": {
+        "status": "eligible",
+        "eligibleFrom": {
+          "version": "10.9.3",
+          "appearanceDate": "2014-04-22",
+          "label": "OS X Beta Seed Program"
+        },
+        "boundaryType": "first open recurring OS X seed program for end users",
+        "confidence": "high",
+        "anchorSourceIds": [
+          "source-macworld-osx-1093-beta-seed",
+          "source-ars-osx-1093-beta-seed"
+        ],
+        "notes": [
+          "OS X Yosemite 10.10 was the first major-version public preview in the recurring era, not the beginning of the open program.",
+          "The 2000 Mac OS X Public Beta was a separately sold preview product. It requires an explicit modeling decision and must not automatically be normalized into the later recurring publicBeta channel."
+        ],
+        "separateHistoricalBoundary": {
+          "version": "Mac OS X Public Beta",
+          "appearanceDate": "2000-09-13",
+          "status": "separateModelingDecision",
+          "anchorSourceIds": [
+            "source-apple-macosx-public-beta-2000"
+          ]
+        }
+      },
+      "researchRangeRule": "Audit developer events from the current 10.6 corpus boundary and public-beta appearances from 10.9.3; separately scope earlier developer previews and the 2000 preview product."
+    },
+    {
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "developerBeta": {
+        "status": "eligible",
+        "modeledFrom": {
+          "version": "2.0",
+          "appearanceDate": "2015-06-08",
+          "label": "Developer Beta 1"
+        },
+        "boundaryType": "first modeled watchOS developer cycle",
+        "confidence": "high",
+        "anchorSourceIds": [
+          "source-apple-watchos2-preview"
+        ],
+        "notes": [
+          "Research should preserve device/support limitations that affected who could install a seed without reclassifying the developer channel."
+        ]
+      },
+      "publicBeta": {
+        "status": "eligible",
+        "eligibleFrom": {
+          "version": "7.0",
+          "appearanceDate": "2020-08-10",
+          "label": "Public Beta 1"
+        },
+        "boundaryType": "first watchOS public beta",
+        "confidence": "high",
+        "anchorSourceIds": [
+          "source-apple-watchos7-first-public-announcement",
+          "source-macrumors-watchos7-first-public",
+          "source-9to5mac-watchos7-first-public"
+        ],
+        "notes": [
+          "Apple's announcement explicitly described watchOS 7 as the first public-beta program for Apple Watch."
+        ]
+      },
+      "researchRangeRule": "Audit developer appearances from watchOS 2 and public-beta appearances from watchOS 7 across major, point, and patch cycles."
+    },
+    {
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "developerBeta": {
+        "status": "eligible",
+        "modeledFrom": {
+          "version": "9.0",
+          "appearanceDate": "2015-09-09",
+          "label": "Developer Beta 1"
+        },
+        "boundaryType": "first modeled tvOS developer cycle",
+        "confidence": "medium",
+        "anchorSourceIds": [
+          "source-apple-tvos-sdk-2015"
+        ],
+        "notes": [
+          "The Apple developer source anchors SDK availability. An event-level research packet should still verify the exact device-OS seed identity rather than treating an SDK as a build."
+        ]
+      },
+      "publicBeta": {
+        "status": "eligible",
+        "eligibleFrom": {
+          "version": "11.0",
+          "appearanceDate": "2017-06-26",
+          "label": "Public Beta 1"
+        },
+        "boundaryType": "first tvOS public beta",
+        "confidence": "high",
+        "anchorSourceIds": [
+          "source-macrumors-tvos11-first-public"
+        ],
+        "notes": [
+          "Contemporary coverage explicitly identifies this as the first tvOS public beta."
+        ]
+      },
+      "researchRangeRule": "Audit developer appearances from tvOS 9 and public-beta appearances from tvOS 11 across major, point, and patch cycles."
+    },
+    {
+      "platform": "visionOS",
+      "platformId": "platform-visionos",
+      "developerBeta": {
+        "status": "eligible",
+        "modeledFrom": {
+          "version": "1.0",
+          "appearanceDate": "2023-06-21",
+          "label": "Developer Beta 1"
+        },
+        "boundaryType": "first modeled visionOS developer cycle",
+        "confidence": "medium",
+        "anchorSourceIds": [
+          "source-apple-visionos-sdk-2023"
+        ],
+        "notes": [
+          "The Apple developer source anchors visionOS SDK availability. Event-level identity still needs device/simulator distribution evidence where the distinction matters."
+        ]
+      },
+      "publicBeta": {
+        "status": "unresolved",
+        "eligibleFrom": null,
+        "boundaryType": "not established",
+        "confidence": "low",
+        "anchorSourceIds": [
+          "source-apple-beta-program-current",
+          "source-apple-beta-faq-current",
+          "source-macworld-os27-public",
+          "source-appleinsider-os27-public"
+        ],
+        "notes": [
+          "Apple's current public program and FAQ list multiple platforms but omit visionOS.",
+          "Two July 2026 publishers claim a visionOS 27 public beta, while the first-party enrollment surface does not corroborate it.",
+          "Do not infer a public event from the visionOS 27 developer beta, a shared release date, or a third-party build string."
+        ]
+      },
+      "researchRangeRule": "Audit all developer cycles from visionOS 1. Treat every proposed public-beta appearance as disputed until first-party enrollment evidence or equivalent independent proof resolves the channel."
+    }
+  ],
+  "crossPlatformRules": [
+    "The 2023 change that made developer beta access available with a free Apple developer account does not convert developerBeta events into publicBeta events.",
+    "Same-day distribution and matching build strings do not merge developer and public appearances.",
+    "An announced future public beta is not an appearance; record the actual availability date.",
+    "A generic multi-platform announcement may establish program intent but not an exact platform event unless the platform is named or independently corroborated.",
+    "Eligibility means possible applicability, not proof that every cycle had a beta."
+  ],
+  "futureCatalogObservations": [
+    {
+      "track": "HomePod software",
+      "currentOfficialProgramListing": true,
+      "modeledPlatformDocumentExists": false,
+      "disposition": "future catalog-expansion research; do not create events in this program",
+      "sourceIds": [
+        "source-apple-beta-program-current",
+        "source-apple-beta-faq-current"
+      ]
+    },
+    {
+      "track": "AirPods firmware",
+      "currentOfficialProgramListing": true,
+      "modeledPlatformDocumentExists": false,
+      "disposition": "future catalog-expansion research; do not create events in this program",
+      "sourceIds": [
+        "source-apple-beta-program-current"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,672 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-ipados-point-15-18",
+  "validatedAt": "2026-07-31T07:41:57.857Z",
+  "validator": "codex-independent-review-ios-ipados-point-15-18",
+  "independentOfResearcher": true,
+  "reviewPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-15-18/independent-review.json",
+  "reviewSha256": "2d5aa122f229898f29e5439ca084045c18ea4aa608709a6773d91f739c5bea2e",
+  "queryScriptPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-15-18/independent-review-query.ts",
+  "queryScriptSha256": "9caa5f3bd73b10460fc32d2d19281ad138b805b35389215118f8b6ae329f7287",
+  "productionRecheckPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-15-18/independent-review-production.json",
+  "productionRecheckSha256": "acea73b4a4da6d7a4a5a4b160f1dbf07094f6a542ccee5d10a57aead4d7504f5",
+  "status": "passedWithDocumentedExternalAggregateDrift",
+  "overallAssessment": "readyForNonPublishingResearchHandoffAggregationOfExplicitlyApprovedSubsetOnly",
+  "statistics": {
+    "candidateCount": 159,
+    "candidateReviewCount": 159,
+    "chronologyApprovedCandidateCount": 106,
+    "blockedCandidateCount": 53,
+    "newlyBlockedCandidateCount": 47,
+    "preblockedConflictCandidateCount": 6,
+    "sequenceBoundaryReviewCount": 41,
+    "fullVersionApplicabilityReviewCount": 75,
+    "auditedNoPositiveButReversibleCount": 34,
+    "evidenceBackedNotApplicableCount": 4,
+    "conflictReviewCount": 21,
+    "sourceReviewCount": 147,
+    "authoritativeInitialPacketLockCountVerified": 318,
+    "currentPacketLockCountVerified": 316,
+    "currentExternalAggregateDriftCount": 2,
+    "currentPacketLocalLockCountVerified": 19,
+    "currentEvidenceLockCountVerified": 296,
+    "rawEvidenceLockCountVerified": 147,
+    "rawEvidenceBytesVerified": 30000423,
+    "selectedEvidenceBytesVerified": 518934,
+    "freshProductionExactMatchCount": 0
+  },
+  "checks": {
+    "reviewJsonParsed": true,
+    "candidateIdsUnique": true,
+    "approvedAndBlockedPartitionDisjoint": true,
+    "approvedAndBlockedPartitionExhaustive": true,
+    "allApprovedCandidatesHaveTwoIndependentExactLineages": true,
+    "noApprovedCandidateSelectsExcludedEvidence": true,
+    "allBlockedCandidatesHaveReasonCodes": true,
+    "all41PositiveCyclesReviewed": true,
+    "all34NoPositiveParentsRemainReversible": true,
+    "allFourSpecificOrdinalExclusionsEvidenceBacked": true,
+    "all21ConflictsReviewed": true,
+    "all147SourcesReviewed": true,
+    "all75ParentsPartitioned": true,
+    "publicOrdinalNeverDerivedFromDeveloperOrdinal": true,
+    "publicOrdinalNeverDerivedFromGenericPublicAvailability": true,
+    "publicOrdinalNeverDerivedFromBuildAlignment": true,
+    "pairedPlatformsIndependentlyProven": true,
+    "americaLosAngelesDateRuleApplied": true,
+    "releaseCandidatesAndGMsRemainSeparate": true,
+    "authoritativeInitial318Of318LocksReproduced": true,
+    "current316Of318LocksReproduced": true,
+    "onlyCurrentDriftsAreAuthorizedExternalSharedArtifacts": true,
+    "allPacketLocalLocksRemainExact": true,
+    "allEvidenceLocksRemainExact": true,
+    "allRawAndSelectedLocksReproduced": true,
+    "all75AssignmentRowsSemanticallyCompatibleWithCurrentCoverage": true,
+    "all159CandidateIdentitiesUnchangedAndCompatible": true,
+    "freshPublishedNoCdnProductionQueryCompleted": true,
+    "allTargetParentsFoundInProduction": true,
+    "all159ExactTargetMatchesRemainZero": true,
+    "sanityMutationPerformed": false,
+    "pageBuildPerformed": false,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "blockedCandidates": [
+    {
+      "candidateId": "candidate:apple:ios:15.1:public-beta-2",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "mr-apple-seeds-ios-15-1-public-beta-2"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-757220"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.1:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-1"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-759295"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.2:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-2"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-769491"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.2:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-2"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-772903"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.4:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-4"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-788721"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.4:public-beta-5",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-4"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-789925"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.5:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-5"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-801280"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.5:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-5"
+      ],
+      "nonQualifyingSourceIds": [
+        "osxd-ios-ipados-15-5-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.6:public-beta-5",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-6"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-15-6-pb5"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.1:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-16-1"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-16-1-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.1:public-beta-5",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-16-1"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-16-1-pb5"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.2:public-beta-4",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-16-2-pb4",
+        "osxd-ios-ipados-16-2-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.4:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-16-4"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-870787"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.5:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-16-5"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-880083"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.6:public-beta-5",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-16-6"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-16-6-pb5"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.2:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-17-2"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-17-2-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.4:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-17-4"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-934807"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.5:public-beta-2",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "mr-apple-releases-second-public-beta-of-ios-17-5"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-942982"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.5:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "mr-apple-releases-third-public-beta-of-ios-17-5"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-944434"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.5:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "9to5-945969"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-17-5-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.6:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "9to5-958826"
+      ],
+      "nonQualifyingSourceIds": [
+        "mactrast-ios-ipados-17-6-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:18.1:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "telegram-applepro-ios-ipados-18-1-pb4"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-18-1-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:18.3:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-18-3"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-985862"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:18.4:public-beta-4",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "9to5-994308",
+        "kobonemi-ios-ipados-18-4-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:18.5:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "monomaniac-april-2025"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-18-5-pb3"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.1:public-beta-2",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "mr-apple-seeds-ios-15-1-public-beta-2"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-757220"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.1:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-1"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-759295"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.2:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-2"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-769491"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.2:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-2"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-772903"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.4:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-4"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-788721"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.4:public-beta-5",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-4"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-789925"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.5:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-5"
+      ],
+      "nonQualifyingSourceIds": [
+        "osxd-ios-ipados-15-5-pb3"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.5:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-5"
+      ],
+      "nonQualifyingSourceIds": [
+        "osxd-ios-ipados-15-5-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.6:public-beta-5",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-15-6"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-15-6-pb5"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.1:public-beta-1",
+      "reasonCode": "BLOCK_CAMPAIGN_ORDINAL_CONFLICT",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "mr-apple-seeds-ios-16-public-beta-5",
+        "appleinsider-ipados16-1-aug24",
+        "imore-ipados16-history"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.1:public-beta-2",
+      "reasonCode": "BLOCK_CAMPAIGN_ORDINAL_CONFLICT",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "iculture-ios-16-1",
+        "mr-apple-seeds-first-ios-16-1-public-beta",
+        "imore-ipados16-history"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.1:public-beta-3",
+      "reasonCode": "BLOCK_CAMPAIGN_ORDINAL_CONFLICT",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "iculture-ios-16-1",
+        "9to5-837526",
+        "imore-ipados16-history"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.1:public-beta-4",
+      "reasonCode": "BLOCK_CAMPAIGN_ORDINAL_CONFLICT",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "mr-apple-ios-16-1-ipados-16-1-new-public-betas",
+        "9to5-838834",
+        "imore-ipados16-history"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.1:public-beta-5",
+      "reasonCode": "BLOCK_CAMPAIGN_ORDINAL_CONFLICT",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "iculture-ios-16-1",
+        "9to5-839952",
+        "appleinsider-ipados16-1-oct4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.1:public-beta-6",
+      "reasonCode": "BLOCK_CAMPAIGN_ORDINAL_CONFLICT",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "iculture-ios-16-1",
+        "9to5-841347",
+        "imore-ipados16-history"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.2:public-beta-4",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-16-2-pb4",
+        "osxd-ios-ipados-16-2-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.4:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-16-4"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-870787"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.5:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-16-5"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-880083"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.6:public-beta-5",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-16-6"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-16-6-pb5"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.2:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-17-2"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-17-2-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.5:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "mr-apple-releases-third-public-beta-of-ios-17-5"
+      ],
+      "nonQualifyingSourceIds": [
+        "osxd-ios-ipados-17-5-pb3"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.5:public-beta-4",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-17-5-pb4",
+        "osxd-ios-ipados-17-5-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.6:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "9to5-958826"
+      ],
+      "nonQualifyingSourceIds": [
+        "mactrast-ios-ipados-17-6-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.1:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "telegram-applepro-ios-ipados-18-1-pb4"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-18-1-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.2:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-18-2"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-18-2-pb3"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.3:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PACIFIC_DATE_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-ios-18-3"
+      ],
+      "nonQualifyingSourceIds": [
+        "kobonemi-ios-ipados-18-3-pb3"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.4:public-beta-4",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "9to5-994308",
+        "kobonemi-ios-ipados-18-4-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.5:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [
+        "monomaniac-april-2025"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-ios-ipados-18-5-pb3"
+      ]
+    }
+  ],
+  "issuesFound": [
+    {
+      "severity": "high",
+      "issue": "The packet validator accepts separately located platform, version, public-channel, and ordinal terms as if they formed one claim.",
+      "affectedReadyCandidateCount": 47,
+      "impact": "Developer ordinals and generic public-availability updates were promoted to exact public-program ordinal evidence.",
+      "resolution": "The independent review blocks all candidates without two co-located, exact, independent claim lineages."
+    },
+    {
+      "severity": "high",
+      "issue": "Forty-seven candidates marked ready by the packet do not have two exact public-program ordinal/date lineages.",
+      "affectedReadyCandidateCount": 47,
+      "impact": "Integrating the packet-ready set would add inferred public ordinals or unresolved dates.",
+      "resolution": "Only the 106 explicitly approved identities are eligible for a later, separately authorized integration queue."
+    },
+    {
+      "severity": "high",
+      "issue": "Two source-date disagreements affecting three candidates were not preserved in conflicts.json.",
+      "affectedCandidateCount": 3,
+      "impact": "The packet presents a selected date without exposing all frozen contradictory evidence.",
+      "resolution": "The independent review records both conflicts and blocks the affected identities pending a second exact lineage."
+    },
+    {
+      "severity": "medium",
+      "issue": "Kobonemi's iPadOS 18.3 Public Beta 3 update is dated January 17 JST but does not retain an update time.",
+      "affectedCandidateCount": 1,
+      "impact": "It cannot independently establish whether the update normalized to January 16 or 17 in America/Los_Angeles.",
+      "resolution": "The iPadOS 18.3 Public Beta 3 candidate remains blocked for a second exact Pacific-date lineage."
+    }
+  ],
+  "requiredCaveats": [
+    "Only the 106 explicitly evidence-approved identities may be aggregated into the non-publishing research handoff.",
+    "The two documented post-verification shared-file drifts are non-evidentiary orchestrator updates, not packet-local or research-evidence drift, and do not loosen any candidate gate.",
+    "The 53 blocked identities require additional exact evidence or conflict resolution.",
+    "The 34 full-version no-positive rows remain auditedNoPositiveButReversible and must stay in the applicability queue.",
+    "The four evidenceBackedNotApplicable records apply only to their specific skipped/withdrawn ordinal identities, not their whole parent versions.",
+    "A fresh published, useCdn:false exact production query is still required immediately before any separately authorized write."
+  ],
+  "warnings": [
+    {
+      "reasonCode": "DOCUMENTED_EXTERNAL_SHARED_DRIFT",
+      "path": "research-handoffs/beta-chronology-gap/README.md",
+      "expectedBytes": 16913,
+      "actualBytes": 17312,
+      "expectedSha256": "b203b6b8ddec18b675b6a1ac37b6210282f62d9eccdcce58d420c6089efbc0a0",
+      "actualSha256": "ddde9babeeeb0096d9b6fe8b86d88f0948388f689b499d618fccdcf057d1393a",
+      "researchEvidenceDrift": false,
+      "candidateGateImpact": "none",
+      "finding": "The orchestrator updated the shared workflow README after the authoritative 318/318 verification to require future packets to freeze mutable aggregates locally. It carries no candidate or source evidence."
+    },
+    {
+      "reasonCode": "DOCUMENTED_EXTERNAL_SHARED_DRIFT",
+      "path": "research-handoffs/beta-chronology-gap/coverage-matrix.json",
+      "expectedBytes": 524876,
+      "actualBytes": 537635,
+      "expectedSha256": "b6bad2f4b1c43be94007bc400860f6591a5d07b756a5ae5f1f2b5b390a89c769",
+      "actualSha256": "e98bd160279e2a39f49608a016b0e0dd8bbd350db19295e72cdf567087db362c",
+      "researchEvidenceDrift": false,
+      "candidateGateImpact": "none",
+      "finding": "The orchestrator regenerated the mutable shared coverage matrix after the authoritative 318/318 verification. Semantic checks pass for all 75 assignment rows and all 159 frozen candidate identities."
+    }
+  ],
+  "errors": [],
+  "authorization": {
+    "researchHandoffAggregationAllowed": true,
+    "siteIntegrationAllowed": false,
+    "sanityMutationAllowed": false,
+    "pageBuildsAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  }
+}

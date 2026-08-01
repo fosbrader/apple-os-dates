@@ -1,0 +1,92 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios9-point",
+  "reviewedAt": "2026-07-30",
+  "reviewer": "codex-root",
+  "independentOfResearcher": true,
+  "verdict": "partialPass",
+  "candidateVerdict": {
+    "readyForChronologyReview": [
+      "candidate:apple:ios:9.1:public-beta-3",
+      "candidate:apple:ios:9.2.1:public-beta-2"
+    ],
+    "needsSecondPublisherLineage": [
+      "candidate:apple:ios:9.1:public-beta-1",
+      "candidate:apple:ios:9.1:public-beta-2",
+      "candidate:apple:ios:9.1:public-beta-4",
+      "candidate:apple:ios:9.1:public-beta-5",
+      "candidate:apple:ios:9.2:public-beta-1",
+      "candidate:apple:ios:9.2:public-beta-2",
+      "candidate:apple:ios:9.2:public-beta-3",
+      "candidate:apple:ios:9.2:public-beta-4",
+      "candidate:apple:ios:9.2.1:public-beta-1",
+      "candidate:apple:ios:9.3:public-beta-1",
+      "candidate:apple:ios:9.3:public-beta-2",
+      "candidate:apple:ios:9.3:public-beta-3",
+      "candidate:apple:ios:9.3:public-beta-4",
+      "candidate:apple:ios:9.3:public-beta-5",
+      "candidate:apple:ios:9.3:public-beta-6",
+      "candidate:apple:ios:9.3:public-beta-7",
+      "candidate:apple:ios:9.3.2:public-beta-1",
+      "candidate:apple:ios:9.3.2:public-beta-2",
+      "candidate:apple:ios:9.3.2:public-beta-3",
+      "candidate:apple:ios:9.3.2:public-beta-4",
+      "candidate:apple:ios:9.3.3:public-beta-1",
+      "candidate:apple:ios:9.3.3:public-beta-2",
+      "candidate:apple:ios:9.3.3:public-beta-3",
+      "candidate:apple:ios:9.3.3:public-beta-4",
+      "candidate:apple:ios:9.3.3:public-beta-5"
+    ]
+  },
+  "checks": {
+    "jsonParsed": true,
+    "sourceIdsUnique": true,
+    "candidateIdsUnique": true,
+    "allReferencesResolve": true,
+    "rawEvidenceArtifactsReproduced": 31,
+    "selectedTextArtifactsReproduced": 31,
+    "evidenceHashFailures": 0,
+    "candidateProductionResultsAligned": true,
+    "allCandidateChannelsArePublicBeta": true,
+    "allCandidateExactProductionMatches": 0,
+    "corroboratedIdentityLocatorsChecked": [
+      "source-ios91-pb3-macrumors",
+      "source-ios91-pb3-9to5mac",
+      "source-ios921-pb2-macrumors",
+      "source-ios921-pb2-9to5mac"
+    ],
+    "sanityMutationPerformed": false
+  },
+  "decisions": [
+    {
+      "candidateId": "candidate:apple:ios:9.1:public-beta-3",
+      "finding": "Two independent contemporary publisher lineages explicitly establish a third iOS 9.1 public-beta appearance on 2015-09-30.",
+      "disposition": "readyForChronologyReview"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.2.1:public-beta-2",
+      "finding": "Two independent contemporary publisher lineages explicitly establish the second iOS 9.2.1 public-beta appearance on 2016-01-04.",
+      "disposition": "readyForChronologyReview"
+    }
+  ],
+  "caveats": [
+    {
+      "subject": "remaining iOS 9 point-release candidates",
+      "severity": "blockingForPromotion",
+      "finding": "Twenty-five identities have direct contemporary evidence but only one retained publisher lineage.",
+      "requiredHandling": "Keep them in needsEvidenceReview until a second independent lineage is retained or the program's evidence gate is explicitly changed."
+    },
+    {
+      "subject": "production snapshot age",
+      "severity": "nonBlocking",
+      "finding": "The exact production reconciliation is a time-bounded read-only snapshot from 2026-07-31T02:46:53.271Z.",
+      "requiredHandling": "Repeat the exact identity query immediately before any separately authorized Sanity write."
+    }
+  ],
+  "authorization": {
+    "chronologyReviewEligibleCandidateCount": 2,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "deploymentAllowed": false
+  }
+}

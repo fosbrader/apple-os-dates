@@ -1,0 +1,189 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ipados-major-13-26-second-lineage",
+  "validatedAt": "2026-07-31T04:24:56.557Z",
+  "status": "passedSelfCheckPendingIndependentReview",
+  "independentReviewComplete": false,
+  "chronologyApprovalGranted": false,
+  "checks": {
+    "packetDocumentsParsed": 9,
+    "batchIdsVerified": 6,
+    "parentFilesHashVerified": 2,
+    "parentBlockedScopeVerified": 9,
+    "frozenIdentitiesVerified": 9,
+    "supplementalMappingsVerified": 9,
+    "directSameDateMappings": 7,
+    "followingDayOrdinalOnlyMappings": 2,
+    "rawSourcesVerified": 5,
+    "boundedIdentificationTextsVerified": 5,
+    "exactClaimLocatorsVerified": 9,
+    "archivedSourceQualificationVerified": true,
+    "productionExactIdentitiesVerified": 9,
+    "mandatoryQualificationsVerified": 3,
+    "reportQualificationsVerified": true,
+    "safetyBoundaryVerified": true,
+    "packetFilesLocked": 11,
+    "evidenceFilesLocked": 12,
+    "parentFilesLocked": 2
+  },
+  "counts": {
+    "candidatesMapped": 9,
+    "supplementalSources": 5,
+    "rawSourcesVerified": 5,
+    "exactClaimLocators": 9,
+    "directSameDateMappings": 7,
+    "followingDayOrdinalOnlyMappings": 2,
+    "productionTargetMatches": 0,
+    "conflicts": 6
+  },
+  "blockers": [
+    "An independent chronology reviewer has not reviewed this supplement.",
+    "The 2023-08-30 and 2024-08-29 OS X Daily pages corroborate the PB6 ordinals, not the frozen prior-day appearance dates.",
+    "The iPadOS 18 OS X Daily page contains an internal stale PB5 sentence that the independent reviewer must assess.",
+    "No Sanity mutation, production ID creation, publication, or deployment is authorized by this packet."
+  ],
+  "parentLocks": [
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+      "bytes": 131399,
+      "sha256": "df6b05057507a1c998c778c51fcefc79eb4fc6193dc9e3b05f66507f383ff4dd"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+      "bytes": 16315,
+      "sha256": "a26cfc8953d600e9b9f976b2c939ba66ce77f483574daa3156da08b93a8c49c4",
+      "verdict": "partialPassWithNineBlockedCandidatesAndOneProductionCorrection",
+      "independentOfResearcher": true
+    }
+  ],
+  "fileLocks": [
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/assignment.json",
+      "bytes": 2918,
+      "sha256": "79aa229204a3e38777b8f2a15920078b6c4d286cff24a9c2111b7a9e358d98d6"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/sources.json",
+      "bytes": 19062,
+      "sha256": "078921fa057db7f50d283b4aa432a60c40f09965da07541111ec6d0023e86a73"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/candidate-mapping.json",
+      "bytes": 27486,
+      "sha256": "fee99b03ed8e1454b39e5f74feb2b05eda0201ddaeaee279dccf685faac286b0"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/conflicts.json",
+      "bytes": 4512,
+      "sha256": "1b40b182e119768616a81e20bf3b55eeb4b8f8bb01cdddf4e2ccb0967100bd9c"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/production-snapshot.json",
+      "bytes": 33257,
+      "sha256": "05111b2ed6348c5a41ae6345d8601ed742595d7456ab95e49b14e9570e12dfa7"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/report.md",
+      "bytes": 4220,
+      "sha256": "df4d724d2a66b90aab6b8a45b2d0591c930f3d9dc77dd4a7446e93c2e0de4c06"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/self-review.json",
+      "bytes": 1998,
+      "sha256": "b129eaac7d670198d150c1eed103599b3beb73c96d0a6e15a14b6717254f6f0a"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/fetch-sources.mjs",
+      "bytes": 4202,
+      "sha256": "0872f7fb87343a62cc731b14ae2d7e12ecae45542025d048298c0dc1472abccf"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/build-packet.mjs",
+      "bytes": 38153,
+      "sha256": "28330d2cb15438cca478756d3d3d4bdae552445f6dd3f71bc900a50795e97d0d"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/query-production.ts",
+      "bytes": 7963,
+      "sha256": "7cb93bf975c12ea9e1b9a75f8ef79ab1f1415107bd8e754bee5ebabc55f506b4"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26-second-lineage/validate-packet.mjs",
+      "bytes": 22819,
+      "sha256": "b7e5ad056dd40f4e6223ddf7a06eca3983482568ce1b00cf4df374854703e79d"
+    }
+  ],
+  "evidenceLocks": [
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/fetch-manifest.json",
+      "bytes": 4312,
+      "sha256": "5a0a2d67a8030113e310463c1ed69838582fedba95e4086754c9a0e93a0ba5b3"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/imore-ipados14-pb6-pb8.identification.txt",
+      "bytes": 55,
+      "sha256": "0aebab5d5dfbf1809771c0fff0576ae93888bd40ad2523661631365873f829e0"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/imore-ipados15-pb5-pb8.identification.txt",
+      "bytes": 55,
+      "sha256": "ec43378082d10d3c4e223464f6345f89b185ac9a1c86ff57f17b716529195693"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/iphonetricks-ipados16-pb4.identification.txt",
+      "bytes": 58,
+      "sha256": "7f692358b54c5c299350f50f4bd4d53eec16aaba15837944ce7f8406b489dfe4"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/osxd-ipados17-pb6.identification.txt",
+      "bytes": 56,
+      "sha256": "da78f44ad7c083432080a061f897525b0745684f9befaaa1da2a045472f6d77f"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/osxd-ipados18-pb6.identification.txt",
+      "bytes": 78,
+      "sha256": "34ccea0a7bf72b46deab78accf21eea7d4bf52cf057b57bdd67dfe74a44e1d34"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/production-snapshot.json",
+      "bytes": 33257,
+      "sha256": "05111b2ed6348c5a41ae6345d8601ed742595d7456ab95e49b14e9570e12dfa7"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/source-01-imore-ipados14-public-beta-history.html",
+      "bytes": 1054518,
+      "sha256": "b8eca64c0c3afac347ca8750a83b3e1ff3027fed4ed1ecb3fcd802d1b1d4a03c"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/source-02-imore-ipados15-public-beta-history.html",
+      "bytes": 1062731,
+      "sha256": "576a149911c0bcd3f12ef8d6f1d499fb84cd6abcc77d8c8c2840493264c29278"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/source-03-iphonetricks-ipados16-public-beta-4.html",
+      "bytes": 62036,
+      "sha256": "7db895c57d90ee8ddaae7bdb9efaab7cc65fce47e1f81afbe1afb782bda34883"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/source-04-osxd-ipados17-public-beta-6.html",
+      "bytes": 228903,
+      "sha256": "3863f4dadf2fcf57d721352a30ed3863dae6a1f859a9452d3966016a9cc8a454"
+    },
+    {
+      "path": "tmp/research-evidence/beta-chronology-gap/ipados-major-13-26-second-lineage/source-05-osxd-ipados18-public-beta-6.html",
+      "bytes": 231489,
+      "sha256": "9123140f60417828d63744436f4e6223bb4541c5330abd97e8bb966bc74d585f"
+    }
+  ],
+  "safety": {
+    "parentPacketModified": false,
+    "sanityMutationPerformed": false,
+    "sanityMutationAllowed": false,
+    "productionIdsCreated": false,
+    "productionIdCreationAllowed": false,
+    "publicationEligible": false,
+    "deploymentPerformed": false,
+    "deploymentAllowed": false
+  },
+  "errors": []
+}

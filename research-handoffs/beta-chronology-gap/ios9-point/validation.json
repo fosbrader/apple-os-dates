@@ -1,0 +1,248 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios9-point",
+  "validatedAt": "2026-07-31T04:12:55.708Z",
+  "validator": "codex-review-reusable-public-betas",
+  "status": "passedCorroborationSelfCheckPendingIndependentReview",
+  "independentReviewOfAddedSourcesComplete": false,
+  "checks": {
+    "packetJsonParsed": 7,
+    "assignmentTargetCount": 27,
+    "candidateCount": 27,
+    "sourceCount": 56,
+    "legacySourceCount": 31,
+    "addedCorroboratorCount": 25,
+    "conflictCount": 7,
+    "uniqueCandidateIds": true,
+    "uniqueSourceIds": true,
+    "assignmentTargetsResolved": 27,
+    "evidenceReferencesResolved": 54,
+    "twoPublisherLineagesPerCandidate": true,
+    "rawSourcesVerified": 56,
+    "legacySelectedTextVerified": 31,
+    "boundedFragmentsVerified": 31,
+    "boundedFragmentMaximumWords": 20,
+    "exactProductionMatches": 0,
+    "scopedPublicBetaEventsInProduction": 0,
+    "productionSnapshotReadOnlyAndExact": true,
+    "sourceTextConflictsPreserved": true,
+    "priorIndependentReviewPreservedByteForByte": true,
+    "independentReviewStillRequiredForNewSources": true,
+    "stableEventIdsAssigned": 0,
+    "buildsIncluded": 0,
+    "sanityWritesPerformed": 0,
+    "deploymentsPerformed": 0,
+    "packetFilesLocked": 14
+  },
+  "counts": {
+    "candidates": 27,
+    "corroboratedCandidates": 27,
+    "candidatesWithPriorIndependentEvidenceReview": 2,
+    "candidatesWithNewCorroborationPendingIndependentReview": 25,
+    "confirmedMissingCandidates": 27,
+    "sources": 56,
+    "rawSources": 56,
+    "conflicts": 7
+  },
+  "frozenBaseline": {
+    "assignmentSha256": "93d13e08f551095b3f69b3754f6c20239456dee7cf64fdc4b7058f19d2bf690d",
+    "priorIndependentReviewSha256": "c31165ca8df49d75c475b78b7fabefa415d04885b0ec98a1abc08cfc69f7779b",
+    "preCorroborationCandidatesSha256": "4dbdca3c8a75414fc1d8bec4472e50b73bee63c33af83f12bab41bd4a7305f61",
+    "preCorroborationSourcesSha256": "312cd79215b7c3946df0b2c7a02cb553efa41088919216b9361ffeb4c6f149ba",
+    "preCorroborationConflictsSha256": "e8a5c2f8fdeda74daf7b2ade39e8c132cedf9ec8ec947828a96ed80ecf16ecd2",
+    "preCorroborationReportSha256": "f87d5e486baead966772a70e58ef0a2fbd13bff70065d337d53072d01641e8b6"
+  },
+  "blockers": [
+    "A reviewer independent from the corroboration researcher has not inspected the 25 newly added source pages.",
+    "Sanity mutation, stable ID allocation, publication, page building, and deployment remain unauthorized."
+  ],
+  "publisherLineagesByCandidate": {
+    "candidate:apple:ios:9.1:public-beta-1": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.1:public-beta-2": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.1:public-beta-3": [
+      "MacRumors",
+      "9to5Mac"
+    ],
+    "candidate:apple:ios:9.1:public-beta-4": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.1:public-beta-5": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.2:public-beta-1": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.2:public-beta-2": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.2:public-beta-3": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.2:public-beta-4": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.2.1:public-beta-1": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.2.1:public-beta-2": [
+      "MacRumors",
+      "9to5Mac"
+    ],
+    "candidate:apple:ios:9.3:public-beta-1": [
+      "MacRumors",
+      "AppleInsider"
+    ],
+    "candidate:apple:ios:9.3:public-beta-2": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3:public-beta-3": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3:public-beta-4": [
+      "MacRumors",
+      "AppleInsider"
+    ],
+    "candidate:apple:ios:9.3:public-beta-5": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3:public-beta-6": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3:public-beta-7": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3.2:public-beta-1": [
+      "MacRumors",
+      "9to5Mac"
+    ],
+    "candidate:apple:ios:9.3.2:public-beta-2": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3.2:public-beta-3": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3.2:public-beta-4": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3.3:public-beta-1": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3.3:public-beta-2": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3.3:public-beta-3": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3.3:public-beta-4": [
+      "MacRumors",
+      "iCulture"
+    ],
+    "candidate:apple:ios:9.3.3:public-beta-5": [
+      "MacRumors",
+      "iCulture"
+    ]
+  },
+  "fileLocks": [
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/assignment.json",
+      "bytes": 12106,
+      "sha256": "93d13e08f551095b3f69b3754f6c20239456dee7cf64fdc4b7058f19d2bf690d"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/sources.json",
+      "bytes": 105083,
+      "sha256": "fc47c61aadb03c403a4cfc7c8fc02a80d321a49393589c0452059912b862ed5e"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/candidates.json",
+      "bytes": 90651,
+      "sha256": "0d7e1265ee7584139199e945edee3561c4634c3aee853cc3f292d9ebaf0b7bb3"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/conflicts.json",
+      "bytes": 9062,
+      "sha256": "cad088a2818bfa1723538c93daf3e0bdf90a30c0dc4334680e8696858a5c961f"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/production-snapshot.json",
+      "bytes": 33054,
+      "sha256": "5ba229cba2c1e088cf435aa3138f79c37a9f74eebdba5e538cf3c28fd7f2b976"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/review.json",
+      "bytes": 3702,
+      "sha256": "c31165ca8df49d75c475b78b7fabefa415d04885b0ec98a1abc08cfc69f7779b"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/corroboration-self-review.json",
+      "bytes": 1218,
+      "sha256": "d983b3c0f484a58add173aac2dca3d2fe27de9ce659efd7d364ce5cb3367c4a5"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/report.md",
+      "bytes": 7058,
+      "sha256": "047481dc74c1e22e57febe323fd405bb03e6a093cae055364d43e939891490eb"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/corroboration-fetch-manifest.json",
+      "bytes": 6815,
+      "sha256": "783ad91e88fe22d88f89e2550059f0ecad7a9a667c4ddb638ee279e21c67e0dd"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/fetch-corroboration.mjs",
+      "bytes": 2485,
+      "sha256": "9b0b84d0f6894000c7118eba791eb991ced9812ab32810830610d517c6221dbf"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/inspect-corroboration.mjs",
+      "bytes": 3072,
+      "sha256": "9850c4a38e159b6037febddb7b5f55e2358227c26b09358181a6831c7ce0c4a1"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/build-corroborated-packet.mjs",
+      "bytes": 27439,
+      "sha256": "54200a3afee5f8a151c6c76227d6462f1425f01b1532355ed24b5a9f2e19140e"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/query-production.ts",
+      "bytes": 5764,
+      "sha256": "77e7a7b4bd25eba756deb4b220e60a56bed0fdf2e1af99bf3d2edc80a9fb32d1"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios9-point/validate-corroborated-packet.mjs",
+      "bytes": 12946,
+      "sha256": "c9d50bab010690fa738bf4881080315cf2032a72012fc4ed3ea5cb377f7b2724"
+    }
+  ],
+  "safety": {
+    "sanityMutationPerformed": false,
+    "sanityMutationAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  },
+  "errors": []
+}

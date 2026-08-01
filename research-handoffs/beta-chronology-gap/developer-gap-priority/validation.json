@@ -1,0 +1,41 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-developer-gap-priority",
+  "validatedAt": "2026-07-31T05:06:15.052Z",
+  "status": "passed",
+  "errorCount": 0,
+  "errors": [],
+  "checks": {
+    "candidateCount": 17,
+    "sourceCount": 42,
+    "retainedSourceReinspectionCount": 28,
+    "newSourceCount": 14,
+    "sequenceAuditCount": 4,
+    "conflictCount": 2,
+    "packetLocalDeveloperSchemaValid": true,
+    "everyCandidateHasTwoPublisherLineages": true,
+    "production": {
+      "capturedAt": "2026-07-31T04:48:35.739Z",
+      "perspective": "published",
+      "useCdn": false,
+      "releaseVersionParents": 4,
+      "scopedDeveloperBetaEvents": 0,
+      "exactIdentityChecks": 17,
+      "exactIdentityMatches": 0
+    },
+    "rawArtifactsReproduced": 42,
+    "selectedArtifactsReproduced": 42,
+    "retainedReinspectionsReproduced": 28,
+    "fullSequenceAndNegativeEvidenceValid": true,
+    "conflictsPreserved": 2,
+    "safetyBoundaryValid": true
+  },
+  "safety": {
+    "chronologyApprovalGranted": false,
+    "independentReviewRequired": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  }
+}

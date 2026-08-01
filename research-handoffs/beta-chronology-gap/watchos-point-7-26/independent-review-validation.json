@@ -1,0 +1,603 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-watchos-point-7-26",
+  "validatedAt": "2026-07-31T08:28:43.446Z",
+  "validator": "codex-independent-review-watchos-point-7-26",
+  "independentOfResearcher": true,
+  "reviewPath": "research-handoffs/beta-chronology-gap/watchos-point-7-26/independent-review.json",
+  "reviewSha256": "d22e90a7a5d59bff0adc8fff5651b860e1590653107656f5045e80c80c839dc9",
+  "status": "passedWithBlockedSubset",
+  "overallAssessment": "readyForNonPublishingResearchHandoffAggregationOfExplicitlyApprovedSubsetOnly",
+  "statistics": {
+    "researchedIdentityCount": 55,
+    "candidateReviewCount": 55,
+    "chronologyApprovedCandidateCount": 25,
+    "blockedCandidateCount": 30,
+    "newlyBlockedCandidateCount": 21,
+    "preblockedCandidateCount": 9,
+    "parentReviewCount": 16,
+    "positiveParentCount": 11,
+    "noPositiveButReversibleParentCount": 5,
+    "reversibleNotProposedCount": 8,
+    "packetConflictReviewCount": 8,
+    "additionalConflictCount": 2,
+    "sourceReviewCount": 100,
+    "packetLockCountVerified": 122,
+    "packetLockedBytesVerified": 22101825,
+    "rawEvidenceLockCountVerified": 100,
+    "rawEvidenceBytesVerified": 21178248,
+    "freshProductionExactMatchCount": 0
+  },
+  "checks": {
+    "reviewJsonParsed": true,
+    "candidateIdsUnique": true,
+    "approvedAndBlockedPartitionExhaustive": true,
+    "allApprovedCandidatesHaveTwoIndependentExactLineages": true,
+    "allBlockedCandidatesHaveReasonCodes": true,
+    "all16ParentsReviewed": true,
+    "all5NoPositiveParentsRemainReversible": true,
+    "all8NegativeFindingsRemainReversible": true,
+    "all8PacketConflictsReviewed": true,
+    "all100SourcesAndCapturesReviewed": true,
+    "all122FrozenPacketLocksReproduced": true,
+    "all100RawEvidenceLocksReproduced": true,
+    "all100SelectedTextHashesReproduced": true,
+    "schemaIdentityRoutesDatesOrdinalsValid": true,
+    "publicOrdinalNeverInferredFromDeveloperOrdinal": true,
+    "publicOrdinalNeverInferredFromGenericBetaWording": true,
+    "publicOrdinalNeverInferredFromBuildAlignment": true,
+    "onTopSearchExtractsNotUsedAlone": true,
+    "derivativeSourcesNotCountedAsIndependent": true,
+    "freshPublishedNoCdnProductionQueryCompleted": true,
+    "allTargetParentsFoundInProduction": true,
+    "allExactTargetMatchesRemainZero": true,
+    "sanityMutationPerformed": false,
+    "pageBuildPerformed": false,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "blockedCandidates": [
+    {
+      "candidateId": "candidate:apple:watchos:7.2:public-beta-2",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "imore7-public-rolling",
+        "iphonecanada-72-pb2"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.3:public-beta-2",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "9to5-73-pb2",
+        "mr-73-pb2"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.4:public-beta-1",
+      "reasonCode": "BLOCK_UNRESOLVED_ORDINAL_OR_DATE_CONFLICT",
+      "exactSelectedSourceIds": [
+        "imore7-public-rolling"
+      ],
+      "nonQualifyingSourceIds": [
+        "iculture-74-cycle"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.4:public-beta-7",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "9to5-74-pb7",
+        "ithinkdiff-74-pb7"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.5:public-beta-2",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "kob-75-pb2"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-75-pb2"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.5:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "purudo-75-pb3"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-75-pb3"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.6:public-beta-4",
+      "reasonCode": "BLOCK_UNRESOLVED_ORDINAL_OR_DATE_CONFLICT",
+      "exactSelectedSourceIds": [
+        "imore7-public-rolling"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-76-pb4",
+        "iculture-76-cycle"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.1:public-beta-2",
+      "reasonCode": "BLOCK_UNRESOLVED_ORDINAL_OR_DATE_CONFLICT",
+      "exactSelectedSourceIds": [
+        "kob-81-pb2"
+      ],
+      "nonQualifyingSourceIds": [
+        "forbes-81-first",
+        "geeky-81-first"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.1:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "imore8-public-rolling"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-81-pb3"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.1:public-beta-4",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "kob-81-pb4",
+        "itopnews-81-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.3:public-beta-1",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "9to5-83-pb1",
+        "ontop-83-pb1"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.3:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "kob-83-pb3"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-83-pb3-dev"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.3:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "kob-83-pb4"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-83-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.4:public-beta-1",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "kob-84-pb1",
+        "ontop-84-pb1",
+        "cultofmac-84-pb1-negative"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.4:public-beta-2",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-84-cycle"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-84-pb2"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.5:public-beta-4",
+      "reasonCode": "BLOCK_UNRESOLVED_ORDINAL_OR_DATE_CONFLICT",
+      "exactSelectedSourceIds": [
+        "imore8-public-rolling"
+      ],
+      "nonQualifyingSourceIds": [
+        "kob-85-pb4",
+        "9to5-85-pb4",
+        "iculture-85-cycle"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.5:public-beta-5",
+      "reasonCode": "BLOCK_UNRESOLVED_ORDINAL_OR_DATE_CONFLICT",
+      "exactSelectedSourceIds": [
+        "imore8-public-rolling"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-85-pb5",
+        "iculture-85-cycle"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.6:public-beta-1",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "ithinkdiff-86-cycle"
+      ],
+      "nonQualifyingSourceIds": [
+        "geeky-86-pb1-negative"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.6:public-beta-2",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "9to5-86-pb2",
+        "geeky-86-pb2-negative"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.6:public-beta-3",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "imore8-public-rolling"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-86-pb3"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.6:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "imore8-public-rolling"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-86-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.7:public-beta-2",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-87-cycle"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-87-pb2"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.7:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "iculture-87-cycle"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-87-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.1:public-beta-2",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "9to5-91-pb2"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-91-pb2"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.1:public-beta-4",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "imore9-public-rolling"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-91-pb4",
+        "times-91-pb4"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.1:public-beta-5",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "imore9-public-rolling"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-91-pb5"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.4:public-beta-2",
+      "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+      "exactSelectedSourceIds": [
+        "mr-264-pb2"
+      ],
+      "nonQualifyingSourceIds": [
+        "buchi-264-pb2"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.5:public-beta-4",
+      "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+      "exactSelectedSourceIds": [],
+      "nonQualifyingSourceIds": [
+        "9to5-265-pb4",
+        "mr-265-pb4-dev"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.6:public-beta-3",
+      "reasonCode": "BLOCK_UNRESOLVED_ORDINAL_OR_DATE_CONFLICT",
+      "exactSelectedSourceIds": [
+        "mr-266-pb3"
+      ],
+      "nonQualifyingSourceIds": [
+        "9to5-266-pb3",
+        "iculture-266-cycle"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.6:public-beta-5",
+      "reasonCode": "BLOCK_UNRESOLVED_ORDINAL_OR_DATE_CONFLICT",
+      "exactSelectedSourceIds": [
+        "9to5-266-pb5"
+      ],
+      "nonQualifyingSourceIds": [
+        "mr-266-pb5-dev",
+        "iculture-266-cycle"
+      ]
+    }
+  ],
+  "finalPartition": {
+    "chronologyApprovedCandidateIds": [
+      "candidate:apple:watchos:7.1:public-beta-1",
+      "candidate:apple:watchos:7.1:public-beta-2",
+      "candidate:apple:watchos:7.4:public-beta-2",
+      "candidate:apple:watchos:7.4:public-beta-3",
+      "candidate:apple:watchos:7.4:public-beta-4",
+      "candidate:apple:watchos:7.4:public-beta-5",
+      "candidate:apple:watchos:7.5:public-beta-1",
+      "candidate:apple:watchos:7.6:public-beta-1",
+      "candidate:apple:watchos:7.6:public-beta-3",
+      "candidate:apple:watchos:7.6:public-beta-5",
+      "candidate:apple:watchos:8.3:public-beta-2",
+      "candidate:apple:watchos:8.5:public-beta-1",
+      "candidate:apple:watchos:8.5:public-beta-2",
+      "candidate:apple:watchos:8.5:public-beta-3",
+      "candidate:apple:watchos:8.7:public-beta-1",
+      "candidate:apple:watchos:8.7:public-beta-3",
+      "candidate:apple:watchos:8.7:public-beta-5",
+      "candidate:apple:watchos:9.1:public-beta-3",
+      "candidate:apple:watchos:26.4:public-beta-1",
+      "candidate:apple:watchos:26.5:public-beta-1",
+      "candidate:apple:watchos:26.5:public-beta-2",
+      "candidate:apple:watchos:26.5:public-beta-3",
+      "candidate:apple:watchos:26.6:public-beta-1",
+      "candidate:apple:watchos:26.6:public-beta-2",
+      "candidate:apple:watchos:26.6:public-beta-4"
+    ],
+    "blockedCandidateIds": [
+      "candidate:apple:watchos:7.2:public-beta-2",
+      "candidate:apple:watchos:7.3:public-beta-2",
+      "candidate:apple:watchos:7.4:public-beta-1",
+      "candidate:apple:watchos:7.4:public-beta-7",
+      "candidate:apple:watchos:7.5:public-beta-2",
+      "candidate:apple:watchos:7.5:public-beta-3",
+      "candidate:apple:watchos:7.6:public-beta-4",
+      "candidate:apple:watchos:8.1:public-beta-2",
+      "candidate:apple:watchos:8.1:public-beta-3",
+      "candidate:apple:watchos:8.1:public-beta-4",
+      "candidate:apple:watchos:8.3:public-beta-1",
+      "candidate:apple:watchos:8.3:public-beta-3",
+      "candidate:apple:watchos:8.3:public-beta-4",
+      "candidate:apple:watchos:8.4:public-beta-1",
+      "candidate:apple:watchos:8.4:public-beta-2",
+      "candidate:apple:watchos:8.5:public-beta-4",
+      "candidate:apple:watchos:8.5:public-beta-5",
+      "candidate:apple:watchos:8.6:public-beta-1",
+      "candidate:apple:watchos:8.6:public-beta-2",
+      "candidate:apple:watchos:8.6:public-beta-3",
+      "candidate:apple:watchos:8.6:public-beta-4",
+      "candidate:apple:watchos:8.7:public-beta-2",
+      "candidate:apple:watchos:8.7:public-beta-4",
+      "candidate:apple:watchos:9.1:public-beta-2",
+      "candidate:apple:watchos:9.1:public-beta-4",
+      "candidate:apple:watchos:9.1:public-beta-5",
+      "candidate:apple:watchos:26.4:public-beta-2",
+      "candidate:apple:watchos:26.5:public-beta-4",
+      "candidate:apple:watchos:26.6:public-beta-3",
+      "candidate:apple:watchos:26.6:public-beta-5"
+    ],
+    "applicabilityVersions": [
+      "7.1",
+      "7.2",
+      "7.3",
+      "7.4",
+      "7.5",
+      "7.6",
+      "8.1",
+      "8.3",
+      "8.4",
+      "8.5",
+      "8.6",
+      "8.7",
+      "9.1",
+      "26.4",
+      "26.5",
+      "26.6"
+    ],
+    "reversibleNotProposedFindingIds": [
+      "negative:watchos:7.2:public-beta-1",
+      "negative:watchos:7.2:public-beta-3",
+      "negative:watchos:7.3:public-beta-1",
+      "negative:watchos:7.4:public-beta-6",
+      "negative:watchos:7.6:public-beta-2",
+      "negative:watchos:9.1:public-beta-1",
+      "negative:watchos:26.4:public-beta-3",
+      "negative:watchos:26.4:public-beta-4"
+    ]
+  },
+  "issuesFound": [
+    {
+      "severity": "high",
+      "issue": "Twenty-one rows marked supportable do not have two exact public-program ordinal/date lineages.",
+      "affectedCandidateCount": 21,
+      "impact": "Using the packet's 46-row supportable set would promote developer/generic beta numbering or unresolved dates into publicBeta identities.",
+      "resolution": "Only the 25 explicitly approved candidate IDs may enter a later non-publishing integration queue."
+    },
+    {
+      "severity": "high",
+      "issue": "The packet labels Buchi Gadget and The Times of India as independent, but the captures explicitly attribute their relevant claims to MacRumors and 9to5Mac respectively.",
+      "affectedCandidateIds": [
+        "candidate:apple:watchos:26.4:public-beta-2",
+        "candidate:apple:watchos:9.1:public-beta-4"
+      ],
+      "resolution": "Neither derivative article counts as a second independent lineage."
+    },
+    {
+      "severity": "high",
+      "issue": "Two source-date disagreements were not preserved in conflicts.json.",
+      "affectedCandidateIds": [
+        "candidate:apple:watchos:7.4:public-beta-1",
+        "candidate:apple:watchos:7.6:public-beta-4"
+      ],
+      "resolution": "Both identities remain blocked pending a second exact lineage on one Pacific date."
+    },
+    {
+      "severity": "medium",
+      "issue": "The two ONTOP records are bounded search-index extracts retained after HTTP 522.",
+      "affectedCandidateIds": [
+        "candidate:apple:watchos:8.3:public-beta-1",
+        "candidate:apple:watchos:8.4:public-beta-1"
+      ],
+      "resolution": "Neither snippet is used to pass an identity without independent exact full-page corroboration."
+    },
+    {
+      "severity": "medium",
+      "issue": "The iMore living capture contains no watchOS 7.2 row, despite packet prose treating it as affirmative or broad watchOS 7.2 evidence.",
+      "affectedCandidateIds": [
+        "candidate:apple:watchos:7.2:public-beta-2"
+      ],
+      "resolution": "The candidate is blocked; the associated not-proposed findings remain reversible."
+    },
+    {
+      "severity": "medium",
+      "issue": "Kobonemi's watchOS 8.5 Public Beta 4 timestamp was treated as February 23 without Pacific conversion.",
+      "affectedCandidateIds": [
+        "candidate:apple:watchos:8.5:public-beta-4"
+      ],
+      "resolution": "February 23 JST converts to February 22 Pacific; the candidate remains blocked by the date conflict."
+    }
+  ],
+  "warnings": [],
+  "errors": [],
+  "authorization": {
+    "researchHandoffAggregationAllowed": true,
+    "researchHandoffAggregationScope": {
+      "chronologyCandidateIds": [
+        "candidate:apple:watchos:7.1:public-beta-1",
+        "candidate:apple:watchos:7.1:public-beta-2",
+        "candidate:apple:watchos:7.4:public-beta-2",
+        "candidate:apple:watchos:7.4:public-beta-3",
+        "candidate:apple:watchos:7.4:public-beta-4",
+        "candidate:apple:watchos:7.4:public-beta-5",
+        "candidate:apple:watchos:7.5:public-beta-1",
+        "candidate:apple:watchos:7.6:public-beta-1",
+        "candidate:apple:watchos:7.6:public-beta-3",
+        "candidate:apple:watchos:7.6:public-beta-5",
+        "candidate:apple:watchos:8.3:public-beta-2",
+        "candidate:apple:watchos:8.5:public-beta-1",
+        "candidate:apple:watchos:8.5:public-beta-2",
+        "candidate:apple:watchos:8.5:public-beta-3",
+        "candidate:apple:watchos:8.7:public-beta-1",
+        "candidate:apple:watchos:8.7:public-beta-3",
+        "candidate:apple:watchos:8.7:public-beta-5",
+        "candidate:apple:watchos:9.1:public-beta-3",
+        "candidate:apple:watchos:26.4:public-beta-1",
+        "candidate:apple:watchos:26.5:public-beta-1",
+        "candidate:apple:watchos:26.5:public-beta-2",
+        "candidate:apple:watchos:26.5:public-beta-3",
+        "candidate:apple:watchos:26.6:public-beta-1",
+        "candidate:apple:watchos:26.6:public-beta-2",
+        "candidate:apple:watchos:26.6:public-beta-4"
+      ],
+      "applicabilityVersions": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4",
+        "7.5",
+        "7.6",
+        "8.1",
+        "8.3",
+        "8.4",
+        "8.5",
+        "8.6",
+        "8.7",
+        "9.1",
+        "26.4",
+        "26.5",
+        "26.6"
+      ],
+      "reversibleNotProposedFindingIds": [
+        "negative:watchos:7.2:public-beta-1",
+        "negative:watchos:7.2:public-beta-3",
+        "negative:watchos:7.3:public-beta-1",
+        "negative:watchos:7.4:public-beta-6",
+        "negative:watchos:7.6:public-beta-2",
+        "negative:watchos:9.1:public-beta-1",
+        "negative:watchos:26.4:public-beta-3",
+        "negative:watchos:26.4:public-beta-4"
+      ],
+      "blockedCandidateIdsExcluded": [
+        "candidate:apple:watchos:7.2:public-beta-2",
+        "candidate:apple:watchos:7.3:public-beta-2",
+        "candidate:apple:watchos:7.4:public-beta-1",
+        "candidate:apple:watchos:7.4:public-beta-7",
+        "candidate:apple:watchos:7.5:public-beta-2",
+        "candidate:apple:watchos:7.5:public-beta-3",
+        "candidate:apple:watchos:7.6:public-beta-4",
+        "candidate:apple:watchos:8.1:public-beta-2",
+        "candidate:apple:watchos:8.1:public-beta-3",
+        "candidate:apple:watchos:8.1:public-beta-4",
+        "candidate:apple:watchos:8.3:public-beta-1",
+        "candidate:apple:watchos:8.3:public-beta-3",
+        "candidate:apple:watchos:8.3:public-beta-4",
+        "candidate:apple:watchos:8.4:public-beta-1",
+        "candidate:apple:watchos:8.4:public-beta-2",
+        "candidate:apple:watchos:8.5:public-beta-4",
+        "candidate:apple:watchos:8.5:public-beta-5",
+        "candidate:apple:watchos:8.6:public-beta-1",
+        "candidate:apple:watchos:8.6:public-beta-2",
+        "candidate:apple:watchos:8.6:public-beta-3",
+        "candidate:apple:watchos:8.6:public-beta-4",
+        "candidate:apple:watchos:8.7:public-beta-2",
+        "candidate:apple:watchos:8.7:public-beta-4",
+        "candidate:apple:watchos:9.1:public-beta-2",
+        "candidate:apple:watchos:9.1:public-beta-4",
+        "candidate:apple:watchos:9.1:public-beta-5",
+        "candidate:apple:watchos:26.4:public-beta-2",
+        "candidate:apple:watchos:26.5:public-beta-4",
+        "candidate:apple:watchos:26.6:public-beta-3",
+        "candidate:apple:watchos:26.6:public-beta-5"
+      ]
+    },
+    "siteIntegrationAllowed": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "pageBuildsAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  }
+}

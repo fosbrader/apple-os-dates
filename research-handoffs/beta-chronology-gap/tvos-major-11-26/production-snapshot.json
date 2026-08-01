@@ -1,0 +1,1536 @@
+{
+  "projectId": "lh3yswzu",
+  "dataset": "production",
+  "perspective": "published",
+  "query": "{\n  \"queriedAt\": now(),\n  \"versions\": *[_type == \"releaseVersion\" && _id in $ids]{_id, version, \"platformId\": platform._ref, \"eventCount\": count(*[_type == \"releaseEvent\" && releaseVersion._ref == ^._id]), \"events\": *[_type == \"releaseEvent\" && releaseVersion._ref == ^._id] | order(appearanceDate asc, sequence asc){_id, label, routeAlias, channel, appearanceDate, sequence, isRevision, availabilityState, closesReleaseCycle, \"buildId\": build._ref}}\n}",
+  "params": {
+    "ids": [
+      "version-tvos-11-0",
+      "version-tvos-12-0",
+      "version-tvos-13-0",
+      "version-tvos-14-0",
+      "version-tvos-15-0",
+      "version-tvos-16-0",
+      "version-tvos-17-0",
+      "version-tvos-18-0",
+      "version-tvos-26-0"
+    ]
+  },
+  "result": {
+    "queriedAt": "2026-07-31T03:03:34Z",
+    "versions": [
+      {
+        "_id": "version-tvos-11-0",
+        "eventCount": 12,
+        "events": [
+          {
+            "_id": "release-event-86ac12dce69050a244a5c0c6",
+            "appearanceDate": "2017-06-05",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 1",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-1"
+            },
+            "sequence": 1
+          },
+          {
+            "_id": "release-event-0d3511350cadb5fc7d5dab3d",
+            "appearanceDate": "2017-06-21",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 2",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-2"
+            },
+            "sequence": 2
+          },
+          {
+            "_id": "release-event-1d038d1d22cde9a9847a36cc",
+            "appearanceDate": "2017-07-10",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 3",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-3"
+            },
+            "sequence": 3
+          },
+          {
+            "_id": "release-event-6b742b3ec498d665750a3870",
+            "appearanceDate": "2017-07-24",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 4",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-4"
+            },
+            "sequence": 4
+          },
+          {
+            "_id": "release-event-be45b332a518504fbc825104",
+            "appearanceDate": "2017-08-07",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 5",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-5"
+            },
+            "sequence": 5
+          },
+          {
+            "_id": "release-event-9d9c882c642bd9b796bbbec7",
+            "appearanceDate": "2017-08-14",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 6",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-6"
+            },
+            "sequence": 6
+          },
+          {
+            "_id": "release-event-0a85693291a4f705ad3edf6f",
+            "appearanceDate": "2017-08-21",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 7",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-7"
+            },
+            "sequence": 7
+          },
+          {
+            "_id": "release-event-5018454d249d3a728d5d664b",
+            "appearanceDate": "2017-08-28",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 8",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-8"
+            },
+            "sequence": 8
+          },
+          {
+            "_id": "release-event-9e2ddb383450edbadc504999",
+            "appearanceDate": "2017-08-31",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 9",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-9"
+            },
+            "sequence": 9
+          },
+          {
+            "_id": "release-event-d52f432a2f56695488536c8b",
+            "appearanceDate": "2017-09-06",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 10",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-10"
+            },
+            "sequence": 10
+          },
+          {
+            "_id": "release-event-cd18e0c47e82deef081095e9",
+            "appearanceDate": "2017-09-12",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "goldenMaster",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "GM",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "gm"
+            },
+            "sequence": null
+          },
+          {
+            "_id": "release-event-165816f305f7933eb3150bb5",
+            "appearanceDate": "2017-09-19",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "public",
+            "closesReleaseCycle": true,
+            "isRevision": false,
+            "label": "Public",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "public"
+            },
+            "sequence": null
+          }
+        ],
+        "platformId": null,
+        "version": "11.0"
+      },
+      {
+        "_id": "version-tvos-12-0",
+        "eventCount": 12,
+        "events": [
+          {
+            "_id": "release-event-5496da28759cb7b71716aa19",
+            "appearanceDate": "2018-06-04",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 1",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-1"
+            },
+            "sequence": 1
+          },
+          {
+            "_id": "release-event-a17e24d0f8fe9a6f7bcf2a1b",
+            "appearanceDate": "2018-06-19",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 2",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-2"
+            },
+            "sequence": 2
+          },
+          {
+            "_id": "release-event-17dc1e71de7a1cb62af6fa76",
+            "appearanceDate": "2018-07-03",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 3",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-3"
+            },
+            "sequence": 3
+          },
+          {
+            "_id": "release-event-db6bd7c3506d00016f5f9108",
+            "appearanceDate": "2018-07-17",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 4",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-4"
+            },
+            "sequence": 4
+          },
+          {
+            "_id": "release-event-e53b9076dfbcc3019fa7cddd",
+            "appearanceDate": "2018-07-30",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 5",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-5"
+            },
+            "sequence": 5
+          },
+          {
+            "_id": "release-event-5ddaf3b9b965cf6e3c9406fb",
+            "appearanceDate": "2018-08-06",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 6",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-6"
+            },
+            "sequence": 6
+          },
+          {
+            "_id": "release-event-58953849ed9e661395fbb944",
+            "appearanceDate": "2018-08-13",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 7",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-7"
+            },
+            "sequence": 7
+          },
+          {
+            "_id": "release-event-c90ace87a9800eaa62cb111b",
+            "appearanceDate": "2018-08-20",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 8",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-8"
+            },
+            "sequence": 8
+          },
+          {
+            "_id": "release-event-2bc0f6e95a6f90df19e338f4",
+            "appearanceDate": "2018-08-27",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 9",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-9"
+            },
+            "sequence": 9
+          },
+          {
+            "_id": "release-event-a32835896e2fcaae5b0f4eff",
+            "appearanceDate": "2018-08-31",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 10",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-10"
+            },
+            "sequence": 10
+          },
+          {
+            "_id": "release-event-501ccb2837730f43afb49531",
+            "appearanceDate": "2018-09-12",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "goldenMaster",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "GM",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "gm"
+            },
+            "sequence": null
+          },
+          {
+            "_id": "release-event-b575504eb79eb57cc81086b5",
+            "appearanceDate": "2018-09-17",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "public",
+            "closesReleaseCycle": true,
+            "isRevision": false,
+            "label": "Public",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "public"
+            },
+            "sequence": null
+          }
+        ],
+        "platformId": null,
+        "version": "12.0"
+      },
+      {
+        "_id": "version-tvos-13-0",
+        "eventCount": 11,
+        "events": [
+          {
+            "_id": "release-event-75249142bc98394bab90ebc3",
+            "appearanceDate": "2019-06-03",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 1",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-1"
+            },
+            "sequence": 1
+          },
+          {
+            "_id": "release-event-522846dd8da9a69b806bd73d",
+            "appearanceDate": "2019-06-17",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 2",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-2"
+            },
+            "sequence": 2
+          },
+          {
+            "_id": "release-event-8360ff45f71251c04fb13417",
+            "appearanceDate": "2019-07-02",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 3",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-3"
+            },
+            "sequence": 3
+          },
+          {
+            "_id": "release-event-58ec9d760db97cd922ec5694",
+            "appearanceDate": "2019-07-22",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 4",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-4"
+            },
+            "sequence": 4
+          },
+          {
+            "_id": "release-event-4948fbd54aa3b3da84962cd4",
+            "appearanceDate": "2019-07-29",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 5",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-5"
+            },
+            "sequence": 5
+          },
+          {
+            "_id": "release-event-9284e37606b3b99e79d2daf3",
+            "appearanceDate": "2019-08-07",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 6",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-6"
+            },
+            "sequence": 6
+          },
+          {
+            "_id": "release-event-394109d06d256b323245762c",
+            "appearanceDate": "2019-08-15",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 7",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-7"
+            },
+            "sequence": 7
+          },
+          {
+            "_id": "release-event-7b57eec2cbd0fdc34fe159b0",
+            "appearanceDate": "2019-08-21",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 8",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-8"
+            },
+            "sequence": 8
+          },
+          {
+            "_id": "release-event-1f4abd0a4be62a4962505be7",
+            "appearanceDate": "2019-08-27",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 9",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-9"
+            },
+            "sequence": 9
+          },
+          {
+            "_id": "release-event-5d05c158e4155e2c2aeb7a2f",
+            "appearanceDate": "2019-09-10",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 10",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-10"
+            },
+            "sequence": 10
+          },
+          {
+            "_id": "release-event-3303543e8a8b2fd6e75283d3",
+            "appearanceDate": "2019-09-24",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "public",
+            "closesReleaseCycle": true,
+            "isRevision": false,
+            "label": "Public",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "public"
+            },
+            "sequence": null
+          }
+        ],
+        "platformId": null,
+        "version": "13.0"
+      },
+      {
+        "_id": "version-tvos-14-0",
+        "eventCount": 10,
+        "events": [
+          {
+            "_id": "release-event-df6577a4f9e928387c0413b1",
+            "appearanceDate": "2020-06-22",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 1",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-1"
+            },
+            "sequence": 1
+          },
+          {
+            "_id": "release-event-3bd0c12b695a4bf65f0b83c4",
+            "appearanceDate": "2020-07-07",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 2",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-2"
+            },
+            "sequence": 2
+          },
+          {
+            "_id": "release-event-cc4e86507ef4bcd0a0cc0846",
+            "appearanceDate": "2020-07-22",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 3",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-3"
+            },
+            "sequence": 3
+          },
+          {
+            "_id": "release-event-259e71f7de401a226b62d8b9",
+            "appearanceDate": "2020-08-04",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 4",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-4"
+            },
+            "sequence": 4
+          },
+          {
+            "_id": "release-event-b9d471888fbd3d907851ddec",
+            "appearanceDate": "2020-08-18",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 5",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-5"
+            },
+            "sequence": 5
+          },
+          {
+            "_id": "release-event-8d2d8bdd70a7c74a43a02215",
+            "appearanceDate": "2020-08-25",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 6",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-6"
+            },
+            "sequence": 6
+          },
+          {
+            "_id": "release-event-6ac0fd0b9d33b0f82015da7c",
+            "appearanceDate": "2020-09-03",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 7",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-7"
+            },
+            "sequence": 7
+          },
+          {
+            "_id": "release-event-dfed20bbf7f046f2b9f63330",
+            "appearanceDate": "2020-09-09",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 8",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-8"
+            },
+            "sequence": 8
+          },
+          {
+            "_id": "release-event-0b8f10bc117401552a74ec85",
+            "appearanceDate": "2020-09-15",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "goldenMaster",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "GM",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "gm"
+            },
+            "sequence": null
+          },
+          {
+            "_id": "release-event-f3549f4e8a08bc17217853a4",
+            "appearanceDate": "2020-09-16",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "public",
+            "closesReleaseCycle": true,
+            "isRevision": false,
+            "label": "Public",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "public"
+            },
+            "sequence": null
+          }
+        ],
+        "platformId": null,
+        "version": "14.0"
+      },
+      {
+        "_id": "version-tvos-15-0",
+        "eventCount": 10,
+        "events": [
+          {
+            "_id": "release-event-f71a179a7ec690f9e6557d68",
+            "appearanceDate": "2021-06-07",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 1",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-1"
+            },
+            "sequence": 1
+          },
+          {
+            "_id": "release-event-f1074492782306df458d2a54",
+            "appearanceDate": "2021-06-24",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 2",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-2"
+            },
+            "sequence": 2
+          },
+          {
+            "_id": "release-event-9f78cd7da147bcf34383c75d",
+            "appearanceDate": "2021-07-14",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 3",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-3"
+            },
+            "sequence": 3
+          },
+          {
+            "_id": "release-event-6bbc2e1892a1c4d86887b6b3",
+            "appearanceDate": "2021-07-27",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 4",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-4"
+            },
+            "sequence": 4
+          },
+          {
+            "_id": "release-event-9607fbae25e91479cb7c727e",
+            "appearanceDate": "2021-08-10",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 5",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-5"
+            },
+            "sequence": 5
+          },
+          {
+            "_id": "release-event-b8b5efa0109014bdb690358f",
+            "appearanceDate": "2021-08-17",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 6",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-6"
+            },
+            "sequence": 6
+          },
+          {
+            "_id": "release-event-b1c190490fbe08e03798801b",
+            "appearanceDate": "2021-08-25",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 7",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-7"
+            },
+            "sequence": 7
+          },
+          {
+            "_id": "release-event-bc49b78e97eb0a5b67e84805",
+            "appearanceDate": "2021-08-31",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 8",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-8"
+            },
+            "sequence": 8
+          },
+          {
+            "_id": "release-event-121cc1c6ef7f28d7f651ce43",
+            "appearanceDate": "2021-09-14",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "releaseCandidate",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "RC",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "rc"
+            },
+            "sequence": null
+          },
+          {
+            "_id": "release-event-c24dd2364a4c762aa001b2e6",
+            "appearanceDate": "2021-09-20",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "public",
+            "closesReleaseCycle": true,
+            "isRevision": false,
+            "label": "Public",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "public"
+            },
+            "sequence": null
+          }
+        ],
+        "platformId": null,
+        "version": "15.0"
+      },
+      {
+        "_id": "version-tvos-16-0",
+        "eventCount": 9,
+        "events": [
+          {
+            "_id": "release-event-910f4bfcf28237ddd57d578c",
+            "appearanceDate": "2022-06-06",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 1",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-1"
+            },
+            "sequence": 1
+          },
+          {
+            "_id": "release-event-920a5260030fcceff17ea814",
+            "appearanceDate": "2022-06-22",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 2",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-2"
+            },
+            "sequence": 2
+          },
+          {
+            "_id": "release-event-41b85eb7ad42f511c3b4169a",
+            "appearanceDate": "2022-07-06",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 3",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-3"
+            },
+            "sequence": 3
+          },
+          {
+            "_id": "release-event-2b2882b66eb6a5d5d5833ddf",
+            "appearanceDate": "2022-07-27",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 4",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-4"
+            },
+            "sequence": 4
+          },
+          {
+            "_id": "release-event-522a703dcd4b29f6cdf5f123",
+            "appearanceDate": "2022-08-08",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 5",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-5"
+            },
+            "sequence": 5
+          },
+          {
+            "_id": "release-event-6591f9453bb545f7882256c2",
+            "appearanceDate": "2022-08-15",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 6",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-6"
+            },
+            "sequence": 6
+          },
+          {
+            "_id": "release-event-fef066d78a0157c1d7f3f8d9",
+            "appearanceDate": "2022-08-23",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 7",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-7"
+            },
+            "sequence": 7
+          },
+          {
+            "_id": "release-event-c3cd499887918dcc5068bda7",
+            "appearanceDate": "2022-09-07",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "releaseCandidate",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "RC",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "rc"
+            },
+            "sequence": null
+          },
+          {
+            "_id": "release-event-37bbb77848fc367c76bd3e9d",
+            "appearanceDate": "2022-09-12",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "public",
+            "closesReleaseCycle": true,
+            "isRevision": false,
+            "label": "Public",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "public"
+            },
+            "sequence": null
+          }
+        ],
+        "platformId": null,
+        "version": "16.0"
+      },
+      {
+        "_id": "version-tvos-17-0",
+        "eventCount": 11,
+        "events": [
+          {
+            "_id": "release-event-39a2c33ed0fce9177a8daedc",
+            "appearanceDate": "2023-06-05",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 1",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-1"
+            },
+            "sequence": 1
+          },
+          {
+            "_id": "release-event-25fa57b055efa30f3689dc82",
+            "appearanceDate": "2023-06-21",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 2",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-2"
+            },
+            "sequence": 2
+          },
+          {
+            "_id": "release-event-9817afcade37a9117f67d580",
+            "appearanceDate": "2023-07-05",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 3",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-3"
+            },
+            "sequence": 3
+          },
+          {
+            "_id": "release-event-099d67944f2eb2433d57c5f6",
+            "appearanceDate": "2023-07-25",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 4",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-4"
+            },
+            "sequence": 4
+          },
+          {
+            "_id": "release-event-efd11f84997208b2cd99efec",
+            "appearanceDate": "2023-08-08",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 5",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-5"
+            },
+            "sequence": 5
+          },
+          {
+            "_id": "release-event-a61f9d19b481f6fd59bfcaf4",
+            "appearanceDate": "2023-08-15",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 6",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-6"
+            },
+            "sequence": 6
+          },
+          {
+            "_id": "release-event-21df159d212b3d39cf4cad1a",
+            "appearanceDate": "2023-08-22",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 7",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-7"
+            },
+            "sequence": 7
+          },
+          {
+            "_id": "release-event-03edb800de24880b5f5833ee",
+            "appearanceDate": "2023-08-29",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 8",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-8"
+            },
+            "sequence": 8
+          },
+          {
+            "_id": "release-event-83f11af4467f7e278f72ded6",
+            "appearanceDate": "2023-09-05",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 9",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-9"
+            },
+            "sequence": 9
+          },
+          {
+            "_id": "release-event-7f15edbef256723561fe18d0",
+            "appearanceDate": "2023-09-12",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "releaseCandidate",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "RC",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "rc"
+            },
+            "sequence": null
+          },
+          {
+            "_id": "release-event-38a68d73892a02fbc8fa5844",
+            "appearanceDate": "2023-09-18",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "public",
+            "closesReleaseCycle": true,
+            "isRevision": false,
+            "label": "Public",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "public"
+            },
+            "sequence": null
+          }
+        ],
+        "platformId": null,
+        "version": "17.0"
+      },
+      {
+        "_id": "version-tvos-18-0",
+        "eventCount": 10,
+        "events": [
+          {
+            "_id": "release-event-e9bd856f5d96ee454fef8c16",
+            "appearanceDate": "2024-06-10",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 1",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-1"
+            },
+            "sequence": 1
+          },
+          {
+            "_id": "release-event-4b785c717759d5e4b7fea87f",
+            "appearanceDate": "2024-06-24",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 2",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-2"
+            },
+            "sequence": 2
+          },
+          {
+            "_id": "release-event-0f92810a803f557eb91cdc26",
+            "appearanceDate": "2024-07-08",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 3",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-3"
+            },
+            "sequence": 3
+          },
+          {
+            "_id": "release-event-82c8b267e39fc6ddcda9da98",
+            "appearanceDate": "2024-07-23",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 4",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-4"
+            },
+            "sequence": 4
+          },
+          {
+            "_id": "release-event-d737d00373b61594e52e04e6",
+            "appearanceDate": "2024-08-05",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 5",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-5"
+            },
+            "sequence": 5
+          },
+          {
+            "_id": "release-event-8b80a9020a519992136ec3fc",
+            "appearanceDate": "2024-08-12",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 6",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-6"
+            },
+            "sequence": 6
+          },
+          {
+            "_id": "release-event-10978ac0d291aca146239233",
+            "appearanceDate": "2024-08-20",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 7",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-7"
+            },
+            "sequence": 7
+          },
+          {
+            "_id": "release-event-c2888c356cb450d0fdfd533f",
+            "appearanceDate": "2024-08-28",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 8",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-8"
+            },
+            "sequence": 8
+          },
+          {
+            "_id": "release-event-1b97b738392fcc8678aeede9",
+            "appearanceDate": "2024-09-09",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "releaseCandidate",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "RC",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "rc"
+            },
+            "sequence": null
+          },
+          {
+            "_id": "release-event-d3d951baab4055c0bb58c43f",
+            "appearanceDate": "2024-09-16",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "public",
+            "closesReleaseCycle": true,
+            "isRevision": false,
+            "label": "Public",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "public"
+            },
+            "sequence": null
+          }
+        ],
+        "platformId": null,
+        "version": "18.0"
+      },
+      {
+        "_id": "version-tvos-26-0",
+        "eventCount": 11,
+        "events": [
+          {
+            "_id": "release-event-dd60a44e38eaba8c012b484a",
+            "appearanceDate": "2025-06-09",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 1",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-1"
+            },
+            "sequence": 1
+          },
+          {
+            "_id": "release-event-40b60c45044cb14b79326000",
+            "appearanceDate": "2025-06-23",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 2",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-2"
+            },
+            "sequence": 2
+          },
+          {
+            "_id": "release-event-dbcd4b1cf8db12671b5d175f",
+            "appearanceDate": "2025-07-08",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 3",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-3"
+            },
+            "sequence": 3
+          },
+          {
+            "_id": "release-event-976577dc022551679c326595",
+            "appearanceDate": "2025-07-22",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 4",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-4"
+            },
+            "sequence": 4
+          },
+          {
+            "_id": "release-event-6009f4d2fd399087cbf4fc41",
+            "appearanceDate": "2025-08-05",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 5",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-5"
+            },
+            "sequence": 5
+          },
+          {
+            "_id": "release-event-b7e900a969c4cb161a3756fc",
+            "appearanceDate": "2025-08-11",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 6",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-6"
+            },
+            "sequence": 6
+          },
+          {
+            "_id": "release-event-818204815a9b0247e76c8872",
+            "appearanceDate": "2025-08-18",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 7",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-7"
+            },
+            "sequence": 7
+          },
+          {
+            "_id": "release-event-cdfd9615966bd92aa87e5dd8",
+            "appearanceDate": "2025-08-25",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 8",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-8"
+            },
+            "sequence": 8
+          },
+          {
+            "_id": "release-event-d84b96818adf16c3e755cf62",
+            "appearanceDate": "2025-09-02",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "developerBeta",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "Beta 9",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "beta-9"
+            },
+            "sequence": 9
+          },
+          {
+            "_id": "release-event-d66c990eddb40f3bb93f7441",
+            "appearanceDate": "2025-09-09",
+            "availabilityState": "available",
+            "buildId": null,
+            "channel": "releaseCandidate",
+            "closesReleaseCycle": false,
+            "isRevision": false,
+            "label": "RC",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "rc"
+            },
+            "sequence": null
+          },
+          {
+            "_id": "release-event-166217249519a1436d0ca663",
+            "appearanceDate": "2025-09-15",
+            "availabilityState": "available",
+            "buildId": "release-build-cbebbf0f735eee0b40cb7b9c",
+            "channel": "public",
+            "closesReleaseCycle": true,
+            "isRevision": false,
+            "label": "Public",
+            "routeAlias": {
+              "_type": "slug",
+              "current": "public"
+            },
+            "sequence": null
+          }
+        ],
+        "platformId": null,
+        "version": "26.0"
+      }
+    ]
+  }
+}

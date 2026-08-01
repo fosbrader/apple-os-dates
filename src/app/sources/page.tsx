@@ -7,13 +7,24 @@ import {
   OrderedSteps,
 } from "@/components/content/ContentPage";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
+import {
+  CONTENT_COVERAGE_DESCRIPTIONS,
+  CONTENT_COVERAGE_LABELS,
+  type ContentCoverage,
+} from "@/lib/content-coverage";
 import { absoluteUrl, createPageMetadata } from "@/lib/site";
 
 const pageDescription =
-  "See which sources Beta Cadence uses, how dates are verified, and how corrections and editorial conflicts are handled.";
+  "See which sources Version Record uses, how claims are cited, and how corrections and editorial conflicts are handled.";
 
 const externalLinkClass =
   "text-[var(--accent)] hover:text-[var(--accent-hover)] underline underline-offset-4";
+
+const coverageLevels: ContentCoverage[] = [
+  "timelineOnly",
+  "sourceLinkedRecord",
+  "fullArticle",
+];
 
 export const metadata = createPageMetadata({
   title: "Sources & Editorial Policy",
@@ -46,7 +57,7 @@ export default function SourcesPage() {
       <ContentPage
         eyebrow="Editorial standards"
         title="Sources & editorial policy"
-        description="The tracker favors direct, contemporaneous evidence and makes uncertainty visible rather than turning an incomplete record into false precision."
+        description="The archive favors direct, contemporaneous evidence and makes uncertainty visible rather than turning an incomplete record into false precision."
       >
         <Notice title="The short version" tone="accent">
           <p>
@@ -92,6 +103,75 @@ export default function SourcesPage() {
               </p>
             </li>
           </ol>
+        </ContentSection>
+
+        <ContentSection title="What the archive publishes">
+          <p>
+            Version Record writes an independent synthesis of release facts.
+            It does not republish another outlet’s release-note article or
+            present a publisher’s reporting as original work. Each material
+            factual claim should point to the source that supports it, using an
+            inline citation and a complete reference entry.
+          </p>
+          <BulletList>
+            <li>
+              Facts, dates, build identifiers, and independently described
+              observations may be summarized with attribution.
+            </li>
+            <li>
+              Quotations are used only when the exact wording matters, kept
+              brief, clearly marked, and linked to the original publication.
+            </li>
+            <li>
+              Screenshots, artwork, logos, and long excerpts are not copied
+              merely to make a record feel complete.
+            </li>
+            <li>
+              A link or citation credits the source; it does not transfer that
+              publisher’s copyright or imply endorsement.
+            </li>
+          </BulletList>
+        </ContentSection>
+
+        <ContentSection title="Citation and evidence states">
+          <p>
+            Inline reference numbers connect a claim to the source ledger at
+            the end of an article. The ledger records the source title,
+            publisher, canonical URL, publication or access date when known,
+            and an archived copy when one is appropriate.
+          </p>
+          <p>
+            Community-sourced changes are labeled as reported, corroborated, or
+            confirmed. “Undocumented” means the change was not found in the
+            applicable official notes; it does not mean the change is secret or
+            that every official document has been exhaustively checked.
+          </p>
+        </ContentSection>
+
+        <ContentSection title="Content coverage labels">
+          <p>
+            A dated appearance is useful even before it has a researched
+            article, but the two should not look equivalent. Every release
+            record carries one of these coverage labels:
+          </p>
+          <div className="grid gap-3 sm:grid-cols-3">
+            {coverageLevels.map((coverage) => (
+              <div className="card" key={coverage}>
+                <p className="font-semibold text-[var(--text)]">
+                  {CONTENT_COVERAGE_LABELS[coverage]}
+                </p>
+                <p className="mt-2 text-sm">
+                  {CONTENT_COVERAGE_DESCRIPTIONS[coverage]}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p>
+            A linked source by itself does not make a release-notes article.
+            The “Full article” label requires actual editorial prose; source
+            ledgers without substantive prose remain labeled as source-linked
+            records.
+          </p>
         </ContentSection>
 
         <ContentSection title="Frequently used primary references">
@@ -193,8 +273,8 @@ export default function SourcesPage() {
           <OrderedSteps>
             <li>
               Submit a correction through the{" "}
-              <Link href="/contact/" className={externalLinkClass}>
-                contact page
+              <Link href="/submit/" className={externalLinkClass}>
+                submission form
               </Link>{" "}
               with the platform, version, milestone, current value, proposed
               value, and supporting link.
@@ -226,7 +306,7 @@ export default function SourcesPage() {
             visually distinguishable from reference content.
           </p>
           <p>
-            Beta Cadence is independent and is not affiliated with,
+            Version Record is independent and is not affiliated with,
             sponsored by, endorsed by, or operated by Apple Inc.
           </p>
         </ContentSection>

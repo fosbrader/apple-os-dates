@@ -1,0 +1,125 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios10-point-public-followup",
+  "parentBatchId": "beta-chronology-gap-ios10-point-public",
+  "reviewedAt": "2026-07-31T04:46:24Z",
+  "reviewer": "codex-root",
+  "independentOfSupplementResearcher": true,
+  "verdict": "passWithMandatoryDateAndSourceQualifications",
+  "summary": {
+    "candidateCount": 2,
+    "chronologyApprovedCandidateCount": 2,
+    "blockedCandidateCount": 0,
+    "packetAndEvidenceLockCount": 34,
+    "lockFailureCount": 0,
+    "productionIdentityMatchCount": 0
+  },
+  "candidateVerdict": {
+    "chronologyApprovedAfterSupplement": [
+      "candidate:apple:ios:10.2:public-beta-3",
+      "candidate:apple:ios:10.2.1:public-beta-3"
+    ],
+    "approvedWithMandatoryQualification": [
+      "candidate:apple:ios:10.2:public-beta-3",
+      "candidate:apple:ios:10.2.1:public-beta-3"
+    ],
+    "blocked": []
+  },
+  "checks": {
+    "packetJsonParsed": true,
+    "frozenParentPacketUnchanged": true,
+    "sharedCandidateSchemaValid": true,
+    "candidateSourceReferencesResolved": true,
+    "allPacketAndEvidenceLocksReproduced": true,
+    "packetAndEvidenceLockCount": 34,
+    "lockFailures": 0,
+    "macRumorsArchivedRevisionWindowInspected": true,
+    "macRumorsNegativeStateInspected": true,
+    "macRumorsPositiveStateInspected": true,
+    "contraryNovember15PositionInspected": true,
+    "timezoneNormalizationsInspected": true,
+    "taisy0Ios1021ExactIdentityInspected": true,
+    "kobonemiInternalOrdinalConflictInspected": true,
+    "freshExactProductionMatches": 0,
+    "sanityMutationPerformed": false,
+    "productionIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "deploymentPerformed": false
+  },
+  "candidateReviews": [
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-3",
+      "appearanceDate": "2016-11-14",
+      "disposition": "chronologyApprovedWithPacificDateAndConflictQualification",
+      "finding": "The retained MacRumors states directly bracket the public update on November 14 Pacific: the 13:02:49 article state says the seed was still developer-only, while the archived state captured at 14:55:46 contains the explicit public-beta update. Independent ThinkApple and Taisy0 reports were published later that same Pacific day. The later Neowin 'today' wording is preserved as a contrary November 15 reporting position, but it cannot move the already observed first appearance forward.",
+      "requiredQualificationIds": [
+        "ios102-pb3-first-appearance-window",
+        "ios102-pb3-later-reporting-conflict",
+        "ios102-pb3-redmondpie-metadata"
+      ]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:public-beta-3",
+      "appearanceDate": "2017-01-09",
+      "disposition": "chronologyApprovedWithSourceQualification",
+      "finding": "Taisy0 explicitly identifies iOS 10.2.1 Public Beta 3 for beta testers and its full JST timestamp normalizes to January 9 Pacific, independently corroborating the retained MacRumors lineage. Kobonemi is unnecessary to close the gate and remains supplementary because its title and product string conflict with erroneous prose ordinals.",
+      "requiredQualificationIds": [
+        "ios1021-pb3-taisy0-lineage",
+        "ios1021-pb3-kobonemi-exclusion"
+      ]
+    }
+  ],
+  "qualifications": [
+    {
+      "qualificationId": "ios102-pb3-first-appearance-window",
+      "candidateIds": [
+        "candidate:apple:ios:10.2:public-beta-3"
+      ],
+      "requiredHandling": "Use 2016-11-14 in America/Los_Angeles as the first-appearance date. Describe the evidence as an observed availability window after 13:02:49 and by 14:55:46 Pacific; do not invent an exact release time."
+    },
+    {
+      "qualificationId": "ios102-pb3-later-reporting-conflict",
+      "candidateIds": [
+        "candidate:apple:ios:10.2:public-beta-3"
+      ],
+      "requiredHandling": "Preserve Neowin's November 15 'today' claim as a source conflict and distinguish later reporting or continued availability from first observed appearance. Do not create a November 15 duplicate event."
+    },
+    {
+      "qualificationId": "ios102-pb3-redmondpie-metadata",
+      "candidateIds": [
+        "candidate:apple:ios:10.2:public-beta-3"
+      ],
+      "requiredHandling": "Retain both Redmond Pie machine timestamps and use neither as an exact publication-time claim. Both normalize to November 14 Pacific."
+    },
+    {
+      "qualificationId": "ios1021-pb3-taisy0-lineage",
+      "candidateIds": [
+        "candidate:apple:ios:10.2.1:public-beta-3"
+      ],
+      "requiredHandling": "Preserve the original Japanese source, JST timestamp, Pacific normalization, and original-synthesis translation summary together."
+    },
+    {
+      "qualificationId": "ios1021-pb3-kobonemi-exclusion",
+      "candidateIds": [
+        "candidate:apple:ios:10.2.1:public-beta-3"
+      ],
+      "requiredHandling": "Use Kobonemi only as qualified supplementary title/product evidence. Do not repeat its erroneous 'second public beta' or 'Developer Beta 2' prose and do not count it as the decisive second lineage."
+    }
+  ],
+  "integrity": {
+    "validationSha256": "c7926aa5484293c9d3f23817eac53a0df67c1acd5f381361f773d1f7ee9b6f2a",
+    "packetLocksSha256": "916a94c91aa4c525d6feca2d27d949e37460c1722faf327a7a4083b2f8faedfd",
+    "validationStatus": "passed",
+    "packetAndEvidenceLocksReproduced": 34,
+    "lockFailures": 0
+  },
+  "authorization": {
+    "chronologyReviewEligibleCandidateCountAdded": 2,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdAllocationAllowed": false,
+    "pageBuildAllowed": false,
+    "deploymentAllowed": false
+  },
+  "nextGate": "Use the corrected supplement identities in the guarded chronology handoff, preserve every mandatory qualification, and repeat the exact production query immediately before any separately authorized mutation."
+}

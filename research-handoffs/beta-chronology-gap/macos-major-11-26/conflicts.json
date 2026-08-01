@@ -1,0 +1,191 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-major-11-26",
+  "researchCutoff": "2026-07-30",
+  "conflictCount": 9,
+  "conflicts": [
+    {
+      "conflictId": "conflict-macos11-late-public-ordinal",
+      "versions": [
+        "11.0"
+      ],
+      "candidateIds": [
+        "candidate:apple:macos:11.0:public-beta-4",
+        "candidate:apple:macos:11.0:public-beta-5",
+        "candidate:apple:macos:11.0:public-beta-6"
+      ],
+      "type": "ordinalChronologyDivergence",
+      "canonicalDecision": "Preserve all three actual public appearances as Public Beta 4, 5, and 6, but freeze them at identityStatus=conflict.",
+      "evidence": "MacRumors records public availability on September 22, September 30, and October 15. Apple Wiki maps those appearances to the fourth, fifth, and sixth public betas, and Cisco independently maps beta 9 to public beta 5. iCulture and iMore-style living chronologies omit September 22 and call September 30 Public Beta 4.",
+      "sourceIds": [
+        "source-mr-bigsur-pb4",
+        "source-mr-bigsur-pb5",
+        "source-mr-bigsur-pb6",
+        "source-applewiki-bigsur",
+        "source-cisco-bigsur-pb5",
+        "source-iculture-macos-11"
+      ],
+      "reviewRequired": true
+    },
+    {
+      "conflictId": "conflict-macos11-pb6-date",
+      "versions": [
+        "11.0"
+      ],
+      "candidateIds": [
+        "candidate:apple:macos:11.0:public-beta-6"
+      ],
+      "type": "calendarNormalization",
+      "canonicalDecision": "Use October 15, 2020, the explicit Pacific-dated MacRumors public-program update; preserve Apple Wiki's October 16 date as a conflict.",
+      "evidence": "The contemporary article explicitly labels its public-program update October 15; the retrospective chronology records October 16.",
+      "sourceIds": [
+        "source-mr-bigsur-pb6",
+        "source-applewiki-bigsur",
+        "source-osxd-bigsur-pb6"
+      ],
+      "reviewRequired": true
+    },
+    {
+      "conflictId": "conflict-macos12-skipped-pb3",
+      "versions": [
+        "12.0"
+      ],
+      "candidateIds": [
+        "candidate:apple:macos:12.0:public-beta-4"
+      ],
+      "type": "skippedOrdinal",
+      "canonicalDecision": "Do not create Public Beta 3. Preserve Public Beta 4 as the next actual appearance after Public Beta 2.",
+      "evidence": "iCulture explicitly states that Apple skipped Public Beta 3; AppleInsider and OS X Daily independently identify the July 28 release as Public Beta 4.",
+      "sourceIds": [
+        "source-iculture-macos-12",
+        "source-appleinsider-monterey-pb4",
+        "source-osxd-monterey-pb4"
+      ],
+      "reviewRequired": true
+    },
+    {
+      "conflictId": "conflict-macos12-pb10",
+      "versions": [
+        "12.0"
+      ],
+      "candidateIds": [
+        "candidate:apple:macos:12.0:public-beta-10"
+      ],
+      "type": "lateOrdinalDivergence",
+      "canonicalDecision": "Retain Public Beta 10 on October 13 Pacific, but freeze it at identityStatus=conflict.",
+      "evidence": "9to5Mac reports beta 10 availability to public testers and Kobonemi explicitly labels macOS Monterey Public Beta 10; iCulture's living chronology ends at Public Beta 9.",
+      "sourceIds": [
+        "source-9to5-monterey-pb10",
+        "source-kobonemi-monterey-pb10",
+        "source-iculture-macos-12"
+      ],
+      "reviewRequired": true
+    },
+    {
+      "conflictId": "conflict-macos13-pb5-lifecycle",
+      "versions": [
+        "13.0"
+      ],
+      "candidateIds": [
+        "candidate:apple:macos:13.0:public-beta-5"
+      ],
+      "type": "withdrawalAndSameLabelReturn",
+      "canonicalDecision": "Use September 9 for the unique route candidate with availabilityState=replaced; preserve September 10 as a separate same-label return without a duplicate route.",
+      "evidence": "9to5Mac records public-tester availability on September 9; Mr. Macintosh says Public Beta 5 was released then pulled. iCulture and iThinkDifferent record Public Beta 5 on September 10.",
+      "sourceIds": [
+        "source-9to5-ventura-pb5",
+        "source-mrmac-ventura-pb5",
+        "source-iculture-macos-13",
+        "source-ithinkdiff-ventura"
+      ],
+      "reviewRequired": true
+    },
+    {
+      "conflictId": "conflict-macos14-pb4-overnumber",
+      "versions": [
+        "14.0"
+      ],
+      "candidateIds": [
+        "candidate:apple:macos:14.0:public-beta-4"
+      ],
+      "type": "crossPlatformOrdinalContamination",
+      "canonicalDecision": "Use Public Beta 4 on August 22 Pacific. Do not carry the mobile-platform fifth-public-beta ordinal onto macOS.",
+      "evidence": "Mac-specific iThinkDifferent and Heipg sources identify Public Beta 4. Cross-platform AppleInsider and OS X Daily headlines call the wave fifth public betas.",
+      "sourceIds": [
+        "source-ithinkdiff-sonoma-pb4",
+        "source-heipg-sonoma-pb4",
+        "source-appleinsider-sonoma-overnumber",
+        "source-osxd-sonoma-overnumber"
+      ],
+      "reviewRequired": true
+    },
+    {
+      "conflictId": "conflict-macos14-pb5-date-and-ordinal",
+      "versions": [
+        "14.0"
+      ],
+      "candidateIds": [
+        "candidate:apple:macos:14.0:public-beta-5"
+      ],
+      "type": "calendarNormalizationAndOvernumber",
+      "canonicalDecision": "Use Public Beta 5 on August 30 Pacific; retain August 31 European-local dates and reject an apparent Public Beta 6.",
+      "evidence": "Heipg explicitly labels Public Beta 5, while OS X Daily records the August 30 Pacific release. iCulture and Heipg display August 31 locally. Earlier cross-platform over-numbering would incorrectly imply Public Beta 6.",
+      "sourceIds": [
+        "source-heipg-sonoma-pb5",
+        "source-osxd-sonoma-pb5",
+        "source-iculture-macos-14",
+        "source-appleinsider-sonoma-overnumber"
+      ],
+      "reviewRequired": true
+    },
+    {
+      "conflictId": "conflict-macos26-pb1-lifecycle",
+      "versions": [
+        "26.0"
+      ],
+      "candidateIds": [
+        "candidate:apple:macos:26.0:public-beta-1"
+      ],
+      "type": "accidentalWithdrawalAndOfficialReturn",
+      "canonicalDecision": "Use July 21 for the unique route candidate with availabilityState=replaced; preserve the official July 24 same-label return as an exceptional appearance.",
+      "evidence": "MacRumors and AppleInsider independently record accidental July 21 public availability and withdrawal. MacRumors, 9to5Mac, and iCulture independently record the official July 24 distribution.",
+      "sourceIds": [
+        "source-mr-tahoe-pb1-accidental",
+        "source-appleinsider-tahoe-pb1-accidental",
+        "source-mr-tahoe-pb1-official",
+        "source-9to5-tahoe-pb1-official",
+        "source-iculture-macos-26"
+      ],
+      "reviewRequired": true
+    },
+    {
+      "conflictId": "conflict-macos26-pb5-date",
+      "versions": [
+        "26.0"
+      ],
+      "candidateIds": [
+        "candidate:apple:macos:26.0:public-beta-5"
+      ],
+      "type": "calendarNormalization",
+      "canonicalDecision": "Use August 25 Pacific. Preserve iCulture's August 26 European-local date as the same appearance.",
+      "evidence": "9to5Mac published the Mac-specific release on August 25 Pacific; iCulture's European-local chronology displays August 26.",
+      "sourceIds": [
+        "source-9to5-macos-26-pb5",
+        "source-iculture-macos-26"
+      ],
+      "reviewRequired": true
+    }
+  ],
+  "resolutionRules": [
+    "Never derive a public ordinal from a developer seed number.",
+    "Use a Mac-specific explicit ordinal over a cross-platform mobile-wave ordinal, while preserving the disagreement.",
+    "Use the Pacific newsroom day where a timestamp or explicit Pacific update exists; retain local next-day dates as conflicts.",
+    "A withdrawal and same-label return produce one unique route candidate plus an exceptional appearance, not duplicate route aliases."
+  ],
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "note": "Research-only packet. Validation cannot authorize Sanity mutation, stable ID creation, or publication."
+  }
+}

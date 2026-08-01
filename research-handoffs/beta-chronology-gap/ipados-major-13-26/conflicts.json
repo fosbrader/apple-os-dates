@@ -1,0 +1,96 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ipados-major-13-26",
+  "conflictCount": 7,
+  "conflicts": [
+    {
+      "conflictId": "ipados-14-opening-public-seed-ordinal",
+      "severity": "high",
+      "subject": "iPadOS 14's first public appearance: appearance order versus displayed Beta 2 identity",
+      "sourceIds": [
+        "mr-ipados14-pb2",
+        "koc-ipados14-pb2",
+        "iculture-ipados14"
+      ],
+      "finding": "MacRumors calls July 9 the first public beta and iCulture labels it PB1, while KOC's contemporary metadata says the iOS/iPadOS public seed arrived directly as Beta 2.",
+      "decision": "Retain July 9 as Public Beta 2. Do not create Public Beta 1 from appearance order."
+    },
+    {
+      "conflictId": "ipados-14-second-public-appearance-ordinal",
+      "severity": "high",
+      "subject": "iPadOS 14's July 23 appearance: second appearance versus displayed Public Beta 3",
+      "sourceIds": [
+        "mr-ipados14-pb3",
+        "redmondpie-ipados14-pb3",
+        "forbes-ipados14-pb3",
+        "iculture-ipados14"
+      ],
+      "finding": "MacRumors' headline numbers the appearance as the second public beta. Independent contemporary sources explicitly identify the payload as Public Beta 3.",
+      "decision": "Retain July 23 as Public Beta 3. Appearance ordinal is not the public seed label."
+    },
+    {
+      "conflictId": "ipados-15-opening-public-seed-production-identity",
+      "severity": "blocking",
+      "subject": "June 30, 2021 is stored in production as iPadOS 15 Public Beta 1 but contemporary evidence identifies Public Beta 2",
+      "sourceIds": [
+        "mr-ipados15-pb2",
+        "forbes-ipados15-pb2",
+        "iphonecanada-ipados15-pb2"
+      ],
+      "productionEventId": "release-event-01d7714ed4d28b61aeb41bf0",
+      "finding": "The date and public availability are real. The production ordinal/route is not supported; explicit contemporary labeling says Public Beta 2.",
+      "decision": "Propose PB2 only as an identity-conflict candidate. Do not create it or mutate PB1 until independent review and separate authorization."
+    },
+    {
+      "conflictId": "ipados-15-early-appearance-versus-seed-number",
+      "severity": "high",
+      "subject": "iPadOS 15's July 16 and July 28 appearances are Public Beta 3 and 4, not second and third seed identities",
+      "sourceIds": [
+        "mr-ipados15-pb3",
+        "forbes-ipados15-pb3",
+        "wccftech-ipados15-pb3",
+        "mr-ipados15-pb4",
+        "osxd-ipados15-pb4",
+        "iculture-ipados15"
+      ],
+      "finding": "Some rolling/newsroom chronologies count public appearances. Independent exact-label sources preserve Public Beta 3 on July 16 and Public Beta 4 on July 28.",
+      "decision": "Use the explicit public labels and preserve the appearance-count wording only as conflict evidence."
+    },
+    {
+      "conflictId": "ipados-17-public-beta-4-article-date",
+      "severity": "medium",
+      "subject": "iPadOS 17 Public Beta 4 is an August 16 public appearance attached to an August 15 developer article",
+      "sourceIds": [
+        "mr-ipados17-pb4",
+        "iculture-ipados17",
+        "osxd-ipados17-pb4"
+      ],
+      "finding": "The MacRumors page metadata reflects the August 15 developer release; its public update and independent public-beta sources place public availability on August 16.",
+      "decision": "Use 2023-08-16. Do not inherit the paired developer article's publication date."
+    },
+    {
+      "conflictId": "ipados-18-public-beta-5-calendar-date",
+      "severity": "medium",
+      "subject": "iPadOS 18 Public Beta 5 appears August 20 Pacific while one independent article is dated August 21 UTC",
+      "sourceIds": [
+        "mr-ipados18-pb5",
+        "iculture-ipados18",
+        "osxd-ipados18-pb5"
+      ],
+      "finding": "MacRumors' same-day public update and the cycle chronology support August 20 Pacific. OS X Daily's retained article was published August 21 UTC.",
+      "decision": "Normalize to 2024-08-20 America/Los_Angeles and preserve the later article timestamp as a qualification."
+    },
+    {
+      "conflictId": "ipados-26-public-beta-5-calendar-date",
+      "severity": "medium",
+      "subject": "iPadOS 26 Public Beta 5: August 25 Pacific versus August 26 in a European living chronology",
+      "sourceIds": [
+        "mr-ipados26-pb5",
+        "iculture-ipados26"
+      ],
+      "finding": "MacRumors records release at 14:52 PDT on August 25. iCulture's European chronology displays August 26.",
+      "decision": "Normalize to 2025-08-25 America/Los_Angeles; do not create an August 26 appearance."
+    }
+  ],
+  "reviewState": "selfCheckedPendingIndependentReview"
+}

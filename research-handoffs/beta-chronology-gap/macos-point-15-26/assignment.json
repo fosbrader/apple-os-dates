@@ -1,0 +1,793 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-point-15-26",
+  "createdAt": "2026-07-31T06:37:42.659Z",
+  "createdBy": "codex-macos-point-15-26-research",
+  "vendor": {
+    "name": "Apple",
+    "slug": "apple"
+  },
+  "researchCutoff": "2026-07-31",
+  "scope": "Research-only audit of every displayed public-beta appearance for the 12 modeled macOS point versions 15.1–15.6 and 26.1–26.6.",
+  "calendarNormalization": "appearanceDate uses the America/Los_Angeles calendar date. Non-Pacific publication dates remain qualifications rather than new appearances.",
+  "identityRule": "Public ordinals require displayed public-program evidence and are never inferred from developer ordinals, generic beta wording, dates, builds, or assumed contiguous sequence.",
+  "targetVersions": [
+    "15.1",
+    "15.2",
+    "15.3",
+    "15.4",
+    "15.5",
+    "15.6",
+    "26.1",
+    "26.2",
+    "26.3",
+    "26.4",
+    "26.5",
+    "26.6"
+  ],
+  "candidateCount": 40,
+  "candidateCountByVersion": {
+    "15.1": 4,
+    "15.2": 3,
+    "15.3": 3,
+    "15.4": 4,
+    "15.5": 3,
+    "15.6": 1,
+    "26.1": 4,
+    "26.2": 3,
+    "26.3": 3,
+    "26.4": 4,
+    "26.5": 3,
+    "26.6": 5
+  },
+  "positiveSequence": [
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-1",
+      "version": "15.1",
+      "releaseVersionId": "version-macos-15-1",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2024-09-19",
+      "sourceIds": [
+        "9to5-151-cycle",
+        "iculture-151-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-2",
+      "version": "15.1",
+      "releaseVersionId": "version-macos-15-1",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2024-09-24",
+      "sourceIds": [
+        "9to5-151-cycle",
+        "iculture-151-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-3",
+      "version": "15.1",
+      "releaseVersionId": "version-macos-15-1",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2024-10-07",
+      "sourceIds": [
+        "9to5-151-cycle",
+        "mr-151-pb3-update",
+        "iculture-151-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "conflict"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-4",
+      "version": "15.1",
+      "releaseVersionId": "version-macos-15-1",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "appearanceDate": "2024-10-16",
+      "sourceIds": [
+        "9to5-151-cycle",
+        "iculture-151-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.2:public-beta-1",
+      "version": "15.2",
+      "releaseVersionId": "version-macos-15-2",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2024-11-06",
+      "sourceIds": [
+        "9to5-152-cycle",
+        "iculture-152-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.2:public-beta-2",
+      "version": "15.2",
+      "releaseVersionId": "version-macos-15-2",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2024-11-12",
+      "sourceIds": [
+        "9to5-152-cycle",
+        "iculture-152-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.2:public-beta-3",
+      "version": "15.2",
+      "releaseVersionId": "version-macos-15-2",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2024-11-20",
+      "sourceIds": [
+        "9to5-152-cycle",
+        "iculture-152-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.3:public-beta-1",
+      "version": "15.3",
+      "releaseVersionId": "version-macos-15-3",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2024-12-18",
+      "sourceIds": [
+        "9to5-153-cycle",
+        "mr-153-pb1"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.3:public-beta-2",
+      "version": "15.3",
+      "releaseVersionId": "version-macos-15-3",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2025-01-08",
+      "sourceIds": [
+        "9to5-153-cycle",
+        "mr-153-pb2"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.3:public-beta-3",
+      "version": "15.3",
+      "releaseVersionId": "version-macos-15-3",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2025-01-16",
+      "sourceIds": [
+        "9to5-153-cycle",
+        "osxdaily-153-pb3"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-1",
+      "version": "15.4",
+      "releaseVersionId": "version-macos-15-4",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2025-02-24",
+      "sourceIds": [
+        "9to5-154-cycle",
+        "mr-154-pb1"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-2",
+      "version": "15.4",
+      "releaseVersionId": "version-macos-15-4",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2025-03-04",
+      "sourceIds": [
+        "9to5-154-cycle",
+        "mr-154-pb2"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-3",
+      "version": "15.4",
+      "releaseVersionId": "version-macos-15-4",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2025-03-11",
+      "sourceIds": [
+        "9to5-154-cycle",
+        "mr-154-pb3"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-4",
+      "version": "15.4",
+      "releaseVersionId": "version-macos-15-4",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "appearanceDate": "2025-03-17",
+      "sourceIds": [
+        "9to5-154-cycle",
+        "osxdaily-154-pb4"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.5:public-beta-1",
+      "version": "15.5",
+      "releaseVersionId": "version-macos-15-5",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2025-04-15",
+      "sourceIds": [
+        "9to5-155-cycle",
+        "mr-155-pb1"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "conflict"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.5:public-beta-2",
+      "version": "15.5",
+      "releaseVersionId": "version-macos-15-5",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2025-04-22",
+      "sourceIds": [
+        "9to5-155-cycle",
+        "mr-155-pb2"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.5:public-beta-3",
+      "version": "15.5",
+      "releaseVersionId": "version-macos-15-5",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2025-04-28",
+      "sourceIds": [
+        "monomaniac-155-pb3",
+        "9to5-155-cycle",
+        "mr-155-pb3"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "conflict"
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.6:public-beta-3",
+      "version": "15.6",
+      "releaseVersionId": "version-macos-15-6",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2025-07-15",
+      "sourceIds": [
+        "mr-156-pb3",
+        "iclarified-156-pb3"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.1:public-beta-1",
+      "version": "26.1",
+      "releaseVersionId": "version-macos-26-1",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2025-09-24",
+      "sourceIds": [
+        "mr-261-pb1",
+        "iculture-261-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.1:public-beta-2",
+      "version": "26.1",
+      "releaseVersionId": "version-macos-26-1",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2025-10-07",
+      "sourceIds": [
+        "mr-261-pb2",
+        "iculture-261-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.1:public-beta-3",
+      "version": "26.1",
+      "releaseVersionId": "version-macos-26-1",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2025-10-14",
+      "sourceIds": [
+        "mr-261-pb3",
+        "iculture-261-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.1:public-beta-4",
+      "version": "26.1",
+      "releaseVersionId": "version-macos-26-1",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "appearanceDate": "2025-10-20",
+      "sourceIds": [
+        "mr-261-pb4",
+        "iculture-261-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.2:public-beta-1",
+      "version": "26.2",
+      "releaseVersionId": "version-macos-26-2",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2025-11-07",
+      "sourceIds": [
+        "9to5-262-pb1",
+        "mr-262-pb1"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.2:public-beta-2",
+      "version": "26.2",
+      "releaseVersionId": "version-macos-26-2",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2025-11-13",
+      "sourceIds": [
+        "9to5-262-pb2",
+        "mr-262-pb2"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.2:public-beta-3",
+      "version": "26.2",
+      "releaseVersionId": "version-macos-26-2",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2025-11-18",
+      "sourceIds": [
+        "9to5-262-pb3",
+        "mactrast-262-pb3"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "conflict"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.3:public-beta-1",
+      "version": "26.3",
+      "releaseVersionId": "version-macos-26-3",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2025-12-17",
+      "sourceIds": [
+        "9to5-263-pb1",
+        "iculture-263-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.3:public-beta-2",
+      "version": "26.3",
+      "releaseVersionId": "version-macos-26-3",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2026-01-13",
+      "sourceIds": [
+        "9to5-263-pb2",
+        "iculture-263-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.3:public-beta-3",
+      "version": "26.3",
+      "releaseVersionId": "version-macos-26-3",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2026-01-27",
+      "sourceIds": [
+        "9to5-263-pb3",
+        "iculture-263-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.4:public-beta-1",
+      "version": "26.4",
+      "releaseVersionId": "version-macos-26-4",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2026-02-17",
+      "sourceIds": [
+        "9to5-264-pb1",
+        "mr-264-pb1"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.4:public-beta-2",
+      "version": "26.4",
+      "releaseVersionId": "version-macos-26-4",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2026-02-24",
+      "sourceIds": [
+        "mr-264-pb2",
+        "mactrast-264-pb2"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.4:public-beta-3",
+      "version": "26.4",
+      "releaseVersionId": "version-macos-26-4",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2026-03-04",
+      "sourceIds": [
+        "mr-264-pb3",
+        "mactrast-264-pb3"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.4:public-beta-4",
+      "version": "26.4",
+      "releaseVersionId": "version-macos-26-4",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "appearanceDate": "2026-03-09",
+      "sourceIds": [
+        "9to5-264-pb4",
+        "mr-264-pb4"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.5:public-beta-1",
+      "version": "26.5",
+      "releaseVersionId": "version-macos-26-5",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2026-04-03",
+      "sourceIds": [
+        "mr-265-pb1",
+        "technopat-265-pb1"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.5:public-beta-2",
+      "version": "26.5",
+      "releaseVersionId": "version-macos-26-5",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2026-04-21",
+      "sourceIds": [
+        "9to5-265-pb2",
+        "mr-265-pb2"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "conflict"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.5:public-beta-3",
+      "version": "26.5",
+      "releaseVersionId": "version-macos-26-5",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2026-04-27",
+      "sourceIds": [
+        "9to5-265-pb3",
+        "monomaniac-265-pb3"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "conflict"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-1",
+      "version": "26.6",
+      "releaseVersionId": "version-macos-26-6",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2026-05-28",
+      "sourceIds": [
+        "mr-266-pb1",
+        "iculture-266-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-2",
+      "version": "26.6",
+      "releaseVersionId": "version-macos-26-6",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2026-06-16",
+      "sourceIds": [
+        "mr-266-pb2",
+        "iculture-266-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-3",
+      "version": "26.6",
+      "releaseVersionId": "version-macos-26-6",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2026-06-30",
+      "sourceIds": [
+        "mr-266-pb3",
+        "iculture-266-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "conflict"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-4",
+      "version": "26.6",
+      "releaseVersionId": "version-macos-26-6",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "appearanceDate": "2026-07-07",
+      "sourceIds": [
+        "mr-266-pb4",
+        "iculture-266-cycle"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-5",
+      "version": "26.6",
+      "releaseVersionId": "version-macos-26-6",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-5",
+      "label": "Public Beta 5",
+      "sequence": 5,
+      "appearanceDate": "2026-07-13",
+      "sourceIds": [
+        "9to5-266-pb5",
+        "monomaniac-266-pb5"
+      ],
+      "productionDisposition": "confirmedMissingCandidate",
+      "identityStatus": "confirmed"
+    }
+  ],
+  "negativeFindings": [
+    {
+      "recordId": "not-proposed:apple:macos:15.5:public-beta-4",
+      "version": "15.5",
+      "sequence": 4,
+      "appearanceDate": "2025-04-28",
+      "classification": "disprovedIdentity",
+      "reason": "The April 28 public appearance is explicitly identified as Public Beta 3 by the installer observation and build history. Public Beta 4 is a shifted label in one living table and must not be inferred from Developer Beta 4.",
+      "sourceIds": [
+        "monomaniac-155-pb3",
+        "iculture-155-cycle"
+      ],
+      "reversalEvidence": "Two independent retained sources explicitly showing an additional macOS 15.5 appearance displayed as Public Beta 4."
+    },
+    {
+      "recordId": "not-proposed:apple:macos:15.6:public-beta-1",
+      "version": "15.6",
+      "sequence": 1,
+      "appearanceDate": null,
+      "classification": "publicDistributionNotEstablished",
+      "reason": "The retained chronology establishes only a macOS 15.6 Public Beta 3 appearance. Public Beta 1 is not created from Developer Beta 1 or an assumed contiguous sequence.",
+      "sourceIds": [
+        "mr-156-pb3",
+        "iclarified-156-pb3",
+        "iculture-156-cycle"
+      ],
+      "reversalEvidence": "Contemporary evidence explicitly naming a macOS 15.6 Public Beta 1 distribution and its Pacific appearance date."
+    },
+    {
+      "recordId": "not-proposed:apple:macos:15.6:public-beta-2",
+      "version": "15.6",
+      "sequence": 2,
+      "appearanceDate": null,
+      "classification": "publicDistributionNotEstablished",
+      "reason": "The retained chronology establishes only a macOS 15.6 Public Beta 3 appearance. Public Beta 2 is not created from Developer Beta 2 or an assumed contiguous sequence.",
+      "sourceIds": [
+        "mr-156-pb3",
+        "iclarified-156-pb3",
+        "iculture-156-cycle"
+      ],
+      "reversalEvidence": "Contemporary evidence explicitly naming a macOS 15.6 Public Beta 2 distribution and its Pacific appearance date."
+    },
+    {
+      "recordId": "not-proposed:apple:macos:26.5:public-beta-2",
+      "version": "26.5",
+      "sequence": 2,
+      "appearanceDate": "2026-04-14",
+      "classification": "disprovedIdentity",
+      "reason": "The April 14 public release article omits macOS, and platform-specific reporting says Apple skipped the macOS public seed that week. The actual Public Beta 2 appeared April 21.",
+      "sourceIds": [
+        "mr-265-apr14-negative",
+        "9to5-265-pb2",
+        "mr-265-pb2",
+        "iculture-265-cycle"
+      ],
+      "reversalEvidence": "Contemporary evidence explicitly showing macOS Tahoe 26.5 Public Beta 2 available on April 14 Pacific."
+    },
+    {
+      "recordId": "not-proposed:apple:macos:26.5:public-beta-4",
+      "version": "26.5",
+      "sequence": 4,
+      "appearanceDate": "2026-04-27",
+      "classification": "disprovedIdentity",
+      "reason": "The April 27 public appearance is explicitly Public Beta 3. Public Beta 4 is a shifted rolling-table label derived from the developer sequence.",
+      "sourceIds": [
+        "9to5-265-pb3",
+        "monomaniac-265-pb3",
+        "iculture-265-cycle"
+      ],
+      "reversalEvidence": "Two independent retained sources explicitly showing a separate macOS 26.5 appearance displayed as Public Beta 4."
+    }
+  ],
+  "evidenceRequirements": {
+    "minimumIndependentPublisherFamiliesPerCandidate": 2,
+    "candidateIdentityFields": [
+      "platform",
+      "version",
+      "public audience",
+      "displayed public ordinal",
+      "Pacific appearance date"
+    ]
+  },
+  "exclusions": [
+    "Sanity mutation and stableEventId creation",
+    "Page builds, release-note prose, publication, and deployment",
+    "Build-number or paired-developer inference",
+    "Unmodeled parent creation"
+  ],
+  "productionReconciliation": {
+    "capturedAt": "2026-07-31T06:37:42.659Z",
+    "perspective": "published",
+    "useCdn": false,
+    "totalReleaseEvents": 2068,
+    "macOSPublicBetaEventsAllVersions": 0,
+    "scopedReleaseEvents": 74,
+    "scopedPublicBetaEvents": 0,
+    "exactIdentityMatches": 0,
+    "missingParentReleaseVersions": [],
+    "snapshotPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/production-snapshot.json"
+  },
+  "safety": {
+    "queryOnlyProductionAccess": true,
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "independentReviewRequired": true
+  }
+}

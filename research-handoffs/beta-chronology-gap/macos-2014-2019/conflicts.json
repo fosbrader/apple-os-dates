@@ -1,0 +1,118 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-2014-2019",
+  "conflictCount": 9,
+  "conflicts": [
+    {
+      "conflictId": "osx-10-9-3-unnumbered-program-origin",
+      "severity": "high",
+      "subject": "How to model the April 22, 2014 OS X 10.9.3 Beta Seed Program appearance",
+      "sourceIds": [
+        "source-origin-macworld",
+        "source-origin-ars",
+        "source-origin-9to5mac",
+        "source-origin-engadget"
+      ],
+      "finding": "Four contemporary lineages establish open end-user access to the current OS X 10.9.3 prerelease, but none displays Public Beta 1.",
+      "decision": "Preserve as a modeling exception; do not invent public-beta-1. A releaseVersion parent also must be separately approved."
+    },
+    {
+      "conflictId": "elcap-public-beta-5-withdrawal-replacement",
+      "severity": "high",
+      "subject": "El Capitan Public Beta 5 withdrawal and same-label replacement",
+      "sourceIds": [
+        "source-mr-macos-10-11-pb5",
+        "source-iculture-elcap-pb5",
+        "source-macworld-elcap-pb5-return"
+      ],
+      "finding": "Public Beta 5 appeared August 18, was withdrawn, and returned under the same public label. Macworld dates the return August 19; iCulture dates it August 20.",
+      "decision": "Keep the August 18 candidate as replaced and preserve the return as an unmodeled replacement appearance pending route/revision policy."
+    },
+    {
+      "conflictId": "sierra-public-beta-4-calendar-date",
+      "severity": "medium",
+      "subject": "Sierra Public Beta 4 date: August 9 versus August 10",
+      "sourceIds": [
+        "source-mr-macos-10-12-pb4",
+        "source-macmag-sierra-pb4"
+      ],
+      "finding": "MacRumors and MacMagazine recorded the public update on August 9 in the Americas; later European/Asian records use August 10.",
+      "decision": "Normalize to 2016-08-09 America/Los_Angeles and preserve the cross-time-zone discrepancy."
+    },
+    {
+      "conflictId": "high-sierra-living-chronology-typos",
+      "severity": "medium",
+      "subject": "Internal typos in iCulture's High Sierra living chronology",
+      "sourceIds": [
+        "source-iculture-high-sierra"
+      ],
+      "finding": "The candidate-specific prose gives PB1 as June 29 and PB7 as August 28, while the recap list says June 26 for PB1 and one section body accidentally says PB8 under the PB7 heading.",
+      "decision": "Use the dated prose sections corroborated by MacRumors. Do not treat the recap typos as separate appearances."
+    },
+    {
+      "conflictId": "high-sierra-public-beta-8-evidence-quality",
+      "severity": "high",
+      "subject": "High Sierra Public Beta 8 on September 1, 2017",
+      "sourceIds": [
+        "source-whirlpool-high-sierra-pb8",
+        "source-mrforum-high-sierra-pb8"
+      ],
+      "finding": "Two independent tester communities report Public Beta 8 and build 17A360a around September 1–2, but no retained contemporary editorial publisher explicitly preserves the public ordinal.",
+      "decision": "Keep the candidate at reported/needsEvidenceReview."
+    },
+    {
+      "conflictId": "mojave-late-public-beta-evidence",
+      "severity": "medium",
+      "subject": "Mojave Public Betas 8–10",
+      "sourceIds": [
+        "source-monomaniac-mojave-pb8",
+        "source-softpedia-mojave-pb8",
+        "source-purudo-mojave-pb9",
+        "source-sysprofile-mojave-pb9",
+        "source-osxd-mojave-pb10",
+        "source-mrforum-mojave-pb10"
+      ],
+      "finding": "PB8 is independently corroborated. PB9 has one direct publisher and one likely syndicated lineage. PB10 has one editorial report plus tester confirmation and shared GM-candidate terminology.",
+      "decision": "PB8 is evidence-corroborated; keep PB9 and PB10 at reported until another independent contemporary editorial source is retained."
+    },
+    {
+      "conflictId": "catalina-public-beta-5-pacific-date",
+      "severity": "high",
+      "subject": "Catalina Public Beta 5: August 19 Pacific versus August 20 European chronology date",
+      "sourceIds": [
+        "source-mr-macos-10-15-pb5",
+        "source-iculture-catalina"
+      ],
+      "finding": "MacRumors records public availability on August 19 and its discussion records availability at 10:23 a.m. PDT. iCulture's August 20 08:32 CEST revision converts to August 19 23:32 PDT.",
+      "decision": "Normalize Catalina Public Beta 5 to 2019-08-19 under the packet's America/Los_Angeles convention. August 20 is the European local date, not a second appearance."
+    },
+    {
+      "conflictId": "catalina-calendar-and-ordinal-boundaries",
+      "severity": "medium",
+      "subject": "Catalina local calendar dates and late-cycle public numbering",
+      "sourceIds": [
+        "source-iculture-catalina",
+        "source-mrforum-catalina-pb7",
+        "source-dosdude-catalina",
+        "source-reddit-catalina-pb7",
+        "source-reddit-catalina-pb8",
+        "source-appleinsider-catalina-pb9"
+      ],
+      "finding": "European reports roll PB2, PB5, and PB6 into the following local day. PB7–PB9 survive mainly through public-tester observations, technical artifacts, and developer-seed articles updated to say a public version was available.",
+      "decision": "Normalize dates to Pacific availability (July 3, August 19, August 28, September 11, September 23, September 30) and keep PB7–PB9 at reported pending stronger ordinal-specific editorial corroboration."
+    },
+    {
+      "conflictId": "catalina-apparent-public-beta-10-gm",
+      "severity": "high",
+      "subject": "Whether Catalina's October 3 GM distribution creates Public Beta 10",
+      "sourceIds": [
+        "source-mr-macos-10-15-pb9",
+        "source-appleinsider-catalina-pb9",
+        "source-mrforum-catalina-pb9"
+      ],
+      "finding": "The last independently supportable numbered public appearance is Public Beta 9 on September 30. Community terminology later conflates the October 3 GM with Public Beta 10.",
+      "decision": "Do not create a Public Beta 10 event unless a reliable contemporary source separately identifies that public-beta appearance rather than merely GM availability to public testers."
+    }
+  ],
+  "reviewState": "selfCheckedPendingIndependentReview"
+}

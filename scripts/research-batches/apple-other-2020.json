@@ -1,0 +1,2880 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+      "title": "macOS Big Sur is here",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2020-11-12T00:00:00.000Z",
+      "topics": ["macOS", "Big Sur", "public availability", "features"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes",
+      "title": "macOS Big Sur 11.0.1 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "author": "Apple",
+      "topics": ["macOS", "Big Sur", "11.0.1", "developer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/118388",
+      "title": "About watchOS 6 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["watchOS", "6", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/118391",
+      "title": "About watchOS 7 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["watchOS", "7", "consumer release notes"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2020/09/apple-watch-series-6-delivers-breakthrough-wellness-and-fitness-capabilities/",
+      "title": "Apple Watch Series 6 delivers breakthrough wellness and fitness capabilities",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2020-09-15T00:00:00.000Z",
+      "topics": ["watchOS", "7", "public availability"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/106336",
+      "title": "About Apple TV 4K and Apple TV HD software updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["tvOS", "Apple TV", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/102846",
+      "title": "About the security content of macOS Big Sur 11.0.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-11-12T00:00:00.000Z",
+      "topics": ["macOS", "Big Sur", "11.0.1", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103220",
+      "title": "About the security content of watchOS 6.1.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-01-28T00:00:00.000Z",
+      "topics": ["watchOS", "6.1.2", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103829",
+      "title": "About the security content of watchOS 6.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-03-24T00:00:00.000Z",
+      "topics": ["watchOS", "6.2", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103118",
+      "title": "About the security content of watchOS 7.0",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-09-16T00:00:00.000Z",
+      "topics": ["watchOS", "7.0", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103039",
+      "title": "About the security content of watchOS 7.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-11-05T00:00:00.000Z",
+      "topics": ["watchOS", "7.1", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/102760",
+      "title": "About the security content of watchOS 7.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-12-14T00:00:00.000Z",
+      "topics": ["watchOS", "7.2", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103219",
+      "title": "About the security content of tvOS 13.3.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-01-28T00:00:00.000Z",
+      "topics": ["tvOS", "13.3.1", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103827",
+      "title": "About the security content of tvOS 13.4",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-03-24T00:00:00.000Z",
+      "topics": ["tvOS", "13.4", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/102845",
+      "title": "About the security content of tvOS 13.4.5",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-05-26T00:00:00.000Z",
+      "topics": ["tvOS", "13.4.5", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103117",
+      "title": "About the security content of tvOS 14.0",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-09-16T00:00:00.000Z",
+      "topics": ["tvOS", "14.0", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103040",
+      "title": "About the security content of tvOS 14.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-11-05T00:00:00.000Z",
+      "topics": ["tvOS", "14.2", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/102881",
+      "title": "About the security content of tvOS 14.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2020-12-14T00:00:00.000Z",
+      "topics": ["tvOS", "14.3", "security", "CVE"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-11-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "The existing local macOS 11.0 record represents the November 12, 2020 public launch of macOS Big Sur. Apple shipped and documented that release as 11.0.1, pairing a redesigned interface with major Safari, Messages, Maps, privacy, Apple-silicon, and developer-platform changes.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+                "locator": "UPDATE November 12, 2020; Availability"
+              },
+              {
+                "url": "https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes",
+                "locator": "macOS Big Sur 11.0.1 Release Notes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102846",
+                "locator": "macOS Big Sur 11.0.1 — Released November 12, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "This bundle preserves the audited local 11.0 route instead of creating or renaming a release record. Apple's launch story says App Store privacy summaries were coming later in 2020, so they are not attributed to the launch event; security claims use the 11.0.1 advisory.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+                "locator": "Privacy — feature marked coming later this year"
+              },
+              {
+                "url": "https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes",
+                "locator": "macOS Big Sur 11.0.1 Release Notes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102846",
+                "locator": "macOS Big Sur 11.0.1"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+          "locator": "November 12, 2020; Availability"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes",
+          "locator": "macOS Big Sur 11.0.1 Release Notes"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102846",
+          "locator": "Released November 12, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-6-1-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118388",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 6.1.2 was released on January 28, 2020 as an important security update. Apple's consumer notes name no feature or ordinary bug fix for this version.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103220",
+                "locator": "Released January 28, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "The version-specific advisory is the substantive first-party record, covering document, audio, file, image, graphics, USB, kernel, XML, interprocess communication, and Wi-Fi components. No undocumented change is inferred.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103220",
+                "locator": "AnnotationKit; Audio; files; ImageIO; IOAcceleratorFamily; IOUSBDeviceFamily; Kernel; libxml2; libxpc; wifivelocityd"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1.2"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118388",
+          "locator": "watchOS 6.1.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103220",
+          "locator": "Released January 28, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-6-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118388",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 6.2 was released on March 24, 2020 with in-app purchases for watch apps, a music connectivity correction, ECG and irregular-rhythm expansion to three countries, and security fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103829",
+                "locator": "Released March 24, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Regional health features remain subject to compatible hardware and local availability. The security advisory adds documented repairs across sandboxing, entitlements, privacy, image handling, the kernel, messages, and WebKit; no undocumented claims are added.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103829",
+                "locator": "Accounts; ActionKit; AppleMobileFileIntegrity; Icons; Image Processing; Kernel; Messages; Sandbox; WebKit"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118388",
+          "locator": "watchOS 6.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103829",
+          "locator": "Released March 24, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-7-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118391",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 7.0 launched publicly on September 16, 2020 with shareable watch faces, sleep tracking, handwashing detection, Family Setup, new fitness and health tools, richer communication and navigation, and a broad security baseline.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2020/09/apple-watch-series-6-delivers-breakthrough-wellness-and-fitness-capabilities/",
+                "locator": "watchOS 7 available September 16"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103118",
+                "locator": "Released September 16, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "The page attributes only features Apple lists under the watchOS 7 launch section. Changes first documented in 7.0.1 or later are not moved into 7.0, and regional or hardware restrictions remain part of each claim.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7 through watchOS 7.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103118",
+                "locator": "watchOS 7.0 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2020/09/apple-watch-series-6-delivers-breakthrough-wellness-and-fitness-capabilities/",
+          "locator": "Pricing and Availability — watchOS 7"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118391",
+          "locator": "watchOS 7"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103118",
+          "locator": "Released September 16, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-7-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118391",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 7.1 was released on November 5, 2020 with headphone-level warnings, ECG and irregular-rhythm availability in South Korea and Russia, two user-facing fixes, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103039",
+                "locator": "Released November 5, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "The security advisory adds fixes across audio, font and image processing, privileges, the kernel, XML, logging, WebKit, and XNU. Apple flags reported exploitation for selected font and kernel issues; this page does not infer further undocumented behavior.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103039",
+                "locator": "Audio; FontParser; ImageIO; Kernel; libxml2; Logging; WebKit; XNU"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7.1"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118391",
+          "locator": "watchOS 7.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103039",
+          "locator": "Released November 5, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-watchos-7-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118391",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "watchOS 7.2 was released on December 14, 2020 with Apple Fitness+, low-cardio-fitness health tools, expanded ECG behavior and availability, braille support, additional Family Setup regions, performance work, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102760",
+                "locator": "Released December 14, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Fitness+ and regulated health features were region-dependent, and some features required supported watch models. The archive records those qualifications and uses Apple's advisory for the separate security occurrence.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7.2 — availability qualifications"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102760",
+                "locator": "watchOS 7.2 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118391",
+          "locator": "watchOS 7.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102760",
+          "locator": "Released December 14, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-13-3-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 13.3.1 was released on January 28, 2020. Apple's consumer update history describes only general performance and stability work, while the version-specific advisory supplies the detailed security record.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.3.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103219",
+                "locator": "Released January 28, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Apple names no individual consumer feature or ordinary fix for this version. The archive therefore records the published maintenance description and security surfaces without inventing a more granular change list.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.3.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103219",
+                "locator": "Audio; files; ImageIO; Kernel; libxml2; libxpc; WebKit; wifivelocityd"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13.3.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103219",
+          "locator": "Released January 28, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-13-4",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 13.4 was released on March 24, 2020. Apple's consumer page lists general performance and stability improvements, and its security advisory documents the version's specific system repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.4"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103827",
+                "locator": "Released March 24, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "No named consumer-facing feature appears in Apple's 13.4 section. This page preserves that limitation and does not substitute beta notes, community observations, or later 13.4 point-release behavior.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.4 through tvOS 13.4.8"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103827",
+                "locator": "tvOS 13.4 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13.4"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103827",
+          "locator": "Released March 24, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-13-4-5",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "The existing local tvOS 13.4.5 record has an audited public appearance dated May 20, 2020. Apple's cumulative consumer page confirms the version but gives no date, while Apple's security advisory labels tvOS 13.4.5 as released May 26, creating an unresolved six-day source conflict.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.4.5"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102845",
+                "locator": "tvOS 13.4.5 — Released May 26, 2020",
+                "note": "Conflicts with the existing local public milestone dated May 20, 2020."
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "This bundle preserves the audited local route and event target instead of rewriting chronology. It explicitly records the first-party date disagreement, uses Apple's advisory for the security content, and makes no claim that resolves which date should be canonical.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.4.5"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102845",
+                "locator": "Released May 26, 2020",
+                "note": "The local audited milestone remains May 20, 2020 pending a separate chronology correction."
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13.4.5"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102845",
+          "locator": "Released May 26, 2020",
+          "note": "Date conflict disclosed; no local chronology mutation."
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-14-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 14.0 launched publicly on September 16, 2020 with shared wireless audio, broader Picture in Picture, Home camera and doorbell integration, per-user gaming, controller customization, screen-saver controls, 4K AirPlay, and security repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103117",
+                "locator": "Released September 16, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Apple's cumulative page labels the launch section tvOS 14 while the existing route uses 14.0. Later 14.x features such as HomePod home theater and Fitness+ are not projected backward into the launch.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14 through tvOS 14.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103117",
+                "locator": "tvOS 14.0 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 14"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103117",
+          "locator": "Released September 16, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-14-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 14.2 was released on November 5, 2020 with HomePod home-theater audio, Apple One subscription access, and security repairs across media, fonts, images, privileges, the kernel, XML, and WebKit.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103040",
+                "locator": "Released November 5, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Apple's Apple One note marked Fitness+ as coming later in 2020, so this page records subscription-plan access but does not attribute Fitness+ itself to tvOS 14.2. That feature is assigned to 14.3 in Apple's update history.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14.2 — Apple One"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14.3 — Apple Fitness+"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 14.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103040",
+          "locator": "Released November 5, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-tvos-14-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/106336",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "tvOS 14.3 was released on December 14, 2020 with a dedicated Apple TV+ tab, Apple Fitness+, Apple One integration, and security repairs across audio, fonts, images, model processing, web storage, WebRTC, and Wi-Fi.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102881",
+                "locator": "Released December 14, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "Apple notes that its TV app, Fitness+, and Apple One availability varied by country or region. The page retains those qualifications and does not import features from later tvOS releases.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14.3 — availability footnotes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102881",
+                "locator": "tvOS 14.3 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 14.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102881",
+          "locator": "Released December 14, 2020"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-macos-11-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The existing macOS 11.0 route reached its audited public appearance on November 12, 2020, corresponding to Apple's Big Sur 11.0.1 launch documentation and its design, app, platform, and security record.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple made macOS Big Sur available on November 12, 2020. The local route uses 11.0 while Apple's release notes and security advisory label the shipped version 11.0.1, so the discrepancy is disclosed rather than normalized away.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+                "locator": "UPDATE November 12, 2020; Availability"
+              },
+              {
+                "url": "https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes",
+                "locator": "macOS Big Sur 11.0.1 Release Notes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102846",
+                "locator": "Released November 12, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "The first-party launch record supports interface, browser, communication, mapping, Apple-silicon compatibility, development, and security changes. It does not support assigning the later App Store privacy-label rollout to this public appearance.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+                "locator": "Refreshed Design; Safari; Messages; Maps; Developers; Privacy"
+              },
+              {
+                "url": "https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes",
+                "locator": "macOS Big Sur 11.0.1 Release Notes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102846",
+                "locator": "macOS Big Sur 11.0.1 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+          "locator": "November 12, 2020; Availability"
+        },
+        {
+          "url": "https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes",
+          "locator": "macOS Big Sur 11.0.1 Release Notes"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102846",
+          "locator": "Released November 12, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-11-redesign-control-notification-centers",
+          "title": "Redesigned interface, Control Center, and Notification Center",
+          "canonicalSummary": "Big Sur introduced a more spacious visual system, a menu-bar Control Center, interactive notifications, and redesigned widgets.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The system refresh updated windows, controls, icons, and app chrome while centralizing common settings and richer glanceable information.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+              "locator": "Refreshed Design: Focused and Familiar"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-safari-tabs-start-page-translation",
+          "title": "Safari tabs, start page, and translation",
+          "canonicalSummary": "Safari gained denser tabs with previews, a customizable start page, built-in web translation, and improved extension discovery.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Big Sur reorganized Safari browsing around clearer tab identification, a personalized landing page, page translation, and Mac App Store extension discovery.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+              "locator": "Safari: Faster, More Personal, and More Private"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-safari-privacy-report-password-monitoring",
+          "title": "Safari privacy and password protections",
+          "canonicalSummary": "Safari added tracker reporting, compromised-password monitoring, and per-site extension access controls.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The browser exposed blocked-tracker information, privately checked saved credentials against breach data, and let users restrict extension access by site and time.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+              "locator": "Safari Privacy Report; password monitoring; extensions"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-messages-pins-search-expression",
+          "title": "Messages pins, search, effects, and Memoji",
+          "canonicalSummary": "Messages added pinned conversations, reorganized search, message effects, Memoji creation, and an updated media picker.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Mac messaging client gained faster access to important threads and more expressive tools aligned with Messages on Apple's other platforms.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+              "locator": "Messages: An Even More Engaging, Expressive Experience"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-messages-inline-replies-mentions",
+          "title": "Messages inline replies and mentions",
+          "canonicalSummary": "Group conversations gained threaded replies, mentions, mention-only notification controls, and custom group images.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Big Sur made busy group chats easier to follow by tying replies to individual messages and directing attention to named participants.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+              "locator": "Messages — group messaging features"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-maps-guides-look-around-indoor",
+          "title": "Maps Guides, Look Around, and indoor maps",
+          "canonicalSummary": "The redesigned Maps app added curated and custom Guides, Look Around imagery, and detailed indoor maps for supported locations.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Big Sur expanded discovery and place context on Mac with shareable collections, immersive street views, and venue interiors.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+              "locator": "Maps: Discover the Next Adventure"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-maps-cycling-ev-routing",
+          "title": "Cycling and electric-vehicle route planning",
+          "canonicalSummary": "Maps can plan supported bicycle and electric-vehicle trips on Mac and send them to iPhone.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release added route planning that accounted for cycling conditions and electric-vehicle needs before handing navigation to a mobile device.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+              "locator": "Maps — cycling and electric vehicle trips"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-apple-silicon-universal-rosetta",
+          "title": "Apple silicon, Universal apps, and Rosetta 2",
+          "canonicalSummary": "Big Sur supports M1 Macs, Universal binaries spanning Intel and Apple silicon, and Rosetta 2 translation for compatible Intel apps.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The operating system supplied the platform transition layer for native Apple-silicon software and continued use of many unconverted Intel applications.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+              "locator": "Developers: Bringing More Apps Than Ever to the Mac"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-ios-ipados-apps-on-mac",
+          "title": "iPhone and iPad apps on Apple-silicon Macs",
+          "canonicalSummary": "Developers can make compatible iPhone and iPad apps available on Macs using Apple silicon.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Big Sur expanded the Mac app catalog by allowing eligible mobile applications to run directly on the new architecture.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+              "locator": "Developers — iPhone and iPad apps on Mac"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-catalyst-swiftui-development",
+          "title": "Mac Catalyst and SwiftUI development updates",
+          "canonicalSummary": "Catalyst apps inherit the Big Sur design and gain interface controls, while SwiftUI expands shared-code and Mac-customization support.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple updated its cross-platform frameworks so developers could adapt interfaces to Mac conventions and share more implementation across platforms.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2020/11/macos-big-sur-is-here/",
+              "locator": "Developers — Mac Catalyst and SwiftUI"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-kernel-runtime-platform-changes",
+          "title": "Kernel and runtime platform changes",
+          "canonicalSummary": "The release changed system-library delivery, kernel-extension requirements, process event APIs, and supported argument lengths.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple's developer notes document a built-in dynamic-linker cache, stricter extension loading, longer argument support, and expanded kevent exit-status observation.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/documentation/macos-release-notes/macos-big-sur-11_0_1-release-notes",
+              "locator": "Kernel — New Features; Known Issues; Deprecations"
+            }
+          ]
+        },
+        {
+          "key": "macos-11-0-1-security-baseline",
+          "title": "Big Sur 11.0.1 security repairs",
+          "canonicalSummary": "The public Big Sur build repaired vulnerabilities across drivers, media and font parsing, files and privileges, the kernel, networking, privacy boundaries, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's detailed advisory records a broad initial security baseline for Big Sur, including issues in graphics, audio, Finder, images, the kernel, Sandbox, SQLite, and web processing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102846",
+              "locator": "AMD; Audio; CoreGraphics; Finder; FontParser; ImageIO; Kernel; Sandbox; SQLite; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-6-1-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 6.1.2 reached the public channel on January 28, 2020 as a security-only consumer update with repairs spanning parsers, file access, graphics, USB, the kernel, and system services.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple released watchOS 6.1.2 on January 28, 2020. The consumer update page characterizes it as an important security update recommended for all users and does not enumerate a user-facing feature.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103220",
+                "locator": "Released January 28, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "The advisory documents the release's concrete changes across multiple privileged and parsing surfaces. Because Apple publishes no broader consumer list, this entry contains one structured security occurrence and no speculative maintenance detail.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103220",
+                "locator": "AnnotationKit; Audio; files; ImageIO; IOAcceleratorFamily; IOUSBDeviceFamily; Kernel; libxml2; libxpc; wifivelocityd"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.1.2"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118388",
+          "locator": "watchOS 6.1.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103220",
+          "locator": "Released January 28, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-6-1-2-security-repairs",
+          "title": "watchOS 6.1.2 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities in document and media parsing, file access, graphics and USB drivers, the kernel, XML, IPC, and Wi-Fi services.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory records fixes across AnnotationKit, Audio, files, ImageIO, IOAcceleratorFamily, IOUSBDeviceFamily, the kernel, libxml2, libxpc, and wifivelocityd.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103220",
+              "locator": "AnnotationKit; Audio; files; ImageIO; IOAcceleratorFamily; IOUSBDeviceFamily; Kernel; libxml2; libxpc; wifivelocityd"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-6-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 6.2 reached the public channel on March 24, 2020 with watch-app purchases, a playback fix, expanded regulated heart features, and a version-specific security repair set.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple released watchOS 6.2 on March 24, 2020. Its consumer notes identify four changes spanning watch-app commerce, connectivity-related music playback, and ECG and irregular-rhythm availability.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103829",
+                "locator": "Released March 24, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "The matching advisory documents additional security work in accounts, private frameworks, entitlements, image processing, the kernel, messaging, Sandbox, and WebKit. The archive does not project later 6.2 point-release changes backward.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118388",
+                "locator": "watchOS 6.2 through watchOS 6.2.9"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103829",
+                "locator": "Accounts; ActionKit; AppleMobileFileIntegrity; Image Processing; Kernel; Messages; Sandbox; WebKit"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118388",
+          "locator": "watchOS 6.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103829",
+          "locator": "Released March 24, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-6-2-in-app-purchases",
+          "title": "In-app purchases for Apple Watch apps",
+          "canonicalSummary": "Apple Watch apps can offer purchases from within the watch app experience.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 6.2 expanded standalone watch-app commerce by enabling supported in-app transactions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6.2 — in-app purchases"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-2-wifi-bluetooth-playback-fix",
+          "title": "Wi-Fi to Bluetooth music-playback correction",
+          "canonicalSummary": "The update corrected music playback that could pause when connectivity changed from Wi-Fi to Bluetooth.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple repaired a handoff-related playback interruption triggered by switching the watch's active connection type.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6.2 — music playback fix"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-2-ecg-chile-new-zealand-turkiye",
+          "title": "ECG availability in Chile, New Zealand, and Türkiye",
+          "canonicalSummary": "The ECG app became available on supported Apple Watch models in Chile, New Zealand, and Türkiye.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple expanded the regulated ECG app to compatible watches in three additional markets.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6.2 — ECG app availability"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-2-irregular-rhythm-chile-new-zealand-turkiye",
+          "title": "Irregular-rhythm notifications in Chile, New Zealand, and Türkiye",
+          "canonicalSummary": "Irregular-rhythm notifications became available in Chile, New Zealand, and Türkiye.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The update extended irregular-rhythm notification support to the same three markets.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118388",
+              "locator": "watchOS 6.2 — irregular heart rhythm notifications"
+            }
+          ]
+        },
+        {
+          "key": "watchos-6-2-security-repairs",
+          "title": "watchOS 6.2 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities involving sandboxing, entitlements, permissions, images, input, the kernel, XML, messages, and web content.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory documents fixes across Accounts, ActionKit, AppleMobileFileIntegrity, CoreFoundation, Icons, Image Processing, IOHIDFamily, the kernel, libxml2, Messages, Sandbox, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103829",
+              "locator": "Accounts; ActionKit; AppleMobileFileIntegrity; CoreFoundation; Icons; Image Processing; IOHIDFamily; Kernel; libxml2; Messages; Sandbox; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-7-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 7.0 reached the public channel on September 16, 2020 with face sharing, sleep and handwashing tools, Family Setup, fitness, health, communication, navigation, and security changes.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple made watchOS 7 available on September 16, 2020 for Apple Watch Series 3 and later paired with a compatible iPhone. The launch notes span personalization, health, family use, fitness, communication, navigation, and system utilities.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2020/09/apple-watch-series-6-delivers-breakthrough-wellness-and-fitness-capabilities/",
+                "locator": "watchOS 7 available September 16"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103118",
+                "locator": "Released September 16, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "The structured occurrences below group related launch-note bullets without copying Apple's prose. The security occurrence summarizes the version-specific advisory; later point-release fixes and unsupported undocumented observations are excluded.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "Watch Faces; Sleep; Handwashing; Family Setup; Memoji; Maps; Siri; Other features and improvements"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103118",
+                "locator": "watchOS 7.0 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2020/09/apple-watch-series-6-delivers-breakthrough-wellness-and-fitness-capabilities/",
+          "locator": "Pricing and Availability — watchOS 7"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118391",
+          "locator": "watchOS 7"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103118",
+          "locator": "Released September 16, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-7-faces-sharing-discovery",
+          "title": "New faces, face sharing, and discovery",
+          "canonicalSummary": "watchOS 7 added multiple faces and complications and let users share and discover configured faces through messages, links, apps, and the web.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The launch expanded face design choices and turned configured faces into portable items that could be shared or installed from curated sources.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Watch Faces"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-sleep-tracking",
+          "title": "Sleep tracking and schedules",
+          "canonicalSummary": "A Sleep app tracks sleep and wake states, supports goals and schedules, reduces bedtime distractions, and provides charging reminders.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 7 introduced an overnight workflow for setting sleep goals, preparing for bed, detecting sleep, waking, and monitoring charging readiness.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Sleep"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-handwashing-detection",
+          "title": "Automatic handwashing detection",
+          "canonicalSummary": "Supported watches can detect handwashing, run a 20-second timer, prompt the wearer to continue, and optionally remind them after arriving home.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Motion and microphone signals were combined to recognize washing activity and encourage the recommended duration, with history visible in Health.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Handwashing"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-family-setup-schooltime",
+          "title": "Family Setup and Schooltime",
+          "canonicalSummary": "A compatible iPhone can configure cellular watches for family members without their own iPhone, with communication, activity, location, and Schooltime controls.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Family Setup extended Apple Watch to supported dependents while giving organizers tools for contacts, schedules, location notices, activity, and restricted school hours.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Family Setup"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2020/09/apple-watch-series-6-delivers-breakthrough-wellness-and-fitness-capabilities/",
+              "locator": "Family Setup requirements and availability"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-memoji-app-face",
+          "title": "Memoji app and watch face",
+          "canonicalSummary": "Apple Watch gained a Memoji editor, new customization choices, sticker messaging, and a Memoji watch face.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release brought Memoji creation and editing to the wrist and integrated the results into Messages and face personalization.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Memoji"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-maps-cycling-directions",
+          "title": "Cycling directions in Maps",
+          "canonicalSummary": "Maps added supported bicycle routes that account for bike infrastructure, elevation, street conditions, and useful stops.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 7 introduced wrist-based cycling navigation in selected cities, including route context tailored to riders.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Maps"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-siri-translation-dictation",
+          "title": "Siri translation, on-device dictation, and announcements",
+          "canonicalSummary": "Siri added phrase translation, supported on-device dictation, and Announce Messages on compatible configurations.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The update expanded wrist-based language help and message access while moving supported dictation processing onto the watch.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Siri"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-workouts-activity-goals",
+          "title": "New workouts and adjustable Activity goals",
+          "canonicalSummary": "Workout added Dance, Functional Strength Training, Core Training, and Cooldown algorithms, while Activity goals became separately adjustable.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "watchOS 7 broadened movement tracking and let users customize exercise and stand or roll targets in addition to the Move goal.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Other features and improvements"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-health-mobility-ecg-regions",
+          "title": "Health metrics and heart-feature availability",
+          "canonicalSummary": "Health gained new mobility measurements and a checklist, while ECG and irregular-rhythm notifications expanded to six additional regions.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The launch added low-range cardio and mobility context in Health, centralized safety setup, and broadened regulated heart-feature access.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Other features and improvements"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-messages-shortcuts",
+          "title": "Messages threads and Shortcuts",
+          "canonicalSummary": "Messages added group conversations and inline replies, while a Shortcuts app and face complication exposed existing automations.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "watchOS 7 made group communication easier to follow and provided direct wrist access to supported personal automations.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Other features and improvements"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-wallet-media-utilities",
+          "title": "Wallet, media, and utility updates",
+          "canonicalSummary": "The launch added compatible digital car keys, redesigned Wallet, media search and download views, and more Always On interactions.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Related system updates expanded what users could access without waking the display and improved management of keys, audio, weather, and time information.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7 — Other features and improvements"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-0-security-repairs",
+          "title": "watchOS 7.0 security repairs",
+          "canonicalSummary": "The launch repaired vulnerabilities in media and font parsing, drivers, HomeKit, the kernel, privacy boundaries, databases, and web content.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory documents fixes across Audio, CoreAudio, CoreCapture, CoreText, Disk Images, FontParser, HomeKit, ImageIO, the kernel, Sandbox, SQLite, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103118",
+              "locator": "Audio; CoreAudio; CoreCapture; CoreText; Disk Images; FontParser; HomeKit; ImageIO; Kernel; Sandbox; SQLite; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-7-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 7.1 reached the public channel on November 5, 2020 with hearing notifications, regional heart-feature support, Mac-unlock and display corrections, and security repairs.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple released watchOS 7.1 on November 5, 2020. Its consumer notes identify five discrete changes involving hearing exposure, ECG and irregular-rhythm regions, Auto Unlock, and the Series 6 display.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103039",
+                "locator": "Released November 5, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "The companion advisory supplies the broader security record and notes exploit reports for some repaired vulnerabilities. The archive keeps those documented security facts separate from the consumer feature and fix list.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103039",
+                "locator": "FontParser; Kernel; security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118391",
+          "locator": "watchOS 7.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103039",
+          "locator": "Released November 5, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-7-1-headphone-audio-level-notifications",
+          "title": "Headphone audio-level notifications",
+          "canonicalSummary": "Apple Watch can notify the wearer when headphone listening levels may affect hearing.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 7.1 added a hearing-health warning based on potentially harmful headphone audio exposure.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.1 — headphone audio level"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-1-ecg-korea-russia",
+          "title": "ECG availability in South Korea and Russia",
+          "canonicalSummary": "The ECG app became available on supported Apple Watch models in the Republic of Korea and Russia.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple expanded regulated ECG support to compatible watches in South Korea and Russia.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.1 — ECG app availability"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-1-irregular-rhythm-korea-russia",
+          "title": "Irregular-rhythm notifications in South Korea and Russia",
+          "canonicalSummary": "Irregular-rhythm notifications became available in the Republic of Korea and Russia.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release extended irregular-rhythm notification support to the same two countries.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.1 — irregular heart rhythm notifications"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-1-mac-auto-unlock-fix",
+          "title": "Mac Auto Unlock correction",
+          "canonicalSummary": "The update corrected a condition that prevented some users from unlocking a Mac with Apple Watch.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple repaired an interoperability failure in the watch-assisted Mac unlock workflow.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.1 — unlock Mac fix"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-1-series-6-wrist-raise-fix",
+          "title": "Series 6 wrist-raise display correction",
+          "canonicalSummary": "The release corrected a dark screen on wrist raise for some Apple Watch Series 6 users.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple addressed a display-wake failure affecting a subset of Series 6 watches.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.1 — wrist raise fix"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-1-security-repairs",
+          "title": "watchOS 7.1 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities in audio, font and image parsing, crash and file handling, drivers, the kernel, logging, XML, WebKit, and XNU.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory records a broad repair set and says exploit reports existed for selected FontParser and kernel vulnerabilities.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103039",
+              "locator": "Audio; CoreAudio; FontParser; Foundation; ImageIO; IOAcceleratorFamily; Kernel; libxml2; Logging; WebKit; XNU"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-watchos-7-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "watchOS 7.2 reached the public channel on December 14, 2020 with Fitness+, cardio-fitness tools, ECG changes, braille and Family Setup expansion, performance work, and security repairs.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple released watchOS 7.2 on December 14, 2020. The update's consumer record centers on Fitness+, cardio-fitness notifications and review, ECG behavior and regional support, braille displays, and Family Setup expansion.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102760",
+                "locator": "Released December 14, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "Apple also identifies performance improvements and publishes a security advisory covering audio, fonts, images, authentication policy, WebRTC, and Wi-Fi. No later or undocumented changes are attributed to this event.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118391",
+                "locator": "watchOS 7.2 — performance improvements"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102760",
+                "locator": "Audio; CoreAudio; FontParser; ImageIO; Security; WebRTC; Wi-Fi"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/118391",
+          "locator": "watchOS 7.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102760",
+          "locator": "Released December 14, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "watchos-7-2-apple-fitness-plus",
+          "title": "Apple Fitness+",
+          "canonicalSummary": "Apple Watch powers a subscription workout experience with metrics displayed alongside studio-style sessions on supported Apple devices.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 7.2 launched Fitness+ across ten workout categories in its initial six supported countries.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.2 — Apple Fitness+"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-2-low-cardio-fitness",
+          "title": "Low cardio-fitness notifications and review",
+          "canonicalSummary": "Apple Watch can notify users about low cardio fitness and Health can contextualize the level by age and sex.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The update expanded cardio-fitness monitoring beyond high-performance ranges and exposed contextual review in the iPhone Health app.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.2 — cardio fitness notifications"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-2-ecg-high-heart-rate-classification",
+          "title": "ECG classification above 100 BPM",
+          "canonicalSummary": "The ECG app can classify atrial fibrillation at heart rates above 100 beats per minute in most supported regions.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple broadened the heart-rate range in which the ECG app could return an atrial-fibrillation classification.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.2 — ECG classification"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-2-ecg-taiwan",
+          "title": "ECG availability in Taiwan",
+          "canonicalSummary": "The ECG app became available on supported Apple Watch models in Taiwan.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "watchOS 7.2 expanded regulated ECG app availability to Taiwan.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.2 — ECG app in Taiwan"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-2-braille-display-support",
+          "title": "Braille display support with VoiceOver",
+          "canonicalSummary": "VoiceOver gained support for compatible braille displays.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release expanded Apple Watch accessibility by enabling supported external braille-display use with VoiceOver.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.2 — braille displays"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-2-family-setup-regions",
+          "title": "Family Setup in four additional countries",
+          "canonicalSummary": "Family Setup expanded to Bahrain, Canada, Norway, and Spain on supported cellular watches.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple broadened Family Setup availability to four additional markets, retaining its cellular model requirements.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.2 — Family Setup"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-2-performance-improvements",
+          "title": "Performance improvements",
+          "canonicalSummary": "The update includes additional performance improvements beyond its named features.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple's consumer record identifies a general performance component without publishing a more granular breakdown.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118391",
+              "locator": "watchOS 7.2 — performance improvements"
+            }
+          ]
+        },
+        {
+          "key": "watchos-7-2-security-repairs",
+          "title": "watchOS 7.2 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities in audio, font and image parsing, authentication policy, real-time communications, and Wi-Fi.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory documents fixes across Audio, CoreAudio, FontParser, ImageIO, Security, WebRTC, and Wi-Fi.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102760",
+              "locator": "Audio; CoreAudio; FontParser; ImageIO; Security; WebRTC; Wi-Fi"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-13-3-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 13.3.1 reached the public channel on January 28, 2020 as a general performance and stability update with security repairs across media, files, drivers, the kernel, services, and WebKit.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple released tvOS 13.3.1 on January 28, 2020. The cumulative consumer page identifies general performance and stability improvements but provides no named feature or narrower maintenance item.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.3.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103219",
+                "locator": "Released January 28, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "The security advisory is the detailed first-party source, documenting repairs across audio, files, image processing, graphics and USB drivers, the kernel, XML, IPC, web content, and Wi-Fi services.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103219",
+                "locator": "Audio; files; ImageIO; IOAcceleratorFamily; IOUSBDeviceFamily; Kernel; libxml2; libxpc; WebKit; wifivelocityd"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.3.1"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13.3.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103219",
+          "locator": "Released January 28, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-13-3-1-performance-stability",
+          "title": "General performance and stability improvements",
+          "canonicalSummary": "The update contains general work intended to improve Apple TV performance and stability.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple's consumer notes do not provide a more granular performance or stability breakdown for tvOS 13.3.1.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13.3.1"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-3-1-security-repairs",
+          "title": "tvOS 13.3.1 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities in audio and image parsing, file access, graphics and USB drivers, the kernel, XML, IPC, WebKit, and Wi-Fi services.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory records fixes across Audio, files, ImageIO, IOAcceleratorFamily, IOUSBDeviceFamily, the kernel, libxml2, libxpc, WebKit, and wifivelocityd.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103219",
+              "locator": "Audio; files; ImageIO; IOAcceleratorFamily; IOUSBDeviceFamily; Kernel; libxml2; libxpc; WebKit; wifivelocityd"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-13-4",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 13.4 reached the public channel on March 24, 2020 as a general performance and stability update with security work across sandboxing, permissions, parsers, the kernel, messaging, and WebKit.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple released tvOS 13.4 on March 24, 2020. The consumer update history offers only a general performance and stability description for the public version.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.4"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103827",
+                "locator": "Released March 24, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "Apple's advisory supplies the substantive technical record, including repairs to sandbox and entitlement boundaries, image and input processing, the kernel, XML, messages, and WebKit. No undocumented claim is added.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103827",
+                "locator": "Accounts; ActionKit; AppleMobileFileIntegrity; CoreFoundation; Icons; Image Processing; IOHIDFamily; Kernel; libxml2; Messages; Sandbox; WebKit"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.4"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13.4"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103827",
+          "locator": "Released March 24, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-13-4-performance-stability",
+          "title": "General performance and stability improvements",
+          "canonicalSummary": "The update contains general work intended to improve Apple TV performance and stability.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple publishes no narrower consumer feature or ordinary-fix description for tvOS 13.4.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13.4"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-4-security-repairs",
+          "title": "tvOS 13.4 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities involving sandboxing, entitlements, permissions, images, input, the kernel, XML, messages, and web content.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory documents fixes across Accounts, ActionKit, AppleMobileFileIntegrity, CoreFoundation, Icons, Image Processing, IOHIDFamily, the kernel, libxml2, Messages, Sandbox, and WebKit.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103827",
+              "locator": "Accounts; ActionKit; AppleMobileFileIntegrity; CoreFoundation; Icons; Image Processing; IOHIDFamily; Kernel; libxml2; Messages; Sandbox; WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-13-4-5",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The existing tvOS 13.4.5 public route is locally dated May 20, 2020, while Apple's security advisory says May 26; the release contains general maintenance and documented security repairs.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "The local timeline treats May 20, 2020 as tvOS 13.4.5's public appearance. Apple's undated cumulative update section confirms the version and says it contained general performance and stability work, but the security advisory assigns a May 26 release date.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.4.5"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102845",
+                "locator": "Released May 26, 2020",
+                "note": "First-party date differs from the local public milestone."
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "The discrepancy remains an explicit editorial issue rather than being silently reconciled. Apple's advisory still supports the structured security occurrence across accounts, privileges, media and font parsing, the kernel, networking, files, databases, and WebKit.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102845",
+                "locator": "Accounts; AppleMobileFileIntegrity; Audio; CoreText; FontParser; ImageIO; IPSec; Kernel; libxpc; rsync; Security; SQLite; WebKit; WebRTC"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 13.4.5"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 13.4.5"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102845",
+          "locator": "Released May 26, 2020",
+          "note": "Date conflict disclosed; no local chronology mutation."
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-13-4-5-performance-stability",
+          "title": "General performance and stability improvements",
+          "canonicalSummary": "The update contains general work intended to improve Apple TV performance and stability.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple provides no more specific consumer-facing breakdown for tvOS 13.4.5; the separate date conflict is retained in page provenance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 13.4.5"
+            }
+          ]
+        },
+        {
+          "key": "tvos-13-4-5-security-repairs",
+          "title": "tvOS 13.4.5 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities across accounts, privileges, audio, fonts and images, networking, the kernel, files, databases, and web components.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory documents fixes across Accounts, AppleMobileFileIntegrity, Audio, CoreText, FontParser, ImageIO, IPSec, the kernel, libxpc, rsync, Security, SQLite, System Preferences, WebKit, and WebRTC.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102845",
+              "locator": "Accounts; AppleMobileFileIntegrity; Audio; CoreText; FontParser; ImageIO; IPSec; Kernel; libxpc; rsync; Security; SQLite; System Preferences; WebKit; WebRTC"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-14-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 14.0 reached the public channel on September 16, 2020 with shared audio, Picture in Picture, Home integration, multiuser gaming, controller, aerial, AirPlay, and security changes.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple released tvOS 14.0 on September 16, 2020. Its launch notes cover private shared listening, video multitasking, smart-home views, individualized gaming, expanded controllers, aerial controls, and higher-resolution photo streaming.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103117",
+                "locator": "Released September 16, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "The version-specific advisory adds the security baseline across media, fonts and images, system boundaries, the kernel, databases, WebKit, and Wi-Fi. This article stays within the launch section and does not infer undocumented changes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103117",
+                "locator": "Assets; Audio; CoreAudio; FontParser; HomeKit; ImageIO; Kernel; Sandbox; SQLite; WebKit; Wi-Fi"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14 through tvOS 14.3"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 14"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103117",
+          "locator": "Released September 16, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-14-shared-audio",
+          "title": "Shared wireless audio",
+          "canonicalSummary": "Apple TV 4K can send audio to two compatible AirPods or Beats sets with separate volume controls.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "tvOS 14 enabled two listeners to use supported wireless headphones during the same viewing session without using room speakers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14 — Share audio"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-picture-in-picture-apps",
+          "title": "Broader Picture in Picture",
+          "canonicalSummary": "Supported third-party apps can continue video in a movable Picture in Picture window over other Apple TV activity.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release expanded video multitasking beyond Apple's own playback surfaces to compatible outside apps.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14 — Picture in Picture"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-home-doorbells-cameras",
+          "title": "Home doorbell, camera, and scene controls",
+          "canonicalSummary": "Apple TV can show compatible doorbell notifications and camera feeds and expose Home scenes through Control Center.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "tvOS 14 brought more smart-home context onto the television, including visitor views and direct Home control.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14 — Home"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-multiuser-gaming",
+          "title": "Multiuser gaming",
+          "canonicalSummary": "Switching users can expose each person's Apple Arcade progress, achievements, friends, and Continue Playing list.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The update extended multiuser profiles into games so household members could resume their own Arcade state.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14 — Multiuser for gaming"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-controller-expansion-mapping",
+          "title": "Expanded game controllers and button mapping",
+          "canonicalSummary": "Apple TV added support for Xbox Elite Series 2 and Xbox Adaptive controllers and allowed custom controller mappings.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "tvOS 14 broadened supported gaming hardware and let users remap controls from Settings.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14 — Game controllers"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-aerial-category-controls",
+          "title": "Aerial screen-saver category controls",
+          "canonicalSummary": "Users can choose which space, aerial, and underwater location categories participate in screen-saver rotation.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release added preference controls over the kinds of Aerial scenes Apple TV cycles through.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14 — Screen savers"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-airplay-photos-4k",
+          "title": "4K Photos streaming over AirPlay",
+          "canonicalSummary": "Supported iPhone Photos content can stream over AirPlay to Apple TV 4K at 4K resolution.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "tvOS 14 increased the supported resolution for compatible photo and video sharing from iPhone through AirPlay.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14 — AirPlay"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-0-security-repairs",
+          "title": "tvOS 14.0 security repairs",
+          "canonicalSummary": "The launch repaired vulnerabilities in media and font parsing, trusted assets, HomeKit, the kernel, privacy boundaries, databases, web content, and Wi-Fi.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory documents fixes across Assets, Audio, CoreAudio, CoreText, Disk Images, FontParser, HomeKit, ImageIO, the kernel, Sandbox, SQLite, WebKit, and Wi-Fi.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103117",
+              "locator": "Assets; Audio; CoreAudio; CoreText; Disk Images; FontParser; HomeKit; ImageIO; Kernel; Sandbox; SQLite; WebKit; Wi-Fi"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-14-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 14.2 reached the public channel on November 5, 2020 with HomePod home-theater audio, Apple One subscription management, and a version-specific security repair set.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple released tvOS 14.2 on November 5, 2020. Its two named consumer additions connected HomePod to Apple TV 4K for home-theater audio and exposed Apple One plans through account subscription settings.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103040",
+                "locator": "Released November 5, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "The security advisory documents additional repairs in audio, fonts, images, crash and file handling, graphics, the kernel, XML, logging, WebKit, and XNU. Fitness+ remains outside this version's occurrence list.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103040",
+                "locator": "Audio; CoreAudio; CoreText; FontParser; ImageIO; IOAcceleratorFamily; Kernel; libxml2; Logging; WebKit; XNU"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14.2; tvOS 14.3"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 14.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103040",
+          "locator": "Released November 5, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-14-2-homepod-home-theater",
+          "title": "HomePod home-theater audio",
+          "canonicalSummary": "HomePod can pair with Apple TV 4K for stereo, surround, and Dolby Atmos playback, with a second HomePod supporting true stereo.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "tvOS 14.2 added a persistent home-theater role for original HomePod speakers connected to Apple TV 4K.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14.2 — HomePod home theater"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-2-apple-one",
+          "title": "Apple One subscriptions",
+          "canonicalSummary": "Apple TV account settings can access Apple One bundles and share eligible plans with family members.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The update integrated Apple's multi-service subscription bundles into the Apple TV account experience.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14.2 — Apple One"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-2-security-repairs",
+          "title": "tvOS 14.2 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities in media, font and image parsing, files and privileges, graphics, the kernel, XML, logging, WebKit, and XNU.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory records fixes across Audio, CoreAudio, CoreText, Crash Reporter, FontParser, Foundation, ImageIO, IOAcceleratorFamily, the kernel, libxml2, Logging, Model I/O, WebKit, and XNU.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103040",
+              "locator": "Audio; CoreAudio; CoreText; Crash Reporter; FontParser; Foundation; ImageIO; IOAcceleratorFamily; Kernel; libxml2; Logging; Model I/O; WebKit; XNU"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-tvos-14-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "tvOS 14.3 reached the public channel on December 14, 2020 with a dedicated Apple TV+ destination, Apple Fitness+, Apple One access, and version-specific security repairs.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple released tvOS 14.3 on December 14, 2020. The consumer notes identify three service-oriented additions: a dedicated Apple TV+ tab, Fitness+ workouts powered by Apple Watch, and Apple One subscription access.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102881",
+                "locator": "Released December 14, 2020"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented scope"
+          },
+          {
+            "text": "The companion advisory documents additional security work in audio, fonts, images, model processing, web storage, WebRTC, and Wi-Fi. Feature availability remained region-dependent, and no undocumented changes are claimed.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106336",
+                "locator": "tvOS 14.3 — availability footnotes"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102881",
+                "locator": "Audio; CoreAudio; FontParser; ImageIO; Model I/O; WebKit Storage; WebRTC; Wi-Fi"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106336",
+          "locator": "tvOS 14.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102881",
+          "locator": "Released December 14, 2020"
+        }
+      ],
+      "changes": [
+        {
+          "key": "tvos-14-3-apple-tv-plus-tab",
+          "title": "Dedicated Apple TV+ tab",
+          "canonicalSummary": "The Apple TV app gained a dedicated tab for discovering and watching Apple Originals.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "tvOS 14.3 separated Apple TV+ discovery into its own app destination in supported regions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14.3 — Apple TV app"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-3-apple-fitness-plus",
+          "title": "Apple Fitness+",
+          "canonicalSummary": "Apple TV can present studio-style Fitness+ workouts whose live activity metrics are supplied by Apple Watch.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The update brought Apple's subscription workout video experience to the largest supported screen, with weekly sessions and Watch integration.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14.3 — Apple Fitness+"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-3-apple-one",
+          "title": "Apple One subscription access",
+          "canonicalSummary": "Apple TV settings can access Apple One bundles that combine eligible Apple services.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "tvOS 14.3 continued the service-bundle integration and listed Fitness+ among eligible Apple One offerings where available.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106336",
+              "locator": "tvOS 14.3 — Apple One"
+            }
+          ]
+        },
+        {
+          "key": "tvos-14-3-security-repairs",
+          "title": "tvOS 14.3 security repairs",
+          "canonicalSummary": "The release repaired vulnerabilities in audio, font and image parsing, model files, web storage, real-time communications, and Wi-Fi.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory documents fixes across Audio, CoreAudio, FontParser, ImageIO, Model I/O, WebKit Storage, WebRTC, and Wi-Fi.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-specific release notes, availability statement, or security advisory to the existing audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102881",
+              "locator": "Audio; CoreAudio; FontParser; ImageIO; Model I/O; WebKit Storage; WebRTC; Wi-Fi"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:46:40Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

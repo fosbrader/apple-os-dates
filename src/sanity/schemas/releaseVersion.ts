@@ -1,5 +1,9 @@
-import { defineField, defineType } from "sanity";
+import { defineArrayMember, defineField, defineType } from "sanity";
 import { uniqueReleaseVersion } from "../validation";
+import {
+  citationsRequiredWhenApproved,
+  validateProvenanceStatus,
+} from "./schemaValidation";
 
 interface MilestoneValue {
   label?: string;
@@ -15,6 +19,8 @@ export const releaseVersion = defineType({
   initialValue: {
     milestones: [],
     releaseStatus: "active",
+    provenanceStatus: "legacyImported",
+    editorialReview: { status: "draft" },
   },
   fields: [
     defineField({
@@ -32,8 +38,8 @@ export const releaseVersion = defineType({
       validation: (rule) =>
         rule
           .required()
-          .regex(/^\d+(?:\.\d+){0,2}[a-z]?$/i, {
-            name: "Apple OS version",
+          .regex(/^\d+\.\d+(?:\.\d+)?[a-z]?$/i, {
+            name: "Apple release version",
           })
           .custom(uniqueReleaseVersion),
     }),
@@ -126,7 +132,7 @@ export const releaseVersion = defineType({
       title: "Public Release Date",
       type: "date",
       description:
-        "Date of the Public milestone (or GM when there is no Public milestone). Leave empty if still in beta.",
+        "Date of the closing Public or qualifying GM release event. Leave empty if still in beta.",
       validation: (rule) =>
         rule.custom((value, context) => {
           const milestones =
@@ -165,10 +171,11 @@ export const releaseVersion = defineType({
           if (!value && releaseMilestone?.date) {
             return `Enter ${releaseMilestone.date} here so this release is no longer shown as Active.`;
           }
-          if (value && !releaseMilestone?.date) {
-            return 'Add a "Public" milestone (or "GM" when no Public milestone exists) with the same date.';
-          }
-          if (value && releaseMilestone?.date !== value) {
+          if (
+            value &&
+            releaseMilestone?.date &&
+            releaseMilestone.date !== value
+          ) {
             return `This date must match the ${releaseMilestone?.label} milestone (${releaseMilestone?.date}).`;
           }
 
@@ -183,16 +190,66 @@ export const releaseVersion = defineType({
         'Optional note about this version (e.g., "Apple Intelligence Release")',
     }),
     defineField({
+      name: "overview",
+      title: "Sourced Version Overview",
+      type: "blockContent",
+      description:
+        "Optional editorial overview. Build/event changes are aggregated automatically and must not be duplicated here.",
+    }),
+    defineField({
+      name: "citations",
+      title: "Version Sources",
+      type: "array",
+      of: [defineArrayMember({ type: "citation" })],
+      description:
+        "Sources supporting the overview or version-level claims. Timeline event sources live on release events.",
+      validation: (rule) => rule.custom(citationsRequiredWhenApproved),
+    }),
+    defineField({
+      name: "provenanceStatus",
+      title: "Provenance Status",
+      type: "string",
+      description:
+        "Describes the verification state of this version-level record, not every child event.",
+      options: {
+        list: [
+          { title: "Legacy imported", value: "legacyImported" },
+          { title: "Audit verified", value: "auditVerified" },
+          { title: "Source linked", value: "sourceLinked" },
+          { title: "Editorially verified", value: "editoriallyVerified" },
+        ],
+        layout: "radio",
+      },
+      validation: (rule) =>
+        rule.required().custom(validateProvenanceStatus),
+    }),
+    defineField({
+      name: "auditBatches",
+      title: "Audit Batches",
+      type: "array",
+      of: [
+        defineArrayMember({
+          type: "reference",
+          to: [{ type: "auditBatch" }],
+        }),
+      ],
+      validation: (rule) => rule.unique(),
+    }),
+    defineField({
+      name: "editorialReview",
+      title: "Editorial Review",
+      type: "editorialReview",
+      validation: (rule) => rule.required(),
+    }),
+    defineField({
       name: "milestones",
-      title: "Milestones",
+      title: "Legacy Milestones",
       type: "array",
       of: [{ type: "betaMilestone" }],
       description:
-        "All beta, RC, and public milestones, ordered oldest to newest.",
+        "Compatibility data for the audited pre-event chronology. New releases use Release Event documents and do not duplicate entries here.",
       validation: (rule) =>
         rule
-          .required()
-          .min(1)
           .custom((value?: MilestoneValue[]) => {
             if (!value || value.length < 2) return true;
 

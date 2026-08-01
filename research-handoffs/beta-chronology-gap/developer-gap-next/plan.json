@@ -1,0 +1,2922 @@
+{
+  "formatVersion": 1,
+  "programId": "apple-developer-beta-gap-next",
+  "artifactType": "boundedResearchPlan",
+  "createdAt": "2026-07-31T09:13:39Z",
+  "createdBy": "codex-planning-agent",
+  "authority": {
+    "planningOnly": true,
+    "webResearchPerformed": false,
+    "productionQueryPerformed": false,
+    "sanityReadPerformed": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "productionIdAllocationAllowed": false,
+    "pageBuildAllowed": false,
+    "publicationAllowed": false,
+    "deploymentAllowed": false
+  },
+  "frozenInputs": {
+    "coverageMatrix": {
+      "path": "research-handoffs/beta-chronology-gap/coverage-matrix.json",
+      "bytes": 1454110,
+      "sha256": "011c7f59be5191ac567ead01c704a5ee506a9aeb59bd630c104a2afb8114ced8",
+      "formatVersion": 1,
+      "programId": "apple-beta-chronology-gap",
+      "generatedAt": "2026-07-31T09:10:04.882Z",
+      "productionSnapshot": {
+        "queriedAt": "2026-07-31T03:20:38Z",
+        "releaseVersionCount": 410,
+        "releaseEventCount": 2068,
+        "publicBetaEventCount": 20
+      },
+      "coverageSummary": {
+        "eligibleModeledVersionCount": 284,
+        "versionCountWithProductionPublicBeta": 20,
+        "productionPublicBetaEventCount": 20,
+        "versionCountWithStructuredCandidates": 205,
+        "structuredCandidateCount": 855,
+        "structuredCandidateReadiness": {
+          "needsAdditionalEvidence": 187,
+          "readyForChronologyReview": 666,
+          "identityCorrectionPendingSeparateAuthorization": 2
+        },
+        "versionCountRepresentedByProductionOrCandidate": 216,
+        "versionCountWithReviewedNoPublicBeta": 3,
+        "versionCountAuditedNoPositiveButReversible": 75,
+        "versionCountWithNotEstablishedConflict": 1,
+        "versionCountAuditedByProductionCandidateOrNegative": 219,
+        "versionCountTouchedByProductionCandidateOrApplicabilityReview": 284,
+        "versionCountNotYetAudited": 0,
+        "versionCountStillNeedingApplicabilityAndSequenceAudit": 76,
+        "remainingPublicBetaAuditPriorityCounts": {
+          "routinePatchApplicabilityCheck": 54,
+          "highMajorOrPointRelease": 5,
+          "highestDeveloperSequenceExists": 17
+        },
+        "developerBetaInventory": {
+          "developerBetaEventCount": 1427,
+          "versionCountWithDeveloperBeta": 291,
+          "versionCountWithoutDeveloperBeta": 119,
+          "structuredCandidateCount": 17,
+          "structuredCandidateReadiness": {
+            "readyForChronologyReview": 17
+          },
+          "versionCountWithStructuredCandidates": 4,
+          "versionCountStillNeedingApplicabilityAndSequenceAudit": 115,
+          "auditPriorityCounts": {
+            "highMajorOrPointRelease": 22,
+            "routinePatchApplicabilityCheck": 91,
+            "highestPublicBetaEvidence": 2
+          },
+          "caution": "A version without a developer-beta event may correctly have been an unseeded hotfix. This is an applicability audit queue, not a missing-event count."
+        },
+        "publicationEligibleCandidateCount": 0,
+        "caution": "A version that has no represented public beta may correctly have had none. The remaining count is an audit queue, not a count of events to create."
+      },
+      "activeUnfrozenResearchWaves": [],
+      "developerBetaInventoryByPlatform": {
+        "iOS": {
+          "modeledVersionCount": 203,
+          "versionsWithDeveloperBeta": 94,
+          "versionsWithoutDeveloperBeta": 109,
+          "developerBetaEventCount": 446
+        },
+        "iPadOS": {
+          "modeledVersionCount": 52,
+          "versionsWithDeveloperBeta": 50,
+          "versionsWithoutDeveloperBeta": 2,
+          "developerBetaEventCount": 236
+        },
+        "macOS": {
+          "modeledVersionCount": 35,
+          "versionsWithDeveloperBeta": 29,
+          "versionsWithoutDeveloperBeta": 6,
+          "developerBetaEventCount": 150
+        },
+        "watchOS": {
+          "modeledVersionCount": 53,
+          "versionsWithDeveloperBeta": 51,
+          "versionsWithoutDeveloperBeta": 2,
+          "developerBetaEventCount": 251
+        },
+        "tvOS": {
+          "modeledVersionCount": 52,
+          "versionsWithDeveloperBeta": 52,
+          "versionsWithoutDeveloperBeta": 0,
+          "developerBetaEventCount": 271
+        },
+        "visionOS": {
+          "modeledVersionCount": 15,
+          "versionsWithDeveloperBeta": 15,
+          "versionsWithoutDeveloperBeta": 0,
+          "developerBetaEventCount": 73
+        }
+      },
+      "developerBetaInventorySummary": {
+        "developerBetaEventCount": 1427,
+        "versionCountWithDeveloperBeta": 291,
+        "versionCountWithoutDeveloperBeta": 119,
+        "structuredCandidateCount": 17,
+        "structuredCandidateReadiness": {
+          "readyForChronologyReview": 17
+        },
+        "versionCountWithStructuredCandidates": 4,
+        "versionCountStillNeedingApplicabilityAndSequenceAudit": 115,
+        "auditPriorityCounts": {
+          "highMajorOrPointRelease": 22,
+          "routinePatchApplicabilityCheck": 91,
+          "highestPublicBetaEvidence": 2
+        },
+        "caution": "A version without a developer-beta event may correctly have been an unseeded hotfix. This is an applicability audit queue, not a missing-event count."
+      }
+    },
+    "separatePriorityPacket": {
+      "packetPath": "research-handoffs/beta-chronology-gap/developer-gap-priority/",
+      "assignment": {
+        "bytes": 4396,
+        "sha256": "7d70fd59f3cdbbab05a6ff782555f007897be97e0fbd7d89110c22e3b1ebfa2b"
+      },
+      "candidates": [
+        {
+          "candidateId": "candidate:apple:ios:9.2.1:beta-1",
+          "releaseVersionId": "version-ios-9-2-1",
+          "platform": "iOS",
+          "version": "9.2.1",
+          "channel": "developerBeta",
+          "routeAlias": "beta-1",
+          "appearanceDate": "2015-12-16",
+          "chronologyDisposition": "chronologyApproved"
+        },
+        {
+          "candidateId": "candidate:apple:ios:9.2.1:beta-2",
+          "releaseVersionId": "version-ios-9-2-1",
+          "platform": "iOS",
+          "version": "9.2.1",
+          "channel": "developerBeta",
+          "routeAlias": "beta-2",
+          "appearanceDate": "2016-01-04",
+          "chronologyDisposition": "chronologyApproved"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.2.1:beta-1",
+          "releaseVersionId": "version-ios-10-2-1",
+          "platform": "iOS",
+          "version": "10.2.1",
+          "channel": "developerBeta",
+          "routeAlias": "beta-1",
+          "appearanceDate": "2016-12-14",
+          "chronologyDisposition": "chronologyApprovedWithQualification"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.2.1:beta-2",
+          "releaseVersionId": "version-ios-10-2-1",
+          "platform": "iOS",
+          "version": "10.2.1",
+          "channel": "developerBeta",
+          "routeAlias": "beta-2",
+          "appearanceDate": "2016-12-20",
+          "chronologyDisposition": "chronologyApprovedWithQualification"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.2.1:beta-3",
+          "releaseVersionId": "version-ios-10-2-1",
+          "platform": "iOS",
+          "version": "10.2.1",
+          "channel": "developerBeta",
+          "routeAlias": "beta-3",
+          "appearanceDate": "2017-01-09",
+          "chronologyDisposition": "chronologyApproved"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.2.1:beta-4",
+          "releaseVersionId": "version-ios-10-2-1",
+          "platform": "iOS",
+          "version": "10.2.1",
+          "channel": "developerBeta",
+          "routeAlias": "beta-4",
+          "appearanceDate": "2017-01-12",
+          "chronologyDisposition": "chronologyApproved"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.2:beta-1",
+          "releaseVersionId": "version-ios-10-3-2",
+          "platform": "iOS",
+          "version": "10.3.2",
+          "channel": "developerBeta",
+          "routeAlias": "beta-1",
+          "appearanceDate": "2017-03-28",
+          "chronologyDisposition": "chronologyApprovedWithQualification"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.2:beta-2",
+          "releaseVersionId": "version-ios-10-3-2",
+          "platform": "iOS",
+          "version": "10.3.2",
+          "channel": "developerBeta",
+          "routeAlias": "beta-2",
+          "appearanceDate": "2017-04-10",
+          "chronologyDisposition": "chronologyApprovedWithQualification"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.2:beta-3",
+          "releaseVersionId": "version-ios-10-3-2",
+          "platform": "iOS",
+          "version": "10.3.2",
+          "channel": "developerBeta",
+          "routeAlias": "beta-3",
+          "appearanceDate": "2017-04-17",
+          "chronologyDisposition": "chronologyApprovedWithQualification"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.2:beta-4",
+          "releaseVersionId": "version-ios-10-3-2",
+          "platform": "iOS",
+          "version": "10.3.2",
+          "channel": "developerBeta",
+          "routeAlias": "beta-4",
+          "appearanceDate": "2017-04-24",
+          "chronologyDisposition": "chronologyApproved"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.2:beta-5",
+          "releaseVersionId": "version-ios-10-3-2",
+          "platform": "iOS",
+          "version": "10.3.2",
+          "channel": "developerBeta",
+          "routeAlias": "beta-5",
+          "appearanceDate": "2017-04-27",
+          "chronologyDisposition": "chronologyApproved"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.3:beta-1",
+          "releaseVersionId": "version-ios-10-3-3",
+          "platform": "iOS",
+          "version": "10.3.3",
+          "channel": "developerBeta",
+          "routeAlias": "beta-1",
+          "appearanceDate": "2017-05-16",
+          "chronologyDisposition": "chronologyApprovedWithQualification"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.3:beta-2",
+          "releaseVersionId": "version-ios-10-3-3",
+          "platform": "iOS",
+          "version": "10.3.3",
+          "channel": "developerBeta",
+          "routeAlias": "beta-2",
+          "appearanceDate": "2017-05-30",
+          "chronologyDisposition": "chronologyApprovedWithQualification"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.3:beta-3",
+          "releaseVersionId": "version-ios-10-3-3",
+          "platform": "iOS",
+          "version": "10.3.3",
+          "channel": "developerBeta",
+          "routeAlias": "beta-3",
+          "appearanceDate": "2017-06-13",
+          "chronologyDisposition": "chronologyApproved"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.3:beta-4",
+          "releaseVersionId": "version-ios-10-3-3",
+          "platform": "iOS",
+          "version": "10.3.3",
+          "channel": "developerBeta",
+          "routeAlias": "beta-4",
+          "appearanceDate": "2017-06-22",
+          "chronologyDisposition": "chronologyApproved"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.3:beta-5",
+          "releaseVersionId": "version-ios-10-3-3",
+          "platform": "iOS",
+          "version": "10.3.3",
+          "channel": "developerBeta",
+          "routeAlias": "beta-5",
+          "appearanceDate": "2017-06-28",
+          "chronologyDisposition": "chronologyApproved"
+        },
+        {
+          "candidateId": "candidate:apple:ios:10.3.3:beta-6",
+          "releaseVersionId": "version-ios-10-3-3",
+          "platform": "iOS",
+          "version": "10.3.3",
+          "channel": "developerBeta",
+          "routeAlias": "beta-6",
+          "appearanceDate": "2017-07-05",
+          "chronologyDisposition": "chronologyApproved"
+        }
+      ],
+      "independentReview": {
+        "bytes": 20724,
+        "sha256": "30cf5fb6465db7f9e8ea2db5e2414582136bc0a88a89362717e81c89ad6ec315",
+        "verdict": "passWithMandatorySourceQualificationsAndTwoResolvedConflicts"
+      },
+      "packetLocks": {
+        "bytes": 23610,
+        "sha256": "ed353c8f3db5e3a0fa7cb110aa9585c6c7a6473d60353391a10ab5fb44b60df0"
+      },
+      "parentVersionCount": 4,
+      "candidateIdentityCount": 17,
+      "chronologyApprovedCandidateCount": 17,
+      "publicationEligible": false,
+      "requiredNextGate": "Before any separately authorized mutation, retain every source-role qualification and repeat the exact published/no-CDN production overlap query.",
+      "relationshipToThisPlan": "The four parent versions and 17 chronology-approved identities are represented only in the separate frozen packet. They are excluded from all seven waves and do not consume any of the 115 remaining version-level rows."
+    }
+  },
+  "queueReconciliation": {
+    "versionCountWithoutProductionDeveloperBeta": 119,
+    "versionRowsRepresentedBySeparatePriorityCandidates": 4,
+    "separateChronologyApprovedCandidateIdentityCount": 17,
+    "remainingVersionLevelApplicabilityRows": 115,
+    "plannedVersionLevelApplicabilityRows": 115,
+    "uniquePlannedReleaseVersionIds": 115,
+    "plannedReleaseVersionIdSetSha256": "10d9147a3e4970916b4e35726c61617fa55197d3f310f9ffbe94d120fd740e12",
+    "equation": "119 version-level applicability rows = 4 version rows represented by the separate 17-candidate developer-gap-priority packet + 115 version rows in this plan.",
+    "candidateCountWarning": "The 17 approved candidates are event identities spanning four version parents; they must not be added to the 115 version-row denominator."
+  },
+  "waveSummary": [
+    {
+      "waveId": "developer-modern-high-priority",
+      "order": 1,
+      "category": "modernHighPriorityPointOrRelease",
+      "targetCount": 10
+    },
+    {
+      "waveId": "developer-legacy-terminology-modeling",
+      "order": 2,
+      "category": "legacyMajorPointTerminologyModeling",
+      "targetCount": 14
+    },
+    {
+      "waveId": "developer-ios-patch-1-4",
+      "order": 3,
+      "category": "iosPatchHotfixApplicability",
+      "targetCount": 20
+    },
+    {
+      "waveId": "developer-ios-patch-5-9",
+      "order": 4,
+      "category": "iosPatchHotfixApplicability",
+      "targetCount": 22
+    },
+    {
+      "waveId": "developer-ios-patch-10-13",
+      "order": 5,
+      "category": "iosPatchHotfixApplicability",
+      "targetCount": 15
+    },
+    {
+      "waveId": "developer-ios-patch-14-16",
+      "order": 6,
+      "category": "iosPatchHotfixApplicability",
+      "targetCount": 16
+    },
+    {
+      "waveId": "developer-ios-patch-17-26",
+      "order": 7,
+      "category": "iosPatchHotfixApplicability",
+      "targetCount": 18
+    }
+  ],
+  "plannedCategoryCounts": {
+    "modernHighPriorityPointOrRelease": 10,
+    "legacyMajorPointTerminologyModeling": 14,
+    "iosPatchHotfixApplicability": 91
+  },
+  "executionPolicy": {
+    "assignmentImmutability": "Each wave must copy its targets from this packet-local plan. A later coverage-matrix regeneration may inform a reconciliation note but must never silently add, remove, or retarget a row in an active wave.",
+    "disjointOwnership": "One releaseVersionId belongs to exactly one wave. Cross-wave evidence may be referenced, but another wave must not independently propose the same developer-channel identity.",
+    "perWaveStopCondition": "A wave stops at a frozen research packet with positive candidates, conflicts, and explicit reversible negative/applicability findings. It stops before stable IDs, Sanity writes, page work, publication, or deployment.",
+    "recommendedOrder": "Run waves in numeric order unless separate researchers can preserve disjoint ownership. Modern high-priority work comes first; legacy modeling must settle terminology before event proposals; patch waves remain applicability audits."
+  },
+  "researchRules": {
+    "applicabilityPrinciple": "A queue row is not a missing-event claim. Many patch or hotfix releases may correctly have had no external developer prerelease.",
+    "exactDeveloperIdentityRequiredFields": [
+      "releaseVersionId",
+      "platform",
+      "version label at appearance when it differs from the parent",
+      "developerBeta channel",
+      "publisher-displayed developer label",
+      "explicit ordinal/sequence when numbered",
+      "normalized route alias",
+      "appearance date",
+      "availability state",
+      "revision/withdrawal/replacement status"
+    ],
+    "evidenceThreshold": "An exact identity needs a direct first-party artifact or at least two genuinely independent contemporary publisher lineages that, together without inference, establish platform, version, developer audience, displayed label/ordinal, and appearance date. Syndication, mirrors, copied release tables, and multiple captures of one publisher are one lineage.",
+    "audienceRule": "A generic beta, seed, prerelease, SDK, firmware, or software-update reference does not establish the developer audience. Never infer developerBeta from publicBeta, a shared build, a same-day appearance, or a later aggregate count.",
+    "ordinalRule": "Use an ordinal only when the source explicitly numbers the developer sequence or an unbroken, independently evidenced sequence establishes it without borrowing public numbering. Reconstruct Beta 1 through the last supported ordinal, identify gaps/duplicates/respins, and test the next ordinal against the stable-release boundary.",
+    "dateRule": "appearanceDate is the calendar date the developer appearance became available. A page publication timestamp is usable only when the source says availability occurred that date. If a later report explicitly says the developer seed shipped the prior day, retain the prior date with that qualification; preserve timezone or date conflicts instead of normalizing silently.",
+    "buildRule": "An appearance and a build are separate facts. Record a build only when evidence directly ties that build number to the exact developer appearance. Do not infer it from another channel, a stable release, a filename, an unsupported table, chronology proximity, or matching labels. An absent build never blocks a timeline-only identity.",
+    "lifecycleRule": "Record withdrawals, replacements, pauses, returns, revised seeds, and same-ordinal respins as observed. Do not collapse them into one available event or increment an ordinal merely to make the sequence consecutive.",
+    "aggregateRule": "Aggregate beta counts may bound a sequence but cannot create an exact ordinal, date, audience, or channel and cannot override stronger direct identity evidence.",
+    "terminologyBoundaries": [
+      {
+        "term": "Developer Beta",
+        "developerBetaDisposition": "Eligible only when the evidence establishes distribution to Apple’s developer audience and supports the exact identity fields."
+      },
+      {
+        "term": "Developer Preview",
+        "developerBetaDisposition": "Do not relabel automatically. Preserve the historical term and return a terminology/modeling conflict or a separately scoped `other`-channel proposal unless evidence explicitly equates that appearance with a developer beta."
+      },
+      {
+        "term": "Release Candidate",
+        "developerBetaDisposition": "Use `releaseCandidate`, never `developerBeta`, even when distributed through the developer portal or to developers."
+      },
+      {
+        "term": "Golden Master / GM seed",
+        "developerBetaDisposition": "Use `goldenMaster`, never `developerBeta`, unless a separate numbered developer-beta appearance is independently evidenced."
+      },
+      {
+        "term": "Internal / employee / carrier / leaked seed",
+        "developerBetaDisposition": "Not a public developer-program appearance. Do not create a developerBeta candidate; preserve as excluded or unresolved internal evidence."
+      },
+      {
+        "term": "AppleSeed",
+        "developerBetaDisposition": "Invitation-only AppleSeed, AppleSeed for IT, partner, or managed-distribution evidence is not automatically developerBeta. Require explicit evidence of the registered developer audience; otherwise preserve the program name and keep it outside this channel."
+      },
+      {
+        "term": "Public Beta",
+        "developerBetaDisposition": "Use `publicBeta` as a separate event. Never import its date, ordinal, or audience into a developer identity."
+      }
+    ],
+    "negativeAndReversibleSemantics": {
+      "noResultRule": "No search result is not proof that no developer beta existed.",
+      "requiredNegativeRecord": "For every row without a positive candidate, record the exact queries, sources/archives checked, date boundary, terminology variants, full-cycle/next-ordinal test, and limitations.",
+      "evidenceBackedNotApplicable": "Use only when affirmative evidence establishes that this developer channel did not apply to the cycle. Otherwise use a reversible `noPositiveSourceLocated` or `plausibleInsufficientEvidence` disposition.",
+      "reversibility": "Negative and not-proposed findings never reserve an event identity or forbid later evidence. A later packet may supersede them only by citing the frozen earlier finding, presenting stronger evidence, repeating reconciliation and both independent review stages, and preserving the change history.",
+      "nextOrdinal": "A tested next ordinal with no positive source is a do-not-create boundary for the current cutoff, not timeless proof of absence."
+    },
+    "sourceCustody": "Retain canonical metadata, precise locators, accessed dates, publisher lineage, archive/local evidence pointers, byte counts and SHA-256 locks. Commit only facts and short locators; keep raw copyrighted pages in the ignored evidence area."
+  },
+  "productionReconciliationGate": {
+    "timing": "After candidate identities are assembled and again immediately before any separately authorized mutation.",
+    "clientRequirements": {
+      "perspective": "published",
+      "useCdn": false,
+      "draftsAllowed": false,
+      "queryOnly": true
+    },
+    "requiredChecks": [
+      "Confirm every frozen releaseVersion parent still exists and capture its current inventory.",
+      "Query every exact {releaseVersionId, channel: developerBeta, routeAlias} identity.",
+      "Also query {releaseVersionId, channel, sequence, appearanceDate} to detect an alias mismatch or duplicate identity.",
+      "Inventory all scoped release events so a GM, RC, other-channel seed, withdrawal, replacement, or same-ordinal respin is not overlooked.",
+      "Stop on an exact existing match, likely identity conflict, missing parent, draft collision, duplicate, or changed target facts; record the conflict instead of overwriting."
+    ],
+    "allowedStates": [
+      "exactExistingMatch",
+      "existingIdentityConflict",
+      "confirmedMissing",
+      "plausibleInsufficientEvidence",
+      "evidenceBackedNotApplicable"
+    ],
+    "currentPlanStatement": "This planning artifact performed no Sanity or production query. Its inventory is the frozen checked-in snapshot only."
+  },
+  "reviewGates": {
+    "researcherSelfReview": "Required for completeness and conflicts but does not count as either independent stage.",
+    "stageOneIndependentEvidenceAndChronologyReview": {
+      "independence": "Reviewer must be different from the researcher.",
+      "requiredChecks": [
+        "Reproduce packet and evidence locks.",
+        "Inspect every cited locator and publisher lineage.",
+        "Verify exact version, developer audience, label, ordinal, date, availability state, and any directly supported build.",
+        "Reconstruct full sequence continuity, missing/duplicate ordinals, respins, withdrawals, replacements, and the next-ordinal boundary.",
+        "Adjudicate or block every material conflict and preserve source-role qualifications."
+      ],
+      "authority": "May chronology-approve or block packet-local candidates only; cannot allocate stable IDs, mutate Sanity, build pages, publish, or deploy."
+    },
+    "stageTwoIndependentIntegrationAndFreshnessReview": {
+      "independence": "Reviewer must be different from both the researcher and Stage One reviewer. If that separation is unavailable, the gate remains incomplete.",
+      "requiredChecks": [
+        "Reproduce the frozen plan membership and candidate uniqueness across all completed developer-gap waves.",
+        "Repeat a fresh published, useCdn:false production reconciliation for every exact identity and parent.",
+        "Check overlap with the separate 17-candidate priority packet and any newer reviewed packet.",
+        "Verify that terminology dispositions, negative semantics, conflicts, and mandatory qualifications survived Stage One unchanged.",
+        "Confirm all mutation/page/publication/deployment flags remain false and identify the separate owner authorization still required."
+      ],
+      "authority": "May certify a read-only integration handoff only. It does not authorize Sanity mutation, stable IDs, page builds, publication, or deployment."
+    },
+    "postReviewAuthority": "Even two passed independent stages require a new, explicit owner-authorized implementation plan and fresh reconciliation before any mutation or publication."
+  },
+  "requiredPerWaveDeliverables": [
+    "assignment.json with an exact copy of this wave’s frozen targets",
+    "sources.json plus raw/selected evidence locks",
+    "candidates.json for positive exact developerBeta identities",
+    "full-sequence-audit.json with continuity and next-ordinal tests",
+    "negative-findings.json for no-positive or applicability dispositions",
+    "conflicts.json with terminology, identity, date, audience, ordinal, and build conflicts",
+    "production-snapshot.json from a fresh published/useCdn:false read-only reconciliation",
+    "self-review.json",
+    "stage-one-independent-review.json",
+    "stage-two-integration-review.json or an explicit pending marker",
+    "validation.json, packet-locks.json, and a concise report.md"
+  ],
+  "waves": [
+    {
+      "waveId": "developer-modern-high-priority",
+      "order": 1,
+      "title": "Modern high-priority point and compatibility-release gaps",
+      "category": "modernHighPriorityPointOrRelease",
+      "selectionRuleAtFreeze": "Remaining non-routine developer audit rows with publicReleaseDate on or after 2020-01-01.",
+      "objective": "Audit full developer-channel sequences for modern point or compatibility releases, prioritizing the two rows that already have strong public-beta evidence.",
+      "modelingFocus": "Keep developer and public appearances separate; determine whether each apparent point cycle had its own developer sequence or inherited a differently labeled cycle.",
+      "targetCount": 10,
+      "releaseVersionIdSetSha256": "f12b5e4dcd33c74768c80b65cc6ec57ae8ee85cd26cf48640affff5193bfe48c",
+      "targets": [
+        {
+          "releaseVersionId": "version-ios-13-3-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "13.3.1",
+          "sourceQueueIndex": 23,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2020-01-28",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 3,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highestPublicBetaEvidence",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-14-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "14.1",
+          "sourceQueueIndex": 27,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2020-10-20",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ipados-14-1",
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "14.1",
+          "sourceQueueIndex": 106,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2020-10-20",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-14-7",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "14.7",
+          "sourceQueueIndex": 29,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2021-07-19",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 4,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highestPublicBetaEvidence",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-14-8",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "14.8",
+          "sourceQueueIndex": 31,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2021-09-13",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-15-7",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "15.7",
+          "sourceQueueIndex": 36,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-09-12",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ipados-15-7",
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "15.7",
+          "sourceQueueIndex": 107,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-09-12",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-16-7",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "16.7",
+          "sourceQueueIndex": 46,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-09-21",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-17-7",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.7",
+          "sourceQueueIndex": 57,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2024-09-16",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-18-7",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "18.7",
+          "sourceQueueIndex": 64,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2025-09-15",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        }
+      ]
+    },
+    {
+      "waveId": "developer-legacy-terminology-modeling",
+      "order": 2,
+      "title": "Legacy major and point terminology/modeling gaps",
+      "category": "legacyMajorPointTerminologyModeling",
+      "selectionRuleAtFreeze": "Remaining non-routine developer audit rows with publicReleaseDate before 2020-01-01.",
+      "objective": "Determine applicability before proposing events for early iPhone OS, Mac OS X, and watchOS cycles whose historical distribution terminology may not map cleanly to developerBeta.",
+      "modelingFocus": "Treat Developer Preview, seed, GM, RC, AppleSeed, internal, SDK-only, and device-firmware references as distinct or unresolved unless evidence explicitly establishes a developer beta appearance.",
+      "targetCount": 14,
+      "releaseVersionIdSetSha256": "27458a695525e6908c3e03175c2fcddd4885e3e682e98abed7f796e0401701b9",
+      "targets": [
+        {
+          "releaseVersionId": "version-macos-10-0",
+          "platform": "macOS",
+          "platformId": "platform-macos",
+          "version": "10.0",
+          "sourceQueueIndex": 108,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2001-03-24",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-macos-10-1",
+          "platform": "macOS",
+          "platformId": "platform-macos",
+          "version": "10.1",
+          "sourceQueueIndex": 109,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2001-09-25",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-macos-10-2",
+          "platform": "macOS",
+          "platformId": "platform-macos",
+          "version": "10.2",
+          "sourceQueueIndex": 110,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2002-08-23",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-macos-10-3",
+          "platform": "macOS",
+          "platformId": "platform-macos",
+          "version": "10.3",
+          "sourceQueueIndex": 111,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2003-10-24",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-macos-10-4",
+          "platform": "macOS",
+          "platformId": "platform-macos",
+          "version": "10.4",
+          "sourceQueueIndex": 112,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2005-04-29",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-1-0",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "1.0",
+          "sourceQueueIndex": 1,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2007-06-29",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-1-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "1.1",
+          "sourceQueueIndex": 4,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2007-09-14",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-macos-10-5",
+          "platform": "macOS",
+          "platformId": "platform-macos",
+          "version": "10.5",
+          "sourceQueueIndex": 113,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2007-10-26",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-2-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "2.1",
+          "sourceQueueIndex": 67,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2008-09-12",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-2-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "2.2",
+          "sourceQueueIndex": 68,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2008-11-21",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-3-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "3.1",
+          "sourceQueueIndex": 73,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2009-09-09",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-3-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "3.2",
+          "sourceQueueIndex": 76,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2010-04-03",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-watchos-1-0",
+          "platform": "watchOS",
+          "platformId": "platform-watchos",
+          "version": "1.0",
+          "sourceQueueIndex": 114,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2015-04-24",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-watchos-2-1",
+          "platform": "watchOS",
+          "platformId": "platform-watchos",
+          "version": "2.1",
+          "sourceQueueIndex": 115,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2015-12-08",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "highMajorOrPointRelease",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        }
+      ]
+    },
+    {
+      "waveId": "developer-ios-patch-1-4",
+      "order": 3,
+      "title": "iOS patch/hotfix applicability — iPhone OS/iOS 1 through 4",
+      "category": "iosPatchHotfixApplicability",
+      "selectionRuleAtFreeze": "Remaining routine patch applicability rows on iOS whose version major is 1 through 4.",
+      "objective": "Audit early patch and hotfix releases without assuming the later numbered developer-beta model applied.",
+      "modelingFocus": "Resolve pre-modern terminology and distinguish SDK/device preview material from an exact OS developer beta.",
+      "targetCount": 20,
+      "releaseVersionIdSetSha256": "f68bda2a5a265603dbbb660ea1e1021879f91ab55a5aabd56108b2dcef7c6110",
+      "targets": [
+        {
+          "releaseVersionId": "version-ios-1-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "1.0.1",
+          "sourceQueueIndex": 2,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2007-07-31",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-1-0-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "1.0.2",
+          "sourceQueueIndex": 3,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2007-08-21",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-1-1-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "1.1.1",
+          "sourceQueueIndex": 5,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2007-09-27",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-1-1-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "1.1.2",
+          "sourceQueueIndex": 6,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2007-11-12",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-1-1-3",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "1.1.3",
+          "sourceQueueIndex": 7,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2008-01-15",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-1-1-4",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "1.1.4",
+          "sourceQueueIndex": 8,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2008-02-26",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-1-1-5",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "1.1.5",
+          "sourceQueueIndex": 9,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2008-07-15",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-2-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "2.0.1",
+          "sourceQueueIndex": 65,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2008-08-04",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-2-0-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "2.0.2",
+          "sourceQueueIndex": 66,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2008-08-18",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-2-2-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "2.2.1",
+          "sourceQueueIndex": 69,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2009-01-27",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-3-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "3.0.1",
+          "sourceQueueIndex": 72,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2009-07-31",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-3-1-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "3.1.2",
+          "sourceQueueIndex": 74,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2009-10-08",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-3-1-3",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "3.1.3",
+          "sourceQueueIndex": 75,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2010-02-02",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-4-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "4.0.1",
+          "sourceQueueIndex": 77,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2010-07-15",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-4-0-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "4.0.2",
+          "sourceQueueIndex": 78,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2010-08-11",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-4-3-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "4.3.1",
+          "sourceQueueIndex": 79,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2011-03-25",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-4-3-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "4.3.2",
+          "sourceQueueIndex": 80,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2011-04-14",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-4-3-3",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "4.3.3",
+          "sourceQueueIndex": 81,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2011-05-04",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-4-3-4",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "4.3.4",
+          "sourceQueueIndex": 82,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2011-07-15",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-4-3-5",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "4.3.5",
+          "sourceQueueIndex": 83,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2011-07-25",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        }
+      ]
+    },
+    {
+      "waveId": "developer-ios-patch-5-9",
+      "order": 4,
+      "title": "iOS patch/hotfix applicability — iOS 5 through 9",
+      "category": "iosPatchHotfixApplicability",
+      "selectionRuleAtFreeze": "Remaining routine patch applicability rows on iOS whose version major is 5 through 9.",
+      "objective": "Audit patch releases across the transition into Apple’s modern public beta era while preserving channel-specific numbering.",
+      "modelingFocus": "Do not treat a public beta, carrier seed, or generic prerelease report as proof of a developer beta.",
+      "targetCount": 22,
+      "releaseVersionIdSetSha256": "84d6d058c45f3487ef7b785615bec24d534ffa62e453f31db4bccecc8d9e9b9a",
+      "targets": [
+        {
+          "releaseVersionId": "version-ios-5-1-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "5.1.1",
+          "sourceQueueIndex": 84,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2012-05-07",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-6-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "6.0.1",
+          "sourceQueueIndex": 85,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2012-11-01",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-6-0-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "6.0.2",
+          "sourceQueueIndex": 86,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2012-12-18",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-6-1-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "6.1.2",
+          "sourceQueueIndex": 87,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2013-02-19",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-6-1-4",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "6.1.4",
+          "sourceQueueIndex": 88,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2013-05-02",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-7-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "7.0.1",
+          "sourceQueueIndex": 89,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2013-09-20",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-7-0-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "7.0.2",
+          "sourceQueueIndex": 90,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2013-09-26",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-7-0-3",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "7.0.3",
+          "sourceQueueIndex": 91,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2013-10-23",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-7-0-4",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "7.0.4",
+          "sourceQueueIndex": 92,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2013-11-14",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-7-0-6",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "7.0.6",
+          "sourceQueueIndex": 93,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2014-02-21",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-7-1-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "7.1.1",
+          "sourceQueueIndex": 94,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2014-04-22",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-7-1-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "7.1.2",
+          "sourceQueueIndex": 95,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2014-06-30",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-8-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "8.0.1",
+          "sourceQueueIndex": 96,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2014-09-24",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-8-0-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "8.0.2",
+          "sourceQueueIndex": 97,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2014-09-25",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-8-1-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "8.1.1",
+          "sourceQueueIndex": 98,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2014-11-17",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-8-1-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "8.1.2",
+          "sourceQueueIndex": 99,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2014-12-09",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-8-1-3",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "8.1.3",
+          "sourceQueueIndex": 100,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2015-01-27",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-8-4-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "8.4.1",
+          "sourceQueueIndex": 101,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2015-08-13",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-9-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "9.0.1",
+          "sourceQueueIndex": 102,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2015-09-23",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-9-0-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "9.0.2",
+          "sourceQueueIndex": 103,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2015-09-30",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-9-3-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "9.3.1",
+          "sourceQueueIndex": 104,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2016-03-31",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-9-3-5",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "9.3.5",
+          "sourceQueueIndex": 105,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2016-08-25",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        }
+      ]
+    },
+    {
+      "waveId": "developer-ios-patch-10-13",
+      "order": 5,
+      "title": "iOS patch/hotfix applicability — iOS 10 through 13",
+      "category": "iosPatchHotfixApplicability",
+      "selectionRuleAtFreeze": "Remaining routine patch applicability rows on iOS whose version major is 10 through 13.",
+      "objective": "Audit patch cycles adjacent to the four already reviewed priority parents without duplicating their 17 approved candidate identities.",
+      "modelingFocus": "Reconstruct every applicable sequence from Beta 1 through the last supported ordinal and test the next ordinal before closing the cycle.",
+      "targetCount": 15,
+      "releaseVersionIdSetSha256": "2ae333bfbc36b3bda374365a3d4a14725f63f86136e4cadf684d7ef4a12452bf",
+      "targets": [
+        {
+          "releaseVersionId": "version-ios-10-3-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "10.3.1",
+          "sourceQueueIndex": 10,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2017-04-03",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-11-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "11.0.1",
+          "sourceQueueIndex": 11,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2017-09-26",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-11-0-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "11.0.2",
+          "sourceQueueIndex": 12,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2017-10-03",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-11-0-3",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "11.0.3",
+          "sourceQueueIndex": 13,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2017-10-11",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-11-1-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "11.1.1",
+          "sourceQueueIndex": 14,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2017-11-09",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-11-1-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "11.1.2",
+          "sourceQueueIndex": 15,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2017-11-16",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-11-2-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "11.2.1",
+          "sourceQueueIndex": 16,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2017-12-13",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-12-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "12.0.1",
+          "sourceQueueIndex": 17,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2018-10-08",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-12-3-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "12.3.1",
+          "sourceQueueIndex": 18,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2019-05-24",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-12-4-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "12.4.1",
+          "sourceQueueIndex": 19,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2019-08-26",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-13-1-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "13.1.1",
+          "sourceQueueIndex": 20,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2019-09-27",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-13-1-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "13.1.2",
+          "sourceQueueIndex": 21,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2019-09-30",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-13-1-3",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "13.1.3",
+          "sourceQueueIndex": 22,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2019-10-15",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-13-4-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "13.4.1",
+          "sourceQueueIndex": 24,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2020-04-07",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-13-5-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "13.5.1",
+          "sourceQueueIndex": 25,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2020-06-01",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        }
+      ]
+    },
+    {
+      "waveId": "developer-ios-patch-14-16",
+      "order": 6,
+      "title": "iOS patch/hotfix applicability — iOS 14 through 16",
+      "category": "iosPatchHotfixApplicability",
+      "selectionRuleAtFreeze": "Remaining routine patch applicability rows on iOS whose version major is 14 through 16.",
+      "objective": "Audit modern patch and security-fix releases that may have shipped without an external prerelease cycle.",
+      "modelingFocus": "A same-day or matching-build public seed cannot establish a developer appearance; preserve separate dates and audiences.",
+      "targetCount": 16,
+      "releaseVersionIdSetSha256": "d99b69d57a3a055b15ee8174d994d34a1bd240a538feab60d4ece0c125a6560f",
+      "targets": [
+        {
+          "releaseVersionId": "version-ios-14-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "14.0.1",
+          "sourceQueueIndex": 26,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2020-09-24",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-14-5-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "14.5.1",
+          "sourceQueueIndex": 28,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2021-05-03",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-14-7-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "14.7.1",
+          "sourceQueueIndex": 30,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2021-07-26",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-15-2-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "15.2.1",
+          "sourceQueueIndex": 32,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-01-12",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-15-3-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "15.3.1",
+          "sourceQueueIndex": 33,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-02-10",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-15-4-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "15.4.1",
+          "sourceQueueIndex": 34,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-03-31",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-15-6-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "15.6.1",
+          "sourceQueueIndex": 35,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-08-17",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-16-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "16.0.1",
+          "sourceQueueIndex": 37,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-09-14",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-16-0-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "16.0.2",
+          "sourceQueueIndex": 38,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-09-22",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-16-0-3",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "16.0.3",
+          "sourceQueueIndex": 39,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-10-10",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-16-1-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "16.1.1",
+          "sourceQueueIndex": 40,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-11-09",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-16-1-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "16.1.2",
+          "sourceQueueIndex": 41,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2022-11-30",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-16-3-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "16.3.1",
+          "sourceQueueIndex": 42,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-02-13",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-16-4-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "16.4.1",
+          "sourceQueueIndex": 43,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-04-07",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-16-5-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "16.5.1",
+          "sourceQueueIndex": 44,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-06-21",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-16-6-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "16.6.1",
+          "sourceQueueIndex": 45,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-09-07",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        }
+      ]
+    },
+    {
+      "waveId": "developer-ios-patch-17-26",
+      "order": 7,
+      "title": "iOS patch/hotfix applicability — iOS 17 through 26",
+      "category": "iosPatchHotfixApplicability",
+      "selectionRuleAtFreeze": "Remaining routine patch applicability rows on iOS whose version major is 17 through 26.",
+      "objective": "Audit the newest patch and hotfix releases using current source formats while treating the frozen inventory, not a regenerated aggregate, as the assignment.",
+      "modelingFocus": "Check rapid replacements, withdrawals, revised seeds, device-limited releases, and stable-only hotfixes without inferring a beta from chronology proximity.",
+      "targetCount": 18,
+      "releaseVersionIdSetSha256": "1df56fcc77dba29c6a293334377a4807322b0effb7b28b18433f82060b424f73",
+      "targets": [
+        {
+          "releaseVersionId": "version-ios-17-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.0.1",
+          "sourceQueueIndex": 47,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-09-21",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-17-0-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.0.2",
+          "sourceQueueIndex": 48,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-09-26",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-17-0-3",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.0.3",
+          "sourceQueueIndex": 49,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-10-04",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-17-1-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.1.1",
+          "sourceQueueIndex": 50,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-11-07",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-17-1-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.1.2",
+          "sourceQueueIndex": 51,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-11-30",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-17-2-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.2.1",
+          "sourceQueueIndex": 52,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2023-12-19",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-17-3-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.3.1",
+          "sourceQueueIndex": 53,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2024-02-08",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-17-4-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.4.1",
+          "sourceQueueIndex": 54,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2024-03-21",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-17-5-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.5.1",
+          "sourceQueueIndex": 55,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2024-05-20",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-17-6-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "17.6.1",
+          "sourceQueueIndex": 56,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2024-08-07",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-18-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "18.0.1",
+          "sourceQueueIndex": 58,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2024-10-03",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-18-1-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "18.1.1",
+          "sourceQueueIndex": 59,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2024-11-19",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-18-2-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "18.2.1",
+          "sourceQueueIndex": 60,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2025-01-06",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-18-3-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "18.3.1",
+          "sourceQueueIndex": 61,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2025-02-10",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-18-3-2",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "18.3.2",
+          "sourceQueueIndex": 62,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2025-03-11",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-18-4-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "18.4.1",
+          "sourceQueueIndex": 63,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2025-04-16",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-26-0-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "26.0.1",
+          "sourceQueueIndex": 70,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2025-09-29",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        },
+        {
+          "releaseVersionId": "version-ios-26-2-1",
+          "platform": "iOS",
+          "platformId": "platform-ios",
+          "version": "26.2.1",
+          "sourceQueueIndex": 71,
+          "currentInventory": {
+            "inventoryQueriedAt": "2026-07-31T03:20:38Z",
+            "publicReleaseDate": "2026-01-26",
+            "releaseStatus": "released",
+            "productionDeveloperBetaEventCount": 0,
+            "productionDeveloperBetaEventCountBasis": "Membership in coverage-matrix.developerBetaAuditRows, whose rows are modeled versions with zero production developerBeta events.",
+            "productionPublicBetaEventCount": 0,
+            "structuredPublicBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidateCount": 0,
+            "structuredDeveloperBetaCandidates": [],
+            "auditPriority": "routinePatchApplicabilityCheck",
+            "caution": "This is an audit signal, not proof that a developer beta existed."
+          }
+        }
+      ]
+    }
+  ],
+  "safety": {
+    "immutableVersionAssignment": true,
+    "candidateIdsOnlyDuringResearch": true,
+    "noStableEventIds": true,
+    "noSanityMutation": true,
+    "noPageBuilds": true,
+    "noPublication": true,
+    "noDeployment": true,
+    "noSharedAggregateEdits": true,
+    "noAutomaticFollowOnAction": true
+  }
+}

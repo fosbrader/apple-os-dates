@@ -1,0 +1,103 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-major-11-26",
+  "reviewedAt": "2026-07-31T04:42:25.475Z",
+  "reviewType": "researcherSelfReview",
+  "independentOfResearcher": false,
+  "verdict": "selfCheckPassedPendingIndependentReview",
+  "scope": "Mechanical completeness, evidence provenance, source-lineage independence, production reconciliation, and safety only.",
+  "checks": [
+    {
+      "check": "routeCount",
+      "result": "pass",
+      "detail": "41 unique numbered routes are present."
+    },
+    {
+      "check": "observedAppearanceCount",
+      "result": "pass",
+      "detail": "Two same-label returns are preserved separately, yielding 43 observed appearances."
+    },
+    {
+      "check": "sourceProvenance",
+      "result": "pass",
+      "detail": "Every cited source has retained bytes, SHA-256, byte count, bounded identification text, a claim locator, and publisher lineage."
+    },
+    {
+      "check": "independentCorroboration",
+      "result": "passWithDocumentedConflicts",
+      "detail": "Every candidate has at least two independent publisher lineages. Big Sur late ordinals remain conflict-tagged because contemporary chronologies disagree."
+    },
+    {
+      "check": "productionReadOnly",
+      "result": "pass",
+      "detail": "The published production query was read-only and found zero exact matches."
+    },
+    {
+      "check": "authorization",
+      "result": "pass",
+      "detail": "All mutation, publication, and stable-ID flags remain false."
+    }
+  ],
+  "findings": [
+    "The researcher is not an independent reviewer and has not approved any route.",
+    "Eight candidates remain identityStatus=conflict pending human chronology review.",
+    "No build values are proposed.",
+    "No stable production IDs are created."
+  ],
+  "candidateIds": [
+    "candidate:apple:macos:11.0:public-beta-1",
+    "candidate:apple:macos:11.0:public-beta-2",
+    "candidate:apple:macos:11.0:public-beta-3",
+    "candidate:apple:macos:11.0:public-beta-4",
+    "candidate:apple:macos:11.0:public-beta-5",
+    "candidate:apple:macos:11.0:public-beta-6",
+    "candidate:apple:macos:12.0:public-beta-1",
+    "candidate:apple:macos:12.0:public-beta-2",
+    "candidate:apple:macos:12.0:public-beta-4",
+    "candidate:apple:macos:12.0:public-beta-5",
+    "candidate:apple:macos:12.0:public-beta-6",
+    "candidate:apple:macos:12.0:public-beta-7",
+    "candidate:apple:macos:12.0:public-beta-8",
+    "candidate:apple:macos:12.0:public-beta-9",
+    "candidate:apple:macos:12.0:public-beta-10",
+    "candidate:apple:macos:13.0:public-beta-1",
+    "candidate:apple:macos:13.0:public-beta-2",
+    "candidate:apple:macos:13.0:public-beta-3",
+    "candidate:apple:macos:13.0:public-beta-4",
+    "candidate:apple:macos:13.0:public-beta-5",
+    "candidate:apple:macos:13.0:public-beta-6",
+    "candidate:apple:macos:13.0:public-beta-7",
+    "candidate:apple:macos:13.0:public-beta-8",
+    "candidate:apple:macos:13.0:public-beta-9",
+    "candidate:apple:macos:14.0:public-beta-1",
+    "candidate:apple:macos:14.0:public-beta-2",
+    "candidate:apple:macos:14.0:public-beta-3",
+    "candidate:apple:macos:14.0:public-beta-4",
+    "candidate:apple:macos:14.0:public-beta-5",
+    "candidate:apple:macos:15.0:public-beta-1",
+    "candidate:apple:macos:15.0:public-beta-2",
+    "candidate:apple:macos:15.0:public-beta-3",
+    "candidate:apple:macos:15.0:public-beta-4",
+    "candidate:apple:macos:15.0:public-beta-5",
+    "candidate:apple:macos:15.0:public-beta-6",
+    "candidate:apple:macos:26.0:public-beta-1",
+    "candidate:apple:macos:26.0:public-beta-2",
+    "candidate:apple:macos:26.0:public-beta-3",
+    "candidate:apple:macos:26.0:public-beta-4",
+    "candidate:apple:macos:26.0:public-beta-5",
+    "candidate:apple:macos:26.0:public-beta-6"
+  ],
+  "authorization": {
+    "chronologyApproved": false,
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false
+  },
+  "requiredNextStep": "Independent human review must adjudicate each candidate and all conflicts before any mutation proposal.",
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "note": "Research-only packet. Validation cannot authorize Sanity mutation, stable ID creation, or publication."
+  }
+}

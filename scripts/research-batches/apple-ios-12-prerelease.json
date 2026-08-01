@@ -1,0 +1,1227 @@
+{
+  "formatVersion": 1,
+  "target": { "projectId": "lh3yswzu", "dataset": "production" },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+      "title": "iOS 12 beta 3 Release Notes (Apple-authored PDF transcript)",
+      "publisher": "Scribd document mirror",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2018-07-03T00:00:00.000Z",
+      "topics": [
+        "iOS",
+        "12.0",
+        "Beta 3",
+        "Apple Developer release notes",
+        "historical document mirror"
+      ]
+    },
+    {
+      "url": "https://forums.macrumors.com/threads/ios-12-beta-3-bug-fixes-changes-and-improvements.2125961/",
+      "archiveUrl": "https://forums.macrumors.com/attachments/ios_12_beta_3_release_notes-pdf.768840/",
+      "title": "Contemporaneous attachment listing for Apple iOS 12 Beta 3 notes",
+      "publisher": "MacRumors Forums",
+      "sourceClass": "community",
+      "author": "Banglazed",
+      "publishedAt": "2018-07-03T00:00:00.000Z",
+      "topics": [
+        "iOS",
+        "12.0",
+        "Beta 3",
+        "attachment identity",
+        "historical context"
+      ]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12-release-notes",
+      "transportUrl": "https://developer.apple.com/tutorials/data/documentation/ios-ipados-release-notes/ios-12-release-notes.json",
+      "title": "iOS 12 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["iOS", "12.0", "final SDK state", "archive boundary"]
+    }
+  ],
+  "versions": [],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-12-0",
+        "routeAlias": "beta-3"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 12 Beta 3 is represented by 37 Apple-documented new or resolved issue records from the dated developer PDF; cumulative known issues, community observations, and build claims are excluded.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "What survives" },
+          {
+            "style": "normal",
+            "text": "A complete text rendering of Apple's dated iOS 12 beta 3 developer PDF survives online. It identifies the SDK state, labels each component, separates New Issues from Resolved Issues, retains Apple's internal issue identifiers, and carries an Apple copyright footer dated July 3, 2018.",
+            "citations": [
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "iOS 12 beta 3 Release Notes; About iOS 12 beta 3; pages 2–9"
+              },
+              {
+                "url": "https://forums.macrumors.com/threads/ios-12-beta-3-bug-fixes-changes-and-improvements.2125961/",
+                "locator": "July 3, 2018 thread date; iOS_12_beta_3_Release_Notes.pdf attachment",
+                "note": "Used only to corroborate document identity and timing."
+              }
+            ]
+          },
+          { "style": "h2", "text": "What Beta 3 documents" },
+          {
+            "style": "normal",
+            "text": "The structured record covers 37 milestone-specific additions and resolutions spanning installation, application compatibility, accessibility, AirPods, ARKit, authentication, Calendar, CallKit, CarPlay, iWork, telephony and FaceTime, Screen Time, Siri, Spotlight, and Wallet.",
+            "citations": [
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "General — Resolved Issues; 41215257",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "General — Resolved Issues; 41096139",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "General — Resolved Issues; 40568385",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "3rd Party Apps — New Issues; 41617672",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "3rd Party Apps — Resolved Issues; 40958373",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "3rd Party Apps — Resolved Issues; 40910390",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "3rd Party Apps — Resolved Issues; 39666451",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Accessibility — Resolved Issues; 41050794",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "AirPods — Resolved Issues; 40824029",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "ARKit — New Issues; 41489820",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "ARKit — Resolved Issues; 40252307",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "AuthenticationServices — Resolved Issues; 33221110",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Calendar — New Issues; 40586853",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "CallKit — Resolved Issues; 41018290",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "CallKit — Resolved Issues; 39548788, 39885031",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "CarPlay — Resolved Issues; 40494430",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "iWork — Resolved Issues; 40368764",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Phone and FaceTime — New Issues; 41138762",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Phone and FaceTime — New Issues; 41374914",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Phone and FaceTime — New Issues; 41459488",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Phone and FaceTime — New Issues; 41587310",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Phone and FaceTime — Resolved Issues; 41189126",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Phone and FaceTime — Resolved Issues; 41033989",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Phone and FaceTime — Resolved Issues; 40958280",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Phone and FaceTime — Resolved Issues; 40615683",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Phone and FaceTime — Resolved Issues; 39826861",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Screen Time — New Issues; 41548198",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Screen Time — Resolved Issues; 41060009",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Screen Time — Resolved Issues; 40675329",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Siri — New Issues; 41383282",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Siri — Resolved Issues; 41188020",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Siri — Resolved Issues; 40989415",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Siri — Resolved Issues; 40862775",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Siri — Resolved Issues; 40623457",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Siri — Resolved Issues; 39941268",
+                "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Spotlight — New Issues; 41562287",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              },
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Wallet — New Issues; 41603255",
+                "note": "Original synthesis from Apple’s milestone-specific new issues record."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Delta boundary" },
+          {
+            "style": "normal",
+            "text": "Only entries beneath the PDF's exact New Issues and Resolved Issues headings are included. Generic Known Issues, generic New Features, deprecations, community-discovered changes, and any item without a retained issue identifier are excluded, so the page does not convert a cumulative beta document into an invented release delta.",
+            "citations": [
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "Notes and Known Issues — exact per-component status headings"
+              },
+              {
+                "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12-release-notes",
+                "locator": "Final iOS 12 SDK note state",
+                "note": "The migrated final page is used to establish the archive boundary, not as Beta 3 attribution."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "In 2018 Apple published one iOS SDK document for iPhone, iPad, and iPod touch. This route therefore retains iPad-specific Beta 3 records where Apple's iOS document explicitly includes them; it does not invent a separate historical iPadOS route.",
+            "citations": [
+              {
+                "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+                "locator": "About iOS 12 beta 3 — iPhone, iPad, or iPod touch"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Archive limitations" },
+          {
+            "style": "normal",
+            "text": "Apple's modern DocC page preserves the final iOS 12 SDK note state rather than a browsable set of 2018 beta revisions. The public Beta 3 evidence is an Apple-authored document retained by third-party mirrors, so each occurrence remains source-linked and corroborated pending editorial review. No build number is taken from a forum post or inferred from an unavailable Apple download.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12-release-notes",
+                "locator": "iOS 12 Release Notes — final SDK state"
+              },
+              {
+                "url": "https://forums.macrumors.com/threads/ios-12-beta-3-bug-fixes-changes-and-improvements.2125961/",
+                "locator": "Contemporaneous Apple PDF attachment identity",
+                "note": "Forum-authored observations and build claims are excluded."
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "iOS 12 beta 3 Release Notes; exact component and status headings"
+        },
+        {
+          "url": "https://forums.macrumors.com/threads/ios-12-beta-3-bug-fixes-changes-and-improvements.2125961/",
+          "locator": "July 3, 2018 attachment identity",
+          "note": "Context only; community observations are excluded."
+        },
+        {
+          "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-12-release-notes",
+          "locator": "Final iOS 12 SDK note state",
+          "note": "Archive-boundary comparison only."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "General — Resolved Issues; 41215257",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "General — Resolved Issues; 41096139",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "General — Resolved Issues; 40568385",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "3rd Party Apps — New Issues; 41617672",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "3rd Party Apps — Resolved Issues; 40958373",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "3rd Party Apps — Resolved Issues; 40910390",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "3rd Party Apps — Resolved Issues; 39666451",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Accessibility — Resolved Issues; 41050794",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "AirPods — Resolved Issues; 40824029",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "ARKit — New Issues; 41489820",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "ARKit — Resolved Issues; 40252307",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "AuthenticationServices — Resolved Issues; 33221110",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Calendar — New Issues; 40586853",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "CallKit — Resolved Issues; 41018290",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "CallKit — Resolved Issues; 39548788, 39885031",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "CarPlay — Resolved Issues; 40494430",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "iWork — Resolved Issues; 40368764",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Phone and FaceTime — New Issues; 41138762",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Phone and FaceTime — New Issues; 41374914",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Phone and FaceTime — New Issues; 41459488",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Phone and FaceTime — New Issues; 41587310",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Phone and FaceTime — Resolved Issues; 41189126",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Phone and FaceTime — Resolved Issues; 41033989",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Phone and FaceTime — Resolved Issues; 40958280",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Phone and FaceTime — Resolved Issues; 40615683",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Phone and FaceTime — Resolved Issues; 39826861",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Screen Time — New Issues; 41548198",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Screen Time — Resolved Issues; 41060009",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Screen Time — Resolved Issues; 40675329",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Siri — New Issues; 41383282",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Siri — Resolved Issues; 41188020",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Siri — Resolved Issues; 40989415",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Siri — Resolved Issues; 40862775",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Siri — Resolved Issues; 40623457",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Siri — Resolved Issues; 39941268",
+          "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Spotlight — New Issues; 41562287",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        },
+        {
+          "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+          "locator": "Wallet — New Issues; 41603255",
+          "note": "Original synthesis from Apple’s milestone-specific new issues record."
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-12-beta3-itunes-upgrade-from-ios10",
+          "title": "Restored iTunes upgrades from older iOS releases",
+          "canonicalSummary": "The third beta reopened an iTunes installation path for devices running iOS versions no newer than 10.2.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple marked the older-device iTunes upgrade limitation as resolved in the Beta 3 notes.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “General,” exact “Resolved Issues” status heading, and retained issue identifier 41215257 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "General — Resolved Issues; 41215257",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-weather-widget-function",
+          "title": "Weather widget functionality restored",
+          "canonicalSummary": "The Weather widget resumed functioning after its documented failure in the preceding beta.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 closes the Weather widget problem that Apple specifically associated with Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “General,” exact “Resolved Issues” status heading, and retained issue identifier 41096139 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "General — Resolved Issues; 41096139",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-universal-link-routing",
+          "title": "Universal Link routing repaired",
+          "canonicalSummary": "Universal Links again opened their intended applications instead of sometimes missing the expected target.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple moved the unexpected Universal Link destination behavior into the resolved section.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “General,” exact “Resolved Issues” status heading, and retained issue identifier 40568385 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "General — Resolved Issues; 40568385",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-fortnite-stability",
+          "title": "Fortnite launch stability issue",
+          "canonicalSummary": "Apple newly documented that Fortnite could terminate unexpectedly while running on the beta.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The Beta 3 document adds a compatibility warning for unexpected Fortnite exits.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “3rd Party Apps,” exact “New Issues” status heading, and retained issue identifier 41617672 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "3rd Party Apps — New Issues; 41617672",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-taobao-launch",
+          "title": "Taobao launch crash resolved",
+          "canonicalSummary": "The third beta resolved an application compatibility problem that could stop Taobao during launch.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple records the Taobao startup termination as resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “3rd Party Apps,” exact “Resolved Issues” status heading, and retained issue identifier 40958373 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "3rd Party Apps — Resolved Issues; 40958373",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-twitter-login-screen",
+          "title": "Twitter login rendering restored",
+          "canonicalSummary": "Twitter no longer presented the documented blank screen during its sign-in flow.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Beta 3 notes move the blank Twitter login view into the resolved list.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “3rd Party Apps,” exact “Resolved Issues” status heading, and retained issue identifier 40910390 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "3rd Party Apps — Resolved Issues; 40910390",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-skype-post-login-stability",
+          "title": "Skype post-login crash resolved",
+          "canonicalSummary": "Apple marked the Skype termination that could follow a successful login as resolved.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 resolves the documented Skype stability problem after authentication.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “3rd Party Apps,” exact “Resolved Issues” status heading, and retained issue identifier 39666451 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "3rd Party Apps — Resolved Issues; 39666451",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-notification-contrast-actions",
+          "title": "Notification actions remained legible with increased contrast",
+          "canonicalSummary": "Notification action controls regained readable contrast when the Increase Contrast accessibility setting was active.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple records a Beta 3 accessibility repair for notification action visibility.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Accessibility,” exact “Resolved Issues” status heading, and retained issue identifier 41050794 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Accessibility — Resolved Issues; 41050794",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-airpods-single-ear-pause",
+          "title": "Single-AirPod removal paused playback again",
+          "canonicalSummary": "Automatic playback pause worked again when a listener removed one AirPod.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Beta 3 notes mark the one-ear removal playback behavior as repaired.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “AirPods,” exact “Resolved Issues” status heading, and retained issue identifier 40824029 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "AirPods — Resolved Issues; 40824029",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-arkit-object-map-compatibility",
+          "title": "Earlier AR object and world-map data became incompatible",
+          "canonicalSummary": "ARReferenceObject and ARWorldMap data created by Beta 2 or earlier needed to be rescanned for Beta 3 and later.",
+          "category": "compatibility",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple adds a Beta 3 migration boundary for previously captured AR reference and world-map data.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “ARKit,” exact “New Issues” status heading, and retained issue identifier 41489820 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "ARKit — New Issues; 41489820",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-usdz-safari-thumbnails",
+          "title": "USDZ Safari thumbnails restored",
+          "canonicalSummary": "Safari resumed producing thumbnails for affected USDZ assets.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The third beta resolves a Safari preview problem affecting some USDZ models.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “ARKit,” exact “Resolved Issues” status heading, and retained issue identifier 40252307 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "ARKit — Resolved Issues; 40252307",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-auth-session-safari-cookies",
+          "title": "Authentication-session cookies reached Safari promptly",
+          "canonicalSummary": "Cookies established through Apple authentication-session APIs became available to Safari without the documented delay.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 repairs cookie handoff from ASWebAuthenticationSession and SFAuthenticationSession to Safari.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “AuthenticationServices,” exact “Resolved Issues” status heading, and retained issue identifier 33221110 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "AuthenticationServices — Resolved Issues; 33221110",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-calendar-day-view-date",
+          "title": "Calendar Day view could misplace an event",
+          "canonicalSummary": "Apple newly documented that Calendar could show an event under the wrong date in Day view.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The Beta 3 notes add a Day-view date-placement problem and describe view switching or relaunching as temporary recovery.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Calendar,” exact “New Issues” status heading, and retained issue identifier 40586853 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Calendar — New Issues; 40586853",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-callkit-classification-extension",
+          "title": "Call classification extensions displayed correctly",
+          "canonicalSummary": "SMS and phone-call classification extensions loaded their interface instead of showing a black screen.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple marks the blank CallKit classification-extension screen as resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “CallKit,” exact “Resolved Issues” status heading, and retained issue identifier 41018290 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "CallKit — Resolved Issues; 41018290",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-callkit-extension-activation",
+          "title": "CallKit extensions activated without app relaunches",
+          "canonicalSummary": "Enabling a CallKit extension no longer depended on quitting and reopening Phone, Messages, or Settings.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 removes the documented relaunch step from CallKit extension activation.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “CallKit,” exact “Resolved Issues” status heading, and retained issue identifier 39548788, 39885031 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "CallKit — Resolved Issues; 39548788, 39885031",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-carplay-vehicle-connection",
+          "title": "CarPlay vehicle connectivity repaired",
+          "canonicalSummary": "CarPlay regained connectivity with vehicles affected by the earlier beta behavior.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple records the affected-vehicle CarPlay connection failure as resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “CarPlay,” exact “Resolved Issues” status heading, and retained issue identifier 40494430 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "CarPlay — Resolved Issues; 40494430",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-iwork-share-options-navigation",
+          "title": "Add People navigation returned to iWork sharing",
+          "canonicalSummary": "The navigation control returned to the Share Options sheet used by iWork's Add People workflow.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 restores navigation in the collaborative iWork sharing sheet.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “iWork,” exact “Resolved Issues” status heading, and retained issue identifier 40368764 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "iWork — Resolved Issues; 40368764",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-ipad-apple-sim-notice",
+          "title": "Inactive Apple SIM could trigger a No SIM notice",
+          "canonicalSummary": "Apple newly documented a restart warning on iPad when an inserted Apple SIM had no active data plan.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The Beta 3 notes add an iPad-specific false No SIM notification case.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Phone and FaceTime,” exact “New Issues” status heading, and retained issue identifier 41138762 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Phone and FaceTime — New Issues; 41138762",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-imessage-facetime-registration",
+          "title": "Phone-number registration could fail for iMessage and FaceTime",
+          "canonicalSummary": "A device could fail to register its telephone number with iMessage and FaceTime until it was restarted.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple newly identifies a phone-number registration failure and a restart workaround.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Phone and FaceTime,” exact “New Issues” status heading, and retained issue identifier 41374914 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Phone and FaceTime — New Issues; 41374914",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-phone-number-contact-card",
+          "title": "The device phone number could disappear from Contacts",
+          "canonicalSummary": "Apple documented that the device's own number might be absent from the Phone app's Contacts view.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The missing self-number display is recorded as a new Beta 3 issue.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Phone and FaceTime,” exact “New Issues” status heading, and retained issue identifier 41459488 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Phone and FaceTime — New Issues; 41459488",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-cellular-settings-refresh",
+          "title": "Cellular Data settings could refresh continuously",
+          "canonicalSummary": "The Cellular Data section could repeatedly reload instead of remaining stable for interaction.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple adds the continuously refreshing Cellular settings view to the Beta 3 issue list.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Phone and FaceTime,” exact “New Issues” status heading, and retained issue identifier 41587310 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Phone and FaceTime — New Issues; 41587310",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-facetime-launch-stability",
+          "title": "FaceTime launch crash resolved",
+          "canonicalSummary": "FaceTime stopped terminating unexpectedly during application launch.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Beta 3 document marks the FaceTime startup crash as resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Phone and FaceTime,” exact “Resolved Issues” status heading, and retained issue identifier 41189126 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Phone and FaceTime — Resolved Issues; 41189126",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-facetime-poor-connection",
+          "title": "False FaceTime poor-connection interruptions reduced",
+          "canonicalSummary": "Affected FaceTime video calls no longer stopped with the documented poor-connection warning.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple records a repair for video calls interrupted by an erroneous connection warning.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Phone and FaceTime,” exact “Resolved Issues” status heading, and retained issue identifier 41033989 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Phone and FaceTime — Resolved Issues; 41033989",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-sim-pin-cellular-service",
+          "title": "SIM PIN activation preserved cellular service",
+          "canonicalSummary": "Turning on a SIM PIN no longer caused the iOS device to lose its cellular connection.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 resolves the loss of service associated with enabling a SIM PIN.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Phone and FaceTime,” exact “Resolved Issues” status heading, and retained issue identifier 40958280 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Phone and FaceTime — Resolved Issues; 40958280",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-facetime-speaker-tile-headphones",
+          "title": "Group FaceTime speaker emphasis worked with headphones",
+          "canonicalSummary": "The active speaker's tile could enlarge automatically during Group FaceTime while external headphones were connected.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple restores automatic speaker-tile emphasis for Group FaceTime sessions using headphones.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Phone and FaceTime,” exact “Resolved Issues” status heading, and retained issue identifier 40615683 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Phone and FaceTime — Resolved Issues; 40615683",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-voicemail-lock-notifications",
+          "title": "Voicemail notifications appeared reliably while locked",
+          "canonicalSummary": "Voicemail alerts regained consistent delivery when the device was locked.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 marks inconsistent locked-device voicemail notification delivery as resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Phone and FaceTime,” exact “Resolved Issues” status heading, and retained issue identifier 39826861 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Phone and FaceTime — Resolved Issues; 39826861",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-screen-time-device-sync",
+          "title": "Screen Time data could fail to synchronize",
+          "canonicalSummary": "Apple newly documented that Screen Time information might not stay synchronized across a user's iOS devices.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The Beta 3 notes add a cross-device Screen Time synchronization limitation.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Screen Time,” exact “New Issues” status heading, and retained issue identifier 41548198 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Screen Time — New Issues; 41548198",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-screen-time-ask-more",
+          "title": "Ask For More approvals behaved consistently",
+          "canonicalSummary": "Screen Time's child-device approval flow no longer produced the documented mismatch between local passcode entry and parent prompts.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple places the inconsistent Ask For More approval behavior in Beta 3's resolved section.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Screen Time,” exact “Resolved Issues” status heading, and retained issue identifier 41060009 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Screen Time — Resolved Issues; 41060009",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-screen-time-family-sharing-choice",
+          "title": "Screen Time family-sharing controls clarified",
+          "canonicalSummary": "The resolved notes clarified how a child account could stop sharing Screen Time usage within an iCloud family.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 records the family-role and family-membership paths governing a child's Screen Time sharing.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Screen Time,” exact “Resolved Issues” status heading, and retained issue identifier 40675329 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Screen Time — Resolved Issues; 40675329",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-siri-intent-response",
+          "title": "Siri continuation activity could omit its intent response",
+          "canonicalSummary": "An intent handled through application continuation could arrive without the expected response object on its user activity.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple adds a Beta 3 Siri integration issue affecting intent response access during user-activity continuation.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Siri,” exact “New Issues” status heading, and retained issue identifier 41383282 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Siri — New Issues; 41383282",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-hey-siri-cjk-setup",
+          "title": "Hey Siri setup restored for Chinese, Japanese, and Korean",
+          "canonicalSummary": "Hey Siri enrollment worked again when Siri used Chinese, Japanese, or Korean.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 resolves the language-specific Hey Siri setup failure.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Siri,” exact “Resolved Issues” status heading, and retained issue identifier 41188020 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Siri — Resolved Issues; 41188020",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-media-player-artwork",
+          "title": "Playback-device artwork returned to the media interface",
+          "canonicalSummary": "Artwork once again appeared in the media interface after connecting headphones or another audio output.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple marks missing Media Player artwork after accessory connection as resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Siri,” exact “Resolved Issues” status heading, and retained issue identifier 40989415 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Siri — Resolved Issues; 40989415",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-shortcut-phrase-save",
+          "title": "Custom Siri shortcut phrases could be saved",
+          "canonicalSummary": "The Done control worked again when saving a recorded custom phrase for a Siri shortcut.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 repairs the custom shortcut phrase recording flow.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Siri,” exact “Resolved Issues” status heading, and retained issue identifier 40862775 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Siri — Resolved Issues; 40862775",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-shortcut-url-image",
+          "title": "URL-backed shortcut images displayed",
+          "canonicalSummary": "Donated shortcuts could display images constructed through the URL-based INImage API.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple resolves a missing-image problem for shortcuts using URL-created INImage values.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Siri,” exact “Resolved Issues” status heading, and retained issue identifier 40623457 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Siri — Resolved Issues; 40623457",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-siri-message-launch",
+          "title": "Siri message content opened Messages",
+          "canonicalSummary": "Tapping message content presented through Siri opened the Messages application again.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The third beta repairs navigation from Siri message content into Messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Siri,” exact “Resolved Issues” status heading, and retained issue identifier 39941268 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Siri — Resolved Issues; 39941268",
+              "note": "Original synthesis from Apple’s milestone-specific resolved issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-spotlight-result-ranking",
+          "title": "Spotlight could rank internet results ahead of local matches",
+          "canonicalSummary": "Apple newly documented that Spotlight might place online results above more relevant local content.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 3 adds an unexpected Spotlight ranking behavior affecting local search visibility.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Spotlight,” exact “New Issues” status heading, and retained issue identifier 41562287 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Spotlight — New Issues; 41562287",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        },
+        {
+          "key": "apple-12-beta3-wallet-launch-stability",
+          "title": "Wallet could terminate during launch",
+          "canonicalSummary": "Apple newly documented an intermittent Wallet startup crash with an app-switcher relaunch workaround.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The Beta 3 notes add a Wallet launch failure and a temporary quit-and-reopen recovery path.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched Apple’s component heading “Wallet,” exact “New Issues” status heading, and retained issue identifier 41603255 in the dated Apple-authored iOS 12 beta 3 PDF transcript. The contemporaneous attachment listing independently confirms the matching document filename and date. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/383131499/IOS-12-Beta-3-Release-Notes",
+              "locator": "Wallet — New Issues; 41603255",
+              "note": "Original synthesis from Apple’s milestone-specific new issues record."
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T09:30:44Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

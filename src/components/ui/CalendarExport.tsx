@@ -31,7 +31,7 @@ function generateICS(milestones: BetaMilestone[], versionName: string): string {
       `DTEND;VALUE=DATE:${nextDay}`,
       `SUMMARY:${summary}`,
       description ? `DESCRIPTION:${description}` : "",
-      `UID:${versionName}-${m.label}-${date}@betacadence.com`,
+      `UID:${versionName}-${m.label}-${date}@versionrecord.com`,
       "END:VEVENT",
     ]
       .filter(Boolean)
@@ -41,7 +41,7 @@ function generateICS(milestones: BetaMilestone[], versionName: string): string {
   return [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Beta Cadence//EN",
+    "PRODID:-//Version Record//EN",
     `X-WR-CALNAME:${versionName} Betas`,
     ...events,
     "END:VCALENDAR",

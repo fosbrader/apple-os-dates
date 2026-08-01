@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios9-10-major",
+  "validatedAt": "2026-07-31T03:19:15.779Z",
+  "validator": "codex-root",
+  "status": "passedSelfCheckPendingIndependentReview",
+  "checks": {
+    "exactTargetClosure": true,
+    "assignmentTargetCount": 10,
+    "candidateCount": 10,
+    "sourceCount": 21,
+    "uniqueCandidateIds": true,
+    "uniqueSourceIds": true,
+    "allEvidenceRefsResolve": true,
+    "rawHashesReproduced": true,
+    "selectedTextHashesReproduced": true,
+    "publicOrdinalExplicitInSameDayEvidence": 9,
+    "normalizedFirstAppearanceCount": 1,
+    "exactProductionMatches": 0,
+    "publicBetaEventsInScopedProduction": 0,
+    "pairedDeveloperRoutesResolved": 10,
+    "buildsIncluded": 0,
+    "sanityWritesPerformed": 0,
+    "deploymentsPerformed": 0,
+    "independentEvidenceReviewComplete": false
+  },
+  "fileLocks": {
+    "assignment.json": {
+      "bytes": 4707,
+      "sha256": "47660a909c72215a14e39a9635fc76144a88d7d869d84ccf86ece02cb903b9f0"
+    },
+    "sources.json": {
+      "bytes": 34020,
+      "sha256": "b9ffaa1cd5e6815369f1e847af15b6cb9bcc7a16d38fa0ba3c67f6985b1851f3"
+    },
+    "candidates.json": {
+      "bytes": 33474,
+      "sha256": "66322c043ff7e093359edac44455e4e6cef4a356408e77c69c43d54953afadff"
+    },
+    "conflicts.json": {
+      "bytes": 1559,
+      "sha256": "21454a8fdfad73ea68a657557c4499c78a53a8d676bfef57c266ff8da8353340"
+    },
+    "report.md": {
+      "bytes": 2623,
+      "sha256": "0218928f1b79c9d22474b0549778e3ad372dd82386dba47b7137bdd33b56875c"
+    },
+    "production-snapshot.json": {
+      "bytes": 8183,
+      "sha256": "af366fd58b3dcd0c896353b3990a18a097c7e176aaf502b5826f0a0e2b111a5b"
+    }
+  },
+  "limitations": [
+    "The packet author also performed the mechanical self-check; this is not an independent evidence review.",
+    "No build identifiers or substantive release-note claims were promoted.",
+    "The iOS 9.0 first public appearance uses a normalized Public Beta 1 label, documented in conflicts.json."
+  ]
+}

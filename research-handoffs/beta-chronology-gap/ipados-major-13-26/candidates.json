@@ -1,0 +1,2841 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ipados-major-13-26",
+  "researchCutoff": "2026-07-30",
+  "observedAppearanceCount": 43,
+  "candidateCount": 40,
+  "exactExistingMatchCount": 3,
+  "notProposedCount": 2,
+  "summary": {
+    "observedByVersion": {
+      "13.0": 7,
+      "14.0": 7,
+      "15.0": 7,
+      "16.0": 4,
+      "17.0": 6,
+      "18.0": 6,
+      "26.0": 6
+    },
+    "candidatesByVersion": {
+      "13.0": 7,
+      "14.0": 7,
+      "15.0": 7,
+      "16.0": 3,
+      "17.0": 5,
+      "18.0": 6,
+      "26.0": 5
+    },
+    "candidatesByStatus": {
+      "needsEvidenceReview": 40
+    },
+    "candidatesByEvidenceState": {
+      "corroborated": 40
+    },
+    "candidatesByProductionStatus": {
+      "confirmedMissing": 39,
+      "existingIdentityConflict": 1
+    },
+    "importantQualification": "Forty-three historical appearances survive. Three are exact production matches, 39 are confirmed missing identities, and one is an evidence-backed Public Beta 2 candidate blocked by a same-date production Public Beta 1 identity conflict.",
+    "buildsIncluded": 0,
+    "substantiveChangeClaimsIncluded": 0
+  },
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:ipados:13.0:public-beta-1",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-06-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados13-pb1",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 13.0 Public Beta 1 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados13",
+          "locator": "13.0 cycle: the Public Beta 1 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 13.0 Public Beta 1 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "imore-ipados13-cycle",
+          "locator": "The rolling iPadOS 13 public-beta update history retained in the article body.",
+          "supports": "iMore evidence for the 13.0 Public Beta 1 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.0:public-beta-2",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-08",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados13-pb2",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 13.0 Public Beta 2 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados13",
+          "locator": "13.0 cycle: the Public Beta 2 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 13.0 Public Beta 2 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "imore-ipados13-cycle",
+          "locator": "The rolling iPadOS 13 public-beta update history retained in the article body.",
+          "supports": "iMore evidence for the 13.0 Public Beta 2 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.0:public-beta-3",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-18",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados13-pb3",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 13.0 Public Beta 3 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados13",
+          "locator": "13.0 cycle: the Public Beta 3 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 13.0 Public Beta 3 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "imore-ipados13-cycle",
+          "locator": "The rolling iPadOS 13 public-beta update history retained in the article body.",
+          "supports": "iMore evidence for the 13.0 Public Beta 3 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.0:public-beta-4",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-30",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados13-pb4",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 13.0 Public Beta 4 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados13",
+          "locator": "13.0 cycle: the Public Beta 4 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 13.0 Public Beta 4 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "imore-ipados13-cycle",
+          "locator": "The rolling iPadOS 13 public-beta update history retained in the article body.",
+          "supports": "iMore evidence for the 13.0 Public Beta 4 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.0:public-beta-5",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-08",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados13-pb5",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 13.0 Public Beta 5 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados13",
+          "locator": "13.0 cycle: the Public Beta 5 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 13.0 Public Beta 5 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "imore-ipados13-cycle",
+          "locator": "The rolling iPadOS 13 public-beta update history retained in the article body.",
+          "supports": "iMore evidence for the 13.0 Public Beta 5 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.0:public-beta-6",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-15",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados13-pb6",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 13.0 Public Beta 6 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados13",
+          "locator": "13.0 cycle: the Public Beta 6 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 13.0 Public Beta 6 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "imore-ipados13-cycle",
+          "locator": "The rolling iPadOS 13 public-beta update history retained in the article body.",
+          "supports": "iMore evidence for the 13.0 Public Beta 6 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.0:public-beta-7",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-21",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados13-pb7",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 13.0 Public Beta 7 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados13",
+          "locator": "13.0 cycle: the Public Beta 7 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 13.0 Public Beta 7 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "imore-ipados13-cycle",
+          "locator": "The rolling iPadOS 13 public-beta update history retained in the article body.",
+          "supports": "iMore evidence for the 13.0 Public Beta 7 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-2",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-09",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados14-pb2",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "July 9 public availability and the newsroom's conflicting 'first beta' appearance wording; it does not establish Public Beta 1 as a displayed seed."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados14",
+          "locator": "14.0 cycle: the Public Beta 2 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 14.0 Public Beta 2 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "koc-ipados14-pb2",
+          "locator": "The meta description states that the iOS 14 and iPadOS 14 public version arrived directly as Beta 2.",
+          "supports": "Explicit device-facing Beta 2 identity for the first iPadOS 14 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-3",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-23",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados14-pb3",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "July 23 public availability and the newsroom's conflicting 'second beta' appearance wording."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados14",
+          "locator": "14.0 cycle: the Public Beta 3 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 14.0 Public Beta 3 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "redmondpie-ipados14-pb3",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent iOS/iPadOS 14 Public Beta 3 label evidence.",
+          "supports": "Explicit Public Beta 3 identity for the July 23 iOS/iPadOS 14 public seed."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "forbes-ipados14-pb3",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent Public Beta 3 label evidence for July 23, 2020.",
+          "supports": "Explicit Public Beta 3 identity for the July 23 iOS/iPadOS 14 public seed."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-4",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-06",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados14-pb4",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 14.0 Public Beta 4 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados14",
+          "locator": "14.0 cycle: the Public Beta 4 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 14.0 Public Beta 4 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-5",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-19",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados14-pb5",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 14.0 Public Beta 5 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados14",
+          "locator": "14.0 cycle: the Public Beta 5 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 14.0 Public Beta 5 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-6",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-25",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados14-pb6",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 14.0 Public Beta 6 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados14",
+          "locator": "14.0 cycle: the Public Beta 6 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 14.0 Public Beta 6 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-7",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-09-03",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados14-pb7",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 14.0 Public Beta 7 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados14",
+          "locator": "14.0 cycle: the Public Beta 7 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 14.0 Public Beta 7 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-8",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-09-09",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados14-pb8",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 14.0 Public Beta 8 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados14",
+          "locator": "14.0 cycle: the Public Beta 8 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 14.0 Public Beta 8 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-2",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-06-30",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "existingIdentityConflict",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "No exact Public Beta 2 route exists. The same June 30 appearance is currently stored as Public Beta 1 (release-event-01d7714ed4d28b61aeb41bf0), contradicting explicit Public Beta 2 evidence. This must be reviewed as a correction, not imported as a duplicate.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados15-pb2",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "June 30 iPadOS 15 public availability and the newsroom's conflicting 'first public beta' appearance wording."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados15",
+          "locator": "15.0 cycle: the Public Beta 2 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 15.0 Public Beta 2 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "forbes-ipados15-pb2",
+          "locator": "Page metadata, headline, and the paragraph supporting: contemporary evidence that the first iOS/iPadOS 15 public appearance displayed Beta 2.",
+          "supports": "Explicit Public Beta 2 identity for the June 30 public seed, paired with iPadOS-specific availability evidence."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iphonecanada-ipados15-pb2",
+          "locator": "Page metadata, headline, and the paragraph supporting: contemporary iOS/iPadOS 15 first-public-appearance evidence.",
+          "supports": "Contemporary iPadOS 15 public availability on June 30; ordinal corroboration comes from the independent Forbes lineage."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred.",
+        "The existing same-date Public Beta 1 production identity must be corrected or rejected before any Public Beta 2 mutation is considered."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-3",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-16",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados15-pb3",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "July 16 iPadOS 15 public availability and conflicting second-appearance wording; the retained page also preserves tester observations of Public Beta 3."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados15",
+          "locator": "15.0 cycle: the Public Beta 3 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 15.0 Public Beta 3 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "forbes-ipados15-pb3",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent Public Beta 3 label evidence for July 16, 2021.",
+          "supports": "Explicit Public Beta 3 identity for the July 16 iOS/iPadOS 15 public seed."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "wccftech-ipados15-pb3",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent iOS/iPadOS 15 Public Beta 3 label evidence.",
+          "supports": "Explicit Public Beta 3 identity for the July 16 iOS/iPadOS 15 public seed."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-4",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-28",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados15-pb4",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "July 28 iPadOS 15 public availability and conflicting third-appearance wording."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados15",
+          "locator": "15.0 cycle: the Public Beta 4 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 15.0 Public Beta 4 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "osxd-ipados15-pb4",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent Public Beta 4 label evidence for July 28, 2021.",
+          "supports": "Explicit iPadOS 15 Public Beta 4 identity and July 28 date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-5",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-11",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados15-pb5",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 15.0 Public Beta 5 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados15",
+          "locator": "15.0 cycle: the Public Beta 5 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 15.0 Public Beta 5 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-6",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-18",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados15-pb6",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 15.0 Public Beta 6 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados15",
+          "locator": "15.0 cycle: the Public Beta 6 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 15.0 Public Beta 6 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "osxd-ipados15-pb6",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent Public Beta 6 label evidence.",
+          "supports": "Explicit iPadOS 15 Public Beta 6 identity and August 18 date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-7",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-25",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados15-pb7",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 15.0 Public Beta 7 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados15",
+          "locator": "15.0 cycle: the Public Beta 7 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 15.0 Public Beta 7 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-8",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-31",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados15-pb8",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 15.0 Public Beta 8 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados15",
+          "locator": "15.0 cycle: the Public Beta 8 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 15.0 Public Beta 8 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.0:public-beta-2",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "16.0",
+      "releaseVersionId": "version-ipados-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-07-28",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados16-pb2",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 16.0 Public Beta 2 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados16",
+          "locator": "16.0 cycle: the Public Beta 2 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 16.0 Public Beta 2 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.0:public-beta-3",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "16.0",
+      "releaseVersionId": "version-ipados-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados16-pb3",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 16.0 Public Beta 3 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados16",
+          "locator": "16.0 cycle: the Public Beta 3 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 16.0 Public Beta 3 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.0:public-beta-4",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "16.0",
+      "releaseVersionId": "version-ipados-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-15",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados16-pb4",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 16.0 Public Beta 4 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados16",
+          "locator": "16.0 cycle: the Public Beta 4 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 16.0 Public Beta 4 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.0:public-beta-2",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-07-31",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados17-pb2",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 17.0 Public Beta 2 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados17",
+          "locator": "17.0 cycle: the Public Beta 2 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 17.0 Public Beta 2 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.0:public-beta-3",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados17-pb3",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 17.0 Public Beta 3 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados17",
+          "locator": "17.0 cycle: the Public Beta 3 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 17.0 Public Beta 3 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.0:public-beta-4",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-16",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados17-pb4",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 17.0 Public Beta 4 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados17",
+          "locator": "17.0 cycle: the Public Beta 4 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 17.0 Public Beta 4 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "osxd-ipados17-pb4",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent iPadOS 17 Public Beta 4 evidence.",
+          "supports": "Explicit iPadOS 17 Public Beta 4 identity on August 16; the paired MacRumors developer article was published August 15 and updated for public availability the next day."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.0:public-beta-5",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-22",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados17-pb5",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 17.0 Public Beta 5 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados17",
+          "locator": "17.0 cycle: the Public Beta 5 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 17.0 Public Beta 5 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "appleinsider-ipados17-pb5",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent iPadOS 17 Public Beta 5 evidence.",
+          "supports": "Explicit fifth iPadOS 17 public beta identity and August 22 availability."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.0:public-beta-6",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-29",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados17-pb6",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 17.0 Public Beta 6 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados17",
+          "locator": "17.0 cycle: the Public Beta 6 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 17.0 Public Beta 6 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.0:public-beta-1",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-07-15",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados18-pb1",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 18.0 Public Beta 1 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados18",
+          "locator": "18.0 cycle: the Public Beta 1 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 18.0 Public Beta 1 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.0:public-beta-2",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-07-29",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados18-pb2",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 18.0 Public Beta 2 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados18",
+          "locator": "18.0 cycle: the Public Beta 2 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 18.0 Public Beta 2 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.0:public-beta-3",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-06",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados18-pb3",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 18.0 Public Beta 3 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados18",
+          "locator": "18.0 cycle: the Public Beta 3 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 18.0 Public Beta 3 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.0:public-beta-4",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-12",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados18-pb4",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 18.0 Public Beta 4 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados18",
+          "locator": "18.0 cycle: the Public Beta 4 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 18.0 Public Beta 4 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "9to5mac-ipados18-pb4",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent iPadOS 18 Public Beta 4 evidence.",
+          "supports": "Explicit iPadOS 18 Public Beta 4 availability on August 12."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.0:public-beta-5",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-20",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados18-pb5",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 18.0 Public Beta 5 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados18",
+          "locator": "18.0 cycle: the Public Beta 5 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 18.0 Public Beta 5 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "osxd-ipados18-pb5",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent iPadOS 18 Public Beta 5 evidence and next-day publication qualification.",
+          "supports": "Explicit iPadOS 18 Public Beta 5 identity in an August 21 UTC article; Pacific availability is independently fixed to August 20."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.0:public-beta-6",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-28",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados18-pb6",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 18.0 Public Beta 6 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados18",
+          "locator": "18.0 cycle: the Public Beta 6 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 18.0 Public Beta 6 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "9to5mac-ipados18-pb6",
+          "locator": "Page metadata, headline, and the paragraph supporting: independent iPadOS 18 Public Beta 6 evidence.",
+          "supports": "Explicit iPadOS 18 Public Beta 6 availability on August 28."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.0:public-beta-2",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-07",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados26-pb2",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 26.0 Public Beta 2 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados26",
+          "locator": "26.0 cycle: the Public Beta 2 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 26.0 Public Beta 2 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.0:public-beta-3",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-14",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados26-pb3",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 26.0 Public Beta 3 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados26",
+          "locator": "26.0 cycle: the Public Beta 3 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 26.0 Public Beta 3 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.0:public-beta-4",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-18",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados26-pb4",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 26.0 Public Beta 4 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados26",
+          "locator": "26.0 cycle: the Public Beta 4 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 26.0 Public Beta 4 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.0:public-beta-5",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-25",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados26-pb5",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 26.0 Public Beta 5 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados26",
+          "locator": "26.0 cycle: the Public Beta 5 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 26.0 Public Beta 5 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:26.0:public-beta-6",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-09-02",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "matchBasis": "The read-only published query found zero exact matches for {releaseVersionId, channel, routeAlias}; the releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados26-pb6",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 26.0 Public Beta 6 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados26",
+          "locator": "26.0 cycle: the Public Beta 6 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 26.0 Public Beta 6 public appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent assembled and mechanically checked the packet but cannot serve as the independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "existingMatches": [
+    {
+      "matchId": "existing-match:apple:ipados:16.0:public-beta-1",
+      "key": "16.0:1",
+      "candidateId": "candidate:apple:ipados:16.0:public-beta-1",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "16.0",
+      "releaseVersionId": "version-ipados-16-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "displayedLabel": "Public Beta 1",
+      "appearanceDate": "2022-07-11",
+      "sequence": 1,
+      "productionEvent": {
+        "_id": "release-event-775a335cb87a0b39127c37ff",
+        "appearanceDate": "2022-07-11",
+        "availabilityState": "available",
+        "builds": null,
+        "channel": "publicBeta",
+        "isRevision": false,
+        "label": "Public Beta 1",
+        "platform": "iPadOS",
+        "releaseVersionId": "version-ipados-16-0",
+        "routeAlias": "public-beta-1",
+        "sequence": 1,
+        "stableEventId": "version-ipados-16-0:m-dc22fafd21b3",
+        "version": "16.0"
+      },
+      "productionReconciliation": {
+        "status": "exactExistingMatch",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "exactIdentityMatches": 1,
+        "matchBasis": "Exact published production match on {releaseVersionId, channel, routeAlias}; date, label, sequence, availability state, and non-revision status also agree."
+      },
+      "evidenceState": "corroborated",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados16-pb1",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 16.0 Public Beta 1 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados16",
+          "locator": "16.0 cycle: the Public Beta 1 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 16.0 Public Beta 1 public appearance."
+        }
+      ],
+      "disposition": "retainExistingNoMutationProposed",
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "matchId": "existing-match:apple:ipados:17.0:public-beta-1",
+      "key": "17.0:1",
+      "candidateId": "candidate:apple:ipados:17.0:public-beta-1",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "displayedLabel": "Public Beta 1",
+      "appearanceDate": "2023-07-12",
+      "sequence": 1,
+      "productionEvent": {
+        "_id": "release-event-c8241d69688a968737a8187e",
+        "appearanceDate": "2023-07-12",
+        "availabilityState": "available",
+        "builds": null,
+        "channel": "publicBeta",
+        "isRevision": false,
+        "label": "Public Beta 1",
+        "platform": "iPadOS",
+        "releaseVersionId": "version-ipados-17-0",
+        "routeAlias": "public-beta-1",
+        "sequence": 1,
+        "stableEventId": "version-ipados-17-0:m-c8c0acaa4e17",
+        "version": "17.0"
+      },
+      "productionReconciliation": {
+        "status": "exactExistingMatch",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "exactIdentityMatches": 1,
+        "matchBasis": "Exact published production match on {releaseVersionId, channel, routeAlias}; date, label, sequence, availability state, and non-revision status also agree."
+      },
+      "evidenceState": "corroborated",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados17-pb1",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 17.0 Public Beta 1 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados17",
+          "locator": "17.0 cycle: the Public Beta 1 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 17.0 Public Beta 1 public appearance."
+        }
+      ],
+      "disposition": "retainExistingNoMutationProposed",
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "matchId": "existing-match:apple:ipados:26.0:public-beta-1",
+      "key": "26.0:1",
+      "candidateId": "candidate:apple:ipados:26.0:public-beta-1",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "displayedLabel": "Public Beta 1",
+      "appearanceDate": "2025-07-24",
+      "sequence": 1,
+      "productionEvent": {
+        "_id": "release-event-d7351bf59b922af10f620144",
+        "appearanceDate": "2025-07-24",
+        "availabilityState": "available",
+        "builds": null,
+        "channel": "publicBeta",
+        "isRevision": false,
+        "label": "Public Beta 1",
+        "platform": "iPadOS",
+        "releaseVersionId": "version-ipados-26-0",
+        "routeAlias": "public-beta-1",
+        "sequence": 1,
+        "stableEventId": "version-ipados-26-0:m-a55abe94c8a8",
+        "version": "26.0"
+      },
+      "productionReconciliation": {
+        "status": "exactExistingMatch",
+        "queriedAt": "2026-07-31T03:38:21.535Z",
+        "exactIdentityMatches": 1,
+        "matchBasis": "Exact published production match on {releaseVersionId, channel, routeAlias}; date, label, sequence, availability state, and non-revision status also agree."
+      },
+      "evidenceState": "corroborated",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados26-pb1",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "MacRumors evidence for the 26.0 Public Beta 1 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados26",
+          "locator": "26.0 cycle: the Public Beta 1 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 26.0 Public Beta 1 public appearance."
+        }
+      ],
+      "disposition": "retainExistingNoMutationProposed",
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "notProposed": [
+    {
+      "recordId": "not-proposed:apple:ipados:14.0:public-beta-1",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "releaseVersionId": "version-ipados-14-0",
+      "apparentIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-09",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "July 9 was the first public appearance, but retained contemporary device-facing evidence says the public seed arrived directly as Beta 2. 'First public beta' newsroom wording and iCulture's PB1 label count appearances; they do not establish a displayed Public Beta 1.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados14-pb2",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "July 9 public availability and the newsroom's conflicting 'first beta' appearance wording; it does not establish Public Beta 1 as a displayed seed."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "koc-ipados14-pb2",
+          "locator": "The meta description states that the iOS 14 and iPadOS 14 public version arrived directly as Beta 2.",
+          "supports": "Explicit device-facing Beta 2 identity for the first iPadOS 14 public appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iculture-ipados14",
+          "locator": "14.0 cycle: the Public Beta 2 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal.",
+          "supports": "iCulture evidence for the 14.0 Public Beta 2 public appearance."
+        }
+      ],
+      "reversalEvidence": "KOC's contemporary metadata explicitly states that iOS 14 and iPadOS 14 public availability arrived directly as Beta 2; the next retained public seed is explicitly Public Beta 3.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Do not invent PB1 from appearance order or the paired developer ordinal."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ipados:15.0:public-beta-1",
+      "originCohortId": "ipados-major-13-26-public-beta",
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "releaseVersionId": "version-ipados-15-0",
+      "apparentIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-06-30",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "June 30 was the first public appearance, but multiple retained contemporary sources identify the seed as Public Beta 2. Production currently stores that date as Public Beta 1; this is an identity conflict, not a second historical appearance.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "mr-ipados15-pb2",
+          "locator": "JSON-LD publication timestamp plus the article lead or same-day public-beta update. For the 14.0 and 15.0 opening seeds, newsroom appearance wording is explicitly treated as conflicting rather than as the displayed ordinal.",
+          "supports": "June 30 iPadOS 15 public availability and the newsroom's conflicting 'first public beta' appearance wording."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "forbes-ipados15-pb2",
+          "locator": "Page metadata, headline, and the paragraph supporting: contemporary evidence that the first iOS/iPadOS 15 public appearance displayed Beta 2.",
+          "supports": "Explicit Public Beta 2 identity for the June 30 public seed, paired with iPadOS-specific availability evidence."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+          "sourceId": "iphonecanada-ipados15-pb2",
+          "locator": "Page metadata, headline, and the paragraph supporting: contemporary iOS/iPadOS 15 first-public-appearance evidence.",
+          "supports": "Contemporary iPadOS 15 public availability on June 30; ordinal corroboration comes from the independent Forbes lineage."
+        }
+      ],
+      "reversalEvidence": "Forbes explicitly labels the June 30 payload Public Beta 2, and the following July 16 seed is explicitly Public Beta 3. No retained device-facing evidence supports a distinct Public Beta 1.",
+      "productionConflict": {
+        "eventId": "release-event-01d7714ed4d28b61aeb41bf0",
+        "stableEventId": "version-ipados-15-0:m-96d41d5554c6",
+        "currentRouteAlias": "public-beta-1",
+        "currentLabel": "Public Beta 1",
+        "appearanceDate": "2021-06-30",
+        "requiredDisposition": "Independent reviewer must decide and separately authorize correction. Do not create a duplicate Public Beta 2 event while PB1 remains."
+      },
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The production correction is outside this research packet's authority."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ]
+}

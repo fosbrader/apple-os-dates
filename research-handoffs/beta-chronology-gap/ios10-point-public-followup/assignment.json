@@ -1,0 +1,50 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios10-point-public-followup",
+  "createdAt": "2026-07-31T04:35:31.043Z",
+  "createdBy": "codex-scope-beta-gap-program",
+  "vendor": {
+    "name": "Apple",
+    "slug": "apple"
+  },
+  "researchCutoff": "2026-07-31",
+  "parentPacketPath": "research-handoffs/beta-chronology-gap/ios10-point-public",
+  "trigger": "The parent packet's independent review blocked two identities: iOS 10.2 Public Beta 3 for a date correction and iOS 10.2.1 Public Beta 3 for a second editorial lineage.",
+  "scopeRule": "Research only the two blocked public-beta identities. Reinspect frozen evidence, preserve every timestamp and timezone, capture and hash new sources, query published production exactly, and return research candidates pending a different independent reviewer.",
+  "targetCount": 2,
+  "targets": [
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-3",
+      "version": "10.2",
+      "releaseVersionId": "version-ios-10-2",
+      "priorFrozenDate": "2016-11-15",
+      "reviewerRequiredAlternative": "2016-11-14",
+      "followupProposedDate": "2016-11-14",
+      "task": "Adjudicate November 14 versus November 15 without suppressing conflicting contemporary reports."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:public-beta-3",
+      "version": "10.2.1",
+      "releaseVersionId": "version-ios-10-2-1",
+      "priorFrozenDate": "2017-01-09",
+      "reviewerRequiredAlternative": null,
+      "followupProposedDate": "2017-01-09",
+      "task": "Find a second contemporary editorial lineage explicitly identifying Public Beta 3 and its appearance date."
+    }
+  ],
+  "exclusions": [
+    "Sanity writes or stableEventId creation",
+    "Page builds, article content, release notes, and deployment",
+    "Developer-beta chronology repair",
+    "Build-number or shared-payload claims",
+    "Modification of the frozen parent packet or its independent review"
+  ],
+  "safety": {
+    "queryOnlyProductionAccess": true,
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "pageBuildsAllowed": false,
+    "deploymentAllowed": false
+  }
+}

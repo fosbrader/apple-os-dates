@@ -1,0 +1,2159 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-watchos-major-7-26",
+  "researchCutoff": "2026-07-30",
+  "candidateCount": 33,
+  "summary": {
+    "byVersion": {
+      "7.0": 5,
+      "8.0": 6,
+      "9.0": 5,
+      "10.0": 6,
+      "11.0": 5,
+      "26.0": 6
+    },
+    "byReviewDisposition": {
+      "readyForIndependentChronologyReview": 29,
+      "requiresConflictAdjudication": 3,
+      "needsSecondExactOrdinalLineage": 1
+    },
+    "byIdentityStatus": {
+      "confirmed": 29,
+      "conflict": 3,
+      "unverified": 1
+    },
+    "byEvidenceState": {
+      "corroborated": 33
+    },
+    "buildsIncluded": 0,
+    "substantiveChangeClaimsIncluded": 0,
+    "productionSnapshot": {
+      "path": "tmp/research-evidence/beta-chronology-gap/watchos-major-7-26/production-snapshot.json",
+      "capturedAt": "2026-07-31T03:05:12.717Z",
+      "perspective": "published",
+      "totalReleaseEvents": 2068,
+      "watchOSPublicBetaEventsAllVersions": 0,
+      "scopedReleaseEvents": 59,
+      "scopedPublicBetaEvents": 0,
+      "exactChecksRun": 34
+    },
+    "importantQualification": "Thirty-three appearances are defensible as research candidates. No candidate is chronology-approved or publication-eligible. A formerly expected thirty-fourth row—watchOS 8 Public Beta 5 on August 12, 2021—is explicitly not proposed because contemporary evidence contradicts the later retrospective timeline."
+  },
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:watchos:7.0:public-beta-1",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "7.0",
+      "releaseVersionId": "version-watchos-7-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-10",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos7-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos7-pb1-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.0:public-beta-2",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "7.0",
+      "releaseVersionId": "version-watchos-7-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-20",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos7-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos7-pb2-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.0:public-beta-3",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "7.0",
+      "releaseVersionId": "version-watchos-7-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-27",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos7-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos7-pb3-9to5mac",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.0:public-beta-4",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "7.0",
+      "releaseVersionId": "version-watchos-7-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-09-03",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos7-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos7-pb4-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:7.0:public-beta-5",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "7.0",
+      "releaseVersionId": "version-watchos-7-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-09-10",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos7-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos7-pb5-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-1",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "8.0",
+      "releaseVersionId": "version-watchos-8-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-06-30",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-pb1-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-2",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "8.0",
+      "releaseVersionId": "version-watchos-8-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-16",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-pb2-appleinsider",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-4",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "8.0",
+      "releaseVersionId": "version-watchos-8-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-28",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "conflicted",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "requiresConflictAdjudication",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-pb4-appleinsider",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-imore-rolling",
+          "locator": "Dated watchOS 8 public-beta update headings for June 30, July 16, July 28, August 18, and August 26.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A material publisher conflict must be adjudicated against the retained evidence before promotion.",
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-6",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "8.0",
+      "releaseVersionId": "version-watchos-8-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-18",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 6 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-pb6-appleinsider",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 6 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-august-archive-macrumors",
+          "locator": "August 11 entry for the iOS/iPadOS-only public wave; August 18, August 25, and August 31 watchOS public-update entries.",
+          "supports": "Tests the disputed chronology boundary and prevents an unsupported public appearance from being inferred."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-imore-rolling",
+          "locator": "Dated watchOS 8 public-beta update headings for June 30, July 16, July 28, August 18, and August 26.",
+          "supports": "Explicitly supports Public Beta 6 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-7",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "8.0",
+      "releaseVersionId": "version-watchos-8-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-26",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 7 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-pb7-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Independently corroborates the public-channel appearance and date without being treated as exact ordinal evidence."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-imore-rolling",
+          "locator": "Dated watchOS 8 public-beta update headings for June 30, July 16, July 28, August 18, and August 26.",
+          "supports": "Explicitly supports Public Beta 7 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.0:public-beta-8",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "8.0",
+      "releaseVersionId": "version-watchos-8-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-31",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 8 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-pb8-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Independently corroborates the public-channel appearance and date without being treated as exact ordinal evidence."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos8-imore-rolling",
+          "locator": "Dated watchOS 8 public-beta update headings for June 30, July 16, July 28, August 18, and August 26.",
+          "supports": "Explicitly supports Public Beta 8 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.0:public-beta-1",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "9.0",
+      "releaseVersionId": "version-watchos-9-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-07-11",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-pb1-9to5mac",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-imore-rolling",
+          "locator": "Dated watchOS 9 headings for Public Betas 1 through 5.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.0:public-beta-2",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "9.0",
+      "releaseVersionId": "version-watchos-9-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-07-29",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-pb2-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-imore-rolling",
+          "locator": "Dated watchOS 9 headings for Public Betas 1 through 5.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.0:public-beta-3",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "9.0",
+      "releaseVersionId": "version-watchos-9-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-pb3-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-imore-rolling",
+          "locator": "Dated watchOS 9 headings for Public Betas 1 through 5.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.0:public-beta-4",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "9.0",
+      "releaseVersionId": "version-watchos-9-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-16",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-pb4-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-imore-rolling",
+          "locator": "Dated watchOS 9 headings for Public Betas 1 through 5.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:9.0:public-beta-5",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "9.0",
+      "releaseVersionId": "version-watchos-9-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-24",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos9-imore-rolling",
+          "locator": "Dated watchOS 9 headings for Public Betas 1 through 5.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-1",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "10.0",
+      "releaseVersionId": "version-watchos-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-07-12",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-pb1-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-2",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "10.0",
+      "releaseVersionId": "version-watchos-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-07-31",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-pb2-macrumors",
+          "locator": "Publication date and paragraph stating that new watchOS 10 public beta software was also available.",
+          "supports": "Independently corroborates the public-channel appearance and date without being treated as exact ordinal evidence."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-pb2-appleinsider",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-3",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "10.0",
+      "releaseVersionId": "version-watchos-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-pb3-9to5mac",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-4",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "10.0",
+      "releaseVersionId": "version-watchos-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-16",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-pb4-9to5mac",
+          "locator": "August 16 update stating that the latest watchOS 10 public beta was released.",
+          "supports": "Independently corroborates the public-channel appearance and date without being treated as exact ordinal evidence."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-pb4-macerkopf",
+          "locator": "August 16 timestamp and 19:36 update explicitly stating that watchOS 10 Public Beta 4 was available.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-5",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "10.0",
+      "releaseVersionId": "version-watchos-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-23",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-pb5-macrumors",
+          "locator": "Publication date and lead identifying a new watchOS 10 public beta.",
+          "supports": "Independently corroborates the public-channel appearance and date without being treated as exact ordinal evidence."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-pb5-itopnews",
+          "locator": "August 23 timestamp, headline, and body explicitly identifying the fifth watchOS 10 public beta.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:10.0:public-beta-6",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "10.0",
+      "releaseVersionId": "version-watchos-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-29",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 6 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos10-pb6-appleinsider",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 6 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:11.0:public-beta-1",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "11.0",
+      "releaseVersionId": "version-watchos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-07-15",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos11-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos11-pb1-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:11.0:public-beta-2",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "11.0",
+      "releaseVersionId": "version-watchos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-07-24",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos11-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos11-pb2-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:11.0:public-beta-3",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "11.0",
+      "releaseVersionId": "version-watchos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-06",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos11-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos11-pb3-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:11.0:public-beta-4",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "11.0",
+      "releaseVersionId": "version-watchos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-13",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos11-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos11-pb4-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:11.0:public-beta-5",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "11.0",
+      "releaseVersionId": "version-watchos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-21",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos11-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos11-pb5-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-1",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "26.0",
+      "releaseVersionId": "version-watchos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-07-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-pb1-9to5mac",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 1 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-2",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "26.0",
+      "releaseVersionId": "version-watchos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-07",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-pb2-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 2 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-3",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "26.0",
+      "releaseVersionId": "version-watchos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-14",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-pb3-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-pb3-9to5mac",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 3 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-4",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "26.0",
+      "releaseVersionId": "version-watchos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-19",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "conflicted",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "requiresConflictAdjudication",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-pb4-macrumors",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 4 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A material publisher conflict must be adjudicated against the retained evidence before promotion.",
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-5",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "26.0",
+      "releaseVersionId": "version-watchos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-26",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "conflicted",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "requiresConflictAdjudication",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-pb5-anotherapple",
+          "locator": "Headline, displayed publication date, and lead/update paragraph identifying the public-beta appearance.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-pb5-9to5mac",
+          "locator": "Update paragraph identifying watchOS 26 Public Beta 5 one day after the equivalent developer release.",
+          "supports": "Explicitly supports Public Beta 5 and/or its dated public-channel appearance."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A material publisher conflict must be adjudicated against the retained evidence before promotion.",
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.0:public-beta-6",
+      "originCohortId": "watchos-major-public-beta",
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "version": "26.0",
+      "releaseVersionId": "version-watchos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-09-02",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "needsSecondExactOrdinalLineage",
+      "identityStatus": "unverified",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:05:12.717Z",
+        "matchBasis": "Exact published-production query by releaseVersionId, channel publicBeta, and routeAlias found no match.",
+        "exactIdentityMatches": 0,
+        "matchingEventIds": []
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-iculture-timeline",
+          "locator": "watchOS public-beta timeline list and revision-history entries.",
+          "supports": "Explicitly supports Public Beta 6 and/or its dated public-channel appearance."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/watchos-major-7-26/sources.json",
+          "sourceId": "source-watchos26-pb6-9to5mac",
+          "locator": "September 2 update stating that public versions of the same listed builds shipped a few hours after the developer wave.",
+          "supports": "Independently corroborates the public-channel appearance and date without being treated as exact ordinal evidence."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Only one retained lineage explicitly supplies the public ordinal; the second lineage confirms the appearance but not the ordinal.",
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent preserved and mechanically checked the evidence but cannot count as an independent chronology reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ]
+}

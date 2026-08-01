@@ -1,0 +1,4030 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-tvos-major-11-26",
+  "researchCutoff": "2026-07-30",
+  "candidateCount": 60,
+  "notProposedCount": 7,
+  "summary": {
+    "byVersion": {
+      "11.0": 9,
+      "12.0": 8,
+      "13.0": 6,
+      "14.0": 7,
+      "15.0": 7,
+      "16.0": 5,
+      "17.0": 6,
+      "18.0": 6,
+      "26.0": 6
+    },
+    "byCandidateStatus": {
+      "needsEvidenceReview": 60
+    },
+    "byIdentityStatus": {
+      "confirmed": 37,
+      "conflict": 3,
+      "unverified": 20
+    },
+    "byEvidenceState": {
+      "corroborated": 37,
+      "reported": 23
+    },
+    "buildsIncluded": 0,
+    "substantiveChangeClaimsIncluded": 0,
+    "importantQualification": "These are research candidates, not approved Sanity documents. Publisher-displayed gaps and conflicts are intentional and must not be renumbered."
+  },
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:tvos:11.0:public-beta-1",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "11.0",
+      "releaseVersionId": "version-tvos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-06-26",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-iculture-timeline",
+          "locator": "Article sections headed tvOS 11 publieke beta 1 through 7, each with an explicit date.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos110-pb1-9to5mac",
+          "locator": "WordPress REST post 489013; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.0:public-beta-2",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "11.0",
+      "releaseVersionId": "version-tvos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-07-12",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-iculture-timeline",
+          "locator": "Article sections headed tvOS 11 publieke beta 1 through 7, each with an explicit date.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos110-pb2-9to5mac",
+          "locator": "WordPress REST post 490852; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.0:public-beta-3",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "11.0",
+      "releaseVersionId": "version-tvos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-07-25",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-iculture-timeline",
+          "locator": "Article sections headed tvOS 11 publieke beta 1 through 7, each with an explicit date.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos110-pb3-9to5mac",
+          "locator": "WordPress REST post 492502; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.0:public-beta-4",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "11.0",
+      "releaseVersionId": "version-tvos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-08-08",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-iculture-timeline",
+          "locator": "Article sections headed tvOS 11 publieke beta 1 through 7, each with an explicit date.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos110-pb4-9to5mac",
+          "locator": "WordPress REST post 494077; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.0:public-beta-5",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "11.0",
+      "releaseVersionId": "version-tvos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-08-14",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-iculture-timeline",
+          "locator": "Article sections headed tvOS 11 publieke beta 1 through 7, each with an explicit date.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos110-pb5-9to5mac",
+          "locator": "WordPress REST post 494731; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.0:public-beta-6",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "11.0",
+      "releaseVersionId": "version-tvos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-08-21",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-iculture-timeline",
+          "locator": "Article sections headed tvOS 11 publieke beta 1 through 7, each with an explicit date.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-pb6-wccftech",
+          "locator": "Headline and opening article text explicitly identify tvOS 11 Public Beta 6.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.0:public-beta-7",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "11.0",
+      "releaseVersionId": "version-tvos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-08-28",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-iculture-timeline",
+          "locator": "Article sections headed tvOS 11 publieke beta 1 through 7, each with an explicit date.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-pb7-ioshacker",
+          "locator": "Article update explicitly identifies tvOS 11 Public Beta 7.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.0:public-beta-8",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "11.0",
+      "releaseVersionId": "version-tvos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-08-31",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-pb8-macerkopf",
+          "locator": "Article update explicitly calls the public-program release Public Beta 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.0:public-beta-9",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "11.0",
+      "releaseVersionId": "version-tvos-11-0",
+      "proposedIdentity": {
+        "label": "Public Beta 9",
+        "routeAlias": "public-beta-9",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-09-05",
+        "sequence": 9,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos11-pb9-macrumors",
+          "locator": "Update paragraph explicitly identifies tvOS 11 Public Beta 9.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.0:public-beta-1",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "12.0",
+      "releaseVersionId": "version-tvos-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-06-25",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos120-pb1-9to5mac",
+          "locator": "WordPress REST post 539758; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos120-pb1-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 12.0 Public Beta 1.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.0:public-beta-2",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "12.0",
+      "releaseVersionId": "version-tvos-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-05",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos120-pb2-9to5mac",
+          "locator": "WordPress REST post 541307; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos120-pb2-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 12.0 Public Beta 2.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.0:public-beta-3",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "12.0",
+      "releaseVersionId": "version-tvos-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-18",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos120-pb3-9to5mac",
+          "locator": "WordPress REST post 543239; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos120-pb3-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 12.0 Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.0:public-beta-4",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "12.0",
+      "releaseVersionId": "version-tvos-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-31",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos120-pb4-9to5mac",
+          "locator": "WordPress REST post 545047; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos120-pb4-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 12.0 Public Beta 4.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.0:public-beta-5",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "12.0",
+      "releaseVersionId": "version-tvos-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-06",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos12-pb5-macerkopf",
+          "locator": "Headline and article body explicitly identify tvOS 12 Public Beta 5.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.0:public-beta-6",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "12.0",
+      "releaseVersionId": "version-tvos-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-15",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos12-imore-timeline",
+          "locator": "Retained article history headings for tvOS 12 Public Beta 6, 7, and 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.0:public-beta-7",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "12.0",
+      "releaseVersionId": "version-tvos-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-20",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos12-imore-timeline",
+          "locator": "Retained article history headings for tvOS 12 Public Beta 6, 7, and 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.0:public-beta-8",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "12.0",
+      "releaseVersionId": "version-tvos-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-27",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos12-imore-timeline",
+          "locator": "Retained article history headings for tvOS 12 Public Beta 6, 7, and 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:13.0:public-beta-1",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "13.0",
+      "releaseVersionId": "version-tvos-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-06-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos13-imore-timeline",
+          "locator": "Retained article history headings for tvOS 13 Public Beta 1 through 6.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos130-pb1-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 13.0 Public Beta 1.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:13.0:public-beta-2",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "13.0",
+      "releaseVersionId": "version-tvos-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-03",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos13-imore-timeline",
+          "locator": "Retained article history headings for tvOS 13 Public Beta 1 through 6.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos130-pb2-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 13.0 Public Beta 2.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:13.0:public-beta-3",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "13.0",
+      "releaseVersionId": "version-tvos-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-18",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos13-imore-timeline",
+          "locator": "Retained article history headings for tvOS 13 Public Beta 1 through 6.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos130-pb3-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 13.0 Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:13.0:public-beta-4",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "13.0",
+      "releaseVersionId": "version-tvos-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-30",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos13-imore-timeline",
+          "locator": "Retained article history headings for tvOS 13 Public Beta 1 through 6.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos130-pb4-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 13.0 Public Beta 4.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:13.0:public-beta-5",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "13.0",
+      "releaseVersionId": "version-tvos-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-08",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos13-imore-timeline",
+          "locator": "Retained article history headings for tvOS 13 Public Beta 1 through 6.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos130-pb5-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 13.0 Public Beta 5.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:13.0:public-beta-6",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "13.0",
+      "releaseVersionId": "version-tvos-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-15",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos13-imore-timeline",
+          "locator": "Retained article history headings for tvOS 13 Public Beta 1 through 6.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.0:public-beta-1",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "14.0",
+      "releaseVersionId": "version-tvos-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-09",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-imore-timeline",
+          "locator": "Retained article history headings for Public Beta 1, 2, 4, 5, 6, 7, and 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos140-pb1-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 14.0 Public Beta 1.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.0:public-beta-2",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "14.0",
+      "releaseVersionId": "version-tvos-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-22",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-imore-timeline",
+          "locator": "Retained article history headings for Public Beta 1, 2, 4, 5, 6, 7, and 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.0:public-beta-4",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "14.0",
+      "releaseVersionId": "version-tvos-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-06",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "conflicted",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "needsConflictAdjudication",
+      "identityStatus": "conflict",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-imore-timeline",
+          "locator": "Retained article history headings for Public Beta 1, 2, 4, 5, 6, 7, and 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-iculture-timeline",
+          "locator": "Tijdlijn tvOS 14 beta; explicitly lists Public Beta 4 through 8 and no Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A material date or publisher-label conflict requires independent adjudication; see conflicts.json.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.0:public-beta-5",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "14.0",
+      "releaseVersionId": "version-tvos-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-19",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-imore-timeline",
+          "locator": "Retained article history headings for Public Beta 1, 2, 4, 5, 6, 7, and 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-iculture-timeline",
+          "locator": "Tijdlijn tvOS 14 beta; explicitly lists Public Beta 4 through 8 and no Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos140-pb5-macrumors",
+          "locator": "Monthly archive entry containing the exact article URL, title, date, and byline for tvOS 14.0 Public Beta 5.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.0:public-beta-6",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "14.0",
+      "releaseVersionId": "version-tvos-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-25",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-imore-timeline",
+          "locator": "Retained article history headings for Public Beta 1, 2, 4, 5, 6, 7, and 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-iculture-timeline",
+          "locator": "Tijdlijn tvOS 14 beta; explicitly lists Public Beta 4 through 8 and no Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.0:public-beta-7",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "14.0",
+      "releaseVersionId": "version-tvos-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-09-03",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-imore-timeline",
+          "locator": "Retained article history headings for Public Beta 1, 2, 4, 5, 6, 7, and 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-iculture-timeline",
+          "locator": "Tijdlijn tvOS 14 beta; explicitly lists Public Beta 4 through 8 and no Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.0:public-beta-8",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "14.0",
+      "releaseVersionId": "version-tvos-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-09-09",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-imore-timeline",
+          "locator": "Retained article history headings for Public Beta 1, 2, 4, 5, 6, 7, and 8.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-iculture-timeline",
+          "locator": "Tijdlijn tvOS 14 beta; explicitly lists Public Beta 4 through 8 and no Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.0:public-beta-1",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "15.0",
+      "releaseVersionId": "version-tvos-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-06-30",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos15-iculture-timeline",
+          "locator": "Tijdlijn tvOS 15 beta; Public Beta 1, 2, 4, 5, 6, 7, and 8, plus explicit statement that Apple skipped Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.0:public-beta-2",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "15.0",
+      "releaseVersionId": "version-tvos-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-16",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos15-iculture-timeline",
+          "locator": "Tijdlijn tvOS 15 beta; Public Beta 1, 2, 4, 5, 6, 7, and 8, plus explicit statement that Apple skipped Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.0:public-beta-4",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "15.0",
+      "releaseVersionId": "version-tvos-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-28",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos15-iculture-timeline",
+          "locator": "Tijdlijn tvOS 15 beta; Public Beta 1, 2, 4, 5, 6, 7, and 8, plus explicit statement that Apple skipped Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos15-pb4-appleinsider",
+          "locator": "Headline and opening paragraph explicitly identify the fourth tvOS 15 public beta.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.0:public-beta-5",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "15.0",
+      "releaseVersionId": "version-tvos-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-11",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos15-iculture-timeline",
+          "locator": "Tijdlijn tvOS 15 beta; Public Beta 1, 2, 4, 5, 6, 7, and 8, plus explicit statement that Apple skipped Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.0:public-beta-6",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "15.0",
+      "releaseVersionId": "version-tvos-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-18",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos15-iculture-timeline",
+          "locator": "Tijdlijn tvOS 15 beta; Public Beta 1, 2, 4, 5, 6, 7, and 8, plus explicit statement that Apple skipped Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.0:public-beta-7",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "15.0",
+      "releaseVersionId": "version-tvos-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-25",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos15-iculture-timeline",
+          "locator": "Tijdlijn tvOS 15 beta; Public Beta 1, 2, 4, 5, 6, 7, and 8, plus explicit statement that Apple skipped Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.0:public-beta-8",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "15.0",
+      "releaseVersionId": "version-tvos-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-31",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos15-iculture-timeline",
+          "locator": "Tijdlijn tvOS 15 beta; Public Beta 1, 2, 4, 5, 6, 7, and 8, plus explicit statement that Apple skipped Public Beta 3.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:16.0:public-beta-1",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "16.0",
+      "releaseVersionId": "version-tvos-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-07-11",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos16-iculture-timeline",
+          "locator": "Tijdlijn tvOS 16 beta; Public Beta 1, 2, 3, 5, plus a conflicting Public Beta 6 label on August 15.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos160-pb1-9to5mac",
+          "locator": "WordPress REST post 818828; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:16.0:public-beta-2",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "16.0",
+      "releaseVersionId": "version-tvos-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-07-28",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos16-iculture-timeline",
+          "locator": "Tijdlijn tvOS 16 beta; Public Beta 1, 2, 3, 5, plus a conflicting Public Beta 6 label on August 15.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos160-pb2-9to5mac",
+          "locator": "WordPress REST post 823835; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence independently supports the public-program availability and appearance date, but does not independently supply the tvOS public ordinal."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:16.0:public-beta-3",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "16.0",
+      "releaseVersionId": "version-tvos-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos16-iculture-timeline",
+          "locator": "Tijdlijn tvOS 16 beta; Public Beta 1, 2, 3, 5, plus a conflicting Public Beta 6 label on August 15.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos160-pb3-9to5mac",
+          "locator": "WordPress REST post 825974; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence independently supports the public-program availability and appearance date, but does not independently supply the tvOS public ordinal."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:16.0:public-beta-4",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "16.0",
+      "releaseVersionId": "version-tvos-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-15",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "conflicted",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "needsConflictAdjudication",
+      "identityStatus": "conflict",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos16-iculture-timeline",
+          "locator": "Tijdlijn tvOS 16 beta; Public Beta 1, 2, 3, 5, plus a conflicting Public Beta 6 label on August 15.",
+          "supports": "Retained publisher evidence independently supports the public-program availability and appearance date, but does not independently supply the tvOS public ordinal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos16-pb4-appleinsider",
+          "locator": "Headline and body explicitly identify this as the fourth public-beta round and name tvOS 16.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A material date or publisher-label conflict requires independent adjudication; see conflicts.json.",
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:16.0:public-beta-5",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "16.0",
+      "releaseVersionId": "version-tvos-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-24",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos16-iculture-timeline",
+          "locator": "Tijdlijn tvOS 16 beta; Public Beta 1, 2, 3, 5, plus a conflicting Public Beta 6 label on August 15.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos160-pb5-9to5mac",
+          "locator": "WordPress REST post 829172; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence independently supports the public-program availability and appearance date, but does not independently supply the tvOS public ordinal."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:17.0:public-beta-1",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "17.0",
+      "releaseVersionId": "version-tvos-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-07-12",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos17-iculture-timeline",
+          "locator": "Tijdlijn tvOS 17 beta; Public Beta 1 through 6 with explicit dates.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos170-pb1-9to5mac",
+          "locator": "WordPress REST post 896365; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:17.0:public-beta-2",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "17.0",
+      "releaseVersionId": "version-tvos-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-07-31",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos17-iculture-timeline",
+          "locator": "Tijdlijn tvOS 17 beta; Public Beta 1 through 6 with explicit dates.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos170-pb2-9to5mac",
+          "locator": "WordPress REST post 899397; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:17.0:public-beta-3",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "17.0",
+      "releaseVersionId": "version-tvos-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos17-iculture-timeline",
+          "locator": "Tijdlijn tvOS 17 beta; Public Beta 1 through 6 with explicit dates.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos170-pb3-9to5mac",
+          "locator": "WordPress REST post 901059; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:17.0:public-beta-4",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "17.0",
+      "releaseVersionId": "version-tvos-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-16",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos17-iculture-timeline",
+          "locator": "Tijdlijn tvOS 17 beta; Public Beta 1 through 6 with explicit dates.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:17.0:public-beta-5",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "17.0",
+      "releaseVersionId": "version-tvos-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-22",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos17-iculture-timeline",
+          "locator": "Tijdlijn tvOS 17 beta; Public Beta 1 through 6 with explicit dates.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos17-pb5-appleinsider",
+          "locator": "Body explicitly identifies the fifth tvOS 17 public beta.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:17.0:public-beta-6",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "17.0",
+      "releaseVersionId": "version-tvos-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-29",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos17-iculture-timeline",
+          "locator": "Tijdlijn tvOS 17 beta; Public Beta 1 through 6 with explicit dates.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos17-pb6-appleinsider",
+          "locator": "Body explicitly identifies the sixth tvOS 17 public beta.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:18.0:public-beta-1",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "18.0",
+      "releaseVersionId": "version-tvos-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-07-15",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos18-iculture-timeline",
+          "locator": "Tijdlijn tvOS 18 beta; Public Beta 1, 2, 3, 4, 5, and 8, with no listed Public Beta 6 or 7.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos180-pb1-9to5mac",
+          "locator": "WordPress REST post 958488; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:18.0:public-beta-2",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "18.0",
+      "releaseVersionId": "version-tvos-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-07-24",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos18-iculture-timeline",
+          "locator": "Tijdlijn tvOS 18 beta; Public Beta 1, 2, 3, 4, 5, and 8, with no listed Public Beta 6 or 7.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos180-pb2-9to5mac",
+          "locator": "WordPress REST post 959900; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:18.0:public-beta-3",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "18.0",
+      "releaseVersionId": "version-tvos-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-06",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos18-iculture-timeline",
+          "locator": "Tijdlijn tvOS 18 beta; Public Beta 1, 2, 3, 4, 5, and 8, with no listed Public Beta 6 or 7.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos180-pb3-9to5mac",
+          "locator": "WordPress REST post 961498; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:18.0:public-beta-4",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "18.0",
+      "releaseVersionId": "version-tvos-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-12",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos18-iculture-timeline",
+          "locator": "Tijdlijn tvOS 18 beta; Public Beta 1, 2, 3, 4, 5, and 8, with no listed Public Beta 6 or 7.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:18.0:public-beta-5",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "18.0",
+      "releaseVersionId": "version-tvos-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-20",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos18-iculture-timeline",
+          "locator": "Tijdlijn tvOS 18 beta; Public Beta 1, 2, 3, 4, 5, and 8, with no listed Public Beta 6 or 7.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos18-pb5-bgr",
+          "locator": "Article body explicitly includes tvOS 18 in Apple's fifth public-beta round.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:18.0:public-beta-8",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "18.0",
+      "releaseVersionId": "version-tvos-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-28",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "conflicted",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "needsConflictAdjudication",
+      "identityStatus": "conflict",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos18-iculture-timeline",
+          "locator": "Tijdlijn tvOS 18 beta; Public Beta 1, 2, 3, 4, 5, and 8, with no listed Public Beta 6 or 7.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos18-pb8-macrumors",
+          "locator": "Update establishes a same-day public-program appearance; iCulture supplies the explicit Public Beta 8 label.",
+          "supports": "Retained publisher evidence independently supports the public-program availability and appearance date, but does not independently supply the tvOS public ordinal."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A material date or publisher-label conflict requires independent adjudication; see conflicts.json.",
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.0:public-beta-1",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "26.0",
+      "releaseVersionId": "version-tvos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-07-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos26-iculture-timeline",
+          "locator": "Tijdlijn tvOS 26 Beta; Public Beta 1 through 6 with explicit dates and revision history.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos260-pb1-9to5mac",
+          "locator": "WordPress REST post 1009925; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence independently supports the public-program availability and appearance date, but does not independently supply the tvOS public ordinal."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A second independent contemporary publisher lineage has not yet explicitly corroborated this exact public ordinal.",
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.0:public-beta-2",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "26.0",
+      "releaseVersionId": "version-tvos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-07",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos26-iculture-timeline",
+          "locator": "Tijdlijn tvOS 26 Beta; Public Beta 1 through 6 with explicit dates and revision history.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos260-pb2-9to5mac",
+          "locator": "WordPress REST post 1013058; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.0:public-beta-3",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "26.0",
+      "releaseVersionId": "version-tvos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-14",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos26-iculture-timeline",
+          "locator": "Tijdlijn tvOS 26 Beta; Public Beta 1 through 6 with explicit dates and revision history.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos260-pb3-9to5mac",
+          "locator": "WordPress REST post 1013934; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.0:public-beta-4",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "26.0",
+      "releaseVersionId": "version-tvos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-18",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos26-iculture-timeline",
+          "locator": "Tijdlijn tvOS 26 Beta; Public Beta 1 through 6 with explicit dates and revision history.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos260-pb4-9to5mac",
+          "locator": "WordPress REST post 1014666; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.0:public-beta-5",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "26.0",
+      "releaseVersionId": "version-tvos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-08-25",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos26-iculture-timeline",
+          "locator": "Tijdlijn tvOS 26 Beta; Public Beta 1 through 6 with explicit dates and revision history.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos260-pb5-9to5mac",
+          "locator": "WordPress REST post 1015672; title and article body. The retained post explicitly establishes tvOS public-program availability; where the title is cross-platform, the tvOS statement is in the body.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.0:public-beta-6",
+      "originCohortId": "tvos-major-11-26-public-beta",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "version": "26.0",
+      "releaseVersionId": "version-tvos-26-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-09-02",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:03:34Z",
+        "matchBasis": "Exact published production snapshot for this releaseVersionId contains zero publicBeta events; no channel/route identity match exists.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos26-iculture-timeline",
+          "locator": "Tijdlijn tvOS 26 Beta; Public Beta 1 through 6 with explicit dates and revision history.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos26-pb6-macrumors",
+          "locator": "Headline and opening paragraph explicitly include tvOS 26 in the sixth public-beta round.",
+          "supports": "Retained publisher evidence explicitly supports the tvOS public audience, displayed public ordinal, and appearance date."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "pairedDeveloperProductionState": "notUsedForPublicOrdinal",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "No developer ordinal or build was used to manufacture a public label."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "notProposed": [
+    {
+      "recordId": "not-proposed:apple:tvos:12.0:public-beta-9",
+      "version": "12.0",
+      "label": "Public Beta 9",
+      "classification": "publicDistributionNotEstablished",
+      "reason": "The retained exact public chronology ends at Public Beta 8. Developer Beta 9/10 and GM records cannot supply a public ordinal.",
+      "reversalEvidence": "A contemporary source explicitly identifying tvOS 12 Public Beta 9 and its availability date.",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "releaseVersionId": "version-tvos-12-0",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos12-imore-timeline",
+          "locator": "Retained article history headings for tvOS 12 Public Beta 6, 7, and 8.",
+          "supports": "The retained record defines the evidentiary boundary for this non-proposal."
+        }
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Absence is not silently converted into a release event."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:tvos:13.0:public-beta-7",
+      "version": "13.0",
+      "label": "Public Beta 7",
+      "classification": "publicDistributionNotEstablished",
+      "reason": "The retained exact public chronology ends at Public Beta 6; a contemporary 9to5Mac update expressly said there was no tvOS 13 beta 7 update on the proposed day.",
+      "reversalEvidence": "A contemporary source explicitly identifying tvOS 13 Public Beta 7 and its availability date.",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "releaseVersionId": "version-tvos-13-0",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos13-imore-timeline",
+          "locator": "Retained article history headings for tvOS 13 Public Beta 1 through 6.",
+          "supports": "The retained record defines the evidentiary boundary for this non-proposal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos130-pb7-9to5mac",
+          "locator": "WordPress REST post 606167; title and article body. The update explicitly says there was no tvOS 13 beta 7 update that day; it does not establish Public Beta 7.",
+          "supports": "The retained record defines the evidentiary boundary for this non-proposal."
+        }
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Absence is not silently converted into a release event."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:tvos:14.0:public-beta-3",
+      "version": "14.0",
+      "label": "Public Beta 3",
+      "classification": "publicDistributionNotEstablished",
+      "reason": "Both retained histories jump from Public Beta 2 to Public Beta 4; the developer Beta 3 appearance is not transferred to the public channel.",
+      "reversalEvidence": "A contemporary source explicitly identifying a distinct tvOS 14 Public Beta 3 appearance.",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "releaseVersionId": "version-tvos-14-0",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-imore-timeline",
+          "locator": "Retained article history headings for Public Beta 1, 2, 4, 5, 6, 7, and 8.",
+          "supports": "The retained record defines the evidentiary boundary for this non-proposal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos14-iculture-timeline",
+          "locator": "Tijdlijn tvOS 14 beta; explicitly lists Public Beta 4 through 8 and no Public Beta 3.",
+          "supports": "The retained record defines the evidentiary boundary for this non-proposal."
+        }
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Absence is not silently converted into a release event."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:tvos:15.0:public-beta-3",
+      "version": "15.0",
+      "label": "Public Beta 3",
+      "classification": "disprovedIdentity",
+      "reason": "The retained iCulture chronology explicitly says Apple skipped Public Beta 3 in the tvOS 15 public numbering.",
+      "reversalEvidence": "A stronger contemporary primary or independent publisher source explicitly showing tvOS 15 Public Beta 3 as a public appearance.",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "releaseVersionId": "version-tvos-15-0",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos15-iculture-timeline",
+          "locator": "Tijdlijn tvOS 15 beta; Public Beta 1, 2, 4, 5, 6, 7, and 8, plus explicit statement that Apple skipped Public Beta 3.",
+          "supports": "The retained record defines the evidentiary boundary for this non-proposal."
+        }
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Absence is not silently converted into a release event."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:tvos:16.0:public-beta-6",
+      "version": "16.0",
+      "label": "Public Beta 6",
+      "classification": "disprovedIdentity",
+      "reason": "iCulture labels the August 15 appearance Public Beta 6, but contemporary AppleInsider explicitly calls the same tvOS public round Public Beta 4; no separate Public Beta 6 appearance is established.",
+      "reversalEvidence": "A second independent contemporary lineage explicitly establishing tvOS 16 Public Beta 6 as a distinct public appearance.",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "releaseVersionId": "version-tvos-16-0",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos16-iculture-timeline",
+          "locator": "Tijdlijn tvOS 16 beta; Public Beta 1, 2, 3, 5, plus a conflicting Public Beta 6 label on August 15.",
+          "supports": "The retained record defines the evidentiary boundary for this non-proposal."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos16-pb4-appleinsider",
+          "locator": "Headline and body explicitly identify this as the fourth public-beta round and name tvOS 16.",
+          "supports": "The retained record defines the evidentiary boundary for this non-proposal."
+        }
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Absence is not silently converted into a release event."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:tvos:18.0:public-beta-6",
+      "version": "18.0",
+      "label": "Public Beta 6",
+      "classification": "publicDistributionNotEstablished",
+      "reason": "The retained tvOS-specific chronology jumps from Public Beta 5 to Public Beta 8. Cross-platform numbering is not transferred to tvOS.",
+      "reversalEvidence": "A contemporary tvOS-specific source explicitly identifying Public Beta 6 and its availability date.",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "releaseVersionId": "version-tvos-18-0",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos18-iculture-timeline",
+          "locator": "Tijdlijn tvOS 18 beta; Public Beta 1, 2, 3, 4, 5, and 8, with no listed Public Beta 6 or 7.",
+          "supports": "The retained record defines the evidentiary boundary for this non-proposal."
+        }
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Absence is not silently converted into a release event."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:tvos:18.0:public-beta-7",
+      "version": "18.0",
+      "label": "Public Beta 7",
+      "classification": "publicDistributionNotEstablished",
+      "reason": "The retained tvOS-specific chronology jumps from Public Beta 5 to Public Beta 8. Developer Beta 7 does not create a public identity.",
+      "reversalEvidence": "A contemporary tvOS-specific source explicitly identifying Public Beta 7 and its availability date.",
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "releaseVersionId": "version-tvos-18-0",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/tvos-major-11-26/sources.json",
+          "sourceId": "source-tvos18-iculture-timeline",
+          "locator": "Tijdlijn tvOS 18 beta; Public Beta 1, 2, 3, 4, 5, and 8, with no listed Public Beta 6 or 7.",
+          "supports": "The retained record defines the evidentiary boundary for this non-proposal."
+        }
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Absence is not silently converted into a release event."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ]
+}

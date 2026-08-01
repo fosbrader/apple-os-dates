@@ -1,0 +1,64 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-ipados-point-12-14-followup",
+  "reviewerRole": "researcherSelfCheckOnly",
+  "independentOfResearcher": false,
+  "status": "researchCompleteIndependentReviewPending",
+  "reviewedAt": "2026-07-31T06:47:48.762Z",
+  "checks": {
+    "exactTargetCoverage": {
+      "expected": 40,
+      "actual": 40,
+      "passed": true
+    },
+    "exactClaimLevelEvidence": {
+      "sourceCount": 30,
+      "allSourcesExplicitlyNamePublicOrdinal": true,
+      "genericAvailabilityUsedAsOrdinalProof": false,
+      "developerOrdinalUsedAsPublicOrdinalProof": false,
+      "passed": true
+    },
+    "independentLineageGate": {
+      "minimum": 2,
+      "passingCandidateCount": 40,
+      "failingCandidateCount": 0,
+      "passed": true
+    },
+    "pacificDateNormalization": {
+      "timezone": "America/Los_Angeles",
+      "matchingSourceCount": 30,
+      "mismatchingSourceCount": 0,
+      "passed": true
+    },
+    "productionReconciliation": {
+      "perspective": "published",
+      "useCdn": false,
+      "exactExistingMatchCount": 0,
+      "passed": true
+    },
+    "parentIntegrity": {
+      "parentValidationSha256": "9931c268a09ae90fbb99d77e1f002acf4e4759cf3d9c53dcc994383b05b28991",
+      "parentPacketLocksSha256": "b376e29c15b0f125f9ad80d33dd15a728bd3a45341dfe0811ac147ac8c752696",
+      "parentIndependentReviewSha256": "869aa88d8092a794b92f2bfd6916057c2a93c4abadbcbd13ee15e11955fab5cd",
+      "passed": true
+    },
+    "copyright": {
+      "maxQuotedWordsPerSource": 20,
+      "maxObservedCombinedQuotedWords": 11,
+      "passed": true
+    },
+    "safety": {
+      "sanityMutationPerformed": false,
+      "pageBuildsPerformed": 0,
+      "publicationPerformed": false,
+      "deploymentPerformed": false,
+      "passed": true
+    }
+  },
+  "verdict": "All 40 frozen blocked identities now have at least two exact independent publisher lineages, retain every parent exclusion, match Pacific dates, and remain absent from published production. A different reviewer must independently adjudicate this packet before implementation.",
+  "independentReview": {
+    "status": "pending",
+    "createdByResearcher": false,
+    "implementationUnlocked": false
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-mobile26-public",
+  "frozenAt": "2026-07-31T04:47:03.109Z",
+  "hashAlgorithm": "SHA-256",
+  "artifactCount": 12,
+  "artifactHashes": {
+    "research-handoffs/beta-chronology-gap/mobile26-public/assignment.json": {
+      "bytes": 27220,
+      "sha256": "8b62f4aa281bb37174abfcdbdaa65cd96602e30a256cc2b5c6b5058ac7145930"
+    },
+    "research-handoffs/beta-chronology-gap/mobile26-public/sources.json": {
+      "bytes": 103875,
+      "sha256": "55ba9e035c8f17a3242c8c87259a21c1d89ce657bc6921029eeeff7f0be60e0e"
+    },
+    "research-handoffs/beta-chronology-gap/mobile26-public/candidates.json": {
+      "bytes": 158876,
+      "sha256": "5e5b8090487a8bb5f3a771295b3e6d5b9f55b5526c62f227723e4e582852c491"
+    },
+    "research-handoffs/beta-chronology-gap/mobile26-public/conflicts.json": {
+      "bytes": 10972,
+      "sha256": "7d0ecb8d108ec00914f4cfcebe17fb5c180e261c909abebe64d66b74cadc6f79"
+    },
+    "research-handoffs/beta-chronology-gap/mobile26-public/production-snapshot.json": {
+      "bytes": 71768,
+      "sha256": "588797105e3a037e80b0dde7978d2b79f7b84ff655f4e28bb5e2ca47898811d7"
+    },
+    "research-handoffs/beta-chronology-gap/mobile26-public/review.json": {
+      "bytes": 1284,
+      "sha256": "0b260c2336299f9e4eea7b4696180960556202df1640a6fd2fb17b30ce01750e"
+    },
+    "research-handoffs/beta-chronology-gap/mobile26-public/report.md": {
+      "bytes": 6546,
+      "sha256": "29407c9903c191f74c93101a12a4a4ab701fba05065e395b2750b84537454a92"
+    },
+    "research-handoffs/beta-chronology-gap/mobile26-public/query-production.ts": {
+      "bytes": 7280,
+      "sha256": "d44ea320141dbbad78ac96190f2bee1c5f077b0b9178c481b23fa3eea3677d85"
+    },
+    "research-handoffs/beta-chronology-gap/mobile26-public/fetch-sources.mjs": {
+      "bytes": 25692,
+      "sha256": "1b83618a59e8df8b30e0bee183ac152c0a445bd13e2b2867771e899834799fcb"
+    },
+    "research-handoffs/beta-chronology-gap/mobile26-public/build-packet.mjs": {
+      "bytes": 32966,
+      "sha256": "3ee074516d50457a3a0bae4f8665949a80bbe76628c7cd466a2eb43f130ffbf9"
+    },
+    "research-handoffs/beta-chronology-gap/mobile26-public/validate-packet.mjs": {
+      "bytes": 16724,
+      "sha256": "c410fd5561f2f7cb8ed75c4e30c913a836532d53a6348e680a4c4ec2f07905dc"
+    },
+    "research-handoffs/beta-chronology-gap/proposed-event-candidate.schema.json": {
+      "bytes": 16579,
+      "sha256": "8d474377b15e9bfbdf1d7656a47e7ad7dfdd4ef537d89c2c2f01fdf193e24bee"
+    }
+  },
+  "evidenceFileCount": 98,
+  "evidenceAggregateSha256": "973a7b71b1cf2b4a414465ac6337865ddc7a9052661a001ede34bea041506e01",
+  "captureSummary": {
+    "attempted": 52,
+    "captured": 49,
+    "failed": 3,
+    "failedSourcesAreCandidateEvidence": false
+  },
+  "reviewState": "pendingIndependentChronologyReview",
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "pageBuildAllowed": false,
+    "deploymentAllowed": false
+  }
+}

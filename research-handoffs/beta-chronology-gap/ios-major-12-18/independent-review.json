@@ -1,0 +1,568 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-major-12-18",
+  "reviewedAt": "2026-07-31T05:18:06.000Z",
+  "reviewer": "codex-independent-review-ios-major-12-18",
+  "independentOfResearcher": true,
+  "verdict": "partiallyApprovedWithNineCandidatesBlocked",
+  "summary": {
+    "candidateCount": 46,
+    "chronologyApprovedCandidateCount": 37,
+    "blockedCandidateCount": 9,
+    "exactExistingMatchCount": 3,
+    "existingMatchesApprovedForRetention": 2,
+    "existingMatchesWithIdentityConflict": 1,
+    "notProposedCount": 9,
+    "notProposedRecordsApproved": 7,
+    "notProposedRecordsBlocked": 2,
+    "finding": "The packet is mechanically intact and production reconciliation is current, but five early iOS 12 candidates and two late-cycle candidates do not have two independent lineages at the exact version/ordinal/date grain. Two additional candidates are blocked by unresolved public-label versus appearance-count conflicts. The iOS 14 Public Beta 2 and iOS 15 Public Beta 3 negative claims are not approved."
+  },
+  "lockedFileVerification": {
+    "packetLocksPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/packet-locks.json",
+    "declaredMaterialFileCount": 82,
+    "verifiedMaterialFileCount": 82,
+    "verifiedBytes": 23360695,
+    "byteFailures": 0,
+    "sha256Failures": 0,
+    "allPacketArtifactHashesReproduced": true
+  },
+  "rawEvidenceVerification": {
+    "rawEvidenceLocksPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/raw-evidence-locks.json",
+    "declaredSourceCount": 66,
+    "verifiedSourceCount": 66,
+    "uniqueRawEvidencePaths": 66,
+    "verifiedRawBytes": 22699591,
+    "verifiedReusedSources": 49,
+    "verifiedFreshSources": 17,
+    "rawByteFailures": 0,
+    "rawSha256Failures": 0,
+    "selectedTextSha256Failures": 0,
+    "reuseHashFailures": 0,
+    "allRawAndSelectedEvidenceHashesReproduced": true
+  },
+  "checks": {
+    "packetJsonParsed": true,
+    "candidateIdsUnique": true,
+    "candidateIdentityKeysUnique": true,
+    "existingMatchIdsUnique": true,
+    "notProposedRecordIdsUnique": true,
+    "notProposedIdentityKeysUnique": true,
+    "sourceIdsUnique": true,
+    "rawLockSourceIdsUnique": true,
+    "observedAppearanceCoverageUniqueAndComplete": true,
+    "observedAppearanceCount": 49,
+    "candidateCount": 46,
+    "exactExistingMatchCount": 3,
+    "notProposedCount": 9,
+    "conflictCount": 14,
+    "allEvidenceReferencesResolve": true,
+    "candidateEvidenceReferencesInspected": 124,
+    "existingMatchEvidenceReferencesInspected": 6,
+    "notProposedEvidenceReferencesInspected": 20,
+    "conflictSourceReferencesInspected": 53,
+    "uniquePacketSourcesInspected": 66,
+    "allCandidateLocatorsInspected": true,
+    "allSourceRolesInspected": true,
+    "allFourteenPacketConflictsInspected": true,
+    "allNineNotProposedRecordsInspected": true,
+    "allSameDayChannelBoundariesInspected": true,
+    "developerBetaSevenWithdrawalBoundaryInspected": true,
+    "gmAndRcBoundariesInspected": true,
+    "freshProductionQueryPerformed": true,
+    "freshProductionQueryUsedCdn": false,
+    "freshProductionPerspectivePublished": true,
+    "freshExactParents": 7,
+    "freshExactExistingMatches": 3,
+    "freshCandidateMatches": 0,
+    "sanityMutationPerformed": false,
+    "productionIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "productionRecheck": {
+    "queriedAt": "2026-07-31T05:11:39.365Z",
+    "perspective": "published",
+    "useCdn": false,
+    "totalReleaseEvents": 2068,
+    "iosPublicBetaEventsAllVersions": 10,
+    "scopedReleaseEvents": 84,
+    "scopedDeveloperBetaEvents": 67,
+    "scopedPublicBetaEvents": 3,
+    "exactParentMatchCount": 7,
+    "exactCandidateMatchCount": 0,
+    "unexpectedRouteAliasMatchCount": 0,
+    "exactExistingMatches": [
+      {
+        "releaseVersionId": "version-ios-15-0",
+        "routeAlias": "public-beta-1",
+        "appearanceDate": "2021-06-30"
+      },
+      {
+        "releaseVersionId": "version-ios-16-0",
+        "routeAlias": "public-beta-1",
+        "appearanceDate": "2022-07-11"
+      },
+      {
+        "releaseVersionId": "version-ios-17-0",
+        "routeAlias": "public-beta-1",
+        "appearanceDate": "2023-07-12"
+      }
+    ],
+    "finding": "Fresh published production still contains only the three packet-recorded exact matches. Production absence does not resolve historical ordinal conflicts and is not treated as evidence that a disputed identity is correct."
+  },
+  "sourceReferenceAndLineageAudit": {
+    "declaredCandidatesWithAtLeastTwoPublisherFamilies": 46,
+    "candidatesWithAtLeastTwoUsableExactVersionOrdinalDateLineages": 39,
+    "exactLineageFailures": [
+      "candidate:apple:ios:12.0:public-beta-1",
+      "candidate:apple:ios:12.0:public-beta-2",
+      "candidate:apple:ios:12.0:public-beta-3",
+      "candidate:apple:ios:12.0:public-beta-4",
+      "candidate:apple:ios:12.0:public-beta-5",
+      "candidate:apple:ios:17.0:public-beta-6",
+      "candidate:apple:ios:18.0:public-beta-5"
+    ],
+    "materialIdentityConflictsDespiteMultipleDeclaredLineages": [
+      "candidate:apple:ios:14.0:public-beta-1",
+      "candidate:apple:ios:15.0:public-beta-2"
+    ],
+    "finding": "Publisher-family counts alone overstate corroboration. A lineage counts for chronology approval only when its retained raw page supports the same iOS version, public ordinal, and Pacific appearance date without deriving the public ordinal from a developer ordinal or mere appearance order."
+  },
+  "sourceLocatorFindings": [
+    {
+      "findingId": "imore-ios12-early-history-absent",
+      "severity": "blocking",
+      "sourceIds": [
+        "imore-ios12"
+      ],
+      "affectedCandidateIds": [
+        "candidate:apple:ios:12.0:public-beta-1",
+        "candidate:apple:ios:12.0:public-beta-2",
+        "candidate:apple:ios:12.0:public-beta-3",
+        "candidate:apple:ios:12.0:public-beta-4",
+        "candidate:apple:ios:12.0:public-beta-5"
+      ],
+      "finding": "The retained iMore page contains no June 25, July 5, July 18, July 31, or August 6, 2018 major-version history entries. It contains no exact iOS 12 Public Beta 2 through Public Beta 5 claims. Its visible iOS 12 Public Beta 1 title has no retained June 25 appearance-date evidence. The candidate locators therefore overstate this page.",
+      "allowedUse": "The retained page can corroborate iOS 12 Public Beta 6 through Public Beta 10 only.",
+      "unblockEvidence": "Capture a second independent publisher or Apple artifact that explicitly establishes each exact early iOS 12 public ordinal and Pacific appearance date."
+    },
+    {
+      "findingId": "generic-developer-article-public-ordinal-overclaim",
+      "severity": "qualification",
+      "sourceIds": [
+        "mr-ios12-dev7-pulled",
+        "mr-ios13-pb6",
+        "mr-ios13-pb7",
+        "mr-ios14-pb6",
+        "mr-ios14-pb7",
+        "mr-ios14-pb8",
+        "mr-ios15-pb5",
+        "mr-ios15-pb7",
+        "mr-ios15-pb8",
+        "mr-ios16-pb4",
+        "mr-ios16-pb6",
+        "mr-ios17-pb4",
+        "mr-ios17-pb5",
+        "mr-ios17-pb6",
+        "mr-ios18-pb4",
+        "mr-ios18-pb5",
+        "mr-ios18-pb6"
+      ],
+      "finding": "These retained MacRumors pages can establish a dated public availability update or a withdrawal boundary, but their main editorial text does not explicitly establish the packet's proposed public ordinal. Developer-title numerals and comment text are not public-ordinal evidence.",
+      "allowedUse": "Use for public availability, appearance date where the public update is date-resolved, channel separation, or conflict resolution. Do not use as the second exact public-ordinal lineage."
+    },
+    {
+      "findingId": "ios14-opening-label-conflict",
+      "severity": "blocking",
+      "sourceIds": [
+        "mr-ios14-opening",
+        "iculture-ios14",
+        "imore-ios14",
+        "forbes-ios14-pb3",
+        "redmondpie-ios14-pb3"
+      ],
+      "affectedCandidateIds": [
+        "candidate:apple:ios:14.0:public-beta-1"
+      ],
+      "affectedNotProposedRecordIds": [
+        "not-proposed:apple:ios:14.0:public-beta-2"
+      ],
+      "finding": "MacRumors, iCulture, and iMore describe July 9 as the first/PB1 public appearance, while retained Forbes and Redmond Pie material treat the earlier public payload as Public Beta 2 and July 23 as Public Beta 3. Appearance count and displayed/build-aligned label are not safely interchangeable.",
+      "unblockEvidence": "A contemporaneous Apple update screen, catalog, profile artifact, or comparably direct evidence must establish the displayed July 9 public label and explain whether Public Beta 2 existed as that same appearance."
+    },
+    {
+      "findingId": "ios15-early-label-conflict",
+      "severity": "blocking",
+      "sourceIds": [
+        "mr-ios15-opening",
+        "mr-ios15-pb2",
+        "iculture-ios15",
+        "imore-ios15",
+        "idb-ios15-pb2",
+        "forbes-ios15-opening-as-pb2",
+        "forbes-ios15-second-as-pb3",
+        "wccftech-ios15-second-as-pb3"
+      ],
+      "affectedCandidateIds": [
+        "candidate:apple:ios:15.0:public-beta-2"
+      ],
+      "affectedExistingMatchIds": [
+        "existing-match:apple:ios:15.0:public-beta-1"
+      ],
+      "affectedNotProposedRecordIds": [
+        "not-proposed:apple:ios:15.0:public-beta-3"
+      ],
+      "finding": "MacRumors, iCulture, iMore, and iDownloadBlog count the June 30 and July 16 appearances as first/PB1 and second/PB2. Forbes labels those payloads Public Beta 2 and Public Beta 3, Wccftech labels July 16 Public Beta 3, and retained contemporary MacRumors comments report that the download itself displayed Public Beta 3. The packet cannot resolve official label identity by choosing appearance order.",
+      "unblockEvidence": "Capture a contemporaneous Apple update screen, catalog, profile artifact, or other direct label evidence for both June 30 and July 16 before retaining or correcting the three affected identities."
+    },
+    {
+      "findingId": "ios17-pb6-ordinal-missing",
+      "severity": "blocking",
+      "sourceIds": [
+        "iculture-ios17",
+        "mr-ios17-pb6"
+      ],
+      "affectedCandidateIds": [
+        "candidate:apple:ios:17.0:public-beta-6"
+      ],
+      "finding": "iCulture explicitly establishes Public Beta 6 on August 29. The retained MacRumors page establishes an August 29 public update but calls only the developer payload Beta 8; it never identifies the public update as Public Beta 6.",
+      "unblockEvidence": "Capture a second independent source that explicitly says iOS 17 Public Beta 6 was available on August 29, 2023."
+    },
+    {
+      "findingId": "ios18-pb5-triangulation-not-exact-corroboration",
+      "severity": "blocking",
+      "sourceIds": [
+        "iculture-ios18",
+        "mr-ios18-pb5",
+        "osxd-ios18-pb5"
+      ],
+      "affectedCandidateIds": [
+        "candidate:apple:ios:18.0:public-beta-5"
+      ],
+      "finding": "iCulture alone states the full identity Public Beta 5 on August 20. MacRumors establishes August 20 public availability but not Public Beta 5, while OS X Daily explicitly identifies Public Beta 5 but dates its report and claimed issue to August 21. Those sources triangulate the event but do not provide two independent exact version/ordinal/August 20 lineages.",
+      "unblockEvidence": "Capture a second independent source explicitly establishing iOS 18 Public Beta 5 on August 20 Pacific, or direct timestamped Apple evidence that resolves the August 20 versus August 21 appearance date."
+    }
+  ],
+  "mandatoryQualifications": [
+    {
+      "qualificationId": "ios12-pb6-pacific-calendar-date",
+      "appliesToCandidateIds": [
+        "candidate:apple:ios:12.0:public-beta-6"
+      ],
+      "requirement": "Use 2018-08-15 America/Los_Angeles. Preserve iCulture's August 16 European date as a reporting/time-zone discrepancy, not another appearance."
+    },
+    {
+      "qualificationId": "ios14-pb3-label-versus-appearance-count",
+      "appliesToCandidateIds": [
+        "candidate:apple:ios:14.0:public-beta-3"
+      ],
+      "requirement": "State that iCulture, Forbes, and Redmond Pie explicitly use Public Beta 3, while MacRumors calls it the second public appearance. Do not claim unanimous ordinal terminology."
+    },
+    {
+      "qualificationId": "ios14-pb4-date-conflict",
+      "appliesToCandidateIds": [
+        "candidate:apple:ios:14.0:public-beta-4"
+      ],
+      "requirement": "Use 2020-08-06 from MacRumors and iMore. Preserve iCulture's erroneous duplication of the August 4 developer date as a source conflict."
+    },
+    {
+      "qualificationId": "ios15-apple-label-versus-appearance-count",
+      "appliesToCandidateIds": [
+        "candidate:apple:ios:15.0:public-beta-4",
+        "candidate:apple:ios:15.0:public-beta-6"
+      ],
+      "requirement": "Preserve Apple/build-aligned PB4 and PB6 labels supported by at least two exact lineages, while noting that MacRumors calls those payloads the third and fifth public appearances."
+    },
+    {
+      "qualificationId": "ios16-opening-source-errors",
+      "appliesToCandidateIds": [
+        "candidate:apple:ios:16.0:public-beta-2"
+      ],
+      "appliesToExistingMatchIds": [
+        "existing-match:apple:ios:16.0:public-beta-1"
+      ],
+      "requirement": "Use July 11 for PB1 and July 28 for PB2 from the exact MacRumors and corroborating chronology evidence. Do not reuse iMore's erroneous July 5 opening heading or iCulture's incorrect PB4 label for July 28."
+    },
+    {
+      "qualificationId": "ios17-pb4-public-update-date",
+      "appliesToCandidateIds": [
+        "candidate:apple:ios:17.0:public-beta-4"
+      ],
+      "requirement": "Use 2023-08-16 for public availability. MacRumors' article originated with the August 15 developer release; iCulture and OS X Daily independently establish the public date."
+    }
+  ],
+  "conflictAdjudications": [
+    {
+      "conflictId": "ios14-public-numbering-transition",
+      "disposition": "partiallyApproved",
+      "finding": "Public Beta 3 on July 23 is approved with qualification, but Public Beta 1 on July 9 and the asserted absence of Public Beta 2 remain blocked because retained sources use incompatible label conventions."
+    },
+    {
+      "conflictId": "ios14-false-july22-public-beta-2",
+      "disposition": "negativeClaimBlocked",
+      "finding": "The packet disproves a separate July 22 public distribution, but it does not safely disprove Public Beta 2 as the label of the July 9 appearance. The broad not-proposed record is not approved."
+    },
+    {
+      "conflictId": "ios14-public-beta-4-date",
+      "disposition": "approvedWithMandatoryQualification",
+      "finding": "Two independent exact sources support August 6; iCulture's August 4 row is isolated as an error."
+    },
+    {
+      "conflictId": "ios15-public-numbering-transition",
+      "disposition": "partiallyApproved",
+      "finding": "Public Beta 4 on July 28 is approved with qualification. The earlier PB1/PB2 identities and claimed missing PB3 are not approved without direct Apple label evidence."
+    },
+    {
+      "conflictId": "ios15-build-aligned-alternate-early-labels",
+      "disposition": "unresolvedIdentityConflict",
+      "finding": "The alternate PB2/PB3 labels are supported by two retained publisher lineages and contemporary reports of the displayed download label. They cannot be dismissed as developer-ordinal inference."
+    },
+    {
+      "conflictId": "ios12-public-beta-6-calendar-date",
+      "disposition": "approvedWithMandatoryQualification",
+      "finding": "iMore and MacRumors support August 15 Pacific; iCulture's August 16 is preserved as a European reporting date."
+    },
+    {
+      "conflictId": "ios12-developer-beta-7-withdrawal",
+      "disposition": "approved",
+      "finding": "The retained MacRumors withdrawal page says the planned public release did not occur, and the next page explicitly identifies Public Beta 6 as the replacement developer Beta 8 payload. No public event is created for pulled Developer Beta 7."
+    },
+    {
+      "conflictId": "ios16-rolling-source-errors",
+      "disposition": "approvedWithMandatoryQualification",
+      "finding": "MacRumors and the internally consistent portions of the rolling histories support PB1 July 11 and PB2 July 28. The two isolated rolling-page errors are excluded."
+    },
+    {
+      "conflictId": "ios17-public-beta-4-article-date",
+      "disposition": "approvedWithMandatoryQualification",
+      "finding": "iCulture and OS X Daily establish August 16 public availability; the August 15 MacRumors timestamp belongs to the developer article."
+    },
+    {
+      "conflictId": "ios18-public-beta-5-calendar-date",
+      "disposition": "candidateBlocked",
+      "finding": "The packet lacks two exact PB5/August 20 lineages. The August 21 OS X Daily record is not merely a UTC normalization: its retained timestamp is 2024-08-21T21:06:33Z, which is also August 21 Pacific."
+    },
+    {
+      "conflictId": "ios-paired-developer-revisions-not-public-respins",
+      "disposition": "approvedGuardrail",
+      "finding": "No retained source establishes a separately distributed public revision. Same-day developer revisions remain separate developerBeta events."
+    },
+    {
+      "conflictId": "ios-ipados-cross-packet-numbering-not-reused",
+      "disposition": "approvedGuardrail",
+      "finding": "Only iOS-specific retained evidence was used; the blocked early iOS label conflicts are not resolved from iPadOS chronology."
+    },
+    {
+      "conflictId": "ios-same-day-channel-separation",
+      "disposition": "approvedGuardrail",
+      "finding": "Twenty-five reviewed public appearances share a date with a non-public event in the frozen production snapshot. Their channel identities remain distinct."
+    },
+    {
+      "conflictId": "ios-gm-rc-not-next-public-beta",
+      "disposition": "approvedGuardrail",
+      "finding": "The seven terminal next-ordinal negatives are approved. Production and retained cycle histories classify the boundary as GM for iOS 12–14 and RC for iOS 15–18."
+    }
+  ],
+  "candidateVerdict": {
+    "chronologyApproved": [
+      "candidate:apple:ios:12.0:public-beta-6",
+      "candidate:apple:ios:12.0:public-beta-7",
+      "candidate:apple:ios:12.0:public-beta-8",
+      "candidate:apple:ios:12.0:public-beta-9",
+      "candidate:apple:ios:12.0:public-beta-10",
+      "candidate:apple:ios:13.0:public-beta-1",
+      "candidate:apple:ios:13.0:public-beta-2",
+      "candidate:apple:ios:13.0:public-beta-3",
+      "candidate:apple:ios:13.0:public-beta-4",
+      "candidate:apple:ios:13.0:public-beta-5",
+      "candidate:apple:ios:13.0:public-beta-6",
+      "candidate:apple:ios:13.0:public-beta-7",
+      "candidate:apple:ios:14.0:public-beta-3",
+      "candidate:apple:ios:14.0:public-beta-4",
+      "candidate:apple:ios:14.0:public-beta-5",
+      "candidate:apple:ios:14.0:public-beta-6",
+      "candidate:apple:ios:14.0:public-beta-7",
+      "candidate:apple:ios:14.0:public-beta-8",
+      "candidate:apple:ios:15.0:public-beta-4",
+      "candidate:apple:ios:15.0:public-beta-5",
+      "candidate:apple:ios:15.0:public-beta-6",
+      "candidate:apple:ios:15.0:public-beta-7",
+      "candidate:apple:ios:15.0:public-beta-8",
+      "candidate:apple:ios:16.0:public-beta-2",
+      "candidate:apple:ios:16.0:public-beta-3",
+      "candidate:apple:ios:16.0:public-beta-4",
+      "candidate:apple:ios:16.0:public-beta-5",
+      "candidate:apple:ios:16.0:public-beta-6",
+      "candidate:apple:ios:17.0:public-beta-2",
+      "candidate:apple:ios:17.0:public-beta-3",
+      "candidate:apple:ios:17.0:public-beta-4",
+      "candidate:apple:ios:17.0:public-beta-5",
+      "candidate:apple:ios:18.0:public-beta-1",
+      "candidate:apple:ios:18.0:public-beta-2",
+      "candidate:apple:ios:18.0:public-beta-3",
+      "candidate:apple:ios:18.0:public-beta-4",
+      "candidate:apple:ios:18.0:public-beta-6"
+    ],
+    "approvedWithMandatoryQualification": [
+      "candidate:apple:ios:12.0:public-beta-6",
+      "candidate:apple:ios:14.0:public-beta-3",
+      "candidate:apple:ios:14.0:public-beta-4",
+      "candidate:apple:ios:15.0:public-beta-4",
+      "candidate:apple:ios:15.0:public-beta-6",
+      "candidate:apple:ios:16.0:public-beta-2",
+      "candidate:apple:ios:17.0:public-beta-4"
+    ],
+    "blocked": [
+      "candidate:apple:ios:12.0:public-beta-1",
+      "candidate:apple:ios:12.0:public-beta-2",
+      "candidate:apple:ios:12.0:public-beta-3",
+      "candidate:apple:ios:12.0:public-beta-4",
+      "candidate:apple:ios:12.0:public-beta-5",
+      "candidate:apple:ios:14.0:public-beta-1",
+      "candidate:apple:ios:15.0:public-beta-2",
+      "candidate:apple:ios:17.0:public-beta-6",
+      "candidate:apple:ios:18.0:public-beta-5"
+    ]
+  },
+  "candidateReviews": [
+    {"candidateId":"candidate:apple:ios:12.0:public-beta-1","appearanceDate":"2018-06-25","disposition":"blocked","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":1,"blockerFindingId":"imore-ios12-early-history-absent"},
+    {"candidateId":"candidate:apple:ios:12.0:public-beta-2","appearanceDate":"2018-07-05","disposition":"blocked","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":1,"blockerFindingId":"imore-ios12-early-history-absent"},
+    {"candidateId":"candidate:apple:ios:12.0:public-beta-3","appearanceDate":"2018-07-18","disposition":"blocked","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":1,"blockerFindingId":"imore-ios12-early-history-absent"},
+    {"candidateId":"candidate:apple:ios:12.0:public-beta-4","appearanceDate":"2018-07-31","disposition":"blocked","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":1,"blockerFindingId":"imore-ios12-early-history-absent"},
+    {"candidateId":"candidate:apple:ios:12.0:public-beta-5","appearanceDate":"2018-08-06","disposition":"blocked","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":1,"blockerFindingId":"imore-ios12-early-history-absent"},
+    {"candidateId":"candidate:apple:ios:12.0:public-beta-6","appearanceDate":"2018-08-15","disposition":"chronologyApprovedWithMandatoryQualification","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2,"qualificationIds":["ios12-pb6-pacific-calendar-date"]},
+    {"candidateId":"candidate:apple:ios:12.0:public-beta-7","appearanceDate":"2018-08-20","disposition":"chronologyApproved","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:12.0:public-beta-8","appearanceDate":"2018-08-23","disposition":"chronologyApproved","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:12.0:public-beta-9","appearanceDate":"2018-08-27","disposition":"chronologyApproved","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:12.0:public-beta-10","appearanceDate":"2018-08-31","disposition":"chronologyApproved","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:13.0:public-beta-1","appearanceDate":"2019-06-24","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":3},
+    {"candidateId":"candidate:apple:ios:13.0:public-beta-2","appearanceDate":"2019-07-08","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":3},
+    {"candidateId":"candidate:apple:ios:13.0:public-beta-3","appearanceDate":"2019-07-18","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":3},
+    {"candidateId":"candidate:apple:ios:13.0:public-beta-4","appearanceDate":"2019-07-30","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":3},
+    {"candidateId":"candidate:apple:ios:13.0:public-beta-5","appearanceDate":"2019-08-08","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":3},
+    {"candidateId":"candidate:apple:ios:13.0:public-beta-6","appearanceDate":"2019-08-15","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:13.0:public-beta-7","appearanceDate":"2019-08-21","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:14.0:public-beta-1","appearanceDate":"2020-07-09","disposition":"blocked","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":3,"blockerFindingId":"ios14-opening-label-conflict"},
+    {"candidateId":"candidate:apple:ios:14.0:public-beta-3","appearanceDate":"2020-07-23","disposition":"chronologyApprovedWithMandatoryQualification","evidenceRefCount":4,"publisherFamilyCount":4,"usableExactLineageCount":3,"qualificationIds":["ios14-pb3-label-versus-appearance-count"]},
+    {"candidateId":"candidate:apple:ios:14.0:public-beta-4","appearanceDate":"2020-08-06","disposition":"chronologyApprovedWithMandatoryQualification","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2,"qualificationIds":["ios14-pb4-date-conflict"]},
+    {"candidateId":"candidate:apple:ios:14.0:public-beta-5","appearanceDate":"2020-08-19","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":3},
+    {"candidateId":"candidate:apple:ios:14.0:public-beta-6","appearanceDate":"2020-08-25","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:14.0:public-beta-7","appearanceDate":"2020-09-03","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:14.0:public-beta-8","appearanceDate":"2020-09-09","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:15.0:public-beta-2","appearanceDate":"2021-07-16","disposition":"blocked","evidenceRefCount":4,"publisherFamilyCount":4,"usableExactLineageCount":4,"blockerFindingId":"ios15-early-label-conflict"},
+    {"candidateId":"candidate:apple:ios:15.0:public-beta-4","appearanceDate":"2021-07-28","disposition":"chronologyApprovedWithMandatoryQualification","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2,"qualificationIds":["ios15-apple-label-versus-appearance-count"]},
+    {"candidateId":"candidate:apple:ios:15.0:public-beta-5","appearanceDate":"2021-08-11","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:15.0:public-beta-6","appearanceDate":"2021-08-18","disposition":"chronologyApprovedWithMandatoryQualification","evidenceRefCount":4,"publisherFamilyCount":4,"usableExactLineageCount":3,"qualificationIds":["ios15-apple-label-versus-appearance-count"]},
+    {"candidateId":"candidate:apple:ios:15.0:public-beta-7","appearanceDate":"2021-08-25","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:15.0:public-beta-8","appearanceDate":"2021-08-31","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:16.0:public-beta-2","appearanceDate":"2022-07-28","disposition":"chronologyApprovedWithMandatoryQualification","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2,"qualificationIds":["ios16-opening-source-errors"]},
+    {"candidateId":"candidate:apple:ios:16.0:public-beta-3","appearanceDate":"2022-08-09","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":3},
+    {"candidateId":"candidate:apple:ios:16.0:public-beta-4","appearanceDate":"2022-08-15","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:16.0:public-beta-5","appearanceDate":"2022-08-24","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":3},
+    {"candidateId":"candidate:apple:ios:16.0:public-beta-6","appearanceDate":"2022-08-29","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:17.0:public-beta-2","appearanceDate":"2023-07-31","disposition":"chronologyApproved","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:17.0:public-beta-3","appearanceDate":"2023-08-09","disposition":"chronologyApproved","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:17.0:public-beta-4","appearanceDate":"2023-08-16","disposition":"chronologyApprovedWithMandatoryQualification","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2,"qualificationIds":["ios17-pb4-public-update-date"]},
+    {"candidateId":"candidate:apple:ios:17.0:public-beta-5","appearanceDate":"2023-08-22","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:17.0:public-beta-6","appearanceDate":"2023-08-29","disposition":"blocked","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":1,"blockerFindingId":"ios17-pb6-ordinal-missing"},
+    {"candidateId":"candidate:apple:ios:18.0:public-beta-1","appearanceDate":"2024-07-15","disposition":"chronologyApproved","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:18.0:public-beta-2","appearanceDate":"2024-07-29","disposition":"chronologyApproved","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:18.0:public-beta-3","appearanceDate":"2024-08-06","disposition":"chronologyApproved","evidenceRefCount":2,"publisherFamilyCount":2,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:18.0:public-beta-4","appearanceDate":"2024-08-12","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2},
+    {"candidateId":"candidate:apple:ios:18.0:public-beta-5","appearanceDate":"2024-08-20","disposition":"blocked","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":1,"blockerFindingId":"ios18-pb5-triangulation-not-exact-corroboration"},
+    {"candidateId":"candidate:apple:ios:18.0:public-beta-6","appearanceDate":"2024-08-28","disposition":"chronologyApproved","evidenceRefCount":3,"publisherFamilyCount":3,"usableExactLineageCount":2}
+  ],
+  "existingMatchReviews": [
+    {
+      "matchId": "existing-match:apple:ios:15.0:public-beta-1",
+      "appearanceDate": "2021-06-30",
+      "disposition": "identityConflictRequiresCorrectionResearch",
+      "finding": "Production exactly matches the packet's PB1 identity, but retained Forbes evidence calls the same payload Public Beta 2 and the broader early-cycle evidence shows official-label versus appearance-count ambiguity. No mutation is authorized."
+    },
+    {
+      "matchId": "existing-match:apple:ios:16.0:public-beta-1",
+      "appearanceDate": "2022-07-11",
+      "disposition": "retainExistingWithMandatoryQualification",
+      "qualificationIds": [
+        "ios16-opening-source-errors"
+      ]
+    },
+    {
+      "matchId": "existing-match:apple:ios:17.0:public-beta-1",
+      "appearanceDate": "2023-07-12",
+      "disposition": "retainExisting"
+    }
+  ],
+  "notProposedReviews": [
+    {
+      "recordId": "not-proposed:apple:ios:14.0:public-beta-2",
+      "disposition": "blocked",
+      "finding": "A separate July 22 public distribution is not corroborated, but retained sources plausibly identify the July 9 payload itself as Public Beta 2. The broad negative identity claim is not safe."
+    },
+    {
+      "recordId": "not-proposed:apple:ios:15.0:public-beta-3",
+      "disposition": "blocked",
+      "finding": "Retained Forbes and Wccftech pages explicitly identify the July 16 payload as Public Beta 3, and contemporary MacRumors comments report that the download displayed Public Beta 3. The negative identity claim is not safe."
+    },
+    {
+      "recordId": "not-proposed:apple:ios:12.0:public-beta-11",
+      "disposition": "approved",
+      "terminalChannel": "goldenMaster",
+      "terminalDate": "2018-09-12"
+    },
+    {
+      "recordId": "not-proposed:apple:ios:13.0:public-beta-8",
+      "disposition": "approved",
+      "terminalChannel": "goldenMaster",
+      "terminalDate": "2019-09-10"
+    },
+    {
+      "recordId": "not-proposed:apple:ios:14.0:public-beta-9",
+      "disposition": "approved",
+      "terminalChannel": "goldenMaster",
+      "terminalDate": "2020-09-15"
+    },
+    {
+      "recordId": "not-proposed:apple:ios:15.0:public-beta-9",
+      "disposition": "approved",
+      "terminalChannel": "releaseCandidate",
+      "terminalDate": "2021-09-14"
+    },
+    {
+      "recordId": "not-proposed:apple:ios:16.0:public-beta-7",
+      "disposition": "approved",
+      "terminalChannel": "releaseCandidate",
+      "terminalDate": "2022-09-07"
+    },
+    {
+      "recordId": "not-proposed:apple:ios:17.0:public-beta-7",
+      "disposition": "approved",
+      "terminalChannel": "releaseCandidate",
+      "terminalDate": "2023-09-12"
+    },
+    {
+      "recordId": "not-proposed:apple:ios:18.0:public-beta-7",
+      "disposition": "approved",
+      "terminalChannel": "releaseCandidate",
+      "terminalDate": "2024-09-09"
+    }
+  ],
+  "authorization": {
+    "chronologyApprovedCandidateCount": 37,
+    "chronologyApprovalScope": "Public-beta identity, public ordinal, channel, and Pacific appearance date only, subject to every mandatory qualification.",
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "productionIdAllocationAllowed": false,
+    "pageBuildAllowed": false,
+    "deploymentAllowed": false
+  },
+  "requiredNextGate": {
+    "blockedCandidatesRemainResearchOnly": true,
+    "blockedNotProposedClaimsMustNotBePromoted": true,
+    "productionCorrectionResearchRequiredForIos15Pb1": true,
+    "separateImplementationAuthorizationRequired": true,
+    "notes": "Only candidateVerdict.chronologyApproved is independently chronology-cleared. This review creates no Sanity IDs, performs no writes, authorizes no page builds, and does not authorize publication or deployment."
+  }
+}

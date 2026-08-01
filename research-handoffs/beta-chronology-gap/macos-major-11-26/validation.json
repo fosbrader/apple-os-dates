@@ -1,0 +1,106 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-major-11-26",
+  "validatedAt": "2026-07-31T04:42:39.866Z",
+  "status": "passedSelfCheckPendingIndependentReview",
+  "valid": true,
+  "validator": "research-handoffs/beta-chronology-gap/macos-major-11-26/validate.mjs",
+  "checks": {
+    "packetJsonParsed": 6,
+    "candidateCount": 41,
+    "sourceCount": 65,
+    "exceptionalAppearanceCount": 2,
+    "notProposedCount": 4,
+    "conflictCount": 9,
+    "candidatesByVersion": {
+      "11.0": 6,
+      "12.0": 9,
+      "13.0": 9,
+      "14.0": 5,
+      "15.0": 6,
+      "26.0": 6
+    },
+    "candidatesByIdentityStatus": {
+      "confirmed": 33,
+      "conflict": 8
+    },
+    "candidatesByEvidenceState": {
+      "corroborated": 41
+    },
+    "candidatesByProductionStatus": {
+      "confirmedMissing": 41
+    },
+    "sharedCandidateSchemaValid": true,
+    "evidenceReferencesResolved": 102,
+    "assignmentTargetsResolved": 41,
+    "rawEvidenceBytesVerified": 45001216,
+    "rawEvidenceFilesVerified": 65,
+    "productionExactChecks": 41,
+    "stableProductionIdsCreated": 0,
+    "lockedArtifactCount": 10
+  },
+  "errors": [],
+  "lockedArtifacts": [
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-major-11-26/assignment.json",
+      "bytes": 16689,
+      "sha256": "6450d828bacbfe12c2378016054631a609a6ca4bd17be2b7917c6c69f6874d03"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-major-11-26/sources.json",
+      "bytes": 114339,
+      "sha256": "f235877506efc49e06848d5bfb7c25a8af5b4e356f53767a97ab0ecead17c3ba"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-major-11-26/candidates.json",
+      "bytes": 129315,
+      "sha256": "f19173aad6913c30899254381396d2b7c778b49513c42a1434f86c51dfe150fa"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-major-11-26/conflicts.json",
+      "bytes": 8127,
+      "sha256": "f7b0ee09d067d930a00f7d02157de58be9018fc721b27f508e068dface2d94ac"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-major-11-26/production-snapshot.json",
+      "bytes": 12607,
+      "sha256": "19a90cd4ebb028b06479219654da82015bde9f1f5cf0601c045b06deb69bc6be"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-major-11-26/report.md",
+      "bytes": 4862,
+      "sha256": "b6f96f43ec96c4fb9a925ae07b5f340e1fe375b3742b7b8f7946de2605d2ccfc"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-major-11-26/review.json",
+      "bytes": 4339,
+      "sha256": "144eea9a06f8a51ba9deed18bf4ef0509d69e9c7da0e1a7a3ec135c1732d47fb"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-major-11-26/query-production.ts",
+      "bytes": 4452,
+      "sha256": "b9c3fda73e5055f1ea6e8097f7b608e8fcf400ccde2a2333c96e0a0c41945c48"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-major-11-26/build-packet.mjs",
+      "bytes": 55210,
+      "sha256": "3a86a940d158804fe3d815d3731268a38a77d7627aa1e6df953aadb70d2aca48"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-major-11-26/validate.mjs",
+      "bytes": 20825,
+      "sha256": "cf1079f5bfd28569cb80563f1f07f5aebc2cddea44e3995940b9d686ac6f6734"
+    }
+  ],
+  "reviewBoundary": {
+    "independentReviewPerformed": false,
+    "chronologyApproved": false,
+    "nextStep": "Independent human chronology review is required before any mutation proposal."
+  },
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "sanityMutationPerformed": false
+  }
+}

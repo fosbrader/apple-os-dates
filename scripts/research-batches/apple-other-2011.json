@@ -1,0 +1,661 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/101444",
+      "title": "Apple security updates (2011 to 2012)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Apple software",
+        "2011",
+        "release dates",
+        "security updates",
+        "archive completeness"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2011/02/24Apple-Releases-Developer-Preview-of-Mac-OS-X-Lion/",
+      "title": "Apple Releases Developer Preview of Mac OS X Lion",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2011-02-24T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Lion",
+        "10.7",
+        "developer preview",
+        "features"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+      "title": "Mac OS X Lion With 250 New Features Available in July From Mac App Store",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2011-06-06T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Lion",
+        "10.7",
+        "pre-release announcement",
+        "features",
+        "availability"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+      "title": "Mac OS X Lion Available Today From the Mac App Store",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2011-07-20T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Lion",
+        "10.7",
+        "public availability",
+        "features",
+        "compatibility"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2011/07/21Lion-Downloads-Top-One-Million-in-First-Day/",
+      "title": "Lion Downloads Top One Million in First Day",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2011-07-21T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Lion",
+        "10.7",
+        "first-day downloads",
+        "vendor-reported adoption"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103345",
+      "title": "About the security content of OS X Lion v10.7.2 and Security Update 2011-006",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "OS X",
+        "Lion",
+        "10.7.2",
+        "security",
+        "later-version boundary"
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-10-7",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "Mac OS X Lion 10.7 became publicly available on July 20, 2011. The release combined a new application and workspace model—Multi-Touch navigation, full-screen apps, Mission Control, Launchpad, and an integrated Mac App Store—with document continuity, local file sharing, a redesigned Mail app, and a download-first upgrade process.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+                "locator": "July 20, 2011; launch overview and feature list"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+                "locator": "June feature descriptions"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Development and release"
+          },
+          {
+            "text": "Apple issued the Lion developer preview to Mac Developer Program members on February 24 and said the final version would ship in the summer. A June 6 announcement narrowed availability to July, and the July 20 launch page records same-day public distribution through the Mac App Store.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/02/24Apple-Releases-Developer-Preview-of-Mac-OS-X-Lion/",
+                "locator": "February 24 developer-preview availability"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+                "locator": "June 6 announcement and July availability"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+                "locator": "July 20 public availability"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Desktop and application model"
+          },
+          {
+            "text": "Lion reorganized common desktop work around gestures, systemwide full-screen apps, a unified Mission Control overview, Launchpad, and OS-level Mac App Store access. The detailed interaction descriptions come from Apple's February and June pre-release material only where the July launch independently confirms the named feature.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/02/24Apple-Releases-Developer-Preview-of-Mac-OS-X-Lion/",
+                "locator": "Mission Control through Mac App Store paragraphs"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+                "locator": "Gestures through Launchpad paragraphs"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+                "locator": "Public-launch feature list"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documents, communication, and sharing"
+          },
+          {
+            "text": "Resume, Auto Save, and Versions formed a coordinated document-continuity layer; AirDrop added nearby peer-to-peer file transfer; and Mail received a broad redesign. Apple described Mail's widescreen layout, Conversations, search, and Exchange 2010 support before launch, while the July announcement confirms the redesigned app shipped with Lion.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+                "locator": "Launch feature list and additional new features"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+                "locator": "Mail and additional new features"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Distribution and compatibility"
+          },
+          {
+            "text": "Apple sold the Lion consumer upgrade through the Mac App Store for $29.99 in the United States, described the download as roughly 4GB, and required Snow Leopard 10.6.6, a listed Intel processor family, and 2GB of memory. Retail-store downloads and later USB media were alternate access paths rather than a staged software rollout.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+                "locator": "Pricing & Availability"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Early adoption"
+          },
+          {
+            "text": "On July 21, Apple reported that more than one million users had bought and downloaded Lion during its first day. This is an Apple-supplied sales and download claim, preserved as launch-history context rather than presented as an independently audited measurement.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/21Lion-Downloads-Top-One-Million-in-First-Day/",
+                "locator": "July 21, 2011; first-day adoption claim"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "This article records the initial 10.7 public package only. Apple's archived 2011–2012 security index omits an initial Lion 10.7 line and later identifies 10.7.2 on October 12; its 10.7.2 advisory applies to 10.7 and 10.7.1 systems but does not establish which fixes were present on July 20. No later security repair is projected backward, no preview-only feature is promoted without public-launch confirmation, and no undocumented behavior or build number is inferred.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/02/24Apple-Releases-Developer-Preview-of-Mac-OS-X-Lion/",
+                "locator": "February developer-preview scope"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+                "locator": "July 20 public-launch scope"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101444",
+                "locator": "July 20 entries and OS X Lion v10.7.2 — 12 Oct 2011"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103345",
+                "locator": "OS X Lion v10.7.2 availability for 10.7 and 10.7.1"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2011/02/24Apple-Releases-Developer-Preview-of-Mac-OS-X-Lion/",
+          "locator": "February 24, 2011"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+          "locator": "June 6, 2011"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+          "locator": "July 20, 2011"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2011/07/21Lion-Downloads-Top-One-Million-in-First-Day/",
+          "locator": "July 21, 2011"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "2011 security chronology"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103345",
+          "locator": "OS X Lion v10.7.2 later-version boundary"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:49:02Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-macos-10-7",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Mac OS X Lion 10.7 reached the public channel on July 20, 2011 with a gesture- and full-screen-focused desktop model, Mission Control, Launchpad, document continuity, AirDrop, redesigned Mail, and Mac App Store distribution.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple made Lion available on July 20, 2011 as a Mac App Store download. The launch announcement identifies 10.6.6 Snow Leopard as the store-upgrade baseline and lists the supported Intel processor families and 2GB memory requirement.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+                "locator": "July 20, 2011; Pricing & Availability"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What this page records"
+          },
+          {
+            "text": "The structured entries synthesize twelve confirmed parts of the public package: gestures, full-screen applications, Mission Control, Mac App Store integration, Launchpad, Mail, Resume, Auto Save, Versions, AirDrop, the download-first distribution model, and the upgrade hardware baseline.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+                "locator": "Launch feature list and Pricing & Availability"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+                "locator": "Detailed launch-season feature descriptions"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Release-channel context"
+          },
+          {
+            "text": "Lion's store download, retail-store assistance, and announced USB option were access methods for the same consumer release, not separate phased rollout events. The public date remains July 20 for this route.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+                "locator": "Pricing & Availability"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Security and point-release boundary"
+          },
+          {
+            "text": "Apple's retained security index lists Safari and iWork updates on July 20 but no initial Lion 10.7 security entry. It later lists Security Update 2011-005 for systems on 10.7.1 and Lion 10.7.2 on October 12. Because the local catalog has no 10.7.1 or 10.7.2 version route, and the retained 10.7.2 advisory describes later repairs, this event includes no structured initial-security claims.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/101444",
+                "locator": "July 20, September 9, and October 12, 2011 entries"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103345",
+                "locator": "OS X Lion v10.7.2 security content"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Reporting boundary"
+          },
+          {
+            "text": "Apple's next-day announcement supplies the early adoption figure. The page labels that figure as Apple's report and does not convert it into an independent market-share or performance conclusion.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2011/07/21Lion-Downloads-Top-One-Million-in-First-Day/",
+                "locator": "July 21 first-day adoption claim"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+          "locator": "June 6, 2011"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+          "locator": "July 20, 2011"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2011/07/21Lion-Downloads-Top-One-Million-in-First-Day/",
+          "locator": "July 21, 2011"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "2011 security chronology"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103345",
+          "locator": "OS X Lion v10.7.2 later-version boundary"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-10-7-multitouch-gestures",
+          "title": "Expanded Multi-Touch gestures",
+          "canonicalSummary": "Lion expanded system gestures for zooming, navigating pages, moving among full-screen apps, and opening Mission Control.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple's June announcement described momentum scrolling, tap-or-pinch zoom, horizontal swipes for pages and full-screen apps, and a gesture for Mission Control; the July public-launch announcement confirms new Multi-Touch gestures as part of Lion.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Launch feature list; Multi-Touch gestures"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+              "locator": "Multi-Touch gestures paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-systemwide-full-screen-apps",
+          "title": "Systemwide full-screen apps",
+          "canonicalSummary": "Lion added operating-system support for applications that use the entire display and switch by gesture.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The feature created a full-screen workspace for supported applications and a gesture-driven path among those apps and desktop spaces. Apple's June description named several Apple apps prepared for the mode, while the July launch confirms the systemwide capability.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Launch feature list; full-screen apps"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+              "locator": "Full screen apps paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-mission-control",
+          "title": "Mission Control",
+          "canonicalSummary": "Mission Control unified Exposé, Dashboard, Spaces, full-screen apps, and open windows in one overview.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Lion added a consolidated workspace view that grouped open windows by app and exposed full-screen apps, Dashboard, and desktop spaces for navigation.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Launch feature list; Mission Control"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+              "locator": "Mission Control paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/02/24Apple-Releases-Developer-Preview-of-Mac-OS-X-Lion/",
+              "locator": "Mission Control paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-mac-app-store-integration",
+          "title": "Mac App Store integrated into the OS",
+          "canonicalSummary": "Lion incorporated the Mac App Store as the built-in path for discovering, buying, installing, and updating Mac apps.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The store became part of Lion's system experience, with purchased apps installing into Launchpad. Apple's June pre-release announcement also said the store would support smaller delta app updates and Lion-aware app capabilities.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Launch feature list; Mac App Store"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+              "locator": "Mac App Store paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/02/24Apple-Releases-Developer-Preview-of-Mac-OS-X-Lion/",
+              "locator": "Mac App Store paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-launchpad",
+          "title": "Launchpad",
+          "canonicalSummary": "Launchpad added a full-screen, paged application launcher with reordering and folders.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Lion provided an application-focused home screen where users could launch software, arrange icons, group apps into folders, and move among pages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Launch feature list; Launchpad"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+              "locator": "Launchpad paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/02/24Apple-Releases-Developer-Preview-of-Mac-OS-X-Lion/",
+              "locator": "Launchpad paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-mail-redesign",
+          "title": "Redesigned Mail",
+          "canonicalSummary": "Lion redesigned Mail around a widescreen layout, conversation timelines, refined search, and Exchange 2010 support.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The July launch confirms a complete Mail redesign. Apple's June pre-release description identified its principal elements as a widescreen interface, grouped Conversations, search suggestions and refinements, and built-in Microsoft Exchange 2010 support.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Launch feature list; redesigned Mail"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+              "locator": "Mail paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/02/24Apple-Releases-Developer-Preview-of-Mac-OS-X-Lion/",
+              "locator": "Additional features; Mail"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-resume",
+          "title": "Resume",
+          "canonicalSummary": "Resume restored supported applications and their prior state after relaunch or restart.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Lion added system behavior intended to return users to the application state they left when reopening an app or restarting the Mac.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Additional new features; Resume"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+              "locator": "Additional new features; Resume"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-auto-save",
+          "title": "Auto Save",
+          "canonicalSummary": "Auto Save continuously saved work in supported document-based applications.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The operating system added automatic document persistence for applications that adopted the feature, reducing reliance on manual save commands.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Additional new features; Auto Save"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+              "locator": "Additional new features; Auto Save"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-versions",
+          "title": "Versions",
+          "canonicalSummary": "Versions recorded document history and let users browse, restore, or copy from earlier states.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Lion paired document history with supported applications so earlier states could be inspected and reused without maintaining a separate stack of manually named files.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Additional new features; Versions"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+              "locator": "Additional new features; Versions"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-airdrop",
+          "title": "AirDrop",
+          "canonicalSummary": "AirDrop created an ad hoc peer-to-peer path for sending files between nearby supported Macs.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Lion introduced local wireless file transfer that discovered nearby Macs and set up the peer-to-peer connection without requiring a separately configured network share.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Additional new features; AirDrop"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06Mac-OS-X-Lion-With-250-New-Features-Available-in-July-From-Mac-App-Store/",
+              "locator": "Additional new features; AirDrop"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-download-first-os-upgrade",
+          "title": "Download-first OS upgrade",
+          "canonicalSummary": "Apple distributed Lion's primary consumer upgrade through the Mac App Store as an approximately 4GB download.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The public release made the Mac App Store the main upgrade channel at a US launch price of $29.99. Apple also offered retail-store downloading for people without broadband and announced later USB media at a separate price.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Pricing & Availability"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-7-upgrade-hardware-baseline",
+          "title": "Snow Leopard and Intel hardware baseline",
+          "canonicalSummary": "Lion's store upgrade required Snow Leopard 10.6.6 or later, a supported Intel processor, and 2GB of memory.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple's launch requirements named Core 2 Duo, Core i3, Core i5, Core i7, and Xeon Macs with 2GB of RAM, and allowed the purchase to be installed on a user's authorized personal Macs.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated July 2011 public-launch announcement to the existing audited Lion 10.7 public-release event; when June detail is included, the July launch independently confirms the named feature shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2011/07/20Mac-OS-X-Lion-Available-Today-From-the-Mac-App-Store/",
+              "locator": "Pricing & Availability; system requirements"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:49:02Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

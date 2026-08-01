@@ -24,6 +24,10 @@ import {
   currentReleasePlatforms,
 } from "./lib/current-release-cycles";
 
+throw new Error(
+  "Retired: this launch-only backfill targets obsolete 2026 placeholder records. Use sanity:history:check for the audited chronology.",
+);
+
 const apiVersion = "2024-01-01";
 const applyChanges = process.argv.includes("--apply");
 const productionAcknowledged = process.argv.includes(
@@ -351,7 +355,7 @@ async function run() {
 
   const result = await transaction.commit({
     visibility: "sync",
-    tag: "beta-cadence.backfill-2026-releases",
+    tag: "version-record.backfill-2026-releases",
   });
   console.log(`\nCommitted transaction ${result.transactionId}.`);
 

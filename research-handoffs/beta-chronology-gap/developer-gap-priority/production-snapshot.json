@@ -1,0 +1,301 @@
+{
+  "batchId": "beta-chronology-gap-developer-gap-priority",
+  "capturedAt": "2026-07-31T04:48:35.739Z",
+  "perspective": "published",
+  "useCdn": false,
+  "projectId": "lh3yswzu",
+  "dataset": "production",
+  "targetVersionIds": [
+    "version-ios-9-2-1",
+    "version-ios-10-2-1",
+    "version-ios-10-3-2",
+    "version-ios-10-3-3"
+  ],
+  "expectedIdentityCount": 17,
+  "productionCounts": {
+    "totalReleaseEvents": 2068,
+    "iosDeveloperBetaEventsAllVersions": 446,
+    "scopedReleaseEvents": 4,
+    "scopedDeveloperBetaEvents": 0,
+    "exactIdentityMatches": 0
+  },
+  "versions": [
+    {
+      "_id": "version-ios-10-2-1",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "publicReleaseDate": "2017-01-23",
+      "releaseStatus": "released",
+      "train": "iOS 10",
+      "version": "10.2.1"
+    },
+    {
+      "_id": "version-ios-10-3-2",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "publicReleaseDate": "2017-05-15",
+      "releaseStatus": "released",
+      "train": "iOS 10",
+      "version": "10.3.2"
+    },
+    {
+      "_id": "version-ios-10-3-3",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "publicReleaseDate": "2017-07-19",
+      "releaseStatus": "released",
+      "train": "iOS 10",
+      "version": "10.3.3"
+    },
+    {
+      "_id": "version-ios-9-2-1",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "publicReleaseDate": "2016-01-19",
+      "releaseStatus": "released",
+      "train": "iOS 9",
+      "version": "9.2.1"
+    }
+  ],
+  "scopedReleaseEvents": [
+    {
+      "_id": "release-event-345482eadfb5c66342310157",
+      "appearanceDate": "2017-01-23",
+      "availabilityState": "available",
+      "builds": null,
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-10-2-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-10-2-1:m0",
+      "version": "10.2.1"
+    },
+    {
+      "_id": "release-event-1d2b59c2e00cfaa5d078fa79",
+      "appearanceDate": "2017-05-15",
+      "availabilityState": "available",
+      "builds": null,
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-10-3-2",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-10-3-2:m0",
+      "version": "10.3.2"
+    },
+    {
+      "_id": "release-event-3d4004a2699341e32efd4726",
+      "appearanceDate": "2017-07-19",
+      "availabilityState": "available",
+      "builds": null,
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-10-3-3",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-10-3-3:m0",
+      "version": "10.3.3"
+    },
+    {
+      "_id": "release-event-8e38b1c22c7773484dee6458",
+      "appearanceDate": "2016-01-19",
+      "availabilityState": "available",
+      "builds": null,
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-9-2-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-9-2-1:m0",
+      "version": "9.2.1"
+    }
+  ],
+  "scopedDeveloperBetaEvents": [],
+  "exactChecks": [
+    {
+      "version": "9.2.1",
+      "releaseVersionId": "version-ios-9-2-1",
+      "channel": "developerBeta",
+      "routeAlias": "beta-1",
+      "label": "Beta 1",
+      "sequence": 1,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "9.2.1",
+      "releaseVersionId": "version-ios-9-2-1",
+      "channel": "developerBeta",
+      "routeAlias": "beta-2",
+      "label": "Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.2.1",
+      "releaseVersionId": "version-ios-10-2-1",
+      "channel": "developerBeta",
+      "routeAlias": "beta-1",
+      "label": "Beta 1",
+      "sequence": 1,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.2.1",
+      "releaseVersionId": "version-ios-10-2-1",
+      "channel": "developerBeta",
+      "routeAlias": "beta-2",
+      "label": "Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.2.1",
+      "releaseVersionId": "version-ios-10-2-1",
+      "channel": "developerBeta",
+      "routeAlias": "beta-3",
+      "label": "Beta 3",
+      "sequence": 3,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.2.1",
+      "releaseVersionId": "version-ios-10-2-1",
+      "channel": "developerBeta",
+      "routeAlias": "beta-4",
+      "label": "Beta 4",
+      "sequence": 4,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.2",
+      "releaseVersionId": "version-ios-10-3-2",
+      "channel": "developerBeta",
+      "routeAlias": "beta-1",
+      "label": "Beta 1",
+      "sequence": 1,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.2",
+      "releaseVersionId": "version-ios-10-3-2",
+      "channel": "developerBeta",
+      "routeAlias": "beta-2",
+      "label": "Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.2",
+      "releaseVersionId": "version-ios-10-3-2",
+      "channel": "developerBeta",
+      "routeAlias": "beta-3",
+      "label": "Beta 3",
+      "sequence": 3,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.2",
+      "releaseVersionId": "version-ios-10-3-2",
+      "channel": "developerBeta",
+      "routeAlias": "beta-4",
+      "label": "Beta 4",
+      "sequence": 4,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.2",
+      "releaseVersionId": "version-ios-10-3-2",
+      "channel": "developerBeta",
+      "routeAlias": "beta-5",
+      "label": "Beta 5",
+      "sequence": 5,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.3",
+      "releaseVersionId": "version-ios-10-3-3",
+      "channel": "developerBeta",
+      "routeAlias": "beta-1",
+      "label": "Beta 1",
+      "sequence": 1,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.3",
+      "releaseVersionId": "version-ios-10-3-3",
+      "channel": "developerBeta",
+      "routeAlias": "beta-2",
+      "label": "Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.3",
+      "releaseVersionId": "version-ios-10-3-3",
+      "channel": "developerBeta",
+      "routeAlias": "beta-3",
+      "label": "Beta 3",
+      "sequence": 3,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.3",
+      "releaseVersionId": "version-ios-10-3-3",
+      "channel": "developerBeta",
+      "routeAlias": "beta-4",
+      "label": "Beta 4",
+      "sequence": 4,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.3",
+      "releaseVersionId": "version-ios-10-3-3",
+      "channel": "developerBeta",
+      "routeAlias": "beta-5",
+      "label": "Beta 5",
+      "sequence": 5,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "10.3.3",
+      "releaseVersionId": "version-ios-10-3-3",
+      "channel": "developerBeta",
+      "routeAlias": "beta-6",
+      "label": "Beta 6",
+      "sequence": 6,
+      "exactIdentityMatches": 0,
+      "matches": []
+    }
+  ],
+  "safety": {
+    "queryOnly": true,
+    "perspective": "published",
+    "sanityMutationPerformed": false,
+    "stableIdsAllocated": false
+  }
+}

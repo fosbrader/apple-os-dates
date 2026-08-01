@@ -1,0 +1,179 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios9-10-major",
+  "reviewedAt": "2026-07-30",
+  "reviewer": "codex-scope-beta-gap-program-independent-review",
+  "independentOfResearcher": true,
+  "verdict": "passWithQualifications",
+  "chronologyApprovedCandidateCount": 10,
+  "candidateVerdict": {
+    "chronologyApproved": [
+      "candidate:apple:ios:9.0:public-beta-1",
+      "candidate:apple:ios:9.0:public-beta-2",
+      "candidate:apple:ios:9.0:public-beta-3",
+      "candidate:apple:ios:10.0:public-beta-1",
+      "candidate:apple:ios:10.0:public-beta-2",
+      "candidate:apple:ios:10.0:public-beta-3",
+      "candidate:apple:ios:10.0:public-beta-4",
+      "candidate:apple:ios:10.0:public-beta-5",
+      "candidate:apple:ios:10.0:public-beta-6",
+      "candidate:apple:ios:10.0:public-beta-7"
+    ],
+    "approvedWithQualification": [
+      "candidate:apple:ios:9.0:public-beta-1",
+      "candidate:apple:ios:10.0:public-beta-4"
+    ],
+    "rejected": []
+  },
+  "checks": {
+    "jsonParsed": true,
+    "lockedPacketFilesVerified": 6,
+    "lockedPacketHashFailures": 0,
+    "sourceIdsUnique": true,
+    "candidateIdsUnique": true,
+    "allReferencesResolve": true,
+    "rawEvidenceArtifactsReproduced": 21,
+    "selectedTextArtifactsReproduced": 21,
+    "evidenceHashFailures": 0,
+    "sourceMetadataTimestampsReproduced": 21,
+    "identityLocatorsChecked": [
+      "source-ios90-pb1-macrumors",
+      "source-ios90-pb1-9to5mac",
+      "source-ios90-pb2-macrumors",
+      "source-ios90-pb2-9to5mac",
+      "source-ios90-pb3-macrumors",
+      "source-ios90-pb3-9to5mac",
+      "source-ios100-pb1-macrumors",
+      "source-ios100-pb1-9to5mac",
+      "source-ios100-pb2-macrumors",
+      "source-ios100-pb2-9to5mac",
+      "source-ios100-pb3-macrumors",
+      "source-ios100-pb3-9to5mac",
+      "source-ios100-pb4-macrumors",
+      "source-ios100-pb4-idevice",
+      "source-ios100-pb4-chip",
+      "source-ios100-pb5-9to5mac",
+      "source-ios100-pb5-techcrunch",
+      "source-ios100-pb6-9to5mac",
+      "source-ios100-pb6-techcrunch",
+      "source-ios100-pb7-macrumors",
+      "source-ios100-pb7-9to5mac"
+    ],
+    "allCandidateChannelsArePublicBeta": true,
+    "pairedDeveloperRoutesResolved": 10,
+    "pairedDeveloperRouteFailures": 0,
+    "productionSnapshotAlignedWithCandidates": true,
+    "liveProductionRerun": {
+      "queriedAt": "2026-07-31T03:29:47.600Z",
+      "perspective": "published",
+      "allPublishedEventCount": 2068,
+      "scopedPublicBetaEventCount": 0,
+      "candidateExactMatches": 0
+    },
+    "buildClaimsApproved": 0,
+    "substantiveChangeClaimsApproved": 0,
+    "sanityMutationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "decisions": [
+    {
+      "candidateId": "candidate:apple:ios:9.0:public-beta-1",
+      "disposition": "chronologyApprovedWithQualification",
+      "finding": "MacRumors and 9to5Mac independently establish the initial iOS 9 public-beta appearance on 2015-07-09. The explicitly numbered Public Beta 2 coverage on 2015-07-22 establishes the launch appearance as sequence 1.",
+      "pairedDeveloperRoute": "version-ios-9-0/beta-3",
+      "pairedDeveloperRouteState": "exactExistingMatch",
+      "requiredQualification": "Public Beta 1 is a normalized site label, not a claim that Apple or both launch reports displayed that literal ordinal. The retained 9to5Mac URL slug also ends in ios-9-public-beta-2 despite its headline and body describing the initial public launch."
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.0:public-beta-2",
+      "disposition": "chronologyApproved",
+      "finding": "MacRumors and 9to5Mac independently and explicitly identify iOS 9 Public Beta 2 on 2015-07-22.",
+      "pairedDeveloperRoute": "version-ios-9-0/beta-4",
+      "pairedDeveloperRouteState": "exactExistingMatch"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.0:public-beta-3",
+      "disposition": "chronologyApproved",
+      "finding": "MacRumors and 9to5Mac independently identify the third iOS 9 public-beta appearance on 2015-08-06.",
+      "pairedDeveloperRoute": "version-ios-9-0/beta-5",
+      "pairedDeveloperRouteState": "exactExistingMatch"
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-1",
+      "disposition": "chronologyApproved",
+      "finding": "MacRumors establishes the initial iOS 10 public-beta availability and 9to5Mac explicitly identifies Public Beta 1 on 2016-07-07.",
+      "pairedDeveloperRoute": "version-ios-10-0/beta-2",
+      "pairedDeveloperRouteState": "exactExistingMatch"
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-2",
+      "disposition": "chronologyApproved",
+      "finding": "MacRumors and 9to5Mac independently and explicitly identify iOS 10 Public Beta 2 on 2016-07-20.",
+      "pairedDeveloperRoute": "version-ios-10-0/beta-3",
+      "pairedDeveloperRouteState": "exactExistingMatch"
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-3",
+      "disposition": "chronologyApproved",
+      "finding": "MacRumors and 9to5Mac independently and explicitly identify iOS 10 Public Beta 3 on 2016-08-02.",
+      "pairedDeveloperRoute": "version-ios-10-0/beta-4",
+      "pairedDeveloperRouteState": "exactExistingMatch"
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-4",
+      "disposition": "chronologyApprovedWithQualification",
+      "finding": "iDevice.ro explicitly reports Public Beta 4 on 2016-08-09, MacRumors records same-day public-tester availability, and CHIP independently says the fourth public beta had been available since Tuesday evening.",
+      "pairedDeveloperRoute": "version-ios-10-0/beta-5",
+      "pairedDeveloperRouteState": "exactExistingMatch",
+      "requiredQualification": "Use the article headline, body, and publication metadata rather than the misleading iDevice.ro URL slug ending in ios-10-public-beta-5. CHIP's next-day publication corroborates the August 9 appearance through its Tuesday-evening wording."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-5",
+      "disposition": "chronologyApproved",
+      "finding": "9to5Mac and TechCrunch independently and explicitly identify iOS 10 Public Beta 5 on 2016-08-15.",
+      "pairedDeveloperRoute": "version-ios-10-0/beta-6",
+      "pairedDeveloperRouteState": "exactExistingMatch"
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-6",
+      "disposition": "chronologyApproved",
+      "finding": "9to5Mac and TechCrunch independently and explicitly identify iOS 10 Public Beta 6 on 2016-08-19.",
+      "pairedDeveloperRoute": "version-ios-10-0/beta-7",
+      "pairedDeveloperRouteState": "exactExistingMatch"
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-7",
+      "disposition": "chronologyApproved",
+      "finding": "MacRumors and 9to5Mac independently and explicitly identify iOS 10 Public Beta 7 on 2016-08-26.",
+      "pairedDeveloperRoute": "version-ios-10-0/beta-8",
+      "pairedDeveloperRouteState": "exactExistingMatch"
+    }
+  ],
+  "qualifications": [
+    {
+      "subject": "iOS 9.0 Public Beta 1 display label and source metadata",
+      "severity": "nonBlocking",
+      "finding": "The chronology and normalized sequence are well supported, but the literal Public Beta 1 label is not consistently displayed in the launch reports. The two launch sources are therefore appearance evidence, not literal-ordinal evidence.",
+      "requiredHandling": "Preserve ordinalBasis=normalizedFirstAppearance and the candidate qualification. Do not claim Apple displayed the exact Public Beta 1 label on 2015-07-09."
+    },
+    {
+      "subject": "iOS 10.0 Public Beta 4 publisher artifacts",
+      "severity": "nonBlocking",
+      "finding": "The retained iDevice.ro URL slug says Public Beta 5 although its headline and body repeatedly say Public Beta 4; CHIP published the following day while describing availability since Tuesday evening.",
+      "requiredHandling": "Preserve the existing qualification and cite article content and timestamps, not the misleading slug."
+    },
+    {
+      "subject": "production reconciliation wording",
+      "severity": "nonBlocking",
+      "finding": "The preserved query counts all publicBeta events within the two scoped release versions rather than issuing ten separate exact-identity queries. Because that scoped count is zero, it still proves every candidate exact match is zero. A fresh read-only rerun produced the same result.",
+      "requiredHandling": "Repeat the scoped or exact identity query immediately before any separately authorized write."
+    }
+  ],
+  "authorization": {
+    "chronologyApprovedCandidateCount": 10,
+    "chronologyApprovalScope": "Public-beta appearance identity, date, sequence, channel, and paired developer route only; qualifications remain mandatory.",
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "deploymentAllowed": false
+  }
+}

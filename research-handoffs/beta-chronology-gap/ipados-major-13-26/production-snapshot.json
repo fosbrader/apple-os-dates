@@ -1,0 +1,627 @@
+{
+  "capturedAt": "2026-07-31T03:38:21.535Z",
+  "perspective": "published",
+  "useCdn": false,
+  "projectId": "lh3yswzu",
+  "dataset": "production",
+  "targetVersionIds": [
+    "version-ipados-13-0",
+    "version-ipados-14-0",
+    "version-ipados-15-0",
+    "version-ipados-16-0",
+    "version-ipados-17-0",
+    "version-ipados-18-0",
+    "version-ipados-26-0"
+  ],
+  "expectedIdentityCount": 43,
+  "productionCounts": {
+    "totalReleaseEvents": 2068,
+    "iPadOSPublicBetaEventsAllVersions": 10,
+    "scopedReleaseEvents": 78,
+    "scopedPublicBetaEvents": 4
+  },
+  "versions": [
+    {
+      "_id": "version-ipados-13-0",
+      "platform": "iPadOS",
+      "publicReleaseDate": null,
+      "releaseStatus": "superseded",
+      "train": "iPadOS 13",
+      "version": "13.0"
+    },
+    {
+      "_id": "version-ipados-14-0",
+      "platform": "iPadOS",
+      "publicReleaseDate": "2020-09-16",
+      "releaseStatus": "released",
+      "train": "iPadOS 14",
+      "version": "14.0"
+    },
+    {
+      "_id": "version-ipados-15-0",
+      "platform": "iPadOS",
+      "publicReleaseDate": "2021-09-20",
+      "releaseStatus": "released",
+      "train": "iPadOS 15",
+      "version": "15.0"
+    },
+    {
+      "_id": "version-ipados-16-0",
+      "platform": "iPadOS",
+      "publicReleaseDate": null,
+      "releaseStatus": "superseded",
+      "train": "iPadOS 16",
+      "version": "16.0"
+    },
+    {
+      "_id": "version-ipados-17-0",
+      "platform": "iPadOS",
+      "publicReleaseDate": "2023-09-18",
+      "releaseStatus": "released",
+      "train": "iPadOS 17",
+      "version": "17.0"
+    },
+    {
+      "_id": "version-ipados-18-0",
+      "platform": "iPadOS",
+      "publicReleaseDate": "2024-09-16",
+      "releaseStatus": "released",
+      "train": "iPadOS 18",
+      "version": "18.0"
+    },
+    {
+      "_id": "version-ipados-26-0",
+      "platform": "iPadOS",
+      "publicReleaseDate": "2025-09-15",
+      "releaseStatus": "released",
+      "train": "iPadOS 26",
+      "version": "26.0"
+    }
+  ],
+  "scopedPublicBetaEvents": [
+    {
+      "_id": "release-event-01d7714ed4d28b61aeb41bf0",
+      "appearanceDate": "2021-06-30",
+      "availabilityState": "available",
+      "builds": null,
+      "channel": "publicBeta",
+      "isRevision": false,
+      "label": "Public Beta 1",
+      "platform": "iPadOS",
+      "releaseVersionId": "version-ipados-15-0",
+      "routeAlias": "public-beta-1",
+      "sequence": 1,
+      "stableEventId": "version-ipados-15-0:m-96d41d5554c6",
+      "version": "15.0"
+    },
+    {
+      "_id": "release-event-775a335cb87a0b39127c37ff",
+      "appearanceDate": "2022-07-11",
+      "availabilityState": "available",
+      "builds": null,
+      "channel": "publicBeta",
+      "isRevision": false,
+      "label": "Public Beta 1",
+      "platform": "iPadOS",
+      "releaseVersionId": "version-ipados-16-0",
+      "routeAlias": "public-beta-1",
+      "sequence": 1,
+      "stableEventId": "version-ipados-16-0:m-dc22fafd21b3",
+      "version": "16.0"
+    },
+    {
+      "_id": "release-event-c8241d69688a968737a8187e",
+      "appearanceDate": "2023-07-12",
+      "availabilityState": "available",
+      "builds": null,
+      "channel": "publicBeta",
+      "isRevision": false,
+      "label": "Public Beta 1",
+      "platform": "iPadOS",
+      "releaseVersionId": "version-ipados-17-0",
+      "routeAlias": "public-beta-1",
+      "sequence": 1,
+      "stableEventId": "version-ipados-17-0:m-c8c0acaa4e17",
+      "version": "17.0"
+    },
+    {
+      "_id": "release-event-d7351bf59b922af10f620144",
+      "appearanceDate": "2025-07-24",
+      "availabilityState": "available",
+      "builds": null,
+      "channel": "publicBeta",
+      "isRevision": false,
+      "label": "Public Beta 1",
+      "platform": "iPadOS",
+      "releaseVersionId": "version-ipados-26-0",
+      "routeAlias": "public-beta-1",
+      "sequence": 1,
+      "stableEventId": "version-ipados-26-0:m-a55abe94c8a8",
+      "version": "26.0"
+    }
+  ],
+  "exactChecks": [
+    {
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-5",
+      "label": "Public Beta 5",
+      "sequence": 5,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-6",
+      "label": "Public Beta 6",
+      "sequence": 6,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "13.0",
+      "releaseVersionId": "version-ipados-13-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-7",
+      "label": "Public Beta 7",
+      "sequence": 7,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-5",
+      "label": "Public Beta 5",
+      "sequence": 5,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-6",
+      "label": "Public Beta 6",
+      "sequence": 6,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-7",
+      "label": "Public Beta 7",
+      "sequence": 7,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "14.0",
+      "releaseVersionId": "version-ipados-14-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-8",
+      "label": "Public Beta 8",
+      "sequence": 8,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-5",
+      "label": "Public Beta 5",
+      "sequence": 5,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-6",
+      "label": "Public Beta 6",
+      "sequence": 6,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-7",
+      "label": "Public Beta 7",
+      "sequence": 7,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "15.0",
+      "releaseVersionId": "version-ipados-15-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-8",
+      "label": "Public Beta 8",
+      "sequence": 8,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "16.0",
+      "releaseVersionId": "version-ipados-16-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "exactIdentityMatches": 1,
+      "matches": [
+        {
+          "_id": "release-event-775a335cb87a0b39127c37ff",
+          "appearanceDate": "2022-07-11",
+          "availabilityState": "available",
+          "builds": null,
+          "channel": "publicBeta",
+          "isRevision": false,
+          "label": "Public Beta 1",
+          "platform": "iPadOS",
+          "releaseVersionId": "version-ipados-16-0",
+          "routeAlias": "public-beta-1",
+          "sequence": 1,
+          "stableEventId": "version-ipados-16-0:m-dc22fafd21b3",
+          "version": "16.0"
+        }
+      ]
+    },
+    {
+      "version": "16.0",
+      "releaseVersionId": "version-ipados-16-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "16.0",
+      "releaseVersionId": "version-ipados-16-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "16.0",
+      "releaseVersionId": "version-ipados-16-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "exactIdentityMatches": 1,
+      "matches": [
+        {
+          "_id": "release-event-c8241d69688a968737a8187e",
+          "appearanceDate": "2023-07-12",
+          "availabilityState": "available",
+          "builds": null,
+          "channel": "publicBeta",
+          "isRevision": false,
+          "label": "Public Beta 1",
+          "platform": "iPadOS",
+          "releaseVersionId": "version-ipados-17-0",
+          "routeAlias": "public-beta-1",
+          "sequence": 1,
+          "stableEventId": "version-ipados-17-0:m-c8c0acaa4e17",
+          "version": "17.0"
+        }
+      ]
+    },
+    {
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-5",
+      "label": "Public Beta 5",
+      "sequence": 5,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "17.0",
+      "releaseVersionId": "version-ipados-17-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-6",
+      "label": "Public Beta 6",
+      "sequence": 6,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-5",
+      "label": "Public Beta 5",
+      "sequence": 5,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "18.0",
+      "releaseVersionId": "version-ipados-18-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-6",
+      "label": "Public Beta 6",
+      "sequence": 6,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "exactIdentityMatches": 1,
+      "matches": [
+        {
+          "_id": "release-event-d7351bf59b922af10f620144",
+          "appearanceDate": "2025-07-24",
+          "availabilityState": "available",
+          "builds": null,
+          "channel": "publicBeta",
+          "isRevision": false,
+          "label": "Public Beta 1",
+          "platform": "iPadOS",
+          "releaseVersionId": "version-ipados-26-0",
+          "routeAlias": "public-beta-1",
+          "sequence": 1,
+          "stableEventId": "version-ipados-26-0:m-a55abe94c8a8",
+          "version": "26.0"
+        }
+      ]
+    },
+    {
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-5",
+      "label": "Public Beta 5",
+      "sequence": 5,
+      "exactIdentityMatches": 0,
+      "matches": []
+    },
+    {
+      "version": "26.0",
+      "releaseVersionId": "version-ipados-26-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-6",
+      "label": "Public Beta 6",
+      "sequence": 6,
+      "exactIdentityMatches": 0,
+      "matches": []
+    }
+  ],
+  "safety": {
+    "queryOnly": true,
+    "sanityMutationPerformed": false
+  }
+}

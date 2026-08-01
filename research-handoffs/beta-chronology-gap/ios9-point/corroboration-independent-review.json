@@ -1,0 +1,275 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios9-point",
+  "reviewedAt": "2026-07-31T04:14:15Z",
+  "reviewer": "codex-root",
+  "independentOfCorroborationResearcher": true,
+  "scope": {
+    "purpose": "Independent evidence review of the 25 publisher lineages added after the frozen first review.",
+    "addedSourceCount": 25,
+    "candidateCount": 25,
+    "previouslyReviewedCandidateCount": 2,
+    "totalCandidateCountAfterCombination": 27
+  },
+  "verdict": "passWithQualifications",
+  "candidateVerdict": {
+    "chronologyApprovedAfterCorroboration": [
+      "candidate:apple:ios:9.1:public-beta-1",
+      "candidate:apple:ios:9.1:public-beta-2",
+      "candidate:apple:ios:9.1:public-beta-4",
+      "candidate:apple:ios:9.1:public-beta-5",
+      "candidate:apple:ios:9.2:public-beta-1",
+      "candidate:apple:ios:9.2:public-beta-2",
+      "candidate:apple:ios:9.2:public-beta-3",
+      "candidate:apple:ios:9.2:public-beta-4",
+      "candidate:apple:ios:9.2.1:public-beta-1",
+      "candidate:apple:ios:9.3:public-beta-1",
+      "candidate:apple:ios:9.3:public-beta-2",
+      "candidate:apple:ios:9.3:public-beta-3",
+      "candidate:apple:ios:9.3:public-beta-4",
+      "candidate:apple:ios:9.3:public-beta-5",
+      "candidate:apple:ios:9.3:public-beta-6",
+      "candidate:apple:ios:9.3:public-beta-7",
+      "candidate:apple:ios:9.3.2:public-beta-1",
+      "candidate:apple:ios:9.3.2:public-beta-2",
+      "candidate:apple:ios:9.3.2:public-beta-3",
+      "candidate:apple:ios:9.3.2:public-beta-4",
+      "candidate:apple:ios:9.3.3:public-beta-1",
+      "candidate:apple:ios:9.3.3:public-beta-2",
+      "candidate:apple:ios:9.3.3:public-beta-3",
+      "candidate:apple:ios:9.3.3:public-beta-4",
+      "candidate:apple:ios:9.3.3:public-beta-5"
+    ],
+    "blocked": [],
+    "qualified": [
+      "candidate:apple:ios:9.2:public-beta-2",
+      "candidate:apple:ios:9.2:public-beta-4",
+      "candidate:apple:ios:9.3.2:public-beta-1",
+      "candidate:apple:ios:9.3.3:public-beta-1",
+      "candidate:apple:ios:9.3.3:public-beta-3"
+    ]
+  },
+  "checks": {
+    "packetJsonParsed": true,
+    "addedSourceIdsUnique": true,
+    "addedSourceCount": 25,
+    "candidateIdsUnique": true,
+    "candidateCount": 25,
+    "allCandidateReferencesResolve": true,
+    "rawEvidenceArtifactsReproduced": 25,
+    "rawEvidenceHashFailures": 0,
+    "rawEvidenceByteCountFailures": 0,
+    "boundedFragmentsReproduced": 31,
+    "boundedFragmentFailures": 0,
+    "publisherMetadataInspected": 25,
+    "publicationDatesInspected": 25,
+    "candidateLocatorsInspectedInContext": 25,
+    "twoIndependentContemporaryPublisherLineagesPerCandidate": true,
+    "allOrdinalsExplicit": true,
+    "allPublicAudiencesExplicit": true,
+    "allAppearanceDatesSupported": true,
+    "allCandidateExactProductionMatches": 0,
+    "conflictHandlingInspected": true,
+    "priorIndependentReviewPreservedByteForByte": true,
+    "sanityMutationPerformed": false
+  },
+  "decisions": [
+    {
+      "candidateId": "candidate:apple:ios:9.1:public-beta-1",
+      "addedSourceId": "source-ios91-pb1-iculture",
+      "finding": "The contemporary iCulture headline and lead explicitly identify the first iOS 9.1 public beta on 2015-09-10.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.1:public-beta-2",
+      "addedSourceId": "source-ios91-pb2-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies iOS 9.1 Public Beta 2 on 2015-09-24.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.1:public-beta-4",
+      "addedSourceId": "source-ios91-pb4-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies iOS 9.1 Public Beta 4 on 2015-10-06.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.1:public-beta-5",
+      "addedSourceId": "source-ios91-pb5-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies iOS 9.1 Public Beta 5 on 2015-10-12.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.2:public-beta-1",
+      "addedSourceId": "source-ios92-pb1-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies the first iOS 9.2 public beta on 2015-10-29.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.2:public-beta-2",
+      "addedSourceId": "source-ios92-pb2-iculture",
+      "finding": "The rendered contemporary headline explicitly identifies iOS 9.2 Public Beta 2 on 2015-11-04; developer-focused body copy is retained as a source-text conflict.",
+      "disposition": "chronologyApprovedAfterCorroboration",
+      "qualificationId": "ios92-iculture-slug-and-copy-audience-mismatch"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.2:public-beta-3",
+      "addedSourceId": "source-ios92-pb3-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies iOS 9.2 Beta 3 as also available to the public program on 2015-11-10.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.2:public-beta-4",
+      "addedSourceId": "source-ios92-pb4-iculture",
+      "finding": "The rendered headline and lead explicitly identify iOS 9.2 Beta 4 for public testers on 2015-11-18; the legacy developer-focused path is not treated as the event label.",
+      "disposition": "chronologyApprovedAfterCorroboration",
+      "qualificationId": "ios92-iculture-slug-and-copy-audience-mismatch"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.2.1:public-beta-1",
+      "addedSourceId": "source-ios921-pb1-iculture",
+      "finding": "The contemporary iCulture headline and lead explicitly identify the first iOS 9.2.1 beta for public testers on 2015-12-17.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3:public-beta-1",
+      "addedSourceId": "source-ios93-pb1-appleinsider",
+      "finding": "The contemporary AppleInsider headline explicitly identifies the first iOS 9.3 public beta on 2016-01-14.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3:public-beta-2",
+      "addedSourceId": "source-ios93-pb2-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies iOS 9.3 Public Beta 2 on 2016-01-27.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3:public-beta-3",
+      "addedSourceId": "source-ios93-pb3-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies the third iOS 9.3 beta for public testers on 2016-02-10.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3:public-beta-4",
+      "addedSourceId": "source-ios93-pb4-appleinsider",
+      "finding": "The contemporary AppleInsider headline explicitly identifies the fourth iOS 9.3 beta for public testers on 2016-02-23.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3:public-beta-5",
+      "addedSourceId": "source-ios93-pb5-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies iOS 9.3 Public Beta 5 on 2016-03-01.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3:public-beta-6",
+      "addedSourceId": "source-ios93-pb6-iculture",
+      "finding": "The contemporary iCulture headline and lead explicitly identify the sixth iOS 9.3 beta for public testers on 2016-03-07.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3:public-beta-7",
+      "addedSourceId": "source-ios93-pb7-iculture",
+      "finding": "The contemporary iCulture headline and lead explicitly identify the seventh iOS 9.3 beta for public testers on 2016-03-14.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3.2:public-beta-1",
+      "addedSourceId": "source-ios932-pb1-9to5mac",
+      "finding": "The article's explicitly dated 2016-04-07 update establishes the first iOS 9.3.2 public appearance; the 2016-04-06 original publication date belongs to the developer seed.",
+      "disposition": "chronologyApprovedAfterCorroboration",
+      "qualificationId": "ios932-public-beta-1-dated-update-boundary"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3.2:public-beta-2",
+      "addedSourceId": "source-ios932-pb2-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies iOS 9.3.2 Beta 2 for public testers on 2016-04-21.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3.2:public-beta-3",
+      "addedSourceId": "source-ios932-pb3-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies iOS 9.3.2 Public Beta 3 on 2016-04-27.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3.2:public-beta-4",
+      "addedSourceId": "source-ios932-pb4-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies the fourth iOS 9.3.2 public beta on 2016-05-03.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3.3:public-beta-1",
+      "addedSourceId": "source-ios933-pb1-iculture",
+      "finding": "The same-day revised headline and lead explicitly identify the first iOS 9.3.3 public appearance on 2016-05-24; stale future-tense body copy remains documented.",
+      "disposition": "chronologyApprovedAfterCorroboration",
+      "qualificationId": "ios933-iculture-stale-pre-update-copy"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3.3:public-beta-2",
+      "addedSourceId": "source-ios933-pb2-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies iOS 9.3.3 Public Beta 2 on 2016-06-07.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3.3:public-beta-3",
+      "addedSourceId": "source-ios933-pb3-iculture",
+      "finding": "The same-day revised lead explicitly identifies the third iOS 9.3.3 public appearance on 2016-06-21; stale developer-only copy later in the page remains documented.",
+      "disposition": "chronologyApprovedAfterCorroboration",
+      "qualificationId": "ios933-iculture-stale-pre-update-copy"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3.3:public-beta-4",
+      "addedSourceId": "source-ios933-pb4-iculture",
+      "finding": "The contemporary iCulture headline explicitly identifies the fourth iOS 9.3.3 public beta on 2016-06-29.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.3.3:public-beta-5",
+      "addedSourceId": "source-ios933-pb5-iculture",
+      "finding": "The contemporary iCulture headline and lead explicitly identify the fifth iOS 9.3.3 beta for public testers on 2016-07-06.",
+      "disposition": "chronologyApprovedAfterCorroboration"
+    }
+  ],
+  "qualifications": [
+    {
+      "qualificationId": "ios92-iculture-slug-and-copy-audience-mismatch",
+      "candidateIds": [
+        "candidate:apple:ios:9.2:public-beta-2",
+        "candidate:apple:ios:9.2:public-beta-4"
+      ],
+      "requiredHandling": "Use the rendered public-specific headline and contemporaneous update text as the event evidence; retain the legacy developer-focused slug/body mismatch in provenance."
+    },
+    {
+      "qualificationId": "ios932-public-beta-1-dated-update-boundary",
+      "candidateIds": [
+        "candidate:apple:ios:9.3.2:public-beta-1"
+      ],
+      "requiredHandling": "Use 2016-04-07 for the public appearance and do not collapse it into the 2016-04-06 developer appearance."
+    },
+    {
+      "qualificationId": "ios933-iculture-stale-pre-update-copy",
+      "candidateIds": [
+        "candidate:apple:ios:9.3.3:public-beta-1",
+        "candidate:apple:ios:9.3.3:public-beta-3"
+      ],
+      "requiredHandling": "Keep the source's same-day revision/stale-copy caveat adjacent to the provenance; do not quote or rely on the superseded future-tense paragraphs."
+    }
+  ],
+  "fileIntegrity": {
+    "sourcesSha256": "fc47c61aadb03c403a4cfc7c8fc02a80d321a49393589c0452059912b862ed5e",
+    "candidatesSha256": "0d7e1265ee7584139199e945edee3561c4634c3aee853cc3f292d9ebaf0b7bb3",
+    "conflictsSha256": "cad088a2818bfa1723538c93daf3e0bdf90a30c0dc4334680e8696858a5c961f",
+    "productionSnapshotSha256": "5ba229cba2c1e088cf435aa3138f79c37a9f74eebdba5e538cf3c28fd7f2b976",
+    "priorIndependentReviewSha256": "c31165ca8df49d75c475b78b7fabefa415d04885b0ec98a1abc08cfc69f7779b"
+  },
+  "authorization": {
+    "chronologyReviewEligibleCandidateCountAdded": 25,
+    "chronologyReviewEligibleCandidateCountCombined": 27,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdAllocationAllowed": false,
+    "pageBuildAllowed": false,
+    "deploymentAllowed": false
+  },
+  "nextGate": "Repeat the exact production query immediately before any separately authorized mutation. This review approves chronology evidence only."
+}

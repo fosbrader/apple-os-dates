@@ -1,0 +1,2766 @@
+{
+  "formatVersion": 1,
+  "target": { "projectId": "lh3yswzu", "dataset": "production" },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+      "transportUrl": "https://web.archive.org/web/20240612190904id_/https://developer.apple.com/tutorials/data/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes.json",
+      "title": "iOS & iPadOS 18 Beta Release Notes (preserved snapshot)",
+      "publisher": "Apple Developer via Internet Archive",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2024-06-13T15:10:40.000Z",
+      "topics": ["iOS", "iPadOS", "18.0", "Beta 1", "historical release notes"]
+    },
+    {
+      "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+      "transportUrl": "https://web.archive.org/web/20240630111940id_/https://developer.apple.com/tutorials/data/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes.json",
+      "title": "iOS & iPadOS 18 Beta 2 Release Notes (preserved snapshot)",
+      "publisher": "Apple Developer via Internet Archive",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2024-06-30T11:19:40.000Z",
+      "topics": ["iOS", "iPadOS", "18.0", "Beta 2", "historical release notes"]
+    },
+    {
+      "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+      "transportUrl": "https://web.archive.org/web/20240709144845id_/https://developer.apple.com/tutorials/data/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes.json",
+      "title": "iOS & iPadOS 18 Beta 3 Release Notes (preserved snapshot)",
+      "publisher": "Apple Developer via Internet Archive",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2024-07-10T00:28:02.000Z",
+      "topics": ["iOS", "iPadOS", "18.0", "Beta 3", "historical release notes"]
+    },
+    {
+      "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+      "transportUrl": "https://web.archive.org/web/20240715174636id_/https://developer.apple.com/tutorials/data/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes.json",
+      "title": "iOS & iPadOS 18 Beta 3 Release Notes — July 15 state (preserved snapshot)",
+      "publisher": "Apple Developer via Internet Archive",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2024-07-15T17:46:26.000Z",
+      "topics": [
+        "iOS",
+        "iPadOS",
+        "18.0",
+        "Beta 3 v2",
+        "historical release notes"
+      ]
+    },
+    {
+      "url": "https://developer.apple.com/support/install-beta",
+      "title": "Installing and using Apple beta software",
+      "publisher": "Apple Developer",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "beta software",
+        "backup",
+        "release notes",
+        "Feedback Assistant"
+      ]
+    }
+  ],
+  "versions": [],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-18-0",
+        "routeAlias": "beta-1"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 18 Beta 1 is represented by 14 source-supported changes selected from Apple’s preserved 196-record initial state; no build number or unsupported milestone payload is inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The reader-facing Apple archive identifies this document as “iOS & iPadOS 18 Beta Release Notes.” This iOS overlay selects 14 substantive records from the 196-record initial state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 1 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "This is a representative baseline rather than an exhaustive conversion of all 196 records. The published selection emphasizes exact issue-ID additions and status transitions rather than every wording edit.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Retained comparison state for Beta 1"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "Items explicitly limited to iPad or iPadOS are excluded from this route. iPhone-only notes and shared iOS/iPadOS framework behavior are retained where the source text supports that scope.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "AdAttributionKit — New Features; 111224069"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Maps — New Features; 129071038, 129073725, and 129073922"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Memory Allocation — New Features; 127493322"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "RealityKit — New Features; 129016034 and 129017592"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "StoreKit — New Features; 114217892"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Swift Charts — New Features; 117186178 and 117469419"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — New Features; 117551515"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — New Features; 120815051"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — New Features; 125568810"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Translation — New Features; 112844581 and 116622913"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "StoreKit — Deprecations; 116600524"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Messages — New Features; 127751557"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Siri — New Features; 110810507"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Widgets — Deprecations; 116246167"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "The page contains original synthesis and issue-ID locators. It does not reproduce Apple’s list text, infer a build number, or copy cumulative notes into unsupported milestones. Apple’s beta guidance treats these seeds as prerelease software.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 1 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 1 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "AdAttributionKit — New Features; 111224069"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Maps — New Features; 129071038, 129073725, and 129073922"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Memory Allocation — New Features; 127493322"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "RealityKit — New Features; 129016034 and 129017592"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "StoreKit — New Features; 114217892"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Swift Charts — New Features; 117186178 and 117469419"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — New Features; 117551515"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — New Features; 120815051"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — New Features; 125568810"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Translation — New Features; 112844581 and 116622913"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "StoreKit — Deprecations; 116600524"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Messages — New Features; 127751557"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Siri — New Features; 110810507"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Widgets — Deprecations; 116246167"
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-18-beta1-adattributionkit-reengagement",
+          "title": "AdAttributionKit re-engagement attribution",
+          "canonicalSummary": "AdAttributionKit added click-through re-engagement measurement and Universal Link deep linking for already-installed apps.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The first preserved state documents re-engagement measurement and deep links for previously installed apps.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "AdAttributionKit — New Features; 111224069"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-mapkit-place-identity-and-cards",
+          "title": "MapKit place identity and place cards",
+          "canonicalSummary": "MapKit added persistent Place IDs, more local-search result categories, and an API for presenting place-card interfaces.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial notes group three related MapKit additions: Place IDs, expanded search result types, and place-card presentation.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Maps — New Features; 129071038, 129073725, and 129073922"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-memory-allocator-implementation",
+          "title": "System memory allocator implementation",
+          "canonicalSummary": "The system allocator changed for most allocation sizes, potentially exposing latent memory bugs and altering allocation-heavy performance or fragmentation.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple warned developers that a new allocator implementation could reveal existing memory defects and change allocation behavior.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Memory Allocation — New Features; 127493322"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-realitykit-rendering-capabilities",
+          "title": "RealityKit subdivision and Display P3 rendering",
+          "canonicalSummary": "RealityKit added Catmull-Clark subdivision rendering for qualifying USD meshes and Display P3 rendering for virtual objects.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial state adds subdivision rendering with documented resource costs and expands virtual-object rendering to Display P3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "RealityKit — New Features; 129016034 and 129017592"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-storekit-renewal-offer-metadata",
+          "title": "StoreKit renewal and offer metadata",
+          "canonicalSummary": "StoreKit subscription status gained renewal price, currency, and next-renewal offer information.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Subscription status objects can expose renewal pricing, currency, and the offer expected for the next renewal.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "StoreKit — New Features; 114217892"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-swift-charts-function-vectorized-plots",
+          "title": "Swift Charts function and vectorized plots",
+          "canonicalSummary": "Swift Charts added function plots and vectorized plotting APIs intended to render large datasets more efficiently.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The first state introduces LinePlot and AreaPlot for math functions plus vectorized PointPlot and RectanglePlot APIs.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Swift Charts — New Features; 117186178 and 117469419"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-swiftui-sheet-presentation-sizing",
+          "title": "SwiftUI automatic sheet sizing",
+          "canonicalSummary": "SwiftUI sheets linked against the new SDK adopted automatic presentation sizing with platform-dependent form or fitted behavior.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apps linking against the new SDK need to audit sheets because their default presentation sizing changed.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — New Features; 117551515"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-swiftui-mainactor-isolation",
+          "title": "SwiftUI default MainActor isolation",
+          "canonicalSummary": "SwiftUI protocol conformances became MainActor-isolated by default to improve compile-time data-race diagnostics.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The SDK applies default MainActor isolation to View and related protocol conformances while leaving runtime evaluation behavior unchanged.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — New Features; 120815051"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-swiftui-entry-macro",
+          "title": "SwiftUI Entry macro",
+          "canonicalSummary": "SwiftUI added the Entry macro to simplify custom environment, focused, transaction, and container value declarations.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The Entry macro reduces boilerplate for several custom SwiftUI value containers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — New Features; 125568810"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-translation-apis-and-hindi",
+          "title": "Translation APIs and Hindi support",
+          "canonicalSummary": "The system added app-facing translation sessions and Hindi across the Translate app, system translation, Safari, and the new APIs.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apps gained a translation-session API while the broader translation stack added Hindi support.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Translation — New Features; 112844581 and 116622913"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-storekit-original-api-deprecation",
+          "title": "Original StoreKit API deprecation",
+          "canonicalSummary": "Apple deprecated the original in-app purchase API family in favor of current StoreKit APIs.",
+          "category": "removal",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The initial notes mark the legacy in-app purchase classes and requests as deprecated.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "StoreKit — Deprecations; 116600524"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta1-messages-via-satellite",
+          "title": "Messages via satellite",
+          "canonicalSummary": "Messages added satellite messaging in the United States, with SMS-over-satellite availability limited to participating carriers.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The first preserved iOS state records the initial United States and carrier scope for messaging over satellite.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Messages — New Features; 127751557"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta1-siri-bluetooth-media-source",
+          "title": "Siri response audio over a vehicle media source",
+          "canonicalSummary": "Siri added an option to route responses through a vehicle’s Bluetooth media source when CarPlay is unavailable.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The iPhone-only note describes improved Siri audio through a vehicle media source without CarPlay.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Siri — New Features; 110810507"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta1-today-view-extension-removal",
+          "title": "Legacy Today View extensions removed",
+          "canonicalSummary": "iOS 18 removed support for legacy Today View extensions.",
+          "category": "removal",
+          "action": "removed",
+          "inheritance": "delta",
+          "summary": "Apple’s deprecation section states that legacy Today View extensions are removed in iOS 18.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Widgets — Deprecations; 116246167"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:45:17Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-18-0",
+        "routeAlias": "beta-2"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 18 Beta 2 is represented by 13 source-supported changes selected from Apple’s preserved 219-record state; no build number or unsupported milestone payload is inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The reader-facing Apple archive identifies this document as “iOS & iPadOS 18 Beta 2 Release Notes.” This iOS overlay selects 13 substantive records from the 219-record state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 2 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "Against Beta 1, the archive parser found 26 additions, 3 removals, and 73 changed issue records. The published selection emphasizes exact issue-ID additions and status transitions rather than every wording edit.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Before comparison state for Beta 2"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Retained comparison state for Beta 2"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "Items explicitly limited to iPad or iPadOS are excluded from this route. iPhone-only notes and shared iOS/iPadOS framework behavior are retained where the source text supports that scope.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "App Store — New Features; 122163236"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Audio — Resolved Issues; 126693883"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Containerization — Resolved Issues; 123480553"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Camera — Known Issues to Resolved Issues; 128899310 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "HealthKit — Known Issues to Resolved Issues; 123450917 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "iCloud Drive — Known Issues to Resolved Issues; 128771010 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Photos — Known Issues to Resolved Issues; 128325085 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — Known Issues to Resolved Issues; 128902804 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Platform — New Features; 84639494"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Messages — Known Issues; 130029732"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Display — Known Issues to Resolved Issues; 128268712 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Wallet — New Features; 129338051"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Files — Known Issues to Resolved Issues; 128868597 status transition"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "The page contains original synthesis and issue-ID locators. It does not reproduce Apple’s list text, infer a build number, or copy cumulative notes into unsupported milestones. Apple’s beta guidance treats these seeds as prerelease software.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 2 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "App Store — New Features; 122163236"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Audio — Resolved Issues; 126693883"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Containerization — Resolved Issues; 123480553"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Camera — Known Issues to Resolved Issues; 128899310 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "HealthKit — Known Issues to Resolved Issues; 123450917 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "iCloud Drive — Known Issues to Resolved Issues; 128771010 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Photos — Known Issues to Resolved Issues; 128325085 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — Known Issues to Resolved Issues; 128902804 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Platform — New Features; 84639494"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Messages — Known Issues; 130029732"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Display — Known Issues to Resolved Issues; 128268712 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Wallet — New Features; 129338051"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Files — Known Issues to Resolved Issues; 128868597 status transition"
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-18-beta2-on-demand-resource-limits",
+          "title": "Higher on-demand resource limits",
+          "canonicalSummary": "Apple increased on-demand resource limits for iOS 18 and iPadOS 18 alongside other platforms.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Beta 2 state adds the cross-platform increase in on-demand resource limits.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "App Store — New Features; 122163236"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-bluetooth-audio-route-fix",
+          "title": "Bluetooth headphone audio routing",
+          "canonicalSummary": "Apple fixed Bluetooth headphones being unavailable as an audio route under some AVAudioSession configurations.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds a resolved audio-routing issue affecting some Bluetooth headphone and AVAudioSession combinations.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Audio — Resolved Issues; 126693883"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-duplicate-app-container-handling",
+          "title": "Duplicate app-container handling",
+          "canonicalSummary": "The system improved handling of duplicate containers created by older Xcode versions so apps launch consistently and deletion removes duplicates.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 2 documents more consistent launch and deletion behavior when Xcode 15 through 15.3 created duplicate device containers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Containerization — Resolved Issues; 123480553"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-camera-startup-delay-fix",
+          "title": "Camera startup delay",
+          "canonicalSummary": "Apple fixed camera functions taking as long as two minutes to become available after an iPhone or iPad booted.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Beta 1 known issue becomes resolved in Beta 2 for both iPhone and iPad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Camera — Known Issues to Resolved Issues; 128899310 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-healthkit-workout-route-access",
+          "title": "HealthKit workout-route access",
+          "canonicalSummary": "Apple fixed third-party workout apps being unable to access routes created by the Apple Watch Workout app.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 2 moves the HealthKit workout-route access issue from known to resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "HealthKit — Known Issues to Resolved Issues; 123450917 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-icloud-drive-data-usage",
+          "title": "iCloud Drive sync data usage",
+          "canonicalSummary": "Apple fixed frequently edited iCloud Drive files using more network data than expected while syncing.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The excess-data syncing issue changes from known in Beta 1 to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "iCloud Drive — Known Issues to Resolved Issues; 128771010 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-photos-icloud-sync",
+          "title": "Photos iCloud Library syncing",
+          "canonicalSummary": "Apple fixed photos and videos stopping their synchronization through iCloud Photo Library.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The iCloud Photo Library syncing failure changes from known to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Photos — Known Issues to Resolved Issues; 128325085 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-swiftui-sheet-sizing-default",
+          "title": "SwiftUI sheet-sizing default",
+          "canonicalSummary": "Apple corrected SwiftUI sheets using fitted sizing when their intended automatic default should resolve to form sizing.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 2 resolves the incorrect initial sheet-sizing behavior documented in the preceding state.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — Known Issues to Resolved Issues; 128902804 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-hardware-timer-register-frequency",
+          "title": "Hardware timer-register frequency",
+          "canonicalSummary": "SDK-linked apps on specified newer Apple silicon began reading a 1 GHz architectural timer frequency instead of the prior 24 MHz value.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds a compatibility note for direct timer-register readers while continuing to recommend system timekeeping APIs.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Platform — New Features; 84639494"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta2-rcs-sms-fallback",
+          "title": "RCS conversations falling back to SMS",
+          "canonicalSummary": "Existing RCS conversations could fall back to SMS even while RCS remained registered.",
+          "category": "regression",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 2 newly lists RCS one-to-one and group conversations incorrectly downgrading to SMS.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Messages — Known Issues; 130029732"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta2-always-on-display-reboot",
+          "title": "Always-On display exit reboot",
+          "canonicalSummary": "Apple fixed iPhones with Always-On display enabled potentially panicking or rebooting when leaving that display state.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The phone-specific Always-On display reboot issue changes from known to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Display — Known Issues to Resolved Issues; 128268712 status transition"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta2-wallet-id-liveness-capture",
+          "title": "Wallet ID liveness capture",
+          "canonicalSummary": "Wallet could request a Live Photo during ID enrollment to help verify that a live person was submitting the image.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds an iPhone ID-enrollment liveness check that may supplement or replace prompted facial movements.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Wallet — New Features; 129338051"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta2-files-move-panel-navigation",
+          "title": "Files move-panel navigation",
+          "canonicalSummary": "Apple fixed navigation failures in the Files app’s Move panel on iPhone.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The iPhone-specific Move-panel navigation issue changes from known to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Files — Known Issues to Resolved Issues; 128868597 status transition"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:45:17Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-18-0",
+        "routeAlias": "beta-3"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 18 Beta 3 is represented by 12 source-supported changes selected from Apple’s preserved 227-record state; no build number or unsupported milestone payload is inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The reader-facing Apple archive identifies this document as “iOS & iPadOS 18 Beta 3 Release Notes.” This iOS overlay selects 12 substantive records from the 227-record state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 3 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "Against Beta 2, the archive parser found 11 additions, 3 removals, and 27 changed issue records. The published selection emphasizes exact issue-ID additions and status transitions rather than every wording edit.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Before comparison state for Beta 3"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Retained comparison state for Beta 3"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "Items explicitly limited to iPad or iPadOS are excluded from this route. iPhone-only notes and shared iOS/iPadOS framework behavior are retained where the source text supports that scope.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "FaceTime — Known Issues to Resolved Issues; 124719544 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Keyboard — Known Issues to Resolved Issues; 129174947 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Settings — Known Issues to Resolved Issues; 129688831 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Shortcuts — Known Issues to Resolved Issues; 130039560 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Swift Charts — Known Issues to Resolved Issues; 130023892 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — Known Issues to Resolved Issues; 117864591 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "StoreKit — Resolved Issues; 124254957 and FB13679318"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Photos — Known Issues; 130739189"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "RealityKit — Known Issues to Resolved Issues; 129424857 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Messages — Known Issues to Resolved Issues; 130029732 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "iPhone Mirroring — Known Issues to Resolved Issues; 126928807, 128281331, and 128633492"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Wifi Calling — Known Issues to Resolved Issues; 130227345 status transition"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "The page contains original synthesis and issue-ID locators. It does not reproduce Apple’s list text, infer a build number, or copy cumulative notes into unsupported milestones. Apple’s beta guidance treats these seeds as prerelease software.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 3 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 3 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 3 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "FaceTime — Known Issues to Resolved Issues; 124719544 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Keyboard — Known Issues to Resolved Issues; 129174947 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Settings — Known Issues to Resolved Issues; 129688831 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Shortcuts — Known Issues to Resolved Issues; 130039560 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Swift Charts — Known Issues to Resolved Issues; 130023892 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — Known Issues to Resolved Issues; 117864591 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "StoreKit — Resolved Issues; 124254957 and FB13679318"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Photos — Known Issues; 130739189"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "RealityKit — Known Issues to Resolved Issues; 129424857 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Messages — Known Issues to Resolved Issues; 130029732 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "iPhone Mirroring — Known Issues to Resolved Issues; 126928807, 128281331, and 128633492"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Wifi Calling — Known Issues to Resolved Issues; 130227345 status transition"
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-18-beta3-facetime-video-after-unlock",
+          "title": "FaceTime video after unlocking",
+          "canonicalSummary": "Apple fixed FaceTime video becoming disabled after answering from the Lock Screen and later unlocking the device.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The FaceTime Lock Screen and picture-in-picture camera issue changes from known to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "FaceTime — Known Issues to Resolved Issues; 124719544 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-keyboard-settings-configuration",
+          "title": "Keyboard configuration in Settings",
+          "canonicalSummary": "Apple fixed Settings preventing users from adding or removing language keyboards and keyboard extensions.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The keyboard-configuration issue changes from known to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Keyboard — Known Issues to Resolved Issues; 129174947 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-storage-availability-reporting",
+          "title": "Available-storage reporting",
+          "canonicalSummary": "Apple fixed General settings reporting an incorrect amount of available device storage.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The available-storage reporting issue changes from known to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Settings — Known Issues to Resolved Issues; 129688831 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-shortcuts-intent-refresh",
+          "title": "Shortcuts intent refresh",
+          "canonicalSummary": "Apple fixed added or removed SiriKit and App Intents definitions not appearing promptly in Shortcuts.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The intent-refresh issue changes from known in Beta 2 to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Shortcuts — Known Issues to Resolved Issues; 130039560 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-swift-charts-animation-marks",
+          "title": "Swift Charts animated marks",
+          "canonicalSummary": "Apple fixed chart marks disappearing during animations when a foreground color style was applied.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Swift Charts animation issue changes from known in Beta 2 to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Swift Charts — Known Issues to Resolved Issues; 130023892 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-swiftui-scenephase",
+          "title": "SwiftUI scenePhase reporting",
+          "canonicalSummary": "Apple fixed SwiftUI scenePhase so an app reports active whenever at least one of its scenes is active.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The scenePhase behavior changes from known in Beta 2 to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — Known Issues to Resolved Issues; 117864591 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-storekit-voiceover-product-text",
+          "title": "StoreKit product text in VoiceOver",
+          "canonicalSummary": "Apple fixed VoiceOver failing to read StoreKit product titles and descriptions in affected subscription interfaces.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 adds a resolved StoreKit accessibility issue covering product titles and descriptions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "StoreKit — Resolved Issues; 124254957 and FB13679318"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-photos-services-stall",
+          "title": "Photos-related services becoming unresponsive",
+          "canonicalSummary": "Photos services could stop responding and disrupt iCloud syncing, camera and screenshot capture, or sharing.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 3 newly documents a Photos-services stall with effects across capture, synchronization, and sharing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Photos — Known Issues; 130739189"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-realitykit-dynamic-lights",
+          "title": "RealityKit dynamic-light stability",
+          "canonicalSummary": "Apple fixed RealityKit scenes with more than roughly one hundred dynamic lights triggering an abnormal termination.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The dynamic-light stability issue changes from known in Beta 2 to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "RealityKit — Known Issues to Resolved Issues; 129424857 status transition"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta2-rcs-sms-fallback",
+          "title": "RCS conversations falling back to SMS",
+          "canonicalSummary": "Existing RCS conversations could fall back to SMS even while RCS remained registered.",
+          "category": "regression",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 moves the RCS-to-SMS fallback regression from known to resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Messages — Known Issues to Resolved Issues; 130029732 status transition"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta3-iphone-mirroring-interactions",
+          "title": "iPhone Mirroring interaction fixes",
+          "canonicalSummary": "Apple fixed iPhone Mirroring keyboard input, Lock Screen app launching, and incompatible-device listings.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Three iPhone Mirroring interaction issues move from known in Beta 2 to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "iPhone Mirroring — Known Issues to Resolved Issues; 126928807, 128281331, and 128633492"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta3-wifi-calling-companion-devices",
+          "title": "Wi-Fi Calling on companion devices",
+          "canonicalSummary": "Apple fixed affected T-Mobile users being unable to place or receive Wi-Fi calls on secondary devices using the same Apple account.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The secondary-device Wi-Fi Calling issue moves from known in Beta 2 to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Wifi Calling — Known Issues to Resolved Issues; 130227345 status transition"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:45:17Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-18-0",
+        "routeAlias": "beta-3-v2"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 18 Beta 3 v2 is represented by 2 source-supported changes selected from Apple’s preserved 229-record July 15 state; no build number or unsupported milestone payload is inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The reader-facing Apple archive identifies this document as “iOS & iPadOS 18 Beta 3 Release Notes.” This iOS overlay selects 2 substantive records from the 229-record July 15 state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 3 v2 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "Against the earlier Beta 3 state, exactly two issue records were added and none were removed or changed. The published selection emphasizes exact issue-ID additions and status transitions rather than every wording edit.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Before comparison state for Beta 3 v2"
+              },
+              {
+                "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Retained comparison state for Beta 3 v2"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "Items explicitly limited to iPad or iPadOS are excluded from this route. iPhone-only notes and shared iOS/iPadOS framework behavior are retained where the source text supports that scope.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Home app — Known Issues; 130850945"
+              },
+              {
+                "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Messages — New Features; 131499640"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "The page contains original synthesis and issue-ID locators. It does not reproduce Apple’s list text, infer a build number, or copy cumulative notes into unsupported milestones. Apple’s beta guidance treats these seeds as prerelease software.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 3 v2 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 3 v2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 3 v2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Home app — Known Issues; 130850945"
+        },
+        {
+          "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Messages — New Features; 131499640"
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-18-beta3v2-home-utility-account-offboarding",
+          "title": "Home Utility account offboarding",
+          "canonicalSummary": "Upgrading one device to Beta 3 could remove a Home Utility account when the user still had other devices on Beta 1 or Beta 2.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The July 15 state adds a mixed-beta Home Utility account offboarding issue and advises completing upgrades before re-onboarding.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID as an exact addition in the 229-record July 15 state against the 227-record Beta 3 state; no other records changed at this boundary.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Home app — Known Issues; 130850945"
+            }
+          ]
+        },
+        {
+          "key": "ios-18-beta3v2-rcs-carrier-availability",
+          "title": "RCS carrier availability",
+          "canonicalSummary": "RCS messaging became available on participating carriers.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The July 15 state adds an iOS Messages availability note limiting RCS support to selected carriers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID as an exact addition in the 229-record July 15 state against the 227-record Beta 3 state; no other records changed at this boundary.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Messages — New Features; 131499640"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:45:17Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-18-0",
+        "routeAlias": "beta-1"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 18 Beta 1 is represented by 12 source-supported changes selected from Apple’s preserved 196-record initial state; no build number or unsupported milestone payload is inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The reader-facing Apple archive identifies this document as “iOS & iPadOS 18 Beta Release Notes.” This iPadOS overlay selects 12 substantive records from the 196-record initial state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 1 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "This is a representative baseline rather than an exhaustive conversion of all 196 records. The published selection emphasizes exact issue-ID additions and status transitions rather than every wording edit.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Retained comparison state for Beta 1"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "Items explicitly limited to iPhone or iOS are excluded from this route. iPad-specific notes and shared iOS/iPadOS framework behavior are retained where the source text supports that scope.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "AdAttributionKit — New Features; 111224069"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Maps — New Features; 129071038, 129073725, and 129073922"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Memory Allocation — New Features; 127493322"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "RealityKit — New Features; 129016034 and 129017592"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "StoreKit — New Features; 114217892"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Swift Charts — New Features; 117186178 and 117469419"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — New Features; 117551515"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — New Features; 120815051"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — New Features; 125568810"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Translation — New Features; 112844581 and 116622913"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "StoreKit — Deprecations; 116600524"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — New Features; 117029720"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "The page contains original synthesis and issue-ID locators. It does not reproduce Apple’s list text, infer a build number, or copy cumulative notes into unsupported milestones. Apple’s beta guidance treats these seeds as prerelease software.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 1 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 1 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "AdAttributionKit — New Features; 111224069"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Maps — New Features; 129071038, 129073725, and 129073922"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Memory Allocation — New Features; 127493322"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "RealityKit — New Features; 129016034 and 129017592"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "StoreKit — New Features; 114217892"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Swift Charts — New Features; 117186178 and 117469419"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — New Features; 117551515"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — New Features; 120815051"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — New Features; 125568810"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Translation — New Features; 112844581 and 116622913"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "StoreKit — Deprecations; 116600524"
+        },
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — New Features; 117029720"
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-18-beta1-adattributionkit-reengagement",
+          "title": "AdAttributionKit re-engagement attribution",
+          "canonicalSummary": "AdAttributionKit added click-through re-engagement measurement and Universal Link deep linking for already-installed apps.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The first preserved state documents re-engagement measurement and deep links for previously installed apps.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "AdAttributionKit — New Features; 111224069"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-mapkit-place-identity-and-cards",
+          "title": "MapKit place identity and place cards",
+          "canonicalSummary": "MapKit added persistent Place IDs, more local-search result categories, and an API for presenting place-card interfaces.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial notes group three related MapKit additions: Place IDs, expanded search result types, and place-card presentation.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Maps — New Features; 129071038, 129073725, and 129073922"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-memory-allocator-implementation",
+          "title": "System memory allocator implementation",
+          "canonicalSummary": "The system allocator changed for most allocation sizes, potentially exposing latent memory bugs and altering allocation-heavy performance or fragmentation.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple warned developers that a new allocator implementation could reveal existing memory defects and change allocation behavior.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Memory Allocation — New Features; 127493322"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-realitykit-rendering-capabilities",
+          "title": "RealityKit subdivision and Display P3 rendering",
+          "canonicalSummary": "RealityKit added Catmull-Clark subdivision rendering for qualifying USD meshes and Display P3 rendering for virtual objects.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial state adds subdivision rendering with documented resource costs and expands virtual-object rendering to Display P3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "RealityKit — New Features; 129016034 and 129017592"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-storekit-renewal-offer-metadata",
+          "title": "StoreKit renewal and offer metadata",
+          "canonicalSummary": "StoreKit subscription status gained renewal price, currency, and next-renewal offer information.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Subscription status objects can expose renewal pricing, currency, and the offer expected for the next renewal.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "StoreKit — New Features; 114217892"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-swift-charts-function-vectorized-plots",
+          "title": "Swift Charts function and vectorized plots",
+          "canonicalSummary": "Swift Charts added function plots and vectorized plotting APIs intended to render large datasets more efficiently.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The first state introduces LinePlot and AreaPlot for math functions plus vectorized PointPlot and RectanglePlot APIs.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Swift Charts — New Features; 117186178 and 117469419"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-swiftui-sheet-presentation-sizing",
+          "title": "SwiftUI automatic sheet sizing",
+          "canonicalSummary": "SwiftUI sheets linked against the new SDK adopted automatic presentation sizing with platform-dependent form or fitted behavior.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apps linking against the new SDK need to audit sheets because their default presentation sizing changed.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — New Features; 117551515"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-swiftui-mainactor-isolation",
+          "title": "SwiftUI default MainActor isolation",
+          "canonicalSummary": "SwiftUI protocol conformances became MainActor-isolated by default to improve compile-time data-race diagnostics.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The SDK applies default MainActor isolation to View and related protocol conformances while leaving runtime evaluation behavior unchanged.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — New Features; 120815051"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-swiftui-entry-macro",
+          "title": "SwiftUI Entry macro",
+          "canonicalSummary": "SwiftUI added the Entry macro to simplify custom environment, focused, transaction, and container value declarations.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The Entry macro reduces boilerplate for several custom SwiftUI value containers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — New Features; 125568810"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-translation-apis-and-hindi",
+          "title": "Translation APIs and Hindi support",
+          "canonicalSummary": "The system added app-facing translation sessions and Hindi across the Translate app, system translation, Safari, and the new APIs.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apps gained a translation-session API while the broader translation stack added Hindi support.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Translation — New Features; 112844581 and 116622913"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta1-storekit-original-api-deprecation",
+          "title": "Original StoreKit API deprecation",
+          "canonicalSummary": "Apple deprecated the original in-app purchase API family in favor of current StoreKit APIs.",
+          "category": "removal",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The initial notes mark the legacy in-app purchase classes and requests as deprecated.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "StoreKit — Deprecations; 116600524"
+            }
+          ]
+        },
+        {
+          "key": "ipados-18-beta1-swiftui-top-tab-bar",
+          "title": "SwiftUI top tab-bar appearance on iPad",
+          "canonicalSummary": "Automatic-style SwiftUI TabViews adopted a compact top tab bar in the regular horizontal size class on iPad.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The first preserved state explicitly scopes the revised automatic TabView appearance to iPad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative initial capability, API change, deprecation, or platform behavior from Apple’s first preserved Beta 1 DocC state; the baseline is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — New Features; 117029720"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:45:17Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-18-0",
+        "routeAlias": "beta-2"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 18 Beta 2 is represented by 13 source-supported changes selected from Apple’s preserved 219-record state; no build number or unsupported milestone payload is inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The reader-facing Apple archive identifies this document as “iOS & iPadOS 18 Beta 2 Release Notes.” This iPadOS overlay selects 13 substantive records from the 219-record state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 2 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "Against Beta 1, the archive parser found 26 additions, 3 removals, and 73 changed issue records. The published selection emphasizes exact issue-ID additions and status transitions rather than every wording edit.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Before comparison state for Beta 2"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Retained comparison state for Beta 2"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "Items explicitly limited to iPhone or iOS are excluded from this route. iPad-specific notes and shared iOS/iPadOS framework behavior are retained where the source text supports that scope.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "App Store — New Features; 122163236"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Audio — Resolved Issues; 126693883"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Containerization — Resolved Issues; 123480553"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Camera — Known Issues to Resolved Issues; 128899310 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "HealthKit — Known Issues to Resolved Issues; 123450917 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "iCloud Drive — Known Issues to Resolved Issues; 128771010 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Photos — Known Issues to Resolved Issues; 128325085 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — Known Issues to Resolved Issues; 128902804 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Platform — New Features; 84639494"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "UIKit — Known Issues; 130154177"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Camera — Known Issues to Resolved Issues; 128907349 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Math Notes — Known Issues to Resolved Issues; 123738353 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "RealityKit — Known Issues to Resolved Issues; 127748381 status transition"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "The page contains original synthesis and issue-ID locators. It does not reproduce Apple’s list text, infer a build number, or copy cumulative notes into unsupported milestones. Apple’s beta guidance treats these seeds as prerelease software.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 2 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20240613151040/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "App Store — New Features; 122163236"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Audio — Resolved Issues; 126693883"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Containerization — Resolved Issues; 123480553"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Camera — Known Issues to Resolved Issues; 128899310 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "HealthKit — Known Issues to Resolved Issues; 123450917 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "iCloud Drive — Known Issues to Resolved Issues; 128771010 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Photos — Known Issues to Resolved Issues; 128325085 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — Known Issues to Resolved Issues; 128902804 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Platform — New Features; 84639494"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "UIKit — Known Issues; 130154177"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Camera — Known Issues to Resolved Issues; 128907349 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Math Notes — Known Issues to Resolved Issues; 123738353 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "RealityKit — Known Issues to Resolved Issues; 127748381 status transition"
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-18-beta2-on-demand-resource-limits",
+          "title": "Higher on-demand resource limits",
+          "canonicalSummary": "Apple increased on-demand resource limits for iOS 18 and iPadOS 18 alongside other platforms.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Beta 2 state adds the cross-platform increase in on-demand resource limits.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "App Store — New Features; 122163236"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-bluetooth-audio-route-fix",
+          "title": "Bluetooth headphone audio routing",
+          "canonicalSummary": "Apple fixed Bluetooth headphones being unavailable as an audio route under some AVAudioSession configurations.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds a resolved audio-routing issue affecting some Bluetooth headphone and AVAudioSession combinations.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Audio — Resolved Issues; 126693883"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-duplicate-app-container-handling",
+          "title": "Duplicate app-container handling",
+          "canonicalSummary": "The system improved handling of duplicate containers created by older Xcode versions so apps launch consistently and deletion removes duplicates.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 2 documents more consistent launch and deletion behavior when Xcode 15 through 15.3 created duplicate device containers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Containerization — Resolved Issues; 123480553"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-camera-startup-delay-fix",
+          "title": "Camera startup delay",
+          "canonicalSummary": "Apple fixed camera functions taking as long as two minutes to become available after an iPhone or iPad booted.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Beta 1 known issue becomes resolved in Beta 2 for both iPhone and iPad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Camera — Known Issues to Resolved Issues; 128899310 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-healthkit-workout-route-access",
+          "title": "HealthKit workout-route access",
+          "canonicalSummary": "Apple fixed third-party workout apps being unable to access routes created by the Apple Watch Workout app.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 2 moves the HealthKit workout-route access issue from known to resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "HealthKit — Known Issues to Resolved Issues; 123450917 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-icloud-drive-data-usage",
+          "title": "iCloud Drive sync data usage",
+          "canonicalSummary": "Apple fixed frequently edited iCloud Drive files using more network data than expected while syncing.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The excess-data syncing issue changes from known in Beta 1 to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "iCloud Drive — Known Issues to Resolved Issues; 128771010 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-photos-icloud-sync",
+          "title": "Photos iCloud Library syncing",
+          "canonicalSummary": "Apple fixed photos and videos stopping their synchronization through iCloud Photo Library.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The iCloud Photo Library syncing failure changes from known to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Photos — Known Issues to Resolved Issues; 128325085 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-swiftui-sheet-sizing-default",
+          "title": "SwiftUI sheet-sizing default",
+          "canonicalSummary": "Apple corrected SwiftUI sheets using fitted sizing when their intended automatic default should resolve to form sizing.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 2 resolves the incorrect initial sheet-sizing behavior documented in the preceding state.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — Known Issues to Resolved Issues; 128902804 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta2-hardware-timer-register-frequency",
+          "title": "Hardware timer-register frequency",
+          "canonicalSummary": "SDK-linked apps on specified newer Apple silicon began reading a 1 GHz architectural timer frequency instead of the prior 24 MHz value.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds a compatibility note for direct timer-register readers while continuing to recommend system timekeeping APIs.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Platform — New Features; 84639494"
+            }
+          ]
+        },
+        {
+          "key": "ipados-18-beta2-rtl-tab-titles",
+          "title": "Right-to-left iPad tab titles",
+          "canonicalSummary": "Tab titles could be missing from iPad tab bars when using a right-to-left language.",
+          "category": "regression",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 2 newly lists missing iPad tab-bar titles for right-to-left languages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "UIKit — Known Issues; 130154177"
+            }
+          ]
+        },
+        {
+          "key": "ipados-18-beta2-document-scanning-preview",
+          "title": "Document-scanning camera preview",
+          "canonicalSummary": "Apple fixed document scanning from Camera on iPad sometimes showing a black preview instead of the live camera feed.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The iPad-specific document-scanning preview issue changes from known to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Camera — Known Issues to Resolved Issues; 128907349 status transition"
+            }
+          ]
+        },
+        {
+          "key": "ipados-18-beta2-math-notes-negative-adjustment",
+          "title": "Math Notes negative-number adjustment",
+          "canonicalSummary": "Apple fixed Math Notes number adjustment producing repeated negative signs.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The negative-number adjustment issue changes from known to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Math Notes — Known Issues to Resolved Issues; 123738353 status transition"
+            }
+          ]
+        },
+        {
+          "key": "ipados-18-beta2-realitykit-ipad-pro-shadows",
+          "title": "RealityKit shadows on iPad Pro",
+          "canonicalSummary": "Apple fixed RealityKit grounding and storyboard-enabled ray-traced shadows failing on specified iPad Pro configurations.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The iPad Pro-specific shadows issue changes from known to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 219-record Beta 2 state against the 196-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "RealityKit — Known Issues to Resolved Issues; 127748381 status transition"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:45:17Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-18-0",
+        "routeAlias": "beta-3"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 18 Beta 3 is represented by 13 source-supported changes selected from Apple’s preserved 227-record state; no build number or unsupported milestone payload is inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The reader-facing Apple archive identifies this document as “iOS & iPadOS 18 Beta 3 Release Notes.” This iPadOS overlay selects 13 substantive records from the 227-record state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 3 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "Against Beta 2, the archive parser found 11 additions, 3 removals, and 27 changed issue records. The published selection emphasizes exact issue-ID additions and status transitions rather than every wording edit.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Before comparison state for Beta 3"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Retained comparison state for Beta 3"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "Items explicitly limited to iPhone or iOS are excluded from this route. iPad-specific notes and shared iOS/iPadOS framework behavior are retained where the source text supports that scope.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "FaceTime — Known Issues to Resolved Issues; 124719544 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Keyboard — Known Issues to Resolved Issues; 129174947 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Settings — Known Issues to Resolved Issues; 129688831 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Shortcuts — Known Issues to Resolved Issues; 130039560 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Swift Charts — Known Issues to Resolved Issues; 130023892 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "SwiftUI — Known Issues to Resolved Issues; 117864591 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "StoreKit — Resolved Issues; 124254957 and FB13679318"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Photos — Known Issues; 130739189"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "RealityKit — Known Issues to Resolved Issues; 129424857 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "UIKit — Known Issues to Resolved Issues; 130154177 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Accessibility — Known Issues to Resolved Issues; 128949527 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Handwriting — Known Issues to Resolved Issues; 129419813 status transition"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Math Notes — Known Issues to Resolved Issues; 127904684 status transition"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "The page contains original synthesis and issue-ID locators. It does not reproduce Apple’s list text, infer a build number, or copy cumulative notes into unsupported milestones. Apple’s beta guidance treats these seeds as prerelease software.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 3 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20240630111940/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 3 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 3 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "FaceTime — Known Issues to Resolved Issues; 124719544 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Keyboard — Known Issues to Resolved Issues; 129174947 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Settings — Known Issues to Resolved Issues; 129688831 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Shortcuts — Known Issues to Resolved Issues; 130039560 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Swift Charts — Known Issues to Resolved Issues; 130023892 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "SwiftUI — Known Issues to Resolved Issues; 117864591 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "StoreKit — Resolved Issues; 124254957 and FB13679318"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Photos — Known Issues; 130739189"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "RealityKit — Known Issues to Resolved Issues; 129424857 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "UIKit — Known Issues to Resolved Issues; 130154177 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Accessibility — Known Issues to Resolved Issues; 128949527 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Handwriting — Known Issues to Resolved Issues; 129419813 status transition"
+        },
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Math Notes — Known Issues to Resolved Issues; 127904684 status transition"
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-18-beta3-facetime-video-after-unlock",
+          "title": "FaceTime video after unlocking",
+          "canonicalSummary": "Apple fixed FaceTime video becoming disabled after answering from the Lock Screen and later unlocking the device.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The FaceTime Lock Screen and picture-in-picture camera issue changes from known to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "FaceTime — Known Issues to Resolved Issues; 124719544 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-keyboard-settings-configuration",
+          "title": "Keyboard configuration in Settings",
+          "canonicalSummary": "Apple fixed Settings preventing users from adding or removing language keyboards and keyboard extensions.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The keyboard-configuration issue changes from known to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Keyboard — Known Issues to Resolved Issues; 129174947 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-storage-availability-reporting",
+          "title": "Available-storage reporting",
+          "canonicalSummary": "Apple fixed General settings reporting an incorrect amount of available device storage.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The available-storage reporting issue changes from known to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Settings — Known Issues to Resolved Issues; 129688831 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-shortcuts-intent-refresh",
+          "title": "Shortcuts intent refresh",
+          "canonicalSummary": "Apple fixed added or removed SiriKit and App Intents definitions not appearing promptly in Shortcuts.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The intent-refresh issue changes from known in Beta 2 to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Shortcuts — Known Issues to Resolved Issues; 130039560 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-swift-charts-animation-marks",
+          "title": "Swift Charts animated marks",
+          "canonicalSummary": "Apple fixed chart marks disappearing during animations when a foreground color style was applied.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Swift Charts animation issue changes from known in Beta 2 to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Swift Charts — Known Issues to Resolved Issues; 130023892 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-swiftui-scenephase",
+          "title": "SwiftUI scenePhase reporting",
+          "canonicalSummary": "Apple fixed SwiftUI scenePhase so an app reports active whenever at least one of its scenes is active.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The scenePhase behavior changes from known in Beta 2 to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "SwiftUI — Known Issues to Resolved Issues; 117864591 status transition"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-storekit-voiceover-product-text",
+          "title": "StoreKit product text in VoiceOver",
+          "canonicalSummary": "Apple fixed VoiceOver failing to read StoreKit product titles and descriptions in affected subscription interfaces.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 adds a resolved StoreKit accessibility issue covering product titles and descriptions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "StoreKit — Resolved Issues; 124254957 and FB13679318"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-photos-services-stall",
+          "title": "Photos-related services becoming unresponsive",
+          "canonicalSummary": "Photos services could stop responding and disrupt iCloud syncing, camera and screenshot capture, or sharing.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 3 newly documents a Photos-services stall with effects across capture, synchronization, and sharing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Photos — Known Issues; 130739189"
+            }
+          ]
+        },
+        {
+          "key": "apple-18-beta3-realitykit-dynamic-lights",
+          "title": "RealityKit dynamic-light stability",
+          "canonicalSummary": "Apple fixed RealityKit scenes with more than roughly one hundred dynamic lights triggering an abnormal termination.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The dynamic-light stability issue changes from known in Beta 2 to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "RealityKit — Known Issues to Resolved Issues; 129424857 status transition"
+            }
+          ]
+        },
+        {
+          "key": "ipados-18-beta2-rtl-tab-titles",
+          "title": "Right-to-left iPad tab titles",
+          "canonicalSummary": "Tab titles could be missing from iPad tab bars when using a right-to-left language.",
+          "category": "regression",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 moves the right-to-left iPad tab-title regression from known to resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "UIKit — Known Issues to Resolved Issues; 130154177 status transition"
+            }
+          ]
+        },
+        {
+          "key": "ipados-18-beta3-m4-sound-recognition",
+          "title": "Sound Recognition on M4 iPad Pro",
+          "canonicalSummary": "Apple fixed Sound Recognition and Sound Actions failing on iPad Pro models with M4.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The M4 iPad Pro accessibility issue moves from known to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Accessibility — Known Issues to Resolved Issues; 128949527 status transition"
+            }
+          ]
+        },
+        {
+          "key": "ipados-18-beta3-handwriting-auto-refine",
+          "title": "Handwriting auto-refine rendering",
+          "canonicalSummary": "Apple fixed handwriting auto-refine animation artifacts when iPad Display Zoom used the More Space setting.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Display Zoom-specific handwriting rendering issue moves from known to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Handwriting — Known Issues to Resolved Issues; 129419813 status transition"
+            }
+          ]
+        },
+        {
+          "key": "ipados-18-beta3-math-notes-comma-adjustment",
+          "title": "Math Notes comma-number adjustment",
+          "canonicalSummary": "Apple fixed Math Notes changing a comma-containing number to zero when it was adjusted.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The comma-number adjustment issue moves from known to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the component, status heading, and retained issue ID in the 227-record Beta 3 state against the 219-record Beta 2 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Math Notes — Known Issues to Resolved Issues; 127904684 status transition"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:45:17Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-18-0",
+        "routeAlias": "beta-3-v2"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 18 Beta 3 v2 is represented by 1 source-supported changes selected from Apple’s preserved 229-record July 15 state; no build number or unsupported milestone payload is inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The reader-facing Apple archive identifies this document as “iOS & iPadOS 18 Beta 3 Release Notes.” This iPadOS overlay selects 1 substantive records from the 229-record July 15 state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 3 v2 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "Against the earlier Beta 3 state, exactly two issue records were added and none were removed or changed. The published selection emphasizes exact issue-ID additions and status transitions rather than every wording edit.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Before comparison state for Beta 3 v2"
+              },
+              {
+                "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Retained comparison state for Beta 3 v2"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "Items explicitly limited to iPhone or iOS are excluded from this route. iPad-specific notes and shared iOS/iPadOS framework behavior are retained where the source text supports that scope.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Home app — Known Issues; 130850945"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "The page contains original synthesis and issue-ID locators. It does not reproduce Apple’s list text, infer a build number, or copy cumulative notes into unsupported milestones. Apple’s beta guidance treats these seeds as prerelease software.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+                "locator": "Beta 3 v2 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20240710002802/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 3 v2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Beta 3 v2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+          "locator": "Home app — Known Issues; 130850945"
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-18-beta3v2-home-utility-account-offboarding",
+          "title": "Home Utility account offboarding",
+          "canonicalSummary": "Upgrading one device to Beta 3 could remove a Home Utility account when the user still had other devices on Beta 1 or Beta 2.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The July 15 state adds a mixed-beta Home Utility account offboarding issue and advises completing upgrades before re-onboarding.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID as an exact addition in the 229-record July 15 state against the 227-record Beta 3 state; no other records changed at this boundary.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20240715174626/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-18-release-notes",
+              "locator": "Home app — Known Issues; 130850945"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:45:17Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

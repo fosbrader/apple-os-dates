@@ -1,0 +1,131 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios10-point-public",
+  "validatedAt": "2026-07-31T04:12:06.435Z",
+  "validator": "codex-scope-beta-gap-program-self-check",
+  "status": "passedSelfCheckPendingIndependentReview",
+  "checks": {
+    "packetJsonParsed": 6,
+    "candidateCount": 34,
+    "sourceCount": 77,
+    "attemptedSourceCount": 83,
+    "failedCaptureCount": 6,
+    "conflictCount": 6,
+    "candidatesByVersion": {
+      "10.1": 5,
+      "10.2": 7,
+      "10.2.1": 4,
+      "10.3": 7,
+      "10.3.2": 5,
+      "10.3.3": 6
+    },
+    "candidatesByEvidenceState": {
+      "corroborated": 33,
+      "reported": 1
+    },
+    "candidatesByIdentityStatus": {
+      "confirmed": 33,
+      "unverified": 1
+    },
+    "candidatesByProductionStatus": {
+      "confirmedMissing": 34
+    },
+    "sharedCandidateSchemaValid": true,
+    "assignmentTargetsResolved": 34,
+    "evidenceReferencesResolved": 77,
+    "editorialLineagesByCandidate": {
+      "candidate:apple:ios:10.1:public-beta-1": 2,
+      "candidate:apple:ios:10.1:public-beta-2": 2,
+      "candidate:apple:ios:10.1:public-beta-3": 4,
+      "candidate:apple:ios:10.1:public-beta-4": 2,
+      "candidate:apple:ios:10.1:public-beta-5": 2,
+      "candidate:apple:ios:10.2:public-beta-1": 2,
+      "candidate:apple:ios:10.2:public-beta-2": 2,
+      "candidate:apple:ios:10.2:public-beta-3": 4,
+      "candidate:apple:ios:10.2:public-beta-4": 2,
+      "candidate:apple:ios:10.2:public-beta-5": 2,
+      "candidate:apple:ios:10.2:public-beta-6": 2,
+      "candidate:apple:ios:10.2:public-beta-7": 2,
+      "candidate:apple:ios:10.2.1:public-beta-1": 2,
+      "candidate:apple:ios:10.2.1:public-beta-2": 2,
+      "candidate:apple:ios:10.2.1:public-beta-3": 1,
+      "candidate:apple:ios:10.2.1:public-beta-4": 2,
+      "candidate:apple:ios:10.3:public-beta-1": 2,
+      "candidate:apple:ios:10.3:public-beta-2": 2,
+      "candidate:apple:ios:10.3:public-beta-3": 2,
+      "candidate:apple:ios:10.3:public-beta-4": 3,
+      "candidate:apple:ios:10.3:public-beta-5": 2,
+      "candidate:apple:ios:10.3:public-beta-6": 2,
+      "candidate:apple:ios:10.3:public-beta-7": 2,
+      "candidate:apple:ios:10.3.2:public-beta-1": 2,
+      "candidate:apple:ios:10.3.2:public-beta-2": 2,
+      "candidate:apple:ios:10.3.2:public-beta-3": 3,
+      "candidate:apple:ios:10.3.2:public-beta-4": 2,
+      "candidate:apple:ios:10.3.2:public-beta-5": 2,
+      "candidate:apple:ios:10.3.3:public-beta-1": 2,
+      "candidate:apple:ios:10.3.3:public-beta-2": 2,
+      "candidate:apple:ios:10.3.3:public-beta-3": 2,
+      "candidate:apple:ios:10.3.3:public-beta-4": 2,
+      "candidate:apple:ios:10.3.3:public-beta-5": 2,
+      "candidate:apple:ios:10.3.3:public-beta-6": 2
+    },
+    "correctedLeadDates": {
+      "candidate:apple:ios:10.2:public-beta-3": "2016-11-15",
+      "candidate:apple:ios:10.3:public-beta-4": "2017-02-28",
+      "candidate:apple:ios:10.3.2:public-beta-3": "2017-04-18"
+    },
+    "productionCounts": {
+      "totalReleaseEvents": 2068,
+      "iosPublicBetaEventsAllVersions": 10,
+      "scopedReleaseEvents": 25,
+      "scopedPublicBetaEvents": 0,
+      "scopedDeveloperBetaEvents": 19
+    },
+    "developerBetaAuditGaps": [
+      "10.2.1",
+      "10.3.2",
+      "10.3.3"
+    ],
+    "rawEvidenceArtifactsReproduced": 77,
+    "selectedEvidenceArtifactsReproduced": 77,
+    "evidenceHashesReproduced": true,
+    "sanityWritesPerformed": 0,
+    "deploymentsPerformed": 0,
+    "buildClaimsIncluded": 0,
+    "substantiveChangeClaimsIncluded": 0,
+    "independentEvidenceReviewComplete": false
+  },
+  "errors": [],
+  "fileLocks": {
+    "assignment.json": {
+      "bytes": 16232,
+      "sha256": "15f63e968c5cf062cb593638660eb952d0c7347f9848a1ce4bfb26d431189ea1"
+    },
+    "sources.json": {
+      "bytes": 148633,
+      "sha256": "914fba11b782c8c7d95c8c5a981643577bbeaec19b6f5a48ffe1cf4252befc32"
+    },
+    "candidates.json": {
+      "bytes": 101326,
+      "sha256": "4b1dcd4b0f74874bfec84fd2d90e7bc77459a6b6df8e97fb74f77e5436636dde"
+    },
+    "conflicts.json": {
+      "bytes": 10962,
+      "sha256": "fcc0841454315f1108249877f476c7b0857af2b5d2f3d15056b569c342c0d093"
+    },
+    "report.md": {
+      "bytes": 4618,
+      "sha256": "18fdb38c239179f45da98ec4d733c548e19f20728a3eb4bc3aea475f454fd46f"
+    },
+    "production-snapshot.json": {
+      "bytes": 31757,
+      "sha256": "fd1b8d8e3750937af99d7c5c73f82ab0c563d627218bf33f062b7159bbd23f41"
+    }
+  },
+  "limitations": [
+    "The researcher performed this mechanical self-check; it is not an independent chronology review.",
+    "iOS 10.2.1 Public Beta 3 remains below the two-editorial-lineage threshold.",
+    "Three public appearance dates are proposed corrections to supplied developer-article dates and require independent adjudication.",
+    "Developer-beta chronology gaps for iOS 10.2.1, 10.3.2, and 10.3.3 are reported but intentionally not researched or proposed here."
+  ]
+}

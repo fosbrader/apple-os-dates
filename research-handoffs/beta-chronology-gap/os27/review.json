@@ -1,0 +1,68 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-os27",
+  "reviewedAt": "2026-07-30",
+  "reviewer": "codex-root",
+  "independentOfResearcher": true,
+  "verdict": "pass",
+  "candidateVerdict": {
+    "readyForChronologyReview": [
+      "version-macos-27-0/public-beta-1",
+      "version-macos-27-0/public-beta-2",
+      "version-watchos-27-0/public-beta-1",
+      "version-watchos-27-0/public-beta-2",
+      "version-tvos-27-0/public-beta-1",
+      "version-tvos-27-0/public-beta-2"
+    ],
+    "notProposed": [
+      "version-visionos-27-0/apparent-public-beta-1",
+      "version-visionos-27-0/apparent-public-beta-2"
+    ]
+  },
+  "checks": {
+    "jsonParsed": true,
+    "sourceIdsUnique": true,
+    "candidateIdsUnique": true,
+    "allReferencesResolve": true,
+    "documentedEvidenceArtifactsReproduced": 16,
+    "evidenceHashFailures": 0,
+    "candidateProductionResultsAligned": true,
+    "allCandidateChannelsArePublicBeta": true,
+    "allCandidateExactProductionMatches": 0,
+    "identityLocatorsChecked": [
+      "source-005",
+      "source-006",
+      "source-009",
+      "source-010",
+      "source-011",
+      "source-012"
+    ],
+    "visionOSBoundaryLocatorsChecked": [
+      "source-001",
+      "source-002",
+      "source-003",
+      "source-016"
+    ],
+    "sanityMutationPerformed": false
+  },
+  "caveats": [
+    {
+      "subject": "macOS 27 Public Beta 1 build",
+      "severity": "nonBlocking",
+      "finding": "The public appearance identity, date, and sequence are high-confidence. Build 26A5378n remains a medium-confidence shared-payload report rather than first-party public-channel build evidence.",
+      "requiredHandling": "Do not raise the build claim above reportedSharedPayload without stronger evidence."
+    },
+    {
+      "subject": "production snapshot age",
+      "severity": "nonBlocking",
+      "finding": "The exact production reconciliation is a time-bounded read-only snapshot from 2026-07-31T02:40:40Z.",
+      "requiredHandling": "Repeat the exact identity query immediately before any separately authorized Sanity write."
+    }
+  ],
+  "authorization": {
+    "chronologyReviewEligible": true,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "deploymentAllowed": false
+  }
+}

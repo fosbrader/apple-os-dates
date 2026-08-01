@@ -1,0 +1,23 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios9-10-major",
+  "conflictCount": 2,
+  "conflicts": [
+    {
+      "conflictId": "ios90-pb1-displayed-ordinal",
+      "candidateId": "candidate:apple:ios:9.0:public-beta-1",
+      "status": "modeledWithQualification",
+      "issue": "The July 9 launch reports call this the first or initial iOS 9 public appearance but do not consistently display the literal label “Public Beta 1.”",
+      "resolution": "Normalize the first appearance to Public Beta 1 because two independent launch reports establish the appearance and the July 22 reports explicitly identify the next seed as Public Beta 2.",
+      "productionConstraint": "Preserve ordinalBasis=normalizedFirstAppearance and the qualification; do not claim Apple used this exact display label on July 9."
+    },
+    {
+      "conflictId": "ios100-pb4-date-and-slug",
+      "candidateId": "candidate:apple:ios:10.0:public-beta-4",
+      "status": "resolvedWithQualification",
+      "issue": "CHIP published the following morning, and the iDevice.ro canonical URL ends in ios-10-public-beta-5 despite its headline and article body repeatedly saying Public Beta 4.",
+      "resolution": "Use August 9 based on the same-day iDevice.ro article metadata and MacRumors public-tester update; CHIP independently identifies the fourth public beta and says it had been available since Tuesday evening.",
+      "productionConstraint": "Cite content and publication metadata, not the misleading iDevice.ro URL slug, when explaining the ordinal."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "formatVersion": 1,
+  "batchId": "ios-patch-applicability-2026-07-31",
+  "validatedAt": "2026-07-31T08:11:25.083Z",
+  "status": "passed",
+  "errorCount": 0,
+  "warningCount": 0,
+  "errors": [],
+  "warnings": [],
+  "checks": {
+    "coverage": {
+      "rowCount": 27,
+      "sourceBytes": 662195,
+      "sourceSha256": "d2f80717f8afb25f5db652c7c7dc0d1b0be11384e4a498b9ca00f55c599e12bd",
+      "expectedSourceBytes": 662195,
+      "expectedSourceSha256": "d2f80717f8afb25f5db652c7c7dc0d1b0be11384e4a498b9ca00f55c599e12bd"
+    },
+    "production": {
+      "capturedAt": "2026-07-31T08:05:56.018Z",
+      "perspective": "published",
+      "useCdn": false,
+      "parentChecks": 27,
+      "missingParents": 0,
+      "totalReleaseEvents": 2068,
+      "scopedReleaseEvents": 27,
+      "scopedPublicBetaEvents": 0,
+      "exactRouteMatches": 0,
+      "exactFullMatches": 0
+    },
+    "sources": {
+      "specs": 21,
+      "ledger": 21,
+      "rawLocks": 21,
+      "fetchSuccesses": 21,
+      "fetchFailures": 0
+    },
+    "queryLog": {
+      "recordCount": 27,
+      "reversibleNoPositiveRecords": 24
+    },
+    "applicability": {
+      "parentCount": 27,
+      "classificationCounts": {
+        "positiveCandidatesEstablished": 1,
+        "evidenceBackedNotApplicable": 1,
+        "notEstablished": 1,
+        "auditedNoPositiveButReversible": 24
+      }
+    },
+    "conflicts": {
+      "conflictCount": 2,
+      "blockedVersions": [
+        "8.4.1"
+      ]
+    },
+    "candidateSchemaValid": true
+  },
+  "independentReview": {
+    "required": true,
+    "complete": false,
+    "authoredByThisResearcher": false,
+    "requiredPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review.json"
+  },
+  "safety": {
+    "chronologyApprovalGranted": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationAuthorized": false,
+    "deploymentPerformed": false
+  }
+}

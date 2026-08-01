@@ -1,0 +1,896 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-tvos-point-11-26",
+  "reviewedAt": "2026-07-31T08:45:27Z",
+  "reviewer": "codex-independent-review-tvos-point-11-26",
+  "independentOfResearcher": true,
+  "status": "passedWithBlockedSubset",
+  "verdict": "approved37CandidatesBlocked79",
+  "summary": {
+    "researchedIdentityCount": 116,
+    "packetSupportableCandidateCount": 73,
+    "packetPreblockedIdentityCount": 43,
+    "chronologyApprovedCandidateCount": 37,
+    "blockedCandidateCount": 79,
+    "newlyBlockedCandidateCount": 36,
+    "preblockedCandidateCount": 43,
+    "targetParentCount": 32,
+    "positiveParentCount": 20,
+    "publicBetaApplicableNoPositiveButReversibleParentCount": 12,
+    "packetNotProposedFindingCount": 15,
+    "reversibleNotProposedFindingCount": 15,
+    "evidenceBackedHistoricalNegativeCount": 0,
+    "packetConflictCount": 5,
+    "additionalConflictCount": 8,
+    "sourceCount": 177,
+    "finding": "Thirty-seven unchanged identities have two genuinely independent frozen publisher lineages proving tvOS, the exact version, the public channel, a displayed public-program ordinal, and a resolved America/Los_Angeles date. Seventy-nine identities remain blocked: thirty-six packet-supportable rows fail the strict gate and all forty-three preblocked rows remain unresolved. Twelve parents have no approved appearance but remain public-beta-applicable and reversible. None of the fifteen packet negative findings proves historical non-applicability."
+  },
+  "evidenceGate": {
+    "requiredIdentityFields": [
+      "platform tvOS",
+      "exact full version",
+      "public-beta audience",
+      "publisher-displayed public-program ordinal",
+      "America/Los_Angeles appearance date"
+    ],
+    "minimumIndependentPublisherFamilies": 2,
+    "acceptedPublicOrdinalRule": "A source must display Public Beta N, an ordinal public beta, or a standalone public-channel statement that the numbered beta of the exact tvOS version was seeded to the publisher's identified public beta testing group.",
+    "rejectedPublicOrdinalRule": "A developer or generic beta numeral followed only by a generic public-availability update does not establish the public-program ordinal.",
+    "prohibitedInferences": [
+      "developer ordinal or cadence",
+      "generic beta numeral plus generic public availability",
+      "build alignment",
+      "paired-platform release",
+      "release-candidate or golden-master equivalence",
+      "search-result snippet without corroborating full evidence",
+      "living-page text that does not preserve the historical tvOS identity",
+      "derivative attribution counted as an independent lineage",
+      "search silence or stable-note silence"
+    ]
+  },
+  "reasonCodeDefinitions": {
+    "APPROVED_EXACT_TWO_INDEPENDENT_LINEAGES": "Two independent publisher families establish every submitted identity field on one resolved Pacific date.",
+    "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING": "One exact lineage remains after nonqualifying evidence is excluded.",
+    "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING": "The retained sources do not display a tvOS public-program ordinal for the apparent identity.",
+    "BLOCK_UNRESOLVED_DATE_OR_IDENTITY_CONFLICT": "Exact or potentially exact evidence disagrees on date, version, ordinal, or platform scope.",
+    "BLOCK_DERIVATIVE_SECOND_LINEAGE": "The apparent second source attributes the relevant claim to the first publisher and is not independent.",
+    "BLOCK_PREEXISTING_EVIDENCE_GAP": "The packet already withheld the identity and independent review found no basis to promote it.",
+    "RETAIN_REVERSIBLE_NOT_PROPOSED_ONLY": "The bounded audit did not establish a candidate, but also does not prove historical absence or non-applicability."
+  },
+  "reviewedArtifactHashes": {
+    "assignment": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/assignment.json",
+      "bytes": 3063,
+      "sha256": "c1179e747f13d242853130ad4f7682a482094be8cbd44aeb8811924dfe3b3049"
+    },
+    "scopedCoverageSnapshot": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/scoped-coverage-snapshot.json",
+      "bytes": 15041,
+      "sha256": "f79d55a61c65c95fe6f3ffd7b69e8c67b24501817d0d0712082dacd06ac8ff24"
+    },
+    "candidates": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/candidates.json",
+      "bytes": 272863,
+      "sha256": "b110d51e9d04e00337dd8dd7d1dfed4bdc56163d73a6343dc55acec64ae2d5f5"
+    },
+    "sources": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/sources.json",
+      "bytes": 558501,
+      "sha256": "98fb4a5450194fef12dfc45637ceba5ccd446431ec4270733995bf1c38fe1fa9"
+    },
+    "rawEvidenceLocks": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/raw-evidence-locks.json",
+      "bytes": 88345,
+      "sha256": "95a46008b787e5f86bd71de643c9e6e9f5e03d7e4cb53da2185c86bf2e435207"
+    },
+    "applicabilityAudit": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/applicability-audit.json",
+      "bytes": 125517,
+      "sha256": "da45734623b8f1a676c9b1f06e3da69800654ed3928d9b12520c1c4c5eccf484"
+    },
+    "negativeFindings": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/negative-findings.json",
+      "bytes": 6614,
+      "sha256": "d9ab9dc074e257e2983b74240c3662eac3a140cf800e4cbdb2cb09c54aa84f91"
+    },
+    "conflicts": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/conflicts.json",
+      "bytes": 2286,
+      "sha256": "8d571b37e38715a5bbf3eb3bf7e86d3b2de767089fc22b300d6910f200972597"
+    },
+    "sourceQueryLog": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/source-query-log.json",
+      "bytes": 41999,
+      "sha256": "7188e09722798b9b9cab7bf6d72c628f4e7b856633bc87b401972605228f5430"
+    },
+    "packetLocks": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/packet-locks.json",
+      "bytes": 78617,
+      "sha256": "b3d451719c0b265f3d0bf67c3a18cab33c94ccd3ce0c50d5bbb9742526e0ab77"
+    },
+    "researchProductionSnapshot": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/production-snapshot.json",
+      "bytes": 147744,
+      "sha256": "7fefa86f0ba9c6affbc07d6be82644b2b3229b659d866b9b27088f6bf9d34038"
+    },
+    "independentQueryScript": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/independent-review-query.ts",
+      "bytes": 7902,
+      "sha256": "0cb831c301a2674ce0e9d52013f4cd017fd8e2c8fea6fb73f32ceda625f35228"
+    },
+    "independentProductionSnapshot": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/independent-review-production-snapshot.json",
+      "bytes": 159345,
+      "sha256": "0113b4d61e9a9d10d28e335df87302faa9c99563002db6f4d2429c4170417933"
+    }
+  },
+  "lockedFileVerification": {
+    "packetLockCountDeclared": 377,
+    "packetLockCountVerified": 377,
+    "packetLockedBytesVerified": 39533840,
+    "packetByteFailureCount": 0,
+    "packetSha256FailureCount": 0,
+    "sourceLedgerCount": 177,
+    "rawEvidenceLockCount": 177,
+    "rawEvidenceVerifiedCount": 177,
+    "rawEvidenceBytesVerified": 37531535,
+    "selectedEvidenceVerifiedCount": 177,
+    "selectedEvidenceBytesVerified": 360393,
+    "boundedExcerptCountVerified": 1786,
+    "sourceToLockJoinCountVerified": 177,
+    "failures": []
+  },
+  "scopeAndIdentityAudit": {
+    "assignmentParentCount": 32,
+    "coverageRowCount": 32,
+    "applicabilityRowCount": 32,
+    "queryLogRecordCount": 32,
+    "freshProductionParentCheckCount": 32,
+    "allParentSetsJoinExactly": true,
+    "packetCandidateCount": 73,
+    "packetPreblockedCount": 43,
+    "enumeratedIdentityCount": 116,
+    "uniqueCandidateIdCount": 116,
+    "uniqueRouteIdentityCount": 116,
+    "uniqueFullIdentityCount": 116,
+    "candidateSchemaValid": true,
+    "candidateRecordHashCountReproduced": 73,
+    "candidateIdentityFingerprintCountReproduced": 73,
+    "sharedCoverageMatrixMatchesFrozenPin": true,
+    "sharedCoverageMatrixModifiedByReviewer": false
+  },
+  "sourceAndLineageAudit": {
+    "sourceCount": 177,
+    "sourceCaptureCount": 177,
+    "candidateEvidenceReferenceCount": 209,
+    "uniqueCandidateEvidenceSourceCount": 144,
+    "approvedEvidenceReferenceCount": 74,
+    "uniqueApprovedEvidenceSourceCount": 49,
+    "approvedIndependentLineagePairCount": 37,
+    "allApprovedPairsHaveTwoDistinctPublisherFamilies": true,
+    "developerOrGenericOrdinalUsedAsPublicOrdinal": false,
+    "pairedPlatformUsedAsTvOSProof": false,
+    "releaseCandidateUsedAsPublicBetaProof": false,
+    "derivativeSourceCountedAsIndependent": false,
+    "livingPageWithoutHistoricalIdentityUsedAsProof": false,
+    "searchSnippetUsedWithoutFullCorroboration": false,
+    "searchSilenceUsedAsHistoricalNegative": false
+  },
+  "candidateDisposition": {
+    "chronologyApprovedCandidateIds": [
+      "candidate:apple:tvos:11.1:public-beta-1",
+      "candidate:apple:tvos:11.2:public-beta-2",
+      "candidate:apple:tvos:11.2.5:public-beta-1",
+      "candidate:apple:tvos:11.2.5:public-beta-2",
+      "candidate:apple:tvos:11.3:public-beta-1",
+      "candidate:apple:tvos:11.3:public-beta-2",
+      "candidate:apple:tvos:11.3:public-beta-3",
+      "candidate:apple:tvos:11.3:public-beta-5",
+      "candidate:apple:tvos:11.4:public-beta-1",
+      "candidate:apple:tvos:11.4:public-beta-2",
+      "candidate:apple:tvos:12.1:public-beta-1",
+      "candidate:apple:tvos:12.1:public-beta-5",
+      "candidate:apple:tvos:12.1.1:public-beta-1",
+      "candidate:apple:tvos:12.1.2:public-beta-1",
+      "candidate:apple:tvos:12.2:public-beta-1",
+      "candidate:apple:tvos:12.2:public-beta-2",
+      "candidate:apple:tvos:12.2:public-beta-3",
+      "candidate:apple:tvos:12.2:public-beta-4",
+      "candidate:apple:tvos:12.3:public-beta-1",
+      "candidate:apple:tvos:12.3:public-beta-2",
+      "candidate:apple:tvos:12.3:public-beta-3",
+      "candidate:apple:tvos:13.3:public-beta-1",
+      "candidate:apple:tvos:13.4:public-beta-1",
+      "candidate:apple:tvos:14.2:public-beta-1",
+      "candidate:apple:tvos:14.5:public-beta-4",
+      "candidate:apple:tvos:14.5:public-beta-5",
+      "candidate:apple:tvos:14.6:public-beta-1",
+      "candidate:apple:tvos:14.7:public-beta-1",
+      "candidate:apple:tvos:15.4:public-beta-1",
+      "candidate:apple:tvos:15.4:public-beta-2",
+      "candidate:apple:tvos:15.4:public-beta-3",
+      "candidate:apple:tvos:15.4:public-beta-4",
+      "candidate:apple:tvos:26.4:public-beta-1",
+      "candidate:apple:tvos:26.5:public-beta-1",
+      "candidate:apple:tvos:26.5:public-beta-2",
+      "candidate:apple:tvos:26.5:public-beta-3",
+      "candidate:apple:tvos:26.6:public-beta-2"
+    ],
+    "blockedCandidateCount": 79,
+    "newlyBlockedCandidateCount": 36,
+    "preblockedCandidateCount": 43
+  },
+  "approvedEvidencePairs": [
+    {
+      "candidateId": "candidate:apple:tvos:11.1:public-beta-1",
+      "appearanceDate": "2017-09-28",
+      "selectedSourceIds": ["mr-111-pb1", "iculture-111-cycle"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.2:public-beta-2",
+      "appearanceDate": "2017-11-07",
+      "selectedSourceIds": ["mr-112-pb2", "iculture-112-cycle"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.2.5:public-beta-1",
+      "appearanceDate": "2017-12-14",
+      "selectedSourceIds": ["mr-1125-pb1", "iculture-1125-cycle"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.2.5:public-beta-2",
+      "appearanceDate": "2017-12-20",
+      "selectedSourceIds": ["mr-1125-pb2", "iculture-1125-cycle"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.3:public-beta-1",
+      "appearanceDate": "2018-01-25",
+      "selectedSourceIds": ["mr-113-pb1", "9to5-113-pb1"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.3:public-beta-2",
+      "appearanceDate": "2018-02-07",
+      "selectedSourceIds": ["mr-113-pb2", "iculture-113-cycle"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.3:public-beta-3",
+      "appearanceDate": "2018-02-21",
+      "selectedSourceIds": ["mr-113-pb3", "iculture-113-cycle"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.3:public-beta-5",
+      "appearanceDate": "2018-03-12",
+      "selectedSourceIds": ["9to5-113-pb5", "iculture-113-cycle"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.4:public-beta-1",
+      "appearanceDate": "2018-04-03",
+      "selectedSourceIds": ["mr-114-pb1", "iculture-114-cycle"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.4:public-beta-2",
+      "appearanceDate": "2018-04-17",
+      "selectedSourceIds": ["mr-114-pb2", "iculture-114-cycle"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.1:public-beta-1",
+      "appearanceDate": "2018-09-20",
+      "selectedSourceIds": ["iculture-121-cycle", "imore-tvos12-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.1:public-beta-5",
+      "appearanceDate": "2018-10-22",
+      "selectedSourceIds": ["iculture-121-cycle", "imore-tvos12-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.1.1:public-beta-1",
+      "appearanceDate": "2018-11-01",
+      "selectedSourceIds": ["iculture-1211-cycle", "imore-tvos12-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.1.2:public-beta-1",
+      "appearanceDate": "2018-12-11",
+      "selectedSourceIds": ["mr-1212-pb1", "imore-tvos12-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.2:public-beta-1",
+      "appearanceDate": "2019-01-28",
+      "selectedSourceIds": ["iculture-122-cycle", "imore-tvos12-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.2:public-beta-2",
+      "appearanceDate": "2019-02-05",
+      "selectedSourceIds": ["iculture-122-cycle", "imore-tvos12-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.2:public-beta-3",
+      "appearanceDate": "2019-02-20",
+      "selectedSourceIds": ["iculture-122-cycle", "imore-tvos12-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.2:public-beta-4",
+      "appearanceDate": "2019-03-04",
+      "selectedSourceIds": ["iculture-122-cycle", "imore-tvos12-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.3:public-beta-1",
+      "appearanceDate": "2019-03-28",
+      "selectedSourceIds": ["iculture-123-cycle", "imore-tvos12-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.3:public-beta-2",
+      "appearanceDate": "2019-04-09",
+      "selectedSourceIds": ["iculture-123-cycle", "imore-tvos12-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.3:public-beta-3",
+      "appearanceDate": "2019-04-23",
+      "selectedSourceIds": ["mr-123-pb3", "iculture-123-cycle"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:13.3:public-beta-1",
+      "appearanceDate": "2019-11-06",
+      "selectedSourceIds": ["iculture-133-cycle", "imore-tvos13-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:13.4:public-beta-1",
+      "appearanceDate": "2020-02-10",
+      "selectedSourceIds": ["iculture-134-cycle", "imore-tvos13-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.2:public-beta-1",
+      "appearanceDate": "2020-09-21",
+      "selectedSourceIds": ["iculture-142-cycle", "imore-tvos14-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.5:public-beta-4",
+      "appearanceDate": "2021-03-15",
+      "selectedSourceIds": ["iculture-145-cycle", "ithinkdiff-145-pb4"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.5:public-beta-5",
+      "appearanceDate": "2021-03-23",
+      "selectedSourceIds": ["iculture-145-cycle", "mapped-kob-74-pb5"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.6:public-beta-1",
+      "appearanceDate": "2021-04-23",
+      "selectedSourceIds": ["iculture-146-cycle", "imore-tvos14-rolling"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.7:public-beta-1",
+      "appearanceDate": "2021-05-20",
+      "selectedSourceIds": ["iculture-147-cycle", "wccftech-147-pb1"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.4:public-beta-1",
+      "appearanceDate": "2022-01-28",
+      "selectedSourceIds": ["iculture-154-cycle", "kob-154-pb1"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.4:public-beta-2",
+      "appearanceDate": "2022-02-09",
+      "selectedSourceIds": ["iculture-154-cycle", "kob-154-pb2"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.4:public-beta-3",
+      "appearanceDate": "2022-02-16",
+      "selectedSourceIds": ["iculture-154-cycle", "kob-154-pb3"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.4:public-beta-4",
+      "appearanceDate": "2022-02-22",
+      "selectedSourceIds": ["iculture-154-cycle", "kob-154-pb4"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.4:public-beta-1",
+      "appearanceDate": "2026-02-17",
+      "selectedSourceIds": ["9to5-264-pb1", "mr-264-pb1"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.5:public-beta-1",
+      "appearanceDate": "2026-04-03",
+      "selectedSourceIds": ["mr-265-pb1", "9to5-265-pb1"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.5:public-beta-2",
+      "appearanceDate": "2026-04-14",
+      "selectedSourceIds": ["mr-265-pb2", "9to5-265-pb2"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.5:public-beta-3",
+      "appearanceDate": "2026-04-21",
+      "selectedSourceIds": ["9to5-265-pb3", "tuttotech-265-pb3"]
+    },
+    {
+      "candidateId": "candidate:apple:tvos:26.6:public-beta-2",
+      "appearanceDate": "2026-06-16",
+      "selectedSourceIds": ["mr-266-pb2", "9to5-266-pb2"]
+    }
+  ],
+  "blockedAdjudication": {
+    "newlyBlockedGroups": [
+      {
+        "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+        "candidateIds": [
+          "candidate:apple:tvos:11.1:public-beta-2",
+          "candidate:apple:tvos:11.1:public-beta-3",
+          "candidate:apple:tvos:11.1:public-beta-4",
+          "candidate:apple:tvos:11.2:public-beta-3",
+          "candidate:apple:tvos:11.2:public-beta-4",
+          "candidate:apple:tvos:11.2:public-beta-5",
+          "candidate:apple:tvos:11.3:public-beta-4",
+          "candidate:apple:tvos:11.4:public-beta-3",
+          "candidate:apple:tvos:11.4:public-beta-4",
+          "candidate:apple:tvos:11.4:public-beta-5",
+          "candidate:apple:tvos:12.1:public-beta-4",
+          "candidate:apple:tvos:12.1.2:public-beta-2",
+          "candidate:apple:tvos:12.2:public-beta-5",
+          "candidate:apple:tvos:12.2:public-beta-6",
+          "candidate:apple:tvos:12.3:public-beta-5",
+          "candidate:apple:tvos:13.3.1:public-beta-1",
+          "candidate:apple:tvos:14.3:public-beta-2",
+          "candidate:apple:tvos:14.3:public-beta-3",
+          "candidate:apple:tvos:14.7:public-beta-4",
+          "candidate:apple:tvos:15.2:public-beta-4",
+          "candidate:apple:tvos:15.6:public-beta-1",
+          "candidate:apple:tvos:15.6:public-beta-2",
+          "candidate:apple:tvos:26.6:public-beta-1",
+          "candidate:apple:tvos:26.6:public-beta-3"
+        ]
+      },
+      {
+        "reasonCode": "BLOCK_UNRESOLVED_DATE_OR_IDENTITY_CONFLICT",
+        "candidateIds": [
+          "candidate:apple:tvos:11.2.5:public-beta-3",
+          "candidate:apple:tvos:12.1.1:public-beta-2",
+          "candidate:apple:tvos:12.1.1:public-beta-3",
+          "candidate:apple:tvos:12.3:public-beta-4",
+          "candidate:apple:tvos:13.3:public-beta-2"
+        ]
+      },
+      {
+        "reasonCode": "BLOCK_UNRESOLVED_DATE_OR_IDENTITY_CONFLICT",
+        "candidateIds": ["candidate:apple:tvos:11.2:public-beta-1"],
+        "qualification": "iCulture's exact public row says tvOS 11.1, not tvOS 11.2."
+      },
+      {
+        "reasonCode": "BLOCK_DERIVATIVE_SECOND_LINEAGE",
+        "candidateIds": ["candidate:apple:tvos:26.4:public-beta-2"],
+        "qualification": "Buchi Gadget attributes the relevant item to MacRumors and cannot corroborate MacRumors independently."
+      },
+      {
+        "reasonCode": "BLOCK_UNRESOLVED_DATE_OR_IDENTITY_CONFLICT",
+        "candidateIds": [
+          "candidate:apple:tvos:14.7:public-beta-5",
+          "candidate:apple:tvos:15.6:public-beta-5"
+        ],
+        "qualification": "The apparent corroborating pages list tvOS only as a developer beta or omit tvOS from the public-confirmation list."
+      },
+      {
+        "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+        "candidateIds": [
+          "candidate:apple:tvos:13.4.5:public-beta-4",
+          "candidate:apple:tvos:14.4:public-beta-2",
+          "candidate:apple:tvos:14.5:public-beta-7"
+        ]
+      }
+    ],
+    "preblockedGroups": [
+      {
+        "reasonCode": "BLOCK_SECOND_INDEPENDENT_EXACT_LINEAGE_MISSING",
+        "candidateIds": [
+          "candidate:apple:tvos:13.3:public-beta-3",
+          "candidate:apple:tvos:13.4:public-beta-2",
+          "candidate:apple:tvos:14.2:public-beta-2",
+          "candidate:apple:tvos:14.2:public-beta-3",
+          "candidate:apple:tvos:14.2:public-beta-4",
+          "candidate:apple:tvos:14.5:public-beta-2",
+          "candidate:apple:tvos:14.5:public-beta-3",
+          "candidate:apple:tvos:14.5:public-beta-6",
+          "candidate:apple:tvos:15.2:public-beta-2",
+          "candidate:apple:tvos:15.2:public-beta-3",
+          "candidate:apple:tvos:15.5:public-beta-1",
+          "candidate:apple:tvos:15.6:public-beta-3",
+          "candidate:apple:tvos:16.1:public-beta-2",
+          "candidate:apple:tvos:16.1:public-beta-3",
+          "candidate:apple:tvos:18.1:public-beta-3",
+          "candidate:apple:tvos:26.6:public-beta-4",
+          "candidate:apple:tvos:26.6:public-beta-5"
+        ]
+      },
+      {
+        "reasonCode": "BLOCK_UNRESOLVED_DATE_OR_IDENTITY_CONFLICT",
+        "candidateIds": [
+          "candidate:apple:tvos:15.3:public-beta-2",
+          "candidate:apple:tvos:15.6:public-beta-4"
+        ]
+      },
+      {
+        "reasonCode": "BLOCK_EXACT_PUBLIC_ORDINAL_MISSING",
+        "candidateIds": [
+          "candidate:apple:tvos:11.2.5:public-beta-4",
+          "candidate:apple:tvos:11.2.5:public-beta-6",
+          "candidate:apple:tvos:11.3:public-beta-6",
+          "candidate:apple:tvos:12.1:public-beta-2",
+          "candidate:apple:tvos:12.1:public-beta-3",
+          "candidate:apple:tvos:12.1.1:public-beta-4",
+          "candidate:apple:tvos:12.1.2:public-beta-3",
+          "candidate:apple:tvos:13.2:public-beta-1",
+          "candidate:apple:tvos:13.2:public-beta-2",
+          "candidate:apple:tvos:13.2:public-beta-4",
+          "candidate:apple:tvos:13.3:public-beta-4",
+          "candidate:apple:tvos:13.3.1:public-beta-2",
+          "candidate:apple:tvos:13.3.1:public-beta-3",
+          "candidate:apple:tvos:13.4:public-beta-3",
+          "candidate:apple:tvos:13.4:public-beta-4",
+          "candidate:apple:tvos:13.4:public-beta-5",
+          "candidate:apple:tvos:13.4:public-beta-6",
+          "candidate:apple:tvos:15.1:public-beta-3",
+          "candidate:apple:tvos:15.2:public-beta-1",
+          "candidate:apple:tvos:15.5:public-beta-2",
+          "candidate:apple:tvos:15.5:public-beta-3",
+          "candidate:apple:tvos:15.5:public-beta-4",
+          "candidate:apple:tvos:26.4:public-beta-4",
+          "candidate:apple:tvos:26.5:public-beta-4"
+        ]
+      }
+    ],
+    "finding": "The newly blocked and preblocked groups are disjoint and exhaust all seventy-nine blocked identities."
+  },
+  "applicabilityDisposition": {
+    "publicBetaApplicablePositiveVersionIds": [
+      "version-tvos-11-1",
+      "version-tvos-11-2",
+      "version-tvos-11-2-5",
+      "version-tvos-11-3",
+      "version-tvos-11-4",
+      "version-tvos-12-1",
+      "version-tvos-12-1-1",
+      "version-tvos-12-1-2",
+      "version-tvos-12-2",
+      "version-tvos-12-3",
+      "version-tvos-13-3",
+      "version-tvos-13-4",
+      "version-tvos-14-2",
+      "version-tvos-14-5",
+      "version-tvos-14-6",
+      "version-tvos-14-7",
+      "version-tvos-15-4",
+      "version-tvos-26-4",
+      "version-tvos-26-5",
+      "version-tvos-26-6"
+    ],
+    "publicBetaApplicableNoPositiveButReversibleVersionIds": [
+      "version-tvos-13-2",
+      "version-tvos-13-3-1",
+      "version-tvos-13-4-5",
+      "version-tvos-14-3",
+      "version-tvos-14-4",
+      "version-tvos-15-1",
+      "version-tvos-15-2",
+      "version-tvos-15-3",
+      "version-tvos-15-5",
+      "version-tvos-15-6",
+      "version-tvos-16-1",
+      "version-tvos-18-1"
+    ],
+    "evidenceBackedNotApplicableVersionIds": [],
+    "notEstablishedVersionIds": [],
+    "finding": "All thirty-two scoped parents remain within tvOS's public-beta-applicable program boundary. Twelve have no approved appearance under the strict two-lineage gate and remain reversible rather than negative."
+  },
+  "notProposedFindingAdjudication": {
+    "reviewDisposition": "retainedAsReversibleNotProposedOnly",
+    "reasonCode": "RETAIN_REVERSIBLE_NOT_PROPOSED_ONLY",
+    "reversibleFindingIds": [
+      "negative:tvos:11.2.5:public-beta-5",
+      "negative:tvos:11.4:public-beta-6",
+      "negative:tvos:13.2:public-beta-3",
+      "negative:tvos:13.4.5:public-beta-1-through-3",
+      "negative:tvos:14.3:public-beta-1",
+      "negative:tvos:14.4:public-beta-1",
+      "negative:tvos:14.5:public-beta-1",
+      "negative:tvos:14.6:later-public-ordinals",
+      "negative:tvos:14.7:public-beta-2-and-3",
+      "negative:tvos:15.1:unqualified-ordinals",
+      "negative:tvos:15.3:public-beta-1",
+      "negative:tvos:15.4:public-beta-5",
+      "negative:tvos:16.1:unqualified-ordinals",
+      "negative:tvos:18.1:unqualified-ordinals",
+      "negative:tvos:26.4:public-beta-3"
+    ],
+    "candidateCreationAllowed": false,
+    "historicalNoPublicBetaConclusionAllowed": false,
+    "finding": "A skipped publisher-displayed sequence, developer-only report, paired-platform omission, or bounded no-result search does not prove that the tvOS public appearance never occurred. All fifteen findings are reusable audit cautions only."
+  },
+  "packetConflictReviews": [
+    {
+      "conflictId": "conflict:tvos:11.2:public-beta-1-version-token",
+      "reviewDisposition": "blockedConflictPreserved",
+      "candidateId": "candidate:apple:tvos:11.2:public-beta-1",
+      "finding": "The exact iCulture public row says tvOS 11.1. Cycle context cannot silently repair the version token, and the remaining public-only source is one lineage."
+    },
+    {
+      "conflictId": "conflict:tvos:13.3:public-beta-2-date",
+      "reviewDisposition": "blockedConflictPreserved",
+      "candidateId": "candidate:apple:tvos:13.3:public-beta-2",
+      "finding": "iMore preserves November 12 while iCulture preserves November 6. MacRumors supplies a developer ordinal plus public availability, not a second exact public-program ordinal lineage."
+    },
+    {
+      "conflictId": "conflict:tvos:14.5:beta-7-table-label",
+      "reviewDisposition": "blockedConflictPreserved",
+      "candidateId": "candidate:apple:tvos:14.5:public-beta-7",
+      "finding": "iCulture's table says Beta 6 and its revision note does not establish the tvOS public ordinal. The other two pages use a generic beta 7 distributed to both audiences."
+    },
+    {
+      "conflictId": "conflict:tvos:15.3:public-beta-2-date",
+      "reviewDisposition": "blockedConflictPreserved",
+      "candidateId": "candidate:apple:tvos:15.3:public-beta-2",
+      "finding": "The historical row displays January 12 while the revision timestamp and generic public rollout report point to January 13."
+    },
+    {
+      "conflictId": "conflict:tvos:15.6:public-beta-4-date",
+      "reviewDisposition": "blockedConflictPreserved",
+      "candidateId": "candidate:apple:tvos:15.6:public-beta-4",
+      "finding": "iCulture preserves an exact public row on July 5; 9to5Mac reports generic beta 4 public availability on June 28. No two exact lineages agree."
+    }
+  ],
+  "additionalConflictFindings": [
+    {
+      "candidateId": "candidate:apple:tvos:11.1:public-beta-4",
+      "issue": "iCulture's body says October 20 while its timeline says October 23.",
+      "resolution": "Blocked; no second exact lineage resolves the internal living-page date disagreement."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:11.2.5:public-beta-3",
+      "issue": "iCulture preserves January 4 while the submitted Pacific date and generic MacRumors update are January 3.",
+      "resolution": "Blocked."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.1.1:public-beta-2",
+      "issue": "iCulture preserves November 8 while iMore and the submitted Pacific date are November 7.",
+      "resolution": "Blocked."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.1.1:public-beta-3",
+      "issue": "iCulture preserves November 16 while iMore and the submitted Pacific date are November 15.",
+      "resolution": "Blocked."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.3:public-beta-3",
+      "issue": "iMore preserves April 22 while MacRumors and iCulture preserve April 23.",
+      "resolution": "Approved on the two independent exact April 23 lineages; iMore is excluded for this candidate."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:12.3:public-beta-4",
+      "issue": "iMore preserves April 29 while iCulture preserves April 30.",
+      "resolution": "Blocked."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:14.7:public-beta-5",
+      "issue": "Nishiki lists tvOS Beta 5 but omits tvOS from its Public Beta 5 product list.",
+      "resolution": "Blocked with only Kobonemi retained as exact."
+    },
+    {
+      "candidateId": "candidate:apple:tvos:15.6:public-beta-5",
+      "issue": "Kobonemi's title includes tvOS in Public Beta 5, but its body says public availability was confirmed only for iOS, iPadOS, and macOS while listing tvOS as beta 5.",
+      "resolution": "Blocked with only iCulture retained as exact."
+    }
+  ],
+  "issuesFound": [
+    {
+      "severity": "high",
+      "issue": "Thirty-six rows marked supportable do not satisfy the strict two-lineage public-program ordinal/date gate.",
+      "affectedCandidateCount": 36,
+      "impact": "Using all seventy-three packet candidates would promote developer/generic numbering, conflicts, or platform omissions into publicBeta identities.",
+      "resolution": "Only the thirty-seven explicitly approved candidate IDs may enter the non-executable research handoff."
+    },
+    {
+      "severity": "high",
+      "issue": "The packet repeatedly treats a developer or generic beta number followed by generic public availability as a displayed tvOS public-program ordinal.",
+      "resolution": "Those sources are retained as provenance but cannot satisfy the exact-ordinal gate."
+    },
+    {
+      "severity": "high",
+      "issue": "Buchi Gadget's tvOS 26.4 Public Beta 2 item attributes its relevant reporting to MacRumors.",
+      "affectedCandidateIds": ["candidate:apple:tvos:26.4:public-beta-2"],
+      "resolution": "Buchi Gadget is excluded as an independent second lineage."
+    },
+    {
+      "severity": "medium",
+      "issue": "Eight material conflicts or source-scope contradictions were not represented in conflicts.json.",
+      "resolution": "They are preserved in additionalConflictFindings; seven block their identities and one is resolved by two exact April 23 lineages."
+    },
+    {
+      "severity": "medium",
+      "issue": "Two Japanese cross-platform pages use titles that include tvOS in a Public Beta release while their bodies do not confirm tvOS public distribution.",
+      "affectedCandidateIds": [
+        "candidate:apple:tvos:14.7:public-beta-5",
+        "candidate:apple:tvos:15.6:public-beta-5"
+      ],
+      "resolution": "The body-level platform scope controls; neither page supplies the missing second lineage."
+    },
+    {
+      "severity": "low",
+      "issue": "TuttoTech's structured article timestamp predates tvOS 26.5 Public Beta 3 because it is the developer-beta publication time.",
+      "affectedCandidateIds": ["candidate:apple:tvos:26.5:public-beta-3"],
+      "resolution": "Its explicit April 21, 19:25 CEST public-beta update normalizes to April 21 Pacific and agrees with 9to5Mac."
+    }
+  ],
+  "productionRecheck": {
+    "queryScriptPath": "research-handoffs/beta-chronology-gap/tvos-point-11-26/independent-review-query.ts",
+    "snapshotPath": "research-handoffs/beta-chronology-gap/tvos-point-11-26/independent-review-production-snapshot.json",
+    "capturedAt": "2026-07-31T08:41:49.540Z",
+    "perspective": "published",
+    "useCdn": false,
+    "projectId": "lh3yswzu",
+    "dataset": "production",
+    "totalReleaseEvents": 2068,
+    "tvOSPublicBetaEventsAllVersions": 0,
+    "targetParentCount": 32,
+    "targetParentsFound": 32,
+    "scopedReleaseEvents": 189,
+    "scopedPublicBetaEvents": 0,
+    "exactRouteMatches": 0,
+    "exactFullMatches": 0,
+    "globalStableEventIdDuplicateGroups": 0,
+    "scopedRouteIdentityDuplicateGroups": 0,
+    "scopedFullIdentityDuplicateGroups": 0,
+    "queryOnly": true,
+    "sanityMutationPerformed": false
+  },
+  "checks": {
+    "reviewJsonParsed": true,
+    "all116IdentitiesReviewed": true,
+    "approvedAndBlockedPartitionDisjoint": true,
+    "approvedAndBlockedPartitionExhaustive": true,
+    "all37ApprovedCandidatesHaveTwoIndependentExactLineages": true,
+    "all79BlockedCandidatesHaveReasonCodes": true,
+    "all43PreblockedIdentitiesIndependentlyReviewed": true,
+    "all15NotProposedFindingsRemainReversible": true,
+    "all5PacketConflictsAdjudicated": true,
+    "all8AdditionalConflictsDisclosed": true,
+    "all32ParentsReviewed": true,
+    "all12NoPositiveParentsRemainReversible": true,
+    "all177SourcesAndCapturesReviewed": true,
+    "all377PacketLocksReproduced": true,
+    "all177RawAndSelectedLocksReproduced": true,
+    "candidateSchemaValid": true,
+    "candidateIdsAndIdentityKeysUnique": true,
+    "publicOrdinalNeverInferredFromDeveloperOrdinal": true,
+    "publicOrdinalNeverInferredFromGenericPublicAvailability": true,
+    "publicOrdinalNeverInferredFromPairedPlatform": true,
+    "releaseCandidateNeverUsedAsPublicBeta": true,
+    "derivativeSourcesNotCountedAsIndependent": true,
+    "livingPagesRequirePreservedHistoricalIdentity": true,
+    "americaLosAngelesDateRuleApplied": true,
+    "freshPublishedNoCdnProductionQueryCompleted": true,
+    "allTargetParentsFoundInProduction": true,
+    "allExactTargetMatchesRemainZero": true,
+    "allDuplicateChecksRemainZero": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "authorization": {
+    "researchHandoffAggregationAllowed": true,
+    "researchHandoffAggregationScope": {
+      "chronologyCandidateIds": [
+        "candidate:apple:tvos:11.1:public-beta-1",
+        "candidate:apple:tvos:11.2:public-beta-2",
+        "candidate:apple:tvos:11.2.5:public-beta-1",
+        "candidate:apple:tvos:11.2.5:public-beta-2",
+        "candidate:apple:tvos:11.3:public-beta-1",
+        "candidate:apple:tvos:11.3:public-beta-2",
+        "candidate:apple:tvos:11.3:public-beta-3",
+        "candidate:apple:tvos:11.3:public-beta-5",
+        "candidate:apple:tvos:11.4:public-beta-1",
+        "candidate:apple:tvos:11.4:public-beta-2",
+        "candidate:apple:tvos:12.1:public-beta-1",
+        "candidate:apple:tvos:12.1:public-beta-5",
+        "candidate:apple:tvos:12.1.1:public-beta-1",
+        "candidate:apple:tvos:12.1.2:public-beta-1",
+        "candidate:apple:tvos:12.2:public-beta-1",
+        "candidate:apple:tvos:12.2:public-beta-2",
+        "candidate:apple:tvos:12.2:public-beta-3",
+        "candidate:apple:tvos:12.2:public-beta-4",
+        "candidate:apple:tvos:12.3:public-beta-1",
+        "candidate:apple:tvos:12.3:public-beta-2",
+        "candidate:apple:tvos:12.3:public-beta-3",
+        "candidate:apple:tvos:13.3:public-beta-1",
+        "candidate:apple:tvos:13.4:public-beta-1",
+        "candidate:apple:tvos:14.2:public-beta-1",
+        "candidate:apple:tvos:14.5:public-beta-4",
+        "candidate:apple:tvos:14.5:public-beta-5",
+        "candidate:apple:tvos:14.6:public-beta-1",
+        "candidate:apple:tvos:14.7:public-beta-1",
+        "candidate:apple:tvos:15.4:public-beta-1",
+        "candidate:apple:tvos:15.4:public-beta-2",
+        "candidate:apple:tvos:15.4:public-beta-3",
+        "candidate:apple:tvos:15.4:public-beta-4",
+        "candidate:apple:tvos:26.4:public-beta-1",
+        "candidate:apple:tvos:26.5:public-beta-1",
+        "candidate:apple:tvos:26.5:public-beta-2",
+        "candidate:apple:tvos:26.5:public-beta-3",
+        "candidate:apple:tvos:26.6:public-beta-2"
+      ],
+      "applicabilityVersionIds": [
+        "version-tvos-11-1",
+        "version-tvos-11-2",
+        "version-tvos-11-2-5",
+        "version-tvos-11-3",
+        "version-tvos-11-4",
+        "version-tvos-12-1",
+        "version-tvos-12-1-1",
+        "version-tvos-12-1-2",
+        "version-tvos-12-2",
+        "version-tvos-12-3",
+        "version-tvos-13-2",
+        "version-tvos-13-3",
+        "version-tvos-13-3-1",
+        "version-tvos-13-4",
+        "version-tvos-13-4-5",
+        "version-tvos-14-2",
+        "version-tvos-14-3",
+        "version-tvos-14-4",
+        "version-tvos-14-5",
+        "version-tvos-14-6",
+        "version-tvos-14-7",
+        "version-tvos-15-1",
+        "version-tvos-15-2",
+        "version-tvos-15-3",
+        "version-tvos-15-4",
+        "version-tvos-15-5",
+        "version-tvos-15-6",
+        "version-tvos-16-1",
+        "version-tvos-18-1",
+        "version-tvos-26-4",
+        "version-tvos-26-5",
+        "version-tvos-26-6"
+      ],
+      "reversibleNotProposedFindingIds": [
+        "negative:tvos:11.2.5:public-beta-5",
+        "negative:tvos:11.4:public-beta-6",
+        "negative:tvos:13.2:public-beta-3",
+        "negative:tvos:13.4.5:public-beta-1-through-3",
+        "negative:tvos:14.3:public-beta-1",
+        "negative:tvos:14.4:public-beta-1",
+        "negative:tvos:14.5:public-beta-1",
+        "negative:tvos:14.6:later-public-ordinals",
+        "negative:tvos:14.7:public-beta-2-and-3",
+        "negative:tvos:15.1:unqualified-ordinals",
+        "negative:tvos:15.3:public-beta-1",
+        "negative:tvos:15.4:public-beta-5",
+        "negative:tvos:16.1:unqualified-ordinals",
+        "negative:tvos:18.1:unqualified-ordinals",
+        "negative:tvos:26.4:public-beta-3"
+      ],
+      "blockedCandidatePolicy": "Every one of the seventy-nine identities grouped under blockedAdjudication is excluded."
+    },
+    "siteIntegrationAllowed": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "pageBuildsAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  },
+  "safety": {
+    "researchOnly": true,
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false,
+    "frozenResearchArtifactsModified": false,
+    "sharedAggregateArtifactsModified": false
+  },
+  "requiredCaveats": [
+    "Only the thirty-seven explicitly approved unchanged identities may enter the non-executable research handoff.",
+    "All seventy-nine blocked identities require new exact evidence or a separately frozen corrected-identity review.",
+    "The fifteen packet negative findings remain reversible not-proposed cautions and must never be published as historical no-public-beta claims.",
+    "Preserve all packet and additional conflicts, especially date, version-token, platform-scope, and derivative-lineage qualifications.",
+    "Run another published, useCdn:false exact production query immediately before any separately authorized write."
+  ]
+}

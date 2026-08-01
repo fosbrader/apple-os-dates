@@ -1,0 +1,55 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-developer-gap-priority",
+  "createdAt": "2026-07-31T05:02:22.270Z",
+  "conflictCount": 2,
+  "conflicts": [
+    {
+      "conflictId": "conflict-ios921-cross-channel-aggregate-three",
+      "version": "9.2.1",
+      "type": "ambiguousAggregateCountAcrossChannels",
+      "sourcePositions": [
+        {
+          "sourceId": "source-ios921-final-macrumors-aggregate-conflict",
+          "position": "Says developers and public beta testers received a total of three betas; it does not say there was developer Beta 3."
+        },
+        {
+          "sourceId": "negative-ios921-final-appleinsider",
+          "position": "Explicitly says there were two developer betas before the final release."
+        }
+      ],
+      "directIdentityEvidence": [
+        "source-ios921-b1-macrumors-dev",
+        "source-ios921-b1-9to5mac-dev",
+        "source-ios921-b2-macrumors-dev",
+        "source-ios921-b2-9to5mac-dev"
+      ],
+      "resolution": "Keep developer Betas 1 and 2 only. Preserve the three-beta wording as an ambiguous cross-channel aggregate; never convert it into developer Beta 3.",
+      "blocksCandidateApproval": false,
+      "requiresReviewerAttention": true
+    },
+    {
+      "conflictId": "conflict-ios1032-final-four-versus-beta-five",
+      "version": "10.3.2",
+      "type": "aggregateCountContradictedByDirectIdentityEvidence",
+      "sourcePositions": [
+        {
+          "sourceId": "conflict-ios1032-final-macrumors",
+          "position": "Final-release lead says iOS 10.3.2 followed four betas."
+        },
+        {
+          "sourceId": "negative-ios1032-final-forbes",
+          "position": "Final-release report says five betas preceded the final version."
+        }
+      ],
+      "directIdentityEvidence": [
+        "source-ios1032-pb5-macrumors",
+        "source-ios1032-pb5-macerkopf",
+        "new-ios1032-b5-idb-direct"
+      ],
+      "resolution": "Keep Beta 5. Three independent contemporary reports explicitly identify it on April 27; classify the later four-beta aggregate as a reporting error.",
+      "blocksCandidateApproval": false,
+      "requiresReviewerAttention": true
+    }
+  ]
+}

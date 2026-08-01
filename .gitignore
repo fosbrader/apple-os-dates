@@ -47,9 +47,27 @@ next-env.d.ts
 !src/app/social-preview-v2.png/**
 !public/icons/
 !public/icons/*.png
+!public/og.png
 
 # playwright mcp
 .playwright-mcp/
 
 # local migration plans and rollback snapshots
 /.migration-artifacts/
+
+# local research evidence
+/tmp/research-evidence/
+/tmp/ios2-evidence/
+/tmp/ios3-evidence/
+/tmp/ios4-evidence/
+/tmp/ios4-point-evidence/
+/tmp/ios6-evidence/
+/tmp/ios7-point-evidence/
+/tmp/ios8-point-evidence/
+/tmp/ios9-point-evidence/
+/tmp/ios11-point-evidence/
+/tmp/pdfs/
+
+# Ad-hoc local research scratch
+/tmp/
+.DS_Store

@@ -1,0 +1,60 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-mobile26-public",
+  "validatedAt": "2026-07-31T04:47:03.109Z",
+  "validator": "research-handoffs/beta-chronology-gap/mobile26-public/validate-packet.mjs",
+  "status": "passed",
+  "checks": {
+    "sharedCandidateRegisterSchemaValid": true,
+    "candidateCount": 42,
+    "notProposedCount": 12,
+    "candidatesByPlatform": {
+      "iOS": 21,
+      "iPadOS": 21
+    },
+    "candidatesByVersion": {
+      "iOS 26.1": 4,
+      "iOS 26.2": 2,
+      "iOS 26.3": 3,
+      "iOS 26.4": 3,
+      "iOS 26.5": 4,
+      "iOS 26.6": 5,
+      "iPadOS 26.1": 4,
+      "iPadOS 26.2": 2,
+      "iPadOS 26.3": 3,
+      "iPadOS 26.4": 3,
+      "iPadOS 26.5": 4,
+      "iPadOS 26.6": 5
+    },
+    "candidatesByIdentityStatus": {
+      "confirmed": 40,
+      "conflict": 2
+    },
+    "sourceCount": 49,
+    "attemptedSourceCount": 52,
+    "failedCaptureCount": 3,
+    "conflictCount": 9,
+    "candidatesWithTwoIndependentPublisherLineages": 42,
+    "productionCapturedAt": "2026-07-31T04:35:39.022Z",
+    "productionParentsExact": 12,
+    "productionTargetsConfirmedMissing": 42,
+    "evidenceFileCount": 98,
+    "rawEvidenceFiles": 49,
+    "selectedEvidenceFiles": 49,
+    "evidenceAggregateSha256": "973a7b71b1cf2b4a414465ac6337865ddc7a9052661a001ede34bea041506e01",
+    "noSanityMutation": true,
+    "noStableEventIds": true,
+    "noBuildClaims": true,
+    "noPageBuild": true,
+    "noDeployment": true,
+    "independentReviewPending": true
+  },
+  "warnings": [],
+  "errors": [],
+  "packetManifest": {
+    "path": "research-handoffs/beta-chronology-gap/mobile26-public/packet-manifest.json",
+    "bytes": 3007,
+    "sha256": "7d991e2a004f763125870f195db73615a6563a98ab27fc57e3e435a52a631b41"
+  },
+  "conclusion": "Researcher packet validation passed. This is not independent chronology approval and grants no Sanity, publication, stable-ID, page-build, or deployment authority."
+}

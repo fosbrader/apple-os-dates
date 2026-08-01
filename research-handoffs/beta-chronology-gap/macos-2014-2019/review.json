@@ -1,0 +1,86 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-2014-2019",
+  "reviewedAt": "2026-07-30",
+  "reviewer": "codex-review-reusable-public-betas",
+  "independentOfResearcher": false,
+  "verdict": "selfCheckPassedPendingIndependentReview",
+  "independentReviewArtifact": {
+    "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/independent-review.json",
+    "verdict": "partialPassWithRequiredCorrection",
+    "chronologyApprovedCandidateCount": 37,
+    "requiredCorrectionApplied": {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-5",
+      "appearanceDate": "2019-08-19"
+    },
+    "remainingIndependentReviewBlockers": 7
+  },
+  "candidateVerdict": {
+    "readyForIndependentChronologyReview": [
+      "candidate:apple:macos:10.10:public-beta-1",
+      "candidate:apple:macos:10.10:public-beta-2",
+      "candidate:apple:macos:10.10:public-beta-3",
+      "candidate:apple:macos:10.10:public-beta-4",
+      "candidate:apple:macos:10.10:public-beta-5",
+      "candidate:apple:macos:10.10:public-beta-6",
+      "candidate:apple:macos:10.11:public-beta-1",
+      "candidate:apple:macos:10.11:public-beta-2",
+      "candidate:apple:macos:10.11:public-beta-3",
+      "candidate:apple:macos:10.11:public-beta-4",
+      "candidate:apple:macos:10.12:public-beta-1",
+      "candidate:apple:macos:10.12:public-beta-2",
+      "candidate:apple:macos:10.12:public-beta-3",
+      "candidate:apple:macos:10.12:public-beta-4",
+      "candidate:apple:macos:10.12:public-beta-5",
+      "candidate:apple:macos:10.12:public-beta-6",
+      "candidate:apple:macos:10.12:public-beta-7",
+      "candidate:apple:macos:10.13:public-beta-1",
+      "candidate:apple:macos:10.13:public-beta-2",
+      "candidate:apple:macos:10.13:public-beta-3",
+      "candidate:apple:macos:10.13:public-beta-4",
+      "candidate:apple:macos:10.13:public-beta-5",
+      "candidate:apple:macos:10.13:public-beta-6",
+      "candidate:apple:macos:10.13:public-beta-7",
+      "candidate:apple:macos:10.14:public-beta-1",
+      "candidate:apple:macos:10.14:public-beta-2",
+      "candidate:apple:macos:10.14:public-beta-3",
+      "candidate:apple:macos:10.14:public-beta-4",
+      "candidate:apple:macos:10.14:public-beta-5",
+      "candidate:apple:macos:10.14:public-beta-6",
+      "candidate:apple:macos:10.14:public-beta-7",
+      "candidate:apple:macos:10.14:public-beta-8",
+      "candidate:apple:macos:10.15:public-beta-1",
+      "candidate:apple:macos:10.15:public-beta-2",
+      "candidate:apple:macos:10.15:public-beta-3",
+      "candidate:apple:macos:10.15:public-beta-4",
+      "candidate:apple:macos:10.15:public-beta-5",
+      "candidate:apple:macos:10.15:public-beta-6"
+    ],
+    "needsAdditionalEvidenceOrModeling": [
+      "candidate:apple:macos:10.11:public-beta-5",
+      "candidate:apple:macos:10.13:public-beta-8",
+      "candidate:apple:macos:10.14:public-beta-9",
+      "candidate:apple:macos:10.14:public-beta-10",
+      "candidate:apple:macos:10.15:public-beta-7",
+      "candidate:apple:macos:10.15:public-beta-8",
+      "candidate:apple:macos:10.15:public-beta-9"
+    ]
+  },
+  "checks": {
+    "targetEnumerationComplete": true,
+    "sourceMetadataCaptured": true,
+    "productionQueryReadOnly": true,
+    "productionMacOSPublicBetaCount": 0,
+    "publicOrdinalNotInferredFromDeveloperOrdinal": true,
+    "unnumberedProgramOriginPreserved": true,
+    "withdrawalReplacementPreserved": true,
+    "gmRcBoundaryApplied": true,
+    "sanityMutationPerformed": false
+  },
+  "authorization": {
+    "independentChronologyReviewComplete": false,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "deploymentAllowed": false
+  }
+}

@@ -1,0 +1,1480 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/102995",
+      "title": "About iOS 6",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "6", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/101444",
+      "title": "Apple security updates (2011 to 2012)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["Apple software", "2011", "2012", "security release index"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/100502",
+      "title": "Apple security updates (2013)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["Apple software", "2013", "security release index"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+      "title": "Apple Previews iOS 6 With All New Maps, Siri Features, Facebook Integration, Shared Photo Streams & New Passbook App",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2012-06-11T00:00:00Z",
+      "topics": ["iOS", "6.0", "features"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2013/01/28Apple-Updates-iOS-to-6-1/",
+      "title": "Apple Updates iOS to 6.1",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2013-01-28T00:00:00Z",
+      "topics": ["iOS", "6.1", "availability", "features"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103599",
+      "title": "About the security content of iOS 6",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "6.0", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103398",
+      "title": "About the security content of iOS 6.0.1 Software Update",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "6.0.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103817",
+      "title": "About the security content of iOS 6.1 Software Update",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "6.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103600",
+      "title": "About the security content of iOS 6.1.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "6.1.3", "security"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-ios-6-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102995",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 6 introduced Apple-designed Maps with turn-by-turn navigation and Flyover, expanded Siri across more subjects and languages, integrated Facebook, added Shared Photo Streams and Passbook, and enabled FaceTime over cellular on supported hardware.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6 — Maps through FaceTime improvements"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+                "locator": "Maps, Siri, Facebook, Shared Photo Streams, Passbook, and FaceTime"
+              }
+            ]
+          },
+          {
+            "text": "The release also added new call controls, Mail and Safari workflows, store and Game Center features, Guided Access and broader accessibility support, stronger privacy controls, China-specific services, and a large security repair set spanning networking, data protection, content parsing, the kernel, and WebKit.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6 — Phone through Features for China mainland"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103599",
+                "locator": "iOS 6 security content"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101444",
+                "locator": "iOS 6 — 19 Sept 2012"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+          "locator": "iOS 6 feature preview"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103599",
+          "locator": "iOS 6 security content"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 6 — 19 Sept 2012"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-6-0-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102995",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 6.0.1 repaired over-the-air updating on iPhone 5, keyboard display artifacts, camera flash behavior, encrypted WPA2 reliability, some cellular failures, iTunes Match settings, Passbook lock-screen exposure, and Exchange meetings.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.0.1"
+              }
+            ]
+          },
+          {
+            "text": "Its security bulletin separately documents a kernel-address disclosure fix and two WebKit memory-safety corrections, while Apple’s 2011–2012 index records the release on November 1, 2012.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103398",
+                "locator": "Kernel and WebKit entries"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101444",
+                "locator": "iOS 6.0.1 — 01 Nov 2012"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.0.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103398",
+          "locator": "iOS 6.0.1 security content"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 6.0.1 — 01 Nov 2012"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-6-0-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102995",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple’s surviving notes describe iOS 6.0.2 as a narrowly focused update that fixed a Wi-Fi problem. They do not enumerate the trigger, affected network configurations, or a separate security delta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.0.2"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.0.2"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-6-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102995",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 6.1 expanded LTE support to additional carriers, enabled U.S. Fandango movie-ticket purchases through Siri, allowed iTunes Match subscribers to download individual songs from iCloud, and added a reset control for the Advertising Identifier.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2013/01/28Apple-Updates-iOS-to-6-1/",
+                "locator": "LTE expansion and additional iOS 6.1 updates"
+              }
+            ]
+          },
+          {
+            "text": "The security update tightened Apple ID certificate handling, kernel memory boundaries, incorrect SSL certificate trust, Safari JavaScript preferences, Wi-Fi firmware parsing, and multiple WebKit memory and cross-origin paths.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103817",
+                "locator": "iOS 6.1 security content"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100502",
+                "locator": "iOS 6.1 — 28 Jan 2013"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.1"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2013/01/28Apple-Updates-iOS-to-6-1/",
+          "locator": "iOS 6.1 availability and features"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103817",
+          "locator": "iOS 6.1 security content"
+        },
+        {
+          "url": "https://support.apple.com/en-us/100502",
+          "locator": "iOS 6.1 — 28 Jan 2013"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-6-1-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102995",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 6.1.1 was an iPhone 4S-specific maintenance release for a problem that could reduce cellular performance and reliability. Apple’s surviving note does not identify a new feature or release-specific security delta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1.1"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.1.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-6-1-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102995",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 6.1.2 corrected an Exchange calendar defect that could generate excessive network activity and shorten battery life. Apple’s cumulative history does not attribute a separate security change to this release.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1.2"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.1.2"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-6-1-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102995",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 6.1.3 closed a passcode bypass that could expose the Phone app and improved Maps data and behavior for Japan.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1.3"
+              }
+            ]
+          },
+          {
+            "text": "Its security bulletin also records executable-loading, kernel-information, backup-permission, USB-driver, and WebKit SVG corrections, while Apple’s 2013 index records the release on March 19, 2013.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103600",
+                "locator": "iOS 6.1.3 security content"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100502",
+                "locator": "iOS 6.1.3 — 19 Mar 2013"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.1.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103600",
+          "locator": "iOS 6.1.3 security content"
+        },
+        {
+          "url": "https://support.apple.com/en-us/100502",
+          "locator": "iOS 6.1.3 — 19 Mar 2013"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-6-1-4",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102995",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 6.1.4 updated the speakerphone audio profile. Apple states that the package carried security content already included in earlier iOS software updates rather than documenting a new security delta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1.4"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.1.4"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-6-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 6 release added Apple-designed Maps, wider Siri capabilities, Facebook integration, Shared Photo Streams, Passbook, new communication and productivity tools, accessibility controls, and extensive security repairs.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "The main platform additions reorganized navigation, voice assistance, social sharing, photo collaboration, and digital passes. Maps supplied Apple cartography, directions and Flyover; Siri broadened its knowledge and languages; Facebook gained system integration; and Passbook surfaced time- or location-relevant passes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6 — Maps, Siri, Facebook integration, Shared Photo Streams, and Passbook"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+                "locator": "Principal iOS 6 features"
+              }
+            ]
+          },
+          {
+            "text": "Other changes reached FaceTime, incoming-call handling, Mail, Safari, stores, games, accessibility, privacy, networking, and regional input and services. Apple’s security bulletin separately documents repairs to lock-state boundaries, protected data, messages, media and document parsers, the kernel, and browser behavior.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6 — FaceTime improvements through Features for China mainland"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103599",
+                "locator": "iOS 6 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+          "locator": "iOS 6 feature preview"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103599",
+          "locator": "iOS 6 security content"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 6 — 19 Sept 2012"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-6-0-maps-navigation-flyover",
+          "title": "Maps, navigation, and Flyover",
+          "canonicalSummary": "iOS 6 introduced Apple-designed vector maps with spoken turn-by-turn guidance, live traffic, local search, and Flyover on supported devices.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new Maps app combined vector cartography, route guidance, traffic information, interactive three-dimensional city views, local business results, and Siri-assisted place and route searches.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — Maps"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+              "locator": "Maps"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-siri-languages-content",
+          "title": "Expanded Siri languages and content",
+          "canonicalSummary": "Siri gained more languages and regions, sports, film and restaurant information, social posting, app launching, and an Eyes Free vehicle mode.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The assistant could answer new sports, movie, and restaurant queries, post to Twitter or Facebook, launch apps, work in additional languages and countries, and support hands-free interaction in compatible automobiles.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — Siri improvements"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+              "locator": "Siri expansion and Eyes Free"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-facebook-system-integration",
+          "title": "System-wide Facebook integration",
+          "canonicalSummary": "Facebook sign-in, posting, contact and calendar synchronization, and store recommendations were integrated into built-in iOS experiences.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "A single account setup connected Facebook to Notification Center, Siri, Photos, Safari, Maps, Contacts, Calendar, the App Store, and iTunes Store with audience and location controls for posts.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — Facebook integration"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+              "locator": "Facebook integration"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-shared-photo-streams",
+          "title": "Shared Photo Streams",
+          "canonicalSummary": "Shared Photo Streams let selected people view, comment on, and like shared photo collections across Apple devices and the web.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Users could invite chosen recipients to a stream, while participants could interact with individual images through Photos, Mac photo apps, Apple TV, or a browser.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — Shared Photo Streams"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+              "locator": "Shared Photo Streams"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-passbook",
+          "title": "Passbook",
+          "canonicalSummary": "Passbook collected supported boarding passes, tickets, store cards, and similar credentials with barcode use and contextual lock-screen presentation.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Passes could update automatically and appear when their time or location became relevant, providing scannable credentials from iPhone or iPod touch.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — Passbook"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+              "locator": "Passbook"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-facetime-phone-controls",
+          "title": "FaceTime and incoming-call controls",
+          "canonicalSummary": "Supported devices gained FaceTime over cellular, cross-device number routing, Do Not Disturb, message replies, and time- or location-based callback reminders.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The communication update expanded where FaceTime worked and added options to suppress interruptions or respond to a declined call without answering it.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — FaceTime and Phone improvements"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+              "locator": "FaceTime and incoming-call options"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-mail-productivity",
+          "title": "Mail productivity improvements",
+          "canonicalSummary": "Mail added VIP and flagged inboxes, inline photo and video insertion, protected Office document support, refresh gestures, and per-account signatures.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release improved message triage and composition while adding separate signatures and handling for password-protected Office documents.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — Mail improvements"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+              "locator": "VIP Mailbox"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-safari-cloud-offline",
+          "title": "Safari cloud and offline workflows",
+          "canonicalSummary": "Safari gained iCloud Tabs, an offline Reading List, photo uploads, full-screen landscape browsing, Smart App Banners, and JavaScript performance work.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Open pages could be viewed across devices, reading items could remain available offline, websites could accept photo uploads, and supported iPhone and iPod touch models gained a full-screen landscape view.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — Safari improvements"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+              "locator": "Safari enhancements"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-stores-game-center",
+          "title": "Store and Game Center improvements",
+          "canonicalSummary": "The App Store, iTunes Store, and Game Center received redesigned discovery, purchase-completion, challenge, sharing, and friend-recommendation features.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Updated stores retained preview history and supported completing seasons or albums, while Game Center added score challenges, social posting, and recommendations based on Facebook friends.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — App Store, iTunes Store, and Game Center improvements"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-guided-access-accessibility",
+          "title": "Guided Access and accessibility expansion",
+          "canonicalSummary": "Guided Access could constrain a device to one app or selected touch regions, while VoiceOver and hearing-aid support expanded.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Parents, teachers, administrators, and users could disable hardware controls or areas of touch input; VoiceOver integrated with Maps, AssistiveTouch, and Zoom, and supported hearing aids expanded on compatible iPhones.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — Accessibility improvements"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2012/06/11Apple-Previews-iOS-6-With-All-New-Maps-Siri-Features-Facebook-Integration-Shared-Photo-Streams-New-Passbook-App/",
+              "locator": "Guided Access"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-privacy-system-regional",
+          "title": "Privacy, system, and regional capabilities",
+          "canonicalSummary": "iOS 6 expanded permission controls, device utilities, keyboard and proxy options, and services and input methods for users in China mainland.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "New controls covered Contacts, Calendars, Reminders, Photos, and Bluetooth-shared data; other additions included an iPad Clock app, iCloud-synced keyboard shortcuts, Bluetooth MAP, a global HTTP proxy, and integrations with Baidu, Sina Weibo, Tudou, and Youku.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6 — Other features and Features for China mainland"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-network-privacy-security",
+          "title": "Network and Wi-Fi privacy protections",
+          "canonicalSummary": "Networking fixes corrected malformed-URL routing, prior-network disclosure on open Wi-Fi, and certificate checking for IPSec Hybrid Auth.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "CFNetwork avoided sending requests to an unintended host, DNAv4 broadcasts were disabled on unencrypted Wi-Fi, and IPSec server names were checked properly against certificates.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103599",
+              "locator": "CFNetwork — CVE-2012-3724; DHCP — CVE-2012-3725; IPSec entries"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-lock-data-communication-security",
+          "title": "Lock, data, and communication protections",
+          "canonicalSummary": "Passcode, purchase, Mail, Messages, telephony, and UIWebView issues that could expose data or misrepresent communication were corrected.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Representative repairs tightened multiple lock-screen state paths, restored password enforcement after Restrictions changes, protected Mail attachments and web-view files, preserved the intended iMessage reply address, and displayed the originating SMS address.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103599",
+              "locator": "Passcode Lock, Restrictions, Mail, Messages, Telephony, and UIKit entries"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-content-kernel-webkit-security",
+          "title": "Content, kernel, and WebKit security",
+          "canonicalSummary": "The release corrected numerous font, image, media, document, XML, kernel, and browser weaknesses.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple updated or hardened FreeType, ImageIO, media handling, libxml, Office Viewer, packet-filter kernel paths, and WebKit memory and origin handling against crashes, disclosure, spoofing, and code-execution risks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103599",
+              "locator": "CoreGraphics, CoreMedia, ImageIO, libxml, Office Viewer, Kernel, and WebKit entries"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-6-0-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 6.0.1 repaired updating, keyboard, camera, Wi-Fi, cellular, iTunes Match, Passbook, and Exchange behavior and added kernel and WebKit security fixes.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "The maintenance work concentrated on new-device and connectivity problems: iPhone 5 could again install updates wirelessly, keyboard artifacts and camera-flash failures were corrected, and WPA2 and cellular reliability improved on the affected devices.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.0.1 — OTA updates through cellular reliability"
+              }
+            ]
+          },
+          {
+            "text": "Apple also consolidated the iTunes Match cellular-data control, fixed Exchange meeting behavior, restricted Passbook details at the lock screen, removed disclosed kernel addresses from an API response, and repaired two WebKit memory flaws.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.0.1 — iTunes Match, Passbook, and Exchange"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103398",
+                "locator": "Kernel, Passcode Lock, and WebKit entries"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.0.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103398",
+          "locator": "iOS 6.0.1 security content"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 6.0.1 — 01 Nov 2012"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-6-0-1-iphone-ota-update",
+          "title": "iPhone 5 over-the-air updates",
+          "canonicalSummary": "iPhone 5 could install software updates wirelessly after a defect in the over-the-air update path was corrected.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The repair restored the standard device-based software update workflow for affected iPhone 5 units.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.0.1 — wireless software updates"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-1-keyboard-camera-fixes",
+          "title": "Keyboard display and camera flash fixes",
+          "canonicalSummary": "Horizontal keyboard artifacts and a condition that could prevent the camera flash from firing were corrected.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update addressed a visual keyboard defect and restored flash operation under the affected camera condition.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.0.1 — keyboard and camera flash"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-1-wifi-cellular-reliability",
+          "title": "Wi-Fi and cellular reliability",
+          "canonicalSummary": "Encrypted WPA2 connections improved on iPhone 5 and fifth-generation iPod touch, and an intermittent iPhone cellular-network failure was repaired.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple targeted both encrypted wireless reliability on the named devices and cases where iPhone could not use the cellular network.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.0.1 — WPA2 Wi-Fi and cellular network"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-1-itunes-match-exchange",
+          "title": "iTunes Match and Exchange maintenance",
+          "canonicalSummary": "The iTunes Match cellular-data control was consolidated and an Exchange meeting defect was fixed.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update simplified the relevant mobile-data switch and corrected unspecified meeting behavior for Exchange users.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.0.1 — iTunes Match and Exchange meetings"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-1-passbook-lock-screen",
+          "title": "Passbook lock-screen protection",
+          "canonicalSummary": "Passbook pass details could no longer be exposed through the affected lock-screen state without entering the passcode.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Improved state handling restricted physical access to Passbook information from a locked device.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.0.1 — Passcode Lock"
+            },
+            {
+              "url": "https://support.apple.com/en-us/103398",
+              "locator": "Passcode Lock — CVE-2012-3750"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-0-1-kernel-webkit-security",
+          "title": "Kernel address and WebKit memory safety",
+          "canonicalSummary": "A kernel-address disclosure and two WebKit memory-corruption paths were corrected.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Kernel extension API responses no longer exposed slid kernel addresses, JavaScript array handling gained validation, and SVG use-after-free handling received safer memory management.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103398",
+              "locator": "Kernel — CVE-2012-3749; WebKit — CVE-2012-3748 and CVE-2012-5112"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-6-0-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 6.0.2 was a single-purpose maintenance update for a Wi-Fi defect; Apple’s surviving note does not provide a narrower technical description.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "This release has one documented change: a fix for a bug that could affect Wi-Fi. The first-party history records over-the-air distribution but does not identify the precise failure mode or publish a release-specific security bulletin.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.0.2"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.0.2"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-6-0-2-wifi-reliability",
+          "title": "Wi-Fi reliability",
+          "canonicalSummary": "A Wi-Fi defect documented by Apple was corrected without a more specific surviving description.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The first-party release note supports the existence and Wi-Fi scope of the repair but does not identify the affected access points, devices, or connection state.",
+          "documentedStatus": "partiallyDocumented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.0.2"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-6-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 6.1 widened LTE availability, added Siri ticket purchasing and individual iTunes Match downloads, exposed an advertising reset control, and delivered network, identity, kernel, and browser security fixes.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "The visible changes broadened connectivity and media access: more carrier networks received LTE support, Siri could purchase movie tickets through Fandango in the United States, and iTunes Match users could retrieve songs one at a time rather than only through broader downloads.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1 — LTE, Siri, and iTunes Match"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2013/01/28Apple-Updates-iOS-to-6-1/",
+                "locator": "LTE carriers, Fandango, and iTunes Match"
+              }
+            ]
+          },
+          {
+            "text": "A new control reset the Advertising Identifier, while the security bulletin records stricter identity-certificate failure handling, kernel pointer validation, blocked erroneous certificate authorities, preserved JavaScript preferences, hardened Wi-Fi parsing, and extensive WebKit repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1 — Advertising Identifier"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103817",
+                "locator": "Identity Services through Wi-Fi entries"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.1"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2013/01/28Apple-Updates-iOS-to-6-1/",
+          "locator": "iOS 6.1 availability and features"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103817",
+          "locator": "iOS 6.1 security content"
+        },
+        {
+          "url": "https://support.apple.com/en-us/100502",
+          "locator": "iOS 6.1 — 28 Jan 2013"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-6-1-expanded-lte-carriers",
+          "title": "Expanded LTE carrier support",
+          "canonicalSummary": "LTE support expanded to additional iPhone and iPad carriers in more markets.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple announced LTE capability for 36 additional iPhone carriers and 23 additional iPad carriers, subject to compatible hardware and carrier networks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.1 — LTE"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/01/28Apple-Updates-iOS-to-6-1/",
+              "locator": "LTE expansion"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-1-siri-fandango-tickets",
+          "title": "Siri movie-ticket purchasing",
+          "canonicalSummary": "Siri could purchase movie tickets through Fandango for users in the United States.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The integration extended Siri’s movie information into a transaction flow for supported U.S. showings.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.1 — Fandango with Siri"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/01/28Apple-Updates-iOS-to-6-1/",
+              "locator": "Siri movie-ticket purchases"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-1-itunes-match-song-downloads",
+          "title": "Individual iTunes Match song downloads",
+          "canonicalSummary": "iTunes Match subscribers could download individual songs from iCloud to an iOS device.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The update added song-level retrieval instead of requiring a broader album or playlist download workflow.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.1 — iTunes Match"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/01/28Apple-Updates-iOS-to-6-1/",
+              "locator": "Individual iTunes Match downloads"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-1-advertising-identifier-reset",
+          "title": "Advertising Identifier reset control",
+          "canonicalSummary": "A new control let users reset the device’s Advertising Identifier.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release exposed a direct reset action for the identifier used by advertising systems.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.1 — Advertising Identifier"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-1-identity-certificate-security",
+          "title": "Identity and certificate validation",
+          "canonicalSummary": "Apple ID certificate failure handling and trust for mistakenly issued intermediate certificates were tightened.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Identity Services returned a null result instead of an empty identity after certificate validation failed, and iOS stopped accepting the incorrect TURKTRUST intermediates documented by Apple.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103817",
+              "locator": "Identity Services — CVE-2013-0963; Security — TURKTRUST certificates"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-1-storekit-wifi-security",
+          "title": "StoreKit preference and Wi-Fi parsing security",
+          "canonicalSummary": "Smart App Banners no longer re-enabled disabled JavaScript, and affected Wi-Fi firmware gained stricter 802.11i element validation.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update preserved the user’s Safari JavaScript preference and blocked a same-network input path that could temporarily disable Wi-Fi on affected hardware.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103817",
+              "locator": "StoreKit — CVE-2013-0974; Wi-Fi — CVE-2012-2619"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-1-kernel-webkit-security",
+          "title": "Kernel and WebKit security",
+          "canonicalSummary": "Kernel copy operations and multiple WebKit memory and cross-origin paths received additional validation.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Argument checks prevented a user-mode process from reaching the first page of kernel memory, while WebKit fixes addressed memory corruption and cross-site scripting involving pasted content and frames.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103817",
+              "locator": "Kernel — CVE-2013-0964; WebKit entries"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-6-1-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 6.1.1 addressed cellular performance and reliability on iPhone 4S, with no additional itemized change in Apple’s surviving release history.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple limits the first-party description to one device and one area: cellular operation on iPhone 4S. The source does not define the affected carriers or radio conditions and does not supply a separate security advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1.1"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.1.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-6-1-1-iphone-4s-cellular-reliability",
+          "title": "iPhone 4S cellular reliability",
+          "canonicalSummary": "Cellular performance and connection reliability improved on iPhone 4S.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The maintenance update targeted an issue affecting iPhone 4S cellular behavior, although Apple’s surviving note does not describe the trigger or network conditions.",
+          "documentedStatus": "partiallyDocumented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.1.1"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-6-1-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 6.1.2 was a focused Exchange calendar repair intended to stop excess network traffic and the associated battery drain.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "The documented bug linked Exchange calendar behavior to unusually high network use, which in turn could reduce battery life. The release note identifies that causal chain but does not itemize other maintenance work.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1.2"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.1.2"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-6-1-2-exchange-calendar-network-battery",
+          "title": "Exchange calendar network and battery use",
+          "canonicalSummary": "An Exchange calendar bug that could increase network activity and reduce battery life was corrected.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The repair prevented the affected calendar synchronization behavior from generating unnecessary traffic and the resulting power consumption.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.1.2"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-6-1-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 6.1.3 repaired a Phone-app passcode bypass, improved Maps in Japan, and strengthened executable, kernel, backup, USB, and WebKit security boundaries.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "The visible changes paired a security repair with regional mapping maintenance: emergency-call lock-state handling could no longer provide the documented route into Phone, and Maps received improvements specific to Japan.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103600",
+                "locator": "Passcode Lock — CVE-2013-0980"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s advisory also blocked overlapping-segment executables, hid kernel structure addresses, protected backup restore permissions from symbolic-link paths, validated USB pipe pointers, and strengthened WebKit SVG type handling.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103600",
+                "locator": "dyld, Kernel, Lockdown, USB, and WebKit entries"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.1.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103600",
+          "locator": "iOS 6.1.3 security content"
+        },
+        {
+          "url": "https://support.apple.com/en-us/100502",
+          "locator": "iOS 6.1.3 — 19 Mar 2013"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-6-1-3-phone-passcode-bypass",
+          "title": "Phone passcode bypass",
+          "canonicalSummary": "Improved emergency-call lock-state handling closed a path that could bypass the passcode and expose the Phone app.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected a logic error in emergency-call processing from the lock screen so physical access could not use the documented sequence to enter Phone.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.1.3 — passcode bypass"
+            },
+            {
+              "url": "https://support.apple.com/en-us/103600",
+              "locator": "Passcode Lock — CVE-2013-0980"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-1-3-maps-japan",
+          "title": "Maps improvements for Japan",
+          "canonicalSummary": "Maps received regional improvements for users and map data in Japan.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple identifies Japan-specific Maps work as the release’s other user-facing change without itemizing the individual cartographic adjustments.",
+          "documentedStatus": "partiallyDocumented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.1.3 — Maps in Japan"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-1-3-executable-backup-boundaries",
+          "title": "Executable and backup-restore boundaries",
+          "canonicalSummary": "The loader rejected overlapping executable segments and backup restoration stopped changing permissions through symbolic-link paths.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The dyld repair prevented the affected unsigned-code path, while Lockdown avoided modifying permissions for any restore target whose path included a symbolic link.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103600",
+              "locator": "dyld — CVE-2013-0977; Lockdown — CVE-2013-0979"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-1-3-kernel-usb-security",
+          "title": "Kernel information and USB driver security",
+          "canonicalSummary": "The release protected kernel structure addresses and validated user-supplied USB pipe pointers.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "A prefetch-abort handler no longer disclosed the affected kernel layout information, and the USB driver stopped trusting pipe object pointers supplied from user space.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103600",
+              "locator": "Kernel — CVE-2013-0978; USB — CVE-2013-0981"
+            }
+          ]
+        },
+        {
+          "key": "ios-6-1-3-webkit-svg-security",
+          "title": "WebKit SVG type safety",
+          "canonicalSummary": "Stronger type checking corrected an invalid-cast flaw in WebKit’s SVG processing.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The browser engine validated the affected SVG object type to reduce the documented crash or code-execution risk from malicious web content.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103600",
+              "locator": "WebKit — CVE-2013-0912"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-6-1-4",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 6.1.4 was a narrowly scoped audio update that revised the speakerphone profile and did not document a new release-specific security change.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "The surviving first-party note names only an updated speakerphone audio profile. Its security statement points backward to content from earlier iOS releases, so this article does not duplicate inherited fixes as a new occurrence.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102995",
+                "locator": "iOS 6.1.4"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102995",
+          "locator": "iOS 6.1.4"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-6-1-4-speakerphone-audio-profile",
+          "title": "Speakerphone audio profile",
+          "canonicalSummary": "The audio profile used for speakerphone playback and calls was updated.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple documents the profile revision without a more detailed explanation of the acoustic tuning or affected usage conditions.",
+          "documentedStatus": "partiallyDocumented",
+          "evidenceState": "confirmed",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102995",
+              "locator": "iOS 6.1.4"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:57:14Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

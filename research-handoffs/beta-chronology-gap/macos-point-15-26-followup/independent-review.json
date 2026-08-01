@@ -1,0 +1,561 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-point-15-26-followup",
+  "reviewedAt": "2026-07-31T07:43:49Z",
+  "reviewer": "codex-independent-review-macos-point-15-26-followup",
+  "independentOfResearcher": true,
+  "status": "passedWithSixApprovedTwoBlocked",
+  "reviewedArtifactHashes": {
+    "assignment": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/assignment.json",
+      "bytes": 3412,
+      "sha256": "3f194de317c7cf11c893b5e5e493c0d2a0bd90a4c95c8d875552ff1fce844392"
+    },
+    "sources": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+      "bytes": 21772,
+      "sha256": "d859086ca0f5ed75ac4cb18cc1527048c0d72dc47aade807e2b291b176d936fd"
+    },
+    "mappings": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/mappings.json",
+      "bytes": 36984,
+      "sha256": "2465a540b3071cdd20d7b6f98f17bf96250e9a787231b47bfaad5a547567bb74"
+    },
+    "conflicts": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/conflicts.json",
+      "bytes": 2330,
+      "sha256": "95182e0b4c03774973779ad11257f5ab497179527b816dca0948f4f9ab1f1fcc"
+    },
+    "packetLocks": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/packet-locks.json",
+      "bytes": 9619,
+      "sha256": "424acdb6e148a2dcd5b610dab12f77103303481c275086a0a6f96c454bbc7c24"
+    },
+    "rawEvidenceLocks": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/raw-evidence-locks.json",
+      "bytes": 13152,
+      "sha256": "c7f3985bad837c93e8c81829b0910d67821384d1999b425c9db29ac76fb71b7a"
+    },
+    "queryScript": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/independent-review-query.ts",
+      "bytes": 5750,
+      "sha256": "565506f8095f02ade3295e9c9c4aa38d87e24c15f9504e6bc9ac9cc2f3da335d"
+    },
+    "productionSnapshot": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/independent-review-production-snapshot.json",
+      "bytes": 28978,
+      "sha256": "2f61c83109a5332131f70d049cf9a5b20132e1e42f2edb0da36d83478c271e7e"
+    }
+  },
+  "summary": {
+    "candidateCount": 8,
+    "chronologyApprovedCandidateCount": 6,
+    "blockedCandidateCount": 2,
+    "identityCorrectionCount": 0,
+    "freshExactProductionMatchCount": 0,
+    "finding": "Six submitted identities have two independent contemporary publisher lineages that establish macOS, the exact version, publicBeta channel, displayed public ordinal, and America/Los_Angeles appearance date. macOS 15.3 Public Beta 3 still has only one complete exact lineage. macOS 15.5 Public Beta 3 remains blocked by an April 28 versus April 29 date conflict and Public Beta 3 versus Public Beta 4 labeling."
+  },
+  "candidateDisposition": {
+    "chronologyApprovedCandidateIds": [
+      "candidate:apple:macos:15.1:public-beta-3",
+      "candidate:apple:macos:15.4:public-beta-1",
+      "candidate:apple:macos:15.4:public-beta-4",
+      "candidate:apple:macos:26.4:public-beta-4",
+      "candidate:apple:macos:26.5:public-beta-3",
+      "candidate:apple:macos:26.6:public-beta-3"
+    ],
+    "blockedCandidateIds": [
+      "candidate:apple:macos:15.3:public-beta-3",
+      "candidate:apple:macos:15.5:public-beta-3"
+    ]
+  },
+  "reasonCodeDefinitions": {
+    "APPROVE_TWO_EXACT_INDEPENDENT_LINEAGES": "Two independent publisher lineages each establish the full submitted public-beta identity.",
+    "APPROVE_WITH_CONFLICT_QUALIFICATION": "Two exact independent lineages establish the submitted identity, while a conflicting unselected source remains mandatory context.",
+    "APPROVE_WITH_SOURCE_TYPO_QUALIFICATION": "Two independent lineages establish the submitted identity, but one selected page contains obvious copied-version typos outside the narrowly selected contextual proof.",
+    "BLOCK_SECOND_EXACT_LINEAGE_MISSING": "Only one publisher lineage establishes every required identity field.",
+    "BLOCK_DATE_AND_ORDINAL_CONFLICT": "No two independent lineages agree on the submitted public ordinal and Pacific date."
+  },
+  "candidateReviews": [
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-3",
+      "appearanceDate": "2024-10-07",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCode": "APPROVE_WITH_CONFLICT_QUALIFICATION",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "9to5-151-cycle",
+          "publisherFamily": "9to5Mac",
+          "acceptedFor": "macOS 15.1 Public Beta 3 on October 7 Pacific",
+          "reason": "The retained cycle page has an exact Public Beta 3 headline and October 7 canonical article date."
+        },
+        {
+          "sourceId": "monomaniac-151-pb3-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "acceptedFor": "macOS 15.1 Public Beta 3 on October 7 Pacific",
+          "reason": "The publisher title displays the complete identity; its public API timestamp and same-day installation language normalize to October 7 in America/Los_Angeles."
+        },
+        {
+          "sourceId": "iculture-151-cycle",
+          "publisherFamily": "iCulture",
+          "acceptedFor": "conflict disclosure only",
+          "reason": "Its living chronology labels Public Beta 3 on October 8 and must not be silently discarded."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "9to5-151-cycle",
+          "publisherFamily": "9to5Mac",
+          "reason": "First exact lineage for platform, version, public ordinal, channel, and October 7 date."
+        },
+        {
+          "sourceId": "monomaniac-151-pb3-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "reason": "Second exact lineage for platform, version, public ordinal, channel, and October 7 Pacific date."
+        }
+      ],
+      "excludedEvidenceRefs": [
+        {
+          "sourceId": "iculture-151-cycle",
+          "excludedFor": "selected identity proof",
+          "reason": "The source gives October 8, conflicting with the two exact October 7 lineages."
+        }
+      ],
+      "finding": "The two selected exact lineages resolve the submitted identity, while the iCulture one-day disagreement remains a mandatory source qualification."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.3:public-beta-3",
+      "appearanceDate": "2025-01-16",
+      "disposition": "blocked",
+      "reasonCode": "BLOCK_SECOND_EXACT_LINEAGE_MISSING",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "monomaniac-153-pb3-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "acceptedFor": "one exact macOS 15.3 Public Beta 3 lineage on January 16 Pacific",
+          "reason": "The title displays the complete identity; public API metadata and same-day installation language normalize to January 16 Pacific."
+        },
+        {
+          "sourceId": "9to5-153-cycle",
+          "publisherFamily": "9to5Mac",
+          "acceptedFor": "public availability and January 16 date only",
+          "reason": "The relevant retained reporting uses a developer-beta ordinal when public availability begins."
+        },
+        {
+          "sourceId": "osxdaily-153-pb3",
+          "publisherFamily": "OS X Daily",
+          "acceptedFor": "beta-program availability and January 16 date only",
+          "reason": "The source says beta 3 was available to beta-program testers without displaying Public Beta 3 or third public beta."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "monomaniac-153-pb3-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "reason": "The only retained lineage that establishes every submitted field."
+        }
+      ],
+      "excludedEvidenceRefs": [
+        {
+          "sourceId": "9to5-153-cycle",
+          "excludedFor": "displayed Public Beta 3 ordinal proof",
+          "reason": "A developer ordinal paired with public distribution cannot establish the displayed public ordinal."
+        },
+        {
+          "sourceId": "osxdaily-153-pb3",
+          "excludedFor": "displayed Public Beta 3 ordinal proof",
+          "reason": "Generic beta numbering for beta-program testers is not an exact public ordinal."
+        }
+      ],
+      "finding": "Only Monomaniac supplies a complete exact lineage. This identity remains blocked until a second independent source explicitly displays Public Beta 3 and establishes January 16 Pacific."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-1",
+      "appearanceDate": "2025-02-24",
+      "disposition": "chronologyApproved",
+      "reasonCode": "APPROVE_TWO_EXACT_INDEPENDENT_LINEAGES",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "mr-154-pb1",
+          "publisherFamily": "MacRumors",
+          "acceptedFor": "macOS 15.4 first public beta on February 24 Pacific",
+          "reason": "The headline and body explicitly identify the first public beta, exact version, and timestamp."
+        },
+        {
+          "sourceId": "macerkopf-154-pb1-followup",
+          "publisherFamily": "Macerkopf",
+          "acceptedFor": "macOS 15.4 Public Beta 1 on February 24 Pacific",
+          "reason": "The retained heading explicitly displays Public Beta 1 and macOS 15.4; embedded publication metadata normalizes to February 24 Pacific."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "mr-154-pb1",
+          "publisherFamily": "MacRumors",
+          "reason": "First complete exact lineage."
+        },
+        {
+          "sourceId": "macerkopf-154-pb1-followup",
+          "publisherFamily": "Macerkopf",
+          "reason": "Second complete exact lineage."
+        }
+      ],
+      "excludedEvidenceRefs": [],
+      "finding": "Both selected independent lineages explicitly establish the complete submitted identity."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-4",
+      "appearanceDate": "2025-03-17",
+      "disposition": "chronologyApproved",
+      "reasonCode": "APPROVE_TWO_EXACT_INDEPENDENT_LINEAGES",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "9to5-154-cycle",
+          "publisherFamily": "9to5Mac",
+          "acceptedFor": "macOS 15.4 Public Beta 4 on March 17 Pacific",
+          "reason": "The March 17 cycle entry's explicit update says Public Beta 4 for macOS 15.4 became available."
+        },
+        {
+          "sourceId": "monomaniac-154-pb4-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "acceptedFor": "macOS 15.4 Public Beta 4 on March 17 Pacific",
+          "reason": "The title displays the complete identity; public API metadata and same-day installation language normalize to March 17 Pacific."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "9to5-154-cycle",
+          "publisherFamily": "9to5Mac",
+          "reason": "First complete exact lineage."
+        },
+        {
+          "sourceId": "monomaniac-154-pb4-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "reason": "Second complete exact lineage."
+        }
+      ],
+      "excludedEvidenceRefs": [],
+      "finding": "Both selected independent lineages explicitly establish the complete submitted identity."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.5:public-beta-3",
+      "appearanceDate": "2025-04-28",
+      "disposition": "blocked",
+      "reasonCode": "BLOCK_DATE_AND_ORDINAL_CONFLICT",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "monomaniac-155-pb3-metadata-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "acceptedFor": "macOS 15.5 Public Beta 3 on April 29 Pacific",
+          "reason": "The title supplies the exact ordinal, but public API metadata normalizes to April 29, not the submitted April 28 date."
+        },
+        {
+          "sourceId": "9to5-155-cycle",
+          "publisherFamily": "9to5Mac",
+          "acceptedFor": "a macOS 15.5 public update on April 28",
+          "reason": "The retained entry establishes public availability and date but not a displayed public ordinal."
+        },
+        {
+          "sourceId": "iculture-155-cycle",
+          "publisherFamily": "iCulture",
+          "acceptedFor": "a conflicting macOS 15.5 Public Beta 4 label on April 28",
+          "reason": "The independent chronology explicitly labels the April 28 row Public Beta 4."
+        }
+      ],
+      "selectedEvidenceRefs": [],
+      "excludedEvidenceRefs": [
+        {
+          "sourceId": "monomaniac-155-pb3-metadata-followup",
+          "excludedFor": "the submitted April 28 date",
+          "reason": "Its public timestamp establishes April 29 Pacific."
+        },
+        {
+          "sourceId": "9to5-155-cycle",
+          "excludedFor": "Public Beta 3 ordinal proof",
+          "reason": "The April 28 public update is generic and does not display Public Beta 3."
+        },
+        {
+          "sourceId": "iculture-155-cycle",
+          "excludedFor": "Public Beta 3 ordinal proof",
+          "reason": "It explicitly labels the April 28 appearance Public Beta 4."
+        }
+      ],
+      "finding": "The exact Public Beta 3 lineage establishes April 29 Pacific, while April 28 sources are generic or label the appearance Public Beta 4. The submitted identity remains blocked, and this review proposes no silent date or ordinal correction."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.4:public-beta-4",
+      "appearanceDate": "2026-03-09",
+      "disposition": "chronologyApproved",
+      "reasonCode": "APPROVE_TWO_EXACT_INDEPENDENT_LINEAGES",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "9to5-264-pb4",
+          "publisherFamily": "9to5Mac",
+          "acceptedFor": "macOS 26.4 Public Beta 4 on March 9 Pacific",
+          "reason": "The exact-version page contains an explicit update naming macOS 26.4 Public Beta 4 and March 9 publication metadata."
+        },
+        {
+          "sourceId": "monomaniac-264-pb4-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "acceptedFor": "macOS 26.4 Public Beta 4 on March 9 Pacific",
+          "reason": "The title displays the complete identity; public API metadata and same-day installation language normalize to March 9 Pacific."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "9to5-264-pb4",
+          "publisherFamily": "9to5Mac",
+          "reason": "First complete exact lineage."
+        },
+        {
+          "sourceId": "monomaniac-264-pb4-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "reason": "Second complete exact lineage."
+        }
+      ],
+      "excludedEvidenceRefs": [],
+      "finding": "Both selected independent lineages explicitly establish the complete submitted identity."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.5:public-beta-3",
+      "appearanceDate": "2026-04-27",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCode": "APPROVE_WITH_SOURCE_TYPO_QUALIFICATION",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "9to5-265-pb3",
+          "publisherFamily": "9to5Mac",
+          "acceptedFor": "macOS 26.5 Public Beta 3 on April 27 Pacific",
+          "reason": "The exact macOS 26.5 page context and April 27 metadata pair with an explicit update that Apple was rolling out Public Beta 3."
+        },
+        {
+          "sourceId": "monomaniac-265-pb3-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "acceptedFor": "macOS 26.5 Public Beta 3 on April 27 Pacific",
+          "reason": "The title displays the complete identity; public API metadata and same-day installation language normalize to April 27 Pacific."
+        },
+        {
+          "sourceId": "iculture-265-cycle",
+          "publisherFamily": "iCulture",
+          "acceptedFor": "conflict disclosure only",
+          "reason": "Its living table shifts the April 27 appearance to Public Beta 4."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "9to5-265-pb3",
+          "publisherFamily": "9to5Mac",
+          "reason": "First exact lineage when the Public Beta 3 update is read in its exact macOS 26.5 page context."
+        },
+        {
+          "sourceId": "monomaniac-265-pb3-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "reason": "Second complete exact lineage."
+        }
+      ],
+      "excludedEvidenceRefs": [
+        {
+          "sourceId": "iculture-265-cycle",
+          "excludedFor": "selected Public Beta 3 proof",
+          "reason": "Its shifted chronology labels the April 27 row Public Beta 4."
+        },
+        {
+          "sourceId": "9to5-265-pb3",
+          "excludedFor": "copied-version sentence after the selected update",
+          "reason": "The next sentence says macOS 25.4 and macOS 26.4. Those obvious version typos must never be repeated or treated as identity evidence."
+        }
+      ],
+      "finding": "The two selected independent lineages support the submitted identity. The 9to5Mac proof is limited to its exact 26.5 page context, explicit Public Beta 3 update, and April 27 metadata; its following copied-version sentence is excluded."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-3",
+      "appearanceDate": "2026-06-30",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCode": "APPROVE_WITH_CONFLICT_QUALIFICATION",
+      "acceptedEvidenceRefs": [
+        {
+          "sourceId": "mr-266-pb3",
+          "publisherFamily": "MacRumors",
+          "acceptedFor": "macOS 26.6 third public beta on June 30 Pacific",
+          "reason": "The headline and body explicitly identify the third public beta, exact version, and Pacific timestamp."
+        },
+        {
+          "sourceId": "monomaniac-266-pb3-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "acceptedFor": "macOS 26.6 Public Beta 3 on June 30 Pacific",
+          "reason": "The title displays the complete identity; public API metadata and same-day installation language normalize to June 30 Pacific."
+        },
+        {
+          "sourceId": "iculture-266-cycle",
+          "publisherFamily": "iCulture",
+          "acceptedFor": "conflict disclosure only",
+          "reason": "Its living chronology uses June 29, apparently conflating the developer and public appearance dates."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "sourceId": "mr-266-pb3",
+          "publisherFamily": "MacRumors",
+          "reason": "First complete exact lineage."
+        },
+        {
+          "sourceId": "monomaniac-266-pb3-followup",
+          "publisherFamily": "Monomaniac Garage",
+          "reason": "Second complete exact lineage."
+        }
+      ],
+      "excludedEvidenceRefs": [
+        {
+          "sourceId": "iculture-266-cycle",
+          "excludedFor": "the selected June 30 identity",
+          "reason": "Its June 29 row conflicts with both exact June 30 lineages and appears to use the developer-seed date."
+        }
+      ],
+      "finding": "The two exact June 30 lineages resolve the submitted identity, while the iCulture date disagreement remains a mandatory source qualification."
+    }
+  ],
+  "sourceAndLineageAudit": {
+    "supplementSourceCount": 8,
+    "supplementRawArtifactCount": 15,
+    "supplementPublisherFamilyCount": 2,
+    "selectedLineagePairCount": 6,
+    "approvedCandidatesHaveTwoDistinctPublisherFamilies": true,
+    "monomaniacHtmlAndApiArtifactsCountAsOneLineage": true,
+    "developerOrdinalUsedAsPublicOrdinalProof": false,
+    "genericPublicAvailabilityUsedAsPublicOrdinalProof": false,
+    "buildAlignmentUsedAsPublicOrdinalProof": false,
+    "claimFragmentLockCount": 0,
+    "claimFragmentLockFinding": "This supplement schema declares eight selectedText locks and no separate claim-fragment hash ledger; all eight declared selectedText hashes were reproduced.",
+    "finding": "Every approved identity has two selected publisher families. Multiple retained artifacts from the same publisher are treated as one lineage."
+  },
+  "lockedFileVerification": {
+    "supplementPacketLocksPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/packet-locks.json",
+    "supplementPacketLocksSha256": "424acdb6e148a2dcd5b610dab12f77103303481c275086a0a6f96c454bbc7c24",
+    "supplementDeclaredLockCount": 35,
+    "supplementVerifiedLockCount": 35,
+    "supplementVerifiedLockedBytes": 1704024,
+    "supplementLockFailures": 0,
+    "supplementRawEvidenceLockCount": 15,
+    "supplementRawEvidenceVerifiedCount": 15,
+    "supplementRawEvidenceBytes": 1272505,
+    "supplementRawByteOrHashFailures": 0,
+    "supplementSelectedTextHashCount": 8,
+    "supplementSelectedTextHashesVerified": 8,
+    "supplementSelectedTextHashFailures": 0,
+    "parentPacketLocksPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/packet-locks.json",
+    "parentPacketLocksSha256": "395595f47cd1e63e99075368895c8f13fc6510f98288c0e1633ee49c8d0b0f9d",
+    "parentDeclaredMaterialFileCount": 87,
+    "parentVerifiedMaterialFileCount": 86,
+    "parentEvidenceArtifactFailures": 0,
+    "parentSharedLedgerDriftCount": 1,
+    "parentRawEvidenceLockCount": 65,
+    "parentRawEvidenceVerifiedCount": 65,
+    "parentRawEvidenceBytes": 13128939,
+    "parentRawByteOrHashFailures": 0,
+    "parentSelectedTextHashCount": 65,
+    "parentSelectedTextHashesVerified": 65,
+    "parentSelectedTextHashFailures": 0,
+    "parentCandidateIdentityHashCount": 8,
+    "parentCandidateIdentityHashesVerified": 8,
+    "parentCandidateIdentityHashFailures": 0,
+    "pinnedParentDependencyCount": 4,
+    "pinnedParentDependenciesVerified": 4,
+    "failures": [],
+    "sharedLedgerDrift": {
+      "path": "research-handoffs/beta-chronology-gap/README.md",
+      "kind": "programLevelReadmeNotCandidateOrSourceEvidence",
+      "expectedBytes": 16913,
+      "expectedSha256": "b203b6b8ddec18b675b6a1ac37b6210282f62d9eccdcce58d420c6089efbc0a0",
+      "currentBytes": 17312,
+      "currentSha256": "ddde9babeeeb0096d9b6fe8b86d88f0948388f689b499d618fccdcf057d1393a",
+      "assessment": "nonBlockingSharedLedgerDrift",
+      "reason": "The shared program README changed after the parent freeze. It contains no candidate record, source ledger, raw evidence, or selected claim. The four explicit parent dependency pins, all 65 parent raw and selected-text locks, and all eight parent candidate identity hashes remain exact. The frozen parent packet was not overwritten or re-frozen."
+    }
+  },
+  "productionRecheck": {
+    "queryScriptPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/independent-review-query.ts",
+    "snapshotPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/independent-review-production-snapshot.json",
+    "queriedAt": "2026-07-31T07:40:48.366Z",
+    "perspective": "published",
+    "useCdn": false,
+    "projectId": "lh3yswzu",
+    "dataset": "production",
+    "candidateCount": 8,
+    "targetVersionCount": 7,
+    "targetParentsFound": 7,
+    "missingParentIds": [],
+    "totalReleaseEvents": 2068,
+    "macOSPublicBetaEventsAllVersions": 0,
+    "scopedReleaseEvents": 46,
+    "scopedPublicBetaEvents": 0,
+    "exactRouteIdentityMatchCount": 0,
+    "exactFullCandidateMatchCount": 0,
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "finding": "All seven release-version parents exist. Published production still has no macOS publicBeta event and no route or full-identity match for any of the eight submitted candidates."
+  },
+  "checks": {
+    "reviewJsonParsed": true,
+    "allEightMappingsInspected": true,
+    "candidateIdsUnique": true,
+    "assignmentTargetSetExact": true,
+    "parentBlockedTargetSetExact": true,
+    "approvedAndBlockedPartitionDisjoint": true,
+    "approvedAndBlockedPartitionExhaustive": true,
+    "allParentCandidateRecordsAndIdentityFingerprintsReproduced": true,
+    "allApprovedCandidatesHaveTwoIndependentExactLineages": true,
+    "allBlockedCandidatesHaveReasonCodes": true,
+    "blockedCandidatesAuthorizedForIntegration": false,
+    "allFiveConflictsAdjudicated": true,
+    "publicOrdinalNeverDerivedFromDeveloperOrdinal": true,
+    "publicOrdinalNeverDerivedFromGenericPublicAvailability": true,
+    "publicOrdinalNeverDerivedFromBuildAlignment": true,
+    "americaLosAngelesDateRuleApplied": true,
+    "allSupplementLocksReproduced": true,
+    "allSupplementRawAndSelectedTextHashesReproduced": true,
+    "allFourPinnedParentDependenciesReproduced": true,
+    "allParentRawAndSelectedTextHashesReproduced": true,
+    "parentSharedReadmeDriftDisclosed": true,
+    "freshPublishedNoCdnProductionQueryCompleted": true,
+    "allTargetParentsFoundInProduction": true,
+    "allEightExactTargetMatchesRemainZero": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "mandatoryQualifications": [
+    "Only the six explicitly approved candidate identities may enter a later chronology integration queue.",
+    "macOS 15.3 Public Beta 3 remains blocked until a second independent lineage explicitly displays Public Beta 3 and establishes January 16 Pacific.",
+    "macOS 15.5 Public Beta 3 remains blocked; do not silently change it to April 29 or Public Beta 4 without a separate corrected-identity research packet and independent review.",
+    "For macOS 15.1 and 26.6, preserve the unselected iCulture date disagreements in provenance.",
+    "For macOS 26.5, do not repeat or rely on the 9to5Mac sentence that says macOS 25.4 and macOS 26.4; use only the exact 26.5 page context, explicit Public Beta 3 update, April 27 metadata, and independently agreeing Monomaniac record.",
+    "The program-level README checksum drift is non-evidentiary and must remain disclosed; do not overwrite or re-freeze the parent packet to hide it.",
+    "A fresh published, useCdn:false exact production check is required immediately before any separately authorized write."
+  ],
+  "safety": {
+    "researchOnly": true,
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false,
+    "frozenSupplementArtifactsModified": false,
+    "frozenParentArtifactsModified": false
+  },
+  "authorization": {
+    "sanityMutationAllowed": false,
+    "pageBuildsAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  },
+  "verdict": "approvedSixCandidatesBlockedTwoWithMandatoryConflictAndTypoQualifications",
+  "requiredNextGate": {
+    "blockedCandidateRequirement": "Capture a second exact independent lineage for macOS 15.3; resolve the exact date and displayed public ordinal for macOS 15.5 in a separately frozen correction or follow-up packet.",
+    "productionRecheckRequiredBeforeWrite": true,
+    "separateSanityMutationAuthorizationRequired": true,
+    "separatePageBuildAuthorizationRequired": true
+  }
+}

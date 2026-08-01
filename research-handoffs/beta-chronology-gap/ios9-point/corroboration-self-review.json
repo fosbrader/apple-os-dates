@@ -1,0 +1,32 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios9-point",
+  "reviewedAt": "2026-07-31T04:11:43.892Z",
+  "reviewer": "codex-review-reusable-public-betas",
+  "independentOfResearcher": false,
+  "verdict": "passedMechanicalSelfCheckPendingIndependentReview",
+  "scope": {
+    "addedSourceCount": 25,
+    "candidateCount": 25,
+    "preservedPriorReviewSha256": "c31165ca8df49d75c475b78b7fabefa415d04885b0ec98a1abc08cfc69f7779b"
+  },
+  "checks": {
+    "manifestMatchesFrozenReviewBacklog": true,
+    "allFetchesSucceeded": true,
+    "rawBytesAndHashesReproduced": true,
+    "boundedFragmentsReproduced": true,
+    "twoIndependentPublisherLineagesPerCandidate": true,
+    "sourceTextConflictsPreserved": true,
+    "freshProductionQueryReadOnly": true,
+    "exactProductionMatches": 0,
+    "priorReviewPreservedByteForByte": true,
+    "sanityMutationPerformed": false
+  },
+  "authorization": {
+    "independentChronologyReviewCompleteForAddedSources": false,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "deploymentAllowed": false
+  },
+  "nextStep": "A reviewer independent from this corroboration wave must inspect the 25 added source pages and issue a separate review artifact."
+}

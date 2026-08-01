@@ -10,7 +10,7 @@ import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
 import { absoluteUrl, createPageMetadata } from "@/lib/site";
 
 const pageDescription =
-  "Understand how Beta Cadence turns historical beta-cycle data into estimated public-release windows, confidence labels, and backtests.";
+  "Understand how Version Record records release evidence and turns historical beta-cycle data into clearly labeled forecast ranges.";
 
 const internalLinkClass =
   "text-[var(--accent)] hover:text-[var(--accent-hover)] underline underline-offset-4";

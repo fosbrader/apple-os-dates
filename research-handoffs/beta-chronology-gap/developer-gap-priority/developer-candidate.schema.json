@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://apple-os-dates.local/schemas/developer-beta-candidate.schema.json",
+  "title": "Developer beta chronology candidate",
+  "description": "Packet-local research schema for missing Apple developer-beta timeline identities. It cannot authorize mutation or publication.",
+  "$defs": {
+    "evidenceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "packetPath",
+        "sourceId",
+        "locator",
+        "supports"
+      ],
+      "properties": {
+        "kind": {
+          "const": "packetSource"
+        },
+        "packetPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supports": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidateId",
+        "originCohortId",
+        "platform",
+        "platformId",
+        "version",
+        "releaseVersionId",
+        "proposedIdentity",
+        "ordinalBasis",
+        "candidateStatus",
+        "identityStatus",
+        "evidenceState",
+        "productionReconciliation",
+        "evidenceRefs",
+        "buildEvidenceStatus",
+        "contentDisposition",
+        "blockers",
+        "review",
+        "flags"
+      ],
+      "properties": {
+        "candidateId": {
+          "type": "string",
+          "pattern": "^candidate:apple:ios:[0-9]+(?:\\.[0-9]+){2}:beta-[1-9][0-9]*$"
+        },
+        "originCohortId": {
+          "const": "developer-gap-priority"
+        },
+        "platform": {
+          "const": "iOS"
+        },
+        "platformId": {
+          "const": "platform-ios"
+        },
+        "version": {
+          "enum": [
+            "9.2.1",
+            "10.2.1",
+            "10.3.2",
+            "10.3.3"
+          ]
+        },
+        "releaseVersionId": {
+          "type": "string",
+          "pattern": "^version-ios-(?:9-2-1|10-2-1|10-3-2|10-3-3)$"
+        },
+        "proposedIdentity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "label",
+            "routeAlias",
+            "channel",
+            "appearanceDate",
+            "sequence",
+            "isRevision",
+            "availabilityState",
+            "closesReleaseCycle"
+          ],
+          "properties": {
+            "label": {
+              "type": "string",
+              "pattern": "^Beta [1-9][0-9]*$"
+            },
+            "routeAlias": {
+              "type": "string",
+              "pattern": "^beta-[1-9][0-9]*$"
+            },
+            "channel": {
+              "const": "developerBeta"
+            },
+            "appearanceDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "sequence": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "isRevision": {
+              "const": false
+            },
+            "availabilityState": {
+              "enum": [
+                "available",
+                "replaced",
+                "withdrawn"
+              ]
+            },
+            "closesReleaseCycle": {
+              "const": false
+            }
+          }
+        },
+        "ordinalBasis": {
+          "const": "explicit"
+        },
+        "candidateStatus": {
+          "const": "needsEvidenceReview"
+        },
+        "identityStatus": {
+          "enum": [
+            "confirmed",
+            "conflict"
+          ]
+        },
+        "evidenceState": {
+          "enum": [
+            "corroborated",
+            "confirmed"
+          ]
+        },
+        "productionReconciliation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "status",
+            "queriedAt",
+            "matchBasis",
+            "exactIdentityMatches"
+          ],
+          "properties": {
+            "status": {
+              "const": "confirmedMissing"
+            },
+            "queriedAt": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "matchBasis": {
+              "type": "string",
+              "minLength": 1
+            },
+            "exactIdentityMatches": {
+              "const": 0
+            }
+          }
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "minItems": 2,
+          "items": {
+            "$ref": "#/$defs/evidenceRef"
+          }
+        },
+        "buildEvidenceStatus": {
+          "const": "absent"
+        },
+        "contentDisposition": {
+          "const": "timelineOnly"
+        },
+        "blockers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "review": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "required",
+            "reviewer",
+            "reviewedAt",
+            "notes"
+          ],
+          "properties": {
+            "required": {
+              "const": true
+            },
+            "reviewer": {
+              "type": "null"
+            },
+            "reviewedAt": {
+              "type": "null"
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "flags": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "sanityMutationAllowed",
+            "publicationEligible",
+            "stableEventIdCreationAllowed"
+          ],
+          "properties": {
+            "sanityMutationAllowed": {
+              "const": false
+            },
+            "publicationEligible": {
+              "const": false
+            },
+            "stableEventIdCreationAllowed": {
+              "const": false
+            }
+          }
+        }
+      }
+    }
+  }
+}

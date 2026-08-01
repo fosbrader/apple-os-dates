@@ -1,0 +1,511 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-os27",
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "sourceId": "source-001",
+      "canonicalUrl": "https://beta.apple.com/",
+      "title": "Apple Beta Software Program",
+      "publisher": "Apple",
+      "author": null,
+      "publishedAt": null,
+      "publishedDateObserved": null,
+      "publicationDatePrecision": "unknown",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "firstPartyProgramSurface",
+      "roles": [
+        "publicProgramScope",
+        "negativeEvidence"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-001-apple-beta-home.html",
+        "rawBytes": 15318,
+        "rawSha256": "75010b23dcb72ecd3e6f8881605bd6cb20c891d6474e60a1db9aacc5660626b4",
+        "captureMethod": "http-html",
+        "locator": "HTML lines 197-220: the live public-program description and OS 27 product list include macOS, tvOS, and watchOS, but not visionOS."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Apple's live public-program landing page. It is current-state evidence captured on the cutoff date, not a July 13 archive."
+      }
+    },
+    {
+      "sourceId": "source-002",
+      "canonicalUrl": "https://beta.apple.com/en/faq",
+      "title": "FAQ - Apple Beta Software Program",
+      "publisher": "Apple",
+      "author": null,
+      "publishedAt": null,
+      "publishedDateObserved": null,
+      "publicationDatePrecision": "unknown",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "firstPartyProgramDocumentation",
+      "roles": [
+        "enrollmentEligibility",
+        "negativeEvidence"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-002-apple-beta-faq.html",
+        "rawBytes": 29266,
+        "rawSha256": "8f0a6735e5069b25526cac6926a8e090f9f165186d4ab2fda94905ceb9360abc",
+        "captureMethod": "http-html",
+        "locator": "HTML line 227 lists enrollable devices; line 242 lists feedback routes. Neither list includes Apple Vision Pro or visionOS."
+      },
+      "lineage": {
+        "independentForCorroboration": false,
+        "notes": "Same Apple Beta Software Program as source-001, but a distinct FAQ surface with an explicit device-enrollment list."
+      }
+    },
+    {
+      "sourceId": "source-003",
+      "canonicalUrl": "https://developer.apple.com/support/install-beta",
+      "title": "Installing and using Apple beta software",
+      "publisher": "Apple Developer",
+      "author": null,
+      "publishedAt": null,
+      "publishedDateObserved": null,
+      "publicationDatePrecision": "unknown",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "firstPartyDeveloperDocumentation",
+      "roles": [
+        "visionOSChannelRoute",
+        "negativeEvidence"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-003-apple-developer-install-beta.html",
+        "rawBytes": 130717,
+        "rawSha256": "8a55cf4de86f63fbb7193cfb1e71d7d7199b13429ede930fc1aba5b69c8fc909",
+        "captureMethod": "http-html",
+        "locator": "HTML lines 1210-1219, visionOS beta: choose the developer beta; Vision Pro must use the Apple Account associated with the Apple Developer website."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Apple's dedicated beta-installation documentation for developers."
+      }
+    },
+    {
+      "sourceId": "source-004",
+      "canonicalUrl": "https://developer.apple.com/news/releases/",
+      "title": "Releases - Apple Developer",
+      "publisher": "Apple Developer",
+      "author": null,
+      "publishedAt": null,
+      "publishedDateObserved": null,
+      "publicationDatePrecision": "unknown",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "firstPartyReleaseIndex",
+      "roles": [
+        "developerBuildIdentity",
+        "payloadComparison"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-004-apple-developer-releases.html",
+        "rawBytes": 249739,
+        "rawSha256": "1214c5999d8ec5a2ed1329ffa8dcb6e90dfb61a7902e05dae1e9d5a9413c73a4",
+        "captureMethod": "http-html",
+        "locator": "HTML lines 1599, 1652, 1811, and 1864 identify July 20 developer beta 4 builds for visionOS, watchOS, macOS, and tvOS respectively."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Rolling first-party developer index. It identifies developer payloads, not public distribution."
+      }
+    },
+    {
+      "sourceId": "source-005",
+      "canonicalUrl": "https://www.macrumors.com/2026/07/13/macos-golden-gate-public-beta/",
+      "title": "First macOS Golden Gate Public Beta Now Available",
+      "publisher": "MacRumors",
+      "author": "Juli Clover",
+      "publishedAt": "2026-07-13T13:41:00-07:00",
+      "publishedDateObserved": "2026-07-13",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "publicAvailability",
+        "sequence",
+        "installationRoute"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-005-macrumors-macos-pb1.html",
+        "rawBytes": 125369,
+        "rawSha256": "5fbaa93e97b9a72899180517793c6d1e655d59623cbbdb2d2d600e5ff79e4457",
+        "captureMethod": "http-html",
+        "locator": "HTML article metadata and body at lines 168-169 and the article body identify the first macOS 27 public beta on July 13 and the Apple Beta enrollment route."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Dedicated same-day public-beta article."
+      }
+    },
+    {
+      "sourceId": "source-006",
+      "canonicalUrl": "https://www.macrumors.com/2026/07/13/watchos-27-public-beta/",
+      "title": "tvOS 27 and watchOS 27 Now Available to Public Beta Testers",
+      "publisher": "MacRumors",
+      "author": "Juli Clover",
+      "publishedAt": "2026-07-13T13:38:00-07:00",
+      "publishedDateObserved": "2026-07-13",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "publicAvailability",
+        "sequence",
+        "payloadComparison"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-006-macrumors-watch-tvos-pb1.html",
+        "rawBytes": 121049,
+        "rawSha256": "ce2cb72290eea8f6b4c3b6576d8ac02d5dc856829a5168c271b99ce39dbc03b2",
+        "captureMethod": "http-html",
+        "locator": "HTML lines 168 and 326-327 identify first tvOS/watchOS public betas on July 13 and say they are the same payloads as developer beta 3."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Dedicated same-day public-beta article covering two platforms."
+      }
+    },
+    {
+      "sourceId": "source-007",
+      "canonicalUrl": "https://appleinsider.com/articles/26/07/13/first-ios-27-macos-27-public-betas-are-out-but-you-should-still-be-careful",
+      "title": "First iOS 27, macOS 27 public betas are out, but you should still be careful",
+      "publisher": "AppleInsider",
+      "author": "Malcolm Owen",
+      "publishedAt": "2026-07-13T16:53:00-04:00",
+      "publishedDateObserved": "2026-07-13",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "disputedVisionOSClaim",
+        "buildList"
+      ],
+      "evidence": {
+        "rawPath": null,
+        "rawBytes": null,
+        "rawSha256": null,
+        "captureMethod": "browser-rendered-text; direct HTTP capture returned 403",
+        "locator": "Article list items under 'The first public builds' claim visionOS public beta 1 build 24M5316k and incorrectly assign watchOS 27 build 23U5062b."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Treat cautiously: its watchOS build is demonstrably from watchOS 26.6, which undermines the accuracy of the copied cross-platform build list."
+      }
+    },
+    {
+      "sourceId": "source-008",
+      "canonicalUrl": "https://www.macworld.com/article/3190070/the-os-27-public-betas-are-out-now-with-siri-ai-platform-improvements-and-more.html",
+      "title": "The OS 27 public betas are out now with Siri AI, platform improvements, and more",
+      "publisher": "Macworld",
+      "author": "Jason Cross",
+      "publishedAt": "2026-07-13T15:31:25-07:00",
+      "publishedDateObserved": "2026-07-13",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "disputedVisionOSClaim",
+        "publicWave"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-008-macworld-public-wave.html",
+        "rawBytes": 181568,
+        "rawSha256": "eea85c8f47f0770866ef16a390ae073224682647a30ea07be68f9a2648379952",
+        "captureMethod": "http-html",
+        "locator": "HTML lines 563 and 1291 claim all six OS 27 families, including visionOS, were in the July 13 public wave; the article also misdates developer beta 3 as July 3."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "A real conflicting report, but it gives no Vision Pro public-enrollment path and contains a chronology error."
+      }
+    },
+    {
+      "sourceId": "source-009",
+      "canonicalUrl": "https://www.macrumors.com/2026/07/22/watchos-27-public-beta-2/",
+      "title": "tvOS 27 and watchOS 27 Second Public Betas Now Available",
+      "publisher": "MacRumors",
+      "author": "Juli Clover",
+      "publishedAt": "2026-07-22T10:38:01-07:00",
+      "publishedDateObserved": "2026-07-22",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "publicAvailability",
+        "sequence"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-009-macrumors-watch-tvos-pb2.html",
+        "rawBytes": 118097,
+        "rawSha256": "af4bc9ec6144f3e7751f223f411f4abf63cdbed20fed4c96438a5bf472d57dfc",
+        "captureMethod": "http-html",
+        "locator": "HTML lines 168-169 and 315-316 identify the second tvOS/watchOS public betas on July 22."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Dedicated same-day public-beta article covering two platforms."
+      }
+    },
+    {
+      "sourceId": "source-010",
+      "canonicalUrl": "https://9to5mac.com/2026/07/22/macos-27-public-beta-2-now-available-heres-how-to-install-it/",
+      "title": "macOS 27 public beta 2 now available, here's how to install it",
+      "publisher": "9to5Mac",
+      "author": "Marcus Mendes",
+      "publishedAt": "2026-07-22T17:49:07Z",
+      "publishedDateObserved": "2026-07-22",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "publicAvailability",
+        "sequence",
+        "buildIdentity",
+        "payloadComparison"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-010-9to5mac-macos-pb2.html",
+        "rawBytes": 166238,
+        "rawSha256": "e0d0e153a2fd1f785f27c1c49f9666d975380d6a998d390756a68fae3e6af61a",
+        "captureMethod": "http-html",
+        "locator": "HTML lines 561, 589-593, and 627 identify macOS public beta 2 on July 22 and build 26A5388g, the same payload as developer beta 4."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Dedicated public-beta article with a direct build statement."
+      }
+    },
+    {
+      "sourceId": "source-011",
+      "canonicalUrl": "https://www.iculture.nl/nieuws/watchos-27-beta/",
+      "title": "watchOS 27 beta: alles over de nieuwste testversie",
+      "publisher": "iCulture",
+      "author": "Benjamin Kuijten",
+      "publishedAt": "2026-07-22T19:55:00+02:00",
+      "publishedDateObserved": "2026-07-22",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "secondaryChronology",
+      "roles": [
+        "sequence",
+        "date",
+        "buildIdentity"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-011-iculture-watchos-timeline.html",
+        "rawBytes": 520541,
+        "rawSha256": "fbb9904ed7921bf6bdcc150ed5d6a57241c02b4f1856ba093c2b3966d1795825",
+        "captureMethod": "http-html",
+        "locator": "Timeline list near HTML lines 11240-11260 identifies watchOS public beta 1 (July 13, 24R5315i) and public beta 2 (July 22, 24R5325h), paired with developer beta 3/4."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Living chronology. Use facts and locators only."
+      }
+    },
+    {
+      "sourceId": "source-012",
+      "canonicalUrl": "https://www.iculture.nl/nieuws/tvos-27-beta/",
+      "title": "tvOS 27 beta: alles over de nieuwste testversie",
+      "publisher": "iCulture",
+      "author": "Sasha Koevoets",
+      "publishedAt": "2026-07-22T19:57:00+02:00",
+      "publishedDateObserved": "2026-07-22",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "secondaryChronology",
+      "roles": [
+        "sequence",
+        "date",
+        "buildIdentity"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-012-iculture-tvos-timeline.html",
+        "rawBytes": 531720,
+        "rawSha256": "1d9d6d35d056cdc3945d7dd852a15e4ddd8355174ce4304ad96a582487b3b23b",
+        "captureMethod": "http-html",
+        "locator": "Timeline list at HTML lines 11246-11258 identifies tvOS public beta 1 (July 13, 24J5315i) and public beta 2 (July 22, 24J5325d), paired with developer beta 3/4."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Living chronology. Use facts and locators only."
+      }
+    },
+    {
+      "sourceId": "source-013",
+      "canonicalUrl": "https://gadgetsnow.indiatimes.com/tech-news/apples-ios-27-public-beta-is-live-in-india-how-to-install-it-and-why-you-may-want-to-wait/articleshow/132381180.cms",
+      "title": "Apple's iOS 27 Public Beta Is Live in India: How to Install It and Why You May Want to Wait",
+      "publisher": "Gadgets Now",
+      "author": "Sahil Mohan Gupta",
+      "publishedAt": "2026-07-14T10:41:00+05:30",
+      "publishedDateObserved": "2026-07-14",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "publicWave",
+        "visionOSNegativeEvidence",
+        "sourceConflictAnalysis"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-013-gadgetsnow-visionos-status.html",
+        "rawBytes": 322509,
+        "rawSha256": "c4d5524a77da483aa27b5ad392056973f6dde7e1b230a622329f39184c75b2ee",
+        "captureMethod": "http-html",
+        "locator": "Article table 'Which Apple public betas are available now?' lists macOS/watchOS/tvOS as available and visionOS as not listed; the following paragraphs explain the Apple-program and developer-route distinction."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Published one day after the first public wave and explicitly investigates conflicting launch coverage."
+      }
+    },
+    {
+      "sourceId": "source-014",
+      "canonicalUrl": "https://www.iculture.nl/nieuws/visionos-27-beta/",
+      "title": "Apple brengt tweede publieke beta van visionOS 27 uit voor testers",
+      "publisher": "iCulture",
+      "author": "Sasha Koevoets",
+      "publishedAt": "2026-07-22T20:00:00+02:00",
+      "publishedDateObserved": "2026-07-22",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "secondaryChronology",
+      "roles": [
+        "disputedVisionOSClaim",
+        "buildList",
+        "internalContradiction"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-014-iculture-visionos-timeline.html",
+        "rawBytes": 516640,
+        "rawSha256": "b74fc2b2b50f1e3556d6bc82cbefa20ae59dd5a92325f83607865abed082d202",
+        "captureMethod": "http-html",
+        "locator": "HTML lines 11173-11234 claim visionOS public beta 1/2 with developer-equivalent builds, while lines 11195-11199 provide only a developer-account route and say the betas are developer-only."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "The page is internally inconsistent about the channel and supplies no public-enrollment path; preserve as a conflict, not as proof."
+      }
+    },
+    {
+      "sourceId": "source-015",
+      "canonicalUrl": "https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/",
+      "title": "Apple unveils next generation of Apple Intelligence, Siri AI, and more",
+      "publisher": "Apple Newsroom",
+      "author": "Apple",
+      "publishedAt": "2026-06-08",
+      "publishedDateObserved": "2026-06-08",
+      "publicationDatePrecision": "date",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "firstPartyAnnouncement",
+      "roles": [
+        "announcement",
+        "scopeAmbiguity"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-015-apple-newsroom-announcement.html",
+        "rawBytes": 299435,
+        "rawSha256": "af103d6dce9ec560f5642a9b2f442eda13d90197d6fc3a9f7643d45b2441fbc3",
+        "captureMethod": "http-html",
+        "locator": "HTML line 2415 says a public beta will be available next month after discussing six OS families, but does not enumerate which platforms belong to that public channel."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Supports the existence of an OS 27 public-beta wave, but not a visionOS public appearance by itself."
+      }
+    },
+    {
+      "sourceId": "source-016",
+      "canonicalUrl": "https://www.macstories.net/stories/visionos-27-the-macstories-beta-preview/",
+      "title": "visionOS 27: The MacStories Beta Preview",
+      "publisher": "MacStories",
+      "author": "Devon Dundee",
+      "publishedAt": "2026-07-13T21:45:03Z",
+      "publishedDateObserved": "2026-07-13",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "contemporaneousSecondaryFirsthandUse",
+      "roles": [
+        "visionOSNegativeEvidence",
+        "channelDistinction"
+      ],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/beta-chronology-gap/os27/source-016-macstories-visionos-developer-only.html",
+        "rawBytes": 70045,
+        "rawSha256": "f35c0c278c454a98bb1f71c346655edceea04eba3182fcfb877b0b7e8b295bf5",
+        "captureMethod": "http-html",
+        "locator": "HTML line 291, published the evening of July 13, says visionOS has not been included in the public program and refers readers to the visionOS 27 developer beta."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "A platform-specialist, hands-on article published the same day as the disputed first public wave."
+      }
+    },
+    {
+      "sourceId": "source-017",
+      "canonicalUrl": "https://appleinsider.com/articles/26/07/13/ipados-27-macos-27-beta-3-get-a-version-2-update-as-public-betas-drop",
+      "title": "iPadOS 27 & macOS 27 beta 3 get a version 2 update as public betas drop",
+      "publisher": "AppleInsider",
+      "author": "Wesley Hilliard",
+      "publishedAt": "2026-07-13T17:07:00-04:00",
+      "publishedDateObserved": "2026-07-13",
+      "publicationDatePrecision": "datetime",
+      "accessedAt": "2026-07-30",
+      "archiveUrl": null,
+      "status": "active",
+      "sourceClass": "contemporaneousSecondary",
+      "roles": [
+        "macOSBuildIdentity",
+        "payloadComparison"
+      ],
+      "evidence": {
+        "rawPath": null,
+        "rawBytes": null,
+        "rawSha256": null,
+        "selectedTextPath": "tmp/research-evidence/apple-os-27-cycle/source-025.selected.txt",
+        "selectedTextBytes": 2328,
+        "selectedTextSha256": "c5784c2a79d71e09021ed07a368c2878e4e6613ede11d43f91dee8ff0c0372f0",
+        "captureMethod": "reused selected evidence from apple-os-27-cycle packet",
+        "locator": "Selected evidence identifies macOS 27 beta 3 v2 build 26A5378n on the public-beta day and states other OS 27 public payloads retained beta 3 builds."
+      },
+      "lineage": {
+        "independentForCorroboration": true,
+        "notes": "Reused evidence artifact; source already appears in the OS 27 research packet."
+      }
+    }
+  ]
+}

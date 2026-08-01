@@ -1,0 +1,1657 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/122868",
+      "title": "What's new in the updates for macOS Tahoe 26",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["macOS", "Tahoe", "26", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/125634",
+      "title": "About the security content of macOS Tahoe 26.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["macOS", "Tahoe", "26.1", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/125886",
+      "title": "About the security content of macOS Tahoe 26.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["macOS", "Tahoe", "26.2", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/126348",
+      "title": "About the security content of macOS Tahoe 26.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["macOS", "Tahoe", "26.3", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/123024",
+      "title": "About visionOS 26 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["visionOS", "26", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/125638",
+      "title": "About the security content of visionOS 26.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["visionOS", "26.1", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/125891",
+      "title": "About the security content of visionOS 26.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["visionOS", "26.2", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/126353",
+      "title": "About the security content of visionOS 26.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["visionOS", "26.3", "security", "CVE"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-26-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/122868",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "macOS Tahoe 26.1 reached the public channel on November 3, 2025. macOS Tahoe 26.1 added an opacity choice for Liquid Glass, extended Apple Music AutoMix to AirPlay, improved FaceTime audio under constrained network conditions, and changed default protections for existing child accounts.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125634",
+                "locator": "macOS Tahoe 26.1 — Released 2025-11-03"
+              },
+              {
+                "url": "https://support.apple.com/en-us/122868",
+                "locator": "macOS Tahoe 26.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented security record"
+          },
+          {
+            "text": "Apple's advisory records a broad security pass across authorization, privacy, code-signing, sandbox, file-system, media, kernel, Safari, and WebKit surfaces. The grouped entries below are a reader-oriented index, not a replacement for the full CVE bulletin.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125634",
+                "locator": "macOS Tahoe 26.1 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/125634",
+          "locator": "macOS Tahoe 26.1 — Released 2025-11-03"
+        },
+        {
+          "url": "https://support.apple.com/en-us/122868",
+          "locator": "macOS Tahoe 26.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125634",
+          "locator": "macOS Tahoe 26.1 — security content"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-macos-26-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/122868",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "macOS Tahoe 26.2 reached the public channel on December 12, 2025. macOS Tahoe 26.2 introduced Edge Light for video calls, richer Podcast navigation, new Games-library and controller tools, AirDrop verification codes, Freeform tables, and several News, Music, and reliability refinements.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125886",
+                "locator": "macOS Tahoe 26.2 — Released 2025-12-12"
+              },
+              {
+                "url": "https://support.apple.com/en-us/122868",
+                "locator": "macOS Tahoe 26.2"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented security record"
+          },
+          {
+            "text": "The accompanying advisory covers payment-token access, communications privacy, sandbox and Gatekeeper boundaries, kernel privileges, media parsing, and WebKit. Apple's exploited-in-the-wild language concerns targeted attacks on versions of iOS before iOS 26; it is not evidence that macOS 26.2 itself had been exploited.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125886",
+                "locator": "macOS Tahoe 26.2 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/125886",
+          "locator": "macOS Tahoe 26.2 — Released 2025-12-12"
+        },
+        {
+          "url": "https://support.apple.com/en-us/122868",
+          "locator": "macOS Tahoe 26.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125886",
+          "locator": "macOS Tahoe 26.2 — security content"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-macos-26-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/122868",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "macOS Tahoe 26.3 reached the public channel on February 11, 2026. macOS Tahoe 26.3 was a maintenance release that Apple described as providing important bug fixes and security updates rather than a named consumer feature set.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/126348",
+                "locator": "macOS Tahoe 26.3 — Released 2026-02-11"
+              },
+              {
+                "url": "https://support.apple.com/en-us/122868",
+                "locator": "macOS Tahoe 26.3"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented security record"
+          },
+          {
+            "text": "Apple's detailed advisory spans access control, privilege boundaries, media and file parsing, networking, privacy, sandboxing, and web components. The dyld exploitation note refers to targeted attacks on versions of iOS before iOS 26, not to a confirmed macOS 26.3 compromise.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/126348",
+                "locator": "macOS Tahoe 26.3 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/126348",
+          "locator": "macOS Tahoe 26.3 — Released 2026-02-11"
+        },
+        {
+          "url": "https://support.apple.com/en-us/122868",
+          "locator": "macOS Tahoe 26.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/126348",
+          "locator": "macOS Tahoe 26.3 — security content"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-visionos-26-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123024",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "visionOS 26.1 reached the public channel on November 3, 2025. visionOS 26.1 expanded the Apple Vision Pro companion app to iPad, added companion-device control for AirPlay viewing, and improved playback information inside Spatial Gallery.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125638",
+                "locator": "visionOS 26.1 — Released 2025-11-03"
+              },
+              {
+                "url": "https://support.apple.com/en-us/123024",
+                "locator": "visionOS 26.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented security record"
+          },
+          {
+            "text": "Apple's advisory documents privacy, sandbox, kernel, media, and WebKit repairs for all Apple Vision Pro models. Security groups below summarize representative affected surfaces without reproducing the full bulletin.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125638",
+                "locator": "visionOS 26.1 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/125638",
+          "locator": "visionOS 26.1 — Released 2025-11-03"
+        },
+        {
+          "url": "https://support.apple.com/en-us/123024",
+          "locator": "visionOS 26.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125638",
+          "locator": "visionOS 26.1 — security content"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-visionos-26-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123024",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "visionOS 26.2 reached the public channel on December 12, 2025. visionOS 26.2 expanded Travel Mode beyond airplanes and trains, enabled hand-drawn input from supported spatial accessories in PencilKit apps, and brought structured tables to Freeform.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125891",
+                "locator": "visionOS 26.2 — Released 2025-12-12"
+              },
+              {
+                "url": "https://support.apple.com/en-us/123024",
+                "locator": "visionOS 26.2"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented security record"
+          },
+          {
+            "text": "Its advisory includes calling identity, hidden-photo authentication, kernel privilege, HID-device, privacy, and WebKit work. Apple's targeted-attack wording again concerns versions of iOS before iOS 26 rather than confirmed exploitation of visionOS 26.2.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125891",
+                "locator": "visionOS 26.2 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/125891",
+          "locator": "visionOS 26.2 — Released 2025-12-12"
+        },
+        {
+          "url": "https://support.apple.com/en-us/123024",
+          "locator": "visionOS 26.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125891",
+          "locator": "visionOS 26.2 — security content"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-visionos-26-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/123024",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "visionOS 26.3 reached the public channel on February 11, 2026. visionOS 26.3 was a maintenance release for Apple Vision Pro that Apple described as providing important bug fixes and security updates, without a named consumer feature list.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/126353",
+                "locator": "visionOS 26.3 — Released 2026-02-11"
+              },
+              {
+                "url": "https://support.apple.com/en-us/123024",
+                "locator": "visionOS 26.3"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented security record"
+          },
+          {
+            "text": "The version-specific advisory covers privilege boundaries, media processing, networking, privacy, sandboxing, and dynamic-loader security. Its exploitation statement is expressly about versions of iOS before iOS 26.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/126353",
+                "locator": "visionOS 26.3 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/126353",
+          "locator": "visionOS 26.3 — Released 2026-02-11"
+        },
+        {
+          "url": "https://support.apple.com/en-us/123024",
+          "locator": "visionOS 26.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/126353",
+          "locator": "visionOS 26.3 — security content"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-macos-26-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "macOS Tahoe 26.1 reached the public channel on 2025-11-03. macOS Tahoe 26.1 added an opacity choice for Liquid Glass, extended Apple Music AutoMix to AirPlay, improved FaceTime audio under constrained network conditions, and changed default protections for existing child accounts.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple's dated security record places the public macOS Tahoe 26.1 appearance on 2025-11-03. This page covers that public release and does not project cumulative notes onto an earlier beta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125634",
+                "locator": "macOS Tahoe 26.1 — Released 2025-11-03"
+              },
+              {
+                "url": "https://support.apple.com/en-us/122868",
+                "locator": "macOS Tahoe 26.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "macOS Tahoe 26.1 added an opacity choice for Liquid Glass, extended Apple Music AutoMix to AirPlay, improved FaceTime audio under constrained network conditions, and changed default protections for existing child accounts.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/122868",
+                "locator": "macOS Tahoe 26.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Security and evidence boundary"
+          },
+          {
+            "text": "Apple's advisory records a broad security pass across authorization, privacy, code-signing, sandbox, file-system, media, kernel, Safari, and WebKit surfaces. The grouped entries below are a reader-oriented index, not a replacement for the full CVE bulletin.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125634",
+                "locator": "macOS Tahoe 26.1 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/125634",
+          "locator": "macOS Tahoe 26.1 — Released 2025-11-03"
+        },
+        {
+          "url": "https://support.apple.com/en-us/122868",
+          "locator": "macOS Tahoe 26.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125634",
+          "locator": "macOS Tahoe 26.1 — security content"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-26-1-liquid-glass-tint",
+          "title": "Tinted Liquid Glass appearance",
+          "canonicalSummary": "A new appearance control let users choose the original clear Liquid Glass material or a more opaque tinted presentation in apps.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "A new appearance control let users choose the original clear Liquid Glass material or a more opaque tinted presentation in apps.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.1 — Liquid Glass setting"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-1-automix-airplay",
+          "title": "Apple Music AutoMix over AirPlay",
+          "canonicalSummary": "Apple Music's AutoMix transitions became available when playback was sent over AirPlay.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple Music's AutoMix transitions became available when playback was sent over AirPlay.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.1 — Apple Music AutoMix"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-1-facetime-low-bandwidth-audio",
+          "title": "FaceTime audio in low-bandwidth conditions",
+          "canonicalSummary": "FaceTime received an audio-quality improvement for calls operating with limited network bandwidth.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "FaceTime received an audio-quality improvement for calls operating with limited network bandwidth.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.1 — FaceTime audio quality"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-1-child-account-protection-defaults",
+          "title": "Child-account protection defaults",
+          "canonicalSummary": "Communication Safety and adult-site filtering became default-on protections for existing child accounts in the documented 13–17 age range, with the exact age varying by region.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Communication Safety and adult-site filtering became default-on protections for existing child accounts in the documented 13–17 age range, with the exact age varying by region.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.1 — Communication Safety and Web content filters"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-1-authorization-privacy-hardening",
+          "title": "Authorization and privacy hardening",
+          "canonicalSummary": "Apple documented repairs for sensitive-data exposure, embedded-view screenshots, logging, permissions, and authorization across account, application, and system services.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented repairs for sensitive-data exposure, embedded-view screenshots, logging, permissions, and authorization across account, application, and system services.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125634",
+              "locator": "Apple Account, App Store, Contacts, FileProvider, and privacy-related entries"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-1-code-signing-sandbox-filesystem",
+          "title": "Code-signing, sandbox, and file-system protections",
+          "canonicalSummary": "The update tightened code-signing downgrade checks, sandbox and entitlement boundaries, symbolic-link handling, installer behavior, and access to protected file-system locations.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update tightened code-signing downgrade checks, sandbox and entitlement boundaries, symbolic-link handling, installer behavior, and access to protected file-system locations.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125634",
+              "locator": "AppleMobileFileIntegrity, Assets, CloudKit, Disk Images, Installer, Sandbox, and TCC entries"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-1-safari-webkit-security",
+          "title": "Safari and WebKit security repairs",
+          "canonicalSummary": "Safari spoofing and privacy issues were addressed alongside multiple WebKit memory-safety, cross-origin, and process-stability vulnerabilities.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Safari spoofing and privacy issues were addressed alongside multiple WebKit memory-safety, cross-origin, and process-stability vulnerabilities.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125634",
+              "locator": "Safari, WebKit, and WebKit Canvas entries"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-macos-26-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "macOS Tahoe 26.2 reached the public channel on 2025-12-12. macOS Tahoe 26.2 introduced Edge Light for video calls, richer Podcast navigation, new Games-library and controller tools, AirDrop verification codes, Freeform tables, and several News, Music, and reliability refinements.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple's dated security record places the public macOS Tahoe 26.2 appearance on 2025-12-12. This page covers that public release and does not project cumulative notes onto an earlier beta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125886",
+                "locator": "macOS Tahoe 26.2 — Released 2025-12-12"
+              },
+              {
+                "url": "https://support.apple.com/en-us/122868",
+                "locator": "macOS Tahoe 26.2"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "macOS Tahoe 26.2 introduced Edge Light for video calls, richer Podcast navigation, new Games-library and controller tools, AirDrop verification codes, Freeform tables, and several News, Music, and reliability refinements.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/122868",
+                "locator": "macOS Tahoe 26.2"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Security and evidence boundary"
+          },
+          {
+            "text": "The accompanying advisory covers payment-token access, communications privacy, sandbox and Gatekeeper boundaries, kernel privileges, media parsing, and WebKit. Apple's exploited-in-the-wild language concerns targeted attacks on versions of iOS before iOS 26; it is not evidence that macOS 26.2 itself had been exploited.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125886",
+                "locator": "macOS Tahoe 26.2 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/125886",
+          "locator": "macOS Tahoe 26.2 — Released 2025-12-12"
+        },
+        {
+          "url": "https://support.apple.com/en-us/122868",
+          "locator": "macOS Tahoe 26.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125886",
+          "locator": "macOS Tahoe 26.2 — security content"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-26-2-edge-light",
+          "title": "Edge Light for video calls",
+          "canonicalSummary": "Edge Light used the Mac display as a configurable virtual light during low-light video calls, with pointer-aware behavior and an automatic option on supported newer Macs.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Edge Light used the Mac display as a configurable virtual light during low-light video calls, with pointer-aware behavior and an automatic option on supported newer Macs.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.2 — Edge Light"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-2-podcasts-navigation",
+          "title": "Podcast chapters and mentioned-show links",
+          "canonicalSummary": "Podcasts added automatically generated episode chapters and direct links to other shows mentioned in an episode.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Podcasts added automatically generated episode chapters and direct links to other shows mentioned in an episode.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.2 — Podcasts"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-2-games-library-challenges-controllers",
+          "title": "Games filters, challenge banners, and controllers",
+          "canonicalSummary": "The Games app gained library filters, real-time challenge-leader banners, and support for working with connected controllers.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Games app gained library filters, real-time challenge-leader banners, and support for working with connected controllers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.2 — Games"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-2-airdrop-codes",
+          "title": "AirDrop verification codes",
+          "canonicalSummary": "AirDrop could require a receiver-displayed code when sharing with an unknown contact, adding an explicit verification step.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "AirDrop could require a receiver-displayed code when sharing with an unknown contact, adding an explicit verification step.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.2 — AirDrop codes"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-2-freeform-tables",
+          "title": "Tables in Freeform",
+          "canonicalSummary": "Freeform boards gained resizable tables whose cells could contain text, images, documents, and drawings.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Freeform boards gained resizable tables whose cells could contain text, images, documents, and drawings.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.2 — Tables in Freeform"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-2-news-music-discovery",
+          "title": "News and Music discovery refinements",
+          "canonicalSummary": "News added topic-section shortcuts in its sidebar, while Apple Music surfaced Favorite Songs in Top Picks.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "News added topic-section shortcuts in its sidebar, while Apple Music surfaced Favorite Songs in Top Picks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.2 — Apple News Section links and Favorite Songs"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-2-prerelease-album-playback",
+          "title": "Pre-release album playback timing",
+          "canonicalSummary": "Apple fixed a Music-library condition in which a pre-release album could remain unavailable immediately after its scheduled release time.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a Music-library condition in which a pre-release album could remain unavailable immediately after its scheduled release time.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.2 — pre-release albums"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-2-calling-privacy-authentication",
+          "title": "Calling and authentication protections",
+          "canonicalSummary": "The security update addressed FaceTime caller-ID spoofing, unintended password-field exposure during remote control, call-history logging, and sensitive App Store token access.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The security update addressed FaceTime caller-ID spoofing, unintended password-field exposure during remote control, call-history logging, and sensitive App Store token access.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125886",
+              "locator": "App Store, Call History, Calling Framework, and FaceTime entries"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-2-sandbox-gatekeeper-kernel",
+          "title": "Sandbox, Gatekeeper, and kernel hardening",
+          "canonicalSummary": "Apple tightened sandboxed file access, file bookmarks, Gatekeeper validation, and kernel privilege and memory boundaries.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple tightened sandboxed file access, file bookmarks, Gatekeeper validation, and kernel privilege and memory boundaries.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125886",
+              "locator": "AppSandbox, File Bookmark, Kernel, LaunchServices, and related entries"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-2-webkit-targeted-attack-fixes",
+          "title": "WebKit security fixes with targeted-attack context",
+          "canonicalSummary": "The bulletin includes multiple WebKit memory-safety repairs. Apple linked two entries to an extremely sophisticated attack against specific individuals on versions of iOS before iOS 26, not to observed exploitation of macOS Tahoe 26.2.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The bulletin includes multiple WebKit memory-safety repairs. Apple linked two entries to an extremely sophisticated attack against specific individuals on versions of iOS before iOS 26, not to observed exploitation of macOS Tahoe 26.2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125886",
+              "locator": "WebKit entries for CVE-2025-43529 and CVE-2025-14174"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-macos-26-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "macOS Tahoe 26.3 reached the public channel on 2026-02-11. macOS Tahoe 26.3 was a maintenance release that Apple described as providing important bug fixes and security updates rather than a named consumer feature set.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple's dated security record places the public macOS Tahoe 26.3 appearance on 2026-02-11. This page covers that public release and does not project cumulative notes onto an earlier beta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/126348",
+                "locator": "macOS Tahoe 26.3 — Released 2026-02-11"
+              },
+              {
+                "url": "https://support.apple.com/en-us/122868",
+                "locator": "macOS Tahoe 26.3"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "macOS Tahoe 26.3 was a maintenance release that Apple described as providing important bug fixes and security updates rather than a named consumer feature set.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/122868",
+                "locator": "macOS Tahoe 26.3"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Security and evidence boundary"
+          },
+          {
+            "text": "Apple's detailed advisory spans access control, privilege boundaries, media and file parsing, networking, privacy, sandboxing, and web components. The dyld exploitation note refers to targeted attacks on versions of iOS before iOS 26, not to a confirmed macOS 26.3 compromise.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/126348",
+                "locator": "macOS Tahoe 26.3 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/126348",
+          "locator": "macOS Tahoe 26.3 — Released 2026-02-11"
+        },
+        {
+          "url": "https://support.apple.com/en-us/122868",
+          "locator": "macOS Tahoe 26.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/126348",
+          "locator": "macOS Tahoe 26.3 — security content"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-26-3-important-bug-fixes",
+          "title": "Important maintenance fixes",
+          "canonicalSummary": "Apple classified 26.3 as an important bug-fix release but did not publish a more granular consumer-facing defect list.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple classified 26.3 as an important bug-fix release but did not publish a more granular consumer-facing defect list.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/122868",
+              "locator": "macOS Tahoe 26.3"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-3-privilege-access-control",
+          "title": "Privilege and access-control repairs",
+          "canonicalSummary": "The advisory documents root-privilege, sandbox-escape, protected-data, and authorization fixes across CoreServices, Remote Management, Security, Setup Assistant, and related frameworks.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The advisory documents root-privilege, sandbox-escape, protected-data, and authorization fixes across CoreServices, Remote Management, Security, Setup Assistant, and related frameworks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126348",
+              "locator": "CoreServices, Remote Management, Security, Setup Assistant, and Sandbox entries"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-3-foundation-privacy-input",
+          "title": "Foundation and privacy protections",
+          "canonicalSummary": "Apple repaired Foundation paths that could expose sensitive data, monitor keystrokes without permission, or access protected information, together with logging and temporary-file privacy issues.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple repaired Foundation paths that could expose sensitive data, monitor keystrokes without permission, or access protected information, together with logging and temporary-file privacy issues.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126348",
+              "locator": "Foundation, Focus, Game Center, Messages, and Notification Center entries"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-3-media-file-processing",
+          "title": "Media and file-processing safety",
+          "canonicalSummary": "Bounds, memory, and validation work covered ImageIO, Model I/O, CoreAudio, libexpat, GPU drivers, and other crafted-file paths.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Bounds, memory, and validation work covered ImageIO, Model I/O, CoreAudio, libexpat, GPU drivers, and other crafted-file paths.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126348",
+              "locator": "CoreAudio, GPU Drivers, ImageIO, libexpat, and Model I/O entries"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-3-network-kernel-hardening",
+          "title": "Network and kernel hardening",
+          "canonicalSummary": "The release addressed crafted Bluetooth denial of service, arbitrary-file writing through CFNetwork, kernel traffic interception, and kernel memory or stability problems.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release addressed crafted Bluetooth denial of service, arbitrary-file writing through CFNetwork, kernel traffic interception, and kernel memory or stability problems.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126348",
+              "locator": "Bluetooth, CFNetwork, and Kernel entries"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-3-dyld-targeted-attack-context",
+          "title": "dyld memory-corruption repair",
+          "canonicalSummary": "Apple fixed a dyld memory-corruption path and said the underlying issue may have been used in a highly targeted attack on versions of iOS before iOS 26; the advisory does not say macOS 26.3 was exploited.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a dyld memory-corruption path and said the underlying issue may have been used in a highly targeted attack on versions of iOS before iOS 26; the advisory does not say macOS 26.3 was exploited.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126348",
+              "locator": "dyld — CVE-2026-20700"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-3-mail-safari-sandbox",
+          "title": "Mail, Safari, and sandbox protections",
+          "canonicalSummary": "Apple corrected remote-content handling in Mail, Safari history access, sandbox permissions, Screen Time access controls, and related sensitive-data paths.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected remote-content handling in Mail, Safari history access, sandbox permissions, Screen Time access controls, and related sensitive-data paths.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126348",
+              "locator": "Mail, Safari, Sandbox, and Screen Time entries"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-visionos-26-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "visionOS 26.1 reached the public channel on 2025-11-03. visionOS 26.1 expanded the Apple Vision Pro companion app to iPad, added companion-device control for AirPlay viewing, and improved playback information inside Spatial Gallery.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple's dated security record places the public visionOS 26.1 appearance on 2025-11-03. This page covers that public release and does not project cumulative notes onto an earlier beta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125638",
+                "locator": "visionOS 26.1 — Released 2025-11-03"
+              },
+              {
+                "url": "https://support.apple.com/en-us/123024",
+                "locator": "visionOS 26.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "visionOS 26.1 expanded the Apple Vision Pro companion app to iPad, added companion-device control for AirPlay viewing, and improved playback information inside Spatial Gallery.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123024",
+                "locator": "visionOS 26.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Security and evidence boundary"
+          },
+          {
+            "text": "Apple's advisory documents privacy, sandbox, kernel, media, and WebKit repairs for all Apple Vision Pro models. Security groups below summarize representative affected surfaces without reproducing the full bulletin.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125638",
+                "locator": "visionOS 26.1 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/125638",
+          "locator": "visionOS 26.1 — Released 2025-11-03"
+        },
+        {
+          "url": "https://support.apple.com/en-us/123024",
+          "locator": "visionOS 26.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125638",
+          "locator": "visionOS 26.1 — security content"
+        }
+      ],
+      "changes": [
+        {
+          "key": "visionos-26-1-ipad-companion-app",
+          "title": "Apple Vision Pro app on iPad",
+          "canonicalSummary": "With iPadOS 26.1, the Apple Vision Pro companion app expanded to iPad for discovering spatial content and viewing device information.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "With iPadOS 26.1, the Apple Vision Pro companion app expanded to iPad for discovering spatial content and viewing device information.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123024",
+              "locator": "visionOS 26.1 — Apple Vision Pro app for iPad"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-1-companion-airplay-control",
+          "title": "Companion-device AirPlay control",
+          "canonicalSummary": "The Vision Pro app on iPhone and iPad could enable AirPlay so another display could show the wearer's Apple Vision Pro experience.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The Vision Pro app on iPhone and iPad could enable AirPlay so another display could show the wearer's Apple Vision Pro experience.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123024",
+              "locator": "visionOS 26.1 — Apple Vision Pro app AirPlay control"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-1-spatial-gallery-controls",
+          "title": "Spatial Gallery video controls",
+          "canonicalSummary": "Immersive Spatial Gallery videos began showing playback controls and duration information.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Immersive Spatial Gallery videos began showing playback controls and duration information.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123024",
+              "locator": "visionOS 26.1 — Spatial Gallery"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-1-privacy-sandbox-protections",
+          "title": "Privacy and sandbox protections",
+          "canonicalSummary": "Apple addressed embedded-view screenshots, app fingerprinting, protected-data access, entitlement boundaries, logging, and user-preference handling.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple addressed embedded-view screenshots, app fingerprinting, protected-data access, entitlement boundaries, logging, and user-preference handling.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125638",
+              "locator": "Apple Account, Assets, Find My, Installer, Notes, and Sandbox Profiles entries"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-1-kernel-media-safety",
+          "title": "Kernel and media-processing safety",
+          "canonicalSummary": "The update repaired kernel memory and stability issues plus crafted-media paths in CoreText and Model I/O.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update repaired kernel memory and stability issues plus crafted-media paths in CoreText and Model I/O.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125638",
+              "locator": "Apple Neural Engine, CoreText, Kernel, and Model I/O entries"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-1-safari-webkit-security",
+          "title": "Safari and WebKit security repairs",
+          "canonicalSummary": "Safari spoofing and privacy issues were fixed alongside WebKit cross-origin, memory-safety, and process-stability vulnerabilities.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Safari spoofing and privacy issues were fixed alongside WebKit cross-origin, memory-safety, and process-stability vulnerabilities.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125638",
+              "locator": "Safari, WebKit, and WebKit Canvas entries"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-visionos-26-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "visionOS 26.2 reached the public channel on 2025-12-12. visionOS 26.2 expanded Travel Mode beyond airplanes and trains, enabled hand-drawn input from supported spatial accessories in PencilKit apps, and brought structured tables to Freeform.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple's dated security record places the public visionOS 26.2 appearance on 2025-12-12. This page covers that public release and does not project cumulative notes onto an earlier beta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125891",
+                "locator": "visionOS 26.2 — Released 2025-12-12"
+              },
+              {
+                "url": "https://support.apple.com/en-us/123024",
+                "locator": "visionOS 26.2"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "visionOS 26.2 expanded Travel Mode beyond airplanes and trains, enabled hand-drawn input from supported spatial accessories in PencilKit apps, and brought structured tables to Freeform.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123024",
+                "locator": "visionOS 26.2"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Security and evidence boundary"
+          },
+          {
+            "text": "Its advisory includes calling identity, hidden-photo authentication, kernel privilege, HID-device, privacy, and WebKit work. Apple's targeted-attack wording again concerns versions of iOS before iOS 26 rather than confirmed exploitation of visionOS 26.2.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/125891",
+                "locator": "visionOS 26.2 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/125891",
+          "locator": "visionOS 26.2 — Released 2025-12-12"
+        },
+        {
+          "url": "https://support.apple.com/en-us/123024",
+          "locator": "visionOS 26.2"
+        },
+        {
+          "url": "https://support.apple.com/en-us/125891",
+          "locator": "visionOS 26.2 — security content"
+        }
+      ],
+      "changes": [
+        {
+          "key": "visionos-26-2-travel-mode-cars-buses",
+          "title": "Travel Mode for cars and buses",
+          "canonicalSummary": "Travel Mode expanded so passengers could use Apple Vision Pro in cars and buses in addition to airplanes and trains.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Travel Mode expanded so passengers could use Apple Vision Pro in cars and buses in addition to airplanes and trains.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123024",
+              "locator": "visionOS 26.2 — Travel Mode"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-2-spatial-accessory-drawing",
+          "title": "Hand-drawn input from spatial accessories",
+          "canonicalSummary": "Supported spatial accessories could provide hand-drawn input in Notes, Freeform, and other PencilKit-enabled apps.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Supported spatial accessories could provide hand-drawn input in Notes, Freeform, and other PencilKit-enabled apps.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123024",
+              "locator": "visionOS 26.2 — spatial accessories and PencilKit"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-2-freeform-tables",
+          "title": "Tables in Freeform",
+          "canonicalSummary": "Freeform added automatically resizing table cells that could contain text, images, documents, and drawings.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Freeform added automatically resizing table cells that could contain text, images, documents, and drawings.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123024",
+              "locator": "visionOS 26.2 — Tables in Freeform"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-2-calling-photos-privacy",
+          "title": "Calling and photo privacy protections",
+          "canonicalSummary": "The security update addressed FaceTime caller-ID spoofing, remote-control password exposure, and a path that could reveal Hidden album photos without authentication.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The security update addressed FaceTime caller-ID spoofing, remote-control password exposure, and a path that could reveal Hidden album photos without authentication.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125891",
+              "locator": "Calling Framework, FaceTime, and Photos entries"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-2-kernel-hid-system-security",
+          "title": "Kernel, HID, and system hardening",
+          "canonicalSummary": "Apple fixed a kernel privilege issue, multiple crafted-HID crash paths, payment-token permissions, installed-app enumeration, and other protected-data exposures.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a kernel privilege issue, multiple crafted-HID crash paths, payment-token permissions, installed-app enumeration, and other protected-data exposures.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125891",
+              "locator": "App Store, Icons, Kernel, Messages, Multi-Touch, and Screen Time entries"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-2-webkit-targeted-attack-fixes",
+          "title": "WebKit security fixes with targeted-attack context",
+          "canonicalSummary": "Multiple WebKit memory-safety issues were repaired. Apple associated two with attacks on specific individuals using versions of iOS before iOS 26, not with observed exploitation of visionOS 26.2.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Multiple WebKit memory-safety issues were repaired. Apple associated two with attacks on specific individuals using versions of iOS before iOS 26, not with observed exploitation of visionOS 26.2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/125891",
+              "locator": "WebKit entries for CVE-2025-43529 and CVE-2025-14174"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-visionos-26-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "visionOS 26.3 reached the public channel on 2026-02-11. visionOS 26.3 was a maintenance release for Apple Vision Pro that Apple described as providing important bug fixes and security updates, without a named consumer feature list.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple's dated security record places the public visionOS 26.3 appearance on 2026-02-11. This page covers that public release and does not project cumulative notes onto an earlier beta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/126353",
+                "locator": "visionOS 26.3 — Released 2026-02-11"
+              },
+              {
+                "url": "https://support.apple.com/en-us/123024",
+                "locator": "visionOS 26.3"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "visionOS 26.3 was a maintenance release for Apple Vision Pro that Apple described as providing important bug fixes and security updates, without a named consumer feature list.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/123024",
+                "locator": "visionOS 26.3"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Security and evidence boundary"
+          },
+          {
+            "text": "The version-specific advisory covers privilege boundaries, media processing, networking, privacy, sandboxing, and dynamic-loader security. Its exploitation statement is expressly about versions of iOS before iOS 26.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/126353",
+                "locator": "visionOS 26.3 — security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/126353",
+          "locator": "visionOS 26.3 — Released 2026-02-11"
+        },
+        {
+          "url": "https://support.apple.com/en-us/123024",
+          "locator": "visionOS 26.3"
+        },
+        {
+          "url": "https://support.apple.com/en-us/126353",
+          "locator": "visionOS 26.3 — security content"
+        }
+      ],
+      "changes": [
+        {
+          "key": "visionos-26-3-important-bug-fixes",
+          "title": "Important maintenance fixes",
+          "canonicalSummary": "Apple classified the release as an important bug-fix update but did not enumerate individual consumer defects.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple classified the release as an important bug-fix update but did not enumerate individual consumer defects.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/123024",
+              "locator": "visionOS 26.3"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-3-coreservices-privilege",
+          "title": "CoreServices privilege and data protections",
+          "canonicalSummary": "CoreServices repairs addressed root-privilege paths, directory handling, environment-variable validation, and sensitive-data access.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "CoreServices repairs addressed root-privilege paths, directory handling, environment-variable validation, and sensitive-data access.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126353",
+              "locator": "CoreServices entries"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-3-image-media-processing",
+          "title": "Image and media-processing safety",
+          "canonicalSummary": "The update corrected ImageIO information-disclosure paths, CoreAudio and CoreMedia memory issues, and Model I/O bounds handling.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update corrected ImageIO information-disclosure paths, CoreAudio and CoreMedia memory issues, and Model I/O bounds handling.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126353",
+              "locator": "CoreAudio, CoreMedia, ImageIO, and Model I/O entries"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-3-kernel-network-hardening",
+          "title": "Kernel and network hardening",
+          "canonicalSummary": "Apple fixed kernel privilege, stability, and traffic-interception issues together with Bluetooth denial of service and CFNetwork arbitrary-file writing.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed kernel privilege, stability, and traffic-interception issues together with Bluetooth denial of service and CFNetwork arbitrary-file writing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126353",
+              "locator": "Bluetooth, CFNetwork, and Kernel entries"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-3-dyld-targeted-attack-context",
+          "title": "dyld memory-corruption repair",
+          "canonicalSummary": "A dynamic-loader memory-corruption issue was fixed; Apple's observed-attack note is limited to highly targeted use against versions of iOS before iOS 26 and does not say visionOS 26.3 was exploited.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "A dynamic-loader memory-corruption issue was fixed; Apple's observed-attack note is limited to highly targeted use against versions of iOS before iOS 26 and does not say visionOS 26.3 was exploited.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126353",
+              "locator": "dyld — CVE-2026-20700"
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-3-sandbox-messages-shortcuts",
+          "title": "Sandbox, Messages, and Shortcuts protections",
+          "canonicalSummary": "The release tightened sandbox permissions, symbolic-link handling in Messages, directory-path validation in Shortcuts, and related sensitive-data boundaries.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The release tightened sandbox permissions, symbolic-link handling in Messages, directory-path validation in Shortcuts, and related sensitive-data boundaries.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's version-labeled update notes or security advisory to the audited public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/126353",
+              "locator": "Messages, Sandbox, and Shortcuts entries"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:29:07Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

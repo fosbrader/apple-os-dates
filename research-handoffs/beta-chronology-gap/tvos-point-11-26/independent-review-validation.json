@@ -1,0 +1,129 @@
+{
+  "formatVersion": 1,
+  "batchId": "tvos-point-11-26",
+  "validatedAt": "2026-07-31T08:53:22Z",
+  "status": "passedWithBlockedSubset",
+  "reviewer": "independent chronology reviewer",
+  "independentOfResearcher": true,
+  "validatedArtifacts": {
+    "independentReview": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/independent-review.json",
+      "bytes": 39734,
+      "sha256": "25a8c92c5180d751bdeb540843341647466531973e2bcda32476e31efa2ad023"
+    },
+    "independentQueryScript": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/independent-review-query.ts",
+      "bytes": 7902,
+      "sha256": "0cb831c301a2674ce0e9d52013f4cd017fd8e2c8fea6fb73f32ceda625f35228"
+    },
+    "independentProductionSnapshot": {
+      "path": "research-handoffs/beta-chronology-gap/tvos-point-11-26/independent-review-production-snapshot.json",
+      "bytes": 159345,
+      "sha256": "0113b4d61e9a9d10d28e335df87302faa9c99563002db6f4d2429c4170417933"
+    }
+  },
+  "partition": {
+    "researchedIdentityCount": 116,
+    "approvedCandidateCount": 37,
+    "blockedCandidateCount": 79,
+    "newlyBlockedCandidateCount": 36,
+    "preblockedCandidateCount": 43,
+    "approvedAndBlockedDisjoint": true,
+    "approvedAndBlockedExhaustive": true,
+    "allApprovedIdsExistInPacketCandidateSet": true,
+    "allNewlyBlockedIdsExistInPacketCandidateSet": true,
+    "allPreblockedIdsExistInPacketNotProposedSet": true
+  },
+  "approvedEvidenceGate": {
+    "approvedPairCount": 37,
+    "approvedEvidenceReferenceCount": 74,
+    "eachPairUsesExactlyTwoFrozenPacketSources": true,
+    "eachPairUsesTwoDistinctPublisherFamilies": true,
+    "eachPairMatchesTheCandidateDate": true,
+    "eachSelectedSourceIsAssignedToItsCandidate": true,
+    "developerOrGenericOrdinalUsedAsPublicOrdinal": false,
+    "pairedPlatformUsedAsTvOSProof": false,
+    "releaseCandidateUsedAsPublicBetaProof": false,
+    "derivativeSourceCountedAsIndependent": false,
+    "livingPageWithoutPreservedHistoricalIdentityUsedAsProof": false
+  },
+  "scope": {
+    "targetParentCount": 32,
+    "assignmentCoverageApplicabilityQueryAndProductionSetsJoinExactly": true,
+    "positiveParentCount": 20,
+    "publicBetaApplicableNoPositiveButReversibleParentCount": 12,
+    "evidenceBackedNotApplicableParentCount": 0
+  },
+  "findingsAndConflicts": {
+    "packetNotProposedFindingCount": 15,
+    "reversibleNotProposedFindingCount": 15,
+    "evidenceBackedHistoricalNegativeCount": 0,
+    "packetConflictCount": 5,
+    "packetConflictsAdjudicatedCount": 5,
+    "additionalConflictCount": 8
+  },
+  "frozenEvidence": {
+    "packetLockCount": 377,
+    "packetLockCountVerified": 377,
+    "packetLockedBytesVerified": 39533840,
+    "packetLockFailureCount": 0,
+    "sourceLedgerCount": 177,
+    "rawCaptureCountVerified": 177,
+    "rawCaptureBytesVerified": 37531535,
+    "selectedCaptureCountVerified": 177,
+    "selectedCaptureBytesVerified": 360393,
+    "boundedExcerptCountVerified": 1786,
+    "sourceToLockJoinCountVerified": 177,
+    "failureCount": 0
+  },
+  "freshProductionReconciliation": {
+    "capturedAt": "2026-07-31T08:41:49.540Z",
+    "perspective": "published",
+    "useCdn": false,
+    "targetParentsFound": 32,
+    "exactIdentityChecks": 116,
+    "exactRouteMatches": 0,
+    "exactFullMatches": 0,
+    "globalStableEventIdDuplicateGroups": 0,
+    "scopedRouteIdentityDuplicateGroups": 0,
+    "scopedFullIdentityDuplicateGroups": 0,
+    "queryOnly": true
+  },
+  "checks": {
+    "reviewJsonParsed": true,
+    "reviewedArtifactHashesReproduced": true,
+    "all116IdentitiesReviewed": true,
+    "all37ApprovedEvidencePairsRevalidated": true,
+    "all79BlockedIdentitiesHaveReasonCodes": true,
+    "all43PreblockedIdentitiesRemainBlocked": true,
+    "all32ParentsReviewed": true,
+    "all15PacketFindingsRemainReversible": true,
+    "all5PacketConflictsAdjudicated": true,
+    "all8AdditionalConflictsDisclosed": true,
+    "all377PacketLocksReproduced": true,
+    "all177RawAndSelectedLocksReproduced": true,
+    "sharedCoverageMatrixMatchesFrozenPin": true,
+    "freshPublishedNoCdnProductionQueryValidated": true,
+    "allExactTargetMatchesRemainZero": true,
+    "allDuplicateChecksRemainZero": true
+  },
+  "authorization": {
+    "researchHandoffAggregationAllowed": true,
+    "researchHandoffAggregationScope": "Only the 37 approved candidate IDs, all 32 reviewed applicability dispositions, and the 15 reversible not-proposed findings enumerated in independent-review.json.",
+    "blockedCandidatePolicy": "All 79 blocked identities are excluded from chronology aggregation.",
+    "siteIntegrationAllowed": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "pageBuildsAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  },
+  "safety": {
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  }
+}

@@ -1,0 +1,3420 @@
+{
+  "formatVersion": "1.0",
+  "programId": "apple-beta-chronology-gap",
+  "generatedAt": "2026-07-31T05:07:02.405Z",
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "note": "Research packet only. Validation and review do not authorize Sanity mutation, stable-ID creation, page work, publication, or deployment."
+  },
+  "summary": {
+    "proposedCandidateCount": 46,
+    "notProposedCount": 9,
+    "byStatus": {
+      "needsEvidenceReview": 46
+    },
+    "byPlatform": {
+      "iOS": 46
+    },
+    "importantQualification": "Forty-nine public appearances survive: 46 confirmed-missing candidates and three exact existing production matches. iOS 14 skips PB2 and iOS 15 skips PB3 because Apple changed public numbering mid-cycle."
+  },
+  "cohorts": [
+    {
+      "cohortId": "ios-major-12-18-public-beta",
+      "description": "iOS 12.0–18.0 major-cycle public-beta chronology.",
+      "candidateCount": 46,
+      "sourcePaths": [
+        "research-handoffs/beta-chronology-gap/ios-major-12-18/assignment.json",
+        "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+        "research-handoffs/beta-chronology-gap/ios-major-12-18/production-snapshot.json",
+        "research-handoffs/beta-chronology-gap/ios-major-12-18/conflicts.json",
+        "research-handoffs/beta-chronology-gap/ios-major-12-18/raw-evidence-locks.json"
+      ],
+      "supersessionRule": "A later packet supersedes an identity only with captured platform-specific evidence, repeated production reconciliation, and independent chronology review."
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:ios:12.0:public-beta-1",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-06-25",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 1 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 12.0 Public Beta 1 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios12",
+          "locator": "The rolling-history entry for iOS 12 Public Beta 1. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 12.0 Public Beta 1 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.0:public-beta-2",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-05",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 2 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 12.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios12",
+          "locator": "The rolling-history entry for iOS 12 Public Beta 2. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 12.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.0:public-beta-3",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-18",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 3 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 12.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios12",
+          "locator": "The rolling-history entry for iOS 12 Public Beta 3. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 12.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.0:public-beta-4",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-31",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 4 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 12.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios12",
+          "locator": "The rolling-history entry for iOS 12 Public Beta 4. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 12.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.0:public-beta-5",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-06",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 5 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 12.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios12",
+          "locator": "The rolling-history entry for iOS 12 Public Beta 5. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 12.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.0:public-beta-6",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-15",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 6 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 12.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios12",
+          "locator": "The rolling-history entry for iOS 12 Public Beta 6. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 12.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios12-pb6-after-withdrawal",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 12.0 Public Beta 6 appearance.",
+          "supports": "MacRumors evidence for iOS 12.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.0:public-beta-7",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-20",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 7 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 12.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios12",
+          "locator": "The rolling-history entry for iOS 12 Public Beta 7. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 12.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.0:public-beta-8",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-23",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 8 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 12.0 Public Beta 8 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios12",
+          "locator": "The rolling-history entry for iOS 12 Public Beta 8. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 12.0 Public Beta 8 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.0:public-beta-9",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 9",
+        "routeAlias": "public-beta-9",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-27",
+        "sequence": 9,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 9 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 12.0 Public Beta 9 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios12",
+          "locator": "The rolling-history entry for iOS 12 Public Beta 9. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 12.0 Public Beta 9 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.0:public-beta-10",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0",
+      "releaseVersionId": "version-ios-12-0",
+      "proposedIdentity": {
+        "label": "Public Beta 10",
+        "routeAlias": "public-beta-10",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-31",
+        "sequence": 10,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 10 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 12.0 Public Beta 10 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios12",
+          "locator": "The rolling-history entry for iOS 12 Public Beta 10. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 12.0 Public Beta 10 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.0:public-beta-1",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.0",
+      "releaseVersionId": "version-ios-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-06-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios13",
+          "locator": "The “Tijdlijn iOS 13 beta” row for Public Beta 1 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 13.0 Public Beta 1 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios13",
+          "locator": "The rolling-history entry for iOS 13 Public Beta 1. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 13.0 Public Beta 1 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios13-pb1",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 13.0 Public Beta 1 appearance.",
+          "supports": "MacRumors evidence for iOS 13.0 Public Beta 1 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.0:public-beta-2",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.0",
+      "releaseVersionId": "version-ios-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-08",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios13",
+          "locator": "The “Tijdlijn iOS 13 beta” row for Public Beta 2 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 13.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios13",
+          "locator": "The rolling-history entry for iOS 13 Public Beta 2. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 13.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios13-pb2",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 13.0 Public Beta 2 appearance.",
+          "supports": "MacRumors evidence for iOS 13.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.0:public-beta-3",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.0",
+      "releaseVersionId": "version-ios-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-18",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios13",
+          "locator": "The “Tijdlijn iOS 13 beta” row for Public Beta 3 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 13.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios13",
+          "locator": "The rolling-history entry for iOS 13 Public Beta 3. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 13.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios13-pb3",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 13.0 Public Beta 3 appearance.",
+          "supports": "MacRumors evidence for iOS 13.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.0:public-beta-4",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.0",
+      "releaseVersionId": "version-ios-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-30",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios13",
+          "locator": "The “Tijdlijn iOS 13 beta” row for Public Beta 4 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 13.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios13",
+          "locator": "The rolling-history entry for iOS 13 Public Beta 4. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 13.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios13-pb4",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 13.0 Public Beta 4 appearance.",
+          "supports": "MacRumors evidence for iOS 13.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.0:public-beta-5",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.0",
+      "releaseVersionId": "version-ios-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-08",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios13",
+          "locator": "The “Tijdlijn iOS 13 beta” row for Public Beta 5 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 13.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios13",
+          "locator": "The rolling-history entry for iOS 13 Public Beta 5. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 13.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios13-pb5",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 13.0 Public Beta 5 appearance.",
+          "supports": "MacRumors evidence for iOS 13.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.0:public-beta-6",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.0",
+      "releaseVersionId": "version-ios-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-15",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios13",
+          "locator": "The “Tijdlijn iOS 13 beta” row for Public Beta 6 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 13.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios13",
+          "locator": "The rolling-history entry for iOS 13 Public Beta 6. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 13.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios13-pb6",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 13.0 Public Beta 6 appearance.",
+          "supports": "MacRumors evidence for iOS 13.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.0:public-beta-7",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.0",
+      "releaseVersionId": "version-ios-13-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-21",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios13",
+          "locator": "The “Tijdlijn iOS 13 beta” row for Public Beta 7 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 13.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios13",
+          "locator": "The rolling-history entry for iOS 13 Public Beta 7. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 13.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios13-pb7",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 13.0 Public Beta 7 appearance.",
+          "supports": "MacRumors evidence for iOS 13.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.0:public-beta-1",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.0",
+      "releaseVersionId": "version-ios-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-09",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios14",
+          "locator": "The “Tijdlijn iOS 14 beta” row for Public Beta 1 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 14.0 Public Beta 1 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios14",
+          "locator": "The rolling-history entry for iOS 14 Public Beta 1. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 14.0 Public Beta 1 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios14-opening",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 14.0 Public Beta 1 appearance.",
+          "supports": "MacRumors evidence for iOS 14.0 Public Beta 1 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.0:public-beta-3",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.0",
+      "releaseVersionId": "version-ios-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-23",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios14",
+          "locator": "The “Tijdlijn iOS 14 beta” row for Public Beta 3 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 14.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios14-pb3",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 14.0 Public Beta 3 appearance.",
+          "supports": "MacRumors evidence for iOS 14.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "forbes-ios14-pb3",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "Forbes evidence for iOS 14.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "redmondpie-ios14-pb3",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "Redmond Pie evidence for iOS 14.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.0:public-beta-4",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.0",
+      "releaseVersionId": "version-ios-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-06",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios14-pb4",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 14.0 Public Beta 4 appearance.",
+          "supports": "MacRumors evidence for iOS 14.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios14",
+          "locator": "The rolling-history entry for iOS 14 Public Beta 4. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 14.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.0:public-beta-5",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.0",
+      "releaseVersionId": "version-ios-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-19",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios14-pb5",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 14.0 Public Beta 5 appearance.",
+          "supports": "MacRumors evidence for iOS 14.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios14",
+          "locator": "The rolling-history entry for iOS 14 Public Beta 5. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 14.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios14",
+          "locator": "The “Tijdlijn iOS 14 beta” row for Public Beta 5 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 14.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.0:public-beta-6",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.0",
+      "releaseVersionId": "version-ios-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-08-25",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios14-pb6",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 14.0 Public Beta 6 appearance.",
+          "supports": "MacRumors evidence for iOS 14.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios14",
+          "locator": "The rolling-history entry for iOS 14 Public Beta 6. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 14.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios14",
+          "locator": "The “Tijdlijn iOS 14 beta” row for Public Beta 6 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 14.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.0:public-beta-7",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.0",
+      "releaseVersionId": "version-ios-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-09-03",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios14-pb7",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 14.0 Public Beta 7 appearance.",
+          "supports": "MacRumors evidence for iOS 14.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios14",
+          "locator": "The rolling-history entry for iOS 14 Public Beta 7. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 14.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios14",
+          "locator": "The “Tijdlijn iOS 14 beta” row for Public Beta 7 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 14.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.0:public-beta-8",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.0",
+      "releaseVersionId": "version-ios-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-09-09",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios14-pb8",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 14.0 Public Beta 8 appearance.",
+          "supports": "MacRumors evidence for iOS 14.0 Public Beta 8 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios14",
+          "locator": "The rolling-history entry for iOS 14 Public Beta 8. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 14.0 Public Beta 8 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios14",
+          "locator": "The “Tijdlijn iOS 14 beta” row for Public Beta 8 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 14.0 Public Beta 8 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.0:public-beta-2",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-16",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios15-pb2",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 15.0 Public Beta 2 appearance.",
+          "supports": "MacRumors evidence for iOS 15.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios15",
+          "locator": "The “Tijdlijn iOS 15 beta” row for Public Beta 2 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 15.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios15",
+          "locator": "The rolling-history entry for iOS 15 Public Beta 2. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 15.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "idb-ios15-pb2",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "iDownloadBlog evidence for iOS 15.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.0:public-beta-4",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-28",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios15-pb4",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 15.0 Public Beta 4 appearance.",
+          "supports": "MacRumors evidence for iOS 15.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios15",
+          "locator": "The “Tijdlijn iOS 15 beta” row for Public Beta 4 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 15.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "osxd-ios15-pb4",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "OS X Daily evidence for iOS 15.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.0:public-beta-5",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-11",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios15-pb5",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 15.0 Public Beta 5 appearance.",
+          "supports": "MacRumors evidence for iOS 15.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios15",
+          "locator": "The “Tijdlijn iOS 15 beta” row for Public Beta 5 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 15.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios15",
+          "locator": "The rolling-history entry for iOS 15 Public Beta 5. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 15.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.0:public-beta-6",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-18",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios15-pb6",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 15.0 Public Beta 6 appearance.",
+          "supports": "MacRumors evidence for iOS 15.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios15",
+          "locator": "The “Tijdlijn iOS 15 beta” row for Public Beta 6 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 15.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios15",
+          "locator": "The rolling-history entry for iOS 15 Public Beta 6. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 15.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "osxd-ios15-pb6",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "OS X Daily evidence for iOS 15.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.0:public-beta-7",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-25",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios15-pb7",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 15.0 Public Beta 7 appearance.",
+          "supports": "MacRumors evidence for iOS 15.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios15",
+          "locator": "The “Tijdlijn iOS 15 beta” row for Public Beta 7 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 15.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios15",
+          "locator": "The rolling-history entry for iOS 15 Public Beta 7. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 15.0 Public Beta 7 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.0:public-beta-8",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-08-31",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios15-pb8",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 15.0 Public Beta 8 appearance.",
+          "supports": "MacRumors evidence for iOS 15.0 Public Beta 8 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios15",
+          "locator": "The “Tijdlijn iOS 15 beta” row for Public Beta 8 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 15.0 Public Beta 8 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios15",
+          "locator": "The rolling-history entry for iOS 15 Public Beta 8. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 15.0 Public Beta 8 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.0:public-beta-2",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "16.0",
+      "releaseVersionId": "version-ios-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-07-28",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios16-pb2",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 16.0 Public Beta 2 appearance.",
+          "supports": "MacRumors evidence for iOS 16.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios16",
+          "locator": "The rolling-history entry for iOS 16 Public Beta 2. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 16.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.0:public-beta-3",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "16.0",
+      "releaseVersionId": "version-ios-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios16-pb3",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 16.0 Public Beta 3 appearance.",
+          "supports": "MacRumors evidence for iOS 16.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios16",
+          "locator": "The “Tijdlijn iOS 16 beta” row for Public Beta 3 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 16.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios16",
+          "locator": "The rolling-history entry for iOS 16 Public Beta 3. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 16.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.0:public-beta-4",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "16.0",
+      "releaseVersionId": "version-ios-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-15",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios16-pb4",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 16.0 Public Beta 4 appearance.",
+          "supports": "MacRumors evidence for iOS 16.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios16",
+          "locator": "The “Tijdlijn iOS 16 beta” row for Public Beta 4 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 16.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios16",
+          "locator": "The rolling-history entry for iOS 16 Public Beta 4. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 16.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.0:public-beta-5",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "16.0",
+      "releaseVersionId": "version-ios-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-24",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios16-pb5",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 16.0 Public Beta 5 appearance.",
+          "supports": "MacRumors evidence for iOS 16.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios16",
+          "locator": "The “Tijdlijn iOS 16 beta” row for Public Beta 5 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 16.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios16",
+          "locator": "The rolling-history entry for iOS 16 Public Beta 5. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 16.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:16.0:public-beta-6",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "16.0",
+      "releaseVersionId": "version-ios-16-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-08-29",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios16-pb6",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 16.0 Public Beta 6 appearance.",
+          "supports": "MacRumors evidence for iOS 16.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios16",
+          "locator": "The “Tijdlijn iOS 16 beta” row for Public Beta 6 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 16.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios16",
+          "locator": "The rolling-history entry for iOS 16 Public Beta 6. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "iMore evidence for iOS 16.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.0:public-beta-2",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "17.0",
+      "releaseVersionId": "version-ios-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-07-31",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios17-pb2",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 17.0 Public Beta 2 appearance.",
+          "supports": "MacRumors evidence for iOS 17.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios17",
+          "locator": "The “Tijdlijn iOS 17 beta” row for Public Beta 2 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 17.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.0:public-beta-3",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "17.0",
+      "releaseVersionId": "version-ios-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios17-pb3",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 17.0 Public Beta 3 appearance.",
+          "supports": "MacRumors evidence for iOS 17.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios17",
+          "locator": "The “Tijdlijn iOS 17 beta” row for Public Beta 3 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 17.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.0:public-beta-4",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "17.0",
+      "releaseVersionId": "version-ios-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-16",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios17-pb4",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 17.0 Public Beta 4 appearance.",
+          "supports": "MacRumors evidence for iOS 17.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios17",
+          "locator": "The “Tijdlijn iOS 17 beta” row for Public Beta 4 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 17.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "osxd-ios17-pb4",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "OS X Daily evidence for iOS 17.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.0:public-beta-5",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "17.0",
+      "releaseVersionId": "version-ios-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-22",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios17-pb5",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 17.0 Public Beta 5 appearance.",
+          "supports": "MacRumors evidence for iOS 17.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios17",
+          "locator": "The “Tijdlijn iOS 17 beta” row for Public Beta 5 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 17.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "appleinsider-ios17-pb5",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "AppleInsider evidence for iOS 17.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:17.0:public-beta-6",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "17.0",
+      "releaseVersionId": "version-ios-17-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-08-29",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios17-pb6",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 17.0 Public Beta 6 appearance.",
+          "supports": "MacRumors evidence for iOS 17.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios17",
+          "locator": "The “Tijdlijn iOS 17 beta” row for Public Beta 6 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 17.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:18.0:public-beta-1",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "18.0",
+      "releaseVersionId": "version-ios-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-07-15",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios18-pb1",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 18.0 Public Beta 1 appearance.",
+          "supports": "MacRumors evidence for iOS 18.0 Public Beta 1 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios18",
+          "locator": "The “Tijdlijn iOS 18 beta” row for Public Beta 1 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 18.0 Public Beta 1 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:18.0:public-beta-2",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "18.0",
+      "releaseVersionId": "version-ios-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-07-29",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios18-pb2",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 18.0 Public Beta 2 appearance.",
+          "supports": "MacRumors evidence for iOS 18.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios18",
+          "locator": "The “Tijdlijn iOS 18 beta” row for Public Beta 2 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 18.0 Public Beta 2 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:18.0:public-beta-3",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "18.0",
+      "releaseVersionId": "version-ios-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-06",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios18-pb3",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 18.0 Public Beta 3 appearance.",
+          "supports": "MacRumors evidence for iOS 18.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios18",
+          "locator": "The “Tijdlijn iOS 18 beta” row for Public Beta 3 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 18.0 Public Beta 3 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:18.0:public-beta-4",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "18.0",
+      "releaseVersionId": "version-ios-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-12",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios18-pb4",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 18.0 Public Beta 4 appearance.",
+          "supports": "MacRumors evidence for iOS 18.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios18",
+          "locator": "The “Tijdlijn iOS 18 beta” row for Public Beta 4 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 18.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "9to5mac-ios18-pb4",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "9to5Mac evidence for iOS 18.0 Public Beta 4 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:18.0:public-beta-5",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "18.0",
+      "releaseVersionId": "version-ios-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-20",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios18-pb5",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 18.0 Public Beta 5 appearance.",
+          "supports": "MacRumors evidence for iOS 18.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios18",
+          "locator": "The “Tijdlijn iOS 18 beta” row for Public Beta 5 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 18.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "osxd-ios18-pb5",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "OS X Daily evidence for iOS 18.0 Public Beta 5 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:18.0:public-beta-6",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "18.0",
+      "releaseVersionId": "version-ios-18-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-08-28",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:55:40.278Z",
+        "matchBasis": "Fresh published production query found no exact match on releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate; the parent releaseVersion exists exactly once.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios18-pb6",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 18.0 Public Beta 6 appearance.",
+          "supports": "MacRumors evidence for iOS 18.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios18",
+          "locator": "The “Tijdlijn iOS 18 beta” row for Public Beta 6 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "iCulture evidence for iOS 18.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "9to5mac-ios18-pb6",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "9to5Mac evidence for iOS 18.0 Public Beta 6 public availability, ordinal, or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is still required."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Researcher self-check only. A different reviewer must verify the public ordinal, date, publisher independence, skips, and conflict handling before any separately authorized implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "notProposed": [
+    {
+      "recordId": "not-proposed:apple:ios:14.0:public-beta-2",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-14-0",
+      "apparentIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-22",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "One rolling iMore history lists Public Beta 2 on the July 22 developer-release date, but contemporary iOS-specific evidence records Public Beta 1 on July 9 and the next actual public appearance as Apple-labeled Public Beta 3 on July 23. No distinct July 22 public distribution is corroborated.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "imore-ios14",
+          "locator": "The rolling-history entry for iOS 14 Public Beta 2. Apply only the date/numbering qualifications in conflicts.json.",
+          "supports": "Preserves the conflicting July 22 Public Beta 2 claim for adjudication, not as candidate support."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios14",
+          "locator": "The “Tijdlijn iOS 14 beta” row for Public Beta 3 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "Records Public Beta 3 on July 23 and explicitly says Apple aligned public numbering with developer numbering."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "mr-ios14-pb3",
+          "locator": "Headline, publication timestamp, lead, and any same-page public-beta update identifying the iOS 14.0 Public Beta 3 appearance.",
+          "supports": "Establishes the next public appearance on July 23 rather than July 22."
+        }
+      ],
+      "reversalEvidence": "A captured Apple tester screen, software-update catalog, or independent same-day report proving a distinct July 22 iOS 14 Public Beta 2 distribution would reopen this finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Do not infer PB2 from developer Beta 3's July 22 date."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:15.0:public-beta-3",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-15-0",
+      "apparentIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-16",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "Build-aligned publishers called the July 16 payload Public Beta 3, while iOS public-program chronologies called it the second public beta. On July 28 Apple explicitly numbered the third public appearance Public Beta 4. The packet therefore preserves PB1, PB2, and PB4, with no distinct PB3 appearance.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "forbes-ios15-second-as-pb3",
+          "locator": "Alternate build-aligned ordinal wording retained as conflict evidence only.",
+          "supports": "Preserves the conflicting build-aligned Public Beta 3 label for July 16."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios15",
+          "locator": "The “Tijdlijn iOS 15 beta” row for Public Beta 2 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "Records July 16 as Public Beta 2 and the July 28 third public appearance as Apple-numbered Public Beta 4."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "idb-ios15-pb2",
+          "locator": "Contemporary iOS public-availability, ordinal, and appearance-date evidence.",
+          "supports": "Independent contemporary report calls July 16 the second iOS 15 public beta."
+        }
+      ],
+      "reversalEvidence": "A captured Apple record establishing a separately distributed iOS 15 Public Beta 3, rather than an alternate name for the July 16 or July 28 payload, would reopen this finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Keep public appearance numbering separate from the paired developer build until Apple's explicit PB4 transition."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:12.0:public-beta-11",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-12-0",
+      "apparentIdentity": {
+        "label": "Public Beta 11",
+        "routeAlias": "public-beta-11",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-09-12",
+        "sequence": 11,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 11 appearance is established. The cycle proceeds from its last public beta to GM on 2018-09-12; that event remains goldenMaster, even when public testers receive it.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios12",
+          "locator": "The “Tijdlijn iOS 12 beta” row for Public Beta 11 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "Establishes the GM boundary and absence of a later numbered public-beta appearance in the cycle chronology."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/production-snapshot.json",
+          "locator": "events and scopedCycles for version-ios-12-0",
+          "supports": "Production classifies the 2018-09-12 terminal event as goldenMaster, not publicBeta."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary Apple or publisher record explicitly establishing iOS 12.0 Public Beta 11 before the GM boundary would reopen this finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Negative-sequence researcher self-check only; independent review remains required."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:13.0:public-beta-8",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-13-0",
+      "apparentIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-09-10",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 8 appearance is established. The cycle proceeds from its last public beta to GM on 2019-09-10; that event remains goldenMaster, even when public testers receive it.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios13",
+          "locator": "The “Tijdlijn iOS 13 beta” row for Public Beta 8 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "Establishes the GM boundary and absence of a later numbered public-beta appearance in the cycle chronology."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/production-snapshot.json",
+          "locator": "events and scopedCycles for version-ios-13-0",
+          "supports": "Production classifies the 2019-09-10 terminal event as goldenMaster, not publicBeta."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary Apple or publisher record explicitly establishing iOS 13.0 Public Beta 8 before the GM boundary would reopen this finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Negative-sequence researcher self-check only; independent review remains required."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:14.0:public-beta-9",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-14-0",
+      "apparentIdentity": {
+        "label": "Public Beta 9",
+        "routeAlias": "public-beta-9",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-09-15",
+        "sequence": 9,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 9 appearance is established. The cycle proceeds from its last public beta to GM on 2020-09-15; that event remains goldenMaster, even when public testers receive it.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios14",
+          "locator": "The “Tijdlijn iOS 14 beta” row for Public Beta 9 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "Establishes the GM boundary and absence of a later numbered public-beta appearance in the cycle chronology."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/production-snapshot.json",
+          "locator": "events and scopedCycles for version-ios-14-0",
+          "supports": "Production classifies the 2020-09-15 terminal event as goldenMaster, not publicBeta."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary Apple or publisher record explicitly establishing iOS 14.0 Public Beta 9 before the GM boundary would reopen this finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Negative-sequence researcher self-check only; independent review remains required."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:15.0:public-beta-9",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-15-0",
+      "apparentIdentity": {
+        "label": "Public Beta 9",
+        "routeAlias": "public-beta-9",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-09-14",
+        "sequence": 9,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 9 appearance is established. The cycle proceeds from its last public beta to RC on 2021-09-14; that event remains releaseCandidate, even when public testers receive it.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios15",
+          "locator": "The “Tijdlijn iOS 15 beta” row for Public Beta 9 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "Establishes the RC boundary and absence of a later numbered public-beta appearance in the cycle chronology."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/production-snapshot.json",
+          "locator": "events and scopedCycles for version-ios-15-0",
+          "supports": "Production classifies the 2021-09-14 terminal event as releaseCandidate, not publicBeta."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary Apple or publisher record explicitly establishing iOS 15.0 Public Beta 9 before the RC boundary would reopen this finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Negative-sequence researcher self-check only; independent review remains required."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:16.0:public-beta-7",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-16-0",
+      "apparentIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2022-09-07",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 7 appearance is established. The cycle proceeds from its last public beta to RC on 2022-09-07; that event remains releaseCandidate, even when public testers receive it.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios16",
+          "locator": "The “Tijdlijn iOS 16 beta” row for Public Beta 7 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "Establishes the RC boundary and absence of a later numbered public-beta appearance in the cycle chronology."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/production-snapshot.json",
+          "locator": "events and scopedCycles for version-ios-16-0",
+          "supports": "Production classifies the 2022-09-07 terminal event as releaseCandidate, not publicBeta."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary Apple or publisher record explicitly establishing iOS 16.0 Public Beta 7 before the RC boundary would reopen this finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Negative-sequence researcher self-check only; independent review remains required."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:17.0:public-beta-7",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-17-0",
+      "apparentIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2023-09-12",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 7 appearance is established. The cycle proceeds from its last public beta to RC on 2023-09-12; that event remains releaseCandidate, even when public testers receive it.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios17",
+          "locator": "The “Tijdlijn iOS 17 beta” row for Public Beta 7 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "Establishes the RC boundary and absence of a later numbered public-beta appearance in the cycle chronology."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/production-snapshot.json",
+          "locator": "events and scopedCycles for version-ios-17-0",
+          "supports": "Production classifies the 2023-09-12 terminal event as releaseCandidate, not publicBeta."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary Apple or publisher record explicitly establishing iOS 17.0 Public Beta 7 before the RC boundary would reopen this finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Negative-sequence researcher self-check only; independent review remains required."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:ios:18.0:public-beta-7",
+      "originCohortId": "ios-major-12-18-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "releaseVersionId": "version-ios-18-0",
+      "apparentIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-09-09",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "No Public Beta 7 appearance is established. The cycle proceeds from its last public beta to RC on 2024-09-09; that event remains releaseCandidate, even when public testers receive it.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/sources.json",
+          "sourceId": "iculture-ios18",
+          "locator": "The “Tijdlijn iOS 18 beta” row for Public Beta 7 and the cycle terminal row. Apply only the source-specific qualifications in conflicts.json.",
+          "supports": "Establishes the RC boundary and absence of a later numbered public-beta appearance in the cycle chronology."
+        },
+        {
+          "kind": "localEvidence",
+          "localPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/production-snapshot.json",
+          "locator": "events and scopedCycles for version-ios-18-0",
+          "supports": "Production classifies the 2024-09-09 terminal event as releaseCandidate, not publicBeta."
+        }
+      ],
+      "reversalEvidence": "A captured contemporary Apple or publisher record explicitly establishing iOS 18.0 Public Beta 7 before the RC boundary would reopen this finding.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Negative-sequence researcher self-check only; independent review remains required."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "nextEvidenceWaves": [
+    {
+      "waveId": "ios-major-12-18-independent-chronology-review",
+      "scope": "Independently verify all 49 appearances, 46 missing candidates, three exact existing matches, nine negative records, and fourteen conflicts/guardrails.",
+      "artifactPaths": [
+        "research-handoffs/beta-chronology-gap/ios-major-12-18/self-review.json",
+        "research-handoffs/beta-chronology-gap/ios-major-12-18/report.md",
+        "research-handoffs/beta-chronology-gap/ios-major-12-18/validation.json"
+      ],
+      "estimatedCandidateCount": 46,
+      "countStatus": "confirmed",
+      "requiredNextStep": "Assign a reviewer who did not perform this research. Any implementation requires a later, separately authorized write plan."
+    }
+  ],
+  "validationStatus": {
+    "status": "passed",
+    "validatedAt": "2026-07-31T05:07:02.405Z",
+    "validator": "research-handoffs/beta-chronology-gap/ios-major-12-18/validate-packet.mjs",
+    "summaryPath": "research-handoffs/beta-chronology-gap/ios-major-12-18/validation.json"
+  }
+}

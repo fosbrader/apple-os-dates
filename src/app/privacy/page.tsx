@@ -10,14 +10,14 @@ import { publicContactEmail, publicOperatorName } from "@/lib/contact";
 import { absoluteUrl, createPageMetadata } from "@/lib/site";
 
 const pageDescription =
-  "Learn how Beta Cadence uses cookieless Vercel Web Analytics, operational hosting data, dormant consent-based GA4, and future advertising services.";
-const lastUpdated = "July 28, 2026";
+  "Learn how Version Record handles cookieless analytics, operational hosting data, private submissions, and optional future services.";
+const lastUpdated = "July 29, 2026";
 
 const linkClass =
   "text-[var(--accent)] hover:text-[var(--accent-hover)] underline underline-offset-4";
 
 export const metadata = createPageMetadata({
-  title: "Privacy",
+  title: "Privacy Policy",
   description: pageDescription,
   path: "/privacy/",
 });
@@ -55,14 +55,14 @@ export default function PrivacyPage() {
 
         <ContentSection title="Scope">
           <p>
-            This notice covers the public Beta Cadence website and its embedded
+            This notice covers the public Version Record website and its embedded
             editor area. Public visitors do not need an account. Site editors
             authenticate with the separate Sanity and GitHub services, which
             process editor account information under their own terms and privacy
             notices.
           </p>
           <p>
-            Beta Cadence is an independently operated website based in the
+            Version Record is an independently operated website based in the
             United States.{" "}
             {publicOperatorName ? (
               <>
@@ -110,7 +110,7 @@ export default function PrivacyPage() {
             records a page-view timestamp, the cleaned page URL or dynamic path,
             the referring page, coarse geographic information, operating system,
             browser, device type, and the version of Vercel’s analytics script.
-            Beta Cadence removes query strings and fragments from the visited
+            Version Record removes query strings and fragments from the visited
             URL before the page-view event is sent.
           </p>
           <p>
@@ -241,7 +241,7 @@ export default function PrivacyPage() {
             another privacy request, use the private role address shown below
             when configured. A request may require enough information to
             identify the relevant record and verify that the requester is
-            entitled to it. Beta Cadence cannot directly fulfill requests for
+            entitled to it. Version Record cannot directly fulfill requests for
             information controlled independently by Google, GitHub, Vercel,
             Cloudflare, Sanity, or another provider.
           </p>
@@ -249,13 +249,15 @@ export default function PrivacyPage() {
 
         <ContentSection title="Contact and correction submissions">
           <p>
-            General feedback and data corrections can be submitted through the{" "}
-            <Link href="/contact/" className={linkClass}>
-              contact page
+            Sourced release additions and corrections can be submitted through
+            the{" "}
+            <Link href="/submit/" className={linkClass}>
+              private editorial form
             </Link>
-            . Reports opened in the project’s GitHub repository are public, so
-            do not include private information, credentials, or anything you do
-            not want published.
+            . The report, evidence links, optional email, and optional public
+            credit are stored in a dedicated private Sanity dataset that is
+            separate from public site content and research exports. Nothing is
+            published automatically. Reports opened in GitHub remain public.
           </p>
           {publicContactEmail ? (
             <p>
@@ -375,12 +377,14 @@ export default function PrivacyPage() {
             secure, and troubleshoot the service.
           </p>
           <p>
-            Public GitHub submissions and their revision history can remain
-            visible after an issue is closed. Editorial source records are
-            retained while useful to document and correct the public dataset.
-            Legal, fraud-prevention, or security needs may require a longer
-            period. Provider-controlled records remain subject to the relevant
-            provider’s settings and policies.
+            Raw private submissions and contact details are scheduled for
+            deletion or anonymization within 180 days, normally sooner after
+            resolution. Approved public credit may remain on a release record
+            with the submitter’s consent. Public GitHub submissions and their
+            revision history can remain visible after an issue is closed.
+            Editorial source records are retained while useful to document and
+            correct the public dataset. Legal, fraud-prevention, or security
+            needs may require a longer period.
           </p>
         </ContentSection>
 

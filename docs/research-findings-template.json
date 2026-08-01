@@ -1,0 +1,282 @@
+{
+  "formatVersion": 1,
+  "batch": {
+    "batchId": "apple-platform-version-scope",
+    "vendor": {
+      "name": "Apple",
+      "slug": "apple"
+    },
+    "scope": "Exact description of the assigned platform, versions, and appearances.",
+    "assignmentPath": "research-handoffs/apple-platform-version-scope/assignment.json",
+    "assignmentSha256": "REPLACE-WITH-64-CHARACTER-SHA256",
+    "researcher": "research-agent-name",
+    "evidenceReviewer": null,
+    "startedAt": "YYYY-MM-DDTHH:mm:ssZ",
+    "completedAt": null,
+    "status": "inProgress",
+    "methodVersion": 1
+  },
+  "assignment": {
+    "targetIds": ["version-ios-00-0/example-alias"],
+    "targetCount": 1
+  },
+  "sources": [
+    {
+      "sourceId": "source-001",
+      "canonicalUrl": "https://example.com/canonical-source",
+      "title": "Exact displayed source title",
+      "publisher": "Exact publisher or archive host",
+      "author": null,
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": null,
+      "publishedDateObserved": "YYYY-MM-DD",
+      "publicationDatePrecision": "date",
+      "accessedAt": "YYYY-MM-DD",
+      "archiveUrl": null,
+      "status": "active",
+      "reuseBasis": "linkedFactsOnly",
+      "topics": ["platform", "version", "release notes"],
+      "roles": ["releaseIdentity", "releaseNotes"],
+      "evidence": {
+        "rawPath": "tmp/research-evidence/apple-platform-version-scope/source-001.html",
+        "rawBytes": 0,
+        "rawSha256": "REPLACE-WITH-64-CHARACTER-SHA256",
+        "selectedTextPath": "tmp/research-evidence/apple-platform-version-scope/source-001.selected.txt",
+        "selectedTextBytes": 0,
+        "selectedTextSha256": "REPLACE-WITH-64-CHARACTER-SHA256",
+        "captureMethod": "browser-save-or-http-download",
+        "httpStatus": 200,
+        "capturedAt": "YYYY-MM-DDTHH:mm:ssZ"
+      },
+      "lineage": {
+        "originSourceId": null,
+        "independentForCorroboration": true,
+        "notes": "Explain syndication, mirrors, or archive provenance."
+      },
+      "rights": {
+        "publicUse": "factsAndShortLocatorsOnly",
+        "notes": "No raw text or image is cleared for publication."
+      },
+      "editorialNotes": "Anything the page builder or reviewer must know."
+    }
+  ],
+  "concepts": [
+    {
+      "conceptId": "concept-example",
+      "title": "Concise canonical title",
+      "canonicalSummary": "Original, version-neutral description of the reusable feature, behavior, issue, fix, or removal.",
+      "category": "feature",
+      "aliases": [],
+      "topics": [],
+      "deduplicationHints": {
+        "possibleExistingKeys": [],
+        "sameAsConceptIds": [],
+        "notSameAs": []
+      },
+      "citations": [
+        {
+          "sourceId": "source-001",
+          "locator": "Exact section, page, paragraph, row, or timestamp",
+          "supports": "What this citation establishes for the canonical concept.",
+          "shortQuote": null
+        }
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "targetId": "version-ios-00-0/example-alias",
+      "identity": {
+        "platformId": "platform-ios",
+        "platform": "iOS",
+        "platformSlug": "ios",
+        "releaseVersionId": "version-ios-00-0",
+        "version": "00.0",
+        "stableEventId": "COPY-EXACT-STABLE-EVENT-ID",
+        "label": "Beta 1",
+        "routeAlias": "beta-1",
+        "channel": "developerBeta",
+        "appearanceDate": "YYYY-MM-DD",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "identityStatus": "confirmed",
+      "identityCitations": [
+        {
+          "sourceId": "source-001",
+          "locator": "Release identity locator",
+          "supports": "The exact appearance identity and date.",
+          "shortQuote": null
+        }
+      ],
+      "identityConflicts": [],
+      "researchOutcome": "complete",
+      "coverageRecommendation": "fullArticle",
+      "scopeBoundary": "State exactly what evidence survives and what this target does not claim.",
+      "buildFindings": [
+        {
+          "buildNumber": "00A000",
+          "verificationState": "confirmed",
+          "applicability": {
+            "deviceFamilies": [],
+            "models": [],
+            "regions": [],
+            "languages": [],
+            "audiences": ["developers"],
+            "notes": null
+          },
+          "citations": [
+            {
+              "sourceId": "source-001",
+              "locator": "Exact build locator",
+              "supports": "The build number and any stated scope.",
+              "shortQuote": null
+            }
+          ],
+          "notes": "Omit this object entirely when the build is not directly supported."
+        }
+      ],
+      "claims": [
+        {
+          "claimId": "claim-example-identity-boundary",
+          "claimType": "context",
+          "text": "Original atomic factual synthesis for use when composing the article.",
+          "confidence": "high",
+          "citations": [
+            {
+              "sourceId": "source-001",
+              "locator": "Exact supporting locator",
+              "supports": "The specific fact supported by this source.",
+              "shortQuote": null
+            }
+          ],
+          "qualifications": [],
+          "disagreementIds": []
+        }
+      ],
+      "occurrences": [
+        {
+          "occurrenceId": "example-occurrence-concept-example",
+          "conceptId": "concept-example",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Original release-specific explanation of what happened in this exact appearance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Explain how the evidence and locator were independently checked.",
+          "applicability": {
+            "deviceFamilies": [],
+            "models": [],
+            "regions": [],
+            "languages": [],
+            "audiences": ["developers"],
+            "notes": null
+          },
+          "citations": [
+            {
+              "sourceId": "source-001",
+              "locator": "Exact section, page, paragraph, row, or timestamp",
+              "supports": "The action, scope, and release-specific state.",
+              "shortQuote": null
+            }
+          ],
+          "confidence": "high",
+          "disagreementIds": []
+        }
+      ],
+      "articleOutline": {
+        "suggestedSummaryFacts": [
+          "claim-example-identity-boundary",
+          "example-occurrence-concept-example"
+        ],
+        "sections": [
+          {
+            "heading": "Release identity and evidence boundary",
+            "claimIds": ["claim-example-identity-boundary"],
+            "occurrenceIds": [],
+            "notes": "Composition guidance only; do not add uncited facts."
+          },
+          {
+            "heading": "Selected release-note state",
+            "claimIds": [],
+            "occurrenceIds": ["example-occurrence-concept-example"],
+            "notes": "Group related occurrences without copying source prose."
+          }
+        ]
+      },
+      "negativeFindings": [
+        {
+          "question": "Precisely scoped question that was investigated.",
+          "sourcesChecked": ["source-001"],
+          "result": "What the reviewed evidence did or did not contain.",
+          "interpretationBoundary": "The narrow conclusion permitted; do not generalize to the binary."
+        }
+      ],
+      "gaps": [
+        {
+          "gapId": "gap-example",
+          "severity": "nonMaterial",
+          "description": "Specific evidence that remains unavailable.",
+          "impactOnBuild": "What the page builder must omit or qualify.",
+          "nextResearchStep": "A concrete future source or archive to check."
+        }
+      ]
+    }
+  ],
+  "excludedSources": [
+    {
+      "url": "https://example.com/excluded",
+      "reason": "Search snippet, duplicate lineage, inaccessible challenge, modern recap, speculation, or another specific reason.",
+      "evidencePath": null,
+      "sha256": null
+    }
+  ],
+  "disagreements": [
+    {
+      "disagreementId": "disagreement-example",
+      "topic": "Exact disputed date, build, scope, action, or attribution.",
+      "positions": [
+        {
+          "position": "First source's claim.",
+          "sourceIds": ["source-001"]
+        }
+      ],
+      "recommendedBoundary": "Narrow recommendation that does not overstate the evidence.",
+      "requiresChronologyReview": false
+    }
+  ],
+  "batchGaps": [],
+  "coverageSummary": {
+    "assignedTargets": 1,
+    "complete": 1,
+    "partial": 0,
+    "noSubstantiveNotesFound": 0,
+    "blocked": 0,
+    "recommendedFullArticle": 1,
+    "recommendedSourceLinked": 0,
+    "recommendedTimelineOnly": 0
+  },
+  "qualityChecks": {
+    "exactTargetClosure": false,
+    "allLocalIdsUnique": false,
+    "allCitationsResolveToDeclaredSources": false,
+    "allDeclaredSourcesUsedOrExplained": false,
+    "allLocatorsResolvedAgainstEvidence": false,
+    "sourceMetadataAndTimestampsChecked": false,
+    "rawHashesReproduced": false,
+    "selectedTextHashesReproduced": false,
+    "recurrenceAndInheritanceReviewed": false,
+    "undocumentedClaimsMeetHigherEvidenceBar": false,
+    "buildScopeQualificationsPreserved": false,
+    "copyrightSimilarityPassed": false,
+    "maximumUnquotedSourceOverlapWords": null,
+    "jsonParsed": false,
+    "controlledValuesValidated": false,
+    "containsNoSecretsOrPrivateData": false,
+    "containsNoCommittedRawCopyrightedEvidence": false,
+    "noSanityWritesOrDeployment": true,
+    "reviewNotes": "Leave packet status below readyForEditorialReview until every applicable gate is true."
+  }
+}

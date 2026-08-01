@@ -1,0 +1,277 @@
+{
+  "formatVersion": 1,
+  "batchId": "ios-patch-applicability-2026-07-31",
+  "frozenAt": "2026-07-31T08:11:29.209Z",
+  "materialFileCount": 63,
+  "packetFileCount": 19,
+  "evidenceFileCount": 44,
+  "locks": {
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/assignment.json": {
+      "bytes": 3091,
+      "sha256": "cf20af1cf947693f2eedc9dd990597263e4ba60d5026747f3821d1bc2062a749"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/scoped-coverage-snapshot.json": {
+      "bytes": 12772,
+      "sha256": "0d7cc03431dc55ee185346eb42e66c2ba62ca5ba86642b440f570cc32c72f667"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/source-query-log.json": {
+      "bytes": 28557,
+      "sha256": "7dcd9bb87d9b641ae604ead52b5e518fb349f8cc34c365e65ed9f374cb0d0248"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json": {
+      "bytes": 36216,
+      "sha256": "e174ac7e1ad572dcac627b9e9fefbed6635be6e1ec65c71424b2de7003deecdb"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/raw-evidence-locks.json": {
+      "bytes": 11727,
+      "sha256": "cba42cf0d01fa210dff6780716beb02457e927f3fef26c15d460913e7637abd4"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/production-snapshot.json": {
+      "bytes": 27975,
+      "sha256": "171c324dbdac004d827c58e1de8997e50488428e95f495ba4f4480f6b0876232"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/applicability-audit.json": {
+      "bytes": 53284,
+      "sha256": "ef50d0e04387d782a55946e96b569c89aa6e3dfbf40bd62ff07d0182fbbafa57"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/conflicts.json": {
+      "bytes": 1641,
+      "sha256": "e5eb307ee001af116da317b0370fe9339a85d9481e3d63a037869302697c7133"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/candidates.json": {
+      "bytes": 10239,
+      "sha256": "3062419ce68e3c89d16ce153657ce14c223504dca74e4ec084c38e4d0de44b41"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/self-review.json": {
+      "bytes": 821,
+      "sha256": "c43c3ddc01427e6449bc4abf71fd9f4b5dbae9c982ed55b6463b7daeaffbfd79"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/report.md": {
+      "bytes": 2919,
+      "sha256": "85d8103c400101e4b1fac3d17cd7d4d1be0b4884af8a19c96ff0367fb2ba5022"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/validation.json": {
+      "bytes": 1948,
+      "sha256": "2b1d7c95f4e5e884fa96e242dfe5415cb4fa89c011ba3d5430a58f53b394ca9b"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/research-data.mjs": {
+      "bytes": 2336,
+      "sha256": "f95a42efcefe50884cb204e4a5d4531eedde9cc52d9096035535b265771da9ad"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/source-specs.mjs": {
+      "bytes": 7704,
+      "sha256": "d4e7bb7ef539538dee34a32442be287d1757868b02b79990b7e471a23a1a4b1a"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/fetch-sources.mjs": {
+      "bytes": 6373,
+      "sha256": "f0285b84105bb7205fa6ee41e03e0cd355ab51e640767a40b5797bc719a0e09b"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/query-production.ts": {
+      "bytes": 5218,
+      "sha256": "4350bd4bdfa2249e556f36637fb3ed3ef17b2b54525560bc1fc63b07c4705364"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/build-packet.mjs": {
+      "bytes": 27682,
+      "sha256": "24447393dcbc4c27294cb4f634ef6016876d3c4970e578621da801da7bd4cfac"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/validate-packet.mjs": {
+      "bytes": 16620,
+      "sha256": "cbdfedf074d2c547341becb0f252ea1db473565439c7ffa20cc8fea340c805a8"
+    },
+    "research-handoffs/beta-chronology-gap/ios-patch-applicability/freeze-packet.mjs": {
+      "bytes": 4985,
+      "sha256": "0b2cc0c85a457c008b6489870394be7e41f4ac37ca8aa0ba845a407c7293ccfe"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/fetch-log.json": {
+      "bytes": 13475,
+      "sha256": "63a5f57931481c56d76e7b06cce8007e6d4f70c94b7a710ef84070f6111ec976"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/production-snapshot.json": {
+      "bytes": 27975,
+      "sha256": "171c324dbdac004d827c58e1de8997e50488428e95f495ba4f4480f6b0876232"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-8-release-history.html": {
+      "bytes": 1190068,
+      "sha256": "4bd59cbba50295946b1a7d033e36b36c71225970da7396ee175120dddde78597"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-8-release-history.json": {
+      "bytes": 1128,
+      "sha256": "2d116fb5b5d92ffbdfc65ca6ed8502db6105cb53a2393beef4702606f114dac8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-9-release-history.html": {
+      "bytes": 1207306,
+      "sha256": "985b244e9a2372f5d39e2882b8d56da647cc2e5876953a661c1e8f05954e7d34"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-9-release-history.json": {
+      "bytes": 2341,
+      "sha256": "17737d3dee0753e987dd2ec5300e69d7156aef969d556fb12cb29f750f8b43e0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-10-release-history.html": {
+      "bytes": 1193520,
+      "sha256": "256f54623fd737d18078627cb0a8e410eb771ab8dab39293999f37da6e40c97a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-10-release-history.json": {
+      "bytes": 1133,
+      "sha256": "f93b244b2a7844e853e6ca267f11cb0757b152fbf60b52764d903425efbb0b9f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-11-release-history.html": {
+      "bytes": 1210969,
+      "sha256": "3462e49c5439693a77354800366dc6ff3c7f81a85d33ccb105cd47d423c4613a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-11-release-history.json": {
+      "bytes": 3160,
+      "sha256": "d3ed1bd6b167de6bc36008eac389376849293de07d665dfc8bf3c4e980f8a269"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-12-release-history.html": {
+      "bytes": 1223921,
+      "sha256": "9f14a3f1eaa04bd493084e925d698985118d72f19b1720549afe8733202eb2f0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-12-release-history.json": {
+      "bytes": 1945,
+      "sha256": "09536e1c45d52602ccd1024a18580d8416c4281c825c7bd44f69876cc5356f90"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-13-release-history.html": {
+      "bytes": 1239508,
+      "sha256": "c1af7f03d092a035b4e8d2efa3f8942ab341f40f01bc592107ca5b455b783ad4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-13-release-history.json": {
+      "bytes": 3158,
+      "sha256": "ce91b859f82da6f4f0b48b6b3705b0c0956a044f23fc992c9126709df09f60b8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-14-release-history.html": {
+      "bytes": 1237439,
+      "sha256": "7fbd037a8cab3d9e6faf2aaacae51d9272d016877fe07250cda4677d73de8372"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-14-release-history.json": {
+      "bytes": 2347,
+      "sha256": "49e6ab7952cfc828eadc1a13dfb2514b4ac6c3796a19a0a2282872876a9c62dc"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/apple-ios-26-release-history.html": {
+      "bytes": 1192801,
+      "sha256": "5cec17877f23a96f6a9f4e9937e8c84e2d94a122d3a9e1edffc6bdbf557cd114"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/apple-ios-26-release-history.json": {
+      "bytes": 1540,
+      "sha256": "255987225f7eb905b13b3fffb4eca20133b7ae6d14c1fd9a00c26f29f5373326"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/bgr-ios-13-3-1-pb1.html": {
+      "bytes": 48190,
+      "sha256": "f954f2f56778a2dd230ff5b651041ebac125fbf93f7635cd3ffde78edb6673b1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/bgr-ios-13-3-1-pb1.json": {
+      "bytes": 1657,
+      "sha256": "25c4524f3d469a43b61d0b12f91f999de7f3a2f82c5cb6b08f3d03d215ec93f0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/cultofmac-ios-13-3-1-pb1.html": {
+      "bytes": 287189,
+      "sha256": "9ee364d50cabd3dfe9ec2fc112ece3a698283ea75032d7aaa6460ba7fe23a957"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/cultofmac-ios-13-3-1-pb1.json": {
+      "bytes": 1723,
+      "sha256": "6a3d56a951dceac26f1801ff96e32a4962d3abed034e704a6c605fc633db5310"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/9to5mac-ios-13-3-1-pb2.html": {
+      "bytes": 147284,
+      "sha256": "57da5e47c795cdaab3937cea93be1c22e0aea51d495a4f4e625ece29557d789a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/9to5mac-ios-13-3-1-pb2.json": {
+      "bytes": 2179,
+      "sha256": "95c1ecc82c029f2b6540c51cf93ed6858de143943deb846ee77f7fbcd36c2b70"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/forbes-ios-13-3-1-pb2.html": {
+      "bytes": 1294665,
+      "sha256": "ce463576323d5dc6bf6b836c778b00e91a0a6691b9b9f34c4fb894fe88367022"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/forbes-ios-13-3-1-pb2.json": {
+      "bytes": 1752,
+      "sha256": "79d1b16af05e021abf2a5459ddc7fc7183e726ba3b4fa74ebc3a69e4b4e211c4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/9to5mac-ios-13-3-1-pb3.html": {
+      "bytes": 146780,
+      "sha256": "e5ee057f543cc56c35a678d89f1db81e044ff7dde26bbd8ec880e15e9929c847"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/9to5mac-ios-13-3-1-pb3.json": {
+      "bytes": 2154,
+      "sha256": "e57ea2223af07ca88455892aea753e29410d8fd49d25cc52efeeaf9125617503"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/kobonemi-ios-13-3-1-pb3.html": {
+      "bytes": 123406,
+      "sha256": "7c2aedbc7cdf9c87fac9d70d1aa046f11aa123c5bb5764e907eaad9826cf68fe"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/kobonemi-ios-13-3-1-pb3.json": {
+      "bytes": 2971,
+      "sha256": "3fceb0d838d0556553b4584a93e9adb51787f7533076f647840772523f8b27dd"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/macrumors-ios-8-4-1-developer-only.html": {
+      "bytes": 127861,
+      "sha256": "1c9c7fb44370ddb0c707911f02bdbc14523d249c81594da58d186b4cf6469303"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/macrumors-ios-8-4-1-developer-only.json": {
+      "bytes": 1751,
+      "sha256": "1c95bd7790b4a0d9276cddb85d36b4e4f353df05fe558536e93a2d4c5e8331fe"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/osxdaily-ios-8-4-1-beta2-developer.html": {
+      "bytes": 228129,
+      "sha256": "47b817ba564dbe5e5ed0583e57bbf5e9497b0dea57660dbcd1dc8c8d36ecdb93"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/osxdaily-ios-8-4-1-beta2-developer.json": {
+      "bytes": 2066,
+      "sha256": "1894bb065071663261640749f21bbc9665db22897bf50075635045cf1d8948fa"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/idownloadblog-ios-8-4-1-final.html": {
+      "bytes": 214112,
+      "sha256": "2bef9b3fe49565b9a4acb0bcd42dd50b78a2cb8bab731b08956b41617b186b54"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/idownloadblog-ios-8-4-1-final.json": {
+      "bytes": 2047,
+      "sha256": "bb045b96f50c52e85ef5e89d589094061b96827db239f6f0dc7f58354e1b302e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/heise-ios-8-4-1-beta2-ambiguous.html": {
+      "bytes": 211927,
+      "sha256": "91142bbdbc33efe5f98bb64f7c3537c8988fecff2aed31aa45968a8233cd3f47"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/heise-ios-8-4-1-beta2-ambiguous.json": {
+      "bytes": 2066,
+      "sha256": "88e396052d09278743dde0a5ba2aa3740d46e0fd4fe277af1642b309bc9b0e65"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/iculture-ios-8-4-1-beta2-ambiguous.html": {
+      "bytes": 493844,
+      "sha256": "d703dc3ce6a5e6285629ac6e050670b1227126611d85bc29bf30a17fb219079d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/iculture-ios-8-4-1-beta2-ambiguous.json": {
+      "bytes": 1896,
+      "sha256": "e5cc807ebe53982bfc01d8d06cf86d0128b3c86ce9491099276f603f5bc7cfdb"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/9to5mac-ios-14-8-no-beta.html": {
+      "bytes": 147349,
+      "sha256": "da75b8fe31e666f8bd41557343542db1a6d079c9106672548eb05e4c4acd0782"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/9to5mac-ios-14-8-no-beta.json": {
+      "bytes": 1415,
+      "sha256": "66cc820b4252f7c2b76f0b436c6e424e3c54f457e54e724febf8e68f24085e82"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/raw/idropnews-ios-14-8-no-beta.html": {
+      "bytes": 214913,
+      "sha256": "edcb48897c1cee88c543097da8564b1954c3d553b5094d7195a3f3aa1e64e3c3"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios-patch-applicability/selected/idropnews-ios-14-8-no-beta.json": {
+      "bytes": 1833,
+      "sha256": "746a88564f9300efac7162f59341cf1a9fbfa71d7e35419c269dc27d0568e3d6"
+    }
+  },
+  "exclusions": {
+    "self": "research-handoffs/beta-chronology-gap/ios-patch-applicability/packet-locks.json",
+    "independentReview": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review.json",
+    "sharedMutableAggregates": "Shared coverage/register/aggregate files are intentionally excluded. The exact 27 assignment rows are frozen in scoped-coverage-snapshot.json.",
+    "reason": "The lock manifest cannot hash itself. Independent review is pending and must be authored separately."
+  },
+  "safety": {
+    "independentChronologyReviewComplete": false,
+    "chronologyApprovalGranted": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationAuthorized": false,
+    "deploymentPerformed": false
+  }
+}

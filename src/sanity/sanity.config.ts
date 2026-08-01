@@ -6,9 +6,20 @@ import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "./schemas";
 import { dataset, projectId } from "./env";
 
+const privateDocumentTypes = new Set([
+  "submission",
+  "feedSource",
+  "ingestCandidate",
+]);
+const inactiveDocumentTypes = new Set([
+  ...privateDocumentTypes,
+  "sitePage",
+  "siteSettings",
+]);
+
 export default defineConfig({
-  name: "beta-cadence",
-  title: "Beta Cadence",
+  name: "version-record",
+  title: "Version Record",
   basePath: "/studio",
   projectId,
   dataset,
@@ -16,7 +27,7 @@ export default defineConfig({
     structureTool({
       structure: (S) =>
         S.list()
-          .title("Beta Cadence")
+          .title("Version Record")
           .items([
             S.listItem()
               .title("Release Versions")
@@ -75,7 +86,93 @@ export default defineConfig({
                       ),
                   ])
               ),
+            S.listItem()
+              .title("Release Events")
+              .child(
+                S.list()
+                  .title("Release Events")
+                  .items([
+                    S.listItem()
+                      .title("Ready for Review")
+                      .child(
+                        S.documentList()
+                          .title("Events Ready for Review")
+                          .schemaType("releaseEvent")
+                          .filter(
+                            '_type == "releaseEvent" && editorialReview.status == "readyForReview"'
+                          )
+                          .defaultOrdering([
+                            { field: "appearanceDate", direction: "desc" },
+                          ])
+                      ),
+                    S.listItem()
+                      .title("Citation Pending")
+                      .child(
+                        S.documentList()
+                          .title("Citation-Pending Events")
+                          .schemaType("releaseEvent")
+                          .filter(
+                            '_type == "releaseEvent" && !defined(citations[0])'
+                          )
+                          .defaultOrdering([
+                            { field: "appearanceDate", direction: "desc" },
+                          ])
+                      ),
+                    S.listItem()
+                      .title("All Events")
+                      .child(
+                        S.documentTypeList("releaseEvent").title("All Events")
+                      ),
+                  ])
+              ),
+            S.listItem()
+              .title("Release Builds")
+              .child(
+                S.list()
+                  .title("Release Builds")
+                  .items([
+                    S.listItem()
+                      .title("Ready for Review")
+                      .child(
+                        S.documentList()
+                          .title("Builds Ready for Review")
+                          .schemaType("releaseBuild")
+                          .filter(
+                            '_type == "releaseBuild" && editorialReview.status == "readyForReview"'
+                          )
+                      ),
+                    S.listItem()
+                      .title("Indexable")
+                      .child(
+                        S.documentList()
+                          .title("Indexable Builds")
+                          .schemaType("releaseBuild")
+                          .filter(
+                            '_type == "releaseBuild" && isIndexable == true'
+                          )
+                      ),
+                    S.listItem()
+                      .title("All Builds")
+                      .child(
+                        S.documentTypeList("releaseBuild").title("All Builds")
+                      ),
+                  ])
+              ),
+            S.documentTypeListItem("releaseChange").title("Change Library"),
             S.divider(),
+            S.listItem()
+              .title("Sources & Provenance")
+              .child(
+                S.list()
+                  .title("Sources & Provenance")
+                  .items([
+                    S.documentTypeListItem("source").title("Sources"),
+                    S.documentTypeListItem("auditBatch").title(
+                      "Audit Batches"
+                    ),
+                    S.documentTypeListItem("correction").title("Corrections"),
+                  ])
+              ),
             S.documentTypeListItem("releaseTrain").title("Release Trains"),
             S.documentTypeListItem("platform").title("Platforms"),
           ]),
@@ -84,5 +181,14 @@ export default defineConfig({
   ],
   schema: {
     types: schemaTypes,
+  },
+  document: {
+    newDocumentOptions: (previous) =>
+      previous.filter(
+        (template) =>
+          !inactiveDocumentTypes.has(template.templateId)
+      ),
+    actions: (previous, context) =>
+      inactiveDocumentTypes.has(context.schemaType) ? [] : previous,
   },
 });

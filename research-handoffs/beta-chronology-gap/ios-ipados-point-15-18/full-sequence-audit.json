@@ -1,0 +1,1452 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-ipados-point-15-18",
+  "generatedAt": "2026-07-31T07:02:36.823Z",
+  "cycleCount": 41,
+  "proposedAppearanceCount": 159,
+  "readyAppearanceCount": 153,
+  "conflictedAppearanceCount": 6,
+  "cycles": [
+    {
+      "cycleId": "ios:15.1:public-beta-sequence",
+      "platform": "iOS",
+      "version": "15.1",
+      "releaseVersionId": "version-ios-15-1",
+      "candidateIds": [
+        "candidate:apple:ios:15.1:public-beta-1",
+        "candidate:apple:ios:15.1:public-beta-2",
+        "candidate:apple:ios:15.1:public-beta-3",
+        "candidate:apple:ios:15.1:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2021-09-22",
+        "2021-09-29",
+        "2021-10-07",
+        "2021-10-13"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2021-10-25",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:15.2:public-beta-sequence",
+      "platform": "iOS",
+      "version": "15.2",
+      "releaseVersionId": "version-ios-15-2",
+      "candidateIds": [
+        "candidate:apple:ios:15.2:public-beta-1",
+        "candidate:apple:ios:15.2:public-beta-2",
+        "candidate:apple:ios:15.2:public-beta-3",
+        "candidate:apple:ios:15.2:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2021-10-28",
+        "2021-11-10",
+        "2021-11-16",
+        "2021-12-02"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2021-12-13",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:15.3:public-beta-sequence",
+      "platform": "iOS",
+      "version": "15.3",
+      "releaseVersionId": "version-ios-15-3",
+      "candidateIds": [
+        "candidate:apple:ios:15.3:public-beta-1",
+        "candidate:apple:ios:15.3:public-beta-2"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2
+      ],
+      "observedAppearanceDates": [
+        "2021-12-20",
+        "2022-01-13"
+      ],
+      "maxObservedPublicOrdinal": 2,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-01-26",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 3,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:15.4:public-beta-sequence",
+      "platform": "iOS",
+      "version": "15.4",
+      "releaseVersionId": "version-ios-15-4",
+      "candidateIds": [
+        "candidate:apple:ios:15.4:public-beta-1",
+        "candidate:apple:ios:15.4:public-beta-2",
+        "candidate:apple:ios:15.4:public-beta-3",
+        "candidate:apple:ios:15.4:public-beta-4",
+        "candidate:apple:ios:15.4:public-beta-5"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "observedAppearanceDates": [
+        "2022-01-28",
+        "2022-02-09",
+        "2022-02-16",
+        "2022-02-22",
+        "2022-03-01"
+      ],
+      "maxObservedPublicOrdinal": 5,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-03-14",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 6,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:15.5:public-beta-sequence",
+      "platform": "iOS",
+      "version": "15.5",
+      "releaseVersionId": "version-ios-15-5",
+      "candidateIds": [
+        "candidate:apple:ios:15.5:public-beta-1",
+        "candidate:apple:ios:15.5:public-beta-2",
+        "candidate:apple:ios:15.5:public-beta-3",
+        "candidate:apple:ios:15.5:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2022-04-06",
+        "2022-04-20",
+        "2022-04-26",
+        "2022-05-03"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-05-16",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:15.6:public-beta-sequence",
+      "platform": "iOS",
+      "version": "15.6",
+      "releaseVersionId": "version-ios-15-6",
+      "candidateIds": [
+        "candidate:apple:ios:15.6:public-beta-1",
+        "candidate:apple:ios:15.6:public-beta-2",
+        "candidate:apple:ios:15.6:public-beta-3",
+        "candidate:apple:ios:15.6:public-beta-4",
+        "candidate:apple:ios:15.6:public-beta-5"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "observedAppearanceDates": [
+        "2022-05-19",
+        "2022-06-01",
+        "2022-06-15",
+        "2022-06-28",
+        "2022-07-05"
+      ],
+      "maxObservedPublicOrdinal": 5,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-07-20",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 6,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:16.1:public-beta-sequence",
+      "platform": "iOS",
+      "version": "16.1",
+      "releaseVersionId": "version-ios-16-1",
+      "candidateIds": [
+        "candidate:apple:ios:16.1:public-beta-1",
+        "candidate:apple:ios:16.1:public-beta-2",
+        "candidate:apple:ios:16.1:public-beta-3",
+        "candidate:apple:ios:16.1:public-beta-4",
+        "candidate:apple:ios:16.1:public-beta-5"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "observedAppearanceDates": [
+        "2022-09-15",
+        "2022-09-21",
+        "2022-09-28",
+        "2022-10-04",
+        "2022-10-11"
+      ],
+      "maxObservedPublicOrdinal": 5,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-10-24",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 6,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:16.2:public-beta-sequence",
+      "platform": "iOS",
+      "version": "16.2",
+      "releaseVersionId": "version-ios-16-2",
+      "candidateIds": [
+        "candidate:apple:ios:16.2:public-beta-1",
+        "candidate:apple:ios:16.2:public-beta-2",
+        "candidate:apple:ios:16.2:public-beta-3",
+        "candidate:apple:ios:16.2:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2022-10-27",
+        "2022-11-09",
+        "2022-11-16",
+        "2022-12-01"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-12-13",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:16.4:public-beta-sequence",
+      "platform": "iOS",
+      "version": "16.4",
+      "releaseVersionId": "version-ios-16-4",
+      "candidateIds": [
+        "candidate:apple:ios:16.4:public-beta-1",
+        "candidate:apple:ios:16.4:public-beta-2",
+        "candidate:apple:ios:16.4:public-beta-3",
+        "candidate:apple:ios:16.4:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2023-02-17",
+        "2023-03-01",
+        "2023-03-08",
+        "2023-03-15"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2023-03-27",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:16.5:public-beta-sequence",
+      "platform": "iOS",
+      "version": "16.5",
+      "releaseVersionId": "version-ios-16-5",
+      "candidateIds": [
+        "candidate:apple:ios:16.5:public-beta-1",
+        "candidate:apple:ios:16.5:public-beta-2",
+        "candidate:apple:ios:16.5:public-beta-3",
+        "candidate:apple:ios:16.5:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2023-03-30",
+        "2023-04-12",
+        "2023-04-26",
+        "2023-05-02"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2023-05-18",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:16.6:public-beta-sequence",
+      "platform": "iOS",
+      "version": "16.6",
+      "releaseVersionId": "version-ios-16-6",
+      "candidateIds": [
+        "candidate:apple:ios:16.6:public-beta-1",
+        "candidate:apple:ios:16.6:public-beta-2",
+        "candidate:apple:ios:16.6:public-beta-3",
+        "candidate:apple:ios:16.6:public-beta-4",
+        "candidate:apple:ios:16.6:public-beta-5"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "observedAppearanceDates": [
+        "2023-05-22",
+        "2023-06-01",
+        "2023-06-16",
+        "2023-06-28",
+        "2023-07-10"
+      ],
+      "maxObservedPublicOrdinal": 5,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2023-07-24",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 6,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:17.2:public-beta-sequence",
+      "platform": "iOS",
+      "version": "17.2",
+      "releaseVersionId": "version-ios-17-2",
+      "candidateIds": [
+        "candidate:apple:ios:17.2:public-beta-1",
+        "candidate:apple:ios:17.2:public-beta-2",
+        "candidate:apple:ios:17.2:public-beta-3",
+        "candidate:apple:ios:17.2:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2023-10-27",
+        "2023-11-10",
+        "2023-11-15",
+        "2023-11-28"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2023-12-11",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:17.3:public-beta-sequence",
+      "platform": "iOS",
+      "version": "17.3",
+      "releaseVersionId": "version-ios-17-3",
+      "candidateIds": [
+        "candidate:apple:ios:17.3:public-beta-1",
+        "candidate:apple:ios:17.3:public-beta-3"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        3
+      ],
+      "observedAppearanceDates": [
+        "2023-12-14",
+        "2024-01-10"
+      ],
+      "maxObservedPublicOrdinal": 3,
+      "internalOrdinalGaps": [
+        2
+      ],
+      "terminalStableDate": "2024-01-22",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 4,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "explicitSkipPreserved"
+    },
+    {
+      "cycleId": "ios:17.4:public-beta-sequence",
+      "platform": "iOS",
+      "version": "17.4",
+      "releaseVersionId": "version-ios-17-4",
+      "candidateIds": [
+        "candidate:apple:ios:17.4:public-beta-1",
+        "candidate:apple:ios:17.4:public-beta-2",
+        "candidate:apple:ios:17.4:public-beta-3",
+        "candidate:apple:ios:17.4:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2024-01-30",
+        "2024-02-07",
+        "2024-02-14",
+        "2024-02-21"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2024-03-05",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:17.5:public-beta-sequence",
+      "platform": "iOS",
+      "version": "17.5",
+      "releaseVersionId": "version-ios-17-5",
+      "candidateIds": [
+        "candidate:apple:ios:17.5:public-beta-1",
+        "candidate:apple:ios:17.5:public-beta-2",
+        "candidate:apple:ios:17.5:public-beta-3",
+        "candidate:apple:ios:17.5:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2024-04-04",
+        "2024-04-17",
+        "2024-04-24",
+        "2024-04-30"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2024-05-13",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:17.6:public-beta-sequence",
+      "platform": "iOS",
+      "version": "17.6",
+      "releaseVersionId": "version-ios-17-6",
+      "candidateIds": [
+        "candidate:apple:ios:17.6:public-beta-1",
+        "candidate:apple:ios:17.6:public-beta-2",
+        "candidate:apple:ios:17.6:public-beta-3",
+        "candidate:apple:ios:17.6:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2024-06-20",
+        "2024-07-02",
+        "2024-07-10",
+        "2024-07-16"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2024-07-29",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:18.1:public-beta-sequence",
+      "platform": "iOS",
+      "version": "18.1",
+      "releaseVersionId": "version-ios-18-1",
+      "candidateIds": [
+        "candidate:apple:ios:18.1:public-beta-1",
+        "candidate:apple:ios:18.1:public-beta-2",
+        "candidate:apple:ios:18.1:public-beta-3",
+        "candidate:apple:ios:18.1:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2024-09-19",
+        "2024-09-24",
+        "2024-10-07",
+        "2024-10-14"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2024-10-28",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:18.2:public-beta-sequence",
+      "platform": "iOS",
+      "version": "18.2",
+      "releaseVersionId": "version-ios-18-2",
+      "candidateIds": [
+        "candidate:apple:ios:18.2:public-beta-1",
+        "candidate:apple:ios:18.2:public-beta-2",
+        "candidate:apple:ios:18.2:public-beta-3"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3
+      ],
+      "observedAppearanceDates": [
+        "2024-11-06",
+        "2024-11-12",
+        "2024-11-20"
+      ],
+      "maxObservedPublicOrdinal": 3,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2024-12-11",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 4,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:18.3:public-beta-sequence",
+      "platform": "iOS",
+      "version": "18.3",
+      "releaseVersionId": "version-ios-18-3",
+      "candidateIds": [
+        "candidate:apple:ios:18.3:public-beta-1",
+        "candidate:apple:ios:18.3:public-beta-2",
+        "candidate:apple:ios:18.3:public-beta-3"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3
+      ],
+      "observedAppearanceDates": [
+        "2024-12-18",
+        "2025-01-08",
+        "2025-01-16"
+      ],
+      "maxObservedPublicOrdinal": 3,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2025-01-27",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 4,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:18.4:public-beta-sequence",
+      "platform": "iOS",
+      "version": "18.4",
+      "releaseVersionId": "version-ios-18-4",
+      "candidateIds": [
+        "candidate:apple:ios:18.4:public-beta-1",
+        "candidate:apple:ios:18.4:public-beta-2",
+        "candidate:apple:ios:18.4:public-beta-3",
+        "candidate:apple:ios:18.4:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2025-02-24",
+        "2025-03-04",
+        "2025-03-11",
+        "2025-03-17"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2025-03-31",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ios:18.5:public-beta-sequence",
+      "platform": "iOS",
+      "version": "18.5",
+      "releaseVersionId": "version-ios-18-5",
+      "candidateIds": [
+        "candidate:apple:ios:18.5:public-beta-1",
+        "candidate:apple:ios:18.5:public-beta-2",
+        "candidate:apple:ios:18.5:public-beta-3"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3
+      ],
+      "observedAppearanceDates": [
+        "2025-04-15",
+        "2025-04-22",
+        "2025-04-28"
+      ],
+      "maxObservedPublicOrdinal": 3,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2025-05-12",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 4,
+        "proposed": false,
+        "result": "Developer Beta 4 was Public Beta 3; RC followed."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:15.1:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "15.1",
+      "releaseVersionId": "version-ipados-15-1",
+      "candidateIds": [
+        "candidate:apple:ipados:15.1:public-beta-1",
+        "candidate:apple:ipados:15.1:public-beta-2",
+        "candidate:apple:ipados:15.1:public-beta-3",
+        "candidate:apple:ipados:15.1:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2021-09-22",
+        "2021-09-29",
+        "2021-10-07",
+        "2021-10-13"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2021-10-25",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:15.2:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "15.2",
+      "releaseVersionId": "version-ipados-15-2",
+      "candidateIds": [
+        "candidate:apple:ipados:15.2:public-beta-1",
+        "candidate:apple:ipados:15.2:public-beta-2",
+        "candidate:apple:ipados:15.2:public-beta-3",
+        "candidate:apple:ipados:15.2:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2021-10-28",
+        "2021-11-10",
+        "2021-11-16",
+        "2021-12-02"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2021-12-13",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:15.3:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "15.3",
+      "releaseVersionId": "version-ipados-15-3",
+      "candidateIds": [
+        "candidate:apple:ipados:15.3:public-beta-1",
+        "candidate:apple:ipados:15.3:public-beta-2"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2
+      ],
+      "observedAppearanceDates": [
+        "2021-12-20",
+        "2022-01-13"
+      ],
+      "maxObservedPublicOrdinal": 2,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-01-26",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 3,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:15.4:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "15.4",
+      "releaseVersionId": "version-ipados-15-4",
+      "candidateIds": [
+        "candidate:apple:ipados:15.4:public-beta-1",
+        "candidate:apple:ipados:15.4:public-beta-2",
+        "candidate:apple:ipados:15.4:public-beta-3",
+        "candidate:apple:ipados:15.4:public-beta-4",
+        "candidate:apple:ipados:15.4:public-beta-5"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "observedAppearanceDates": [
+        "2022-01-28",
+        "2022-02-09",
+        "2022-02-16",
+        "2022-02-22",
+        "2022-03-01"
+      ],
+      "maxObservedPublicOrdinal": 5,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-03-14",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 6,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:15.5:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "15.5",
+      "releaseVersionId": "version-ipados-15-5",
+      "candidateIds": [
+        "candidate:apple:ipados:15.5:public-beta-1",
+        "candidate:apple:ipados:15.5:public-beta-2",
+        "candidate:apple:ipados:15.5:public-beta-3",
+        "candidate:apple:ipados:15.5:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2022-04-06",
+        "2022-04-20",
+        "2022-04-26",
+        "2022-05-03"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-05-16",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:15.6:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "15.6",
+      "releaseVersionId": "version-ipados-15-6",
+      "candidateIds": [
+        "candidate:apple:ipados:15.6:public-beta-1",
+        "candidate:apple:ipados:15.6:public-beta-2",
+        "candidate:apple:ipados:15.6:public-beta-3",
+        "candidate:apple:ipados:15.6:public-beta-4",
+        "candidate:apple:ipados:15.6:public-beta-5"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "observedAppearanceDates": [
+        "2022-05-19",
+        "2022-06-01",
+        "2022-06-15",
+        "2022-06-28",
+        "2022-07-05"
+      ],
+      "maxObservedPublicOrdinal": 5,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-07-20",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 6,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:16.1:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "16.1",
+      "releaseVersionId": "version-ipados-16-1",
+      "candidateIds": [
+        "candidate:apple:ipados:16.1:public-beta-1",
+        "candidate:apple:ipados:16.1:public-beta-2",
+        "candidate:apple:ipados:16.1:public-beta-3",
+        "candidate:apple:ipados:16.1:public-beta-4",
+        "candidate:apple:ipados:16.1:public-beta-5",
+        "candidate:apple:ipados:16.1:public-beta-6"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observedAppearanceDates": [
+        "2022-08-24",
+        "2022-09-15",
+        "2022-09-21",
+        "2022-09-28",
+        "2022-10-04",
+        "2022-10-11"
+      ],
+      "maxObservedPublicOrdinal": 6,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-10-24",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 7,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "conflicted"
+    },
+    {
+      "cycleId": "ipados:16.2:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "16.2",
+      "releaseVersionId": "version-ipados-16-2",
+      "candidateIds": [
+        "candidate:apple:ipados:16.2:public-beta-1",
+        "candidate:apple:ipados:16.2:public-beta-2",
+        "candidate:apple:ipados:16.2:public-beta-3",
+        "candidate:apple:ipados:16.2:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2022-10-27",
+        "2022-11-09",
+        "2022-11-16",
+        "2022-12-01"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2022-12-13",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:16.4:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "16.4",
+      "releaseVersionId": "version-ipados-16-4",
+      "candidateIds": [
+        "candidate:apple:ipados:16.4:public-beta-1",
+        "candidate:apple:ipados:16.4:public-beta-2",
+        "candidate:apple:ipados:16.4:public-beta-3",
+        "candidate:apple:ipados:16.4:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2023-02-17",
+        "2023-03-01",
+        "2023-03-08",
+        "2023-03-15"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2023-03-27",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:16.5:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "16.5",
+      "releaseVersionId": "version-ipados-16-5",
+      "candidateIds": [
+        "candidate:apple:ipados:16.5:public-beta-1",
+        "candidate:apple:ipados:16.5:public-beta-2",
+        "candidate:apple:ipados:16.5:public-beta-3",
+        "candidate:apple:ipados:16.5:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2023-03-30",
+        "2023-04-12",
+        "2023-04-26",
+        "2023-05-02"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2023-05-18",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:16.6:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "16.6",
+      "releaseVersionId": "version-ipados-16-6",
+      "candidateIds": [
+        "candidate:apple:ipados:16.6:public-beta-1",
+        "candidate:apple:ipados:16.6:public-beta-2",
+        "candidate:apple:ipados:16.6:public-beta-3",
+        "candidate:apple:ipados:16.6:public-beta-4",
+        "candidate:apple:ipados:16.6:public-beta-5"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "observedAppearanceDates": [
+        "2023-05-22",
+        "2023-06-01",
+        "2023-06-16",
+        "2023-06-28",
+        "2023-07-10"
+      ],
+      "maxObservedPublicOrdinal": 5,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2023-07-24",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 6,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:17.2:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "17.2",
+      "releaseVersionId": "version-ipados-17-2",
+      "candidateIds": [
+        "candidate:apple:ipados:17.2:public-beta-1",
+        "candidate:apple:ipados:17.2:public-beta-2",
+        "candidate:apple:ipados:17.2:public-beta-3",
+        "candidate:apple:ipados:17.2:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2023-10-27",
+        "2023-11-10",
+        "2023-11-15",
+        "2023-11-28"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2023-12-11",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:17.3:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "17.3",
+      "releaseVersionId": "version-ipados-17-3",
+      "candidateIds": [
+        "candidate:apple:ipados:17.3:public-beta-1",
+        "candidate:apple:ipados:17.3:public-beta-3"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        3
+      ],
+      "observedAppearanceDates": [
+        "2023-12-14",
+        "2024-01-10"
+      ],
+      "maxObservedPublicOrdinal": 3,
+      "internalOrdinalGaps": [
+        2
+      ],
+      "terminalStableDate": "2024-01-22",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 4,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "explicitSkipPreserved"
+    },
+    {
+      "cycleId": "ipados:17.5:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "17.5",
+      "releaseVersionId": "version-ipados-17-5",
+      "candidateIds": [
+        "candidate:apple:ipados:17.5:public-beta-1",
+        "candidate:apple:ipados:17.5:public-beta-2",
+        "candidate:apple:ipados:17.5:public-beta-3",
+        "candidate:apple:ipados:17.5:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2024-04-04",
+        "2024-04-17",
+        "2024-04-24",
+        "2024-04-30"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2024-05-13",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:17.6:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "17.6",
+      "releaseVersionId": "version-ipados-17-6",
+      "candidateIds": [
+        "candidate:apple:ipados:17.6:public-beta-1",
+        "candidate:apple:ipados:17.6:public-beta-2",
+        "candidate:apple:ipados:17.6:public-beta-3",
+        "candidate:apple:ipados:17.6:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2024-06-20",
+        "2024-07-02",
+        "2024-07-10",
+        "2024-07-16"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2024-07-29",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:18.1:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "18.1",
+      "releaseVersionId": "version-ipados-18-1",
+      "candidateIds": [
+        "candidate:apple:ipados:18.1:public-beta-1",
+        "candidate:apple:ipados:18.1:public-beta-2",
+        "candidate:apple:ipados:18.1:public-beta-3",
+        "candidate:apple:ipados:18.1:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2024-09-19",
+        "2024-09-24",
+        "2024-10-07",
+        "2024-10-14"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2024-10-28",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:18.2:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "18.2",
+      "releaseVersionId": "version-ipados-18-2",
+      "candidateIds": [
+        "candidate:apple:ipados:18.2:public-beta-1",
+        "candidate:apple:ipados:18.2:public-beta-2",
+        "candidate:apple:ipados:18.2:public-beta-3"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3
+      ],
+      "observedAppearanceDates": [
+        "2024-11-06",
+        "2024-11-12",
+        "2024-11-20"
+      ],
+      "maxObservedPublicOrdinal": 3,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2024-12-11",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 4,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:18.3:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "18.3",
+      "releaseVersionId": "version-ipados-18-3",
+      "candidateIds": [
+        "candidate:apple:ipados:18.3:public-beta-1",
+        "candidate:apple:ipados:18.3:public-beta-2",
+        "candidate:apple:ipados:18.3:public-beta-3"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3
+      ],
+      "observedAppearanceDates": [
+        "2024-12-18",
+        "2025-01-08",
+        "2025-01-16"
+      ],
+      "maxObservedPublicOrdinal": 3,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2025-01-27",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 4,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:18.4:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "18.4",
+      "releaseVersionId": "version-ipados-18-4",
+      "candidateIds": [
+        "candidate:apple:ipados:18.4:public-beta-1",
+        "candidate:apple:ipados:18.4:public-beta-2",
+        "candidate:apple:ipados:18.4:public-beta-3",
+        "candidate:apple:ipados:18.4:public-beta-4"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observedAppearanceDates": [
+        "2025-02-24",
+        "2025-03-04",
+        "2025-03-11",
+        "2025-03-17"
+      ],
+      "maxObservedPublicOrdinal": 4,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2025-03-31",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 5,
+        "proposed": false,
+        "result": "No exact next public ordinal was established before the terminal release boundary."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    },
+    {
+      "cycleId": "ipados:18.5:public-beta-sequence",
+      "platform": "iPadOS",
+      "version": "18.5",
+      "releaseVersionId": "version-ipados-18-5",
+      "candidateIds": [
+        "candidate:apple:ipados:18.5:public-beta-1",
+        "candidate:apple:ipados:18.5:public-beta-2",
+        "candidate:apple:ipados:18.5:public-beta-3"
+      ],
+      "observedPublicOrdinals": [
+        1,
+        2,
+        3
+      ],
+      "observedAppearanceDates": [
+        "2025-04-15",
+        "2025-04-22",
+        "2025-04-28"
+      ],
+      "maxObservedPublicOrdinal": 3,
+      "internalOrdinalGaps": [],
+      "terminalStableDate": "2025-05-12",
+      "nextOrdinalBoundary": {
+        "testedOrdinal": 4,
+        "proposed": false,
+        "result": "Developer Beta 4 was Public Beta 3; RC followed."
+      },
+      "sequenceStatus": "completeThroughObservedMaximum"
+    }
+  ],
+  "noPositiveAuditRowCount": 34,
+  "noPositiveAuditReleaseVersionIds": [
+    "version-ios-15-2-1",
+    "version-ios-15-3-1",
+    "version-ios-15-4-1",
+    "version-ios-15-6-1",
+    "version-ios-15-7",
+    "version-ios-16-0-1",
+    "version-ios-16-0-2",
+    "version-ios-16-0-3",
+    "version-ios-16-1-1",
+    "version-ios-16-1-2",
+    "version-ios-16-3-1",
+    "version-ios-16-4-1",
+    "version-ios-16-5-1",
+    "version-ios-16-6-1",
+    "version-ios-16-7",
+    "version-ios-17-0-1",
+    "version-ios-17-0-2",
+    "version-ios-17-0-3",
+    "version-ios-17-1-1",
+    "version-ios-17-1-2",
+    "version-ios-17-2-1",
+    "version-ios-17-3-1",
+    "version-ios-17-4-1",
+    "version-ios-17-5-1",
+    "version-ios-17-6-1",
+    "version-ios-17-7",
+    "version-ios-18-0-1",
+    "version-ios-18-1-1",
+    "version-ios-18-2-1",
+    "version-ios-18-3-1",
+    "version-ios-18-3-2",
+    "version-ios-18-4-1",
+    "version-ios-18-7",
+    "version-ipados-15-7"
+  ],
+  "explicitNegativeFindings": [
+    {
+      "findingId": "negative:ios-ipados:15.7:any-public-beta",
+      "platforms": [
+        "iOS",
+        "iPadOS"
+      ],
+      "version": "15.7",
+      "result": "rcOnlyPublicTesterBoundary",
+      "note": "No numbered public beta was separately observed before the release-candidate/public-tester boundary."
+    },
+    {
+      "findingId": "negative:ios:16.7:any-public-beta",
+      "platforms": [
+        "iOS"
+      ],
+      "version": "16.7",
+      "result": "rcOnlyPublicTesterBoundary",
+      "note": "Contemporary reporting described 16.7 as not actively beta-tested before the RC appeared."
+    },
+    {
+      "findingId": "negative:ios:17.7:any-public-beta",
+      "platforms": [
+        "iOS"
+      ],
+      "version": "17.7",
+      "result": "rcOnlyPublicTesterBoundary",
+      "note": "The first public-program distribution located for the branch was the release candidate, not Public Beta 1."
+    },
+    {
+      "findingId": "negative:ios:18.7:any-numbered-public-beta",
+      "platforms": [
+        "iOS"
+      ],
+      "version": "18.7",
+      "result": "rcMislabeledPublicBeta",
+      "note": "Build 22H20 was described by one publisher as a public beta, but build-level sources identify it as the RC and final build. No numbered public-beta identity is proposed."
+    },
+    {
+      "findingId": "negative:ios-ipados:17.3:public-beta-2",
+      "platforms": [
+        "iOS",
+        "iPadOS"
+      ],
+      "version": "17.3",
+      "routeAlias": "public-beta-2",
+      "result": "withdrawnDeveloperSeedNeverPublic",
+      "note": "Apple withdrew the corresponding developer beta after boot-loop reports; the public sequence jumps explicitly from Public Beta 1 to Public Beta 3."
+    },
+    {
+      "findingId": "negative:ios-ipados:18.5:public-beta-4",
+      "platforms": [
+        "iOS",
+        "iPadOS"
+      ],
+      "version": "18.5",
+      "routeAlias": "public-beta-4",
+      "result": "developerOrdinalNotPublicOrdinal",
+      "note": "Developer Beta 4 mapped to Public Beta 3. The next public-program appearance was the RC, so no Public Beta 4 is proposed."
+    }
+  ],
+  "negativeBoundaryRule": "No next ordinal is inferred from developer builds, shared payloads, a paired platform, or a later RC. A missing public identity remains not proposed unless exact public-distribution evidence is found."
+}

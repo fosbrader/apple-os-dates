@@ -1,0 +1,2197 @@
+{
+  "formatVersion": 1,
+  "target": { "projectId": "lh3yswzu", "dataset": "production" },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+      "archiveUrl": "https://archive.org/details/ios-10-beta-release-notes",
+      "title": "iOS SDK Release Notes for iOS 10 Beta (preserved PDF)",
+      "publisher": "Internet Archive document preservation",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2016-06-13T00:00:00.000Z",
+      "topics": [
+        "iOS",
+        "10.0",
+        "Beta 1",
+        "Apple Developer release notes",
+        "historical document mirror"
+      ]
+    },
+    {
+      "url": "https://gist.github.com/vdt/79891de1b602ab284e3d8f81ef59b8d3",
+      "title": "All the Apple Developer links you need from WWDC16",
+      "publisher": "GitHub Gist",
+      "sourceClass": "community",
+      "author": "vdt",
+      "publishedAt": "2016-06-14T14:13:28.000Z",
+      "topics": [
+        "WWDC 2016",
+        "iOS 10 Beta 1",
+        "Apple CDN document identity",
+        "historical context"
+      ]
+    },
+    {
+      "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+      "title": "iOS 10 Beta 3 Release Notes (Apple-authored transcript)",
+      "publisher": "Scribd document mirror",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2016-07-18T00:00:00.000Z",
+      "topics": [
+        "iOS",
+        "10.0",
+        "Beta 3",
+        "Apple Developer release notes",
+        "historical document mirror"
+      ]
+    },
+    {
+      "url": "https://forums.whirlpool.net.au/archive/2539505?p=-1",
+      "title": "Contemporaneous iOS 10 Beta 3 release-note link",
+      "publisher": "Whirlpool Forums",
+      "sourceClass": "community",
+      "author": "NeonVoid777",
+      "publishedAt": "2016-07-18T18:24:54.000Z",
+      "topics": [
+        "iOS 10 Beta 3",
+        "release-note document identity",
+        "historical context"
+      ]
+    },
+    {
+      "url": "https://developer.apple.com/library/archive/releasenotes/General/RN-iOSSDK-10.0/",
+      "title": "iOS 10.0 Release Notes",
+      "publisher": "Apple Developer Documentation Archive",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2016-09-13T00:00:00.000Z",
+      "topics": ["iOS", "10.0", "final SDK state", "archive boundary"]
+    }
+  ],
+  "versions": [],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-10-0",
+        "routeAlias": "beta-1"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 10 Beta 1 is represented by 30 Apple-documented records from a conservative first-document baseline; unsupported builds, cumulative carry-forward, and community observations are excluded.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "What survives" },
+          {
+            "style": "normal",
+            "text": "A complete Apple-authored developer PDF survives for the first iOS 10 beta. Its title identifies Beta 1, its document-numbered body runs through page 18, and it retains the original component headings, functionality exclusions, notes, workarounds, and known-issue sections.",
+            "citations": [
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "iOS SDK Release Notes for iOS 10 Beta; Introduction; pages 3–18"
+              },
+              {
+                "url": "https://gist.github.com/vdt/79891de1b602ab284e3d8f81ef59b8d3",
+                "locator": "iOS 10 Beta Release Notes — original adcdownload.apple.com PDF URL",
+                "note": "Used only to corroborate the document identity and timing."
+              }
+            ]
+          },
+          { "style": "h2", "text": "A baseline, not an invented diff" },
+          {
+            "style": "normal",
+            "text": "Because this is the first retained prerelease document, the structured entries are limited to explicit Beta 1 exclusions, component notes, compatibility changes, features, and known issues. They establish what Apple documented at the milestone; they do not claim that every entry first appeared on that day or that this selection exhausts the build.",
+            "citations": [
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Functionality not in iOS 10 Beta 1; Notes and Known Issues"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Selected coverage" },
+          {
+            "style": "normal",
+            "text": "The index covers feature availability, Apple Pay, Pencil and photo capture, backup compatibility, networking security, Exchange, accessibility, Messages extensions, Music, notifications, Photos, Safari, Swift Playgrounds, and UIKit behavior.",
+            "citations": [
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Functionality not in iOS 10 Beta 1 — Faces; page 4",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Functionality not in iOS 10 Beta 1 — Voicemail transcription; page 4",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Functionality not in iOS 10 Beta 1 — App Store adoption; page 4",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Functionality not in iOS 10 Beta 1 — Rich notifications and 3D Touch; page 4",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "AdSupport framework — Vendor and advertising identifiers; page 4",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "AirPlay — Mirror a device; page 4",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "App Store — First sandbox authentication dialog; page 4",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Apple Pay — Mac Safari payment sheet; page 4",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Apple Pencil — Estimated tilt and azimuth; page 5",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "AVFoundation Capture — RAW images on iPhone SE; page 5",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "AVFoundation Capture — Live Photo movie delivery; page 5",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Backup — iOS 8 and earlier backups; page 5",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Binary Compatibility — RC4 cipher suites; page 6",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "CarPlay — CarPlay disconnects; page 6",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Exchange Account Setup — Manual and configuration-profile setup; page 7",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Guided Access — Unable to exit; page 7",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Messages — Search and table controllers; page 8",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Music — All-new design; page 9",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Notifications — Audio-message playback; page 10",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Photos — Memory movie playback; page 11",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Photos — 32-bit device support; page 11",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Safari — Content Blockers after upgrade; page 12",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Safari — Long press on Tab View; page 12",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Safari — user-scalable viewport behavior; page 12",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "SFSafariViewController — preferredBarTintColor; page 12",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "SFSafariViewController — Safari button breadcrumb; page 12",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "Swift Playgrounds — App introduction; page 13",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "UIKit — Midflight UIGestureRecognizer removal; page 15",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "UIKit — UIContentSizeCategoryDidChangeNotification; page 16",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              },
+              {
+                "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+                "locator": "UIKit — 3D Touch haptics; page 17",
+                "note": "Original synthesis from Apple’s notes and known issues baseline record."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Archive boundary" },
+          {
+            "style": "normal",
+            "text": "Apple’s current documentation archive exposes the final September SDK state, not a navigable sequence of the 2016 beta revisions. The retained Beta 1 PDF is therefore cited as a third-party-preserved Apple document, and each occurrence was independently reviewed against its cited page before publication. No build number, community observation, or later cumulative note is assigned to this route.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/library/archive/releasenotes/General/RN-iOSSDK-10.0/",
+                "locator": "iOS SDK Release Notes for iOS 10.0; Updated 2016-09-13",
+                "note": "Final-state boundary only; not used as Beta 1 attribution."
+              },
+              {
+                "url": "https://gist.github.com/vdt/79891de1b602ab284e3d8f81ef59b8d3",
+                "locator": "Original Apple CDN filename",
+                "note": "Identity corroboration only."
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Beta 1; Notes and Known Issues baseline; exact component headings"
+        },
+        {
+          "url": "https://gist.github.com/vdt/79891de1b602ab284e3d8f81ef59b8d3",
+          "locator": "Beta 1 document identity",
+          "note": "Context only; community observations are excluded."
+        },
+        {
+          "url": "https://developer.apple.com/library/archive/releasenotes/General/RN-iOSSDK-10.0/",
+          "locator": "Final iOS 10.0 SDK note state",
+          "note": "Archive-boundary comparison only."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Functionality not in iOS 10 Beta 1 — Faces; page 4",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Functionality not in iOS 10 Beta 1 — Voicemail transcription; page 4",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Functionality not in iOS 10 Beta 1 — App Store adoption; page 4",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Functionality not in iOS 10 Beta 1 — Rich notifications and 3D Touch; page 4",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "AdSupport framework — Vendor and advertising identifiers; page 4",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "AirPlay — Mirror a device; page 4",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "App Store — First sandbox authentication dialog; page 4",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Apple Pay — Mac Safari payment sheet; page 4",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Apple Pencil — Estimated tilt and azimuth; page 5",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "AVFoundation Capture — RAW images on iPhone SE; page 5",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "AVFoundation Capture — Live Photo movie delivery; page 5",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Backup — iOS 8 and earlier backups; page 5",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Binary Compatibility — RC4 cipher suites; page 6",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "CarPlay — CarPlay disconnects; page 6",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Exchange Account Setup — Manual and configuration-profile setup; page 7",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Guided Access — Unable to exit; page 7",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Messages — Search and table controllers; page 8",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Music — All-new design; page 9",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Notifications — Audio-message playback; page 10",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Photos — Memory movie playback; page 11",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Photos — 32-bit device support; page 11",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Safari — Content Blockers after upgrade; page 12",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Safari — Long press on Tab View; page 12",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Safari — user-scalable viewport behavior; page 12",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "SFSafariViewController — preferredBarTintColor; page 12",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "SFSafariViewController — Safari button breadcrumb; page 12",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "Swift Playgrounds — App introduction; page 13",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "UIKit — Midflight UIGestureRecognizer removal; page 15",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "UIKit — UIContentSizeCategoryDidChangeNotification; page 16",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        },
+        {
+          "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+          "locator": "UIKit — 3D Touch haptics; page 17",
+          "note": "Original synthesis from Apple’s notes and known issues baseline record."
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-10-beta1-photos-faces-sync",
+          "title": "Face groupings stayed local to each device",
+          "canonicalSummary": "The first beta did not synchronize its Photos face groupings between a user’s devices.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "The preserved baseline warns that Photos face organization was device-local at this milestone.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Faces; page 4” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Functionality not in iOS 10 Beta 1 — Faces; page 4",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-voicemail-transcription",
+          "title": "Voicemail transcription was not yet active",
+          "canonicalSummary": "Automatic transcription of voicemail messages was unavailable in the initial beta.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "Apple explicitly withheld voicemail transcription from the first developer seed.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Voicemail transcription; page 4” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Functionality not in iOS 10 Beta 1 — Voicemail transcription; page 4",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-store-dependent-extensions",
+          "title": "Store-dependent extensions awaited app adoption",
+          "canonicalSummary": "iMessage apps, SiriKit integrations, and Maps extensions could not operate until compatible App Store software became available.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "The Beta 1 document distinguishes platform support from features that still needed third-party releases.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “App Store adoption; page 4” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Functionality not in iOS 10 Beta 1 — App Store adoption; page 4",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-rich-notification-device-scope",
+          "title": "Rich notifications initially required 3D Touch",
+          "canonicalSummary": "The first beta limited its optimized rich-notification interaction to iPhone 6s-class hardware.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "Apple said support for iPhones without 3D Touch would arrive in a later beta.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Rich notifications and 3D Touch; page 4” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Functionality not in iOS 10 Beta 1 — Rich notifications and 3D Touch; page 4",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-ad-identifiers-upgrade",
+          "title": "Advertising identifiers changed after upgrading",
+          "canonicalSummary": "Installing the beta regenerated vendor and advertising identifiers.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "cumulative",
+          "summary": "The milestone documents an identity continuity change that could affect analytics and advertising tests.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Vendor and advertising identifiers; page 4” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "AdSupport framework — Vendor and advertising identifiers; page 4",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-airplay-mirroring",
+          "title": "AirPlay mirroring could fail",
+          "canonicalSummary": "Screen mirroring from an iOS 10 device to Apple TV was unreliable in the first beta.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "The preserved notes identify AirPlay mirroring as an initial compatibility risk.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Mirror a device; page 4” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "AirPlay — Mirror a device; page 4",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-sandbox-authentication",
+          "title": "Sandbox purchases could ask twice for authentication",
+          "canonicalSummary": "The In-App Purchase sandbox could display its first sign-in prompt two times.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "Apple’s workaround was to complete both prompts during purchase testing.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “First sandbox authentication dialog; page 4” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "App Store — First sandbox authentication dialog; page 4",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-mac-apple-pay-sheet",
+          "title": "Unconfigured iPhones produced an empty Mac payment sheet",
+          "canonicalSummary": "A Safari payment initiated on Mac could show a blank Apple Pay sheet when the paired iPhone had no card configured.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "The baseline ties the empty sheet to missing Apple Pay setup on iPhone.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Mac Safari payment sheet; page 4” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Apple Pay — Mac Safari payment sheet; page 4",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-pencil-angle-reporting",
+          "title": "Apple Pencil angles could be inaccurate near an edge",
+          "canonicalSummary": "Drawing inward from an iPad edge could produce estimated tilt and azimuth values with large errors.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "Apple advised using the first later non-estimated measurement to repair the input history.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Estimated tilt and azimuth; page 5” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Apple Pencil — Estimated tilt and azimuth; page 5",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-raw-capture-iphone-se",
+          "title": "RAW capture could fail on iPhone SE",
+          "canonicalSummary": "The new photo-capture path did not reliably produce RAW images on iPhone SE.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "The first SDK notes call out a device-specific RAW photography failure.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “RAW images on iPhone SE; page 5” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "AVFoundation Capture — RAW images on iPhone SE; page 5",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-live-photo-movie-delivery",
+          "title": "Photo capture omitted Live Photo movies",
+          "canonicalSummary": "AVCapturePhotoOutput did not deliver the movie portion of a Live Photo through its normal result.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "Developers were directed to create an AVAsset from the file URL supplied in the capture settings.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Live Photo movie delivery; page 5” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "AVFoundation Capture — Live Photo movie delivery; page 5",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-legacy-icloud-restore",
+          "title": "Older iCloud backups could not restore directly",
+          "canonicalSummary": "Backups created on iOS 8 or earlier could fail when restored straight onto the first iOS 10 beta.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "Apple’s documented bridge was to restore under iOS 9 before moving the device to iOS 10.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “iOS 8 and earlier backups; page 5” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Backup — iOS 8 and earlier backups; page 5",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-tls-rc4-removal",
+          "title": "RC4 cipher suites were removed from Apple networking APIs",
+          "canonicalSummary": "HTTPS connections made through NSURLSession or NSURLConnection stopped negotiating RC4 during TLS setup.",
+          "category": "compatibility",
+          "action": "removed",
+          "inheritance": "cumulative",
+          "summary": "The SDK baseline requires affected servers to offer stronger cipher suites.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “RC4 cipher suites; page 6” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Binary Compatibility — RC4 cipher suites; page 6",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-carplay-disconnects",
+          "title": "CarPlay connections could drop",
+          "canonicalSummary": "The first beta could disconnect an iPhone while it was attached to CarPlay.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "Apple recorded general CarPlay link instability for the initial seed.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “CarPlay disconnects; page 6” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "CarPlay — CarPlay disconnects; page 6",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-exchange-account-sync",
+          "title": "New Exchange accounts could remain unsynchronized",
+          "canonicalSummary": "Exchange accounts added manually or by configuration profile could appear in Settings without transferring data.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "The documented recovery was to remove the incomplete setup and add the account again.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Manual and configuration-profile setup; page 7” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Exchange Account Setup — Manual and configuration-profile setup; page 7",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-guided-access-exit",
+          "title": "Guided Access could trap the active session",
+          "canonicalSummary": "After Guided Access was enabled, the first beta could prevent the user from leaving the current app.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "Apple documented restart or battery-drain recovery paths depending on whether a passcode existed.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Unable to exit; page 7” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Guided Access — Unable to exit; page 7",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-messages-extension-insets",
+          "title": "Messages extension content could sit beneath the top bar",
+          "canonicalSummary": "UISearchController and UITableViewController content could be obscured when embedded in a Messages extension.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "The notes recommend temporary top and bottom insets for extension layouts.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Search and table controllers; page 8” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Messages — Search and table controllers; page 8",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-music-redesign",
+          "title": "The redesigned Apple Music experience entered testing",
+          "canonicalSummary": "Beta 1 introduced the new Apple Music interface as a simpler reorganization of the service.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "cumulative",
+          "summary": "The developer document establishes the Music redesign in the first iOS 10 seed.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “All-new design; page 9” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Music — All-new design; page 9",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-notification-audio-messages",
+          "title": "Audio messages would not play from notification surfaces",
+          "canonicalSummary": "Messages audio clips could not be played directly from a banner or notification-list action.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "Apple directed users to open Messages or use the rich-notification interaction instead.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Audio-message playback; page 10” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Notifications — Audio-message playback; page 10",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-memory-movie-crash",
+          "title": "Memory movies could terminate Photos",
+          "canonicalSummary": "Playing an automatically generated Memory movie could cause Photos to exit unexpectedly.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "The crash is explicitly present in the first beta’s Photos section.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Memory movie playback; page 11” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Photos — Memory movie playback; page 11",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-photos-32-bit-scope",
+          "title": "Advanced Photos views excluded 32-bit devices",
+          "canonicalSummary": "Memories, Related, People, and Scene experiences were not supported on 32-bit hardware.",
+          "category": "compatibility",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "The first beta’s intelligent Photos experiences carried a clear hardware boundary.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “32-bit device support; page 11” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Photos — 32-bit device support; page 11",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-safari-content-blockers",
+          "title": "Content blockers could stop after the upgrade",
+          "canonicalSummary": "Safari content-blocking extensions could become inactive after installing Beta 1.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "Apple suggested toggling the blocker off and on again in Safari settings.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Content Blockers after upgrade; page 12” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Safari — Content Blockers after upgrade; page 12",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-safari-close-all-tabs",
+          "title": "Safari added a close-all-tabs command",
+          "canonicalSummary": "A long press on Safari’s tab-view control could close every open tab at once.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "cumulative",
+          "summary": "The milestone notes establish the bulk tab-closing gesture as part of iOS 10.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Long press on Tab View; page 12” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Safari — Long press on Tab View; page 12",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-safari-viewport-zoom",
+          "title": "Safari prioritized user zoom over restrictive viewport settings",
+          "canonicalSummary": "Web pages could be pinch-zoomed even when their viewport attempted to disable scaling.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "cumulative",
+          "summary": "Apple characterizes the behavior change as an accessibility improvement.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “user-scalable viewport behavior; page 12” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Safari — user-scalable viewport behavior; page 12",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-safari-controller-tint",
+          "title": "Apps could customize the Safari view toolbar color",
+          "canonicalSummary": "SFSafariViewController gained a supported configuration path for changing its toolbar background.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "cumulative",
+          "summary": "The Beta 1 SDK exposed the new tint control through the Safari view configuration.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “preferredBarTintColor; page 12” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "SFSafariViewController — preferredBarTintColor; page 12",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-safari-controller-breadcrumb",
+          "title": "Safari view transitions showed a route back to the host app",
+          "canonicalSummary": "Opening full Safari from SFSafariViewController added a breadcrumb for returning to the originating application.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "cumulative",
+          "summary": "The initial notes document a clearer navigation handoff between the embedded view and Safari.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Safari button breadcrumb; page 12” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "SFSafariViewController — Safari button breadcrumb; page 12",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-swift-playgrounds",
+          "title": "Swift Playgrounds entered the iOS 10 beta",
+          "canonicalSummary": "Apple included the first beta of its iPad coding environment with Swift 3 lessons, challenges, and editable playgrounds.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "cumulative",
+          "summary": "The release-note baseline describes the bundled learning app and its initial content model.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “App introduction; page 13” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "Swift Playgrounds — App introduction; page 13",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-gesture-recognizer-removal",
+          "title": "Removing an active gesture recognizer now cancelled it",
+          "canonicalSummary": "Detaching a gesture recognizer while it was recognizing began explicitly cancelling that gesture.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "cumulative",
+          "summary": "The SDK notes contrast the new cancellation behavior with earlier releases.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “Midflight UIGestureRecognizer removal; page 15” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "UIKit — Midflight UIGestureRecognizer removal; page 15",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-content-size-notification-source",
+          "title": "Dynamic Type notifications changed their sender",
+          "canonicalSummary": "UIContentSizeCategoryDidChangeNotification began originating from the main UIScreen rather than UIApplication.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "cumulative",
+          "summary": "The first beta records an observable source-object change for Dynamic Type notifications.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “UIContentSizeCategoryDidChangeNotification; page 16” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "UIKit — UIContentSizeCategoryDidChangeNotification; page 16",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta1-3d-touch-haptics-setting",
+          "title": "3D Touch feedback depended on keyboard-click audio",
+          "canonicalSummary": "Haptic feedback for 3D Touch did not operate unless the Keyboard Clicks sound setting was enabled.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "cumulative",
+          "summary": "The preserved known-issues list identifies an unexpected coupling between haptics and a sound preference.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the cited section and “3D Touch haptics; page 17” record in the complete Apple-authored Beta 1 PDF preserved by Internet Archive. A June 14, 2016 WWDC link ledger independently identifies the original Apple CDN filename. This is treated as a first-document baseline, not a claimed diff from an unavailable earlier state.",
+          "citations": [
+            {
+              "url": "https://archive.org/download/ios-10-beta-release-notes/315770725-IOS-10-Beta-Release-Notes.pdf",
+              "locator": "UIKit — 3D Touch haptics; page 17",
+              "note": "Original synthesis from Apple’s notes and known issues baseline record."
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T09:44:24Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-10-0",
+        "routeAlias": "beta-3"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 10 Beta 3 is represented by 37 Apple-documented records from the document’s explicit fixed section; unsupported builds, cumulative carry-forward, and community observations are excluded.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "What survives" },
+          {
+            "style": "normal",
+            "text": "A complete text rendering of Apple’s iOS 10 Beta 3 developer PDF survives online. It identifies the SDK as Beta 3, preserves a 15-page document body, and separates a milestone-specific “Fixed in this Release” section from the cumulative notes and known issues that follow.",
+            "citations": [
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "iOS SDK Release Notes for iOS 10 beta 3; pages 3–15"
+              },
+              {
+                "url": "https://forums.whirlpool.net.au/archive/2539505?p=-1",
+                "locator": "Post 355; Dev Beta 3; linked iOS 10 beta 3 Release Notes PDF",
+                "note": "Used only to corroborate document identity and timing."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Exact delta boundary" },
+          {
+            "style": "normal",
+            "text": "Only records beneath the document’s explicit fixed-section heading are attached to Beta 3. Generic known issues, functionality exclusions, and notes after that section are left out because they may have carried forward from earlier builds.",
+            "citations": [
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Fixed in this Release; pages 4–6"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Selected coverage" },
+          {
+            "style": "normal",
+            "text": "The structured delta spans purchase testing, Apple Pay, Apple Pencil, audio, CarPlay, Core Image, Exchange, backup and restore, Messages extensions, Music, Notes, telephony, Photos, privacy, Siri, SiriKit, and UIKit.",
+            "citations": [
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "App Store — Hosted-content sandbox purchase; page 4",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Apple Pay — Card expiration date or CVV; page 4",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Apple Pencil — New Pencil pairing; page 4",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Audio — Haptic feedback and internal speaker; page 4",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Binary Compatibility — Pages on iPad while signed out of iCloud; page 4",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "CarPlay — Empty Now Playing list; page 4",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "CarPlay — Steering-wheel Siri control; page 4",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "CoreImage — CIImageProcessor data order; page 4",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Exchange — Account setup through Setup Assistant; page 4",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "iBooks — Purchased audiobook after custom-collection deletion; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "iCloud Backup and Restore — TestFlight app container restores; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Keyboards — Two-Factor Authentication in Settings; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Lock Screen — Chinese alternate calendar numerals; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Messages — willSelectMessage and didSelectMessage callbacks; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Messages — Xcode waiting-to-attach sequence; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Messages — Sticker Peeling animation; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Messages — Expanded-to-Compact transition; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Messages — #images in unsupported locales; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Messages — Third-party message accessibility labels; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Messages — Messages extensions download and install; Manage tab; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Messages — RTL photo browser; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Music — China membership after Beta 2 update; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Notes — Adding an attachment, deleting, or moving notes; page 5",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Phone — CS/VoLTE relay-call audio; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Phone — SIM-less emergency number 08; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Phone — Reset All Settings and carrier bundle; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Phone — 911 call completion UI; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Phone — Call Forwarding and Call Waiting preferences; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Phone — Apple Watch relay-call handoff; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Photos — Memory movies across Beta 1 and Beta 2; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Privacy — Advertising Identifier reset after iTunes login; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Siri — Audio playback and Maps navigation output; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "Siri — Australian English voice-over; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "SiriKit — INInteraction response and handling-status properties; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "SiriKit — INPaymentMethod in request-payment intents; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "SiriKit — Intent confirmation and Ready response; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              },
+              {
+                "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+                "locator": "UIKit — Main-thread pasteboard access; page 6",
+                "note": "Original synthesis from Apple’s fixed in this release record."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Archive limitations" },
+          {
+            "style": "normal",
+            "text": "The original Apple download is no longer publicly inspectable without relying on a mirror, and Apple’s archive now presents the final SDK document. The preserved transcript and a contemporaneous filename link establish the Beta 3 document, but no unavailable build number or community-discovered behavior is promoted into this page.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/library/archive/releasenotes/General/RN-iOSSDK-10.0/",
+                "locator": "iOS SDK Release Notes for iOS 10.0; final SDK state",
+                "note": "Archive-boundary comparison only."
+              },
+              {
+                "url": "https://forums.whirlpool.net.au/archive/2539505?p=-1",
+                "locator": "Contemporaneous Beta 3 PDF link",
+                "note": "Forum-authored observations are excluded."
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Beta 3; Fixed in this Release; exact component headings"
+        },
+        {
+          "url": "https://forums.whirlpool.net.au/archive/2539505?p=-1",
+          "locator": "Beta 3 document identity",
+          "note": "Context only; community observations are excluded."
+        },
+        {
+          "url": "https://developer.apple.com/library/archive/releasenotes/General/RN-iOSSDK-10.0/",
+          "locator": "Final iOS 10.0 SDK note state",
+          "note": "Archive-boundary comparison only."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "App Store — Hosted-content sandbox purchase; page 4",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Apple Pay — Card expiration date or CVV; page 4",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Apple Pencil — New Pencil pairing; page 4",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Audio — Haptic feedback and internal speaker; page 4",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Binary Compatibility — Pages on iPad while signed out of iCloud; page 4",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "CarPlay — Empty Now Playing list; page 4",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "CarPlay — Steering-wheel Siri control; page 4",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "CoreImage — CIImageProcessor data order; page 4",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Exchange — Account setup through Setup Assistant; page 4",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "iBooks — Purchased audiobook after custom-collection deletion; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "iCloud Backup and Restore — TestFlight app container restores; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Keyboards — Two-Factor Authentication in Settings; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Lock Screen — Chinese alternate calendar numerals; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Messages — willSelectMessage and didSelectMessage callbacks; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Messages — Xcode waiting-to-attach sequence; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Messages — Sticker Peeling animation; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Messages — Expanded-to-Compact transition; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Messages — #images in unsupported locales; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Messages — Third-party message accessibility labels; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Messages — Messages extensions download and install; Manage tab; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Messages — RTL photo browser; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Music — China membership after Beta 2 update; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Notes — Adding an attachment, deleting, or moving notes; page 5",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Phone — CS/VoLTE relay-call audio; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Phone — SIM-less emergency number 08; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Phone — Reset All Settings and carrier bundle; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Phone — 911 call completion UI; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Phone — Call Forwarding and Call Waiting preferences; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Phone — Apple Watch relay-call handoff; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Photos — Memory movies across Beta 1 and Beta 2; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Privacy — Advertising Identifier reset after iTunes login; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Siri — Audio playback and Maps navigation output; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "Siri — Australian English voice-over; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "SiriKit — INInteraction response and handling-status properties; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "SiriKit — INPaymentMethod in request-payment intents; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "SiriKit — Intent confirmation and Ready response; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        },
+        {
+          "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+          "locator": "UIKit — Main-thread pasteboard access; page 6",
+          "note": "Original synthesis from Apple’s fixed in this release record."
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-10-beta3-hosted-purchase-password",
+          "title": "Hosted sandbox purchases stopped prompting on every foreground",
+          "canonicalSummary": "Beta 3 resolved repeated password requests while hosted In-App Purchase content continued downloading.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple placed the recurring foreground authentication behavior in the milestone’s fixed section.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “App Store” heading and “Hosted-content sandbox purchase; page 4” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "App Store — Hosted-content sandbox purchase; page 4",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-apple-pay-card-validation",
+          "title": "Apple Pay card setup survived invalid detail entry",
+          "canonicalSummary": "Entering a wrong expiration date or security code no longer ended the entire card-provisioning attempt.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The fixed section records a more recoverable Apple Pay enrollment flow.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Apple Pay” heading and “Card expiration date or CVV; page 4” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Apple Pay — Card expiration date or CVV; page 4",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-pencil-pairing",
+          "title": "Apple Pencil pairing recovered on Home and Lock screens",
+          "canonicalSummary": "A new Apple Pencil could again pair while the device displayed the Home or Lock screen.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 closes the documented screen-dependent pairing failure.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Apple Pencil” heading and “New Pencil pairing; page 4” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Apple Pencil — New Pencil pairing; page 4",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-haptics-audio-playback",
+          "title": "Speaker audio continued through haptic feedback",
+          "canonicalSummary": "Internal-speaker playback no longer stopped when the device produced haptic feedback.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The audio interruption appears under Apple’s exact fixed-section heading.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Audio” heading and “Haptic feedback and internal speaker; page 4” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Audio — Haptic feedback and internal speaker; page 4",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-pages-without-icloud",
+          "title": "Pages document creation no longer hung without iCloud",
+          "canonicalSummary": "On iPad, creating a Pages document while signed out of iCloud stopped hanging.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 resolves the account-state-specific Pages failure.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Binary Compatibility” heading and “Pages on iPad while signed out of iCloud; page 4” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Binary Compatibility — Pages on iPad while signed out of iCloud; page 4",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-carplay-now-playing-list",
+          "title": "CarPlay Now Playing lists repopulated",
+          "canonicalSummary": "Affected head units once again displayed entries in the Now Playing list.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The milestone’s fixed section restores the missing in-car queue display.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “CarPlay” heading and “Empty Now Playing list; page 4” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "CarPlay — Empty Now Playing list; page 4",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-carplay-steering-wheel-siri",
+          "title": "Steering-wheel Siri activation became more reliable",
+          "canonicalSummary": "CarPlay head-unit controls could again invoke Siri without the earlier triggering difficulty.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple records the steering-wheel activation problem among Beta 3’s CarPlay fixes.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “CarPlay” heading and “Steering-wheel Siri control; page 4” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "CarPlay — Steering-wheel Siri control; page 4",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-core-image-pixel-order",
+          "title": "CIImageProcessor standardized its pixel origin",
+          "canonicalSummary": "CIImageProcessor input and output buffers began placing the upper-left pixel at the first byte.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The fixed section includes a concrete buffer-order contract for the new processing API.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “CoreImage” heading and “CIImageProcessor data order; page 4” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "CoreImage — CIImageProcessor data order; page 4",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-exchange-setup-assistant-sync",
+          "title": "Setup Assistant Exchange accounts began syncing immediately",
+          "canonicalSummary": "Newly configured Exchange accounts no longer needed a device restart before data synchronization began.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 removes the post-setup restart dependency.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Exchange” heading and “Account setup through Setup Assistant; page 4” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Exchange — Account setup through Setup Assistant; page 4",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-ibooks-audiobook-visibility",
+          "title": "Deleted collection audiobooks became visible again",
+          "canonicalSummary": "A purchased audiobook removed from a custom collection could once again be found or played without relaunching iBooks or syncing.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The milestone fixes an iBooks library-visibility edge case.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “iBooks” heading and “Purchased audiobook after custom-collection deletion; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "iBooks — Purchased audiobook after custom-collection deletion; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-testflight-container-restore",
+          "title": "iCloud Restore added TestFlight app-container recovery",
+          "canonicalSummary": "Restoring from iCloud began carrying back container data for TestFlight beta applications.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple marks TestFlight container recovery as newly supported in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “iCloud Backup and Restore” heading and “TestFlight app container restores; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "iCloud Backup and Restore — TestFlight app container restores; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-two-factor-keyboard",
+          "title": "The keyboard returned during two-factor setup",
+          "canonicalSummary": "Settings reliably displayed its keyboard during two-factor authentication.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 resolves an intermittent authentication-input failure.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Keyboards” heading and “Two-Factor Authentication in Settings; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Keyboards — Two-Factor Authentication in Settings; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-chinese-lock-calendar",
+          "title": "Chinese lunar dates used consistent numerals on Lock screen",
+          "canonicalSummary": "The alternate Chinese calendar stopped mixing numeral systems when rendered on the Lock screen.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The fixed section records a localized calendar-formatting repair.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Lock Screen” heading and “Chinese alternate calendar numerals; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Lock Screen — Chinese alternate calendar numerals; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-messages-selection-callbacks",
+          "title": "Message-selection callbacks fired for foreground extensions",
+          "canonicalSummary": "Selecting a third-party bubble began invoking the extension’s will-select and did-select conversation callbacks.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 restores the missing extension-selection lifecycle notifications.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Messages” heading and “willSelectMessage and didSelectMessage callbacks; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Messages — willSelectMessage and didSelectMessage callbacks; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-messages-debug-attach",
+          "title": "Messages extension debugging used a stable attach sequence",
+          "canonicalSummary": "Launching an extension after Xcode entered its waiting-to-attach state avoided the earlier debugging failure.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple’s fixed section records the corrected launch timing for extension debugging.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Messages” heading and “Xcode waiting-to-attach sequence; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Messages — Xcode waiting-to-attach sequence; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-sticker-peeling",
+          "title": "Long-pressed stickers entered peeling mode again",
+          "canonicalSummary": "Holding a sticker once again started the peel interaction used to place it on a conversation.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The milestone repairs the gesture that begins sticker placement.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Messages” heading and “Sticker Peeling animation; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Messages — Sticker Peeling animation; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-messages-compact-offset",
+          "title": "Messages extensions shed the extra compact-mode offset",
+          "canonicalSummary": "Returning from expanded to compact presentation no longer left an unwanted gap above extension content.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 fixes the presentation-style layout offset.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Messages” heading and “Expanded-to-Compact transition; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Messages — Expanded-to-Compact transition; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-images-locale-scope",
+          "title": "#images stopped appearing in unsupported locales",
+          "canonicalSummary": "Messages no longer offered the #images browser where the service could not load.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The fixed section aligns feature visibility with regional availability.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Messages” heading and “#images in unsupported locales; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Messages — #images in unsupported locales; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-message-voiceover-labels",
+          "title": "VoiceOver announced third-party message labels",
+          "canonicalSummary": "Accessibility labels attached to third-party Messages content became audible through VoiceOver.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 restores spoken labeling for extension-generated messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Messages” heading and “Third-party message accessibility labels; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Messages — Third-party message accessibility labels; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-message-extension-enablement",
+          "title": "Downloaded Messages extensions enabled normally",
+          "canonicalSummary": "Newly installed Messages extensions no longer required a manual trip to the Manage tab before use.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The milestone fixes an installation state that left some extensions disabled.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Messages” heading and “Messages extensions download and install; Manage tab; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Messages — Messages extensions download and install; Manage tab; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-messages-rtl-photo-browser",
+          "title": "The Messages photo browser rendered in RTL layouts",
+          "canonicalSummary": "Right-to-left configurations no longer opened the Messages photo browser as an empty gray area.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 repairs the browser’s initial rendering direction.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Messages” heading and “RTL photo browser; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Messages — RTL photo browser; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-music-china-membership-view",
+          "title": "Apple Music opened normally for members in China",
+          "canonicalSummary": "Users in China no longer had to force-quit Music after updating from the previous beta to see the application.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple lists the post-update visibility failure among Beta 3’s fixes.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Music” heading and “China membership after Beta 2 update; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Music — China membership after Beta 2 update; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-notes-editing-crash",
+          "title": "Attachment and organization edits stopped crashing Notes",
+          "canonicalSummary": "Adding an attachment, deleting a note, or moving one no longer caused Notes to terminate.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 resolves a group of common note-editing crashes.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Notes” heading and “Adding an attachment, deleting, or moving notes; page 5” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Notes — Adding an attachment, deleting, or moving notes; page 5",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-volte-relay-audio",
+          "title": "Relayed CS and VoLTE calls retained downlink audio",
+          "canonicalSummary": "Calls answered on another device kept their incoming audio and no longer disconnected around the thirty-second mark.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The milestone repairs audio and stability in relayed cellular calls.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Phone” heading and “CS/VoLTE relay-call audio; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Phone — CS/VoLTE relay-call audio; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-simless-emergency-ui",
+          "title": "SIM-less emergency calls displayed the active call screen",
+          "canonicalSummary": "Dialing emergency number 08 without a SIM once again showed the Phone interface after connection.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 resolves the mismatch between a connected emergency call and its UI.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Phone” heading and “SIM-less emergency number 08; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Phone — SIM-less emergency number 08; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-reset-network-settings",
+          "title": "Reset All Settings preserved carrier connectivity",
+          "canonicalSummary": "Resetting device preferences no longer removed carrier configuration or prevented LTE attachment.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The fixed section restores carrier metadata and LTE service after a settings reset.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Phone” heading and “Reset All Settings and carrier bundle; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Phone — Reset All Settings and carrier bundle; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-911-call-end-screen",
+          "title": "Completed 911 calls no longer showed a failure screen",
+          "canonicalSummary": "Ending an emergency call stopped presenting the misleading Call Failed interface.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 corrects the terminal state displayed after an emergency call.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Phone” heading and “911 call completion UI; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Phone — 911 call completion UI; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-call-setting-state",
+          "title": "Call Forwarding and Call Waiting controls retained their state",
+          "canonicalSummary": "Settings kept the visible value of Call Forwarding or Call Waiting after the user left and returned to the screen.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The repair brings the displayed preference into line with the already-applied carrier option.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Phone” heading and “Call Forwarding and Call Waiting preferences; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Phone — Call Forwarding and Call Waiting preferences; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-watch-relay-handoff",
+          "title": "Apple Watch relay calls handed back from Lock screen",
+          "canonicalSummary": "Moving a relayed call from Apple Watch to a locked iPhone no longer dropped the connection.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 repairs a Lock-screen call-continuity path.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Phone” heading and “Apple Watch relay-call handoff; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Phone — Apple Watch relay-call handoff; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-memory-movie-consistency",
+          "title": "Memory movies retained their selected media between betas",
+          "canonicalSummary": "A Memory movie created under Beta 1 no longer substituted different photos or videos when reopened after Beta 2.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The fixed section records more stable automatic movie composition across upgrades.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Photos” heading and “Memory movies across Beta 1 and Beta 2; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Photos — Memory movies across Beta 1 and Beta 2; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-advertising-id-reset",
+          "title": "Signed-in users could reset the Advertising Identifier",
+          "canonicalSummary": "Logging into an iTunes account no longer disabled the control for regenerating the device’s advertising identifier.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 restores the privacy reset action for authenticated users.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Privacy” heading and “Advertising Identifier reset after iTunes login; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Privacy — Advertising Identifier reset after iTunes login; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-siri-audio-output",
+          "title": "Siri stopped interrupting media and Maps voice guidance",
+          "canonicalSummary": "Invoking Siri no longer left media paused or replaced spoken Maps directions with alert tones.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The milestone fixes two related audio-output disruptions around Siri use.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Siri” heading and “Audio playback and Maps navigation output; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Siri — Audio playback and Maps navigation output; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-siri-australian-voice",
+          "title": "Australian English Siri responses regained speech",
+          "canonicalSummary": "Siri reliably spoke responses when its selected voice was Australian English.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Beta 3 resolves the intermittent silent-response condition.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “Siri” heading and “Australian English voice-over; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "Siri — Australian English voice-over; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-sirikit-interaction-fields",
+          "title": "Intent UI extensions received response state",
+          "canonicalSummary": "INInteraction objects supplied to an Intents UI extension again carried their intent response and handling status.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The fixed section restores response context needed by SiriKit presentation extensions.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “SiriKit” heading and “INInteraction response and handling-status properties; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "SiriKit — INInteraction response and handling-status properties; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-sirikit-payment-method",
+          "title": "Invalid SiriKit payment-method parameters were retired",
+          "canonicalSummary": "Apple marked INPaymentMethod for removal from the affected request-payment intent declarations.",
+          "category": "developerApi",
+          "action": "removed",
+          "inheritance": "delta",
+          "summary": "Beta 3 clarifies an API surface that Apple considered invalid.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “SiriKit” heading and “INPaymentMethod in request-payment intents; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "SiriKit — INPaymentMethod in request-payment intents; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-sirikit-confirmation-handler",
+          "title": "SiriKit invoked handlers after a Ready confirmation",
+          "canonicalSummary": "An app extension that implemented intent confirmation and returned Ready could proceed to handle the request.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The milestone fixes handler dispatch for the documented confirmation path.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “SiriKit” heading and “Intent confirmation and Ready response; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "SiriKit — Intent confirmation and Ready response; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        },
+        {
+          "key": "apple-10-beta3-pasteboard-main-thread",
+          "title": "Pasteboard access became main-thread-only",
+          "canonicalSummary": "iOS 10 restricted pasteboard calls to the main thread, requiring apps to stop assuming background access would return a value.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple records the threading contract in Beta 3’s fixed section as a compatibility change.",
+          "documentedStatus": "documented",
+          "evidenceState": "corroborated",
+          "verificationMethod": "Matched the exact “UIKit” heading and “Main-thread pasteboard access; page 6” record beneath Apple’s “Fixed in this Release” heading in the complete Apple-authored Beta 3 transcript preserved by Scribd. A contemporaneous July 19 AEST post independently identifies a PDF named for iOS 10 Beta 3. Forum observations were not used as release-note facts.",
+          "citations": [
+            {
+              "url": "https://www.scribd.com/document/318576354/iOS-10-Beta-3-Release-Notes",
+              "locator": "UIKit — Main-thread pasteboard access; page 6",
+              "note": "Original synthesis from Apple’s fixed in this release record."
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T09:44:24Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

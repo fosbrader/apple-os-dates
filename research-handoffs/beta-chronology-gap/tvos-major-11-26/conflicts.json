@@ -1,0 +1,138 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-tvos-major-11-26",
+  "conflictCount": 4,
+  "conflicts": [
+    {
+      "conflictId": "tvos14-public-beta-4-date",
+      "severity": "material",
+      "subject": "tvOS 14 Public Beta 4 appearance date",
+      "positions": [
+        {
+          "position": "2020-08-05",
+          "sources": [
+            "source-tvos14-iculture-timeline"
+          ],
+          "summary": "iCulture's chronology displays August 5."
+        },
+        {
+          "position": "2020-08-06",
+          "sources": [
+            "source-tvos14-imore-timeline"
+          ],
+          "summary": "iMore's retained exact heading displays August 6; a contemporary MacRumors forum report also describes the public build as released August 6."
+        }
+      ],
+      "decision": {
+        "disposition": "propose2020-08-06PendingReview",
+        "confidence": "medium",
+        "rationale": "The candidate uses the exact iMore date and preserves the conflicting iCulture date rather than hiding it."
+      },
+      "reversalEvidence": "A primary Apple timestamp or two independent same-day sources that settle the availability boundary."
+    },
+    {
+      "conflictId": "tvos16-august-15-public-label",
+      "severity": "material",
+      "subject": "Whether the August 15 tvOS 16 public appearance was Public Beta 4 or Public Beta 6",
+      "positions": [
+        {
+          "position": "publicBeta4",
+          "sources": [
+            "source-tvos16-pb4-appleinsider"
+          ],
+          "summary": "Contemporary AppleInsider explicitly calls the public round Public Beta 4 and names tvOS 16."
+        },
+        {
+          "position": "publicBeta6",
+          "sources": [
+            "source-tvos16-iculture-timeline"
+          ],
+          "summary": "iCulture's living chronology labels the same date/build Public Beta 6, then lists Public Beta 5 nine days later."
+        }
+      ],
+      "decision": {
+        "disposition": "proposePublicBeta4AndDoNotProposePublicBeta6",
+        "confidence": "medium",
+        "rationale": "The contemporary explicit public-round report is internally monotonic; iCulture's Public Beta 6 line is internally non-monotonic and appears to borrow the developer ordinal."
+      },
+      "reversalEvidence": "A second independent contemporary publisher showing that Apple displayed Public Beta 6 to public testers on August 15."
+    },
+    {
+      "conflictId": "tvos18-public-numbering-jump",
+      "severity": "material",
+      "subject": "tvOS 18 public numbering after Public Beta 5",
+      "positions": [
+        {
+          "position": "publisherDisplayedPublicBeta8",
+          "sources": [
+            "source-tvos18-iculture-timeline",
+            "source-tvos18-pb8-macrumors"
+          ],
+          "summary": "iCulture explicitly labels the August 28 public appearance Public Beta 8; MacRumors independently confirms public availability that day."
+        },
+        {
+          "position": "crossPlatformRoundCouldBeCalledPublicBeta6",
+          "sources": [],
+          "summary": "Some same-day cross-platform headlines call companion public releases Public Beta 6 but do not explicitly assign that label to tvOS."
+        }
+      ],
+      "decision": {
+        "disposition": "preservePublicBeta8DoNotInfer6Or7",
+        "confidence": "medium",
+        "rationale": "The only retained tvOS-specific displayed public ordinal is 8. Public 6 and 7 remain not proposed."
+      },
+      "reversalEvidence": "A contemporary tvOS-specific source explicitly displaying Public Beta 6 or 7."
+    },
+    {
+      "conflictId": "tvos26-public-beta-5-calendar-date",
+      "severity": "nonMaterial",
+      "subject": "tvOS 26 Public Beta 5 date shown by US and Dutch publishers",
+      "positions": [
+        {
+          "position": "2025-08-25-pacific",
+          "sources": [
+            "source-tvos260-pb5-9to5mac"
+          ],
+          "summary": "9to5Mac reports availability at 2:57 p.m. Pacific on August 25."
+        },
+        {
+          "position": "2025-08-26-netherlands",
+          "sources": [
+            "source-tvos26-iculture-timeline"
+          ],
+          "summary": "iCulture displays August 26 in its Dutch chronology and revision history."
+        }
+      ],
+      "decision": {
+        "disposition": "normalizeTo2025-08-25PacificReleaseDate",
+        "confidence": "high",
+        "rationale": "The candidate follows the publisher's exact Pacific release timestamp; the Dutch next-calendar-day display remains documented."
+      }
+    }
+  ],
+  "numberingIrregularities": [
+    {
+      "version": "14.0",
+      "finding": "The retained public chronology has no Public Beta 3."
+    },
+    {
+      "version": "15.0",
+      "finding": "The retained source explicitly says Apple skipped Public Beta 3."
+    },
+    {
+      "version": "18.0",
+      "finding": "The retained tvOS-specific public chronology jumps from Public Beta 5 to Public Beta 8."
+    }
+  ],
+  "excludedAppearances": [
+    {
+      "identity": "Developer betas, GM/RC builds, and final public releases",
+      "reason": "They are separate channels and cannot manufacture a publicBeta event."
+    },
+    {
+      "identity": "tvOS 27 and all point/patch cycles",
+      "reason": "Outside this assignment."
+    }
+  ],
+  "reviewState": "readyForIndependentChronologyReview"
+}

@@ -1,0 +1,2804 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-2014-2019",
+  "researchCutoff": "2026-07-30",
+  "candidateCount": 45,
+  "summary": {
+    "byVersion": {
+      "10.10": 6,
+      "10.11": 5,
+      "10.12": 7,
+      "10.13": 8,
+      "10.14": 10,
+      "10.15": 9
+    },
+    "byCandidateStatus": {
+      "needsEvidenceReview": 45
+    },
+    "byEvidenceState": {
+      "corroborated": 39,
+      "reported": 6
+    },
+    "modelableAppearanceCandidateCount": 45,
+    "exceptionalHistoricalAppearanceCount": 2,
+    "excludedApparentAppearanceCount": 1,
+    "buildsIncluded": 0,
+    "substantiveChangeClaimsIncluded": 0,
+    "importantQualification": "The numbered sequence contains 45 candidates. The April 2014 10.9.3 program launch and the El Capitan Public Beta 5 replacement are separately preserved because the current numbered route schema cannot represent them truthfully. No candidate is chronology-approved or publication-eligible."
+  },
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:macos:10.10:public-beta-1",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.10",
+      "releaseVersionId": "version-macos-10-10",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2014-07-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-10-pb1",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-yosemite-pb1",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.10:public-beta-2",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.10",
+      "releaseVersionId": "version-macos-10-10",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2014-08-21",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-10-pb2",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-yosemite-pb2",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.10:public-beta-3",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.10",
+      "releaseVersionId": "version-macos-10-10",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2014-09-15",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-10-pb3",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-yosemite-pb3",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.10:public-beta-4",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.10",
+      "releaseVersionId": "version-macos-10-10",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2014-09-30",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-10-pb4",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-yosemite-pb4",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.10:public-beta-5",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.10",
+      "releaseVersionId": "version-macos-10-10",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2014-10-07",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-10-pb5",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-yosemite-pb5",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.10:public-beta-6",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.10",
+      "releaseVersionId": "version-macos-10-10",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2014-10-13",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-10-pb6",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 6, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-yosemite-pb6",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.10 Public Beta 6, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.11:public-beta-1",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.11",
+      "releaseVersionId": "version-macos-10-11",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-07-09",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-11-pb1",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.11 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-elcap-pb1",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.11 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.11:public-beta-2",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.11",
+      "releaseVersionId": "version-macos-10-11",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-07-22",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-11-pb2",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.11 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-elcap-pb2",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.11 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.11:public-beta-3",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.11",
+      "releaseVersionId": "version-macos-10-11",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-07-29",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-11-pb3",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.11 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-elcap-pb3",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.11 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.11:public-beta-4",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.11",
+      "releaseVersionId": "version-macos-10-11",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-08-04",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-11-pb4",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.11 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-elcap-pb4",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.11 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.11:public-beta-5",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.11",
+      "releaseVersionId": "version-macos-10-11",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-08-18",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "replaced",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "conflicted",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-11-pb5",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.11 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-elcap-pb5",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.11 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred.",
+        "Public Beta 5 was withdrawn and then reappeared under the same displayed ordinal; the current route schema cannot represent the replacement without a chronology-model decision.",
+        "Contemporary sources disagree whether the replacement returned August 19 or August 20."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.12:public-beta-1",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.12",
+      "releaseVersionId": "version-macos-10-12",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-07-07",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-12-pb1",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-sierra-pb1",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.12:public-beta-2",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.12",
+      "releaseVersionId": "version-macos-10-12",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-07-20",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-12-pb2",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-idb-sierra-pb2",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.12:public-beta-3",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.12",
+      "releaseVersionId": "version-macos-10-12",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-08-02",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-12-pb3",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-idb-sierra-pb3",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.12:public-beta-4",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.12",
+      "releaseVersionId": "version-macos-10-12",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-08-09",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-12-pb4",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-macmag-sierra-pb4",
+          "locator": "Update III at 18:19 on August 9 explicitly says Sierra Public Beta 4 was released through Apple Beta Software Program.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.12:public-beta-5",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.12",
+      "releaseVersionId": "version-macos-10-12",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-08-15",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-12-pb5",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-macworld-sierra-pb5",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.12:public-beta-6",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.12",
+      "releaseVersionId": "version-macos-10-12",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-08-22",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-12-pb6",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 6, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-macworld-sierra-pb6",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 6, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.12:public-beta-7",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.12",
+      "releaseVersionId": "version-macos-10-12",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-08-29",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-12-pb7",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 7, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-sierra-pb7",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Independent contemporary evidence for macOS 10.12 Public Beta 7, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.13:public-beta-1",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.13",
+      "releaseVersionId": "version-macos-10-13",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-06-29",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-13-pb1",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-high-sierra",
+          "locator": "Candidate-specific headed sections for Public Betas 1–7; use the prose sections, not the typo-prone recap list.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.13:public-beta-2",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.13",
+      "releaseVersionId": "version-macos-10-13",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-07-12",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-13-pb2",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-high-sierra",
+          "locator": "Candidate-specific headed sections for Public Betas 1–7; use the prose sections, not the typo-prone recap list.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.13:public-beta-3",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.13",
+      "releaseVersionId": "version-macos-10-13",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-07-25",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-13-pb3",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-high-sierra",
+          "locator": "Candidate-specific headed sections for Public Betas 1–7; use the prose sections, not the typo-prone recap list.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.13:public-beta-4",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.13",
+      "releaseVersionId": "version-macos-10-13",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-08-08",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-13-pb4",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-high-sierra",
+          "locator": "Candidate-specific headed sections for Public Betas 1–7; use the prose sections, not the typo-prone recap list.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.13:public-beta-5",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.13",
+      "releaseVersionId": "version-macos-10-13",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-08-14",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-13-pb5",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-high-sierra",
+          "locator": "Candidate-specific headed sections for Public Betas 1–7; use the prose sections, not the typo-prone recap list.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.13:public-beta-6",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.13",
+      "releaseVersionId": "version-macos-10-13",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-08-21",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-13-pb6",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 6, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-high-sierra",
+          "locator": "Candidate-specific headed sections for Public Betas 1–7; use the prose sections, not the typo-prone recap list.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 6, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.13:public-beta-7",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.13",
+      "releaseVersionId": "version-macos-10-13",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-08-28",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-13-pb7",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 7, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-high-sierra",
+          "locator": "Candidate-specific headed sections for Public Betas 1–7; use the prose sections, not the typo-prone recap list.",
+          "supports": "Independent contemporary evidence for macOS 10.13 Public Beta 7, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.13:public-beta-8",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.13",
+      "releaseVersionId": "version-macos-10-13",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-09-01",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-whirlpool-high-sierra-pb8",
+          "locator": "September 2 AEST post explicitly reports Public Beta 8 (= Developer Beta 9) that day.",
+          "supports": "Contemporary evidence for macOS 10.13 Public Beta 8; the packet keeps this identity at reported pending stronger editorial corroboration."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mrforum-high-sierra-pb8",
+          "locator": "September 2–4 posts report 17A360a and explicitly say High Sierra Public Beta 8 appeared.",
+          "supports": "Contemporary evidence for macOS 10.13 Public Beta 8; the packet keeps this identity at reported pending stronger editorial corroboration."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred.",
+        "A second independent contemporary editorial publisher lineage that explicitly preserves this public ordinal has not yet been retained."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.14:public-beta-1",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.14",
+      "releaseVersionId": "version-macos-10-14",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-06-26",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-14-pb1",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-mojave",
+          "locator": "Candidate-specific chronology entries for Mojave Public Betas 1–7.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.14:public-beta-2",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.14",
+      "releaseVersionId": "version-macos-10-14",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-06",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-14-pb2",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-mojave",
+          "locator": "Candidate-specific chronology entries for Mojave Public Betas 1–7.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.14:public-beta-3",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.14",
+      "releaseVersionId": "version-macos-10-14",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-17",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-14-pb3",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-mojave",
+          "locator": "Candidate-specific chronology entries for Mojave Public Betas 1–7.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.14:public-beta-4",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.14",
+      "releaseVersionId": "version-macos-10-14",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-07-31",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-14-pb4",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-mojave",
+          "locator": "Candidate-specific chronology entries for Mojave Public Betas 1–7.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.14:public-beta-5",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.14",
+      "releaseVersionId": "version-macos-10-14",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-06",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-14-pb5",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-mojave",
+          "locator": "Candidate-specific chronology entries for Mojave Public Betas 1–7.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.14:public-beta-6",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.14",
+      "releaseVersionId": "version-macos-10-14",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-13",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-14-pb6",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 6, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-mojave",
+          "locator": "Candidate-specific chronology entries for Mojave Public Betas 1–7.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 6, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.14:public-beta-7",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.14",
+      "releaseVersionId": "version-macos-10-14",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-20",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-14-pb7",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 7, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-mojave",
+          "locator": "Candidate-specific chronology entries for Mojave Public Betas 1–7.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 7, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.14:public-beta-8",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.14",
+      "releaseVersionId": "version-macos-10-14",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-08-27",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-monomaniac-mojave-pb8",
+          "locator": "August 28 JST entry explicitly reports Mojave Public Beta 8 build 18A377a.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 8, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-softpedia-mojave-pb8",
+          "locator": "Article update explicitly identifies Mojave Public Beta 8 as available to public testers.",
+          "supports": "Independent contemporary evidence for macOS 10.14 Public Beta 8, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.14:public-beta-9",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.14",
+      "releaseVersionId": "version-macos-10-14",
+      "proposedIdentity": {
+        "label": "Public Beta 9",
+        "routeAlias": "public-beta-9",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-09-05",
+        "sequence": 9,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-purudo-mojave-pb9",
+          "locator": "Headline and lead explicitly identify Mojave Public Beta 9 on September 5.",
+          "supports": "Contemporary evidence for macOS 10.14 Public Beta 9; the packet keeps this identity at reported pending stronger editorial corroboration."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-sysprofile-mojave-pb9",
+          "locator": "September 5 NewsBot post explicitly labels Mojave Public Beta 9.",
+          "supports": "Contemporary evidence for macOS 10.14 Public Beta 9; the packet keeps this identity at reported pending stronger editorial corroboration."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred.",
+        "A second independent contemporary editorial publisher lineage that explicitly preserves this public ordinal has not yet been retained."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.14:public-beta-10",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.14",
+      "releaseVersionId": "version-macos-10-14",
+      "proposedIdentity": {
+        "label": "Public Beta 10",
+        "routeAlias": "public-beta-10",
+        "channel": "publicBeta",
+        "appearanceDate": "2018-09-12",
+        "sequence": 10,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-osxd-mojave-pb10",
+          "locator": "Page metadata and the candidate-specific article paragraph or chronology section.",
+          "supports": "Contemporary evidence for macOS 10.14 Public Beta 10; the packet keeps this identity at reported pending stronger editorial corroboration."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mrforum-mojave-pb10",
+          "locator": "September 12 thread post states that the public beta was also available; follow-up posts discuss the candidate-final payload.",
+          "supports": "Contemporary evidence for macOS 10.14 Public Beta 10; the packet keeps this identity at reported pending stronger editorial corroboration."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred.",
+        "A second independent contemporary editorial publisher lineage that explicitly preserves this public ordinal has not yet been retained."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-1",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.15",
+      "releaseVersionId": "version-macos-10-15",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-06-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-15-pb1",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-catalina",
+          "locator": "Candidate-specific chronology entries and revision history for Catalina Public Betas 1–6. Its PB5 revision is August 20 at 08:32 CEST, which converts to August 19 at 23:32 PDT; use the Pacific date.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 1, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-2",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.15",
+      "releaseVersionId": "version-macos-10-15",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-03",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-15-pb2",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-catalina",
+          "locator": "Candidate-specific chronology entries and revision history for Catalina Public Betas 1–6. Its PB5 revision is August 20 at 08:32 CEST, which converts to August 19 at 23:32 PDT; use the Pacific date.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 2, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-3",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.15",
+      "releaseVersionId": "version-macos-10-15",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-07-18",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-15-pb3",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-catalina",
+          "locator": "Candidate-specific chronology entries and revision history for Catalina Public Betas 1–6. Its PB5 revision is August 20 at 08:32 CEST, which converts to August 19 at 23:32 PDT; use the Pacific date.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 3, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-4",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.15",
+      "releaseVersionId": "version-macos-10-15",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-01",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-15-pb4",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-catalina",
+          "locator": "Candidate-specific chronology entries and revision history for Catalina Public Betas 1–6. Its PB5 revision is August 20 at 08:32 CEST, which converts to August 19 at 23:32 PDT; use the Pacific date.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 4, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-5",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.15",
+      "releaseVersionId": "version-macos-10-15",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-19",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-15-pb5",
+          "locator": "The August 19 developer article's same-day public-availability update and its 10:23 a.m. PDT discussion record establish Catalina Public Beta 5 availability on August 19 Pacific.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-catalina",
+          "locator": "Candidate-specific chronology entries and revision history for Catalina Public Betas 1–6. Its PB5 revision is August 20 at 08:32 CEST, which converts to August 19 at 23:32 PDT; use the Pacific date.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 5, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-6",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.15",
+      "releaseVersionId": "version-macos-10-15",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-08-28",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-15-pb6",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 6, including its public audience, displayed ordinal, and appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-iculture-catalina",
+          "locator": "Candidate-specific chronology entries and revision history for Catalina Public Betas 1–6. Its PB5 revision is August 20 at 08:32 CEST, which converts to August 19 at 23:32 PDT; use the Pacific date.",
+          "supports": "Independent contemporary evidence for macOS 10.15 Public Beta 6, including its public audience, displayed ordinal, and appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-7",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.15",
+      "releaseVersionId": "version-macos-10-15",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-09-11",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mrforum-catalina-pb7",
+          "locator": "September 11 thread titled 'New Public Beta out now'; posts report 19A558d.",
+          "supports": "Contemporary evidence for macOS 10.15 Public Beta 7; the packet keeps this identity at reported pending stronger editorial corroboration."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-reddit-catalina-pb7",
+          "locator": "Same-day post explicitly labels Public Beta 7 and reports build 19A558d.",
+          "supports": "Contemporary evidence for macOS 10.15 Public Beta 7; the packet keeps this identity at reported pending stronger editorial corroboration."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-dosdude-catalina",
+          "locator": "Patcher changelog maps Developer Preview 7/Public Beta 6, Preview 8/Public Beta 7, and Preview 9/Public Beta 8 to dated support releases.",
+          "supports": "Contemporary evidence for macOS 10.15 Public Beta 7; the packet keeps this identity at reported pending stronger editorial corroboration."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred.",
+        "A second independent contemporary editorial publisher lineage that explicitly preserves this public ordinal has not yet been retained."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-8",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.15",
+      "releaseVersionId": "version-macos-10-15",
+      "proposedIdentity": {
+        "label": "Public Beta 8",
+        "routeAlias": "public-beta-8",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-09-23",
+        "sequence": 8,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-15-pb8",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Contemporary evidence for macOS 10.15 Public Beta 8; the packet keeps this identity at reported pending stronger editorial corroboration."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-dosdude-catalina",
+          "locator": "Patcher changelog maps Developer Preview 7/Public Beta 6, Preview 8/Public Beta 7, and Preview 9/Public Beta 8 to dated support releases.",
+          "supports": "Contemporary evidence for macOS 10.15 Public Beta 8; the packet keeps this identity at reported pending stronger editorial corroboration."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-reddit-catalina-pb8",
+          "locator": "Same-day post explicitly says Catalina Public Beta 8 went live after Developer Beta 9.",
+          "supports": "Contemporary evidence for macOS 10.15 Public Beta 8; the packet keeps this identity at reported pending stronger editorial corroboration."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred.",
+        "A second independent contemporary editorial publisher lineage that explicitly preserves this public ordinal has not yet been retained."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:10.15:public-beta-9",
+      "originCohortId": "macos-2014-2019-major-public-beta",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "10.15",
+      "releaseVersionId": "version-macos-10-15",
+      "proposedIdentity": {
+        "label": "Public Beta 9",
+        "routeAlias": "public-beta-9",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-09-30",
+        "sequence": 9,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "unverified",
+      "evidenceState": "reported",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "matchBasis": "The read-only published production query found zero macOS publicBeta events globally; this releaseVersion exists and therefore has zero exact {releaseVersionId, channel, routeAlias} matches.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mr-macos-10-15-pb9",
+          "locator": "JSON-LD headline/datePublished and the article lead or update that records public-beta availability.",
+          "supports": "Contemporary evidence for macOS 10.15 Public Beta 9; the packet keeps this identity at reported pending stronger editorial corroboration."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-appleinsider-catalina-pb9",
+          "locator": "September 30 article update states that Apple issued a public beta version of the latest Catalina release.",
+          "supports": "Contemporary evidence for macOS 10.15 Public Beta 9; the packet keeps this identity at reported pending stronger editorial corroboration."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mactrast-catalina-pb9",
+          "locator": "September 30 report says the latest Catalina beta was available to developer and public beta testers; it uses developer-style 'beta 10' wording.",
+          "supports": "Contemporary evidence for macOS 10.15 Public Beta 9; the packet keeps this identity at reported pending stronger editorial corroboration."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+          "sourceId": "source-mrforum-catalina-pb9",
+          "locator": "September 30 posts explicitly identify the currently installed public release as Public Beta 9.",
+          "supports": "Contemporary evidence for macOS 10.15 Public Beta 9; the packet keeps this identity at reported pending stronger editorial corroboration."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent human chronology review has not yet occurred.",
+        "A second independent contemporary editorial publisher lineage that explicitly preserves this public ordinal has not yet been retained."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The research agent reproduced source metadata and hashes but cannot count as an independent reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "notProposed": [
+    {
+      "recordId": "not-proposed:apple:macos:10.9.3:os-x-beta-seed-program",
+      "version": "10.9.3",
+      "appearanceDate": "2014-04-22",
+      "displayedLabel": "OS X Beta Seed Program",
+      "proposedChannel": "publicBeta",
+      "disposition": "modelingDecisionRequired",
+      "evidenceState": "corroborated",
+      "evidenceRefs": [
+        "source-origin-macworld",
+        "source-origin-ars",
+        "source-origin-9to5mac",
+        "source-origin-engadget"
+      ],
+      "reasons": [
+        "This is the first open recurring OS X public-seed appearance and must remain in the historical record.",
+        "The surviving sources do not display 'Public Beta 1'; inventing that ordinal would violate the program rules.",
+        "Production has no version-macos-10-9-3 releaseVersion parent, and the current candidate schema requires Public Beta N/public-beta-N."
+      ],
+      "productionReconciliation": {
+        "status": "existingIdentityConflict",
+        "queriedAt": "2026-07-31T02:59:06.504Z",
+        "exactIdentityMatches": 0,
+        "parentReleaseVersionExists": false
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:macos:10.11:public-beta-5-replacement-appearance",
+      "version": "10.11",
+      "appearanceDateRange": [
+        "2015-08-19",
+        "2015-08-20"
+      ],
+      "displayedLabel": "Public Beta 5",
+      "proposedChannel": "publicBeta",
+      "disposition": "duplicateDisplayedIdentityNeedsModelingDecision",
+      "evidenceState": "corroboratedWithDateConflict",
+      "evidenceRefs": [
+        "source-iculture-elcap-pb5",
+        "source-macworld-elcap-pb5-return"
+      ],
+      "reasons": [
+        "The original Public Beta 5 appeared August 18 and was withdrawn.",
+        "The replacement/reappearance retained the same displayed Public Beta 5 identity.",
+        "Macworld dates the return to August 19; iCulture's updated contemporary page dates it to August 20.",
+        "Creating another public-beta-5 route would collide with the original, and isRevision cannot be asserted without a defined public replacement identity rule."
+      ],
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:macos:10.15:apparent-public-beta-10-gm",
+      "version": "10.15",
+      "appearanceDate": "2019-10-03",
+      "displayedLabel": "Golden Master / apparent Public Beta 10",
+      "proposedChannel": "publicBeta",
+      "disposition": "doNotCreatePublicBetaEvent",
+      "evidenceState": "conflictedCommunityTerminology",
+      "evidenceRefs": [
+        "source-mr-macos-10-15-pb9",
+        "source-appleinsider-catalina-pb9",
+        "source-mrforum-catalina-pb9"
+      ],
+      "reasons": [
+        "Reliable contemporary reporting identifies September 30 as the ninth public-beta appearance.",
+        "Apple issued the Golden Master on October 3.",
+        "Later community discussion sometimes calls the GM payload Public Beta 10, but no retained reliable contemporary source separately establishes a Public Beta 10 appearance.",
+        "The program rule says that public testers receiving an RC/GM does not by itself create a publicBeta event."
+      ],
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ]
+}

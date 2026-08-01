@@ -1,0 +1,213 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios9-point",
+  "conflictCount": 7,
+  "conflicts": [
+    {
+      "conflictId": "ios921-aggregate-three-betas-versus-two-numbered-public-seeds",
+      "severity": "material",
+      "subject": "Whether iOS 9.2.1 had a third numbered public-beta appearance",
+      "positions": [
+        {
+          "position": "threeBetasAggregate",
+          "sources": [
+            "source-ios921-final-macrumors"
+          ],
+          "summary": "The final-release report says developers and public testers received three betas in total."
+        },
+        {
+          "position": "twoExactNumberedAppearances",
+          "sources": [
+            "source-ios921-pb1-macrumors",
+            "source-ios921-pb2-macrumors",
+            "source-ios921-pb2-9to5mac"
+          ],
+          "summary": "The retained exact chronology exposes Public Beta 1 on December 17 and Public Beta 2 on January 4, with no exact Public Beta 3 identity."
+        }
+      ],
+      "decision": {
+        "disposition": "doNotProposePublicBeta3",
+        "confidence": "high",
+        "rationale": "An aggregate count cannot supply a missing event identity, date, or displayed label. The direct numbered reports control until exact contrary evidence appears."
+      },
+      "reversalEvidence": "A contemporary source that explicitly identifies iOS 9.2.1 Public Beta 3, its availability date, and its public audience."
+    },
+    {
+      "conflictId": "ios91-public-beta-3-update-time",
+      "severity": "nonMaterial",
+      "subject": "Whether the untimestamped update on the September 30 MacRumors article establishes the public appearance date",
+      "positions": [
+        {
+          "position": "primaryUpdateHasNoSeparateTimestamp",
+          "sources": [
+            "source-ios91-pb3-macrumors"
+          ],
+          "summary": "MacRumors appended the public-audience statement to a September 30 article without displaying a separate update time."
+        },
+        {
+          "position": "independentSameDayCorroboration",
+          "sources": [
+            "source-ios91-pb3-9to5mac"
+          ],
+          "summary": "9to5Mac independently published and updated its public-beta report on September 30."
+        }
+      ],
+      "decision": {
+        "disposition": "resolvedAs2015-09-30",
+        "confidence": "high",
+        "rationale": "The independent same-day report removes the date ambiguity while preserving Public Beta 3 as a separate audience appearance."
+      }
+    },
+    {
+      "conflictId": "ios91-public-beta-5-multiple-build-variants",
+      "severity": "nonMaterial",
+      "subject": "Whether one build can represent the iOS 9.1 Public Beta 5 appearance",
+      "positions": [
+        {
+          "position": "multipleDeviceQualifiedBuilds",
+          "sources": [
+            "source-ios91-pb5-macrumors"
+          ],
+          "summary": "The report identifies one public build for the general device set and another for the newly released iPhone models."
+        },
+        {
+          "position": "singleAppearanceWithoutBuild",
+          "sources": [
+            "source-ios91-pb5-macrumors"
+          ],
+          "summary": "The audience appearance is unambiguous even though one unqualified build value would be misleading."
+        }
+      ],
+      "decision": {
+        "disposition": "omitBuildFromCandidate",
+        "confidence": "high",
+        "rationale": "Build variants require device-qualified modeling. The chronology candidate records the public appearance only."
+      }
+    },
+    {
+      "conflictId": "ios93-beta-1-1-developer-respin-boundary",
+      "severity": "material",
+      "subject": "Whether iOS 9.3 developer Beta 1.1 creates a public Beta 1.1 event",
+      "positions": [
+        {
+          "position": "developerRespinsAreDistinctDeveloperAppearances",
+          "sources": [
+            "source-ios93-developer-beta-1-1-macrumors"
+          ],
+          "summary": "The retained cycle evidence identifies Beta 1.1 as a developer repair seed."
+        },
+        {
+          "position": "publicAppearanceRemainsPublicBeta1",
+          "sources": [
+            "source-ios93-pb1-macrumors"
+          ],
+          "summary": "The public-program report labels the January 14 distribution as the first public beta, not Public Beta 1.1."
+        }
+      ],
+      "decision": {
+        "disposition": "doNotCreatePublicBeta1Point1",
+        "confidence": "high",
+        "rationale": "Developer revision labels do not transfer to the public channel without explicit public-channel evidence."
+      },
+      "reversalEvidence": "A public-program source explicitly displaying Public Beta 1.1 as a separate public appearance."
+    },
+    {
+      "conflictId": "ios92-iculture-slug-and-copy-audience-mismatch",
+      "severity": "nonMaterial",
+      "subject": "Misleading developer-focused URL slugs or body copy on iCulture's iOS 9.2 Public Beta 2 and Public Beta 4 reports",
+      "positions": [
+        {
+          "position": "developerFocusedSlugOrCopy",
+          "sources": [
+            "source-ios92-pb2-iculture",
+            "source-ios92-pb4-iculture"
+          ],
+          "summary": "The legacy slugs mention developers, and the Public Beta 2 lead retains developer-focused copy."
+        },
+        {
+          "position": "publicSpecificPublishedHeadline",
+          "sources": [
+            "source-ios92-pb2-iculture",
+            "source-ios92-pb4-iculture"
+          ],
+          "summary": "The retained rendered headlines explicitly label the second and fourth releases for public testers on the candidate dates."
+        }
+      ],
+      "decision": {
+        "disposition": "useRenderedHeadlineAndPreserveMismatch",
+        "confidence": "high",
+        "rationale": "A legacy URL slug is not an event label. The rendered publisher headline explicitly identifies the public audience and ordinal, while the mismatch remains documented."
+      }
+    },
+    {
+      "conflictId": "ios932-public-beta-1-dated-update-boundary",
+      "severity": "material",
+      "subject": "Whether iOS 9.3.2 Public Beta 1 appeared on the developer article's April 6 publication date or its April 7 public update",
+      "positions": [
+        {
+          "position": "developerSeedPublishedApril6",
+          "sources": [
+            "source-ios932-pb1-9to5mac"
+          ],
+          "summary": "The original article and headline identify the first developer seed on April 6."
+        },
+        {
+          "position": "publicAppearanceExplicitlyUpdatedApril7",
+          "sources": [
+            "source-ios932-pb1-9to5mac"
+          ],
+          "summary": "The retained article has an explicit April 7 update saying iOS 9.3.2 became available as a public beta."
+        }
+      ],
+      "decision": {
+        "disposition": "use2016-04-07ForPublicAppearance",
+        "confidence": "high",
+        "rationale": "Developer and public audience appearances are separate events. The explicitly dated public update controls the public chronology."
+      },
+      "reversalEvidence": "A contemporary public-program source explicitly showing availability before April 7, 2016."
+    },
+    {
+      "conflictId": "ios933-iculture-stale-pre-update-copy",
+      "severity": "nonMaterial",
+      "subject": "Stale developer-only or future-tense paragraphs within same-day revised iCulture pages for iOS 9.3.3 Public Beta 1 and Public Beta 3",
+      "positions": [
+        {
+          "position": "stalePreUpdateParagraphs",
+          "sources": [
+            "source-ios933-pb1-iculture",
+            "source-ios933-pb3-iculture"
+          ],
+          "summary": "Later page paragraphs still say the public release will follow or describe only developer availability."
+        },
+        {
+          "position": "sameDayRevisedHeadlineAndLead",
+          "sources": [
+            "source-ios933-pb1-iculture",
+            "source-ios933-pb3-iculture"
+          ],
+          "summary": "The rendered headline or lead explicitly says the first or third public beta is available, and JSON-LD records a same-day modification."
+        }
+      ],
+      "decision": {
+        "disposition": "useRevisedHeadlineAndLeadPreserveStaleCopy",
+        "confidence": "high",
+        "rationale": "The revision-specific text is direct public-availability evidence; the internally stale paragraphs are preserved so downstream reviewers can reproduce the source history."
+      }
+    }
+  ],
+  "excludedAppearances": [
+    {
+      "identity": "iOS 9.3.1 Public",
+      "reason": "A public bug-fix release is not a public beta; no exact public-beta appearance was found or inferred."
+    },
+    {
+      "identity": "iOS 9.3.4 Public and iOS 9.3.5 Public",
+      "reason": "Public security releases are not repurposed as beta events."
+    },
+    {
+      "identity": "Revised public builds of iOS 9.2.1 and iOS 9.3",
+      "reason": "A revised final public payload is not a public-beta appearance."
+    }
+  ],
+  "reviewState": "corroboratedSelfCheckCompletePendingIndependentChronologyReview"
+}

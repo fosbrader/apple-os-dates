@@ -1,0 +1,805 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/100502",
+      "title": "Apple security updates (2013)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Apple software",
+        "2013",
+        "release dates",
+        "security updates"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+      "title": "Apple Releases Developer Preview of OS X Mavericks With More Than 200 New Features",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2013-06-10T00:00:00.000Z",
+      "topics": [
+        "OS X",
+        "Mavericks",
+        "10.9",
+        "developer preview",
+        "features"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+      "title": "OS X Mavericks Available Today Free from the Mac App Store",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2013-10-22T00:00:00.000Z",
+      "topics": [
+        "OS X",
+        "Mavericks",
+        "10.9",
+        "availability",
+        "features"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+      "title": "Power Efficiency in OS X",
+      "publisher": "Apple",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "OS X",
+        "Mavericks",
+        "10.9",
+        "power efficiency",
+        "developer technology"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103373",
+      "title": "About the security content of OS X Mavericks v10.9",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "OS X",
+        "Mavericks",
+        "10.9",
+        "security",
+        "CVE"
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-10-9",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "OS X Mavericks 10.9 reached the Mac App Store on October 22, 2013. The major release combined new Maps and iBooks apps with Finder organization, multi-display work, interactive notifications, credential syncing, browser and calendar changes, power and memory technologies, developer tooling, a free-upgrade policy, and a broad security baseline.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+                "locator": "October 22, 2013; launch overview and feature list"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100502",
+                "locator": "OS X Mavericks v10.9 — 22 Oct 2013"
+              },
+              {
+                "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+                "locator": "OS X Mavericks Power Technologies"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103373",
+                "locator": "OS X Mavericks v10.9 security content"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Development and release"
+          },
+          {
+            "text": "Apple released the Mavericks developer preview to Mac Developer Program members on June 10 and said the public version would arrive from the Mac App Store in the fall. The retained launch announcement and security index both identify October 22 as public availability.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+                "locator": "June 10, 2013; preview availability"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+                "locator": "October 22, 2013; Pricing & Availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100502",
+                "locator": "OS X Mavericks v10.9 — 22 Oct 2013"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Apps and desktop workflow"
+          },
+          {
+            "text": "Mavericks extended Apple services to the Mac through iBooks, Maps, and iCloud Keychain, while adding travel context in Calendar, Shared Links in Safari, actionable notifications, independent multi-display work, and tab-and-tag organization in Finder.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+                "locator": "Feature list"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+                "locator": "Apps, Finder, displays, and notifications paragraphs"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Efficiency and platform technology"
+          },
+          {
+            "text": "Timer Coalescing, App Nap, Compressed Memory, centralized task scheduling, graphics optimizations, energy-usage views, powermetrics, and scheduling APIs formed the documented performance and power package. These descriptions follow Apple's launch-era technical record and do not treat Apple's performance characterizations as independent benchmarks.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+                "locator": "Core technologies paragraph"
+              },
+              {
+                "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+                "locator": "Pages 2–7; Mavericks power technologies"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "The structured public-release changes require support from Apple's October launch announcement, October technical paper, or version-specific 10.9 advisory. June-only preview details are not promoted into public deltas, 10.9.1 and later work is not projected backward, and no build number or undocumented behavior is inferred.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+                "locator": "June 10 developer-preview scope"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+                "locator": "October 22 public-launch scope"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100502",
+                "locator": "OS X Mavericks v10.9 and v10.9.1 release lines"
+              },
+              {
+                "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+                "locator": "October 2013 footer and Mavericks scope"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103373",
+                "locator": "OS X Mavericks v10.9 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+          "locator": "June 10, 2013"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+          "locator": "October 22, 2013"
+        },
+        {
+          "url": "https://support.apple.com/en-us/100502",
+          "locator": "OS X Mavericks v10.9 — 22 Oct 2013"
+        },
+        {
+          "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+          "locator": "OS X Mavericks Power Technologies"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103373",
+          "locator": "OS X Mavericks v10.9"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:42:52Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-macos-10-9",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "OS X Mavericks 10.9 reached the public channel on October 22, 2013 with new apps and Finder workflows, expanded desktop and notification behavior, power and memory technologies, free-upgrade compatibility, and documented security repairs.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple made Mavericks available on October 22, 2013 as a free Mac App Store download. Apple's archived 2013 security index independently assigns the same date and lists Mac OS X 10.6.8 or later as the available-for baseline.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+                "locator": "October 22, 2013; Pricing & Availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100502",
+                "locator": "OS X Mavericks v10.9 — 22 Oct 2013"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What this page records"
+          },
+          {
+            "text": "The structured entries synthesize the confirmed public package across iBooks, Maps, Calendar, Safari, iCloud Keychain, displays, notifications, Finder, energy use, memory, graphics, developer diagnostics, compatibility, and the initial Mavericks security advisory.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+                "locator": "Launch overview through core technologies"
+              },
+              {
+                "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+                "locator": "Mavericks power technologies"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103373",
+                "locator": "OS X Mavericks v10.9 security content"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Date and availability boundary"
+          },
+          {
+            "text": "The Apple Newsroom URL contains a path segment dated October 23, but the page header and dateline say October 22, and Apple's separate 2013 security index also says October 22. The article therefore retains the local October 22 date and treats the URL path as an archival routing inconsistency.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+                "locator": "URL path /2013/10/23; page header and dateline October 22, 2013"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100502",
+                "locator": "OS X Mavericks v10.9 — 22 Oct 2013"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Version boundary"
+          },
+          {
+            "text": "This event represents the initial 10.9 public release only. Apple's 2013 index separately lists Mavericks 10.9.1 on December 16, but the local catalog has no corresponding durable version route, so that update is excluded rather than merged into 10.9.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/100502",
+                "locator": "OS X Mavericks v10.9 — 22 Oct 2013; OS X Mavericks v10.9.1 — 16 Dec 2013"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+          "locator": "October 22, 2013; Pricing & Availability"
+        },
+        {
+          "url": "https://support.apple.com/en-us/100502",
+          "locator": "OS X Mavericks v10.9 — 22 Oct 2013"
+        },
+        {
+          "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+          "locator": "OS X Mavericks Power Technologies"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103373",
+          "locator": "OS X Mavericks v10.9"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-10-9-ibooks",
+          "title": "iBooks on Mac",
+          "canonicalSummary": "Mavericks brought iBooks libraries, store access, reading position, notes, and highlights to the Mac.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new Mac app connected a user's eligible book collection and reading state across supported Apple devices, extending Apple's reading service beyond iPhone and iPad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Feature list; iBooks"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+              "locator": "iBooks paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-maps",
+          "title": "Maps on Mac",
+          "canonicalSummary": "Mavericks added a desktop Maps app with trip planning that could send directions to an iPhone for navigation.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The public release created a Mac planning surface for Apple Maps and a handoff path that moved a prepared route to a supported iPhone for voice guidance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Feature list; Maps"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+              "locator": "Maps paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-calendar-travel-context",
+          "title": "Calendar travel context",
+          "canonicalSummary": "Calendar added estimated travel time along with event-related map and weather context.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The redesigned scheduling app could place appointments in geographic context and estimate the time required to reach them.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Feature list; Calendar"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-safari-shared-links",
+          "title": "Safari Shared Links",
+          "canonicalSummary": "Safari added Shared Links, a unified view of web links posted by followed Twitter and LinkedIn accounts.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The browser gained a social discovery feed that collected links from supported accounts inside Safari instead of requiring separate service views.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Feature list; Safari Shared Links"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+              "locator": "Safari paragraph; Shared Links"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-icloud-keychain",
+          "title": "iCloud Keychain",
+          "canonicalSummary": "iCloud Keychain stored supported website credentials, payment-card details, and Wi-Fi passwords and synchronized them to trusted devices.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Mavericks introduced an encrypted Apple-managed credential store intended to reduce repeated entry of common account, network, and checkout information across a user's devices.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Feature list; iCloud Keychain"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+              "locator": "Additional features; iCloud Keychain and AES-256 description"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-multiple-displays",
+          "title": "Expanded multiple-display support",
+          "canonicalSummary": "Mavericks improved multi-display use so windowed and full-screen apps could operate on the chosen display without a separate configuration step.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release reduced restrictions around full-screen workflows across more than one display and made the desktop arrangement more independent per screen.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Feature list; multi-display support"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+              "locator": "Multiple displays paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-interactive-notifications",
+          "title": "Interactive notifications",
+          "canonicalSummary": "Notifications gained inline actions for replying to messages, responding to FaceTime calls, and deleting email.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Users could complete several common communication actions directly from a notification without switching away from the application they were using.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Feature list; interactive Notifications"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+              "locator": "Additional features; interactive Notifications"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-finder-tabs",
+          "title": "Finder Tabs",
+          "canonicalSummary": "Finder Tabs consolidated multiple file-browser views into one window with separate tabs.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Mavericks brought a tabbed workflow to Finder so users could organize several locations in a single window and reduce desktop clutter.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Feature list; Finder Tabs"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+              "locator": "Finder Tabs paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-finder-tags",
+          "title": "Finder Tags",
+          "canonicalSummary": "Finder Tags provided a metadata-based way to organize and retrieve files stored locally or in iCloud.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Users could classify documents by project or category independently of their folder location and browse those classifications from Finder.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Feature list; Finder Tags"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+              "locator": "Finder Tags paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-timer-coalescing",
+          "title": "Timer Coalescing",
+          "canonicalSummary": "Timer Coalescing aligned noncritical timer work so the processor could remain idle for longer intervals.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The operating system shifted eligible timer execution within small priority-sensitive windows, combining wakeups from multiple processes to reduce unnecessary CPU activity.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Core technologies; Timer Coalescing"
+            },
+            {
+              "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+              "locator": "Pages 3–4; Timer Coalescing"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-app-nap",
+          "title": "App Nap",
+          "canonicalSummary": "App Nap reduced CPU, disk, and network activity for eligible applications that were not visible or actively needed.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Mavericks could place qualifying background apps into a lower-power state using timer and I/O throttling plus reduced process priority, while excluding foreground and certain active applications.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Core technologies; App Nap"
+            },
+            {
+              "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+              "locator": "Pages 2–3; App Nap"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-compressed-memory",
+          "title": "Compressed Memory",
+          "canonicalSummary": "Compressed Memory reduced the footprint of inactive data and restored it when needed.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "When memory pressure increased, Mavericks compressed inactive contents in place to preserve responsiveness and available capacity rather than treating them at full size.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Core technologies; Compressed Memory"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+              "locator": "Core technologies; Compressed Memory"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-integrated-graphics-performance",
+          "title": "Integrated graphics optimizations",
+          "canonicalSummary": "Mavericks improved integrated-graphics performance through optimized OpenCL support and dynamic video-memory allocation.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release adjusted compute and memory handling for Macs with integrated graphics, with the performance characterization coming from Apple's launch material.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Core technologies; integrated graphics"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-centralized-task-scheduling",
+          "title": "Centralized Task Scheduling",
+          "canonicalSummary": "Centralized Task Scheduling deferred or suppressed eligible maintenance and background work while a Mac was on battery power.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The system coordinated recurring background tasks around power state so nonessential work could happen later or only while external power was available.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+              "locator": "Page 3; Centralized Task Scheduling"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-energy-usage-visibility",
+          "title": "Per-app energy visibility",
+          "canonicalSummary": "Activity Monitor and the battery menu exposed application energy use to help identify software consuming significant power.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Mavericks added user-facing diagnostics for current and historical energy demand, including a battery-menu signal for applications using substantial energy.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+              "locator": "Pages 5–6; Activity Monitor and Battery status menu"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-power-developer-tools",
+          "title": "Power measurement tools and APIs",
+          "canonicalSummary": "Mavericks added powermetrics and energy-management APIs that helped developers inspect usage and communicate scheduling needs.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Developers gained command-line CPU power metrics plus interfaces for long-running operations and timer tolerance, complementing the system's automatic power management.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/media/us/osx/2013/docs/OSX_Power_Efficiency_Technology_Overview.pdf",
+              "locator": "Pages 6–7; powermetrics and APIs"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2013/06/10Apple-Releases-Developer-Preview-of-OS-X-Mavericks-With-More-Than-200-New-Features/",
+              "locator": "Xcode 5 energy-use tooling"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-free-upgrade-compatibility",
+          "title": "Free upgrade and Mountain Lion hardware baseline",
+          "canonicalSummary": "Apple offered Mavericks free through the Mac App Store to Macs capable of running Mountain Lion, with direct upgrades from Snow Leopard, Lion, or Mountain Lion.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release established a no-cost major OS X upgrade and retained the preceding Mountain Lion hardware baseline, while allowing installation from three prior system generations.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2013/10/23OS-X-Mavericks-Available-Today-Free-from-the-Mac-App-Store/",
+              "locator": "Pricing & Availability"
+            },
+            {
+              "url": "https://support.apple.com/en-us/100502",
+              "locator": "OS X Mavericks v10.9 — 22 Oct 2013"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-network-session-security",
+          "title": "Firewall, session, and transport repairs",
+          "canonicalSummary": "Mavericks repaired application-firewall enforcement, Safari session-cookie clearing, and encrypted-transport weaknesses.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory records corrections to blocked-app handling, removal of reset Safari session cookies, and adoption of TLS 1.2 in CFNetwork to mitigate weaknesses in older protocol modes.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103373",
+              "locator": "Application Firewall; CFNetwork; CFNetwork SSL"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-sandbox-file-launch-security",
+          "title": "Sandbox, launch, and filename repairs",
+          "canonicalSummary": "The initial security baseline tightened sandboxed process launches, unsafe log-entry links, and deceptive filename-extension display.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The advisory describes an App Sandbox escape path, changes Console links to preview rather than execute directly, and filters unsafe Unicode characters that could disguise a file extension.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103373",
+              "locator": "App Sandbox; Console; LaunchServices"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-display-input-lock-security",
+          "title": "Display, input, authorization, and screen-lock repairs",
+          "canonicalSummary": "Mavericks addressed lock-screen visibility, secure-input capture, administrator authorization, delayed locking, hibernation wake, and power-management lock behavior.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documents state, validation, and authorization corrections spanning CoreGraphics, security preferences, power assertions, and two separate screen-lock paths.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103373",
+              "locator": "CoreGraphics; Power Management; Security - Authorization; Screen Lock"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-kernel-driver-runtime-security",
+          "title": "Kernel, driver, extension, and runtime repairs",
+          "canonicalSummary": "The release repaired memory, validation, disclosure, privilege, persistence, and denial-of-service problems across the kernel, drivers, extensions, and runtime loader.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory covers Bluetooth and USB controllers, IOKit and serial drivers, dyld persistence, multiple kernel interfaces and network paths, and authorization for loaded kernel-extension management.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103373",
+              "locator": "Bluetooth; dyld; IOKitUser; IOSerialFamily; Kernel; Kext Management; USB"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-mail-remote-service-security",
+          "title": "Mail and remote-service repairs",
+          "canonicalSummary": "Mavericks corrected Mail authentication, signature display, and transport behavior along with Screen Sharing and guest-log exposure.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The advisory records safer account-authentication selection, accurate signed-message presentation, improved Kerberos mail transport handling, a VNC username vulnerability repair, and tighter guest access to prior log messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103373",
+              "locator": "Mail Accounts; Mail Header Display; Mail Networking; Screen Sharing Server; syslog"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-9-library-certificate-security",
+          "title": "Bundled-library and certificate repairs",
+          "canonicalSummary": "The initial release updated curl, Perl, Python, and Ruby security behavior and tightened certificate and directory-service handling.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory documents library updates for code-execution, denial-of-service, and transport risks, disables most use of MD5-signed X.509 certificates, and corrects OpenLDAP and smart-card certificate checks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch material, October 2013 technical documentation, or version-specific security advisory to the existing audited Mavericks 10.9 public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103373",
+              "locator": "curl; Libc; OpenLDAP; perl; python; ruby; Security; Security - Smart Card Services"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:42:52Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

@@ -1,0 +1,777 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-point-15-26-followup",
+  "generatedAt": "2026-07-31T07:26:59.463Z",
+  "mappingCount": 8,
+  "evidenceReadyCount": 6,
+  "remainsBlockedCount": 2,
+  "identityCorrectionCount": 0,
+  "mappings": [
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-3",
+      "identity": {
+        "candidateId": "candidate:apple:macos:15.1:public-beta-3",
+        "platform": "macOS",
+        "platformId": "platform-macos",
+        "version": "15.1",
+        "releaseVersionId": "version-macos-15-1",
+        "proposedIdentity": {
+          "label": "Public Beta 3",
+          "routeAlias": "public-beta-3",
+          "channel": "publicBeta",
+          "appearanceDate": "2024-10-07",
+          "sequence": 3,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        }
+      },
+      "identityPreservedUnchanged": true,
+      "parentCandidateRecordSha256": "74bff1f8e6a9c59b2fb7606a2c5e138f14d03acc151a4addd67a039a980b3972",
+      "identityFingerprintSha256": "073ffead4cc6e5c043cbc6fd7f207b4d0f4e36f13b489f13d0fee347c4e4f3f2",
+      "parentReviewDisposition": "blocked",
+      "productionReconciliation": {
+        "queriedAt": "2026-07-31T07:27:50.043Z",
+        "perspective": "published",
+        "useCdn": false,
+        "parentExists": true,
+        "exactRouteIdentityMatchCount": 0,
+        "exactFullCandidateMatchCount": 0,
+        "result": "confirmedMissing"
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "stableEventIdCreationAllowed": false,
+        "publicationEligible": false,
+        "pageWorkAllowed": false,
+        "deploymentAllowed": false
+      },
+      "independentReview": {
+        "status": "pending",
+        "required": true
+      },
+      "researchDisposition": "evidenceReadyPendingIndependentReview",
+      "retainedParentEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "9to5-151-cycle",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "9to5Mac",
+          "publisherFamily": "9to5Mac",
+          "canonicalUrl": "https://9to5mac.com/guides/macos-sequoia-15-1/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/9to5-151-cycle.html",
+          "rawSha256": "9a9935602a9f63e9b4cba9075457f3b2aea5a7d25ac3b4472cbebeaec56430de",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "supplementEvidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-151-pb3-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-15-1-sequoia-public-beta-3-24b5070a/",
+          "publishedAt": "2024-10-07T22:45:28Z",
+          "appearanceDatePacific": "2024-10-07",
+          "selectedTextSha256": "a0a89b767bcb8032a5640384ebfaa76626d751e5bb9f5cc48ff106671123c5aa",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "9to5-151-cycle",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "9to5Mac",
+          "publisherFamily": "9to5Mac",
+          "canonicalUrl": "https://9to5mac.com/guides/macos-sequoia-15-1/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/9to5-151-cycle.html",
+          "rawSha256": "9a9935602a9f63e9b4cba9075457f3b2aea5a7d25ac3b4472cbebeaec56430de",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        },
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-151-pb3-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-15-1-sequoia-public-beta-3-24b5070a/",
+          "publishedAt": "2024-10-07T22:45:28Z",
+          "appearanceDatePacific": "2024-10-07",
+          "selectedTextSha256": "a0a89b767bcb8032a5640384ebfaa76626d751e5bb9f5cc48ff106671123c5aa",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "exactIndependentPublisherLineageCount": 2,
+      "finding": "Two independent publisher lineages each establish the exact macOS version, displayed Public Beta ordinal, public channel, and proposed Pacific appearance date."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.3:public-beta-3",
+      "identity": {
+        "candidateId": "candidate:apple:macos:15.3:public-beta-3",
+        "platform": "macOS",
+        "platformId": "platform-macos",
+        "version": "15.3",
+        "releaseVersionId": "version-macos-15-3",
+        "proposedIdentity": {
+          "label": "Public Beta 3",
+          "routeAlias": "public-beta-3",
+          "channel": "publicBeta",
+          "appearanceDate": "2025-01-16",
+          "sequence": 3,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        }
+      },
+      "identityPreservedUnchanged": true,
+      "parentCandidateRecordSha256": "7472a99e251a41866323f79f14bc3bb7c510941b524b19a1bd36cf2138801f1d",
+      "identityFingerprintSha256": "b1c40fe665f85423c8646880be1b15cf7b57949d3334c17cbe477a125d8a19a2",
+      "parentReviewDisposition": "blocked",
+      "productionReconciliation": {
+        "queriedAt": "2026-07-31T07:27:50.043Z",
+        "perspective": "published",
+        "useCdn": false,
+        "parentExists": true,
+        "exactRouteIdentityMatchCount": 0,
+        "exactFullCandidateMatchCount": 0,
+        "result": "confirmedMissing"
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "stableEventIdCreationAllowed": false,
+        "publicationEligible": false,
+        "pageWorkAllowed": false,
+        "deploymentAllowed": false
+      },
+      "independentReview": {
+        "status": "pending",
+        "required": true
+      },
+      "researchDisposition": "remainsBlocked",
+      "retainedParentEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "9to5-153-cycle",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "9to5Mac",
+          "publisherFamily": "9to5Mac",
+          "canonicalUrl": "https://9to5mac.com/guides/macos-sequoia-15-3/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/9to5-153-cycle.html",
+          "rawSha256": "ebdb496e05bd8a11c6005177549dd78e7f7c91133e455bea7f2421fde0f28e96",
+          "selectedFor": "Public availability and date only; excluded from displayed-public-ordinal proof."
+        }
+      ],
+      "supplementEvidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-153-pb3-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-15-3-sequoia-public-beta-3-24d5055b/",
+          "publishedAt": "2025-01-17T01:53:07Z",
+          "appearanceDatePacific": "2025-01-16",
+          "selectedTextSha256": "a8385f2cfb567f5cdfada77d01880c03c367dda1eb1cb9340e6a9d1e70203054",
+          "selectedFor": "One exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "selectedEvidenceRefs": [],
+      "exactIndependentPublisherLineageCount": 1,
+      "blocker": "Only Monomaniac independently displays Public Beta 3 with a publisher timestamp normalizing to January 16 Pacific. The retained 9to5Mac and OS X Daily material uses a developer ordinal or generic beta-program availability, so a second exact lineage is still absent."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-1",
+      "identity": {
+        "candidateId": "candidate:apple:macos:15.4:public-beta-1",
+        "platform": "macOS",
+        "platformId": "platform-macos",
+        "version": "15.4",
+        "releaseVersionId": "version-macos-15-4",
+        "proposedIdentity": {
+          "label": "Public Beta 1",
+          "routeAlias": "public-beta-1",
+          "channel": "publicBeta",
+          "appearanceDate": "2025-02-24",
+          "sequence": 1,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        }
+      },
+      "identityPreservedUnchanged": true,
+      "parentCandidateRecordSha256": "eae355d55a134ca096bb6edd3f9f0b57d23da767620acc7f9fa6a9a2581e51ef",
+      "identityFingerprintSha256": "5e7b7dd2972ec720d843ee36103008adc1664bed5ae9bcc2205d8c984e9e6f2d",
+      "parentReviewDisposition": "blocked",
+      "productionReconciliation": {
+        "queriedAt": "2026-07-31T07:27:50.043Z",
+        "perspective": "published",
+        "useCdn": false,
+        "parentExists": true,
+        "exactRouteIdentityMatchCount": 0,
+        "exactFullCandidateMatchCount": 0,
+        "result": "confirmedMissing"
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "stableEventIdCreationAllowed": false,
+        "publicationEligible": false,
+        "pageWorkAllowed": false,
+        "deploymentAllowed": false
+      },
+      "independentReview": {
+        "status": "pending",
+        "required": true
+      },
+      "researchDisposition": "evidenceReadyPendingIndependentReview",
+      "retainedParentEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "mr-154-pb1",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "MacRumors",
+          "publisherFamily": "MacRumors",
+          "canonicalUrl": "https://www.macrumors.com/2025/02/24/apple-seeds-ios-18-4-public-beta/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/mr-154-pb1.html",
+          "rawSha256": "0ff45bd0874ac4c6ab01db8a3e15ab939d9773fbff9d6f4464d937d44465047b",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "supplementEvidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "sourceId": "macerkopf-154-pb1-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Macerkopf",
+          "publisherFamily": "Macerkopf",
+          "canonicalUrl": "https://www.macerkopf.de/2025/02/24/public-betas-ios18-ipados18-macos15/",
+          "publishedAt": "2025-02-24T18:38:01+00:00",
+          "appearanceDatePacific": "2025-02-24",
+          "selectedTextSha256": "02f0dd6b43abf2befbc337bdedbc76458346f168bc6688b19709792ac96d20f2",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "mr-154-pb1",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "MacRumors",
+          "publisherFamily": "MacRumors",
+          "canonicalUrl": "https://www.macrumors.com/2025/02/24/apple-seeds-ios-18-4-public-beta/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/mr-154-pb1.html",
+          "rawSha256": "0ff45bd0874ac4c6ab01db8a3e15ab939d9773fbff9d6f4464d937d44465047b",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        },
+        {
+          "kind": "supplementSource",
+          "sourceId": "macerkopf-154-pb1-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Macerkopf",
+          "publisherFamily": "Macerkopf",
+          "canonicalUrl": "https://www.macerkopf.de/2025/02/24/public-betas-ios18-ipados18-macos15/",
+          "publishedAt": "2025-02-24T18:38:01+00:00",
+          "appearanceDatePacific": "2025-02-24",
+          "selectedTextSha256": "02f0dd6b43abf2befbc337bdedbc76458346f168bc6688b19709792ac96d20f2",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "exactIndependentPublisherLineageCount": 2,
+      "finding": "Two independent publisher lineages each establish the exact macOS version, displayed Public Beta ordinal, public channel, and proposed Pacific appearance date."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-4",
+      "identity": {
+        "candidateId": "candidate:apple:macos:15.4:public-beta-4",
+        "platform": "macOS",
+        "platformId": "platform-macos",
+        "version": "15.4",
+        "releaseVersionId": "version-macos-15-4",
+        "proposedIdentity": {
+          "label": "Public Beta 4",
+          "routeAlias": "public-beta-4",
+          "channel": "publicBeta",
+          "appearanceDate": "2025-03-17",
+          "sequence": 4,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        }
+      },
+      "identityPreservedUnchanged": true,
+      "parentCandidateRecordSha256": "607ebfca13d1e7a7ced61fe2f8f90111b1c148283e2dbe4615579db5e5f926b1",
+      "identityFingerprintSha256": "abeaa44255370e489e89109d49fa2506915c34c252d0278d906cf1029398b0ab",
+      "parentReviewDisposition": "blocked",
+      "productionReconciliation": {
+        "queriedAt": "2026-07-31T07:27:50.043Z",
+        "perspective": "published",
+        "useCdn": false,
+        "parentExists": true,
+        "exactRouteIdentityMatchCount": 0,
+        "exactFullCandidateMatchCount": 0,
+        "result": "confirmedMissing"
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "stableEventIdCreationAllowed": false,
+        "publicationEligible": false,
+        "pageWorkAllowed": false,
+        "deploymentAllowed": false
+      },
+      "independentReview": {
+        "status": "pending",
+        "required": true
+      },
+      "researchDisposition": "evidenceReadyPendingIndependentReview",
+      "retainedParentEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "9to5-154-cycle",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "9to5Mac",
+          "publisherFamily": "9to5Mac",
+          "canonicalUrl": "https://9to5mac.com/guides/macos-sequoia-15-4/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/9to5-154-cycle.html",
+          "rawSha256": "000439128fc97908c142facb94e50169c2495c9e30908f8ae87437ba8b1d121c",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "supplementEvidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-154-pb4-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-sequoia-15-4-public-beta-4-24e5238a/",
+          "publishedAt": "2025-03-17T23:16:46Z",
+          "appearanceDatePacific": "2025-03-17",
+          "selectedTextSha256": "e7ba6257835e41348e7f8e10c213abd2dcf012edc12f48fd69a1a3c78f306ec8",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "9to5-154-cycle",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "9to5Mac",
+          "publisherFamily": "9to5Mac",
+          "canonicalUrl": "https://9to5mac.com/guides/macos-sequoia-15-4/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/9to5-154-cycle.html",
+          "rawSha256": "000439128fc97908c142facb94e50169c2495c9e30908f8ae87437ba8b1d121c",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        },
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-154-pb4-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-sequoia-15-4-public-beta-4-24e5238a/",
+          "publishedAt": "2025-03-17T23:16:46Z",
+          "appearanceDatePacific": "2025-03-17",
+          "selectedTextSha256": "e7ba6257835e41348e7f8e10c213abd2dcf012edc12f48fd69a1a3c78f306ec8",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "exactIndependentPublisherLineageCount": 2,
+      "finding": "Two independent publisher lineages each establish the exact macOS version, displayed Public Beta ordinal, public channel, and proposed Pacific appearance date."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.5:public-beta-3",
+      "identity": {
+        "candidateId": "candidate:apple:macos:15.5:public-beta-3",
+        "platform": "macOS",
+        "platformId": "platform-macos",
+        "version": "15.5",
+        "releaseVersionId": "version-macos-15-5",
+        "proposedIdentity": {
+          "label": "Public Beta 3",
+          "routeAlias": "public-beta-3",
+          "channel": "publicBeta",
+          "appearanceDate": "2025-04-28",
+          "sequence": 3,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        }
+      },
+      "identityPreservedUnchanged": true,
+      "parentCandidateRecordSha256": "1e5ca6f65c715d6391f61cb0596261122163e8e610e753195e2bc43438b37daf",
+      "identityFingerprintSha256": "2d9a312f6a93d33d29b460aef7e9b58e02d21985ec26acd9de86ef842bec68c9",
+      "parentReviewDisposition": "blocked",
+      "productionReconciliation": {
+        "queriedAt": "2026-07-31T07:27:50.043Z",
+        "perspective": "published",
+        "useCdn": false,
+        "parentExists": true,
+        "exactRouteIdentityMatchCount": 0,
+        "exactFullCandidateMatchCount": 0,
+        "result": "confirmedMissing"
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "stableEventIdCreationAllowed": false,
+        "publicationEligible": false,
+        "pageWorkAllowed": false,
+        "deploymentAllowed": false
+      },
+      "independentReview": {
+        "status": "pending",
+        "required": true
+      },
+      "researchDisposition": "remainsBlocked",
+      "retainedParentEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "9to5-155-cycle",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "9to5Mac",
+          "publisherFamily": "9to5Mac",
+          "canonicalUrl": "https://9to5mac.com/guides/macos-sequoia-15-5/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/9to5-155-cycle.html",
+          "rawSha256": "893b47b3f894c9ff635f25a99f21a17bfbe88d3c69a659604f07b0a72d91b5a5",
+          "selectedFor": "April 28 public availability and date only; excluded from Public Beta 3 ordinal proof."
+        },
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "monomaniac-155-pb3",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-sequoia-15-5-public-beta-3-24f5068b/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/monomaniac-155-pb3.html",
+          "rawSha256": "4718da7a15510ee47275ff0739f21bd09bc7ce042e0c1d71909111264e7c95be",
+          "selectedFor": "Public Beta 3 ordinal, but the parent capture lacked publisher time and cannot establish April 28."
+        },
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "iculture-155-cycle",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "iCulture",
+          "publisherFamily": "iCulture",
+          "canonicalUrl": "https://www.iculture.nl/nieuws/macos-sequoia-15-5-beta/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/iculture-155-cycle.html",
+          "rawSha256": "14428ab8ff26c1f2bbc1d138ff0c7b72de11d36d6a14e7539fd382dd08a20b2c",
+          "selectedFor": "Conflict evidence: labels the April 28 appearance Public Beta 4."
+        }
+      ],
+      "supplementEvidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-155-pb3-metadata-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-sequoia-15-5-public-beta-3-24f5068b/",
+          "publishedAt": "2025-04-29T17:09:07Z",
+          "appearanceDatePacific": "2025-04-29",
+          "selectedTextSha256": "6332b5992e15dc988b050c98e955cde940e83ac82b15ce5d55cace88b6a6872e",
+          "selectedFor": "Publisher metadata resolves the exact Public Beta 3 article to April 29 Pacific, conflicting with the proposed April 28 date."
+        }
+      ],
+      "selectedEvidenceRefs": [],
+      "exactIndependentPublisherLineageCount": 0,
+      "blocker": "No two independent lineages establish the proposed April 28 Public Beta 3 identity. Monomaniac's public API timestamp normalizes to April 29 Pacific, while April 28 reports are generic or label that appearance Public Beta 4."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.4:public-beta-4",
+      "identity": {
+        "candidateId": "candidate:apple:macos:26.4:public-beta-4",
+        "platform": "macOS",
+        "platformId": "platform-macos",
+        "version": "26.4",
+        "releaseVersionId": "version-macos-26-4",
+        "proposedIdentity": {
+          "label": "Public Beta 4",
+          "routeAlias": "public-beta-4",
+          "channel": "publicBeta",
+          "appearanceDate": "2026-03-09",
+          "sequence": 4,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        }
+      },
+      "identityPreservedUnchanged": true,
+      "parentCandidateRecordSha256": "b5be17f5cccf9718cffb2de2339124d2015e9d28dfeb345b327a624f48322220",
+      "identityFingerprintSha256": "eeeb1b76fe34c2f43854678ac13443ab0cff736bf1d8b30c6a5a2ec2830b36f3",
+      "parentReviewDisposition": "blocked",
+      "productionReconciliation": {
+        "queriedAt": "2026-07-31T07:27:50.043Z",
+        "perspective": "published",
+        "useCdn": false,
+        "parentExists": true,
+        "exactRouteIdentityMatchCount": 0,
+        "exactFullCandidateMatchCount": 0,
+        "result": "confirmedMissing"
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "stableEventIdCreationAllowed": false,
+        "publicationEligible": false,
+        "pageWorkAllowed": false,
+        "deploymentAllowed": false
+      },
+      "independentReview": {
+        "status": "pending",
+        "required": true
+      },
+      "researchDisposition": "evidenceReadyPendingIndependentReview",
+      "retainedParentEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "9to5-264-pb4",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "9to5Mac",
+          "publisherFamily": "9to5Mac",
+          "canonicalUrl": "https://9to5mac.com/2026/03/09/macos-26-4-beta-4-now-available-heres-whats-coming/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/9to5-264-pb4.html",
+          "rawSha256": "4bc206096bf7141485f0f151011adc7dfd9872df6fad7922d9f352ead73342b9",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "supplementEvidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-264-pb4-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-tahoe-26-4-public-beta-4-25e5233c/",
+          "publishedAt": "2026-03-10T00:52:35Z",
+          "appearanceDatePacific": "2026-03-09",
+          "selectedTextSha256": "a2ee47c0b57c3a4b16328ba2b2ea475044144e649aff035a7b5f45a16af46168",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "9to5-264-pb4",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "9to5Mac",
+          "publisherFamily": "9to5Mac",
+          "canonicalUrl": "https://9to5mac.com/2026/03/09/macos-26-4-beta-4-now-available-heres-whats-coming/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/9to5-264-pb4.html",
+          "rawSha256": "4bc206096bf7141485f0f151011adc7dfd9872df6fad7922d9f352ead73342b9",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        },
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-264-pb4-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-tahoe-26-4-public-beta-4-25e5233c/",
+          "publishedAt": "2026-03-10T00:52:35Z",
+          "appearanceDatePacific": "2026-03-09",
+          "selectedTextSha256": "a2ee47c0b57c3a4b16328ba2b2ea475044144e649aff035a7b5f45a16af46168",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "exactIndependentPublisherLineageCount": 2,
+      "finding": "Two independent publisher lineages each establish the exact macOS version, displayed Public Beta ordinal, public channel, and proposed Pacific appearance date."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.5:public-beta-3",
+      "identity": {
+        "candidateId": "candidate:apple:macos:26.5:public-beta-3",
+        "platform": "macOS",
+        "platformId": "platform-macos",
+        "version": "26.5",
+        "releaseVersionId": "version-macos-26-5",
+        "proposedIdentity": {
+          "label": "Public Beta 3",
+          "routeAlias": "public-beta-3",
+          "channel": "publicBeta",
+          "appearanceDate": "2026-04-27",
+          "sequence": 3,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        }
+      },
+      "identityPreservedUnchanged": true,
+      "parentCandidateRecordSha256": "6b24e577038ec9a298380bdc2a6b9ed3ce4e4a44b1d30990a9750316cb4a4138",
+      "identityFingerprintSha256": "0be4b7e403a7504394520b48316785dda670774fa67d0eb02d141382b2d8767d",
+      "parentReviewDisposition": "blocked",
+      "productionReconciliation": {
+        "queriedAt": "2026-07-31T07:27:50.043Z",
+        "perspective": "published",
+        "useCdn": false,
+        "parentExists": true,
+        "exactRouteIdentityMatchCount": 0,
+        "exactFullCandidateMatchCount": 0,
+        "result": "confirmedMissing"
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "stableEventIdCreationAllowed": false,
+        "publicationEligible": false,
+        "pageWorkAllowed": false,
+        "deploymentAllowed": false
+      },
+      "independentReview": {
+        "status": "pending",
+        "required": true
+      },
+      "researchDisposition": "evidenceReadyPendingIndependentReview",
+      "retainedParentEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "9to5-265-pb3",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "9to5Mac",
+          "publisherFamily": "9to5Mac",
+          "canonicalUrl": "https://9to5mac.com/2026/04/27/apple-releases-macos-26-5-beta-4-heres-what-to-expect/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/9to5-265-pb3.html",
+          "rawSha256": "797f993b25a747b03e0c7a38fb6b8b613c9685effc172fd08f72fe6c576873f0",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "supplementEvidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-265-pb3-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-tahoe-26-5-public-beta-3-25f5068a/",
+          "publishedAt": "2026-04-27T22:31:00Z",
+          "appearanceDatePacific": "2026-04-27",
+          "selectedTextSha256": "c1dbb639f94f87f293ead47a78e20f0e3cb31dde2c116130fa4ccb686d38d925",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "9to5-265-pb3",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "9to5Mac",
+          "publisherFamily": "9to5Mac",
+          "canonicalUrl": "https://9to5mac.com/2026/04/27/apple-releases-macos-26-5-beta-4-heres-what-to-expect/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/9to5-265-pb3.html",
+          "rawSha256": "797f993b25a747b03e0c7a38fb6b8b613c9685effc172fd08f72fe6c576873f0",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        },
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-265-pb3-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-tahoe-26-5-public-beta-3-25f5068a/",
+          "publishedAt": "2026-04-27T22:31:00Z",
+          "appearanceDatePacific": "2026-04-27",
+          "selectedTextSha256": "c1dbb639f94f87f293ead47a78e20f0e3cb31dde2c116130fa4ccb686d38d925",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "exactIndependentPublisherLineageCount": 2,
+      "finding": "Two independent publisher lineages each establish the exact macOS version, displayed Public Beta ordinal, public channel, and proposed Pacific appearance date."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-3",
+      "identity": {
+        "candidateId": "candidate:apple:macos:26.6:public-beta-3",
+        "platform": "macOS",
+        "platformId": "platform-macos",
+        "version": "26.6",
+        "releaseVersionId": "version-macos-26-6",
+        "proposedIdentity": {
+          "label": "Public Beta 3",
+          "routeAlias": "public-beta-3",
+          "channel": "publicBeta",
+          "appearanceDate": "2026-06-30",
+          "sequence": 3,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        }
+      },
+      "identityPreservedUnchanged": true,
+      "parentCandidateRecordSha256": "820b6c119e08ee0c2e082486058cdc7c5f5e72effba7b2ee9efabc0be58fbbea",
+      "identityFingerprintSha256": "95786c89e2d9572f69cf55be9e29fcbb99af50a9728adff4df5419c6b097fa6f",
+      "parentReviewDisposition": "blocked",
+      "productionReconciliation": {
+        "queriedAt": "2026-07-31T07:27:50.043Z",
+        "perspective": "published",
+        "useCdn": false,
+        "parentExists": true,
+        "exactRouteIdentityMatchCount": 0,
+        "exactFullCandidateMatchCount": 0,
+        "result": "confirmedMissing"
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "stableEventIdCreationAllowed": false,
+        "publicationEligible": false,
+        "pageWorkAllowed": false,
+        "deploymentAllowed": false
+      },
+      "independentReview": {
+        "status": "pending",
+        "required": true
+      },
+      "researchDisposition": "evidenceReadyPendingIndependentReview",
+      "retainedParentEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "mr-266-pb3",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "MacRumors",
+          "publisherFamily": "MacRumors",
+          "canonicalUrl": "https://www.macrumors.com/2026/06/30/ios-26-6-public-beta-3/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/mr-266-pb3.html",
+          "rawSha256": "52dabcdf680738710544d948f309228df8af9c7280bed3ab025add18aeff69ed",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "supplementEvidenceRefs": [
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-266-pb3-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-tahoe-26-6-public-beta-3-25g5052e/",
+          "publishedAt": "2026-06-30T23:17:25Z",
+          "appearanceDatePacific": "2026-06-30",
+          "selectedTextSha256": "32ca470f8f5e7cd5775aa992241fb018e06ada506c1c1880fe421fa48725ec39",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "selectedEvidenceRefs": [
+        {
+          "kind": "frozenParentSource",
+          "sourceId": "mr-266-pb3",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "publisher": "MacRumors",
+          "publisherFamily": "MacRumors",
+          "canonicalUrl": "https://www.macrumors.com/2026/06/30/ios-26-6-public-beta-3/",
+          "rawPath": "tmp/research-evidence/beta-chronology-gap/macos-point-15-26/raw/mr-266-pb3.html",
+          "rawSha256": "52dabcdf680738710544d948f309228df8af9c7280bed3ab025add18aeff69ed",
+          "selectedFor": "First exact publisher lineage for the complete submitted identity."
+        },
+        {
+          "kind": "supplementSource",
+          "sourceId": "monomaniac-266-pb3-followup",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26-followup/sources.json",
+          "publisher": "Monomaniac Garage",
+          "publisherFamily": "Monomaniac Garage",
+          "canonicalUrl": "https://www.monomaniacgarage.com/macos-tahoe-26-6-public-beta-3-25g5052e/",
+          "publishedAt": "2026-06-30T23:17:25Z",
+          "appearanceDatePacific": "2026-06-30",
+          "selectedTextSha256": "32ca470f8f5e7cd5775aa992241fb018e06ada506c1c1880fe421fa48725ec39",
+          "selectedFor": "Second independent exact publisher lineage for the complete submitted identity."
+        }
+      ],
+      "exactIndependentPublisherLineageCount": 2,
+      "finding": "Two independent publisher lineages each establish the exact macOS version, displayed Public Beta ordinal, public channel, and proposed Pacific appearance date."
+    }
+  ]
+}

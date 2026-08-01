@@ -1,0 +1,194 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-major-12-18-followup",
+  "generatedAt": "2026-07-31T05:55:14.425Z",
+  "purpose": "Independently reviewed corrected-identity records derived from the frozen supplement. This is a guarded research artifact, not an executable mutation manifest.",
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:ios:14.0:public-beta-2",
+      "supersedesCandidateId": "candidate:apple:ios:14.0:public-beta-1",
+      "originCohortId": "ios-major-12-18-followup",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.0",
+      "releaseVersionId": "version-ios-14-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-07-09",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicitDisplayedLabel",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "correctedAndConfirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T05:55:14.425Z",
+        "matchBasis": "Fresh published no-CDN query found zero exact matches for the corrected displayed identity. Any existing event on the same date remains separately reconciled.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "iphonecanada-ios14-pb2",
+          "supports": "Direct report of the iOS Software Update label Public Beta 2 on July 9.",
+          "locator": "Use only the exact claim described by supports and the controlling independent review."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "koc-ios14-pb2",
+          "supports": "Independent Software Update walkthrough showing iOS 14 Public Beta 2, timestamp-normalized to July 9 Pacific.",
+          "locator": "Use only the exact claim described by supports and the controlling independent review."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [],
+      "review": {
+        "required": false,
+        "reviewer": "codex-independent-review-ios-major-12-18-followup",
+        "reviewedAt": "2026-07-31T05:55:14.425Z",
+        "notes": "Chronology-cleared only. The corrected identity supersedes the original candidate and does not authorize implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:15.0:public-beta-3",
+      "supersedesCandidateId": "candidate:apple:ios:15.0:public-beta-2",
+      "originCohortId": "ios-major-12-18-followup",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-07-16",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicitDisplayedLabel",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "correctedAndConfirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T05:55:14.425Z",
+        "matchBasis": "Fresh published no-CDN query found zero exact matches for the corrected displayed identity. Any existing event on the same date remains separately reconciled.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "forbes-ios15-pb3",
+          "supports": "Exact Public Beta 3 label and July 16 publication date.",
+          "locator": "Use only the exact claim described by supports and the controlling independent review."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "wccftech-ios15-pb3",
+          "supports": "Independent exact Public Beta 3 label and July 16 publication date.",
+          "locator": "Use only the exact claim described by supports and the controlling independent review."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [],
+      "review": {
+        "required": false,
+        "reviewer": "codex-independent-review-ios-major-12-18-followup",
+        "reviewedAt": "2026-07-31T05:55:14.425Z",
+        "notes": "Chronology-cleared only. The corrected identity supersedes the original candidate and does not authorize implementation."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "correction:apple:ios:15.0:public-beta-1-to-public-beta-2",
+      "supersedesExistingMatchId": "existing-match:apple:ios:15.0:public-beta-1",
+      "originCohortId": "ios-major-12-18-followup",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "15.0",
+      "releaseVersionId": "version-ios-15-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2021-06-30",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicitDisplayedLabel",
+      "candidateStatus": "identityCorrectionPendingSeparateAuthorization",
+      "identityStatus": "productionIdentityCorrectionConfirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "existingIdentityCorrection",
+        "queriedAt": "2026-07-31T05:55:14.425Z",
+        "matchBasis": "Fresh published no-CDN query found one June 30 public-beta event under the superseded Public Beta 1 identity and zero exact matches under the corrected Public Beta 2 identity.",
+        "exactIdentityMatches": 1,
+        "currentProductionEventId": "release-event-50da2e4e5ec3bdd8fa582ce1",
+        "duplicateCreationForbidden": true
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "forbes-ios15-pb2",
+          "supports": "Exact Public Beta 2 label and June 30 publication date.",
+          "locator": "Use only the exact claim described by supports and the controlling independent review."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-major-12-18-followup/sources.json",
+          "sourceId": "iphonecanada-ios15-pb2",
+          "supports": "Independent availability list explicitly naming iOS 15 Public Beta 2 on June 30.",
+          "locator": "Use only the exact claim described by supports and the controlling independent review."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "This is an in-place production identity correction, not a creation candidate.",
+        "Separate correction authorization and a fresh exact production recheck are required."
+      ],
+      "review": {
+        "required": false,
+        "reviewer": "codex-independent-review-ios-major-12-18-followup",
+        "reviewedAt": "2026-07-31T05:55:14.425Z",
+        "notes": "Chronology-cleared correction only. Preserve the existing production document/event identity and never create a duplicate."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "safety": {
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "pageBuildAllowed": false,
+    "deploymentAllowed": false
+  }
+}

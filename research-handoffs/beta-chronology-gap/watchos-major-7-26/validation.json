@@ -1,0 +1,74 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-watchos-major-7-26",
+  "validatedAt": "2026-07-31T03:26:56.596Z",
+  "validator": "codex-scope-beta-gap-program",
+  "status": "passedSelfCheckPendingIndependentReview",
+  "checks": {
+    "exactTargetClosure": true,
+    "assignmentTargetCount": 33,
+    "candidateCount": 33,
+    "sourceCount": 49,
+    "successfulRawCaptureCount": 49,
+    "uniqueCandidateIds": true,
+    "uniqueSourceIds": true,
+    "allEvidenceRefsResolve": true,
+    "rawHashesReproduced": true,
+    "rawHashFailureSourceIds": [],
+    "publicOrdinalsNeverInferredFromDeveloperBuilds": true,
+    "exactProductionMatches": 0,
+    "watchOSPublicBetaEventsInProduction": 0,
+    "scopedPublicBetaEventsInProduction": 0,
+    "watchOS8August12CandidateCreated": false,
+    "outOfScopeVersionsPresent": false,
+    "buildsIncluded": 0,
+    "sanityWritesPerformed": 0,
+    "deploymentsPerformed": 0,
+    "independentEvidenceReviewComplete": false
+  },
+  "expectedCycleCounts": {
+    "7.0": 5,
+    "8.0": 6,
+    "9.0": 5,
+    "10.0": 6,
+    "11.0": 5,
+    "26.0": 6
+  },
+  "fileLocks": {
+    "assignment.json": {
+      "bytes": 15397,
+      "sha256": "299ab8b7f4510e7016c71615de9edf184c4bea186d9b66f197cff48d7022d946"
+    },
+    "sources.json": {
+      "bytes": 68368,
+      "sha256": "6bd2edfa5630897cb40514532da669189c605dcc8179872863bf85dce6b41cef"
+    },
+    "candidates.json": {
+      "bytes": 91671,
+      "sha256": "924de444453487d869db1991d69ff9035f54baffe7c0c1757682fb19b78f00f5"
+    },
+    "conflicts.json": {
+      "bytes": 10761,
+      "sha256": "c34656c6c6442d08b942caa2dd51e496dd3252063a8f33dded7b9f5e8540edf9"
+    },
+    "report.md": {
+      "bytes": 3581,
+      "sha256": "59931a2b2fd3d10b240c382303c7e783814085ccc0e7ffadbfae3a39a10e0c25"
+    },
+    "review.json": {
+      "bytes": 3199,
+      "sha256": "6a6b2a238a0d05664fd65e4cb3e359c667da102f6b7c03093d317351bda5599e"
+    }
+  },
+  "rawEvidence": {
+    "captureManifestPath": "tmp/research-evidence/beta-chronology-gap/watchos-major-7-26/fetch-manifest.json",
+    "sourceObservationsPath": "tmp/research-evidence/beta-chronology-gap/watchos-major-7-26/source-observations.json",
+    "productionSnapshotPath": "tmp/research-evidence/beta-chronology-gap/watchos-major-7-26/production-snapshot.json"
+  },
+  "limitations": [
+    "The researcher performed the mechanical self-check; this is not an independent evidence review.",
+    "Living chronology and how-to pages can change after publication, so the retained raw hashes are part of the audit trail.",
+    "One candidate has only one retained lineage that explicitly supplies the public ordinal.",
+    "Three candidates remain materially conflict-blocked."
+  ]
+}

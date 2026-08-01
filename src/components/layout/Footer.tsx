@@ -1,19 +1,25 @@
 import Link from "next/link";
+import { siteXHandle, siteXUrl } from "@/lib/site";
 
 const exploreLinks = [
+  { href: "/search/", label: "Search" },
+  { href: "/apple/", label: "Apple releases" },
   { href: "/forecasts/", label: "Forecasts" },
   { href: "/timeline/", label: "Timeline" },
   { href: "/analytics/", label: "Analytics" },
+  { href: "/exports/", label: "Data exports" },
 ];
 
 const projectLinks = [
   { href: "/about/", label: "About" },
   { href: "/methodology/", label: "Methodology" },
-  { href: "/sources/", label: "Sources" },
+  { href: "/sources/", label: "Editorial policy" },
+  { href: "/corrections/", label: "Corrections" },
 ];
 
 const policyLinks = [
   { href: "/privacy/", label: "Privacy" },
+  { href: "/submit/", label: "Submit a tip" },
   { href: "/contact/", label: "Contact" },
 ];
 
@@ -33,15 +39,24 @@ export function Footer() {
 
       <div className="site-footer__grid">
         <div className="site-footer__brand">
-          <Link href="/" className="brand-lockup" aria-label="Beta Cadence home">
+          <Link href="/" className="brand-lockup" aria-label="Version Record home">
             <span className="brand-wordmark">
-              <strong>Beta Cadence</strong>
+              <strong>Version Record</strong>
             </span>
           </Link>
           <p>
-            An independent index of Apple operating-system beta and release
-            dates, with transparent, history-based forecasts.
+            Independent release histories, notes, corrections, and sources.
+            Apple platforms are the first catalog.
           </p>
+          <a
+            className="text-link"
+            href={siteXUrl}
+            rel="me noopener"
+            target="_blank"
+          >
+            {siteXHandle} on X
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
 
         {[
@@ -68,10 +83,10 @@ export function Footer() {
 
       <div className="site-footer__legal">
         <p>
-          Not affiliated with or endorsed by Apple Inc. Apple platform names
-          are trademarks of Apple Inc.
+          Independent and not affiliated with or endorsed by Apple Inc. Apple
+          platform names are trademarks of Apple Inc.
         </p>
-        <p>Dates and sources maintained as a public reference.</p>
+        <p>Structured archive data is published under CC0; editorial prose is protected.</p>
       </div>
     </footer>
   );

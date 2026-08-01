@@ -1,0 +1,4463 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-29",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/118723",
+      "title": "About iOS 17 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2025-05-13T00:00:00.000Z",
+      "topics": ["iOS", "17", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/118702",
+      "title": "About iPadOS 17 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2026-05-11T00:00:00.000Z",
+      "topics": ["iPadOS", "17", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/100100",
+      "title": "Apple security releases",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2026-07-27T00:00:00.000Z",
+      "topics": ["Apple software", "security", "release dates"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/121012",
+      "title": "Apple security updates (2022 to 2023)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2026-06-04T00:00:00.000Z",
+      "topics": ["Apple software", "security", "2023 release dates"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/120949",
+      "title": "About the security content of iOS 17 and iPadOS 17",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2025-04-07T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/106369",
+      "title": "About the security content of iOS 17.0.1 and iPadOS 17.0.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2023-11-15T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.0.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/106367",
+      "title": "About the security content of iOS 17.0.3 and iPadOS 17.0.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2023-11-15T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.0.3", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/109052",
+      "title": "About the security content of iOS 17.1 and iPadOS 17.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2024-08-12T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/120296",
+      "title": "About the security content of iOS 17.1.2 and iPadOS 17.1.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2024-06-12T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.1.2", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/120877",
+      "title": "About the security content of iOS 17.2 and iPadOS 17.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2026-03-11T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.2", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/120304",
+      "title": "About the security content of iOS 17.3 and iPadOS 17.3",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2024-06-12T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.3", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/120893",
+      "title": "About the security content of iOS 17.4 and iPadOS 17.4",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2025-02-05T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.4", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/120890",
+      "title": "About the security content of iOS 17.4.1 and iPadOS 17.4.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2024-08-13T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.4.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/120905",
+      "title": "About the security content of iOS 17.5 and iPadOS 17.5",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2025-01-15T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.5", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/120909",
+      "title": "About the security content of iOS 17.6 and iPadOS 17.6",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2025-03-20T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.6", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/121246",
+      "title": "About the security content of iOS 17.7 and iPadOS 17.7",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2025-03-03T00:00:00.000Z",
+      "topics": ["iOS", "iPadOS", "17.7", "security"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-ios-17-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.0 was publicly released on September 18, 2023. iOS 17 was the annual platform release, centered on more expressive calling and messaging, a glanceable charging display, proximity sharing, and broad refinements to typing, browsing, maps, health, privacy, and accessibility.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120949",
+                "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0"
+              }
+            ]
+          },
+          {
+            "text": "Contact Posters and Live Voicemail reshaped Phone, while StandBy created a full-screen landscape view during charging. NameDrop, interactive widgets, Safari profiles, and offline maps broadened everyday workflows; availability still varied by device and region.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120949",
+                "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120949",
+          "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.0"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-0-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.0.1 was publicly released on September 21, 2023. iOS 17.0.1 was an early maintenance and security update released three days after iOS 17.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106369",
+                "locator": "iOS 17.0.1 and iPadOS 17.0.1 — Released September 21, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.1"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s security advisory documented Kernel, signature-validation, and WebKit fixes, and said reports indicated the three issues may have been actively exploited against older iOS versions.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106369",
+                "locator": "iOS 17.0.1 and iPadOS 17.0.1 — Released September 21, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106369",
+          "locator": "iOS 17.0.1 and iPadOS 17.0.1 — Released September 21, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.0.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-0-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.0.2 was publicly released on September 26, 2023. This record represents the broad iOS 17.0.2 public release on September 26, 2023, not the separate iPhone 15-only listing dated September 21.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.0.2 and iPadOS 17.0.2 — 26 Sep 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.2"
+              }
+            ]
+          },
+          {
+            "text": "Apple said the update corrected a setup problem that could block direct transfer from another iPhone. Its update note characterized the release as including security work, while Apple’s security index says there were no published CVE entries.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.0.2 and iPadOS 17.0.2 — 26 Sep 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/121012",
+          "locator": "iOS 17.0.2 and iPadOS 17.0.2 — 26 Sep 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.0.2"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-0-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.0.3 was publicly released on October 4, 2023. iOS 17.0.3 combined a user-visible thermal fix with a small set of documented security remediations.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106367",
+                "locator": "iOS 17.0.3 and iPadOS 17.0.3 — Released October 4, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.3"
+              }
+            ]
+          },
+          {
+            "text": "Apple said the update addressed iPhone temperatures running higher than expected. The security advisory separately lists a kernel privilege issue and a WebRTC/libvpx memory-safety issue.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106367",
+                "locator": "iOS 17.0.3 and iPadOS 17.0.3 — Released October 4, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106367",
+          "locator": "iOS 17.0.3 and iPadOS 17.0.3 — Released October 4, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.0.3"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.1 was publicly released on October 25, 2023. iOS 17.1 extended AirDrop beyond proximity, expanded Apple Music favorites, and refined StandBy while also delivering maintenance and security updates.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/109052",
+                "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1"
+              }
+            ]
+          },
+          {
+            "text": "Transfers could continue over the internet after devices moved out of AirDrop range. Music gained broader favorites and playlist suggestions, and supported always-on iPhones received more StandBy display controls.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/109052",
+                "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/109052",
+          "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-1-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.1.1 was publicly released on November 7, 2023. iOS 17.1.1 was a focused bug-fix release for two named problems affecting NFC services and the Weather Lock Screen widget.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.1.1 and iPadOS 17.1.1 — no published CVE entries; 07 Nov 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1.1"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s security index records no published CVE entries. The available first-party evidence does not support a broader feature or security narrative.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.1.1 and iPadOS 17.1.1 — no published CVE entries; 07 Nov 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/121012",
+          "locator": "iOS 17.1.1 and iPadOS 17.1.1 — no published CVE entries; 07 Nov 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.1.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-1-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.1.2 was publicly released on November 30, 2023. iOS 17.1.2 was a security-only public update centered on two WebKit vulnerabilities.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120296",
+                "locator": "iOS 17.1.2 and iPadOS 17.1.2 — Released November 30, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1.2"
+              }
+            ]
+          },
+          {
+            "text": "Apple documented an out-of-bounds read that could expose sensitive information and a memory-corruption issue that could enable code execution. Both entries noted reports of exploitation against versions before iOS 16.7.1.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120296",
+                "locator": "iOS 17.1.2 and iPadOS 17.1.2 — Released November 30, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120296",
+          "locator": "iOS 17.1.2 and iPadOS 17.1.2 — Released November 30, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.1.2"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.2 was publicly released on December 11, 2023. iOS 17.2 was a substantial feature release led by the new Journal app, with additions spanning the Action button, camera capture, Messages, Weather, Music, forms, and security.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120877",
+                "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.2"
+              }
+            ]
+          },
+          {
+            "text": "The release added spatial video capture on supported iPhone 15 Pro models, Translate for the Action button, Contact Key Verification in Messages, richer Weather data, and improved form filling.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120877",
+                "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120877",
+          "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.2"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-2-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.2.1 was publicly released on December 19, 2023. iOS 17.2.1 was a maintenance release that Apple described only as containing important bug fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.2.1 — no published CVE entries; 19 Dec 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.2.1"
+              }
+            ]
+          },
+          {
+            "text": "Apple did not identify the corrected bugs in its consumer note, and its 2023 security index records no published CVE entries. More specific claims would exceed the available first-party evidence.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.2.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.2.1 — no published CVE entries; 19 Dec 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/121012",
+          "locator": "iOS 17.2.1 — no published CVE entries; 19 Dec 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.2.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.3 was publicly released on January 22, 2024. iOS 17.3 introduced Stolen Device Protection and playlist collaboration, alongside a Unity wallpaper, hotel AirPlay support, maintenance, and security fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120304",
+                "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.3"
+              }
+            ]
+          },
+          {
+            "text": "Stolen Device Protection added biometric-only gates and a time-delayed second authentication for selected sensitive account changes. Apple Music collaboration let invited participants edit a playlist and react to tracks.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120304",
+                "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120304",
+          "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.3"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-3-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.3.1 was publicly released on February 8, 2024. iOS 17.3.1 was a narrowly documented typing correction.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.3.1 and iPadOS 17.3.1 — no published CVE entries; 08 Feb 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.3.1"
+              }
+            ]
+          },
+          {
+            "text": "Apple said text could unexpectedly duplicate or overlap during input. Its security index lists no published CVE entries for this update.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.3.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.3.1 and iPadOS 17.3.1 — no published CVE entries; 08 Feb 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/100100",
+          "locator": "iOS 17.3.1 and iPadOS 17.3.1 — no published CVE entries; 08 Feb 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.3.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-4",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.4 was publicly released on March 5, 2024. iOS 17.4 delivered Podcast transcripts, new emoji, broader Stolen Device Protection settings, and several Wallet, Siri, music-recognition, business-messaging, and device-information enhancements.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120893",
+                "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.4"
+              }
+            ]
+          },
+          {
+            "text": "On supported iPhone 15 models, Battery Health exposed cycle count and manufacturing and first-use dates. Podcasts gained synchronized searchable transcripts, and Stolen Device Protection could require its stronger behavior in every location.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.4"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120893",
+                "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120893",
+          "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.4"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-4-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.4.1 was publicly released on March 21, 2024. iOS 17.4.1 was a maintenance and security release with a narrowly scoped public advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120890",
+                "locator": "iOS 17.4.1 and iPadOS 17.4.1 — Released March 21, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.4.1"
+              }
+            ]
+          },
+          {
+            "text": "Apple associated the update with an out-of-bounds write affecting image processing and listed the same CVE under CoreMedia and WebRTC.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.4.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120890",
+                "locator": "iOS 17.4.1 and iPadOS 17.4.1 — Released March 21, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120890",
+          "locator": "iOS 17.4.1 and iPadOS 17.4.1 — Released March 21, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.4.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-5",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.5 was publicly released on May 13, 2024. iOS 17.5 added Apple News+ offline access and puzzle features, cross-platform unwanted-tracker alerts, a Pride Radiance wallpaper, and security fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120905",
+                "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.5"
+              }
+            ]
+          },
+          {
+            "text": "News+ could retain the Today feed and News+ tab for offline use, and Quartiles joined the puzzle catalog with player statistics. Tracking notifications expanded to compatible Bluetooth trackers paired with other operating systems.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.5"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120905",
+                "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120905",
+          "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.5"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-5-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.5.1 was publicly released on May 20, 2024. iOS 17.5.1 was a focused Photos database repair.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.5.1 and iPadOS 17.5.1 — no published CVE entries; 20 May 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.5.1"
+              }
+            ]
+          },
+          {
+            "text": "Apple said a rare corruption condition could cause previously deleted photos to reappear in the library. The security index records no published CVE entries.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.5.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.5.1 and iPadOS 17.5.1 — no published CVE entries; 20 May 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/100100",
+          "locator": "iOS 17.5.1 and iPadOS 17.5.1 — no published CVE entries; 20 May 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.5.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-6",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.6 was publicly released on July 29, 2024. iOS 17.6 was a maintenance release whose consumer note emphasized bug fixes and security updates rather than new features.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120909",
+                "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.6"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s security advisory documents fixes across AirDrop, code-signing and privacy controls, media processing, the kernel, WebKit, and other components.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.6"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120909",
+                "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120909",
+          "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.6"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-6-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.6.1 was publicly released on August 7, 2024. iOS 17.6.1 corrected an Advanced Data Protection control problem.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.6.1 and iPadOS 17.6.1 — no published CVE entries; 07 Aug 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.6.1"
+              }
+            ]
+          },
+          {
+            "text": "Apple said the issue could prevent users from enabling or disabling Advanced Data Protection. Its security index records no published CVE entries for the update.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.6.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.6.1 and iPadOS 17.6.1 — no published CVE entries; 07 Aug 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/100100",
+          "locator": "iOS 17.6.1 and iPadOS 17.6.1 — no published CVE entries; 07 Aug 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.6.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-17-7",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118723",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iOS 17.7 was publicly released on September 16, 2024. iOS 17.7 was a security-focused maintenance branch released alongside the next major iOS generation.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/121246",
+                "locator": "iOS 17.7 and iPadOS 17.7 — Released September 16, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.7"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s advisory documents fixes involving locked-device accessibility state, crafted files and archives, user-data access, WebKit, and other system components. The consumer note does not advertise new features.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.7"
+              },
+              {
+                "url": "https://support.apple.com/en-us/121246",
+                "locator": "iOS 17.7 and iPadOS 17.7 — Released September 16, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/121246",
+          "locator": "iOS 17.7 and iPadOS 17.7 — Released September 16, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.7"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-17-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118702",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iPadOS 17.0 was publicly released on September 18, 2023. iPadOS 17 brought deep Lock Screen customization, interactive widgets, the Health app, richer PDF and Notes workflows, and more flexible Stage Manager behavior to iPad.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120949",
+                "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.0"
+              }
+            ]
+          },
+          {
+            "text": "The release also carried the shared Messages, FaceTime, Safari, password, keyboard, privacy, and accessibility work of the 17 generation, with capability differences by iPad model.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.0"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120949",
+                "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120949",
+          "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.0"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-17-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118702",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iPadOS 17.1 was publicly released on October 25, 2023. iPadOS 17.1 extended AirDrop transfers over the internet, expanded Apple Music favorites, added Apple Pencil (USB-C) support, and delivered maintenance and security fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/109052",
+                "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.1"
+              }
+            ]
+          },
+          {
+            "text": "The release also improved Screen Time synchronization, keyboard responsiveness, Matter lock support, and Photo Shuffle selection.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/109052",
+                "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/109052",
+          "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.1"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-17-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118702",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iPadOS 17.2 was publicly released on December 11, 2023. iPadOS 17.2 focused on PDF AutoFill, Messages and Weather enhancements, private Health access through Siri on supported devices, and maintenance and security updates.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120877",
+                "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.2"
+              }
+            ]
+          },
+          {
+            "text": "Messages added navigation and Contact Key Verification, Weather gained deeper precipitation and wind views, and Music received Favorite Songs and Focus-aware listening-history controls.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120877",
+                "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120877",
+          "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.2"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-17-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118702",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iPadOS 17.3 was publicly released on January 22, 2024. iPadOS 17.3 added collaborative Apple Music playlists, a Unity wallpaper, selected hotel AirPlay support, warranty visibility, and security fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120304",
+                "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.3"
+              }
+            ]
+          },
+          {
+            "text": "Participants could add, reorder, and remove playlist tracks and respond with emoji. Unlike iOS 17.3, Apple’s iPadOS notes do not list Stolen Device Protection.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120304",
+                "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120304",
+          "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.3"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-17-4",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118702",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iPadOS 17.4 was publicly released on March 5, 2024. iPadOS 17.4 delivered Podcast transcripts, new emoji, music-recognition and business-messaging enhancements, Apple Cash virtual card numbers, Safari favorites-bar controls, and security fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120893",
+                "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.4"
+              }
+            ]
+          },
+          {
+            "text": "Podcasts gained synchronized searchable transcripts with accessibility support. Safari could show website icons without titles in the Favorites Bar, while Find My received a contact-picture correction.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.4"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120893",
+                "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120893",
+          "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.4"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-17-5",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118702",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iPadOS 17.5 was publicly released on May 13, 2024. iPadOS 17.5 added Apple News+ offline access and puzzle features, cross-platform unwanted-tracker alerts, a Pride Radiance wallpaper, and security fixes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120905",
+                "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.5"
+              }
+            ]
+          },
+          {
+            "text": "News+ could retain selected feeds for offline use, and Quartiles joined the puzzle catalog with player statistics. Tracking notifications expanded to compatible Bluetooth trackers paired with other operating systems.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.5"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120905",
+                "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120905",
+          "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.5"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ipados-17-6",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/118702",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "iPadOS 17.6 was publicly released on July 29, 2024. iPadOS 17.6 was a maintenance release whose consumer note emphasized bug fixes and security updates rather than new features.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120909",
+                "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.6"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s security advisory documents fixes across AirDrop, code-signing and privacy controls, media processing, the kernel, WebKit, and other components.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.6"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120909",
+                "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120909",
+          "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.6"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.0 reached the public release channel on September 18, 2023. The public build introduced the iOS 17 feature set as one release. This article records that public appearance only and does not attribute the cumulative feature list to any preceding beta.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.0 on September 18, 2023. The public build introduced the iOS 17 feature set as one release. This article records that public appearance only and does not attribute the cumulative feature list to any preceding beta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120949",
+                "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Contact Posters and Live Voicemail reshaped Phone, while StandBy created a full-screen landscape view during charging. NameDrop, interactive widgets, Safari profiles, and offline maps broadened everyday workflows; availability still varied by device and region.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120949",
+                "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120949",
+          "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.0"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-phone-contact-posters-live-voicemail",
+          "title": "Contact Posters and Live Voicemail",
+          "canonicalSummary": "Phone gained customizable caller presentation and live transcription while a voicemail message is being left.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The public release added customizable Contact Posters and Live Voicemail transcription with the option to answer during the message.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17 — Phone"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-standby",
+          "title": "StandBy",
+          "canonicalSummary": "StandBy presents clocks, photos, and widgets in a full-screen landscape view while a supported iPhone is charging.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "iOS 17 introduced a glanceable charging view with clocks, photos, widgets, Night Mode, and MagSafe-aware preferences.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17 — StandBy"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-namedrop-interactive-widgets",
+          "title": "NameDrop and interactive widgets",
+          "canonicalSummary": "Proximity sharing gained NameDrop, while widgets became capable of performing supported actions without opening their apps.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The public release added contact exchange by bringing devices together and made supported widgets directly interactive.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17 — AirDrop and Widgets"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-safari-profiles-offline-maps",
+          "title": "Safari profiles and offline maps",
+          "canonicalSummary": "Safari profiles separate browsing contexts, and Maps can store selected areas for use without a network connection.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Safari gained separate profiles and stronger private-browsing controls, while Maps added downloadable offline areas.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17 — Safari and Passwords; Maps"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-security-baseline",
+          "title": "iOS 17 security baseline",
+          "canonicalSummary": "The major release incorporated a broad set of documented fixes across system services, privacy boundaries, media processing, networking, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple’s security advisory records the public iOS 17 release as addressing numerous CVE-tracked issues across the operating system.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120949",
+              "locator": "iOS 17 and iPadOS 17 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-0-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.0.1 reached the public release channel on September 21, 2023. The public appearance was security-led rather than a feature release. The evidence supports the named remediations, but not any additional undocumented change list.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.0.1 on September 21, 2023. The public appearance was security-led rather than a feature release. The evidence supports the named remediations, but not any additional undocumented change list.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106369",
+                "locator": "iOS 17.0.1 and iPadOS 17.0.1 — Released September 21, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple’s security advisory documented Kernel, signature-validation, and WebKit fixes, and said reports indicated the three issues may have been actively exploited against older iOS versions.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106369",
+                "locator": "iOS 17.0.1 and iPadOS 17.0.1 — Released September 21, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106369",
+          "locator": "iOS 17.0.1 and iPadOS 17.0.1 — Released September 21, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.0.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-0-1-exploited-security-fixes",
+          "title": "Kernel, validation, and WebKit security fixes",
+          "canonicalSummary": "The update addressed three security issues involving kernel access, signature validation, and WebKit code execution.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented three remediations and noted reports of exploitation affecting versions before iOS 16.7.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106369",
+              "locator": "Kernel, Security, and WebKit; CVE-2023-41992, CVE-2023-41991, CVE-2023-41993"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-0-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.0.2 reached the public release channel on September 26, 2023. The durable public target is mapped to the September 26 general release. The five-day-earlier iPhone 15 entry is retained as a source nuance, not merged into this event.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.0.2 on September 26, 2023. The durable public target is mapped to the September 26 general release. The five-day-earlier iPhone 15 entry is retained as a source nuance, not merged into this event.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.0.2 and iPadOS 17.0.2 — 26 Sep 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.2"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple said the update corrected a setup problem that could block direct transfer from another iPhone. Its update note characterized the release as including security work, while Apple’s security index says there were no published CVE entries.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.0.2 and iPadOS 17.0.2 — 26 Sep 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/121012",
+          "locator": "iOS 17.0.2 and iPadOS 17.0.2 — 26 Sep 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.0.2"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-0-2-device-transfer-fix",
+          "title": "Direct iPhone transfer during setup",
+          "canonicalSummary": "The update corrected a setup failure that could prevent direct data transfer from another iPhone.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "iOS 17.0.2 fixed a problem that could interrupt device-to-device migration during initial setup.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.0.2"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-0-2-security-without-published-cves",
+          "title": "Security maintenance without published CVEs",
+          "canonicalSummary": "Apple characterized the update as including security work but did not publish individual CVE entries for the general release.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The product note mentions security updates; Apple’s security index records no published CVE entries for the September 26 release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.0.2"
+            },
+            {
+              "url": "https://support.apple.com/en-us/121012",
+              "locator": "iOS 17.0.2 and iPadOS 17.0.2 — no published CVE entries; 26 Sep 2023"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-0-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.0.3 reached the public release channel on October 4, 2023. The public release is best understood as a focused maintenance update: one named device-behavior fix plus two disclosed security entries.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.0.3 on October 4, 2023. The public release is best understood as a focused maintenance update: one named device-behavior fix plus two disclosed security entries.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/106367",
+                "locator": "iOS 17.0.3 and iPadOS 17.0.3 — Released October 4, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.3"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple said the update addressed iPhone temperatures running higher than expected. The security advisory separately lists a kernel privilege issue and a WebRTC/libvpx memory-safety issue.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.0.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/106367",
+                "locator": "iOS 17.0.3 and iPadOS 17.0.3 — Released October 4, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/106367",
+          "locator": "iOS 17.0.3 and iPadOS 17.0.3 — Released October 4, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.0.3"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-0-3-unexpected-warmth-fix",
+          "title": "Unexpected iPhone warmth",
+          "canonicalSummary": "The update addressed a condition that could cause an iPhone to run warmer than expected.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple identified and corrected an issue associated with higher-than-expected device temperatures.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.0.3"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-0-3-kernel-webrtc-security",
+          "title": "Kernel and WebRTC security fixes",
+          "canonicalSummary": "The release addressed a kernel privilege issue and a WebRTC buffer-overflow issue tied to the bundled libvpx version.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented one kernel remediation and one media-processing remediation for the public release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/106367",
+              "locator": "Kernel and WebRTC; CVE-2023-42824 and CVE-2023-5217"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.1 reached the public release channel on October 25, 2023. The public release added a compact group of new capabilities and reliability fixes. The notes are cumulative for iOS 17.1 and are not evidence for a specific 17.1 beta.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.1 on October 25, 2023. The public release added a compact group of new capabilities and reliability fixes. The notes are cumulative for iOS 17.1 and are not evidence for a specific 17.1 beta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/109052",
+                "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Transfers could continue over the internet after devices moved out of AirDrop range. Music gained broader favorites and playlist suggestions, and supported always-on iPhones received more StandBy display controls.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/109052",
+                "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/109052",
+          "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-1-airdrop-over-internet",
+          "title": "AirDrop transfers over the internet",
+          "canonicalSummary": "An AirDrop transfer can continue over the internet after the participating devices leave direct AirDrop range.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The public release removed the need to remain nearby for an already-started AirDrop transfer to finish.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.1 — AirDrop"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-1-music-favorites-suggestions",
+          "title": "Expanded Music favorites and playlist suggestions",
+          "canonicalSummary": "Apple Music expanded favorites across songs, albums, and playlists and added contextual suggestions to playlists.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Music added library filtering for favorites, dynamic cover art choices, and song suggestions at the end of playlists.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.1 — Music"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-1-standby-display-controls",
+          "title": "StandBy display-off controls",
+          "canonicalSummary": "Supported always-on iPhone models gained settings that control when the StandBy display turns off.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "StandBy added display timing controls on supported Pro models with always-on displays.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.1 — StandBy"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-1-security-maintenance",
+          "title": "iOS 17.1 security remediations",
+          "canonicalSummary": "The update addressed documented security issues across system components and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a version-specific security advisory alongside the October 25 public release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/109052",
+              "locator": "iOS 17.1 and iPadOS 17.1 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-1-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.1.1 reached the public release channel on November 7, 2023. The public update restored affected Apple Pay and NFC behavior after certain in-car wireless charging sessions and corrected snow rendering in Weather’s Lock Screen widget.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.1.1 on November 7, 2023. The public update restored affected Apple Pay and NFC behavior after certain in-car wireless charging sessions and corrected snow rendering in Weather’s Lock Screen widget.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.1.1 and iPadOS 17.1.1 — no published CVE entries; 07 Nov 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple’s security index records no published CVE entries. The available first-party evidence does not support a broader feature or security narrative.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.1.1 and iPadOS 17.1.1 — no published CVE entries; 07 Nov 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/121012",
+          "locator": "iOS 17.1.1 and iPadOS 17.1.1 — no published CVE entries; 07 Nov 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.1.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-1-1-nfc-after-car-charging",
+          "title": "NFC after in-car wireless charging",
+          "canonicalSummary": "The update addressed rare loss of Apple Pay and other NFC functions on iPhone 15 models after wireless charging in certain vehicles.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Affected iPhone 15 devices could regain expected Apple Pay and NFC availability after the documented charging scenario.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.1.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-1-1-weather-snow-widget",
+          "title": "Weather widget snow display",
+          "canonicalSummary": "The update corrected an inaccurate snow presentation in the Weather Lock Screen widget.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Weather Lock Screen widget received a fix for cases where snow was displayed incorrectly.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.1.1"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-1-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.1.2 reached the public release channel on November 30, 2023. The public appearance has specific first-party security evidence but no Apple-published feature delta.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.1.2 on November 30, 2023. The public appearance has specific first-party security evidence but no Apple-published feature delta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120296",
+                "locator": "iOS 17.1.2 and iPadOS 17.1.2 — Released November 30, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1.2"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple documented an out-of-bounds read that could expose sensitive information and a memory-corruption issue that could enable code execution. Both entries noted reports of exploitation against versions before iOS 16.7.1.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.1.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120296",
+                "locator": "iOS 17.1.2 and iPadOS 17.1.2 — Released November 30, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120296",
+          "locator": "iOS 17.1.2 and iPadOS 17.1.2 — Released November 30, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.1.2"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-1-2-webkit-security-fixes",
+          "title": "Two WebKit security fixes",
+          "canonicalSummary": "The update fixed separate WebKit flaws involving sensitive-information disclosure and arbitrary code execution.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented two WebKit remediations and noted reports of exploitation on older iOS versions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120296",
+              "locator": "WebKit; CVE-2023-42916 and CVE-2023-42917"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.2 reached the public release channel on December 11, 2023. The December public build delivered the documented 17.2 feature set and its security fixes. This event does not claim that every item first appeared in the final pre-release seed.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.2 on December 11, 2023. The December public build delivered the documented 17.2 feature set and its security fixes. This event does not claim that every item first appeared in the final pre-release seed.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120877",
+                "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.2"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "The release added spatial video capture on supported iPhone 15 Pro models, Translate for the Action button, Contact Key Verification in Messages, richer Weather data, and improved form filling.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120877",
+                "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120877",
+          "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.2"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-2-journal-app",
+          "title": "Journal app",
+          "canonicalSummary": "Journal provides private entries, suggestion-based prompts, filters, scheduled reminders, device authentication, and encrypted iCloud synchronization.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new Journal app became part of the public iOS release with tools for writing, finding, protecting, and syncing entries.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.2 — Journal"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-2-action-translate-spatial-video",
+          "title": "Action button translation and spatial video",
+          "canonicalSummary": "Supported iPhone 15 Pro models gained an Action button translation option and spatial-video capture for later viewing on Apple Vision Pro.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release expanded the Action button and camera on supported Pro hardware with translation and spatial-video workflows.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.2 — Action Button and Camera"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-2-messages-contact-key-verification",
+          "title": "Messages navigation and Contact Key Verification",
+          "canonicalSummary": "Messages gained an unread catch-up control, sticker and Memoji refinements, and a verification system for users facing advanced digital threats.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Messages added navigation and customization improvements together with Contact Key Verification alerts and codes.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.2 — Messages"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-2-weather-and-form-tools",
+          "title": "Weather detail and enhanced form filling",
+          "canonicalSummary": "Weather added precipitation, wind, widget, and lunar detail, while enhanced AutoFill recognized fields in PDFs and other forms.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The update expanded forecast exploration and made supported PDF and form fields easier to populate from contacts.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.2 — Weather; additional improvements"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-2-security-maintenance",
+          "title": "iOS 17.2 security remediations",
+          "canonicalSummary": "The update addressed documented security issues across system frameworks, privacy controls, media handling, networking, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a detailed security advisory for the December 11 release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120877",
+              "locator": "iOS 17.2 and iPadOS 17.2 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-2-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.2.1 reached the public release channel on December 19, 2023. The public event is documented as a general reliability update; the underlying bug list remains unspecified.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.2.1 on December 19, 2023. The public event is documented as a general reliability update; the underlying bug list remains unspecified.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.2.1 — no published CVE entries; 19 Dec 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.2.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple did not identify the corrected bugs in its consumer note, and its 2023 security index records no published CVE entries. More specific claims would exceed the available first-party evidence.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.2.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/121012",
+                "locator": "iOS 17.2.1 — no published CVE entries; 19 Dec 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/121012",
+          "locator": "iOS 17.2.1 — no published CVE entries; 19 Dec 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.2.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-2-1-unspecified-bug-fixes",
+          "title": "Unspecified maintenance fixes",
+          "canonicalSummary": "Apple characterized the release as an important bug-fix update without naming the corrected behaviors.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The public release carried maintenance fixes, but Apple did not publish enough detail to split them into narrower change records.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.2.1"
+            },
+            {
+              "url": "https://support.apple.com/en-us/121012",
+              "locator": "iOS 17.2.1 — no published CVE entries; 19 Dec 2023"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.3 reached the public release channel on January 22, 2024. The public build combined a major anti-theft control with collaborative media features and a version-specific security advisory.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.3 on January 22, 2024. The public build combined a major anti-theft control with collaborative media features and a version-specific security advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120304",
+                "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.3"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Stolen Device Protection added biometric-only gates and a time-delayed second authentication for selected sensitive account changes. Apple Music collaboration let invited participants edit a playlist and react to tracks.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120304",
+                "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120304",
+          "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.3"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-3-stolen-device-protection",
+          "title": "Stolen Device Protection",
+          "canonicalSummary": "Stolen Device Protection adds biometric-only checks and, away from familiar locations, a delay before selected sensitive account changes.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The public release added layered protection for selected iPhone and Apple Account operations after device theft.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.3 — Stolen Device Protection"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-3-collaborative-playlists",
+          "title": "Collaborative Apple Music playlists",
+          "canonicalSummary": "Apple Music playlists can invite participants who add, reorder, or remove songs and react to tracks with emoji.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release enabled shared playlist editing and track reactions in Apple Music.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.3 — Music"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-3-security-maintenance",
+          "title": "iOS 17.3 security remediations",
+          "canonicalSummary": "The update addressed documented security issues across system services, privacy boundaries, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple’s advisory includes a WebKit issue it said may have been exploited, along with other remediations.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120304",
+              "locator": "iOS 17.3 and iPadOS 17.3 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-3-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.3.1 reached the public release channel on February 8, 2024. The available first-party record supports one user-visible bug fix and no broader feature claim.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.3.1 on February 8, 2024. The available first-party record supports one user-visible bug fix and no broader feature claim.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.3.1 and iPadOS 17.3.1 — no published CVE entries; 08 Feb 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.3.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple said text could unexpectedly duplicate or overlap during input. Its security index lists no published CVE entries for this update.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.3.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.3.1 and iPadOS 17.3.1 — no published CVE entries; 08 Feb 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/100100",
+          "locator": "iOS 17.3.1 and iPadOS 17.3.1 — no published CVE entries; 08 Feb 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.3.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-3-1-typing-duplication-overlap",
+          "title": "Duplicated or overlapping text while typing",
+          "canonicalSummary": "The update corrected a text-input problem that could duplicate characters or cause text to overlap.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "iOS 17.3.1 addressed unexpected duplication or overlap during typing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.3.1"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-4",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.4 reached the public release channel on March 5, 2024. The public event combined visible app features, device-management details, bug fixes, and a substantial security advisory.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.4 on March 5, 2024. The public event combined visible app features, device-management details, bug fixes, and a substantial security advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120893",
+                "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.4"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "On supported iPhone 15 models, Battery Health exposed cycle count and manufacturing and first-use dates. Podcasts gained synchronized searchable transcripts, and Stolen Device Protection could require its stronger behavior in every location.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.4"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120893",
+                "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120893",
+          "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.4"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-4-podcast-transcripts",
+          "title": "Apple Podcasts transcripts",
+          "canonicalSummary": "Podcasts can display synchronized transcripts that are searchable, navigable, and compatible with supported accessibility settings.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The public release added episode transcripts in supported languages with word highlighting, search, seek, and accessibility support.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.4 — Apple Podcasts"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-4-new-emoji-direction",
+          "title": "New emoji and direction variants",
+          "canonicalSummary": "The emoji keyboard gained additional symbols and direction choices for selected people and body emoji.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "iOS 17.4 added mushroom, phoenix, lime, broken-chain, and head-shaking emoji plus direction variants.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.4 — Emoji"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-4-stolen-device-protection-all-locations",
+          "title": "Stolen Device Protection in all locations",
+          "canonicalSummary": "Stolen Device Protection gained an option to apply its increased-security behavior regardless of whether the device is in a familiar location.",
+          "category": "security",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Users could choose to enforce the stronger Stolen Device Protection posture everywhere.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.4 — additional enhancements"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-4-iphone-15-battery-health-details",
+          "title": "Expanded iPhone 15 battery details",
+          "canonicalSummary": "Battery Health on supported iPhone 15 models displays cycle count, manufacture date, and first-use date.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The update exposed additional battery-history information in Settings for the iPhone 15 family.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.4 — additional enhancements"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-4-security-maintenance",
+          "title": "iOS 17.4 security remediations",
+          "canonicalSummary": "The update addressed documented security issues across privacy boundaries, Bluetooth, kernel protections, media handling, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a broad security advisory and noted reports of exploitation for selected kernel issues.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120893",
+              "locator": "iOS 17.4 and iPadOS 17.4 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-4-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.4.1 reached the public release channel on March 21, 2024. The public appearance is supported as a bug-fix and security update; Apple did not publish a consumer-facing feature delta.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.4.1 on March 21, 2024. The public appearance is supported as a bug-fix and security update; Apple did not publish a consumer-facing feature delta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120890",
+                "locator": "iOS 17.4.1 and iPadOS 17.4.1 — Released March 21, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.4.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple associated the update with an out-of-bounds write affecting image processing and listed the same CVE under CoreMedia and WebRTC.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.4.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120890",
+                "locator": "iOS 17.4.1 and iPadOS 17.4.1 — Released March 21, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120890",
+          "locator": "iOS 17.4.1 and iPadOS 17.4.1 — Released March 21, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.4.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-4-1-image-processing-security",
+          "title": "Image-processing memory-safety fix",
+          "canonicalSummary": "The update addressed an out-of-bounds write that could allow crafted image processing to execute code.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented the issue under CoreMedia and WebRTC with CVE-2024-1580.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120890",
+              "locator": "CoreMedia and WebRTC; CVE-2024-1580"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-5",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.5 reached the public release channel on May 13, 2024. The public release mixed service features, personal-safety interoperability, visual personalization, and a detailed security update.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.5 on May 13, 2024. The public release mixed service features, personal-safety interoperability, visual personalization, and a detailed security update.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120905",
+                "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.5"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "News+ could retain the Today feed and News+ tab for offline use, and Quartiles joined the puzzle catalog with player statistics. Tracking notifications expanded to compatible Bluetooth trackers paired with other operating systems.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.5"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120905",
+                "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120905",
+          "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.5"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-5-news-plus-offline-quartiles",
+          "title": "Offline Apple News+ and Quartiles",
+          "canonicalSummary": "Apple News+ gained offline access to selected feeds, a daily word game, and expanded puzzle statistics.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release added offline reading, Quartiles, and a scoreboard covering supported News+ puzzles.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.5 — Apple News"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-5-cross-platform-tracker-alerts",
+          "title": "Cross-platform unwanted-tracker alerts",
+          "canonicalSummary": "Tracking notifications detect compatible unknown Bluetooth trackers moving with a user even when those trackers are paired to another operating system.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "iOS 17.5 expanded unwanted-tracking alerts beyond accessories paired within Apple’s own platform.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.5 — Tracking Notifications"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-5-pride-radiance-wallpaper",
+          "title": "Pride Radiance wallpaper",
+          "canonicalSummary": "The Lock Screen gained a Pride Radiance wallpaper as part of the release’s personalization additions.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "A new Pride Radiance wallpaper became available with the public update.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.5"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-5-security-maintenance",
+          "title": "iOS 17.5 security remediations",
+          "canonicalSummary": "The update addressed documented issues across system components, data access, media processing, privacy controls, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a detailed security advisory for the May 13 public release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120905",
+              "locator": "iOS 17.5 and iPadOS 17.5 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-5-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.5.1 reached the public release channel on May 20, 2024. The public release addresses the named Photos behavior; the available sources do not support a broader change inventory.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.5.1 on May 20, 2024. The public release addresses the named Photos behavior; the available sources do not support a broader change inventory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.5.1 and iPadOS 17.5.1 — no published CVE entries; 20 May 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.5.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple said a rare corruption condition could cause previously deleted photos to reappear in the library. The security index records no published CVE entries.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.5.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.5.1 and iPadOS 17.5.1 — no published CVE entries; 20 May 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/100100",
+          "locator": "iOS 17.5.1 and iPadOS 17.5.1 — no published CVE entries; 20 May 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.5.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-5-1-deleted-photos-reappearing",
+          "title": "Deleted photos reappearing after database corruption",
+          "canonicalSummary": "The update corrected a rare Photos database-corruption condition that could resurface images after deletion.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "iOS 17.5.1 fixed the documented case in which deleted photos could return to the library.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.5.1"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-6",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.6 reached the public release channel on July 29, 2024. The public appearance is intentionally represented as maintenance and security work; no unsupported feature list has been added.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.6 on July 29, 2024. The public appearance is intentionally represented as maintenance and security work; no unsupported feature list has been added.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120909",
+                "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.6"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple’s security advisory documents fixes across AirDrop, code-signing and privacy controls, media processing, the kernel, WebKit, and other components.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.6"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120909",
+                "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120909",
+          "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.6"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-6-maintenance-fixes",
+          "title": "General iOS 17.6 maintenance",
+          "canonicalSummary": "Apple characterized the update as containing important bug fixes without naming a consumer-facing feature delta.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The public release focused on reliability and security rather than a new feature set.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.6"
+            }
+          ]
+        },
+        {
+          "key": "ios-17-6-security-maintenance",
+          "title": "iOS 17.6 security remediations",
+          "canonicalSummary": "The update addressed documented issues in file transfer, privacy enforcement, media parsing, kernel behavior, WebKit, and related components.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a version-specific security advisory for the July 29 release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120909",
+              "locator": "iOS 17.6 and iPadOS 17.6 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-6-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.6.1 reached the public release channel on August 7, 2024. The public release has one named functional fix and no Apple-published feature delta.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.6.1 on August 7, 2024. The public release has one named functional fix and no Apple-published feature delta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.6.1 and iPadOS 17.6.1 — no published CVE entries; 07 Aug 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.6.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple said the issue could prevent users from enabling or disabling Advanced Data Protection. Its security index records no published CVE entries for the update.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.6.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/100100",
+                "locator": "iOS 17.6.1 and iPadOS 17.6.1 — no published CVE entries; 07 Aug 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/100100",
+          "locator": "iOS 17.6.1 and iPadOS 17.6.1 — no published CVE entries; 07 Aug 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.6.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-6-1-advanced-data-protection-toggle",
+          "title": "Advanced Data Protection enable and disable controls",
+          "canonicalSummary": "The update corrected a condition that could prevent changing the enabled state of Advanced Data Protection.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Users affected by the control failure could again enable or disable Advanced Data Protection.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118723",
+              "locator": "iOS 17.6.1"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-17-7",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 17.7 reached the public release channel on September 16, 2024. The public event is treated as a security release for devices remaining on iOS 17, without inferring undocumented product changes.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iOS 17.7 on September 16, 2024. The public event is treated as a security release for devices remaining on iOS 17, without inferring undocumented product changes.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/121246",
+                "locator": "iOS 17.7 and iPadOS 17.7 — Released September 16, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.7"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple’s advisory documents fixes involving locked-device accessibility state, crafted files and archives, user-data access, WebKit, and other system components. The consumer note does not advertise new features.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118723",
+                "locator": "iOS 17.7"
+              },
+              {
+                "url": "https://support.apple.com/en-us/121246",
+                "locator": "iOS 17.7 and iPadOS 17.7 — Released September 16, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/121246",
+          "locator": "iOS 17.7 and iPadOS 17.7 — Released September 16, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118723",
+          "locator": "iOS 17.7"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-17-7-security-maintenance",
+          "title": "iOS 17.7 security remediations",
+          "canonicalSummary": "The release addressed documented vulnerabilities across accessibility state, file processing, privacy boundaries, system frameworks, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a security advisory for the September 16 maintenance release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/121246",
+              "locator": "iOS 17.7 and iPadOS 17.7 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-17-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 17.0 reached the public release channel on September 18, 2023. The public build introduced the cumulative iPadOS 17 feature set. This article is attached only to the public appearance and does not assign that list to any individual beta.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iPadOS 17.0 on September 18, 2023. The public build introduced the cumulative iPadOS 17 feature set. This article is attached only to the public appearance and does not assign that list to any individual beta.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120949",
+                "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.0"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "The release also carried the shared Messages, FaceTime, Safari, password, keyboard, privacy, and accessibility work of the 17 generation, with capability differences by iPad model.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.0"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120949",
+                "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120949",
+          "locator": "iOS 17 and iPadOS 17 — Released September 18, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.0"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-17-lock-screen-customization",
+          "title": "Customizable iPad Lock Screen",
+          "canonicalSummary": "iPad gained multiple customizable Lock Screens with widgets, photo effects, Live Activities, and alternative notification layouts.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The public release brought iPhone-style Lock Screen personalization and glanceable information to iPad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17 — Lock Screen"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-interactive-widgets",
+          "title": "Interactive widgets",
+          "canonicalSummary": "Supported widgets can perform actions directly from the Home Screen or Lock Screen instead of only opening their apps.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Interactive widgets enabled direct actions such as completing a reminder from the widget surface.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17 — Widgets"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-health-app",
+          "title": "Health app on iPad",
+          "canonicalSummary": "The Health app arrived on iPad with a layout designed for the larger screen and synchronization with supported health-data sources.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "iPadOS 17 added Health with sidebar navigation, charts, sharing, mental-health tools, and cross-device data sync.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17 — Health"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-notes-pdf-workflows",
+          "title": "Notes and PDF workflows",
+          "canonicalSummary": "Notes gained full-width PDF and scan handling, links between notes, new formatting, and direct PDF annotation workflows.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release expanded document review and connected-note workflows on iPad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17 — Notes"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-stage-manager-flexibility",
+          "title": "More flexible Stage Manager",
+          "canonicalSummary": "Stage Manager gained more flexible window positioning and support for external-display cameras in calls.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The public release improved window arrangement and external-display video workflows.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17 — Stage Manager"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-security-baseline",
+          "title": "iPadOS 17 security baseline",
+          "canonicalSummary": "The major release incorporated a broad set of documented fixes across system services, privacy boundaries, media processing, networking, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple’s security advisory records numerous CVE-tracked remediations in the public iPadOS 17 release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120949",
+              "locator": "iOS 17 and iPadOS 17 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-17-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 17.1 reached the public release channel on October 25, 2023. The public appearance combined new accessory compatibility with shared AirDrop and Music changes and platform maintenance.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iPadOS 17.1 on October 25, 2023. The public appearance combined new accessory compatibility with shared AirDrop and Music changes and platform maintenance.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/109052",
+                "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.1"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "The release also improved Screen Time synchronization, keyboard responsiveness, Matter lock support, and Photo Shuffle selection.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.1"
+              },
+              {
+                "url": "https://support.apple.com/en-us/109052",
+                "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/109052",
+          "locator": "iOS 17.1 and iPadOS 17.1 — Released October 25, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.1"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-17-1-airdrop-over-internet",
+          "title": "AirDrop transfers over the internet",
+          "canonicalSummary": "An AirDrop transfer can continue over the internet after the participating devices leave direct AirDrop range.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The update allowed an already-started AirDrop transfer to finish without continued proximity.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.1 — AirDrop"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-1-music-favorites-suggestions",
+          "title": "Expanded Music favorites and playlist suggestions",
+          "canonicalSummary": "Apple Music expanded favorites across songs, albums, and playlists and added contextual suggestions to playlists.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Music added favorites filtering, dynamic cover choices, and song suggestions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.1 — Music"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-1-usb-c-apple-pencil",
+          "title": "Apple Pencil (USB-C) support",
+          "canonicalSummary": "iPadOS added system support for the USB-C model of Apple Pencil.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The public release added compatibility for Apple Pencil (USB-C).",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.1 — Apple Pencil"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-1-security-maintenance",
+          "title": "iPadOS 17.1 security remediations",
+          "canonicalSummary": "The update addressed documented security issues across system components and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a version-specific security advisory alongside the public release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/109052",
+              "locator": "iOS 17.1 and iPadOS 17.1 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-17-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 17.2 reached the public release channel on December 11, 2023. The public release delivered a broad productivity and communication update without the iPhone-only Journal, Action button, or spatial-video claims.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iPadOS 17.2 on December 11, 2023. The public release delivered a broad productivity and communication update without the iPhone-only Journal, Action button, or spatial-video claims.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120877",
+                "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.2"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Messages added navigation and Contact Key Verification, Weather gained deeper precipitation and wind views, and Music received Favorite Songs and Focus-aware listening-history controls.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.2"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120877",
+                "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120877",
+          "locator": "iOS 17.2 and iPadOS 17.2 — Released December 11, 2023"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.2"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-17-2-enhanced-pdf-autofill",
+          "title": "Enhanced AutoFill for PDFs and forms",
+          "canonicalSummary": "The system identifies fields in PDFs and other forms and can populate supported fields with contact information.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "iPadOS 17.2 improved form completion in PDF and document workflows.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.2 — PDF"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-2-messages-contact-key-verification",
+          "title": "Messages navigation and Contact Key Verification",
+          "canonicalSummary": "Messages gained an unread catch-up control, sticker and Memoji refinements, and a verification system for users facing advanced digital threats.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The public release added Messages navigation improvements and Contact Key Verification.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.2 — Messages"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-2-weather-detail",
+          "title": "Expanded Weather detail",
+          "canonicalSummary": "Weather added multi-day precipitation amounts, new widgets, a wind snapshot, and an interactive lunar calendar.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The update expanded forecast detail and glanceable Weather information.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.2 — Weather"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-2-health-siri-access",
+          "title": "Private Health access with Siri",
+          "canonicalSummary": "Supported iPads can use Siri to access and log Health data through voice interactions.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release added voice access to selected Health information on supported iPad hardware.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.2 — additional improvements"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-2-security-maintenance",
+          "title": "iPadOS 17.2 security remediations",
+          "canonicalSummary": "The update addressed documented security issues across system frameworks, privacy controls, media handling, networking, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a detailed security advisory for the December 11 release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120877",
+              "locator": "iOS 17.2 and iPadOS 17.2 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-17-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 17.3 reached the public release channel on January 22, 2024. The public event records only the iPad-specific Apple note and shared security advisory, avoiding an incorrect carryover of iPhone-only features.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iPadOS 17.3 on January 22, 2024. The public event records only the iPad-specific Apple note and shared security advisory, avoiding an incorrect carryover of iPhone-only features.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120304",
+                "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.3"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Participants could add, reorder, and remove playlist tracks and respond with emoji. Unlike iOS 17.3, Apple’s iPadOS notes do not list Stolen Device Protection.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.3"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120304",
+                "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120304",
+          "locator": "iOS 17.3 and iPadOS 17.3 — Released January 22, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.3"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-17-3-collaborative-playlists",
+          "title": "Collaborative Apple Music playlists",
+          "canonicalSummary": "Apple Music playlists can invite participants who add, reorder, or remove songs and react to tracks with emoji.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release enabled shared playlist editing and track reactions on iPad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.3 — Music"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-3-unity-wallpaper",
+          "title": "Unity wallpaper",
+          "canonicalSummary": "The Lock Screen gained a Unity wallpaper commemorating Black history and culture.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "A new Unity wallpaper became available with the public update.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.3 — Lock Screen"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-3-hotel-airplay",
+          "title": "AirPlay in supported hotels",
+          "canonicalSummary": "AirPlay gained the ability to stream directly to compatible hotel-room televisions at participating properties.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The update added hotel AirPlay support where participating hardware and properties were available.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.3 — improvements"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-3-security-maintenance",
+          "title": "iPadOS 17.3 security remediations",
+          "canonicalSummary": "The update addressed documented security issues across system services, privacy boundaries, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a shared iOS and iPadOS security advisory for the public release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120304",
+              "locator": "iOS 17.3 and iPadOS 17.3 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-17-4",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 17.4 reached the public release channel on March 5, 2024. The public release combined visible app improvements, a small bug-fix set, and the shared 17.4 security advisory.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iPadOS 17.4 on March 5, 2024. The public release combined visible app improvements, a small bug-fix set, and the shared 17.4 security advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120893",
+                "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.4"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Podcasts gained synchronized searchable transcripts with accessibility support. Safari could show website icons without titles in the Favorites Bar, while Find My received a contact-picture correction.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.4"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120893",
+                "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120893",
+          "locator": "iOS 17.4 and iPadOS 17.4 — Released March 5, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.4"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-17-4-podcast-transcripts",
+          "title": "Apple Podcasts transcripts",
+          "canonicalSummary": "Podcasts can display synchronized transcripts that are searchable, navigable, and compatible with supported accessibility settings.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The public release added episode transcripts in supported languages with word highlighting, search, seek, and accessibility support.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.4 — Apple Podcasts"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-4-new-emoji-direction",
+          "title": "New emoji and direction variants",
+          "canonicalSummary": "The emoji keyboard gained additional symbols and direction choices for selected people and body emoji.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "iPadOS 17.4 added new object and expression emoji plus direction variants.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.4 — Emoji"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-4-music-business-wallet",
+          "title": "Music recognition, business updates, and Apple Cash numbers",
+          "canonicalSummary": "The update connected identified songs to Apple Music and expanded trusted transaction updates and Apple Cash payment options.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Music recognition could add songs to a library or playlist, Messages for Business could deliver opted-in updates, and Apple Cash added virtual card numbers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.4 — enhancements"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-4-safari-favorites-icons",
+          "title": "Icons-only Safari Favorites Bar",
+          "canonicalSummary": "Safari gained an option to display only website icons in the Favorites Bar.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The public release added a more compact icons-only favorites presentation.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.4 — enhancements"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-4-security-maintenance",
+          "title": "iPadOS 17.4 security remediations",
+          "canonicalSummary": "The update addressed documented security issues across privacy boundaries, Bluetooth, kernel protections, media handling, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a broad shared security advisory for the March 5 release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120893",
+              "locator": "iOS 17.4 and iPadOS 17.4 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-17-5",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 17.5 reached the public release channel on May 13, 2024. The public release mixed service features, personal-safety interoperability, visual personalization, and a detailed security update.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iPadOS 17.5 on May 13, 2024. The public release mixed service features, personal-safety interoperability, visual personalization, and a detailed security update.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120905",
+                "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.5"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "News+ could retain selected feeds for offline use, and Quartiles joined the puzzle catalog with player statistics. Tracking notifications expanded to compatible Bluetooth trackers paired with other operating systems.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.5"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120905",
+                "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120905",
+          "locator": "iOS 17.5 and iPadOS 17.5 — Released May 13, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.5"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-17-5-news-plus-offline-quartiles",
+          "title": "Offline Apple News+ and Quartiles",
+          "canonicalSummary": "Apple News+ gained offline access to selected feeds, a daily word game, and expanded puzzle statistics.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release added offline reading, Quartiles, and a scoreboard covering supported News+ puzzles.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.5 — Apple News+"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-5-cross-platform-tracker-alerts",
+          "title": "Cross-platform unwanted-tracker alerts",
+          "canonicalSummary": "Tracking notifications detect compatible unknown Bluetooth trackers moving with a user even when those trackers are paired to another operating system.",
+          "category": "security",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "iPadOS 17.5 expanded unwanted-tracking alerts beyond accessories paired within Apple’s own platform.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.5 — Tracking Notifications"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-5-pride-radiance-wallpaper",
+          "title": "Pride Radiance wallpaper",
+          "canonicalSummary": "The Lock Screen gained a Pride Radiance wallpaper as part of the release’s personalization additions.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "A new Pride Radiance wallpaper became available with the public update.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.5"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-5-security-maintenance",
+          "title": "iPadOS 17.5 security remediations",
+          "canonicalSummary": "The update addressed documented issues across system components, data access, media processing, privacy controls, and WebKit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a detailed shared security advisory for the May 13 public release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120905",
+              "locator": "iOS 17.5 and iPadOS 17.5 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-17-6",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 17.6 reached the public release channel on July 29, 2024. The public appearance is intentionally represented as maintenance and security work; no unsupported feature list has been added.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple’s dated release record places iPadOS 17.6 on July 29, 2024. The public appearance is intentionally represented as maintenance and security work; no unsupported feature list has been added.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/120909",
+                "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+              },
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.6"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What changed"
+          },
+          {
+            "text": "Apple’s security advisory documents fixes across AirDrop, code-signing and privacy controls, media processing, the kernel, WebKit, and other components.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/118702",
+                "locator": "iPadOS 17.6"
+              },
+              {
+                "url": "https://support.apple.com/en-us/120909",
+                "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/120909",
+          "locator": "iOS 17.6 and iPadOS 17.6 — Released July 29, 2024"
+        },
+        {
+          "url": "https://support.apple.com/en-us/118702",
+          "locator": "iPadOS 17.6"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-17-6-maintenance-fixes",
+          "title": "General iPadOS 17.6 maintenance",
+          "canonicalSummary": "Apple characterized the update as containing important bug fixes without naming a consumer-facing feature delta.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The public release focused on reliability and security rather than a new feature set.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/118702",
+              "locator": "iPadOS 17.6"
+            }
+          ]
+        },
+        {
+          "key": "ipados-17-6-security-maintenance",
+          "title": "iPadOS 17.6 security remediations",
+          "canonicalSummary": "The update addressed documented issues in file transfer, privacy enforcement, media parsing, kernel behavior, WebKit, and related components.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple published a shared version-specific security advisory for the July 29 release.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched first-party Apple documentation to the audited public-release version and date.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/120909",
+              "locator": "iOS 17.6 and iPadOS 17.6 — security content"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-29T23:55:00Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

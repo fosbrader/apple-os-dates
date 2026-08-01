@@ -1,0 +1,2906 @@
+{
+  "formatVersion": 1,
+  "target": { "projectId": "lh3yswzu", "dataset": "production" },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+      "transportUrl": "https://web.archive.org/web/20220608015846id_/https://developer.apple.com/tutorials/data/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes.json",
+      "title": "iOS & iPadOS 16 Beta Release Notes (preserved snapshot)",
+      "publisher": "Apple Developer via Internet Archive",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2022-06-10T04:49:40.000Z",
+      "topics": ["iOS", "iPadOS", "16.0", "Beta 1", "historical release notes"]
+    },
+    {
+      "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+      "transportUrl": "https://web.archive.org/web/20220622231823id_/https://developer.apple.com/tutorials/data/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes.json",
+      "title": "iOS & iPadOS 16 Beta 2 Release Notes (preserved snapshot)",
+      "publisher": "Apple Developer via Internet Archive",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2022-06-23T23:51:35.000Z",
+      "topics": ["iOS", "iPadOS", "16.0", "Beta 2", "historical release notes"]
+    },
+    {
+      "url": "https://web.archive.org/web/20220628053941/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+      "transportUrl": "https://web.archive.org/web/20220628053943id_/https://developer.apple.com/tutorials/data/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes.json",
+      "title": "iOS & iPadOS 16 Beta 2 Release Notes — June 28 state (preserved snapshot)",
+      "publisher": "Apple Developer via Internet Archive",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2022-06-28T05:39:41.000Z",
+      "topics": [
+        "iOS",
+        "iPadOS",
+        "16.0",
+        "Beta 2 retained revision",
+        "historical release notes"
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+      "transportUrl": "https://web.archive.org/web/20220706194549id_/https://developer.apple.com/tutorials/data/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes.json",
+      "title": "iOS & iPadOS 16 Beta 3 Release Notes (preserved snapshot)",
+      "publisher": "Apple Developer via Internet Archive",
+      "sourceClass": "archive",
+      "author": "Apple",
+      "publishedAt": "2022-07-06T21:08:14.000Z",
+      "topics": ["iOS", "iPadOS", "16.0", "Beta 3", "historical release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/support/install-beta",
+      "title": "Installing and using Apple beta software",
+      "publisher": "Apple Developer",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "beta software",
+        "backup",
+        "release notes",
+        "Feedback Assistant"
+      ]
+    }
+  ],
+  "versions": [],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-16-0",
+        "routeAlias": "beta-1"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 16 Beta 1 is represented by 16 source-supported changes selected from Apple’s preserved 143-record initial state; unsupported routes and build numbers are not inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The archived Apple reader identifies this document as “iOS & iPadOS 16 Beta Release Notes.” This iOS page selects 16 substantive records from the 143-record initial state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Beta 1 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "This page is a representative baseline, not an exhaustive conversion of all 143 initial records. Only exact issue-ID additions or meaningful status transitions are used for later milestones; wording-only edits are not presented as release changes.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Retained comparison state for Beta 1"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "The selection retains shared SDK records and notes explicitly scoped to iPhone or iOS. iPad-only Stage Manager, external-display, and iPad hardware claims are excluded.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "App Store — New Features; 86739279",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "App Store — New Features; 85988753",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "RoomPlan — New Features; 84170837",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features; 51463718",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features; 84996257",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features; 89558882",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features; 89588639",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "StoreKit — New Features; 84157048",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Swift — Known Issues; 93668260",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Home — Known Issues; 76012945",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "HealthKit — New Features; 82940646",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Game Controller — New Features; 82409809",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Emoji — Known Issues; 88603664",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Emoji — Known Issues; 93095669",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Siri — Known Issues; 94008258",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Voicemail — Known Issues; 93907701",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "This article is original synthesis with issue-ID locators. It does not reproduce Apple’s list text, infer build numbers, assign the June 28 document revision to a nonexistent route, or copy the cumulative Beta 7 state into missing milestones.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Beta 1 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Beta 1 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "App Store — New Features; 86739279",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "App Store — New Features; 85988753",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "RoomPlan — New Features; 84170837",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features; 51463718",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features; 84996257",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features; 89558882",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features; 89588639",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "StoreKit — New Features; 84157048",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Swift — Known Issues; 93668260",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Home — Known Issues; 76012945",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "HealthKit — New Features; 82940646",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Game Controller — New Features; 82409809",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Emoji — Known Issues; 88603664",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Emoji — Known Issues; 93095669",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Siri — Known Issues; 94008258",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Voicemail — Known Issues; 93907701",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-16-beta1-storekit-app-purchase-verification",
+          "title": "StoreKit app-purchase verification",
+          "canonicalSummary": "StoreKit added a cryptographic way for an app to verify that its copy was obtained through the App Store.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial SDK notes describe an app-purchase verification capability for checking App Store provenance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "App Store — New Features; 86739279",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-storekit-transaction-environment",
+          "title": "StoreKit transaction environment metadata",
+          "canonicalSummary": "StoreKit transaction and renewal information gained metadata identifying the server environment in which each record originated.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apps can distinguish the server environment associated with transaction and subscription-renewal information.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "App Store — New Features; 85988753",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-roomplan-interior-capture",
+          "title": "RoomPlan interior capture",
+          "canonicalSummary": "The new RoomPlan framework used device sensing and machine learning to construct parametric 3D room models with custom-interface and USD export support.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial state introduces a framework for guided room scanning, live capture data, and 3D model export.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "RoomPlan — New Features; 84170837",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-swiftui-multiline-textfield",
+          "title": "SwiftUI multiline text fields",
+          "canonicalSummary": "SwiftUI text fields gained an axis-based multiline mode for short and medium-length editable text.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Developers can configure a text field to grow across multiple lines without replacing it with a long-form text editor.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features; 51463718",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-swiftui-navigation-bar-defaults",
+          "title": "SwiftUI navigation-bar defaults",
+          "canonicalSummary": "SwiftUI changed navigation bars to hide automatically when empty and to choose inline or large title presentation according to whether a title exists.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apps adopting the new SDK need to account for revised title presentation and automatic hiding of empty navigation bars.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features; 84996257",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-swiftui-content-transitions",
+          "title": "SwiftUI automatic content transitions",
+          "canonicalSummary": "SwiftUI began animating changes to text and image content by default while providing an identity transition to opt out.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Text and image updates adopt automatic animation unless an app explicitly requests no content transition.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features; 89558882",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-swiftui-scroll-keyboard-dismissal",
+          "title": "SwiftUI scroll-driven keyboard dismissal",
+          "canonicalSummary": "SwiftUI lists and forms began dismissing the software keyboard when scrolling starts, with an API to retain the prior behavior.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Scrolling a list or form now dismisses the keyboard by default, and apps can opt back out.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features; 89588639",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-storekit-concurrency-annotations",
+          "title": "StoreKit concurrency annotations",
+          "canonicalSummary": "StoreKit APIs were annotated for Swift sendability and main-actor isolation.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The SDK applies concurrency annotations across StoreKit, affecting compile-time isolation and sendability checks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "StoreKit — New Features; 84157048",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-app-intents-release-builds",
+          "title": "App Intents release-build failure",
+          "canonicalSummary": "App Intents could fail when compiled in a Release configuration unless the conforming type was made public.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple documents a Release-build compatibility problem and a visibility-based workaround for affected intent types.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Swift — Known Issues; 93668260",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-matter-owner-pairing",
+          "title": "Matter accessory pairing ownership",
+          "canonicalSummary": "The initial Home implementation limited Matter pairing to the home owner and required the initiating device to use the home hub’s iCloud account.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Matter accessory setup had account and ownership restrictions in the first retained beta state.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Home — Known Issues; 76012945",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta1-healthkit-vision-prescriptions",
+          "title": "HealthKit vision prescriptions",
+          "canonicalSummary": "HealthKit added structured vision-prescription samples, document attachments, and per-sample authorization intended to limit unintended disclosure.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The iOS baseline adds prescription data and attachment support with granular authorization for access to sensitive samples.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "HealthKit — New Features; 82940646",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta1-game-controller-expansion",
+          "title": "Broader game-controller support",
+          "canonicalSummary": "The Game Controller framework expanded its supported set of Bluetooth and USB controllers on iOS 16.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple’s initial notes explicitly list iOS 16 among the systems gaining support for additional controllers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Game Controller — New Features; 82409809",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta1-emoji-lock-screen-search",
+          "title": "Emoji Lock Screen search",
+          "canonicalSummary": "The emoji Lock Screen editor was missing its search field in the first beta.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple identifies a missing search control in the iPhone Lock Screen’s emoji editor.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Emoji — Known Issues; 88603664",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta1-emoji-wallpaper-modifiers",
+          "title": "Emoji wallpaper modifiers",
+          "canonicalSummary": "Some emoji skin-tone and related modifiers could not be selected while configuring an emoji wallpaper.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The initial Lock Screen tooling could prevent selection of emoji modifiers during wallpaper setup.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Emoji — Known Issues; 93095669",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta1-siri-tv-remote-buttons",
+          "title": "Siri after using TV Remote",
+          "canonicalSummary": "Using the TV Remote app or Control Center remote could leave the iPhone’s hardware-button Siri activation unresponsive until restart.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The first beta notes an iPhone Siri activation failure associated with the TV Remote interfaces.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Siri — Known Issues; 94008258",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta1-voicemail-transcriptions",
+          "title": "Unavailable voicemail transcriptions",
+          "canonicalSummary": "Voicemail transcription was unavailable in the first retained iOS 16 beta state.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple flags voicemail transcription as unavailable during this initial prerelease milestone.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Voicemail — Known Issues; 93907701",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T08:15:41Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-16-0",
+        "routeAlias": "beta-2"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 16 Beta 2 is represented by 19 source-supported changes selected from Apple’s preserved 175-record initial Beta 2 state; unsupported routes and build numbers are not inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The archived Apple reader identifies this document as “iOS & iPadOS 16 Beta 2 Release Notes.” This iOS page selects 19 substantive records from the 175-record initial Beta 2 state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Beta 2 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "Against Beta 1, the parser found 31 additions, no removals, and 35 records whose heading or text changed. Only exact issue-ID additions or meaningful status transitions are used for later milestones; wording-only edits are not presented as release changes.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Before comparison state for Beta 2"
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Retained comparison state for Beta 2"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "The selection retains shared SDK records and notes explicitly scoped to iPhone or iOS. iPad-only Stage Manager, external-display, and iPad hardware claims are excluded.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "CoreGraphics — Deprecations; 94855401",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "StoreKit — New Features in beta 2; 93780442",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "StoreKit — Deprecations; 89764253",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "RealityKit — Known Issues; 95647020",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "MetalFX — Known Issues; 95390607",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "App Intents — Known Issues to Resolved in beta 2; 94235463 status transition",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Shortcuts — Known Issues to Resolved in beta 2; 93520037 status transition",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — Known Issues to Resolved in beta 2; 92914226 status transition",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "CloudKit — Known Issues; 94331191",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Backup — New Features in beta 2; 95276719",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "HealthKit — New Features in beta 2; 82588168",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "HealthKit — New Features in beta 2; 82974514",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "HealthKit — New Features in beta 2; 95315701",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Messages — New Features in beta 2; 95276296",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Messages — New Features in beta 2; 95276513",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Messages — New Features in beta 2; 95276623",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Messages — New Features in beta 2; 95276784",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "WidgetKit — Resolved in beta 2; 93480607",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Wallpapers — Known Issues; 94306911",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "This article is original synthesis with issue-ID locators. It does not reproduce Apple’s list text, infer build numbers, assign the June 28 document revision to a nonexistent route, or copy the cumulative Beta 7 state into missing milestones.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Beta 2 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Beta 2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Beta 2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "CoreGraphics — Deprecations; 94855401",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "StoreKit — New Features in beta 2; 93780442",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "StoreKit — Deprecations; 89764253",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "RealityKit — Known Issues; 95647020",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "MetalFX — Known Issues; 95390607",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "App Intents — Known Issues to Resolved in beta 2; 94235463 status transition",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Shortcuts — Known Issues to Resolved in beta 2; 93520037 status transition",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — Known Issues to Resolved in beta 2; 92914226 status transition",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "CloudKit — Known Issues; 94331191",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Backup — New Features in beta 2; 95276719",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "HealthKit — New Features in beta 2; 82588168",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "HealthKit — New Features in beta 2; 82974514",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "HealthKit — New Features in beta 2; 95315701",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Messages — New Features in beta 2; 95276296",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Messages — New Features in beta 2; 95276513",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Messages — New Features in beta 2; 95276623",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Messages — New Features in beta 2; 95276784",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "WidgetKit — Resolved in beta 2; 93480607",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Wallpapers — Known Issues; 94306911",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-16-beta2-coregraphics-byte-order-validation",
+          "title": "CoreGraphics image byte-order validation",
+          "canonicalSummary": "CoreGraphics tightened image-construction validation so an invalid byte-order parameter could no longer load an image.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Beta 2 notes warn that stricter parameter checking can expose invalid image creation code.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "CoreGraphics — Deprecations; 94855401",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-storekit-format-styles",
+          "title": "StoreKit price and subscription format styles",
+          "canonicalSummary": "StoreKit products gained localized formatting helpers for prices and subscription periods, including a newer unit formatter on the 16-generation SDKs.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds product-level localization APIs for monetary values and subscription durations.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "StoreKit — New Features in beta 2; 93780442",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-skdownload-deprecation",
+          "title": "SKDownload and hosted purchase assets",
+          "canonicalSummary": "Apple deprecated SKDownload and ended App Store hosting and App Store Connect management for nonconsumable in-app-purchase assets.",
+          "category": "removal",
+          "action": "removed",
+          "inheritance": "delta",
+          "summary": "The Beta 2 document records the retirement path for StoreKit-hosted nonconsumable assets.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "StoreKit — Deprecations; 89764253",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-realitykit-sdk-crash",
+          "title": "RealityKit Beta 2 SDK crash risk",
+          "canonicalSummary": "Apple advised developers to avoid an affected RealityKit API in the Beta 2 SDK because it could crash.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The preserved Beta 2 state adds a broad SDK stability warning for the affected RealityKit API.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "RealityKit — Known Issues; 95647020",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-metalfx-minimum-input",
+          "title": "MetalFX temporal-scaler minimum input",
+          "canonicalSummary": "The Beta 2 temporal scaler required an input resolution of at least 1280 by 720 and returned no object below that threshold.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Developers need to respect a temporary minimum input resolution when constructing the temporal scaler.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "MetalFX — Known Issues; 95390607",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-focus-filter-rename-fix",
+          "title": "Focus Filter deletion after intent rename",
+          "canonicalSummary": "Beta 2 fixed Focus Filters becoming undeletable after the underlying app intent was renamed.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The issue moves from App Intents known issue in Beta 1 to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "App Intents — Known Issues to Resolved in beta 2; 94235463 status transition",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-shortcuts-localized-parameters-fix",
+          "title": "Localized App Intents parameters",
+          "canonicalSummary": "Beta 2 fixed interpolated localized-string parameters appearing as raw format markers in Shortcuts and Focus Filters.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The localization failure changes from known in the first state to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Shortcuts — Known Issues to Resolved in beta 2; 93520037 status transition",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-swiftui-layout-children-fix",
+          "title": "SwiftUI custom Layout children",
+          "canonicalSummary": "Beta 2 fixed custom SwiftUI Layout implementations failing to compile when given multiple child views.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The compiler problem is retained under a resolved Beta 2 heading after appearing as a Beta 1 known issue.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — Known Issues to Resolved in beta 2; 92914226 status transition",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-cloudkit-simulator-launch",
+          "title": "CloudKit simulator launch failure",
+          "canonicalSummary": "CloudKit apps could fail to launch in Simulator because a Swift CloudKit library could not be loaded.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds a Simulator-only CloudKit launch problem with a deployment-target workaround.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "CloudKit — Known Issues; 94331191",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta2-lte-backup",
+          "title": "Device backup over LTE",
+          "canonicalSummary": "iOS 16 Beta 2 expanded device backup connectivity to LTE in addition to 5G and Wi-Fi.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple explicitly scopes the new LTE backup option to customers using iOS 16.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Backup — New Features in beta 2; 95276719",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta2-healthkit-multisport-workouts",
+          "title": "HealthKit multisport workouts",
+          "canonicalSummary": "HealthKit workout APIs added multisport sessions spanning swimming, cycling, and running.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds a structured workout type for transitions among the three supported endurance activities.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "HealthKit — New Features in beta 2; 82588168",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta2-healthkit-running-metrics",
+          "title": "HealthKit running metrics",
+          "canonicalSummary": "HealthKit added data types for running power, ground contact time, vertical oscillation, speed, and stride length.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The Beta 2 SDK exposes a broader set of running-workout measurements.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "HealthKit — New Features in beta 2; 82974514",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta2-healthkit-afib-history",
+          "title": "HealthKit AFib History data",
+          "canonicalSummary": "HealthKit added a data type for tracking atrial-fibrillation history.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The retained Beta 2 notes identify a new HealthKit data type for AFib History.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "HealthKit — New Features in beta 2; 95315701",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta2-sms-subcategories",
+          "title": "SMS transaction and promotion subcategories",
+          "canonicalSummary": "Messages classification APIs expanded incoming unknown-number SMS into twelve finer transaction and promotion subcategories.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Beta 2 gives developers more categories for organizing transaction and promotional SMS.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Messages — New Features in beta 2; 95276296",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta2-sms-event-extraction",
+          "title": "SMS event extraction in India",
+          "canonicalSummary": "Messages added event extraction for Indian SMS users, surfacing appointments as suggestions in Messages and Calendar.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The feature converts supported event and appointment messages into Siri and Calendar suggestions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Messages — New Features in beta 2; 95276513",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta2-carrier-junk-reporting",
+          "title": "Carrier SMS and MMS junk reporting",
+          "canonicalSummary": "Messages extended junk reporting so customers of selected US carriers could send unknown-sender SMS or MMS reports to their carrier.",
+          "category": "enhancement",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The Beta 2 capability is carrier-limited and appears within the unknown-senders workflow.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Messages — New Features in beta 2; 95276623",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta2-dual-sim-message-filtering",
+          "title": "Dual-SIM message filtering",
+          "canonicalSummary": "Messages added filtering by line for customers using a dual-SIM iPhone.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Beta 2 lets dual-SIM iPhone users separate messages according to their SIM lines.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Messages — New Features in beta 2; 95276784",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta2-widgetkit-lock-screen-previews",
+          "title": "WidgetKit Lock Screen preview fix",
+          "canonicalSummary": "Beta 2 fixed accessory-family widgets failing to appear correctly in Xcode Lock Screen previews for an iOS target.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The retained state records a resolved Xcode preview issue for the new Lock Screen widget families.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "WidgetKit — Resolved in beta 2; 93480607",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta2-wallpaper-restore-loss",
+          "title": "Custom wallpapers after iCloud restore",
+          "canonicalSummary": "Restoring an iCloud backup could replace custom Lock Screens with the default iOS 16 wallpaper.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds a data-restoration risk specific to customized iOS 16 wallpapers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Wallpapers — Known Issues; 94306911",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T08:15:41Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-16-0",
+        "routeAlias": "beta-3"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iOS 16 Beta 3 is represented by 10 source-supported changes selected from Apple’s preserved 192-record Beta 3 state; unsupported routes and build numbers are not inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The archived Apple reader identifies this document as “iOS & iPadOS 16 Beta 3 Release Notes.” This iOS page selects 10 substantive records from the 192-record Beta 3 state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Beta 3 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "Against the latest retained 180-record Beta 2 state, the parser found 11 additions, no removals, and 5 changed records. Only exact issue-ID additions or meaningful status transitions are used for later milestones; wording-only edits are not presented as release changes.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220628053941/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Before comparison state for Beta 3"
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Retained comparison state for Beta 3"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "The selection retains shared SDK records and notes explicitly scoped to iPhone or iOS. iPad-only Stage Manager, external-display, and iPad hardware claims are excluded.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features in beta 3; 45928055",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features in beta 3; 83637876",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "StoreKit — Known Issues to Resolved in beta 3; 93794298 status transition",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "WeatherKit — Known Issues; 95866480",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "WeatherKit — Known Issues; 96101505",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Siri — Known Issues; 96128292",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Maps — Known issues; 86537613",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Telephony — Known Issues; 96261293",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Telephony — Known Issues; 95570535",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Posters — Known Issues; 94060721",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "This article is original synthesis with issue-ID locators. It does not reproduce Apple’s list text, infer build numbers, assign the June 28 document revision to a nonexistent route, or copy the cumulative Beta 7 state into missing milestones.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Beta 3 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20220628053941/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Beta 3 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Beta 3 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features in beta 3; 45928055",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features in beta 3; 83637876",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "StoreKit — Known Issues to Resolved in beta 3; 93794298 status transition",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "WeatherKit — Known Issues; 95866480",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "WeatherKit — Known Issues; 96101505",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Siri — Known Issues; 96128292",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Maps — Known issues; 86537613",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Telephony — Known Issues; 96261293",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Telephony — Known Issues; 95570535",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Posters — Known Issues; 94060721",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-16-beta3-swiftui-scroll-content-background",
+          "title": "SwiftUI scroll-content backgrounds",
+          "canonicalSummary": "SwiftUI added a view modifier for customizing backgrounds in scrollable containers such as lists.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Beta 3 exposes direct scroll-content background customization in SwiftUI.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features in beta 3; 45928055",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-swiftui-focused-objects",
+          "title": "SwiftUI focused objects",
+          "canonicalSummary": "SwiftUI added focused-object and focused-scene-object modifiers for vending observable objects from the focused view or scene.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new modifiers pair with FocusedObject so focus can supply an observable object through a view hierarchy.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features in beta 3; 83637876",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-storekit-start-date-fix",
+          "title": "StoreKit recent subscription start date",
+          "canonicalSummary": "Beta 3 fixed StoreKit testing always returning a distant-past value for a subscription’s recent start date.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The issue moves from known in the retained Beta 2 state to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "StoreKit — Known Issues to Resolved in beta 3; 93794298 status transition",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-weatherkit-device-authentication",
+          "title": "WeatherKit device authentication",
+          "canonicalSummary": "WeatherKit service authentication could intermittently fail when an app launched on physical hardware.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 3 adds an intermittent physical-device authentication issue with relaunch as the workaround.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "WeatherKit — Known Issues; 95866480",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-weatherkit-simulator-requests",
+          "title": "WeatherKit Simulator requests",
+          "canonicalSummary": "WeatherKit requests could intermittently fail in Simulator and needed to be retried.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The Beta 3 document separately identifies intermittent WeatherKit failures in Simulator.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "WeatherKit — Known Issues; 96101505",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-siri-app-shortcut-parameters",
+          "title": "Parameterized App Shortcut phrases",
+          "canonicalSummary": "Parameterized App Shortcut phrases could fail through Siri, although phrases without parameters continued to work.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 3 adds a Siri integration failure limited to parameterized App Shortcut phrases.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Siri — Known Issues; 96128292",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-maps-share-eta-localization",
+          "title": "Share ETA localization",
+          "canonicalSummary": "Some strings used when one Maps user shared trip status with another were not localized.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The retained Beta 3 state adds a localization gap in the Maps Share ETA workflow.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Maps — Known issues; 86537613",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta3-esim-conversion-calls",
+          "title": "Calls after physical-SIM to eSIM conversion",
+          "canonicalSummary": "Incoming and outgoing calls could fail after converting a line from a physical SIM to eSIM on the same iPhone.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 3 adds a telephony regression tied to same-device SIM conversion.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Telephony — Known Issues; 96261293",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta3-china-cellular-app-switches",
+          "title": "Per-app cellular settings on China-region iPhones",
+          "canonicalSummary": "After clean installation and backup restoration on affected China-region iPhones, third-party per-app cellular switches could be disabled.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple documents a regional cellular-settings problem and directs users to re-enable affected app switches.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Telephony — Known Issues; 95570535",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "ios-16-beta3-focus-poster-from-photos",
+          "title": "Focus state after creating a poster",
+          "canonicalSummary": "Creating and applying a new Lock Screen poster from the Photos share sheet could leave the previously paired Focus active.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The Beta 3 document adds a Focus and Lock Screen poster state mismatch in the Photos sharing flow.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Posters — Known Issues; 94060721",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T08:15:41Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-16-0",
+        "routeAlias": "beta-1"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 16 Beta 1 is represented by 16 source-supported changes selected from Apple’s preserved 143-record initial state; unsupported routes and build numbers are not inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The archived Apple reader identifies this document as “iOS & iPadOS 16 Beta Release Notes.” This iPadOS page selects 16 substantive records from the 143-record initial state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Beta 1 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "This page is a representative baseline, not an exhaustive conversion of all 143 initial records. Only exact issue-ID additions or meaningful status transitions are used for later milestones; wording-only edits are not presented as release changes.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Retained comparison state for Beta 1"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "The selection retains shared SDK records and notes explicitly scoped to iPad or iPadOS. iPhone telephony, voicemail, HealthKit user workflows, and iOS Lock Screen claims are excluded.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "App Store — New Features; 86739279",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "App Store — New Features; 85988753",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "RoomPlan — New Features; 84170837",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features; 51463718",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features; 84996257",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features; 89558882",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features; 89588639",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "StoreKit — New Features; 84157048",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Swift — Known Issues; 93668260",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Home — Known Issues; 76012945",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Stage Manager — Known Issues; 91981726",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Home Screen — Known Issues; 93508904",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — Known Issues; 92933472",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Telephony — Known Issues; 93295742",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Metal Offline Compiler — Known Issues; 93278732",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Home Screen — Known Issues; 93211110",
+                "note": "Original synthesis from the preserved Apple beta 1 record."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "This article is original synthesis with issue-ID locators. It does not reproduce Apple’s list text, infer build numbers, assign the June 28 document revision to a nonexistent route, or copy the cumulative Beta 7 state into missing milestones.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Beta 1 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Beta 1 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "App Store — New Features; 86739279",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "App Store — New Features; 85988753",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "RoomPlan — New Features; 84170837",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features; 51463718",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features; 84996257",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features; 89558882",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features; 89588639",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "StoreKit — New Features; 84157048",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Swift — Known Issues; 93668260",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Home — Known Issues; 76012945",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Stage Manager — Known Issues; 91981726",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Home Screen — Known Issues; 93508904",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — Known Issues; 92933472",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Telephony — Known Issues; 93295742",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Metal Offline Compiler — Known Issues; 93278732",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Home Screen — Known Issues; 93211110",
+          "note": "Original synthesis from the preserved Apple beta 1 record."
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-16-beta1-storekit-app-purchase-verification",
+          "title": "StoreKit app-purchase verification",
+          "canonicalSummary": "StoreKit added a cryptographic way for an app to verify that its copy was obtained through the App Store.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial SDK notes describe an app-purchase verification capability for checking App Store provenance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "App Store — New Features; 86739279",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-storekit-transaction-environment",
+          "title": "StoreKit transaction environment metadata",
+          "canonicalSummary": "StoreKit transaction and renewal information gained metadata identifying the server environment in which each record originated.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apps can distinguish the server environment associated with transaction and subscription-renewal information.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "App Store — New Features; 85988753",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-roomplan-interior-capture",
+          "title": "RoomPlan interior capture",
+          "canonicalSummary": "The new RoomPlan framework used device sensing and machine learning to construct parametric 3D room models with custom-interface and USD export support.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial state introduces a framework for guided room scanning, live capture data, and 3D model export.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "RoomPlan — New Features; 84170837",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-swiftui-multiline-textfield",
+          "title": "SwiftUI multiline text fields",
+          "canonicalSummary": "SwiftUI text fields gained an axis-based multiline mode for short and medium-length editable text.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Developers can configure a text field to grow across multiple lines without replacing it with a long-form text editor.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features; 51463718",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-swiftui-navigation-bar-defaults",
+          "title": "SwiftUI navigation-bar defaults",
+          "canonicalSummary": "SwiftUI changed navigation bars to hide automatically when empty and to choose inline or large title presentation according to whether a title exists.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apps adopting the new SDK need to account for revised title presentation and automatic hiding of empty navigation bars.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features; 84996257",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-swiftui-content-transitions",
+          "title": "SwiftUI automatic content transitions",
+          "canonicalSummary": "SwiftUI began animating changes to text and image content by default while providing an identity transition to opt out.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Text and image updates adopt automatic animation unless an app explicitly requests no content transition.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features; 89558882",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-swiftui-scroll-keyboard-dismissal",
+          "title": "SwiftUI scroll-driven keyboard dismissal",
+          "canonicalSummary": "SwiftUI lists and forms began dismissing the software keyboard when scrolling starts, with an API to retain the prior behavior.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Scrolling a list or form now dismisses the keyboard by default, and apps can opt back out.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features; 89588639",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-storekit-concurrency-annotations",
+          "title": "StoreKit concurrency annotations",
+          "canonicalSummary": "StoreKit APIs were annotated for Swift sendability and main-actor isolation.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The SDK applies concurrency annotations across StoreKit, affecting compile-time isolation and sendability checks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "StoreKit — New Features; 84157048",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-app-intents-release-builds",
+          "title": "App Intents release-build failure",
+          "canonicalSummary": "App Intents could fail when compiled in a Release configuration unless the conforming type was made public.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple documents a Release-build compatibility problem and a visibility-based workaround for affected intent types.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Swift — Known Issues; 93668260",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta1-matter-owner-pairing",
+          "title": "Matter accessory pairing ownership",
+          "canonicalSummary": "The initial Home implementation limited Matter pairing to the home owner and required the initiating device to use the home hub’s iCloud account.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Matter accessory setup had account and ownership restrictions in the first retained beta state.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Home — Known Issues; 76012945",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta1-stage-manager-low-resolution",
+          "title": "Stage Manager at lower resolutions",
+          "canonicalSummary": "Stage Manager content could render incorrectly when the connected-display resolution was below 4K.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The initial iPadOS notes warn that Stage Manager display output could be incorrect below 4K.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Stage Manager — Known Issues; 91981726",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta1-lock-screen-timers",
+          "title": "Timers absent from the iPad Lock Screen",
+          "canonicalSummary": "Active timers did not appear on the iPad Lock Screen in the first beta.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple records an iPad-specific Lock Screen omission for running timers.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Home Screen — Known Issues; 93508904",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta1-swiftui-table-headers",
+          "title": "SwiftUI table-header appearance",
+          "canonicalSummary": "SwiftUI table headers could use an incorrect appearance on iPad unless rows were wrapped in a section.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The iPad presentation bug came with a documented section-wrapping workaround.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — Known Issues; 92933472",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta1-cellular-activation",
+          "title": "Cellular iPad activation",
+          "canonicalSummary": "A cellular iPad could fail to activate over cellular service during initial setup or after erasing the device.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The retained state identifies an iPad-specific activation failure affecting clean setup and erase workflows.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Telephony — Known Issues; 93295742",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta1-metalfx-m1-creation",
+          "title": "MetalFX creation on M1 iPad",
+          "canonicalSummary": "Creating the MetalFX temporal-scaling effect could terminate unexpectedly on an M1-equipped iPad.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple advises using macOS for testing because effect creation could fail on M1 iPad hardware.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Metal Offline Compiler — Known Issues; 93278732",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta1-external-display-status-bar",
+          "title": "External-display status bar",
+          "canonicalSummary": "The status bar could disappear on an external display after entering the app switcher.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The first iPadOS beta records an external-display status-bar failure with a reconnect workaround.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Selected as a representative substantive record present in Apple’s first retained 143-record Beta 1 DocC state; the baseline selection is intentionally not exhaustive.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+              "locator": "Home Screen — Known Issues; 93211110",
+              "note": "Original synthesis from the preserved Apple beta 1 record."
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T08:15:41Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-16-0",
+        "routeAlias": "beta-2"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 16 Beta 2 is represented by 12 source-supported changes selected from Apple’s preserved 175-record initial Beta 2 state; unsupported routes and build numbers are not inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The archived Apple reader identifies this document as “iOS & iPadOS 16 Beta 2 Release Notes.” This iPadOS page selects 12 substantive records from the 175-record initial Beta 2 state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Beta 2 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "Against Beta 1, the parser found 31 additions, no removals, and 35 records whose heading or text changed. Only exact issue-ID additions or meaningful status transitions are used for later milestones; wording-only edits are not presented as release changes.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+                "locator": "Before comparison state for Beta 2"
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Retained comparison state for Beta 2"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "The selection retains shared SDK records and notes explicitly scoped to iPad or iPadOS. iPhone telephony, voicemail, HealthKit user workflows, and iOS Lock Screen claims are excluded.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "CoreGraphics — Deprecations; 94855401",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "StoreKit — New Features in beta 2; 93780442",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "StoreKit — Deprecations; 89764253",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "RealityKit — Known Issues; 95647020",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "MetalFX — Known Issues; 95390607",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "App Intents — Known Issues to Resolved in beta 2; 94235463 status transition",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Shortcuts — Known Issues to Resolved in beta 2; 93520037 status transition",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — Known Issues to Resolved in beta 2; 92914226 status transition",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "CloudKit — Known Issues; 94331191",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Maps — Known issues; 94502723",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Stage Manager — Known Issues; 92645222",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Home Screen — Known Issues; 93481462",
+                "note": "Original synthesis from the preserved Apple beta 2 record."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "This article is original synthesis with issue-ID locators. It does not reproduce Apple’s list text, infer build numbers, assign the June 28 document revision to a nonexistent route, or copy the cumulative Beta 7 state into missing milestones.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Beta 2 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20220610044940/https://developer.apple.com/documentation/iOS-iPadOS-Release-Notes/ios-ipados-16-release-notes",
+          "locator": "Beta 2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Beta 2 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "CoreGraphics — Deprecations; 94855401",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "StoreKit — New Features in beta 2; 93780442",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "StoreKit — Deprecations; 89764253",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "RealityKit — Known Issues; 95647020",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "MetalFX — Known Issues; 95390607",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "App Intents — Known Issues to Resolved in beta 2; 94235463 status transition",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Shortcuts — Known Issues to Resolved in beta 2; 93520037 status transition",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — Known Issues to Resolved in beta 2; 92914226 status transition",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "CloudKit — Known Issues; 94331191",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Maps — Known issues; 94502723",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Stage Manager — Known Issues; 92645222",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Home Screen — Known Issues; 93481462",
+          "note": "Original synthesis from the preserved Apple beta 2 record."
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-16-beta2-coregraphics-byte-order-validation",
+          "title": "CoreGraphics image byte-order validation",
+          "canonicalSummary": "CoreGraphics tightened image-construction validation so an invalid byte-order parameter could no longer load an image.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Beta 2 notes warn that stricter parameter checking can expose invalid image creation code.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "CoreGraphics — Deprecations; 94855401",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-storekit-format-styles",
+          "title": "StoreKit price and subscription format styles",
+          "canonicalSummary": "StoreKit products gained localized formatting helpers for prices and subscription periods, including a newer unit formatter on the 16-generation SDKs.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds product-level localization APIs for monetary values and subscription durations.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "StoreKit — New Features in beta 2; 93780442",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-skdownload-deprecation",
+          "title": "SKDownload and hosted purchase assets",
+          "canonicalSummary": "Apple deprecated SKDownload and ended App Store hosting and App Store Connect management for nonconsumable in-app-purchase assets.",
+          "category": "removal",
+          "action": "removed",
+          "inheritance": "delta",
+          "summary": "The Beta 2 document records the retirement path for StoreKit-hosted nonconsumable assets.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "StoreKit — Deprecations; 89764253",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-realitykit-sdk-crash",
+          "title": "RealityKit Beta 2 SDK crash risk",
+          "canonicalSummary": "Apple advised developers to avoid an affected RealityKit API in the Beta 2 SDK because it could crash.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The preserved Beta 2 state adds a broad SDK stability warning for the affected RealityKit API.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "RealityKit — Known Issues; 95647020",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-metalfx-minimum-input",
+          "title": "MetalFX temporal-scaler minimum input",
+          "canonicalSummary": "The Beta 2 temporal scaler required an input resolution of at least 1280 by 720 and returned no object below that threshold.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Developers need to respect a temporary minimum input resolution when constructing the temporal scaler.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "MetalFX — Known Issues; 95390607",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-focus-filter-rename-fix",
+          "title": "Focus Filter deletion after intent rename",
+          "canonicalSummary": "Beta 2 fixed Focus Filters becoming undeletable after the underlying app intent was renamed.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The issue moves from App Intents known issue in Beta 1 to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "App Intents — Known Issues to Resolved in beta 2; 94235463 status transition",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-shortcuts-localized-parameters-fix",
+          "title": "Localized App Intents parameters",
+          "canonicalSummary": "Beta 2 fixed interpolated localized-string parameters appearing as raw format markers in Shortcuts and Focus Filters.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The localization failure changes from known in the first state to resolved in Beta 2.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Shortcuts — Known Issues to Resolved in beta 2; 93520037 status transition",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-swiftui-layout-children-fix",
+          "title": "SwiftUI custom Layout children",
+          "canonicalSummary": "Beta 2 fixed custom SwiftUI Layout implementations failing to compile when given multiple child views.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The compiler problem is retained under a resolved Beta 2 heading after appearing as a Beta 1 known issue.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — Known Issues to Resolved in beta 2; 92914226 status transition",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta2-cloudkit-simulator-launch",
+          "title": "CloudKit simulator launch failure",
+          "canonicalSummary": "CloudKit apps could fail to launch in Simulator because a Swift CloudKit library could not be loaded.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 2 adds a Simulator-only CloudKit launch problem with a deployment-target workaround.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "CloudKit — Known Issues; 94331191",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta2-maps-older-ipads",
+          "title": "Maps tiles on lower-core iPads",
+          "canonicalSummary": "Maps could fail to load map tiles and search previews on iPads equipped with two- or three-core CPUs.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The Beta 2 state adds an iPad-specific Maps rendering and search-preview failure.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Maps — Known issues; 94502723",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta2-stage-manager-keyboard-touches",
+          "title": "Stage Manager keyboard touch events",
+          "canonicalSummary": "Stage Manager windows could receive unintended touch events while the software keyboard was in use.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple adds a Stage Manager input-routing issue affecting typing with the on-screen keyboard.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Stage Manager — Known Issues; 92645222",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta2-external-display-canvas",
+          "title": "External-display canvas sizing",
+          "canonicalSummary": "Some connected displays used the wrong canvas size and rendered portions of the interface off-screen.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The Beta 2 notes recommend display mirroring as a workaround for incorrect external-display sizing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the first retained 175-record Beta 2 state against the 143-record Beta 1 state.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220623235135/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Home Screen — Known Issues; 93481462",
+              "note": "Original synthesis from the preserved Apple beta 2 record."
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T08:15:41Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-16-0",
+        "routeAlias": "beta-3"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "iPadOS 16 Beta 3 is represented by 9 source-supported changes selected from Apple’s preserved 192-record Beta 3 state; unsupported routes and build numbers are not inferred.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Preserved release-note state" },
+          {
+            "style": "normal",
+            "text": "The archived Apple reader identifies this document as “iOS & iPadOS 16 Beta 3 Release Notes.” This iPadOS page selects 9 substantive records from the 192-record Beta 3 state.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Beta 3 archived document title"
+              }
+            ]
+          },
+          { "style": "h2", "text": "How this milestone differs" },
+          {
+            "style": "normal",
+            "text": "Against the latest retained 180-record Beta 2 state, the parser found 11 additions, no removals, and 5 changed records. Only exact issue-ID additions or meaningful status transitions are used for later milestones; wording-only edits are not presented as release changes.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220628053941/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Before comparison state for Beta 3"
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Retained comparison state for Beta 3"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Platform scope" },
+          {
+            "style": "normal",
+            "text": "The selection retains shared SDK records and notes explicitly scoped to iPad or iPadOS. iPhone telephony, voicemail, HealthKit user workflows, and iOS Lock Screen claims are excluded.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features in beta 3; 45928055",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "SwiftUI — New Features in beta 3; 83637876",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "StoreKit — Known Issues to Resolved in beta 3; 93794298 status transition",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "WeatherKit — Known Issues; 95866480",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "WeatherKit — Known Issues; 96101505",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Siri — Known Issues; 96128292",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Maps — Known issues; 86537613",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Home Screen — Known Issues; 93877953",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Mail — Known issues; 96028740",
+                "note": "Original synthesis from the preserved Apple beta 3 record."
+              }
+            ]
+          },
+          { "style": "h2", "text": "Editorial boundary" },
+          {
+            "style": "normal",
+            "text": "This article is original synthesis with issue-ID locators. It does not reproduce Apple’s list text, infer build numbers, assign the June 28 document revision to a nonexistent route, or copy the cumulative Beta 7 state into missing milestones.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/support/install-beta",
+                "locator": "Beta software, release notes, and Feedback Assistant"
+              },
+              {
+                "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+                "locator": "Beta 3 evidence boundary"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20220628053941/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Beta 3 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Beta 3 snapshot comparison"
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features in beta 3; 45928055",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "SwiftUI — New Features in beta 3; 83637876",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "StoreKit — Known Issues to Resolved in beta 3; 93794298 status transition",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "WeatherKit — Known Issues; 95866480",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "WeatherKit — Known Issues; 96101505",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Siri — Known Issues; 96128292",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Maps — Known issues; 86537613",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Home Screen — Known Issues; 93877953",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        },
+        {
+          "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+          "locator": "Mail — Known issues; 96028740",
+          "note": "Original synthesis from the preserved Apple beta 3 record."
+        }
+      ],
+      "changes": [
+        {
+          "key": "apple-16-beta3-swiftui-scroll-content-background",
+          "title": "SwiftUI scroll-content backgrounds",
+          "canonicalSummary": "SwiftUI added a view modifier for customizing backgrounds in scrollable containers such as lists.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Beta 3 exposes direct scroll-content background customization in SwiftUI.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features in beta 3; 45928055",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-swiftui-focused-objects",
+          "title": "SwiftUI focused objects",
+          "canonicalSummary": "SwiftUI added focused-object and focused-scene-object modifiers for vending observable objects from the focused view or scene.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new modifiers pair with FocusedObject so focus can supply an observable object through a view hierarchy.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "SwiftUI — New Features in beta 3; 83637876",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-storekit-start-date-fix",
+          "title": "StoreKit recent subscription start date",
+          "canonicalSummary": "Beta 3 fixed StoreKit testing always returning a distant-past value for a subscription’s recent start date.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The issue moves from known in the retained Beta 2 state to resolved in Beta 3.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "StoreKit — Known Issues to Resolved in beta 3; 93794298 status transition",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-weatherkit-device-authentication",
+          "title": "WeatherKit device authentication",
+          "canonicalSummary": "WeatherKit service authentication could intermittently fail when an app launched on physical hardware.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 3 adds an intermittent physical-device authentication issue with relaunch as the workaround.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "WeatherKit — Known Issues; 95866480",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-weatherkit-simulator-requests",
+          "title": "WeatherKit Simulator requests",
+          "canonicalSummary": "WeatherKit requests could intermittently fail in Simulator and needed to be retried.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The Beta 3 document separately identifies intermittent WeatherKit failures in Simulator.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "WeatherKit — Known Issues; 96101505",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-siri-app-shortcut-parameters",
+          "title": "Parameterized App Shortcut phrases",
+          "canonicalSummary": "Parameterized App Shortcut phrases could fail through Siri, although phrases without parameters continued to work.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 3 adds a Siri integration failure limited to parameterized App Shortcut phrases.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Siri — Known Issues; 96128292",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "apple-16-beta3-maps-share-eta-localization",
+          "title": "Share ETA localization",
+          "canonicalSummary": "Some strings used when one Maps user shared trip status with another were not localized.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The retained Beta 3 state adds a localization gap in the Maps Share ETA workflow.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Maps — Known issues; 86537613",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta3-external-display-camera",
+          "title": "Camera use on an external display",
+          "canonicalSummary": "On iPad, camera access while using an external display was limited to FaceTime in the retained Beta 3 state.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Beta 3 adds an explicit iPad external-display limitation for camera access.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Home Screen — Known Issues; 93877953",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        },
+        {
+          "key": "ipados-16-beta3-mail-move-with-keyboard",
+          "title": "Mail move picker with a hardware keyboard",
+          "canonicalSummary": "Mail’s folder picker could become unresponsive when moving multiple selected messages with a keyboard attached.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The retained Beta 3 state adds a hardware-keyboard workflow failure for moving multiple messages.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched the issue ID, component, status heading, and normalized text in the 192-record Beta 3 state against the latest retained 180-record Beta 2 state from June 28.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20220706210814/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-16-release-notes",
+              "locator": "Mail — Known issues; 96028740",
+              "note": "Original synthesis from the preserved Apple beta 3 record."
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T08:15:41Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

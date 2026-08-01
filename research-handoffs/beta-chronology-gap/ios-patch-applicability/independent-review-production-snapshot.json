@@ -1,0 +1,1032 @@
+{
+  "formatVersion": 1,
+  "batchId": "ios-patch-applicability-2026-07-31",
+  "capturedAt": "2026-07-31T08:15:47.313Z",
+  "perspective": "published",
+  "useCdn": false,
+  "projectId": "lh3yswzu",
+  "dataset": "production",
+  "reviewedAssignmentSha256": "cf20af1cf947693f2eedc9dd990597263e4ba60d5026747f3821d1bc2062a749",
+  "reviewedCandidatesSha256": "3062419ce68e3c89d16ce153657ce14c223504dca74e4ec084c38e4d0de44b41",
+  "targetVersionIds": [
+    "version-ios-10-3-1",
+    "version-ios-11-0-1",
+    "version-ios-11-0-2",
+    "version-ios-11-0-3",
+    "version-ios-11-1-1",
+    "version-ios-11-1-2",
+    "version-ios-11-2-1",
+    "version-ios-12-0-1",
+    "version-ios-12-3-1",
+    "version-ios-12-4-1",
+    "version-ios-13-1-1",
+    "version-ios-13-1-2",
+    "version-ios-13-1-3",
+    "version-ios-13-3-1",
+    "version-ios-13-4-1",
+    "version-ios-13-5-1",
+    "version-ios-14-0-1",
+    "version-ios-14-5-1",
+    "version-ios-14-7-1",
+    "version-ios-14-8",
+    "version-ios-26-0-1",
+    "version-ios-26-2-1",
+    "version-ios-8-4-1",
+    "version-ios-9-0-1",
+    "version-ios-9-0-2",
+    "version-ios-9-3-1",
+    "version-ios-9-3-5"
+  ],
+  "candidateCount": 3,
+  "parentChecks": [
+    {
+      "releaseVersionId": "version-ios-10-3-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-10-3-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2017-04-03",
+        "releaseStatus": "released",
+        "train": "iOS 10",
+        "version": "10.3.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-11-0-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-11-0-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2017-09-26",
+        "releaseStatus": "released",
+        "train": "iOS 11",
+        "version": "11.0.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-11-0-2",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-11-0-2",
+        "platform": "iOS",
+        "publicReleaseDate": "2017-10-03",
+        "releaseStatus": "released",
+        "train": "iOS 11",
+        "version": "11.0.2"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-11-0-3",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-11-0-3",
+        "platform": "iOS",
+        "publicReleaseDate": "2017-10-11",
+        "releaseStatus": "released",
+        "train": "iOS 11",
+        "version": "11.0.3"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-11-1-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-11-1-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2017-11-09",
+        "releaseStatus": "released",
+        "train": "iOS 11",
+        "version": "11.1.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-11-1-2",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-11-1-2",
+        "platform": "iOS",
+        "publicReleaseDate": "2017-11-16",
+        "releaseStatus": "released",
+        "train": "iOS 11",
+        "version": "11.1.2"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-11-2-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-11-2-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2017-12-13",
+        "releaseStatus": "released",
+        "train": "iOS 11",
+        "version": "11.2.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-12-0-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-12-0-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2018-10-08",
+        "releaseStatus": "released",
+        "train": "iOS 12",
+        "version": "12.0.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-12-3-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-12-3-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2019-05-24",
+        "releaseStatus": "released",
+        "train": "iOS 12",
+        "version": "12.3.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-12-4-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-12-4-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2019-08-26",
+        "releaseStatus": "released",
+        "train": "iOS 12",
+        "version": "12.4.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-13-1-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-13-1-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2019-09-27",
+        "releaseStatus": "released",
+        "train": "iOS 13",
+        "version": "13.1.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-13-1-2",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-13-1-2",
+        "platform": "iOS",
+        "publicReleaseDate": "2019-09-30",
+        "releaseStatus": "released",
+        "train": "iOS 13",
+        "version": "13.1.2"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-13-1-3",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-13-1-3",
+        "platform": "iOS",
+        "publicReleaseDate": "2019-10-15",
+        "releaseStatus": "released",
+        "train": "iOS 13",
+        "version": "13.1.3"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-13-3-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-13-3-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2020-01-28",
+        "releaseStatus": "released",
+        "train": "iOS 13",
+        "version": "13.3.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-13-4-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-13-4-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2020-04-07",
+        "releaseStatus": "released",
+        "train": "iOS 13",
+        "version": "13.4.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-13-5-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-13-5-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2020-06-01",
+        "releaseStatus": "released",
+        "train": "iOS 13",
+        "version": "13.5.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-0-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-14-0-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2020-09-24",
+        "releaseStatus": "released",
+        "train": "iOS 14",
+        "version": "14.0.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-5-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-14-5-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2021-05-03",
+        "releaseStatus": "released",
+        "train": "iOS 14",
+        "version": "14.5.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-7-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-14-7-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2021-07-26",
+        "releaseStatus": "released",
+        "train": "iOS 14",
+        "version": "14.7.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-14-8",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-14-8",
+        "platform": "iOS",
+        "publicReleaseDate": "2021-09-13",
+        "releaseStatus": "released",
+        "train": "iOS 14",
+        "version": "14.8"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-26-0-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-26-0-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2025-09-29",
+        "releaseStatus": "released",
+        "train": "iOS 26",
+        "version": "26.0.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-26-2-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-26-2-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2026-01-26",
+        "releaseStatus": "released",
+        "train": "iOS 26",
+        "version": "26.2.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-8-4-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-8-4-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2015-08-13",
+        "releaseStatus": "released",
+        "train": "iOS 8",
+        "version": "8.4.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-9-0-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-9-0-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2015-09-23",
+        "releaseStatus": "released",
+        "train": "iOS 9",
+        "version": "9.0.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-9-0-2",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-9-0-2",
+        "platform": "iOS",
+        "publicReleaseDate": "2015-09-30",
+        "releaseStatus": "released",
+        "train": "iOS 9",
+        "version": "9.0.2"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-9-3-1",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-9-3-1",
+        "platform": "iOS",
+        "publicReleaseDate": "2016-03-31",
+        "releaseStatus": "released",
+        "train": "iOS 9",
+        "version": "9.3.1"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-9-3-5",
+      "exists": true,
+      "document": {
+        "_id": "version-ios-9-3-5",
+        "platform": "iOS",
+        "publicReleaseDate": "2016-08-25",
+        "releaseStatus": "released",
+        "train": "iOS 9",
+        "version": "9.3.5"
+      }
+    }
+  ],
+  "versions": [
+    {
+      "_id": "version-ios-10-3-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2017-04-03",
+      "releaseStatus": "released",
+      "train": "iOS 10",
+      "version": "10.3.1"
+    },
+    {
+      "_id": "version-ios-11-0-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2017-09-26",
+      "releaseStatus": "released",
+      "train": "iOS 11",
+      "version": "11.0.1"
+    },
+    {
+      "_id": "version-ios-11-0-2",
+      "platform": "iOS",
+      "publicReleaseDate": "2017-10-03",
+      "releaseStatus": "released",
+      "train": "iOS 11",
+      "version": "11.0.2"
+    },
+    {
+      "_id": "version-ios-11-0-3",
+      "platform": "iOS",
+      "publicReleaseDate": "2017-10-11",
+      "releaseStatus": "released",
+      "train": "iOS 11",
+      "version": "11.0.3"
+    },
+    {
+      "_id": "version-ios-11-1-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2017-11-09",
+      "releaseStatus": "released",
+      "train": "iOS 11",
+      "version": "11.1.1"
+    },
+    {
+      "_id": "version-ios-11-1-2",
+      "platform": "iOS",
+      "publicReleaseDate": "2017-11-16",
+      "releaseStatus": "released",
+      "train": "iOS 11",
+      "version": "11.1.2"
+    },
+    {
+      "_id": "version-ios-11-2-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2017-12-13",
+      "releaseStatus": "released",
+      "train": "iOS 11",
+      "version": "11.2.1"
+    },
+    {
+      "_id": "version-ios-12-0-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2018-10-08",
+      "releaseStatus": "released",
+      "train": "iOS 12",
+      "version": "12.0.1"
+    },
+    {
+      "_id": "version-ios-12-3-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2019-05-24",
+      "releaseStatus": "released",
+      "train": "iOS 12",
+      "version": "12.3.1"
+    },
+    {
+      "_id": "version-ios-12-4-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2019-08-26",
+      "releaseStatus": "released",
+      "train": "iOS 12",
+      "version": "12.4.1"
+    },
+    {
+      "_id": "version-ios-13-1-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2019-09-27",
+      "releaseStatus": "released",
+      "train": "iOS 13",
+      "version": "13.1.1"
+    },
+    {
+      "_id": "version-ios-13-1-2",
+      "platform": "iOS",
+      "publicReleaseDate": "2019-09-30",
+      "releaseStatus": "released",
+      "train": "iOS 13",
+      "version": "13.1.2"
+    },
+    {
+      "_id": "version-ios-13-1-3",
+      "platform": "iOS",
+      "publicReleaseDate": "2019-10-15",
+      "releaseStatus": "released",
+      "train": "iOS 13",
+      "version": "13.1.3"
+    },
+    {
+      "_id": "version-ios-13-3-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2020-01-28",
+      "releaseStatus": "released",
+      "train": "iOS 13",
+      "version": "13.3.1"
+    },
+    {
+      "_id": "version-ios-13-4-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2020-04-07",
+      "releaseStatus": "released",
+      "train": "iOS 13",
+      "version": "13.4.1"
+    },
+    {
+      "_id": "version-ios-13-5-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2020-06-01",
+      "releaseStatus": "released",
+      "train": "iOS 13",
+      "version": "13.5.1"
+    },
+    {
+      "_id": "version-ios-14-0-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2020-09-24",
+      "releaseStatus": "released",
+      "train": "iOS 14",
+      "version": "14.0.1"
+    },
+    {
+      "_id": "version-ios-14-5-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2021-05-03",
+      "releaseStatus": "released",
+      "train": "iOS 14",
+      "version": "14.5.1"
+    },
+    {
+      "_id": "version-ios-14-7-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2021-07-26",
+      "releaseStatus": "released",
+      "train": "iOS 14",
+      "version": "14.7.1"
+    },
+    {
+      "_id": "version-ios-14-8",
+      "platform": "iOS",
+      "publicReleaseDate": "2021-09-13",
+      "releaseStatus": "released",
+      "train": "iOS 14",
+      "version": "14.8"
+    },
+    {
+      "_id": "version-ios-26-0-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2025-09-29",
+      "releaseStatus": "released",
+      "train": "iOS 26",
+      "version": "26.0.1"
+    },
+    {
+      "_id": "version-ios-26-2-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2026-01-26",
+      "releaseStatus": "released",
+      "train": "iOS 26",
+      "version": "26.2.1"
+    },
+    {
+      "_id": "version-ios-8-4-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2015-08-13",
+      "releaseStatus": "released",
+      "train": "iOS 8",
+      "version": "8.4.1"
+    },
+    {
+      "_id": "version-ios-9-0-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2015-09-23",
+      "releaseStatus": "released",
+      "train": "iOS 9",
+      "version": "9.0.1"
+    },
+    {
+      "_id": "version-ios-9-0-2",
+      "platform": "iOS",
+      "publicReleaseDate": "2015-09-30",
+      "releaseStatus": "released",
+      "train": "iOS 9",
+      "version": "9.0.2"
+    },
+    {
+      "_id": "version-ios-9-3-1",
+      "platform": "iOS",
+      "publicReleaseDate": "2016-03-31",
+      "releaseStatus": "released",
+      "train": "iOS 9",
+      "version": "9.3.1"
+    },
+    {
+      "_id": "version-ios-9-3-5",
+      "platform": "iOS",
+      "publicReleaseDate": "2016-08-25",
+      "releaseStatus": "released",
+      "train": "iOS 9",
+      "version": "9.3.5"
+    }
+  ],
+  "scopedEvents": [
+    {
+      "_id": "release-event-e62074af7d92701b248f2da7",
+      "appearanceDate": "2017-04-03",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-10-3-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-10-3-1:m0",
+      "version": "10.3.1"
+    },
+    {
+      "_id": "release-event-395059909ccd453712a784b6",
+      "appearanceDate": "2017-09-26",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-11-0-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-11-0-1:m0",
+      "version": "11.0.1"
+    },
+    {
+      "_id": "release-event-02fec06c538e1bbc53e8396f",
+      "appearanceDate": "2017-10-03",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-11-0-2",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-11-0-2:m0",
+      "version": "11.0.2"
+    },
+    {
+      "_id": "release-event-8f82ab03e4545d3ce63e7293",
+      "appearanceDate": "2017-10-11",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-11-0-3",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-11-0-3:m0",
+      "version": "11.0.3"
+    },
+    {
+      "_id": "release-event-56333f1153340c85668ff2df",
+      "appearanceDate": "2017-11-09",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-11-1-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-11-1-1:m0",
+      "version": "11.1.1"
+    },
+    {
+      "_id": "release-event-fa010c5d3dfcd8144e836458",
+      "appearanceDate": "2017-11-16",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-11-1-2",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-11-1-2:m0",
+      "version": "11.1.2"
+    },
+    {
+      "_id": "release-event-cb252a354c5f575d5a0ee977",
+      "appearanceDate": "2017-12-13",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-11-2-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-11-2-1:m0",
+      "version": "11.2.1"
+    },
+    {
+      "_id": "release-event-ce03903e1ce8b4b1e68c4595",
+      "appearanceDate": "2018-10-08",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-12-0-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-12-0-1:m0",
+      "version": "12.0.1"
+    },
+    {
+      "_id": "release-event-df1c83cfed52f876a5986c2e",
+      "appearanceDate": "2019-05-24",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-12-3-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-12-3-1:m0",
+      "version": "12.3.1"
+    },
+    {
+      "_id": "release-event-2ea29e710a504721d6a7ac22",
+      "appearanceDate": "2019-08-26",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-12-4-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-12-4-1:m0",
+      "version": "12.4.1"
+    },
+    {
+      "_id": "release-event-e6d4c7727f5cc3fadb54a19a",
+      "appearanceDate": "2019-09-27",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-13-1-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-13-1-1:m0",
+      "version": "13.1.1"
+    },
+    {
+      "_id": "release-event-18bd11f79947192f34538f97",
+      "appearanceDate": "2019-09-30",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-13-1-2",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-13-1-2:m0",
+      "version": "13.1.2"
+    },
+    {
+      "_id": "release-event-114009c37d983797c38dc9d5",
+      "appearanceDate": "2019-10-15",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-13-1-3",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-13-1-3:m0",
+      "version": "13.1.3"
+    },
+    {
+      "_id": "release-event-84b3dced051322115a20828a",
+      "appearanceDate": "2020-01-28",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-13-3-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-13-3-1:m0",
+      "version": "13.3.1"
+    },
+    {
+      "_id": "release-event-cfe95e6ecf16759d7fcc240b",
+      "appearanceDate": "2020-04-07",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-13-4-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-13-4-1:m0",
+      "version": "13.4.1"
+    },
+    {
+      "_id": "release-event-b47afc2b27d24c55cffdc15d",
+      "appearanceDate": "2020-06-01",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-13-5-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-13-5-1:m0",
+      "version": "13.5.1"
+    },
+    {
+      "_id": "release-event-41569448681c335ec9b0f84e",
+      "appearanceDate": "2020-09-24",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-14-0-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-14-0-1:m0",
+      "version": "14.0.1"
+    },
+    {
+      "_id": "release-event-1f7fb8374884b7ce072bb656",
+      "appearanceDate": "2021-05-03",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-14-5-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-14-5-1:m0",
+      "version": "14.5.1"
+    },
+    {
+      "_id": "release-event-c70289e6351b39f142660fbd",
+      "appearanceDate": "2021-07-26",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-14-7-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-14-7-1:m0",
+      "version": "14.7.1"
+    },
+    {
+      "_id": "release-event-2c68f4fe6a2dc1add75de29f",
+      "appearanceDate": "2021-09-13",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-14-8",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-14-8:m0",
+      "version": "14.8"
+    },
+    {
+      "_id": "release-event-c3d2cc8d32f9b8d1f2326f36",
+      "appearanceDate": "2025-09-29",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-26-0-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-26-0-1:m0",
+      "version": "26.0.1"
+    },
+    {
+      "_id": "release-event-d4f03fc6e4fd460fe50f7eb5",
+      "appearanceDate": "2026-01-26",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-26-2-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-26-2-1:m0",
+      "version": "26.2.1"
+    },
+    {
+      "_id": "release-event-d3caf8b5d80a27c46296bcd2",
+      "appearanceDate": "2015-08-13",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-8-4-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-8-4-1:m0",
+      "version": "8.4.1"
+    },
+    {
+      "_id": "release-event-5b4d6d4fe1e4c4a340b8a2e4",
+      "appearanceDate": "2015-09-23",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-9-0-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-9-0-1:m0",
+      "version": "9.0.1"
+    },
+    {
+      "_id": "release-event-f3edbd598478f65cbb8a2fb2",
+      "appearanceDate": "2015-09-30",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-9-0-2",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-9-0-2:m0",
+      "version": "9.0.2"
+    },
+    {
+      "_id": "release-event-0e3149e4d64603d654eb9195",
+      "appearanceDate": "2016-03-31",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-9-3-1",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-9-3-1:m0",
+      "version": "9.3.1"
+    },
+    {
+      "_id": "release-event-de77e1916ef0a83297ce3a4a",
+      "appearanceDate": "2016-08-25",
+      "availabilityState": "available",
+      "channel": "public",
+      "isRevision": false,
+      "label": "Public",
+      "platform": "iOS",
+      "releaseVersionId": "version-ios-9-3-5",
+      "routeAlias": "public",
+      "sequence": null,
+      "stableEventId": "version-ios-9-3-5:m0",
+      "version": "9.3.5"
+    }
+  ],
+  "exactChecks": [
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-1",
+      "releaseVersionId": "version-ios-13-3-1",
+      "label": "Public Beta 1",
+      "routeAlias": "public-beta-1",
+      "channel": "publicBeta",
+      "appearanceDate": "2019-12-18",
+      "sequence": 1,
+      "isRevision": false,
+      "availabilityState": "available",
+      "closesReleaseCycle": false,
+      "routeIdentityMatchCount": 0,
+      "fullCandidateMatchCount": 0,
+      "routeIdentityMatches": [],
+      "fullCandidateMatches": []
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-2",
+      "releaseVersionId": "version-ios-13-3-1",
+      "label": "Public Beta 2",
+      "routeAlias": "public-beta-2",
+      "channel": "publicBeta",
+      "appearanceDate": "2020-01-14",
+      "sequence": 2,
+      "isRevision": false,
+      "availabilityState": "available",
+      "closesReleaseCycle": false,
+      "routeIdentityMatchCount": 0,
+      "fullCandidateMatchCount": 0,
+      "routeIdentityMatches": [],
+      "fullCandidateMatches": []
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-3",
+      "releaseVersionId": "version-ios-13-3-1",
+      "label": "Public Beta 3",
+      "routeAlias": "public-beta-3",
+      "channel": "publicBeta",
+      "appearanceDate": "2020-01-22",
+      "sequence": 3,
+      "isRevision": false,
+      "availabilityState": "available",
+      "closesReleaseCycle": false,
+      "routeIdentityMatchCount": 0,
+      "fullCandidateMatchCount": 0,
+      "routeIdentityMatches": [],
+      "fullCandidateMatches": []
+    }
+  ],
+  "productionCounts": {
+    "totalReleaseEvents": 2068,
+    "iosPublicBetaEventsAllVersions": 10,
+    "scopedReleaseEvents": 27,
+    "scopedPublicBetaEvents": 0,
+    "exactRouteMatches": 0,
+    "exactFullMatches": 0
+  },
+  "queryScript": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review-query.ts",
+  "safety": {
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  }
+}

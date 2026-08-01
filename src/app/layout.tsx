@@ -10,6 +10,7 @@ import {
   socialImagePath,
   siteName,
   siteOrigin,
+  siteXHandle,
   withBasePath,
 } from "@/lib/site";
 import { googleAdsenseAccount } from "@/lib/ads";
@@ -21,7 +22,7 @@ import "./globals.css";
 import "./ledger.css";
 
 const socialDescription =
-  "Browse recorded beta, release candidate, and public release dates for iOS, iPadOS, macOS, watchOS, tvOS, and visionOS.";
+  "Explore source-backed software release histories, beta timelines, notes, builds, citations, and corrections. Apple is the first catalog.";
 const googleVerification =
   process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 const bingVerification =
@@ -58,6 +59,13 @@ export const metadata: Metadata = {
   },
   description: siteDescription,
   keywords: [
+    "software release history",
+    "software version history",
+    "software update history",
+    "release notes archive",
+    "release notes wiki",
+    "beta release history",
+    "software build history",
     "Apple release dates",
     "Apple beta releases",
     "iOS beta dates",
@@ -89,6 +97,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: siteXHandle,
     title: siteName,
     description: socialDescription,
     images: [
@@ -214,11 +223,11 @@ export default function RootLayout({
                     ad_personalization: 'denied',
                     wait_for_update: 500
                   });
-                  window.__betaCadenceConsentDefaultsInitialized = true;
-                  window.__betaCadenceAnalyticsConsent = 'denied';
+                  window.__versionRecordConsentDefaultsInitialized = true;
+                  window.__versionRecordAnalyticsConsent = 'denied';
                   try {
                     if (window.localStorage.getItem('apple-release-tracker:analytics-consent') === 'granted') {
-                      window.__betaCadenceAnalyticsConsent = 'granted';
+                      window.__versionRecordAnalyticsConsent = 'granted';
                       window.gtag('consent', 'update', {
                         analytics_storage: 'granted',
                         ad_storage: 'denied',

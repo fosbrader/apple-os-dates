@@ -1,0 +1,60 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-tvos-point-11-26",
+  "generatedAt": "2026-07-31T08:25:52.541Z",
+  "conflictCount": 5,
+  "conflicts": [
+    {
+      "conflictId": "conflict:tvos:11.2:public-beta-1-version-token",
+      "candidateId": "candidate:apple:tvos:11.2:public-beta-1",
+      "sourceIds": [
+        "iculture-112-cycle",
+        "mr-112-pb1"
+      ],
+      "issue": "iCulture's first public row says tvOS 11.1 inside a tvOS 11.2 cycle; MacRumors and the cycle context identify 11.2.",
+      "resolution": "Qualified editorial typo; candidate remains supportable."
+    },
+    {
+      "conflictId": "conflict:tvos:13.3:public-beta-2-date",
+      "candidateId": "candidate:apple:tvos:13.3:public-beta-2",
+      "sourceIds": [
+        "iculture-133-cycle",
+        "mr-133-pb2",
+        "imore-tvos13-rolling"
+      ],
+      "issue": "iCulture duplicates November 6 for Public Betas 1 and 2; MacRumors and iMore independently report November 12.",
+      "resolution": "Use November 12 and exclude the duplicated table date."
+    },
+    {
+      "conflictId": "conflict:tvos:14.5:beta-7-table-label",
+      "candidateId": "candidate:apple:tvos:14.5:public-beta-7",
+      "sourceIds": [
+        "iculture-145-cycle",
+        "mr-145-pb7",
+        "ithinkdiff-145-pb7"
+      ],
+      "issue": "iCulture's table calls build 18L5203a Beta 6 although its revision history says Beta 7; two exact sources call it Public Beta 7.",
+      "resolution": "Use Public Beta 7 with explicit qualification."
+    },
+    {
+      "conflictId": "conflict:tvos:15.3:public-beta-2-date",
+      "candidateId": "candidate:apple:tvos:15.3:public-beta-2",
+      "sourceIds": [
+        "iculture-153-cycle",
+        "mapped-9to5-84-pb2"
+      ],
+      "issue": "iCulture records January 12; 9to5Mac records public rollout January 13.",
+      "resolution": "Blocked pending independent date resolution."
+    },
+    {
+      "conflictId": "conflict:tvos:15.6:public-beta-4-date",
+      "candidateId": "candidate:apple:tvos:15.6:public-beta-4",
+      "sourceIds": [
+        "iculture-156-cycle",
+        "mapped-9to5-87-pb4"
+      ],
+      "issue": "iCulture records July 5; 9to5Mac explicitly reports June 28.",
+      "resolution": "Blocked pending independent date resolution."
+    }
+  ]
+}

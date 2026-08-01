@@ -1,0 +1,433 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-developer-gap-priority",
+  "frozenAt": "2026-07-31T05:06:38Z",
+  "materialFileCount": 103,
+  "locks": {
+    "research-handoffs/beta-chronology-gap/developer-gap-priority-research-leads.md": {
+      "bytes": 5247,
+      "sha256": "4d6c34fec4fd4752fbd91267a57673395272d08f42a76b375d0e4f48e8db47e7"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/assignment.json": {
+      "bytes": 4396,
+      "sha256": "7d70fd59f3cdbbab05a6ff782555f007897be97e0fbd7d89110c22e3b1ebfa2b"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/build-packet.mjs": {
+      "bytes": 40406,
+      "sha256": "7b2946739f32faf542859269bf0cc2fce3b5a8ffc775d7c853768a3ac8c57cc6"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/candidates.json": {
+      "bytes": 45189,
+      "sha256": "c9a9706b9f776cedf08ff07784ef046df7a4e1227bd73bd5815a180f412c842b"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/conflicts.json": {
+      "bytes": 2185,
+      "sha256": "4c3df5b573cf8577c4aecfd3a14de421213d070f9239f0090bf00a65fdf0c768"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/developer-candidate.schema.json": {
+      "bytes": 6174,
+      "sha256": "1bb19a2af8cda38fa028026c19f1ca51dcfee2364e7d5c6460e57e61101506ee"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/fetch-sources.mjs": {
+      "bytes": 10422,
+      "sha256": "703cf027bdf0f5f25a49ae5afb5e822a416915b4a56e82f2a617e9af6fe7d1a0"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/freeze-packet.mjs": {
+      "bytes": 3943,
+      "sha256": "e5a128820cf3792143233d8147b36eec60402865d9799f282f15cc0b0d5686f8"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/full-sequence-audit.json": {
+      "bytes": 13530,
+      "sha256": "ea82b309e7fc5d70b4885438d6872776a1b8522df6771f7584085d93a3ff4ab2"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/production-snapshot.json": {
+      "bytes": 7820,
+      "sha256": "2bd1678545694f1ca75fd7c403024797302a7eaaf2d6872bbf3451e4d1697461"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/query-production.ts": {
+      "bytes": 4570,
+      "sha256": "28b14dc1a44ec454ece20d6d7a07bd85311c0d11fa91381d6a50715381c43695"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/report.md": {
+      "bytes": 2294,
+      "sha256": "646e12c42c6a31a4c1fad0bfc6fd4252793236d817303910cfd5353806eacc27"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/retained-source-reinspection.json": {
+      "bytes": 36640,
+      "sha256": "686d2816d5bb37d99fe401c64ac007aa949dadc2efd5903b8ea569d997c545c1"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/self-review.json": {
+      "bytes": 944,
+      "sha256": "018d0872255105ae3725305f5bf1b51817d56118823b0f1a603fec76b23b75d3"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/sources.json": {
+      "bytes": 87097,
+      "sha256": "99456133c286cc97a67d4aee66c758a2e28bc960a259d04befc06ddc4321ce94"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/validate.mjs": {
+      "bytes": 18215,
+      "sha256": "47bbd393fcae92693807b383d4a28bf11f90cc58f56dccf8e9ecd6d7ed849d08"
+    },
+    "research-handoffs/beta-chronology-gap/developer-gap-priority/validation.json": {
+      "bytes": 1204,
+      "sha256": "eda1297d659b73882bdc7214f9b12c57ab6d2c2838206190a2a7ddafe76826e9"
+    },
+    "tmp/ios9-point-evidence/9to5-ios-9-2-1-beta-1.html": {
+      "bytes": 157483,
+      "sha256": "0f372ee0d191230bf40c4828f060e63cfcf342eb690698a0abe8bc99e5a1774e"
+    },
+    "tmp/ios9-point-evidence/9to5-ios-9-2-1-beta-2.html": {
+      "bytes": 182011,
+      "sha256": "f119faf37ff77e27f12d9bf302083564e740aac9299da2decdc59f3f3533defe"
+    },
+    "tmp/ios9-point-evidence/mr-ios-9-2-1-beta-1.html": {
+      "bytes": 125186,
+      "sha256": "1c76ad6e94350294f30f451948cc6355a0900539978a7b95e1d01584cad3bc0e"
+    },
+    "tmp/ios9-point-evidence/mr-ios-9-2-1-beta-2.html": {
+      "bytes": 124635,
+      "sha256": "750e71af6f54d2bb2d3918c0870b984c8b5ad61cd7813f9563600fd1e3dbfc55"
+    },
+    "tmp/ios9-point-evidence/mr-ios-9-2-1-public.html": {
+      "bytes": 126672,
+      "sha256": "f43e61a1c5f6595f9f4601fb34281a1f7b09165ae2214798406cfb1c9f2a84c8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/fetch-manifest.json": {
+      "bytes": 22300,
+      "sha256": "a54adeae40ffdfd523702e4a88a66b673ee14bb8af16baa478128127f4db702a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/production-snapshot.json": {
+      "bytes": 7820,
+      "sha256": "2bd1678545694f1ca75fd7c403024797302a7eaaf2d6872bbf3451e4d1697461"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/conflict-ios1032-final-macrumors.raw.html": {
+      "bytes": 121766,
+      "sha256": "14dfd21fd2f6625ab1267586e8a3222000c832504d238424698fdab90947bd38"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/negative-ios1021-final-appleinsider.raw.html": {
+      "bytes": 131021,
+      "sha256": "8c67bbd96966079e2a69446bba418323b92bc2c046f76b8ba33252a634adf036"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/negative-ios1032-final-forbes.raw.html": {
+      "bytes": 1291103,
+      "sha256": "140a194524c997b1d7dc731e6ea06bc7a12e612104d257777d8332afc20240a7"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/negative-ios1033-final-forbes.raw.html": {
+      "bytes": 1291983,
+      "sha256": "f2b018ea0bfb5220ce22e7bf272c078908f3c377a7954e1af4e7b57da6d4ec11"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/negative-ios1033-final-macrumors.raw.html": {
+      "bytes": 122618,
+      "sha256": "cde508ccfdca4077c4147d56eea3d2ac2a855887a941a68e94467e90abbbc12b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/negative-ios921-final-appleinsider.raw.html": {
+      "bytes": 132162,
+      "sha256": "1c05089f1217f4a94c7bce71738cccabae5abc4ae17fc905652b5f15610da079"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/new-ios1021-b1-idb-direct.raw.html": {
+      "bytes": 214993,
+      "sha256": "d73925bf6552a094cba3bbf1184adfac77057669ea361ef64eafafa0e8ab752c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/new-ios1032-b1-idb-direct.raw.html": {
+      "bytes": 209887,
+      "sha256": "f80ddbd739f3d14bfab2e9e3328cc1cebc05e16af7b6de557f376fb18971712b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/new-ios1032-b2-idb-direct.raw.html": {
+      "bytes": 214187,
+      "sha256": "316d66942c340f657d6f75865fc40fb5aaae647a6edd905ed50a7ee96a89d056"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/new-ios1032-b4-idb-direct.raw.html": {
+      "bytes": 215157,
+      "sha256": "22e66a855c2d31ac223253261c9c4d6de06b77a98de1817edd4a5a029e563322"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/new-ios1032-b5-idb-direct.raw.html": {
+      "bytes": 208340,
+      "sha256": "21f6ffb7c50b80c302e957d76b629c1ed42f43b8a7fd29efaf0aaa05dff03fcc"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/new-ios1033-b1-idb-direct.raw.html": {
+      "bytes": 208477,
+      "sha256": "256d7b14a6af02d8ccc39d9252b5b61b0d339cbc8158c682e1f90ec9918f61f8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/new-ios1033-b2-idb-direct.raw.html": {
+      "bytes": 210800,
+      "sha256": "04a028b148879703ba6667ea1c599ad22d0793508cd2717d4489428ea481d0b7"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/raw/new-ios1033-b5-idb-direct.raw.html": {
+      "bytes": 212611,
+      "sha256": "abd4e5473ddb75b1a1b14c0d5aa9a940c516d1e0f54add251a8ab2bf098e42fd"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/conflict-ios1032-final-macrumors.selected.txt": {
+      "bytes": 1604,
+      "sha256": "3be5fa9d91a6e5d657aaf131c535fe3898ba88fe0614b656fe581e8761c73efd"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/negative-ios1021-final-appleinsider.selected.txt": {
+      "bytes": 3886,
+      "sha256": "50915969d78a23653579843bb7f99ea01da8ff261a8b3d399f0b97524cd7a8c2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/negative-ios1032-final-forbes.selected.txt": {
+      "bytes": 3964,
+      "sha256": "f2371097ee3715d3e8f4352180b2b535aaf89f8156a59f7bafd8459d05672a15"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/negative-ios1033-final-forbes.selected.txt": {
+      "bytes": 4525,
+      "sha256": "84f99d05ec0752c0dd1ae07f9df2b1b7289abf838d4adb7524ed4e9d5a883eb6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/negative-ios1033-final-macrumors.selected.txt": {
+      "bytes": 1871,
+      "sha256": "18f195de19249e7f3bbc7626aeb8b4a84f9290c822789e458def2f9fdaca465a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/negative-ios921-final-appleinsider.selected.txt": {
+      "bytes": 4003,
+      "sha256": "312b7f6f3f618b87457269902ce133c8da54fe1048a59dd6df37eb8f5fff18f4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/new-ios1021-b1-idb-direct.selected.txt": {
+      "bytes": 2052,
+      "sha256": "db6f98e6ed759f0e5f52ddb02d4eb2e4d41fc25d7cd7bcd8342800cf8017c208"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/new-ios1032-b1-idb-direct.selected.txt": {
+      "bytes": 1345,
+      "sha256": "15fd152f39473a75fd3e6823a9c6c779182d242923ebf3b2ae4bbf8335512930"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/new-ios1032-b2-idb-direct.selected.txt": {
+      "bytes": 1972,
+      "sha256": "a1c013cf2b3014d8aa099f1d1331e2a47c70cce5075ae748e1d53df9776da8f7"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/new-ios1032-b4-idb-direct.selected.txt": {
+      "bytes": 2331,
+      "sha256": "34e1c860610cf2de0933486676e3c99f661379d9d05a6cb403f219653b49a1ff"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/new-ios1032-b5-idb-direct.selected.txt": {
+      "bytes": 994,
+      "sha256": "187ed83f23087c719f02642080276e450643d1fd94d3d2518437621677f9bb7a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/new-ios1033-b1-idb-direct.selected.txt": {
+      "bytes": 1323,
+      "sha256": "33790101eae9ac42ccff155a2868872f9fe4352b22d8ddcd1092f4da109da9df"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/new-ios1033-b2-idb-direct.selected.txt": {
+      "bytes": 1236,
+      "sha256": "f50d47ef5f7d6f80d9f7c16f523ecbce60ab726041bdc182a4d6a2a3040323b8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/new-ios1033-b5-idb-direct.selected.txt": {
+      "bytes": 1875,
+      "sha256": "7a97f601e3c94c4bd452669eba3c76759743f6e5665b7f2a92d97fe330696ffa"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/source-ios921-b1-9to5mac-dev.selected.txt": {
+      "bytes": 471,
+      "sha256": "3cd587152f3866732242cbc0e93e3446c5a98c9b2119806bad6f97b326df2e19"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/source-ios921-b1-macrumors-dev.selected.txt": {
+      "bytes": 488,
+      "sha256": "9d8d73a45437b40e49ac72f05193e0d2c636880e91f145df10d9f4201d6e3be8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/source-ios921-b2-9to5mac-dev.selected.txt": {
+      "bytes": 518,
+      "sha256": "761bd27c81c7aac4041ef48a0911b0f16c6776728ee009024bafc0950cd075b6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/source-ios921-b2-macrumors-dev.selected.txt": {
+      "bytes": 506,
+      "sha256": "7a7b65fa74c7e0283d7fd1e91c28ebe3ad3b7cde6fde3eaf30e85332a125ea2b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/developer-gap-priority/selected/source-ios921-final-macrumors-aggregate-conflict.selected.txt": {
+      "bytes": 503,
+      "sha256": "4fe9c2516addf4554fbecfb86f0df417c7491fc613af98e1caec65ec45080073"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1021-pb1-macrumors.raw.html": {
+      "bytes": 123636,
+      "sha256": "c451622c6cd006095da1e5b1db87ad613db8c89d1df858b1bc9b388cd2f8faa3"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1021-pb2-appleinsider.raw.html": {
+      "bytes": 121106,
+      "sha256": "2ca85447f7c68ff67eb96272759d6dff135ef157a2f34a9355c5ee0e5aaed803"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1021-pb2-macrumors.raw.html": {
+      "bytes": 120944,
+      "sha256": "7cb6ae90d0d4ff040682e56eb536528031aa45d4405ecf5ab203b9383fda62f8"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1021-pb3-macrumors.raw.html": {
+      "bytes": 120778,
+      "sha256": "eba4012cc2889a7c3fd5daf87322b71b0b53dfa85897d0721130924fb85b90c5"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1021-pb3-osxdaily.raw.html": {
+      "bytes": 227454,
+      "sha256": "fef294db8cad7f9080f653e7c7746fdc708e56735e281ef99e901d4c62251700"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1021-pb4-appleinsider.raw.html": {
+      "bytes": 130515,
+      "sha256": "6dd6a2e37e3bd27ffb601b09e1aa2ca249e924b68c6699510855ecba10588aee"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1021-pb4-macrumors.raw.html": {
+      "bytes": 120948,
+      "sha256": "b870cd2124f037ba27eda5a4b12560ce8ce332bb578d3ce261d865ba0ea917d1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1032-pb1-macrumors.raw.html": {
+      "bytes": 121928,
+      "sha256": "579064ccf0d458a73503b55015dd696f19eca09ad8871623b38d13b03b9a588d"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1032-pb2-macrumors.raw.html": {
+      "bytes": 120481,
+      "sha256": "399ca348251acde7bc25983c7258ef414a6411738b1a6cf410ad53cd3585000c"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1032-pb3-9to5mac.raw.html": {
+      "bytes": 144399,
+      "sha256": "18476dbd2fd91343b8ea50096d09c804a67c1e1228f8f1f622f37182360bd5ea"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1032-pb3-macrumors-update.raw.html": {
+      "bytes": 120808,
+      "sha256": "a2290db5addeb0f41d3dbe9d91495572c5f6c523c2ba1d396278bdbe6f48a50e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1032-pb4-macrumors.raw.html": {
+      "bytes": 123254,
+      "sha256": "81d7e603ba16edc3758c103db7c578e6f2b82ded3fb17017547d49c568fe02b6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1032-pb5-macerkopf.raw.html": {
+      "bytes": 70173,
+      "sha256": "323be2f9eeb9b4b85ebee1796db31bda2ed1bb750e04f8fcc9a7bcd54ef9e201"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1032-pb5-macrumors.raw.html": {
+      "bytes": 121009,
+      "sha256": "023a8f6550d4be5c522a9949d0112ce820ff32cdd2c74b182abf9a3f0ebfd0b7"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1033-pb1-9to5mac.raw.html": {
+      "bytes": 145806,
+      "sha256": "d514b0c2d5f4cf25b55388cd590eff46ed9a3c2f7f08878c32e5721e4e031a21"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1033-pb2-macrumors.raw.html": {
+      "bytes": 121049,
+      "sha256": "ccfe786b5a8d88ab0639330925e09fdc0425c4dcc0d9461075e53fc90f0ee66f"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1033-pb3-macerkopf.raw.html": {
+      "bytes": 70508,
+      "sha256": "62fb61f333bb2054ac70f7458cd0bba7da9c442d3ae59557533cfe1467f41876"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1033-pb3-macrumors.raw.html": {
+      "bytes": 120188,
+      "sha256": "d38a3ce427af7d190eecea7921c6fa0501d7512d0a64b0687f9cf40f9e16903e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1033-pb4-macrumors.raw.html": {
+      "bytes": 124680,
+      "sha256": "e37649394cdffc948039c7527bbc024edced10c8e0c2b498092454c534aeba23"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1033-pb4-zollotech-video.raw.html": {
+      "bytes": 1308289,
+      "sha256": "863d7517c6f973463a443594ffe513fa174617836511564ae395bf98bb3ea632"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1033-pb5-macrumors.raw.html": {
+      "bytes": 122068,
+      "sha256": "2dabc329775c89cb4e4239142740c7ea7ea2aa961ccfa1ddb5b0b0264a2326a4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1033-pb6-macobserver.raw.html": {
+      "bytes": 208157,
+      "sha256": "8576d3d1f7794cfff6e913ca24bf15be66d0b62cdb1e7d83f86fc0f8f7bd73d1"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/raw/source-ios1033-pb6-macrumors.raw.html": {
+      "bytes": 120999,
+      "sha256": "c898aee0f5ceed6ee0f75b547ea3977ef3e7c02758deb188b60dcfc644a11051"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1021-pb1-macrumors.selected.txt": {
+      "bytes": 1667,
+      "sha256": "e195226b10f3a6c1dbcdcf50ca89c8c38be445cf0f7a1c16f8958081a47cf585"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1021-pb2-appleinsider.selected.txt": {
+      "bytes": 2220,
+      "sha256": "763b382e4741a46fee30abce16a7f8dafec88e1fd5f4c6a6a636e081d488274e"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1021-pb2-macrumors.selected.txt": {
+      "bytes": 1529,
+      "sha256": "55b057ee161d32630d19a67b0a835ef4172518527a1cd3a3398cfc5c975cdaf6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1021-pb3-macrumors.selected.txt": {
+      "bytes": 1530,
+      "sha256": "011232f2f9b6e441ab107c1b4197fd566855bcd716a029905b568023d627ddd2"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1021-pb3-osxdaily.selected.txt": {
+      "bytes": 5156,
+      "sha256": "47aa8927a74cd34a8585e12bc2293ac31bf5286bfeafc3f647bb9e0adb10ad3a"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1021-pb4-appleinsider.selected.txt": {
+      "bytes": 3241,
+      "sha256": "3e7518166b6ef6beb66b57a82b6fb6261e805b14636f1008bd532835c731a8be"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1021-pb4-macrumors.selected.txt": {
+      "bytes": 1552,
+      "sha256": "27cd42485b2c2c6a7671028ab6d29f5b18d5f8fb9d619a36eb3393124663902b"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1032-pb1-macrumors.selected.txt": {
+      "bytes": 1648,
+      "sha256": "8c1613ba528ad5b54c3fe2070a0714622905a55b7e9377aa052da19208ef75d4"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1032-pb2-macrumors.selected.txt": {
+      "bytes": 1896,
+      "sha256": "fe5600e66f5001a1039f244a8e80854efec0fcfe6c83f22100491c60673d24c7"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1032-pb3-9to5mac.selected.txt": {
+      "bytes": 1580,
+      "sha256": "c55aeaeb1f6634bac48536c56d0743524d123a19a07761b88ee4d5bfc0c20413"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1032-pb3-macrumors-update.selected.txt": {
+      "bytes": 1757,
+      "sha256": "db8089e17d232c7bc47fdf0d434eeadfc023a515dfc95c9798df3d354ac32d96"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1032-pb4-macrumors.selected.txt": {
+      "bytes": 1780,
+      "sha256": "1dcd2808930fdf9737693a9e9bf9b06917be0d7a299db95d3dba8bd59d250014"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1032-pb5-macerkopf.selected.txt": {
+      "bytes": 1663,
+      "sha256": "e0fa1581fd6d8ab222ed21f2969532576bff39b1680ade45cd78616879e597b0"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1032-pb5-macrumors.selected.txt": {
+      "bytes": 1720,
+      "sha256": "a26d090f1a2a6c4fcb00abfbf55d2483e19fa692548a9ac5f4da84a91424e244"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1033-pb1-9to5mac.selected.txt": {
+      "bytes": 1482,
+      "sha256": "add3d1f9407c204b4a6a0f765c667cb1e5c6de889788a343cbc62e8c3370b7fa"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1033-pb2-macrumors.selected.txt": {
+      "bytes": 1651,
+      "sha256": "a726fab1dac35fa64958b5bb0f64939637343e83543876d17405ce0f03f27fdd"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1033-pb3-macerkopf.selected.txt": {
+      "bytes": 1741,
+      "sha256": "17e439e2dbf38057a062c51e747706c8af19d588a945632bef10b675d6d4d5d6"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1033-pb3-macrumors.selected.txt": {
+      "bytes": 1561,
+      "sha256": "639634fbe1d341fc58306837aa8ad8cc3a90380b3125ce9930f66a448f7ccc90"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1033-pb4-macrumors.selected.txt": {
+      "bytes": 1610,
+      "sha256": "785d316e586b674ef9ac0debc45b2797940a07dcb5a1257144881842fd7c7042"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1033-pb4-zollotech-video.selected.txt": {
+      "bytes": 1084,
+      "sha256": "da3a7b7468c3a3988ff8d57260e86641ad7d8c891c48bf358daaa0f412512c10"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1033-pb5-macrumors.selected.txt": {
+      "bytes": 1463,
+      "sha256": "a6a9b8ca6e2d3c3f3fdf34b23ae4c5359d30b034e55bfe71cb40d2b72bc435c9"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1033-pb6-macobserver.selected.txt": {
+      "bytes": 2460,
+      "sha256": "7fac442996bb157e62cc340ef029cf5f4ddce38dd875ddfedee3d2f62380ad36"
+    },
+    "tmp/research-evidence/beta-chronology-gap/ios10-point-public/selected/source-ios1033-pb6-macrumors.selected.txt": {
+      "bytes": 1593,
+      "sha256": "d08b7330dc81a8b5aa5dcf7bd9221fee4f41016bb4d9a396ef44e8a599e3437a"
+    }
+  },
+  "exclusions": {
+    "self": "research-handoffs/beta-chronology-gap/developer-gap-priority/packet-locks.json",
+    "reason": "The lock manifest cannot hash itself. freeze-packet.mjs is hashed and verifies the manifest without rewriting it."
+  },
+  "safety": {
+    "chronologyApprovalGranted": false,
+    "independentReviewRequired": true,
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "deploymentPerformed": false
+  }
+}

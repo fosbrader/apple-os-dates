@@ -1,0 +1,721 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios9-10-major",
+  "researchCutoff": "2026-07-30",
+  "candidateCount": 10,
+  "summary": {
+    "byVersion": {
+      "9.0": 3,
+      "10.0": 7
+    },
+    "byReviewDisposition": {
+      "readyForIndependentChronologyReview": 10
+    },
+    "byEvidenceState": {
+      "corroborated": 10
+    },
+    "explicitSameDayOrdinalCount": 9,
+    "normalizedFirstAppearanceCount": 1,
+    "buildsIncluded": 0,
+    "substantiveChangeClaimsIncluded": 0,
+    "importantQualification": "All ten appearances have at least two retained contemporary publisher lineages. iOS 9.0 Public Beta 1 is a normalized label for the corroborated initial public appearance; later reporting explicitly calls the next appearance Public Beta 2."
+  },
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:ios:9.0:public-beta-1",
+      "originCohortId": "ios9-10-major-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "9.0",
+      "releaseVersionId": "version-ios-9-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-07-09",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "normalizedFirstAppearance",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:16:08.878Z",
+        "matchBasis": "Exact published production query by releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no match.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios90-pb1-macrumors",
+          "locator": "JSON-LD headline/datePublished; selected article paragraphs 1–3",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios90-pb1-9to5mac",
+          "locator": "JSON-LD headline/datePublished; selected article paragraphs 1–3",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios90-pb2-macrumors",
+          "locator": "JSON-LD headline/datePublished; selected article paragraph 2",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-9-0",
+        "routeAlias": "beta-3",
+        "relationship": "Contemporary reports pair this public appearance with the identified developer seed. This records chronology and reported payload equivalence only; no byte-for-byte payload claim is made."
+      },
+      "pairedDeveloperProductionState": "exactExistingMatch",
+      "buildEvidenceStatus": "notPromoted",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "qualification": "Contemporary launch reports call this the initial/first public appearance rather than displaying “Public Beta 1”; the later explicitly numbered Public Beta 2 confirms its normalized sequence.",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The packet author reproduced source locators and hashes but cannot count as the independent evidence reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.0:public-beta-2",
+      "originCohortId": "ios9-10-major-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "9.0",
+      "releaseVersionId": "version-ios-9-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-07-22",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:16:08.878Z",
+        "matchBasis": "Exact published production query by releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no match.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios90-pb2-macrumors",
+          "locator": "JSON-LD headline/datePublished; selected article paragraph 2",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios90-pb2-9to5mac",
+          "locator": "JSON-LD headline/datePublished; selected article paragraph 1",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-9-0",
+        "routeAlias": "beta-4",
+        "relationship": "Contemporary reports pair this public appearance with the identified developer seed. This records chronology and reported payload equivalence only; no byte-for-byte payload claim is made."
+      },
+      "pairedDeveloperProductionState": "exactExistingMatch",
+      "buildEvidenceStatus": "notPromoted",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The packet author reproduced source locators and hashes but cannot count as the independent evidence reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.0:public-beta-3",
+      "originCohortId": "ios9-10-major-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "9.0",
+      "releaseVersionId": "version-ios-9-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2015-08-06",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:16:08.878Z",
+        "matchBasis": "Exact published production query by releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no match.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios90-pb3-macrumors",
+          "locator": "JSON-LD headline/datePublished; selected article paragraphs 1–3",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios90-pb3-9to5mac",
+          "locator": "JSON-LD headline/datePublished; selected article update paragraph",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-9-0",
+        "routeAlias": "beta-5",
+        "relationship": "Contemporary reports pair this public appearance with the identified developer seed. This records chronology and reported payload equivalence only; no byte-for-byte payload claim is made."
+      },
+      "pairedDeveloperProductionState": "exactExistingMatch",
+      "buildEvidenceStatus": "notPromoted",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The packet author reproduced source locators and hashes but cannot count as the independent evidence reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-1",
+      "originCohortId": "ios9-10-major-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-07-07",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:16:08.878Z",
+        "matchBasis": "Exact published production query by releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no match.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb1-macrumors",
+          "locator": "JSON-LD headline/datePublished; selected article paragraphs 1–2",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb1-9to5mac",
+          "locator": "JSON-LD headline/datePublished; selected article paragraphs 1–3",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-10-0",
+        "routeAlias": "beta-2",
+        "relationship": "Contemporary reports pair this public appearance with the identified developer seed. This records chronology and reported payload equivalence only; no byte-for-byte payload claim is made."
+      },
+      "pairedDeveloperProductionState": "exactExistingMatch",
+      "buildEvidenceStatus": "notPromoted",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The packet author reproduced source locators and hashes but cannot count as the independent evidence reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-2",
+      "originCohortId": "ios9-10-major-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-07-20",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:16:08.878Z",
+        "matchBasis": "Exact published production query by releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no match.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb2-macrumors",
+          "locator": "JSON-LD headline/datePublished; selected article paragraphs 1–2",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb2-9to5mac",
+          "locator": "JSON-LD headline/datePublished; selected article paragraph 1",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-10-0",
+        "routeAlias": "beta-3",
+        "relationship": "Contemporary reports pair this public appearance with the identified developer seed. This records chronology and reported payload equivalence only; no byte-for-byte payload claim is made."
+      },
+      "pairedDeveloperProductionState": "exactExistingMatch",
+      "buildEvidenceStatus": "notPromoted",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The packet author reproduced source locators and hashes but cannot count as the independent evidence reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-3",
+      "originCohortId": "ios9-10-major-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-08-02",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:16:08.878Z",
+        "matchBasis": "Exact published production query by releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no match.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb3-macrumors",
+          "locator": "JSON-LD headline/datePublished; selected article paragraphs 1–2",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb3-9to5mac",
+          "locator": "JSON-LD headline/datePublished; selected article paragraph 1",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-10-0",
+        "routeAlias": "beta-4",
+        "relationship": "Contemporary reports pair this public appearance with the identified developer seed. This records chronology and reported payload equivalence only; no byte-for-byte payload claim is made."
+      },
+      "pairedDeveloperProductionState": "exactExistingMatch",
+      "buildEvidenceStatus": "notPromoted",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The packet author reproduced source locators and hashes but cannot count as the independent evidence reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-4",
+      "originCohortId": "ios9-10-major-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-08-09",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:16:08.878Z",
+        "matchBasis": "Exact published production query by releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no match.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb4-idevice",
+          "locator": "Article headline/datePublished metadata; selected paragraphs 1–5",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb4-chip",
+          "locator": "Article headline/time; selected heading and paragraph stating the fourth public beta was available since Tuesday evening",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb4-macrumors",
+          "locator": "JSON-LD headline/datePublished; headline update and selected article",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-10-0",
+        "routeAlias": "beta-5",
+        "relationship": "Contemporary reports pair this public appearance with the identified developer seed. This records chronology and reported payload equivalence only; no byte-for-byte payload claim is made."
+      },
+      "pairedDeveloperProductionState": "exactExistingMatch",
+      "buildEvidenceStatus": "notPromoted",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "qualification": "CHIP published the following morning but explicitly says the fourth public beta had been available since Tuesday evening; iDevice.ro and the MacRumors same-day update place the appearance on August 9. The iDevice.ro URL slug says public-beta-5, while its headline and body repeatedly identify Public Beta 4.",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The packet author reproduced source locators and hashes but cannot count as the independent evidence reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-5",
+      "originCohortId": "ios9-10-major-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-08-15",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:16:08.878Z",
+        "matchBasis": "Exact published production query by releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no match.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb5-9to5mac",
+          "locator": "JSON-LD headline/datePublished; selected article paragraphs 1–2",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb5-techcrunch",
+          "locator": "Article headline/byline/time; selected article paragraphs 1–2",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-10-0",
+        "routeAlias": "beta-6",
+        "relationship": "Contemporary reports pair this public appearance with the identified developer seed. This records chronology and reported payload equivalence only; no byte-for-byte payload claim is made."
+      },
+      "pairedDeveloperProductionState": "exactExistingMatch",
+      "buildEvidenceStatus": "notPromoted",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The packet author reproduced source locators and hashes but cannot count as the independent evidence reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-6",
+      "originCohortId": "ios9-10-major-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 6",
+        "routeAlias": "public-beta-6",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-08-19",
+        "sequence": 6,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:16:08.878Z",
+        "matchBasis": "Exact published production query by releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no match.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb6-9to5mac",
+          "locator": "JSON-LD headline/datePublished; selected article paragraph 1",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb6-techcrunch",
+          "locator": "Article headline/byline/time; selected article paragraph 1",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-10-0",
+        "routeAlias": "beta-7",
+        "relationship": "Contemporary reports pair this public appearance with the identified developer seed. This records chronology and reported payload equivalence only; no byte-for-byte payload claim is made."
+      },
+      "pairedDeveloperProductionState": "exactExistingMatch",
+      "buildEvidenceStatus": "notPromoted",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The packet author reproduced source locators and hashes but cannot count as the independent evidence reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-7",
+      "originCohortId": "ios9-10-major-public-beta",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "proposedIdentity": {
+        "label": "Public Beta 7",
+        "routeAlias": "public-beta-7",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-08-26",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "reviewDisposition": "readyForIndependentChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T03:16:08.878Z",
+        "matchBasis": "Exact published production query by releaseVersionId, publicBeta channel, routeAlias, sequence, and appearanceDate found no match.",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb7-macrumors",
+          "locator": "JSON-LD headline/datePublished; selected article paragraphs 1–2",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios9-10-major/sources.json",
+          "sourceId": "source-ios100-pb7-9to5mac",
+          "locator": "JSON-LD headline/datePublished; selected article paragraph 1",
+          "supports": "Contemporary report supports the public-channel appearance, version, date, and ordinal or normalized first-appearance sequence described in the candidate qualification."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-10-0",
+        "routeAlias": "beta-8",
+        "relationship": "Contemporary reports pair this public appearance with the identified developer seed. This records chronology and reported payload equivalence only; no byte-for-byte payload claim is made."
+      },
+      "pairedDeveloperProductionState": "exactExistingMatch",
+      "buildEvidenceStatus": "notPromoted",
+      "contentDisposition": "linkedToPairedDeveloper",
+      "blockers": [
+        "Independent chronology review has not yet occurred."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "The packet author reproduced source locators and hashes but cannot count as the independent evidence reviewer."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ]
+}

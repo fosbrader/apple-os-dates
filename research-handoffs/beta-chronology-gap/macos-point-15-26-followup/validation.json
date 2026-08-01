@@ -1,0 +1,66 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-point-15-26-followup",
+  "status": "pass",
+  "validatedAgainstProductionCapturedAt": "2026-07-31T07:27:50.043Z",
+  "errors": [],
+  "warnings": [],
+  "metrics": {
+    "targetCount": 8,
+    "evidenceReadyCount": 6,
+    "remainsBlockedCount": 2,
+    "identityCorrectionCount": 0,
+    "sourcePageCount": 8,
+    "rawArtifactCount": 15,
+    "supplementPublisherFamilyCount": 2,
+    "verifiedSupplementRawBytes": 1272505,
+    "productionParentCount": 7,
+    "productionExactRouteMatchCount": 0,
+    "productionExactFullMatchCount": 0,
+    "parentPacketDeclaredMaterialFileCount": 87,
+    "parentPacketVerifiedMaterialFileCount": 87,
+    "parentPacketLockFailures": 0,
+    "verifiedParentPacketBytes": 13792005,
+    "parentRawDeclaredLockCount": 65,
+    "parentRawVerifiedLockCount": 65,
+    "parentRawLockFailures": 0,
+    "verifiedParentRawBytes": 13128939
+  },
+  "parentDependencyPins": {
+    "candidates": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26/candidates.json",
+      "bytes": 121326,
+      "sha256": "c23604e266154cf840241d8524ba1844d40dc71bc8754e3acdc64e45a96ba9f8"
+    },
+    "independentReview": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26/independent-review.json",
+      "bytes": 74296,
+      "sha256": "8124b7f0bcc06744284fb832cc80cff7e61453b3b6470b150598901e016974a9"
+    },
+    "packetLocks": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26/packet-locks.json",
+      "bytes": 18525,
+      "sha256": "395595f47cd1e63e99075368895c8f13fc6510f98288c0e1633ee49c8d0b0f9d"
+    },
+    "rawEvidenceLocks": {
+      "path": "research-handoffs/beta-chronology-gap/macos-point-15-26/raw-evidence-locks.json",
+      "bytes": 26147,
+      "sha256": "a00d5f7ba20f557c33b58c5ed831f21e5a89ff194e0204aca333be46e6ba383d"
+    }
+  },
+  "supplementFreezeVerification": {
+    "status": "pending",
+    "declaredMaterialFileCount": 0,
+    "verifiedMaterialFileCount": 0,
+    "verifiedBytes": 0,
+    "failureCount": 0
+  },
+  "safety": {
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false,
+    "independentReviewCreatedByResearcher": false
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-major-12-18",
+  "conflictCount": 14,
+  "conflicts": [
+    {
+      "conflictId": "ios14-public-numbering-transition",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "iOS 14 changed public-seed numbering after its first appearance",
+      "sourceIds": [
+        "iculture-ios14",
+        "mr-ios14-opening",
+        "mr-ios14-pb3",
+        "forbes-ios14-pb3",
+        "redmondpie-ios14-pb3"
+      ],
+      "finding": "The July 9 opening seed was called Public Beta 1. The next public appearance was July 23 and was explicitly Public Beta 3 after Apple aligned numbering with developer betas.",
+      "proposedResolution": "Retain PB1 then PB3; do not synthesize PB2 from developer numbering or appearance count."
+    },
+    {
+      "conflictId": "ios14-false-july22-public-beta-2",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "iMore lists Public Beta 2 on the July 22 developer date",
+      "sourceIds": [
+        "imore-ios14",
+        "iculture-ios14",
+        "mr-ios14-pb3"
+      ],
+      "finding": "The retained iMore rolling page lists PB2 on July 22. Other contemporary evidence places the next public distribution on July 23 and labels it PB3.",
+      "proposedResolution": "Treat July 22 PB2 as a developer-date/appearance-number conflation and preserve it as a not-proposed identity."
+    },
+    {
+      "conflictId": "ios14-public-beta-4-date",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "iCulture uses the August 4 developer date for Public Beta 4",
+      "sourceIds": [
+        "iculture-ios14",
+        "mr-ios14-pb4",
+        "imore-ios14"
+      ],
+      "finding": "MacRumors and iMore place Public Beta 4 on August 6. iCulture's timeline incorrectly duplicates the August 4 developer date.",
+      "proposedResolution": "Use 2020-08-06 America/Los_Angeles."
+    },
+    {
+      "conflictId": "ios15-public-numbering-transition",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "iOS 15 moved from public appearance numbering to Apple build-aligned numbering",
+      "sourceIds": [
+        "iculture-ios15",
+        "mr-ios15-opening",
+        "mr-ios15-pb2",
+        "mr-ios15-pb4",
+        "osxd-ios15-pb4"
+      ],
+      "finding": "The first two public appearances were publicly described as PB1 and PB2. iCulture's contemporary editorial note says the July 28 third appearance was Apple-numbered PB4.",
+      "proposedResolution": "Retain PB1, PB2, then PB4. Do not create a separate PB3."
+    },
+    {
+      "conflictId": "ios15-build-aligned-alternate-early-labels",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "Forbes and other publishers applied developer-aligned PB2/PB3 labels early",
+      "sourceIds": [
+        "forbes-ios15-opening-as-pb2",
+        "forbes-ios15-second-as-pb3",
+        "wccftech-ios15-second-as-pb3",
+        "iculture-ios15",
+        "idb-ios15-pb2"
+      ],
+      "finding": "Alternate sources call June 30 PB2 and July 16 PB3 based on paired developer builds. Public-program chronologies call them the first and second public betas, and explicitly identify Apple's switch at PB4.",
+      "proposedResolution": "Use iOS public-program ordinals PB1/PB2 before the documented PB4 alignment; retain alternate labels only as conflict evidence."
+    },
+    {
+      "conflictId": "ios12-public-beta-6-calendar-date",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "iOS 12 Public Beta 6 August 15 Pacific versus August 16 European chronology",
+      "sourceIds": [
+        "iculture-ios12",
+        "imore-ios12",
+        "mr-ios12-pb6-after-withdrawal"
+      ],
+      "finding": "iMore and MacRumors establish August 15 Pacific. iCulture displays August 16.",
+      "proposedResolution": "Normalize to 2018-08-15 America/Los_Angeles and retain August 16 as a source-time-zone/reporting qualification."
+    },
+    {
+      "conflictId": "ios12-developer-beta-7-withdrawal",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "Withdrawn developer Beta 7 never became a public seed",
+      "sourceIds": [
+        "mr-ios12-dev7-pulled",
+        "mr-ios12-pb6-after-withdrawal",
+        "iculture-ios12",
+        "imore-ios12"
+      ],
+      "finding": "Developer Beta 7 was pulled on August 13 for performance problems before its planned public release. Developer Beta 8 arrived August 15 and became Public Beta 6.",
+      "proposedResolution": "Do not create a public event for the withdrawn developer payload and do not renumber August 15 PB6."
+    },
+    {
+      "conflictId": "ios16-rolling-source-errors",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "Two rolling histories contain isolated iOS 16 errors",
+      "sourceIds": [
+        "imore-ios16",
+        "iculture-ios16",
+        "mr-ios16-pb1",
+        "mr-ios16-pb2"
+      ],
+      "finding": "iMore's opening heading says July 5 although the first public beta shipped July 11. iCulture labels the July 28 second public beta as PB4.",
+      "proposedResolution": "Use MacRumors and the remaining internally consistent chronology: PB1 July 11 and PB2 July 28."
+    },
+    {
+      "conflictId": "ios17-public-beta-4-article-date",
+      "severity": "qualification",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "Public Beta 4 update is attached to a developer article",
+      "sourceIds": [
+        "mr-ios17-pb4",
+        "iculture-ios17",
+        "osxd-ios17-pb4"
+      ],
+      "finding": "The developer article originated August 15, while its public update and two iOS-specific sources establish August 16 public availability.",
+      "proposedResolution": "Use 2023-08-16 for the publicBeta appearance."
+    },
+    {
+      "conflictId": "ios18-public-beta-5-calendar-date",
+      "severity": "qualification",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "August 20 Pacific appearance versus August 21 UTC article",
+      "sourceIds": [
+        "mr-ios18-pb5",
+        "iculture-ios18",
+        "osxd-ios18-pb5"
+      ],
+      "finding": "MacRumors and iCulture establish August 20 Pacific; OS X Daily published its corroborating article on August 21 UTC.",
+      "proposedResolution": "Use 2024-08-20 America/Los_Angeles and retain the later publication timestamp as a qualification."
+    },
+    {
+      "conflictId": "ios-paired-developer-revisions-not-public-respins",
+      "severity": "guardrail",
+      "status": "requiredHandling",
+      "subject": "Revised developer builds paired with public seeds are not extra public appearances",
+      "sourceIds": [
+        "iculture-ios13",
+        "iculture-ios16",
+        "iculture-ios17",
+        "iculture-ios18"
+      ],
+      "finding": "iOS 13 developer Beta 3 v2, iOS 16 developer Beta 3 v2, iOS 17 developer Beta 4 v2, and iOS 18 revised developer Betas 3/4 precede or accompany ordinary public appearances. No separate public respin is established."
+    },
+    {
+      "conflictId": "ios-ipados-cross-packet-numbering-not-reused",
+      "severity": "guardrail",
+      "status": "requiredHandling",
+      "subject": "Frozen iPadOS early-cycle numbering was not copied into iOS",
+      "sourceIds": [
+        "iculture-ios14",
+        "iculture-ios15",
+        "mr-ios14-opening",
+        "mr-ios15-opening"
+      ],
+      "finding": "Platform-specific iOS evidence supports PB1→PB3 for 14.0 and PB1→PB2→PB4 for 15.0. The earlier iPadOS packet used a different interpretation and is not authority for iOS."
+    },
+    {
+      "conflictId": "ios-same-day-channel-separation",
+      "severity": "guardrail",
+      "status": "requiredHandling",
+      "subject": "Same-day developer and public payloads remain separate channel events",
+      "finding": "Shared date or build does not collapse developerBeta and publicBeta identities. Candidate identities retain the publicBeta channel and public route alias."
+    },
+    {
+      "conflictId": "ios-gm-rc-not-next-public-beta",
+      "severity": "guardrail",
+      "status": "requiredHandling",
+      "subject": "GM and RC are not the next numbered public beta",
+      "notProposedRecordIds": [
+        "not-proposed:apple:ios:12.0:public-beta-11",
+        "not-proposed:apple:ios:13.0:public-beta-8",
+        "not-proposed:apple:ios:14.0:public-beta-9",
+        "not-proposed:apple:ios:15.0:public-beta-9",
+        "not-proposed:apple:ios:16.0:public-beta-7",
+        "not-proposed:apple:ios:17.0:public-beta-7",
+        "not-proposed:apple:ios:18.0:public-beta-7"
+      ],
+      "sourceIds": [
+        "iculture-ios12",
+        "iculture-ios13",
+        "iculture-ios14",
+        "iculture-ios15",
+        "iculture-ios16",
+        "iculture-ios17",
+        "iculture-ios18"
+      ],
+      "finding": "Public testers can receive the terminal GM/RC payload, but its event channel remains goldenMaster or releaseCandidate. Seven next ordinals are not proposed."
+    }
+  ],
+  "reviewState": "pendingIndependentChronologyReview"
+}

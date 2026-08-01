@@ -1,0 +1,1039 @@
+{
+  "formatVersion": 1,
+  "batchId": "ios-patch-applicability-2026-07-31",
+  "generatedAt": "2026-07-31T08:09:13.938Z",
+  "parentCount": 27,
+  "classificationCounts": {
+    "positiveCandidatesEstablished": 1,
+    "evidenceBackedNotApplicable": 1,
+    "notEstablished": 1,
+    "auditedNoPositiveButReversible": 24
+  },
+  "rows": [
+    {
+      "auditId": "audit:ios:8.4.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "8.4.1",
+      "releaseVersionId": "version-ios-8-4-1",
+      "stablePublicReleaseDate": "2015-08-13",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:8.4.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "notEstablished",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "macrumors-ios-8-4-1-developer-only",
+          "locator": "sources.json sourceId=macrumors-ios-8-4-1-developer-only; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Contemporaneous developer-only distribution statement."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "osxdaily-ios-8-4-1-beta2-developer",
+          "locator": "sources.json sourceId=osxdaily-ios-8-4-1-beta2-developer; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Beta 2 developer distribution and contrast with the iOS 9 public program."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "idownloadblog-ios-8-4-1-final",
+          "locator": "sources.json sourceId=idownloadblog-ios-8-4-1-final; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Final-release boundary after the two reported beta seeds."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "heise-ios-8-4-1-beta2-ambiguous",
+          "locator": "sources.json sourceId=heise-ios-8-4-1-beta2-ambiguous; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Ambiguous combined-product public-program wording retained as contrary evidence."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "iculture-ios-8-4-1-beta2-ambiguous",
+          "locator": "sources.json sourceId=iculture-ios-8-4-1-beta2-ambiguous; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Ambiguous approved-tester wording retained as contrary evidence."
+        }
+      ],
+      "conclusion": "The available evidence does not establish an exact public ordinal/date, but conflicting public-program/tester wording makes a stronger no-public-beta conclusion unsafe.",
+      "reversalEvidence": "Two independent exact public-beta reports could establish candidate(s); direct product-specific no-public-beta evidence could instead support not-applicable."
+    },
+    {
+      "auditId": "audit:ios:9.0.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "9.0.1",
+      "releaseVersionId": "version-ios-9-0-1",
+      "stablePublicReleaseDate": "2015-09-23",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:9.0.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-9-release-history",
+          "locator": "sources.json sourceId=apple-ios-9-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 9.0.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:9.0.2:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "9.0.2",
+      "releaseVersionId": "version-ios-9-0-2",
+      "stablePublicReleaseDate": "2015-09-30",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:9.0.2:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-9-release-history",
+          "locator": "sources.json sourceId=apple-ios-9-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 9.0.2; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:9.3.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "9.3.1",
+      "releaseVersionId": "version-ios-9-3-1",
+      "stablePublicReleaseDate": "2016-03-31",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:9.3.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-9-release-history",
+          "locator": "sources.json sourceId=apple-ios-9-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 9.3.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:9.3.5:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "9.3.5",
+      "releaseVersionId": "version-ios-9-3-5",
+      "stablePublicReleaseDate": "2016-08-25",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:9.3.5:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-9-release-history",
+          "locator": "sources.json sourceId=apple-ios-9-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 9.3.5; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:10.3.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.3.1",
+      "releaseVersionId": "version-ios-10-3-1",
+      "stablePublicReleaseDate": "2017-04-03",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:10.3.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-10-release-history",
+          "locator": "sources.json sourceId=apple-ios-10-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 10.3.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:11.0.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.0.1",
+      "releaseVersionId": "version-ios-11-0-1",
+      "stablePublicReleaseDate": "2017-09-26",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:11.0.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-11-release-history",
+          "locator": "sources.json sourceId=apple-ios-11-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 11.0.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:11.0.2:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.0.2",
+      "releaseVersionId": "version-ios-11-0-2",
+      "stablePublicReleaseDate": "2017-10-03",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:11.0.2:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-11-release-history",
+          "locator": "sources.json sourceId=apple-ios-11-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 11.0.2; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:11.0.3:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.0.3",
+      "releaseVersionId": "version-ios-11-0-3",
+      "stablePublicReleaseDate": "2017-10-11",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:11.0.3:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-11-release-history",
+          "locator": "sources.json sourceId=apple-ios-11-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 11.0.3; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:11.1.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.1.1",
+      "releaseVersionId": "version-ios-11-1-1",
+      "stablePublicReleaseDate": "2017-11-09",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:11.1.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-11-release-history",
+          "locator": "sources.json sourceId=apple-ios-11-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 11.1.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:11.1.2:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.1.2",
+      "releaseVersionId": "version-ios-11-1-2",
+      "stablePublicReleaseDate": "2017-11-16",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:11.1.2:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-11-release-history",
+          "locator": "sources.json sourceId=apple-ios-11-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 11.1.2; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:11.2.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "11.2.1",
+      "releaseVersionId": "version-ios-11-2-1",
+      "stablePublicReleaseDate": "2017-12-13",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:11.2.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-11-release-history",
+          "locator": "sources.json sourceId=apple-ios-11-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 11.2.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:12.0.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.0.1",
+      "releaseVersionId": "version-ios-12-0-1",
+      "stablePublicReleaseDate": "2018-10-08",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:12.0.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-12-release-history",
+          "locator": "sources.json sourceId=apple-ios-12-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 12.0.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:12.3.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.3.1",
+      "releaseVersionId": "version-ios-12-3-1",
+      "stablePublicReleaseDate": "2019-05-24",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:12.3.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-12-release-history",
+          "locator": "sources.json sourceId=apple-ios-12-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 12.3.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:12.4.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "12.4.1",
+      "releaseVersionId": "version-ios-12-4-1",
+      "stablePublicReleaseDate": "2019-08-26",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:12.4.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-12-release-history",
+          "locator": "sources.json sourceId=apple-ios-12-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 12.4.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:13.1.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.1.1",
+      "releaseVersionId": "version-ios-13-1-1",
+      "stablePublicReleaseDate": "2019-09-27",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:13.1.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-13-release-history",
+          "locator": "sources.json sourceId=apple-ios-13-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 13.1.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:13.1.2:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.1.2",
+      "releaseVersionId": "version-ios-13-1-2",
+      "stablePublicReleaseDate": "2019-09-30",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:13.1.2:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-13-release-history",
+          "locator": "sources.json sourceId=apple-ios-13-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 13.1.2; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:13.1.3:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.1.3",
+      "releaseVersionId": "version-ios-13-1-3",
+      "stablePublicReleaseDate": "2019-10-15",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:13.1.3:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-13-release-history",
+          "locator": "sources.json sourceId=apple-ios-13-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 13.1.3; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:13.3.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.3.1",
+      "releaseVersionId": "version-ios-13-3-1",
+      "stablePublicReleaseDate": "2020-01-28",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:13.3.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "positiveCandidatesEstablished",
+      "candidateIds": [
+        "candidate:apple:ios:13.3.1:public-beta-1",
+        "candidate:apple:ios:13.3.1:public-beta-2",
+        "candidate:apple:ios:13.3.1:public-beta-3"
+      ],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "bgr-ios-13-3-1-pb1",
+          "locator": "sources.json sourceId=bgr-ios-13-3-1-pb1; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 1: exact iOS 13.3.1 public identity and/or its Pacific-normalized appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "cultofmac-ios-13-3-1-pb1",
+          "locator": "sources.json sourceId=cultofmac-ios-13-3-1-pb1; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 1: exact iOS 13.3.1 public identity and/or its Pacific-normalized appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "9to5mac-ios-13-3-1-pb2",
+          "locator": "sources.json sourceId=9to5mac-ios-13-3-1-pb2; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 2: exact iOS 13.3.1 public identity and/or its Pacific-normalized appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "forbes-ios-13-3-1-pb2",
+          "locator": "sources.json sourceId=forbes-ios-13-3-1-pb2; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 2: exact iOS 13.3.1 public identity and/or its Pacific-normalized appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "9to5mac-ios-13-3-1-pb3",
+          "locator": "sources.json sourceId=9to5mac-ios-13-3-1-pb3; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 3: exact iOS 13.3.1 public identity and/or its Pacific-normalized appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "kobonemi-ios-13-3-1-pb3",
+          "locator": "sources.json sourceId=kobonemi-ios-13-3-1-pb3; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 3: exact iOS 13.3.1 public identity and/or its Pacific-normalized appearance date."
+        }
+      ],
+      "conclusion": "Public Beta 1–3 are established by exact contemporaneous reporting. The stable release followed on January 28, 2020.",
+      "reversalEvidence": "A source-level identity conflict or proof that a cited report described a non-public distribution would require reopening the affected candidate."
+    },
+    {
+      "auditId": "audit:ios:13.4.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.4.1",
+      "releaseVersionId": "version-ios-13-4-1",
+      "stablePublicReleaseDate": "2020-04-07",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:13.4.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-13-release-history",
+          "locator": "sources.json sourceId=apple-ios-13-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 13.4.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:13.5.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.5.1",
+      "releaseVersionId": "version-ios-13-5-1",
+      "stablePublicReleaseDate": "2020-06-01",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:13.5.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-13-release-history",
+          "locator": "sources.json sourceId=apple-ios-13-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 13.5.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:14.0.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.0.1",
+      "releaseVersionId": "version-ios-14-0-1",
+      "stablePublicReleaseDate": "2020-09-24",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:14.0.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-14-release-history",
+          "locator": "sources.json sourceId=apple-ios-14-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 14.0.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:14.5.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.5.1",
+      "releaseVersionId": "version-ios-14-5-1",
+      "stablePublicReleaseDate": "2021-05-03",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:14.5.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-14-release-history",
+          "locator": "sources.json sourceId=apple-ios-14-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 14.5.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:14.7.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.7.1",
+      "releaseVersionId": "version-ios-14-7-1",
+      "stablePublicReleaseDate": "2021-07-26",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:14.7.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-14-release-history",
+          "locator": "sources.json sourceId=apple-ios-14-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 14.7.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:14.8:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "14.8",
+      "releaseVersionId": "version-ios-14-8",
+      "stablePublicReleaseDate": "2021-09-13",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:14.8:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "evidenceBackedNotApplicable",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "9to5mac-ios-14-8-no-beta",
+          "locator": "sources.json sourceId=9to5mac-ios-14-8-no-beta; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Direct statement that iOS 14.8 was not beta tested."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "idropnews-ios-14-8-no-beta",
+          "locator": "sources.json sourceId=idropnews-ios-14-8-no-beta; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Independent statement that iOS 14.8 arrived without a beta version."
+        }
+      ],
+      "conclusion": "Two independent contemporary publisher families explicitly establish that iOS 14.8 was released without beta testing.",
+      "reversalEvidence": "An Apple artifact or two independent contemporaneous sources establishing an exact iOS 14.8 public-beta identity would reopen this conclusion."
+    },
+    {
+      "auditId": "audit:ios:26.0.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.0.1",
+      "releaseVersionId": "version-ios-26-0-1",
+      "stablePublicReleaseDate": "2025-09-29",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:26.0.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-26-release-history",
+          "locator": "sources.json sourceId=apple-ios-26-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 26.0.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    },
+    {
+      "auditId": "audit:ios:26.2.1:public-beta-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "26.2.1",
+      "releaseVersionId": "version-ios-26-2-1",
+      "stablePublicReleaseDate": "2026-01-26",
+      "productionDeveloperBetaEventCount": 0,
+      "productionPublicBetaEventCount": 0,
+      "queryLogId": "query:ios:26.2.1:public-beta-applicability",
+      "reviewedAt": "2026-07-31",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      },
+      "classification": "auditedNoPositiveButReversible",
+      "candidateIds": [],
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "apple-ios-26-release-history",
+          "locator": "sources.json sourceId=apple-ios-26-release-history; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "First-party stable release boundary for iOS 26.2.1; not beta-absence evidence."
+        }
+      ],
+      "conclusion": "No source meeting the exact-version/public-audience/displayed-ordinal/Pacific-date gate was located in this scoped audit.",
+      "reversalEvidence": "A contemporaneous source explicitly naming an iOS public-beta ordinal for this exact version and date would reopen the row; two independent publisher families are required before candidacy."
+    }
+  ],
+  "guardrails": [
+    "Never infer a public appearance from a developer label, build number, or paired-platform event.",
+    "No-result searches and stable-release boundaries do not prove no beta.",
+    "Absence of a production developer-beta event does not prove no beta.",
+    "Only explicit claim-level evidence can support evidenceBackedNotApplicable."
+  ]
+}

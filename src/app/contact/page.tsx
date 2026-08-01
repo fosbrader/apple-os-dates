@@ -10,21 +10,8 @@ import { publicContactEmail } from "@/lib/contact";
 import { absoluteUrl, createPageMetadata, siteName } from "@/lib/site";
 
 const pageDescription =
-  "Report an Apple release-date correction, suggest a source, or send feedback about Beta Cadence without exposing private information.";
+  "Report a release-history correction, suggest a public source, or contact Version Record without exposing private information.";
 const repositoryUrl = "https://github.com/fosbrader/apple-os-dates";
-const correctionUrl = `${repositoryUrl}/issues/new?title=${encodeURIComponent(
-  "Data correction: "
-)}&body=${encodeURIComponent(
-  [
-    "Platform:",
-    "Version:",
-    "Milestone:",
-    "Current value:",
-    "Proposed correction:",
-    "Supporting source URL:",
-    "Additional context:",
-  ].join("\n")
-)}`;
 const feedbackUrl = `${repositoryUrl}/issues/new?title=${encodeURIComponent(
   "Site feedback: "
 )}`;
@@ -60,7 +47,7 @@ export default function ContactPage() {
       >
         <Notice title="This is not Apple Support" tone="warning">
           <p>
-            Beta Cadence is independent and cannot help with Apple
+            Version Record is independent and cannot help with Apple
             accounts, devices, beta enrollment, billing, repairs, or security
             updates. For product help, visit{" "}
             <a
@@ -81,17 +68,15 @@ export default function ContactPage() {
             <h2 className="text-subheading">Report a correction</h2>
             <p className="text-sm text-[var(--text-secondary)] mt-2 mb-5 flex-1">
               Flag an incorrect date, milestone label, version, source link, or
-              missing release. A prepared issue form will prompt for the
+              missing release. The private editorial form prompts for the
               evidence needed to verify it.
             </p>
-            <a
-              href={correctionUrl}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href="/submit/"
               className="inline-flex justify-center rounded-lg bg-[var(--accent-cta)] px-4 py-2 text-sm font-semibold text-white hover:bg-[var(--accent-cta-hover)] transition-colors"
             >
-              Open a correction report
-            </a>
+              Send a private editorial report
+            </Link>
           </div>
 
           <div className="card flex flex-col">
@@ -140,10 +125,11 @@ export default function ContactPage() {
 
         <ContentSection title="Public reports and private information">
           <p>
-            GitHub issues are public. Do not post email addresses, phone
-            numbers, account details, credentials, private API keys, unpublished
-            personal information, or sensitive security details. Remove
-            tracking parameters from source links when practical.
+            Editorial reports use a separate private moderation queue. Do not
+            submit credentials, private API keys, unpublished personal
+            information, confidential material, or sensitive security details.
+            Public GitHub issues remain available for site bugs and feature
+            requests; anything posted there is public.
           </p>
           {publicContactEmail ? (
             <p>
@@ -183,6 +169,16 @@ export default function ContactPage() {
 
         <ContentSection title="Project links">
           <BulletList>
+            <li>
+              <Link href="/submit/" className={externalLinkClass}>
+                Private source and correction form
+              </Link>
+            </li>
+            <li>
+              <Link href="/corrections/" className={externalLinkClass}>
+                Public corrections ledger
+              </Link>
+            </li>
             <li>
               <a
                 href={repositoryUrl}

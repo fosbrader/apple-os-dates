@@ -1,0 +1,1705 @@
+{
+  "formatVersion": 1,
+  "target": { "projectId": "lh3yswzu", "dataset": "production" },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/104189",
+      "title": "Apple security updates (15-Jan-2008 to 03-Dec-2009)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["Apple software", "2008", "2009", "security release index"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/104188",
+      "title": "Apple security updates (2010)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["Apple software", "2010", "security release index"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/104138",
+      "title": "About the security content of iOS 3.0 Software Update",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2009-06-17T00:00:00Z",
+      "topics": ["iOS", "iPhone OS", "3.0", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/104140",
+      "title": "About the security content of iOS 3.0.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2009-07-31T00:00:00Z",
+      "topics": ["iOS", "iPhone OS", "3.0.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/104146",
+      "title": "About the security content of iOS 3.1 and iOS 3.1.1 for iPod touch",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2009-09-09T00:00:00Z",
+      "topics": ["iOS", "iPhone OS", "3.1", "security"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/104157",
+      "title": "About the security content of iOS 3.1.3 and iOS 3.1.3 for iPod touch",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2010-02-02T00:00:00Z",
+      "topics": ["iOS", "iPhone OS", "3.1.3", "security"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+      "title": "Apple Previews Developer Beta of iPhone OS 3.0",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2009-03-17T00:00:00Z",
+      "topics": ["iPhone OS", "3.0", "features", "developer APIs"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+      "title": "Apple Announces the New iPhone 3GS—The Fastest, Most Powerful iPhone Yet",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2009-06-08T00:00:00Z",
+      "topics": ["iPhone OS", "3.0", "availability", "features"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2009/09/09Apple-Introduces-New-iPod-touch-Lineup/",
+      "title": "Apple Introduces New iPod touch Lineup",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2009-09-09T00:00:00Z",
+      "topics": ["iPhone OS", "3.1", "features", "availability"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2009/09/09Apple-Premieres-iTunes-9/",
+      "title": "Apple Premieres iTunes 9",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2009-09-09T00:00:00Z",
+      "topics": ["iPhone OS", "3.1", "syncing", "iTunes Store"]
+    },
+    {
+      "url": "https://www.macrumors.com/2009/10/08/apple-releases-iphone-os-3-1-2/",
+      "title": "Apple Releases iPhone OS 3.1.2",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism",
+      "author": "Eric Slivka",
+      "publishedAt": "2009-10-08T17:22:00Z",
+      "topics": [
+        "iPhone OS",
+        "3.1.2",
+        "release notes",
+        "contemporaneous reporting"
+      ]
+    },
+    {
+      "url": "https://www.macworld.com/article/202388/iphone_313.html",
+      "title": "Apple releases iPhone software 3.1.3",
+      "publisher": "Macworld",
+      "sourceClass": "journalism",
+      "author": "Dan Moren",
+      "publishedAt": "2010-02-02T10:53:00Z",
+      "topics": [
+        "iPhone OS",
+        "3.1.3",
+        "release notes",
+        "contemporaneous reporting"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+      "title": "iPad Available in US on April 3",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2010-03-05T00:00:00Z",
+      "topics": ["iPhone OS", "3.2", "iPad", "availability", "features"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-ios-3-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple released iPhone OS 3.0 on June 17, 2009. Its user-facing scope included cut, copy and paste; MMS where supported; Spotlight and in-app search; landscape keyboards; Voice Memos; Find My iPhone and Remote Wipe through MobileMe; and broader direct media downloads.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+                "locator": "iPhone OS 3.0 features; Pricing & Availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104189",
+                "locator": "iOS 3.0 Software Update — 17 June 2009"
+              }
+            ]
+          },
+          {
+            "text": "The developer release added more than one thousand APIs spanning purchases, peer connections, accessories, maps, and push notifications. Apple’s separate security advisory documents repairs across graphics, media, messaging, networking, configuration, Safari, and WebKit. Hardware, carrier, and service qualifications in Apple’s announcement remain part of this historical record.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+                "locator": "SDK APIs and principal user features"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104138",
+                "locator": "iOS 3.0 Software Update security content"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+                "locator": "MMS and MobileMe qualifications"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+          "locator": "iPhone OS 3.0 features; June 17 availability"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+          "locator": "SDK APIs and user features"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104138",
+          "locator": "iOS 3.0 Software Update security content"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104189",
+          "locator": "iOS 3.0 Software Update — 17 June 2009"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-3-0-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/104140",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple’s archived security index dates iPhone OS 3.0.1 to July 31, 2009. The corresponding advisory identifies one documented change: safer decoding of SMS messages in CoreTelephony.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104189",
+                "locator": "iOS 3.0.1 — 31 July 2009"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104140",
+                "locator": "CoreTelephony — CVE-2009-2204"
+              }
+            ]
+          },
+          {
+            "text": "Apple said a crafted SMS could previously interrupt service or execute code. This article does not infer unrelated maintenance changes, feature additions, or an undocumented build record.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104140",
+                "locator": "CoreTelephony — CVE-2009-2204"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/104189",
+          "locator": "iOS 3.0.1 — 31 July 2009"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104140",
+          "locator": "iOS 3.0.1 security content"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-3-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/104146",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple’s dated records place iPhone OS 3.1 on September 9, 2009. Apple’s launch material ties it to home-screen organization in iTunes, more selective media and photo syncing, Genius Mixes and Genius for Apps, direct ringtone purchases, MobileMe remote lock, and anti-phishing protection.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104189",
+                "locator": "iOS 3.1 — 09 September 2009"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/09/09Apple-Premieres-iTunes-9/",
+                "locator": "Improved syncing and iPhone Store ringtones"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/09/09Apple-Introduces-New-iPod-touch-Lineup/",
+                "locator": "iPhone 3.1 features and update availability"
+              }
+            ]
+          },
+          {
+            "text": "The matching security advisory covers crafted audio, Exchange passcode policy, deleted mail in Spotlight, recovery-mode access, SMS resilience, password display, credential leakage, cross-site scripting, code execution, and deceptive internationalized URLs. Claims specific to iPod touch are not generalized to every iPhone.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104146",
+                "locator": "iOS 3.1 security content"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/09/09Apple-Introduces-New-iPod-touch-Lineup/",
+                "locator": "iPod touch product and pricing qualifications"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/104189",
+          "locator": "iOS 3.1 — 09 September 2009"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2009/09/09Apple-Premieres-iTunes-9/",
+          "locator": "iPhone OS 3.1 integration"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2009/09/09Apple-Introduces-New-iPod-touch-Lineup/",
+          "locator": "iPhone 3.1 features"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104146",
+          "locator": "iOS 3.1 security content"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-3-1-2",
+      "authorship": "originalSynthesis",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "MacRumors reported the public release of iPhone OS 3.1.2 on October 8, 2009 and preserved three items from the update notice: wake-from-sleep failures, cellular service interruptions that could persist until restart, and occasional crashes during video streaming.",
+            "citations": [
+              {
+                "url": "https://www.macrumors.com/2009/10/08/apple-releases-iphone-os-3-1-2/",
+                "locator": "Release date and displayed update notes"
+              }
+            ]
+          },
+          {
+            "text": "No surviving first-party Apple feature page or dated security-index entry for 3.1.2 was found in the reviewed source set. The local audited date is retained and the three ordinary fixes are labeled as contemporaneous journalism rather than first-party confirmation; no security or undocumented-change claim is inferred.",
+            "citations": [
+              {
+                "url": "https://www.macrumors.com/2009/10/08/apple-releases-iphone-os-3-1-2/",
+                "locator": "October 8, 2009 report and update-note transcription"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104189",
+                "locator": "Archived 2009 index; no iOS 3.1.2 entry",
+                "note": "Used only to bound what Apple's retained security index does not document."
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.macrumors.com/2009/10/08/apple-releases-iphone-os-3-1-2/",
+          "locator": "October 8, 2009 release and update notes"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104189",
+          "locator": "Archived 2009 index; no iOS 3.1.2 entry",
+          "note": "Absence is not treated as proof that no security work occurred."
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-3-1-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/104157",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple’s archived index and advisory place iPhone OS 3.1.3 on February 2, 2010. A same-day Macworld report preserves ordinary fixes for iPhone 3GS battery-level accuracy, third-party application launch failures, and crashes involving the Japanese Kana keyboard.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104188",
+                "locator": "iOS 3.1.3 — 02 February 2010"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104157",
+                "locator": "iOS 3.1.3 security content"
+              },
+              {
+                "url": "https://www.macworld.com/article/202388/iphone_313.html",
+                "locator": "Same-day report and ordinary fixes"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s primary advisory separately confirms five security items across crafted audio, TIFF images, recovery-mode USB handling, FTP directory parsing, and remote media loading in HTML mail. The ordinary changes remain attributed to contemporaneous journalism because they are absent from Apple’s retained advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104157",
+                "locator": "CoreAudio through WebKit"
+              },
+              {
+                "url": "https://www.macworld.com/article/202388/iphone_313.html",
+                "locator": "Maintenance-note preservation"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/104188",
+          "locator": "iOS 3.1.3 — 02 February 2010"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104157",
+          "locator": "iOS 3.1.3 security content"
+        },
+        {
+          "url": "https://www.macworld.com/article/202388/iphone_313.html",
+          "locator": "February 2, 2010 release and maintenance notes"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-3-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "The local iOS 3.2 route represents the original iPad software that reached customers with the Wi-Fi iPad on April 3, 2010. Apple’s launch material describes a larger-screen Multi-Touch experience for web browsing, mail, photos, HD video, music, games, and ebooks.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+                "locator": "April 3 availability; principal iPad experiences"
+              }
+            ]
+          },
+          {
+            "text": "Apple also documented twelve built-in apps redesigned for iPad, compatibility with almost all then-current iPhone and iPod touch apps, a wireless App Store, iBooks and the iBookstore, expanded iTunes media access, and computer synchronization. The reviewed Apple security indexes do not list an initial 3.2 advisory, so this page makes no version-specific security claim.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+                "locator": "Apps, App Store, iBooks, iTunes, and availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104188",
+                "locator": "2010 index; no initial iOS 3.2 security entry",
+                "note": "Used only as an evidence boundary, not proof that no security work occurred."
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+          "locator": "April 3 availability and launch features"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104188",
+          "locator": "2010 index; no initial iOS 3.2 security entry",
+          "note": "The absence of an advisory is not a claim that the release had no security changes."
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-3-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPhone OS 3.0 release introduced systemwide editing, MMS on supported service, Spotlight, landscape input, Voice Memos, MobileMe device recovery, expanded media downloads, major developer APIs, and a broad security baseline.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple released iPhone OS 3.0 on June 17, 2009. Its user-facing scope included cut, copy and paste; MMS where supported; Spotlight and in-app search; landscape keyboards; Voice Memos; Find My iPhone and Remote Wipe through MobileMe; and broader direct media downloads.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+                "locator": "iPhone OS 3.0 features; Pricing & Availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104189",
+                "locator": "iOS 3.0 Software Update — 17 June 2009"
+              }
+            ]
+          },
+          {
+            "text": "The developer release added more than one thousand APIs spanning purchases, peer connections, accessories, maps, and push notifications. Apple’s separate security advisory documents repairs across graphics, media, messaging, networking, configuration, Safari, and WebKit. Hardware, carrier, and service qualifications in Apple’s announcement remain part of this historical record.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+                "locator": "SDK APIs and principal user features"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104138",
+                "locator": "iOS 3.0 Software Update security content"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+                "locator": "MMS and MobileMe qualifications"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+          "locator": "iPhone OS 3.0 features; June 17 availability"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+          "locator": "SDK APIs and user features"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104138",
+          "locator": "iOS 3.0 Software Update security content"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104189",
+          "locator": "iOS 3.0 Software Update — 17 June 2009"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-3-0-editing",
+          "title": "Cut, copy, and paste",
+          "canonicalSummary": "The release added text and content transfer within an app and across compatible applications.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Users gained cut, copy, and paste operations that Apple described as working within or across applications.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+              "locator": "iPhone OS 3.0 feature list"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-mms",
+          "title": "MMS in Messages",
+          "canonicalSummary": "Supported iPhone models and carriers gained multimedia messaging for photos, contacts, audio, and locations.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple added MMS to Messages on supported iPhone hardware and service, while explicitly noting carrier and regional limits.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+              "locator": "MMS"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+              "locator": "iPhone OS 3.0 features; MMS qualification"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-spotlight-search",
+          "title": "Spotlight and expanded app search",
+          "canonicalSummary": "A system search surface and broader in-app search made locally stored information easier to find.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Spotlight searched across key applications, while Mail, iPod, and Notes received their own expanded search capabilities.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+              "locator": "Search and Spotlight"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+              "locator": "iPhone OS 3.0 feature list"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-landscape-input",
+          "title": "Landscape keyboards",
+          "canonicalSummary": "Several built-in text applications gained a wider keyboard when the device was rotated.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Mail, Messages, Notes, and Safari could present landscape-oriented text input on supported devices.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+              "locator": "Landscape view"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+              "locator": "iPhone OS 3.0 feature list"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-voice-memos",
+          "title": "Voice Memos",
+          "canonicalSummary": "A built-in application added recording and sharing of spoken audio.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new Voice Memos app recorded audio and supported sending recordings from the device.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+              "locator": "Voice Memo app"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+              "locator": "iPhone OS 3.0 feature list"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-mobileme-device-recovery",
+          "title": "Find My iPhone and Remote Wipe",
+          "canonicalSummary": "MobileMe subscribers gained location, message, sound, and remote-erasure controls for a missing iPhone.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple connected iPhone OS 3.0 with MobileMe so a user could locate a device, display a message, play a sound, or erase its contents remotely; a MobileMe subscription was required.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+              "locator": "Find My iPhone; Pricing & Availability"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-direct-media-downloads",
+          "title": "Expanded direct media downloads",
+          "canonicalSummary": "The device could obtain additional video, audio-program, and education content directly from Apple services.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple expanded on-device iTunes access to movies, television, audio programs, and iTunes U material.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/06/08Apple-Announces-the-New-iPhone-3GS-The-Fastest-Most-Powerful-iPhone-Yet/",
+              "locator": "New iTunes features"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-commerce-peer-accessory-apis",
+          "title": "Commerce, peer, and accessory APIs",
+          "canonicalSummary": "Developers gained interfaces for in-app purchases, nearby peer connections, and communication with hardware accessories.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The 3.0 SDK added in-app purchases, Bluetooth-based peer connections, and an application interface for supported accessories.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+              "locator": "New SDK APIs"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-maps-push-apis",
+          "title": "Maps and push-notification APIs",
+          "canonicalSummary": "Applications gained map integration and a system delivery path for alerts while not running.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple added a Maps API for tiles, location, annotations, and geocoding plus the Apple Push Notification service for sound, text, and badge alerts.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+              "locator": "Maps API and Push Notifications"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-calendar-stocks-expansion",
+          "title": "Calendar and Stocks expansion",
+          "canonicalSummary": "Built-in calendar and market-data applications gained broader service integration and information views.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Calendar added CalDAV and shared-calendar support, while Stocks added news, more trading metrics, and a landscape chart view.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/03/17Apple-Previews-Developer-Beta-of-iPhone-OS-3-0/",
+              "locator": "Calendar and Stocks"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-graphics-document-security",
+          "title": "Graphics and document parser hardening",
+          "canonicalSummary": "Image, PDF, font, and video parsers received memory-safety and validation corrections.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple repaired multiple crafted-content paths in CoreGraphics, ImageIO, FreeType, and MPEG-4 processing that could terminate software, reset a device, disclose data, or execute code.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104138",
+              "locator": "CoreGraphics, ImageIO, and MPEG-4 Video Codec"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-mail-exchange-profile-security",
+          "title": "Mail, Exchange, and profile protections",
+          "canonicalSummary": "The update strengthened remote-content privacy, certificate handling, call confirmation, and configuration-policy enforcement.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple added control over remote image loading, corrected certificate-exception and call-confirmation behavior, and prevented a profile from weakening an Exchange passcode policy.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104138",
+              "locator": "Exchange, Mail, and Profiles"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-network-telephony-security",
+          "title": "Networking and telephony resilience",
+          "canonicalSummary": "Network services received denial-of-service and remote-reset protections.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple updated the IPsec library and corrected handling of crafted network requests that could exhaust resources or reset a device.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104138",
+              "locator": "IPSec and Telephony"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-safari-web-isolation",
+          "title": "Safari history and web-isolation protections",
+          "canonicalSummary": "Safari and WebKit tightened history clearing, frame isolation, cross-origin access, and script boundaries.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update synchronized search-history removal with Safari history clearing and repaired clickjacking, cross-site scripting, cross-origin image, redirect, object, and frame-handling weaknesses.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104138",
+              "locator": "Safari and WebKit"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-0-webkit-memory-privacy",
+          "title": "WebKit memory and privacy protections",
+          "canonicalSummary": "The browser engine received memory-safety, resource-consumption, randomization, and information-disclosure corrections.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented fixes for crafted web content that could execute code, crash or reset software, track a session, or expose information across origins.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104138",
+              "locator": "WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-3-0-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPhone OS 3.0.1 update was a focused CoreTelephony security release correcting malicious SMS message handling.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple’s archived security index dates iPhone OS 3.0.1 to July 31, 2009. The corresponding advisory identifies one documented change: safer decoding of SMS messages in CoreTelephony.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104189",
+                "locator": "iOS 3.0.1 — 31 July 2009"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104140",
+                "locator": "CoreTelephony — CVE-2009-2204"
+              }
+            ]
+          },
+          {
+            "text": "Apple said a crafted SMS could previously interrupt service or execute code. This article does not infer unrelated maintenance changes, feature additions, or an undocumented build record.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104140",
+                "locator": "CoreTelephony — CVE-2009-2204"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/104189",
+          "locator": "iOS 3.0.1 — 31 July 2009"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104140",
+          "locator": "iOS 3.0.1 security content"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-3-0-1-sms-decoding",
+          "title": "SMS decoding memory safety",
+          "canonicalSummary": "CoreTelephony improved error handling while decoding crafted SMS messages.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The focused update corrected a memory-corruption flaw that Apple said could cause a service interruption or arbitrary code execution when a malicious SMS arrived.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104140",
+              "locator": "CoreTelephony — CVE-2009-2204"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-3-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPhone OS 3.1 release expanded iTunes organization, syncing, recommendations, ringtones, MobileMe controls, and anti-phishing behavior while repairing audio, enterprise, mail, recovery, telephony, password, and web security defects.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple’s dated records place iPhone OS 3.1 on September 9, 2009. Apple’s launch material ties it to home-screen organization in iTunes, more selective media and photo syncing, Genius Mixes and Genius for Apps, direct ringtone purchases, MobileMe remote lock, and anti-phishing protection.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104189",
+                "locator": "iOS 3.1 — 09 September 2009"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/09/09Apple-Premieres-iTunes-9/",
+                "locator": "Improved syncing and iPhone Store ringtones"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/09/09Apple-Introduces-New-iPod-touch-Lineup/",
+                "locator": "iPhone 3.1 features and update availability"
+              }
+            ]
+          },
+          {
+            "text": "The matching security advisory covers crafted audio, Exchange passcode policy, deleted mail in Spotlight, recovery-mode access, SMS resilience, password display, credential leakage, cross-site scripting, code execution, and deceptive internationalized URLs. Claims specific to iPod touch are not generalized to every iPhone.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104146",
+                "locator": "iOS 3.1 security content"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2009/09/09Apple-Introduces-New-iPod-touch-Lineup/",
+                "locator": "iPod touch product and pricing qualifications"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/104189",
+          "locator": "iOS 3.1 — 09 September 2009"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2009/09/09Apple-Premieres-iTunes-9/",
+          "locator": "iPhone OS 3.1 integration"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2009/09/09Apple-Introduces-New-iPod-touch-Lineup/",
+          "locator": "iPhone 3.1 features"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104146",
+          "locator": "iOS 3.1 security content"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-3-1-itunes-app-layout",
+          "title": "Home-screen app organization in iTunes",
+          "canonicalSummary": "Users could arrange application icons on a computer and synchronize that layout to the device.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "iTunes 9 could organize an iPhone home-screen app layout and reproduce the arrangement during synchronization.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/09/09Apple-Premieres-iTunes-9/",
+              "locator": "Improved syncing with iPhone OS 3.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-selective-media-photo-sync",
+          "title": "More selective media and photo syncing",
+          "canonicalSummary": "Synchronization controls expanded to artist, genre, Events, and Faces groupings.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple added music selection by artist and genre plus photo selection by Events and Faces, alongside broader media-sync improvements.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/09/09Apple-Premieres-iTunes-9/",
+              "locator": "Improved syncing with iPhone OS 3.1"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-genius-mixes",
+          "title": "Genius Mixes",
+          "canonicalSummary": "Automatically generated continuous mixes grouped compatible songs from a user's library.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Genius Mixes could generate up to twelve ongoing mixes based on Apple’s analysis of submitted music libraries.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/09/09Apple-Premieres-iTunes-9/",
+              "locator": "Genius Mixes"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2009/09/09Apple-Introduces-New-iPod-touch-Lineup/",
+              "locator": "Genius Mixes"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-genius-for-apps",
+          "title": "Genius for Apps",
+          "canonicalSummary": "The App Store added personalized application recommendations.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple listed Genius for Apps among the user-facing benefits available with the 3.1 update.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/09/09Apple-Introduces-New-iPod-touch-Lineup/",
+              "locator": "3.1 software update features"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-ringtone-store",
+          "title": "Precut ringtone purchases",
+          "canonicalSummary": "The on-device iTunes Store added a catalog of ready-to-use ringtones.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The iPhone store offered more than twenty thousand precut ringtones for individual purchase at launch.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/09/09Apple-Premieres-iTunes-9/",
+              "locator": "iTunes Store on iPhone"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-mobileme-lock-phishing",
+          "title": "MobileMe remote lock and anti-phishing",
+          "canonicalSummary": "The update expanded remote device control and browser protection against deceptive sites.",
+          "category": "security",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple identified MobileMe remote lock and anti-phishing behavior as part of the 3.1 software, with service and device applicability preserved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2009/09/09Apple-Introduces-New-iPod-touch-Lineup/",
+              "locator": "iPhone 3.1 software features"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-coreaudio-memory-safety",
+          "title": "CoreAudio memory safety",
+          "canonicalSummary": "Audio parsing added bounds checks for crafted AAC and MP3 files.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected a heap overflow that could terminate an application or execute code when a malicious audio file was opened.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104146",
+              "locator": "CoreAudio — CVE-2009-2206"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-exchange-passcode-timeout",
+          "title": "Exchange passcode timeout enforcement",
+          "canonicalSummary": "Device passcode choices could no longer exceed an Exchange administrator's inactivity limit.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update aligned the user's Require Passcode options with the server-defined maximum inactivity timeout.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104146",
+              "locator": "Exchange Support — CVE-2009-2794"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-deleted-mail-spotlight",
+          "title": "Deleted Mail exclusion from Spotlight",
+          "canonicalSummary": "Deleted messages stopped appearing through device search.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple prevented Spotlight from exposing email that had already been deleted from Mail folders.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104146",
+              "locator": "MobileMail — CVE-2009-2207"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-recovery-mode-boundary",
+          "title": "Recovery Mode passcode boundary",
+          "canonicalSummary": "Recovery command parsing was hardened against physical-access data extraction.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple repaired a heap overflow that could let someone with physical access bypass a passcode and reach user data.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104146",
+              "locator": "Recovery Mode — CVE-2009-2795"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-sms-arrival-resilience",
+          "title": "SMS arrival resilience",
+          "canonicalSummary": "Telephony handling of crafted SMS arrival notifications was corrected.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update fixed a null-pointer condition through which a malicious SMS could interrupt service.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104146",
+              "locator": "Telephony — CVE-2009-2815"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-password-undo-privacy",
+          "title": "Password undo privacy",
+          "canonicalSummary": "Undoing character deletion no longer briefly revealed password text.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple stopped a deleted password character from becoming visible again when the deletion was undone.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104146",
+              "locator": "UIKit — CVE-2009-2796"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-web-credential-url-protection",
+          "title": "Web credential and deceptive-URL protections",
+          "canonicalSummary": "Safari reduced credential leakage through referrers and made look-alike internationalized domains more apparent.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "WebKit stopped placing URL credentials in referral headers and rendered known look-alike domain characters in Punycode.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104146",
+              "locator": "WebKit — CVE-2009-2797 and CVE-2009-2199"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-webkit-script-memory-safety",
+          "title": "WebKit script and memory safety",
+          "canonicalSummary": "The browser engine corrected cross-site scripting and crafted-content memory corruption.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple repaired parent/top object handling and numeric character-reference processing that could cross security origins, terminate an app, or execute code.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104146",
+              "locator": "WebKit — CVE-2009-1724 and CVE-2009-1725"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-3-1-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPhone OS 3.1.2 update addressed wake-from-sleep reliability, cellular service interruption, and crashes during video streaming according to a contemporaneous preservation of the displayed update notes.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "MacRumors reported the public release of iPhone OS 3.1.2 on October 8, 2009 and preserved three items from the update notice: wake-from-sleep failures, cellular service interruptions that could persist until restart, and occasional crashes during video streaming.",
+            "citations": [
+              {
+                "url": "https://www.macrumors.com/2009/10/08/apple-releases-iphone-os-3-1-2/",
+                "locator": "Release date and displayed update notes"
+              }
+            ]
+          },
+          {
+            "text": "No surviving first-party Apple feature page or dated security-index entry for 3.1.2 was found in the reviewed source set. The local audited date is retained and the three ordinary fixes are labeled as contemporaneous journalism rather than first-party confirmation; no security or undocumented-change claim is inferred.",
+            "citations": [
+              {
+                "url": "https://www.macrumors.com/2009/10/08/apple-releases-iphone-os-3-1-2/",
+                "locator": "October 8, 2009 report and update-note transcription"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104189",
+                "locator": "Archived 2009 index; no iOS 3.1.2 entry",
+                "note": "Used only to bound what Apple's retained security index does not document."
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.macrumors.com/2009/10/08/apple-releases-iphone-os-3-1-2/",
+          "locator": "October 8, 2009 release and update notes"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104189",
+          "locator": "Archived 2009 index; no iOS 3.1.2 entry",
+          "note": "Absence is not treated as proof that no security work occurred."
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-3-1-2-wake-from-sleep",
+          "title": "Wake-from-sleep reliability",
+          "canonicalSummary": "The maintenance update addressed a sporadic failure to wake an iPhone from sleep.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "A contemporaneous report preserving the update notice says 3.1.2 corrected an intermittent case where an iPhone would not wake.",
+          "documentedStatus": "documented",
+          "evidenceState": "reported",
+          "verificationMethod": "Matched the contemporaneous publisher's dated preservation of the update notice to the existing audited public-release record; no stronger first-party feature page survives in the reviewed source set.",
+          "citations": [
+            {
+              "url": "https://www.macrumors.com/2009/10/08/apple-releases-iphone-os-3-1-2/",
+              "locator": "Displayed update notes — wake from sleep"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-2-cellular-service",
+          "title": "Cellular service continuity",
+          "canonicalSummary": "The maintenance update addressed a cellular interruption that could require a restart.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The preserved update notice describes an intermittent loss of cellular service that could persist until the device restarted.",
+          "documentedStatus": "documented",
+          "evidenceState": "reported",
+          "verificationMethod": "Matched the contemporaneous publisher's dated preservation of the update notice to the existing audited public-release record; no stronger first-party feature page survives in the reviewed source set.",
+          "citations": [
+            {
+              "url": "https://www.macrumors.com/2009/10/08/apple-releases-iphone-os-3-1-2/",
+              "locator": "Displayed update notes — cellular network services"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-2-video-stream-crash",
+          "title": "Video-streaming crash",
+          "canonicalSummary": "The update corrected an occasional crash during streamed video playback.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The third listed maintenance item addressed a crash that could occur while video was streaming.",
+          "documentedStatus": "documented",
+          "evidenceState": "reported",
+          "verificationMethod": "Matched the contemporaneous publisher's dated preservation of the update notice to the existing audited public-release record; no stronger first-party feature page survives in the reviewed source set.",
+          "citations": [
+            {
+              "url": "https://www.macrumors.com/2009/10/08/apple-releases-iphone-os-3-1-2/",
+              "locator": "Displayed update notes — video streaming"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-3-1-3",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPhone OS 3.1.3 update combined three contemporaneously preserved maintenance fixes with Apple-confirmed CoreAudio, ImageIO, Recovery Mode, and WebKit security repairs.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple’s archived index and advisory place iPhone OS 3.1.3 on February 2, 2010. A same-day Macworld report preserves ordinary fixes for iPhone 3GS battery-level accuracy, third-party application launch failures, and crashes involving the Japanese Kana keyboard.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104188",
+                "locator": "iOS 3.1.3 — 02 February 2010"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104157",
+                "locator": "iOS 3.1.3 security content"
+              },
+              {
+                "url": "https://www.macworld.com/article/202388/iphone_313.html",
+                "locator": "Same-day report and ordinary fixes"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s primary advisory separately confirms five security items across crafted audio, TIFF images, recovery-mode USB handling, FTP directory parsing, and remote media loading in HTML mail. The ordinary changes remain attributed to contemporaneous journalism because they are absent from Apple’s retained advisory.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104157",
+                "locator": "CoreAudio through WebKit"
+              },
+              {
+                "url": "https://www.macworld.com/article/202388/iphone_313.html",
+                "locator": "Maintenance-note preservation"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/104188",
+          "locator": "iOS 3.1.3 — 02 February 2010"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104157",
+          "locator": "iOS 3.1.3 security content"
+        },
+        {
+          "url": "https://www.macworld.com/article/202388/iphone_313.html",
+          "locator": "February 2, 2010 release and maintenance notes"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-3-1-3-battery-level-accuracy",
+          "title": "iPhone 3GS battery-level accuracy",
+          "canonicalSummary": "The maintenance release improved reported battery-level accuracy on iPhone 3GS.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Macworld's same-day preservation of the update notes identifies more accurate battery reporting on iPhone 3GS.",
+          "documentedStatus": "documented",
+          "evidenceState": "reported",
+          "verificationMethod": "Matched the contemporaneous publisher's dated preservation of the update notice to the existing audited public-release record; no stronger first-party feature page survives in the reviewed source set.",
+          "citations": [
+            {
+              "url": "https://www.macworld.com/article/202388/iphone_313.html",
+              "locator": "Ordinary fixes — battery level"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-3-third-party-app-launch",
+          "title": "Third-party application launch reliability",
+          "canonicalSummary": "The update addressed cases where third-party applications would not start.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The contemporaneous release report lists a correction for third-party programs that sometimes failed to launch.",
+          "documentedStatus": "documented",
+          "evidenceState": "reported",
+          "verificationMethod": "Matched the contemporaneous publisher's dated preservation of the update notice to the existing audited public-release record; no stronger first-party feature page survives in the reviewed source set.",
+          "citations": [
+            {
+              "url": "https://www.macworld.com/article/202388/iphone_313.html",
+              "locator": "Ordinary fixes — third-party programs"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-3-kana-keyboard-crash",
+          "title": "Japanese Kana keyboard crash",
+          "canonicalSummary": "The update corrected an application crash associated with Japanese Kana input.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The preserved maintenance notes identify a crash that could occur while using the Japanese Kana keyboard.",
+          "documentedStatus": "documented",
+          "evidenceState": "reported",
+          "verificationMethod": "Matched the contemporaneous publisher's dated preservation of the update notice to the existing audited public-release record; no stronger first-party feature page survives in the reviewed source set.",
+          "citations": [
+            {
+              "url": "https://www.macworld.com/article/202388/iphone_313.html",
+              "locator": "Ordinary fixes — Japanese Kana keyboard"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-3-media-parser-security",
+          "title": "CoreAudio and ImageIO parser safety",
+          "canonicalSummary": "Audio and image frameworks added bounds checks for crafted MP4 and TIFF content.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a CoreAudio buffer overflow and an ImageIO buffer underflow that could terminate an app or execute code.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104157",
+              "locator": "CoreAudio — CVE-2010-0036; ImageIO — CVE-2009-2285"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-3-recovery-usb-boundary",
+          "title": "Recovery Mode USB boundary",
+          "canonicalSummary": "Recovery Mode improved handling of a crafted USB control message.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple repaired memory corruption that could otherwise let someone with physical access bypass a passcode and reach user data.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104157",
+              "locator": "Recovery Mode — CVE-2010-0038"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-3-webkit-ftp-parsing",
+          "title": "WebKit FTP directory parsing",
+          "canonicalSummary": "The browser engine improved validation of FTP directory listings.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected multiple FTP parsing weaknesses that could disclose information, terminate an app, or execute code.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104157",
+              "locator": "WebKit — CVE-2009-3384"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-1-3-mail-remote-media-privacy",
+          "title": "Mail remote media privacy",
+          "canonicalSummary": "WebKit began issuing resource callbacks for HTML media elements so Mail's remote-loading choice could be honored.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The fix stopped remote audio or video in an HTML email from bypassing the setting that disabled remote image loading and signaling that a message had been read.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/104157",
+              "locator": "WebKit — CVE-2009-2841"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-3-2",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iPhone OS 3.2 release was the original iPad software, adapting Multi-Touch applications, web, mail, photos, video, books, stores, and content synchronization to the tablet's larger display.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "The local iOS 3.2 route represents the original iPad software that reached customers with the Wi-Fi iPad on April 3, 2010. Apple’s launch material describes a larger-screen Multi-Touch experience for web browsing, mail, photos, HD video, music, games, and ebooks.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+                "locator": "April 3 availability; principal iPad experiences"
+              }
+            ]
+          },
+          {
+            "text": "Apple also documented twelve built-in apps redesigned for iPad, compatibility with almost all then-current iPhone and iPod touch apps, a wireless App Store, iBooks and the iBookstore, expanded iTunes media access, and computer synchronization. The reviewed Apple security indexes do not list an initial 3.2 advisory, so this page makes no version-specific security claim.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+                "locator": "Apps, App Store, iBooks, iTunes, and availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104188",
+                "locator": "2010 index; no initial iOS 3.2 security entry",
+                "note": "Used only as an evidence boundary, not proof that no security work occurred."
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+          "locator": "April 3 availability and launch features"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104188",
+          "locator": "2010 index; no initial iOS 3.2 security entry",
+          "note": "The absence of an advisory is not a claim that the release had no security changes."
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-3-2-ipad-multitouch-web",
+          "title": "iPad Multi-Touch web experience",
+          "canonicalSummary": "The software adapted direct-touch web browsing to the iPad's larger display.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple described a larger, more interactive Safari experience designed around the original iPad display and Multi-Touch interface.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+              "locator": "Multi-Touch web browsing"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-2-ipad-mail-keyboard",
+          "title": "Large-screen Mail and soft keyboard",
+          "canonicalSummary": "Mail used the larger display and an almost full-size software keyboard.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The original iPad software presented email and composition controls around the tablet display and its larger on-screen keyboard.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+              "locator": "Mail and soft keyboard"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-2-ipad-photo-workflow",
+          "title": "iPad photo import, albums, and slideshows",
+          "canonicalSummary": "The tablet software supported computer or camera imports, album organization, and touch-driven slideshows.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple documented photo import from a Mac, PC, or digital camera together with album views and slideshow presentation.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+              "locator": "Photo import, albums, and slideshows"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-2-ipad-hd-media",
+          "title": "iPad HD video playback",
+          "canonicalSummary": "The original iPad software emphasized larger-screen playback for movies, television, and YouTube.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple presented movies, TV shows, and YouTube video in HD as part of the launch software's media experience.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+              "locator": "Video and YouTube"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-2-ibooks-store",
+          "title": "iBooks and iBookstore",
+          "canonicalSummary": "The iPad launch introduced Apple's ebook reader and integrated bookstore.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The free iBooks app supported browsing, buying, and reading books from the new US iBookstore, with regional availability explicitly limited at launch.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+              "locator": "iBooks, iBookstore, and availability"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-2-ipad-native-apps",
+          "title": "iPad-designed built-in applications",
+          "canonicalSummary": "Apple redesigned a set of built-in applications for the tablet's display and interaction model.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple said the iPad included twelve applications designed specifically for the device rather than merely scaling the phone layout.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+              "locator": "Twelve apps designed for iPad"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-2-iphone-app-compatibility",
+          "title": "Compatibility with existing iPhone applications",
+          "canonicalSummary": "The iPad could run most existing App Store applications made for iPhone and iPod touch.",
+          "category": "compatibility",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple said almost all of the more than 150,000 existing apps could run on iPad, including applications a user had already purchased.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+              "locator": "App compatibility"
+            }
+          ]
+        },
+        {
+          "key": "ios-3-2-ipad-stores-sync",
+          "title": "Wireless stores and iTunes synchronization",
+          "canonicalSummary": "The iPad combined wireless app and media storefronts with later synchronization to a computer library.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Users could browse and download apps wirelessly, access iTunes music, television, and movie catalogs, and synchronize downloaded apps and content with iTunes on a computer.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched a version-labeled Apple announcement, release index, or security advisory to the existing audited public-release record.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2010/03/05iPad-Available-in-US-on-April-3/",
+              "locator": "App Store, iTunes Store, and synchronization"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:18:42Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

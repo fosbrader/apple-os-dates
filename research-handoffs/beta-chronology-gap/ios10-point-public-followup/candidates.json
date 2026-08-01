@@ -1,0 +1,229 @@
+{
+  "formatVersion": "1.0",
+  "programId": "apple-beta-chronology-gap",
+  "generatedAt": "2026-07-31T04:35:31.043Z",
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "note": "This follow-up is a research-only correction/supplement. An independent chronology review and separate write authorization are still required."
+  },
+  "summary": {
+    "proposedCandidateCount": 2,
+    "notProposedCount": 0,
+    "byStatus": {
+      "needsEvidenceReview": 2
+    },
+    "byPlatform": {
+      "iOS": 2
+    },
+    "importantQualification": "iOS 10.2 Public Beta 3 is proposed for 2016-11-14 Pacific from an archived revision window, with contrary November 15 reports preserved as a material conflict. iOS 10.2.1 Public Beta 3 now has a clean second editorial lineage. Neither is chronology-approved."
+  },
+  "cohorts": [
+    {
+      "cohortId": "ios10-point-public-followup",
+      "description": "Narrow follow-up for the two candidates blocked by the frozen iOS 10 point-public independent review.",
+      "candidateCount": 2,
+      "sourcePaths": [
+        "research-handoffs/beta-chronology-gap/ios10-point-public/independent-review.json",
+        "research-handoffs/beta-chronology-gap/ios10-point-public-followup/sources.json",
+        "research-handoffs/beta-chronology-gap/ios10-point-public-followup/retained-source-reinspection.json",
+        "research-handoffs/beta-chronology-gap/ios10-point-public-followup/production-snapshot.json"
+      ],
+      "supersessionRule": "This supplement does not alter the frozen parent packet. If independently approved, it supersedes only the parent candidate date for iOS 10.2 Public Beta 3 and the parent editorial-lineage status for iOS 10.2.1 Public Beta 3."
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:ios:10.2:public-beta-3",
+      "originCohortId": "ios10-point-public-followup",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.2",
+      "releaseVersionId": "version-ios-10-2",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2016-11-14",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:31.043Z",
+        "matchBasis": "Fresh published, no-CDN production query checked releaseVersionId, publicBeta channel, routeAlias, sequence, label, and both 2016-11-14 and frozen 2016-11-15 date variants; all match counts were zero.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios10-point-public-followup/sources.json",
+          "sourceId": "followup-ios102-pb3-macrumors-status-1302",
+          "locator": "13:02:49 Pacific publication timestamp and developer-only status paragraph.",
+          "supports": "Provides a same-day negative lower bound before the public update appeared."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios10-point-public-followup/sources.json",
+          "sourceId": "followup-ios102-pb3-macrumors-revision-1455",
+          "locator": "14:55:46 Pacific archive capture and explicit public-beta update.",
+          "supports": "Provides an availability-by upper bound for Public Beta 3 on November 14 Pacific."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios10-point-public-followup/sources.json",
+          "sourceId": "followup-ios102-pb3-taisy0",
+          "locator": "JSON-LD timestamp, headline, and lead naming Public Beta 3 for beta-program members.",
+          "supports": "Independent editorial corroboration published at 16:35:21 Pacific on November 14."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios10-point-public/sources.json",
+          "sourceId": "source-ios102-pb3-thinkapple",
+          "locator": "Full retained timestamp and retrospective chronology in the article lead.",
+          "supports": "Independent editorial corroboration published at 16:28:13 Pacific on November 14."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios10-point-public-followup/sources.json",
+          "sourceId": "followup-ios102-pb3-neowin",
+          "locator": "November 15 timestamp and wording that public testers received the build 'today.'",
+          "supports": "Preserves the material contrary November 15 chronology position for review."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios10-point-public-followup/sources.json",
+          "sourceId": "followup-ios102-pb3-redmondpie",
+          "locator": "Both conflicting machine timestamps and text naming public beta testers.",
+          "supports": "Both machine timestamps normalize to November 14 Pacific and support same-day availability."
+        }
+      ],
+      "pairedDeveloperRoute": {
+        "releaseVersionId": "version-ios-10-2",
+        "routeAlias": "beta-3",
+        "relationship": "Production contains Developer Beta 3 on 2016-11-14. This is chronology context only and does not assert build or payload equivalence."
+      },
+      "upstreamPacket": "research-handoffs/beta-chronology-gap/ios10-point-public",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A reviewer independent of this follow-up researcher must inspect the archival transition and adjudicate the preserved November 15 contrary reports.",
+        "This proposal corrects only appearanceDate; it does not authorize chronology approval, publication, or a Sanity write."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Research proposal only. The archival evidence brackets public availability between 13:02:49 and 14:55:46 Pacific on November 14, but a different reviewer must adjudicate the conflict."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:public-beta-3",
+      "originCohortId": "ios10-point-public-followup",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.2.1",
+      "releaseVersionId": "version-ios-10-2-1",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2017-01-09",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T04:35:31.043Z",
+        "matchBasis": "Fresh published, no-CDN production query checked releaseVersionId, publicBeta channel, routeAlias, sequence, label, and 2017-01-09 appearanceDate; all match counts were zero.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios10-point-public/sources.json",
+          "sourceId": "source-ios1021-pb3-macrumors",
+          "locator": "Headline, article lead, and retained update explicitly stating third public-beta availability.",
+          "supports": "Provides the parent packet's first adequate editorial publisher lineage."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios10-point-public-followup/sources.json",
+          "sourceId": "followup-ios1021-pb3-taisy0",
+          "locator": "JSON-LD timestamp, headline, description, and lead explicitly naming beta testers and Public Beta 3.",
+          "supports": "Provides a second independent editorial lineage and normalizes to January 9 Pacific."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios10-point-public-followup/sources.json",
+          "sourceId": "followup-ios1021-pb3-kobonemi",
+          "locator": "Title and exact product identity only; exclude erroneous prose ordinals.",
+          "supports": "Supplies qualified supplementary support for the exact Public Beta 3 identity and January 9 Pacific date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios10-point-public/sources.json",
+          "sourceId": "source-ios1021-pb3-idevicecentral-video",
+          "locator": "Video publication date, title, and description.",
+          "supports": "Retains the independent contemporary first-hand witness without counting it as an editorial lineage."
+        }
+      ],
+      "pairedDeveloperRoute": null,
+      "upstreamPacket": "research-handoffs/beta-chronology-gap/ios10-point-public",
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "A reviewer independent of this follow-up researcher must verify the new Taisy0 locator and accept or reject it as the second editorial lineage.",
+        "No chronology approval, publication, or Sanity write is authorized by this packet."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Research proposal only. Taisy0 supplies the clean second editorial lineage; Kobonemi is supplementary because its prose contains ordinal errors."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "notProposed": [],
+  "nextEvidenceWaves": [
+    {
+      "waveId": "ios10-point-public-followup-independent-review",
+      "scope": "Independently verify the two corrected/supplemented candidate identities, their source hashes, time-zone normalization, and conflict handling.",
+      "artifactPaths": [
+        "research-handoffs/beta-chronology-gap/ios10-point-public-followup/report.md",
+        "research-handoffs/beta-chronology-gap/ios10-point-public-followup/candidates.json",
+        "research-handoffs/beta-chronology-gap/ios10-point-public-followup/conflicts.json"
+      ],
+      "estimatedCandidateCount": 2,
+      "countStatus": "confirmed",
+      "requiredNextStep": "A reviewer different from the researcher must issue a signed review artifact before any chronology approval or write decision."
+    }
+  ],
+  "validationStatus": {
+    "status": "passed",
+    "validatedAt": "2026-07-31T04:35:31.043Z",
+    "validator": "research-handoffs/beta-chronology-gap/ios10-point-public-followup/validate-packet.mjs",
+    "summaryPath": "research-handoffs/beta-chronology-gap/ios10-point-public-followup/validation.json"
+  }
+}

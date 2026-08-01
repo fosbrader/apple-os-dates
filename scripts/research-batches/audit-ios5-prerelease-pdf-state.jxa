@@ -1,0 +1,151 @@
+ObjC.import("Foundation");
+ObjC.import("PDFKit");
+
+function normalize(value) {
+  return String(value)
+    .normalize("NFKC")
+    .replace(/[“”]/g, '"')
+    .replace(/[‘’]/g, "'")
+    .replace(/[®™©]/g, "")
+    .replace(/[\u2010-\u2015]/g, "-")
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+}
+
+function fail(message) {
+  throw new Error(message);
+}
+
+function unwrap(value) {
+  return ObjC.unwrap(value);
+}
+
+function run(argv) {
+  if (argv.length !== 2) {
+    fail(
+      "Usage: osascript -l JavaScript audit-ios5-prerelease-pdf-state.jxa BUNDLE RAW_DIRECTORY",
+    );
+  }
+
+  var bundlePath = argv[0];
+  var rawDirectory = argv[1];
+  var pdfPath = rawDirectory + "/ios5-beta5.pdf";
+  var bundleData = $.NSData.dataWithContentsOfFile(bundlePath);
+  if (!bundleData) fail("Could not read bundle: " + bundlePath);
+  var bundleText = $.NSString.alloc.initWithDataEncoding(
+    bundleData,
+    $.NSUTF8StringEncoding,
+  );
+  var bundle = JSON.parse(unwrap(bundleText));
+
+  var document = $.PDFDocument.alloc.initWithURL(
+    $.NSURL.fileURLWithPath(pdfPath),
+  );
+  if (!document) fail("Could not open PDF: " + pdfPath);
+
+  var pageCount = Number(document.pageCount);
+  if (pageCount !== 8) {
+    fail("Expected eight PDF pages; found " + pageCount + ".");
+  }
+
+  var pageText = [];
+  for (var pageIndex = 0; pageIndex < pageCount; pageIndex += 1) {
+    var page = document.pageAtIndex(pageIndex);
+    if (!page) fail("Could not read PDF page " + (pageIndex + 1) + ".");
+    pageText.push(unwrap(page.string));
+  }
+  var normalizedPdf = normalize(pageText.join("\n"));
+  var expectedTitle = "iOS SDK Release Notes for iOS 5.0 beta 5";
+  if (normalizedPdf.indexOf(normalize(expectedTitle)) < 0) {
+    fail("The expected Beta 5 document title is absent.");
+  }
+
+  var attributes = document.documentAttributes;
+  var metadataTitle = attributes
+    ? attributes.objectForKey($.PDFDocumentTitleAttribute)
+    : null;
+  var expectedMetadataTitle = "Microsoft Word - Dokument1";
+  if (
+    !metadataTitle ||
+    normalize(unwrap(metadataTitle)) !== normalize(expectedMetadataTitle)
+  ) {
+    fail("The PDF title metadata changed.");
+  }
+  var creationDate = attributes
+    ? attributes.objectForKey($.PDFDocumentCreationDateAttribute)
+    : null;
+  if (!creationDate) fail("The PDF creation-date metadata is absent.");
+  var calendar = $.NSCalendar.calendarWithIdentifier(
+    $.NSCalendarIdentifierGregorian,
+  );
+  var components = calendar.componentsFromDate(
+    $.NSCalendarUnitYear | $.NSCalendarUnitMonth | $.NSCalendarUnitDay,
+    creationDate,
+  );
+  var creationDateString =
+    String(Number(components.year)).padStart(4, "0") +
+    "-" +
+    String(Number(components.month)).padStart(2, "0") +
+    "-" +
+    String(Number(components.day)).padStart(2, "0");
+  if (creationDateString !== "2011-08-06") {
+    fail(
+      "Expected PDF creation date 2011-08-06; found " +
+        creationDateString +
+        ".",
+    );
+  }
+
+  var pdfUrl = "https://iszene.com/uploads/5nvaddy7eqkbt355afs.pdf";
+  var beta5 = bundle.events.find(function (event) {
+    return (
+      event.identity &&
+      event.identity.routeAlias === "beta-5"
+    );
+  });
+  if (!beta5) fail("The generated bundle has no Beta 5 event.");
+
+  var locatorAssertions = 0;
+  var missing = [];
+  (beta5.changes || []).forEach(function (change) {
+    (change.citations || []).forEach(function (citation) {
+      if (citation.url !== pdfUrl) return;
+      var separator = citation.locator
+        ? citation.locator.indexOf(" — ")
+        : -1;
+      if (separator < 0) {
+        missing.push(change.key + ": malformed locator");
+        return;
+      }
+      var locator = normalize(citation.locator.slice(separator + 3));
+      locatorAssertions += 1;
+      if (normalizedPdf.indexOf(locator) < 0) {
+        missing.push(change.key + ': PDF lacks "' + locator + '"');
+      }
+    });
+  });
+  if (locatorAssertions !== 26) {
+    fail(
+      "Expected 26 Beta 5 PDF locator assertions; found " +
+        locatorAssertions +
+        ".",
+    );
+  }
+  if (missing.length > 0) {
+    fail("PDF locator audit failed:\n" + missing.join("\n"));
+  }
+
+  return JSON.stringify(
+    {
+      file: "ios5-beta5.pdf",
+      pages: pageCount,
+      title: expectedTitle,
+      metadataTitle: expectedMetadataTitle,
+      creationDate: creationDateString,
+      locatorAssertions: locatorAssertions,
+    },
+    null,
+    2,
+  );
+}

@@ -1,0 +1,826 @@
+{
+  "formatVersion": 1,
+  "target": { "projectId": "lh3yswzu", "dataset": "production" },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+      "title": "Apple Previews Mac OS X “Tiger”",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2004-06-28T00:00:00.000Z",
+      "topics": ["Mac OS X", "Tiger", "10.4", "preview", "features"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+      "title": "Apple to Ship Mac OS X “Tiger” on April 29",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2005-04-12T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Tiger",
+        "10.4",
+        "public availability",
+        "features",
+        "compatibility"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2005/04/17Apple-Continues-to-Lead-the-Industry-in-the-Adoption-of-HD-Video-at-NAB/",
+      "title": "Apple Continues to Lead the Industry in the Adoption of HD Video at NAB",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2005-04-17T00:00:00.000Z",
+      "topics": ["Mac OS X", "Tiger", "10.4", "QuickTime 7", "H.264"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2005/06/06Apple-To-Deliver-2-Millionth-Copy-of-Mac-OS-X-Tiger-This-Week/",
+      "title": "Apple To Deliver 2 Millionth Copy of Mac OS X Tiger This Week",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2005-06-06T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Tiger",
+        "10.4",
+        "vendor-reported adoption",
+        "developer ecosystem"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_Tiger_vpat.pdf",
+      "title": "Mac OS X version 10.4 “Tiger” accessibility information",
+      "publisher": "Apple Accessibility",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": ["Mac OS X", "Tiger", "10.4", "VoiceOver", "accessibility"]
+    },
+    {
+      "url": "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/RevisionHistory.html",
+      "title": "Core Data Programming Guide: Document Revision History",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "author": "Apple",
+      "topics": ["Mac OS X", "10.4", "Core Data", "public release"]
+    },
+    {
+      "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/OSX_Technology_Overview/SystemTechnology/SystemTechnology.html",
+      "title": "Kernel and Device Drivers Layer",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "author": "Apple",
+      "topics": ["Mac OS X", "10.4", "64-bit support", "architecture"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/104190",
+      "title": "Apple security updates (25-Jan-2005 to 21-Dec-2007)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Apple software",
+        "2007",
+        "release dates",
+        "security updates",
+        "archive completeness"
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-10-4",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Release overview" },
+          {
+            "text": "Mac OS X 10.4 Tiger became publicly available on April 29, 2005. Apple framed the release around more than 200 changes; this article records twenty clearly bounded capabilities and launch conditions that can be tied to retained first-party material, rather than treating the marketing total as a recoverable changelog.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "April 29 availability and launch feature inventory"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+                "locator": "June 2004 preview scope"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Search, information, and automation" },
+          {
+            "text": "Spotlight moved content and metadata search into the operating system and several bundled applications. Dashboard created an instant widget layer, Automator added drag-and-drop workflows, and Safari gained a built-in RSS reader capable of combining feeds.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "Spotlight through Safari RSS feature paragraphs"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+                "locator": "Spotlight, Safari RSS, Dashboard, and Automator"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Communication, media, and personal information"
+          },
+          {
+            "text": "Tiger expanded iChat AV with H.264 and multi-participant conferencing, bundled QuickTime 7, and revised Mail, iCal, and Font Book. A new Xsync-based .Mac preference synchronized selected bookmarks, calendars, contacts, passwords, and mail settings across subscribed Macs.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "iChat and other new features"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/17Apple-Continues-to-Lead-the-Industry-in-the-Adoption-of-HD-Video-at-NAB/",
+                "locator": "QuickTime 7 launch timing and H.264"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Accessibility" },
+          {
+            "text": "Tiger included VoiceOver as an installed-by-default screen reader with spoken interface descriptions and keyboard control; Apple's accessibility document also says the installation disc was usable with VoiceOver. That source reports exceptions in application and control support, so this page preserves the feature without implying universal accessibility.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_Tiger_vpat.pdf",
+                "locator": "Functional Performance Criteria and documented exceptions"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Developer and system foundations" },
+          {
+            "text": "Core Data reached its first public version with Tiger. The release also introduced initial native 64-bit process support, Core Image and Core Video, Xgrid, an updated UNIX foundation, and Xcode 2. Apple's architecture documentation makes clear that Tiger's first 64-bit model was narrower than the framework coverage that followed in later OS X releases.",
+            "citations": [
+              {
+                "url": "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/RevisionHistory.html",
+                "locator": "2005-04-29 first public Core Data version"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "Core technologies and tools"
+              },
+              {
+                "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/OSX_Technology_Overview/SystemTechnology/SystemTechnology.html",
+                "locator": "Tiger 64-bit support boundary"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Distribution and compatibility" },
+          {
+            "text": "Apple sold the client release through its stores and authorized resellers, with US single-user, family, volume, maintenance, and Up-To-Date options. The initial package required at least 256MB of memory and a FireWire-equipped PowerPC G3, G4, or G5 Mac; improved Windows home-directory and Active Directory integration addressed mixed-network environments.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "Windows compatibility and Pricing & Availability"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Early ecosystem context" },
+          {
+            "text": "On June 6, Apple said it expected to deliver more than two million Tiger copies by the end of that week, counting retail sales, maintenance delivery, and copies bundled with Macs. It also reported more than 400 Dashboard widgets, 550 Automator actions, and 40 Spotlight plug-ins. These figures are retained as Apple-supplied launch-period context, not independent adoption measurements.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/06/06Apple-To-Deliver-2-Millionth-Copy-of-Mac-OS-X-Tiger-This-Week/",
+                "locator": "June 6 delivery and developer-ecosystem claims"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Evidence boundary" },
+          {
+            "text": "The retained Apple security chronology has no initial Mac OS X 10.4 entry on April 29; its first Tiger point-release line is 10.4.1 on May 16. The launch page's general security superlative is marketing language rather than a component-level bulletin, so this article adds no structured launch-security claim and does not project later fixes backward. It also excludes Tiger Server, prerelease-only details, later Intel support, point versions, and build numbers because none is an eligible local record in this cohort.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "Launch scope and general security statement"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104190",
+                "locator": "April–May 2005 chronology; Mac OS X 10.4.1 on May 16"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+          "locator": "June 28, 2004 preview"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+          "locator": "April 12 announcement and April 29 availability"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2005/04/17Apple-Continues-to-Lead-the-Industry-in-the-Adoption-of-HD-Video-at-NAB/",
+          "locator": "April 17 QuickTime 7 confirmation"
+        },
+        {
+          "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_Tiger_vpat.pdf",
+          "locator": "Tiger-specific accessibility information"
+        },
+        {
+          "url": "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/RevisionHistory.html",
+          "locator": "Core Data first public version"
+        },
+        {
+          "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/OSX_Technology_Overview/SystemTechnology/SystemTechnology.html",
+          "locator": "Tiger 64-bit limitations"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2005/06/06Apple-To-Deliver-2-Millionth-Copy-of-Mac-OS-X-Tiger-This-Week/",
+          "locator": "June 6 launch-period context"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104190",
+          "locator": "2005 security chronology boundary"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:05:12Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-macos-10-4",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Mac OS X Tiger 10.4 reached the public channel on April 29, 2005 with Spotlight, Dashboard, Automator, Safari RSS, expanded communications and media applications, VoiceOver, and a broad new developer foundation.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          { "style": "h2", "text": "Public release" },
+          {
+            "text": "Apple announced that the client edition of Mac OS X 10.4 Tiger would go on sale at 6:00 p.m. on Friday, April 29, 2005 through Apple retail stores and authorized resellers. That first-party date exactly matches the existing durable Public route.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "April 29 public availability"
+              }
+            ]
+          },
+          { "style": "h2", "text": "What this page records" },
+          {
+            "text": "The structured inventory covers twenty documented launch deltas: Spotlight, Dashboard, iChat AV, Automator, Safari RSS, QuickTime 7, Mail 2, iCal 2, Font Book 2, .Mac synchronization, VoiceOver, Core Data, initial native 64-bit processes, Core Image and Core Video, Xgrid, Windows integration, UNIX foundation updates, Xcode 2, the PowerPC hardware baseline, and retail upgrade availability.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "Launch feature and availability inventory"
+              },
+              {
+                "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_Tiger_vpat.pdf",
+                "locator": "VoiceOver in Tiger"
+              },
+              {
+                "url": "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/RevisionHistory.html",
+                "locator": "Core Data public-release entry"
+              },
+              {
+                "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/OSX_Technology_Overview/SystemTechnology/SystemTechnology.html",
+                "locator": "Initial 64-bit support boundary"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Preview-to-release boundary" },
+          {
+            "text": "Apple previewed Tiger in June 2004. Preview descriptions are used here to clarify Spotlight's smart containers and other interaction details only when Apple's April 2005 launch announcement independently names the same capability as part of the shipping release.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+                "locator": "June 2004 preview descriptions"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "April 2005 shipping feature confirmation"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Accessibility and development" },
+          {
+            "text": "VoiceOver and Core Data do not appear in the launch announcement's selected headline list, but each has retained first-party version-specific documentation: Apple's Tiger accessibility assessment describes the bundled screen reader and its limitations, while the Core Data revision history identifies April 29 as the framework's first public version.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_Tiger_vpat.pdf",
+                "locator": "VoiceOver support and exceptions"
+              },
+              {
+                "url": "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/RevisionHistory.html",
+                "locator": "2005-04-29 first public version"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Requirements and purchase paths" },
+          {
+            "text": "The launch requirements named FireWire-equipped PowerPC G3, G4, and G5 Macs with at least 256MB of memory. US historical pricing was $129 for one user and $199 for a five-user household license, with separate volume, maintenance, and qualifying-new-Mac arrangements.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "Pricing & Availability"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Security and maintenance boundary" },
+          {
+            "text": "Apple's surviving 2005–2007 security index does not list an initial Tiger security bulletin on April 29 and first lists the 10.4.1 client update on May 16. Because this route represents only the initial 10.4 public appearance, no 10.4.1 maintenance or later security content is inherited into it.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104190",
+                "locator": "April 29 through May 16, 2005 security chronology"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Catalog naming and scope" },
+          {
+            "text": "The local catalog groups Tiger under the modern macOS platform family, but reader-facing prose retains Apple's contemporary Mac OS X name. This is the desktop client release only: the separately marketed Tiger Server product and later PowerPC or Intel point-release packages are outside the one eligible local record.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+                "locator": "Mac OS X 10.4 client product and requirements"
+              }
+            ]
+          },
+          { "style": "h2", "text": "Launch-period context" },
+          {
+            "text": "Apple's June follow-up supplies early shipment and developer-ecosystem figures. They are identified as Apple's own report and are not converted into independent sales, installed-base, or market-share conclusions.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2005/06/06Apple-To-Deliver-2-Millionth-Copy-of-Mac-OS-X-Tiger-This-Week/",
+                "locator": "June 6 Apple-reported figures"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+          "locator": "June 28, 2004 preview"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+          "locator": "April 29, 2005 public release"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2005/04/17Apple-Continues-to-Lead-the-Industry-in-the-Adoption-of-HD-Video-at-NAB/",
+          "locator": "QuickTime 7 launch confirmation"
+        },
+        {
+          "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_Tiger_vpat.pdf",
+          "locator": "Tiger accessibility documentation"
+        },
+        {
+          "url": "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/RevisionHistory.html",
+          "locator": "Core Data first public version"
+        },
+        {
+          "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/OSX_Technology_Overview/SystemTechnology/SystemTechnology.html",
+          "locator": "Tiger 64-bit boundary"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2005/06/06Apple-To-Deliver-2-Millionth-Copy-of-Mac-OS-X-Tiger-This-Week/",
+          "locator": "Launch-period ecosystem context"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104190",
+          "locator": "2005 security chronology"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-10-4-spotlight-system-search",
+          "title": "Spotlight system search",
+          "canonicalSummary": "Tiger introduced Spotlight, a systemwide index for searching file contents and metadata across documents, messages, contacts, appointments, images, and other records.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Spotlight continuously updated its index as files changed and surfaced search in Mail, Address Book, Finder, and System Preferences. Apple's preview also documented Smart Folders, Smart Mailboxes, and Smart Groups as automatically updated views powered by the same search technology.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Spotlight paragraphs"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "Spotlight and smart-organization paragraphs"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-dashboard-widgets",
+          "title": "Dashboard widgets",
+          "canonicalSummary": "Dashboard introduced an on-demand layer of small information and utility applications called widgets.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Tiger shipped with 14 widgets for information and utilities such as weather, stocks, conversions, and flight tracking. Apple described Dashboard as appearing and disappearing over the current workspace, and exposed standard HTML and JavaScript as a path for third-party widget development.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Dashboard paragraphs"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "Dashboard paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-ichat-av-h264-conferencing",
+          "title": "iChat AV multiway conferencing",
+          "canonicalSummary": "Tiger expanded iChat AV with H.264 video plus multi-participant audio and video conferences.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple documented audio conferences with as many as ten people and video conferences with as many as four, subject to processor and bandwidth requirements. The update also let buddy-list contacts expose the current iTunes track and open it in the iTunes Music Store.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "iChat paragraph and conferencing footnote"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "iChat paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-automator-workflows",
+          "title": "Automator workflows",
+          "canonicalSummary": "Automator introduced visual, reusable workflows for automating repetitive tasks without requiring users to write scripts.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new application supplied more than one hundred customizable actions that could be arranged by drag and drop, then saved or shared as a workflow.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Automator paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "Additional features; Automator"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-safari-rss",
+          "title": "Safari RSS",
+          "canonicalSummary": "Safari added built-in RSS discovery and reading, including a combined view for multiple feeds.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Tiger's browser could recognize RSS-enabled sites, display their feeds directly, and merge several feeds into a single reader view for a personalized news stream.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Safari RSS paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "Safari RSS paragraphs"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-quicktime-7",
+          "title": "QuickTime 7",
+          "canonicalSummary": "Tiger included QuickTime 7 with H.264 playback, live resizing, zero-configuration streaming, and expanded surround-audio support.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple tied QuickTime 7's Mac release to Tiger's April 29 launch. The launch announcement names H.264, smooth live resizing, automatic streaming configuration, and broader surround sound as the principal bundled changes.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Other new features; QuickTime 7"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/17Apple-Continues-to-Lead-the-Industry-in-the-Adoption-of-HD-Video-at-NAB/",
+              "locator": "QuickTime 7 and April 29 availability paragraphs"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-mail-2",
+          "title": "Mail 2",
+          "canonicalSummary": "Mail 2 redesigned the built-in mail client and added Spotlight search, .Mac synchronization, and full-screen photo slideshows.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Tiger release updated Mail's interface and connected the application to the operating system's new search and synchronization services, while adding a full-screen slideshow for message attachments.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Other new features; Mail 2"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-ical-2",
+          "title": "iCal 2",
+          "canonicalSummary": "iCal 2 added birthday calendars, calendar groups, improved printing, and integration with Spotlight and Automator.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Tiger's calendar update expanded organization and printing while making calendar data available to system search and workflow automation.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Other new features; iCal 2"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-font-book-2",
+          "title": "Font Book 2",
+          "canonicalSummary": "Font Book 2 introduced font libraries and support for installing fonts at system or network locations.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The updated font utility added library-based organization and could manage installations beyond an individual user's local font collection.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Other new features; Font Book 2"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-dotmac-xsync",
+          "title": ".Mac synchronization with Xsync",
+          "canonicalSummary": "Tiger replaced the .Mac synchronization preference with one powered by the new Xsync engine.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "For .Mac subscribers, the new synchronization layer coordinated Safari bookmarks, iCal appointments, Address Book contacts, Keychain passwords, and Mail settings across multiple Macs.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Other new features; .Mac sync preference"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "Additional features; .Mac Sync"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-voiceover-screen-reader",
+          "title": "Built-in VoiceOver screen reader",
+          "canonicalSummary": "Tiger included VoiceOver as an integrated screen reader with spoken interface descriptions and keyboard-driven control.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple's Tiger-specific accessibility documentation says VoiceOver was installed by default, read documents and interface activity aloud, supplied keyboard navigation, and made the Tiger installation disc accessible. The same document records exceptions, so this occurrence does not imply complete support in every bundled application or control.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Confirmed against Apple's version-specific Mac OS X 10.4 accessibility document, including its stated support limits and installation-media behavior.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_Tiger_vpat.pdf",
+              "locator": "Functional Performance Criteria 1194.31(a); VoiceOver and installation disc"
+            },
+            {
+              "url": "https://www.apple.com/accessibility/pdf/Mac_OS_X_Tiger_vpat.pdf",
+              "locator": "Software Applications and Operating Systems; Accessibility API exceptions"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-core-data-framework",
+          "title": "Core Data",
+          "canonicalSummary": "Tiger introduced the public Core Data framework for object-graph management and persistence in Mac applications.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple's retained Core Data documentation identifies April 29, 2005 as its first public version and says the guide was updated for the public release of OS X 10.4.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Confirmed through Apple's retained Core Data revision history, whose first-public-version entry is dated to the exact Tiger public-release day.",
+          "citations": [
+            {
+              "url": "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CoreData/RevisionHistory.html",
+              "locator": "2005-04-29 revision: first public version for OS X v10.4"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-native-64-bit-processes",
+          "title": "Initial native 64-bit process support",
+          "canonicalSummary": "Tiger added the first Mac OS X support for building and running native 64-bit processes alongside 32-bit applications.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The launch announcement emphasized access to larger address spaces. Apple's later architecture documentation preserves the important initial boundary: Tiger's 64-bit development support was limited to C or C++ code and a restricted set of system libraries, rather than the broad 64-bit application framework coverage added in later releases.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Core technologies; native 64-bit application support"
+            },
+            {
+              "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/OSX_Technology_Overview/SystemTechnology/SystemTechnology.html",
+              "locator": "Hardware Architectures; 64-Bit Support and Tiger limitations"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-core-image-core-video",
+          "title": "Core Image and Core Video",
+          "canonicalSummary": "Tiger introduced Core Image and Core Video as system foundations for image and video processing applications.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple positioned the two technologies as reusable media-processing foundations for developers, extending the system's Core-family approach beyond audio.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Core technologies; Core Image and Core Video"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "Additional features; Core Image and Core Video"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-xgrid",
+          "title": "Xgrid distributed computing",
+          "canonicalSummary": "Tiger brought Apple's Xgrid distributed-computing software into the desktop operating system.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Xgrid provided a system technology for coordinating work across multiple Macs as a distributed computational resource.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Core technologies; Xgrid"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "UNIX foundation and Xgrid"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-windows-network-integration",
+          "title": "Expanded Windows network integration",
+          "canonicalSummary": "Tiger improved access to Windows-hosted home directories and authentication through Microsoft Active Directory.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple described the change as standards-based network compatibility for mixed environments, focused on Windows home-directory access and Active Directory identity.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Core technologies; Windows compatibility"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "Additional features; Windows compatibility"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-unix-foundation",
+          "title": "Updated UNIX foundation",
+          "canonicalSummary": "Tiger revised the system's UNIX foundation with a newer kernel, better SMP scaling, 64-bit virtual memory, access-control lists, GCC 4.0, and modernized network services.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "These lower-level changes expanded multiprocessor scaling, memory and permissions infrastructure, compiler tooling, and networking beneath Tiger's applications.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Core technologies; UNIX foundation"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "UNIX foundation paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-xcode-2",
+          "title": "Xcode 2",
+          "canonicalSummary": "Tiger shipped with Xcode 2 as the accompanying generation of Apple's Mac development tools.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple identified Xcode 2 as the tool suite intended for building applications against Tiger's new operating-system technologies.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Core technologies; Xcode 2"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2004/06/28Apple-Previews-Mac-OS-X-Tiger/",
+              "locator": "Additional features; Xcode 2"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-powerpc-firewire-baseline",
+          "title": "PowerPC and FireWire hardware baseline",
+          "canonicalSummary": "The initial Tiger retail release targeted FireWire-equipped PowerPC G3, G4, and G5 Macs with at least 256MB of memory.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "This is the April 2005 client-release baseline stated by Apple. It does not project support from later Tiger point releases—including the later Intel branch—back onto the initial 10.4 package.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Pricing & Availability; system requirements"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-4-retail-upgrade-availability",
+          "title": "Retail upgrade and licensing options",
+          "canonicalSummary": "Apple launched Tiger as a paid retail operating-system upgrade with single-user, family, volume, maintenance, and qualifying-new-Mac paths.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The US launch announcement listed a $129 single-user license, a $199 five-user single-residence Family Pack, and a $9.95 shipping-and-handling Up-To-Date package for qualifying Macs bought on or after April 12. These are historical launch terms, not current purchase guidance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated Tiger launch announcement to the existing audited April 29, 2005 public event. Preview detail is used only where the final launch announcement confirms that the named capability shipped.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2005/04/12Apple-to-Ship-Mac-OS-X-Tiger-on-April-29/",
+              "locator": "Pricing & Availability; US launch terms"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:05:12Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

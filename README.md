@@ -1,172 +1,290 @@
-# Beta Cadence
+# Version Record
 
-Next.js site for browsing Apple operating-system beta, release candidate, and
-public release dates, plus history-based forecast ranges. Release data is
-managed in Sanity Studio and rendered on Vercel with incremental static
-regeneration.
+Version Record is an independent, source-backed software release archive. It
+records release families, versions, channel appearances, verified builds,
+release notes, community-observed changes, citations, corrections, and
+historical release data.
 
-Production: <https://www.betacadence.com/>
+Apple operating systems are the first and only implemented catalog. Public
+URLs are vendor-qualified now so Apple links remain stable when another
+catalog is added. Supporting a future Tesla, Rivian, or other software track
+will still require a vendor-specific schema/normalization adapter and public
+route implementation; it is not enabled by adding Sanity records alone.
+
+Intended production URL: <https://www.versionrecord.com/>
+
+## How the site is built
+
+The application is Next.js 16 with Sanity as its editorial CMS and Vercel as
+its intended host.
+
+- Sanity owns editable release content: platforms, release families, versions,
+  release events, builds, changes, articles, sources, audits, and corrections.
+  The current informational and policy pages remain code-backed; their reserved
+  schemas are hidden from Studio until a frontend renderer is connected.
+- The audited local chronology remains the regression oracle for the historical
+  Apple timeline and forecast engine.
+- Existing `releaseVersion.milestones` remain readable during migration.
+  First-class `releaseEvent` documents replace only the linked legacy
+  milestone; unmatched history stays visible throughout a partial migration.
+  New releases use events as their sole chronology source.
+- A release appearance and a build are different records. Developer beta,
+  public beta, RC, and public availability stay separate even when evidence
+  shows that they share a build.
+- Forecasts and timeline analytics are supporting views; the source-backed
+  release record is the primary product.
+
+The editor is available at `/studio/` in local and deployed environments.
+Routine release articles and citations can be added there without opening a
+code editor after the schemas have been deployed.
 
 ## Local development
 
-Use Node.js 24, then install dependencies and start the development server:
+Use Node.js 24:
 
 ```sh
 npm ci
+cp .env.local.example .env.local
 npm run dev
 ```
 
-The public site runs at <http://localhost:3000/> and the authenticated editor
-runs at <http://localhost:3000/studio/>.
+The site runs at <http://localhost:3000/> and Studio at
+<http://localhost:3000/studio/>.
 
-Copy `.env.local.example` to `.env.local` when you need a Sanity write token,
-dormant GA4 testing, ad-account verification, a public contact address, or a
-different deployment URL. Vercel Web Analytics does not require a local
-environment variable.
-
-## Content updates
-
-The audited local chronology is rebuilt and validated separately from Sanity:
+Required public Sanity settings are:
 
 ```sh
-npm run data:build
+NEXT_PUBLIC_SANITY_PROJECT_ID=lh3yswzu
+NEXT_PUBLIC_SANITY_DATASET=production
+CANONICAL_SITE_URL=https://www.versionrecord.com
+```
+
+## Public URL hierarchy
+
+```text
+/apple/                                      vendor catalog
+/apple/ios/                                  platform archive
+/apple/ios/26/                               release-family index
+/apple/ios/26.3                              version overview
+/apple/ios/27.0/beta-4/                      appearance alias
+/apple/ios/26.3/build/23d123/                 canonical build record
+```
+
+Old Apple routes such as `/ios/26.3` permanently redirect to the
+vendor-qualified URL. Legacy production hosts redirect directly to the new
+canonical domain.
+
+An appearance and its verified build remain separate public records: a beta or
+release candidate can carry event-specific notes while the build page records
+the binary identity and every channel in which it appeared. Citation-pending
+build and event pages remain `noindex`; they enter the sitemap only after the
+Sanity review, provenance, citation, and substantive-content gates all pass.
+Version and release-family pages are deliberately always indexable: they
+publish the audited first-party chronology with a visible provenance state
+even before editorial layers are complete, and they are the primary landing
+surface for release-date queries.
+
+## Adding a release in Sanity
+
+The normal editorial workflow is:
+
+1. Create or select the platform, release train, and `releaseVersion`.
+2. Add each channel appearance as a `releaseEvent`, including its date,
+   audience/applicability, availability state, and sources.
+3. Create a `releaseBuild` only when source evidence verifies the build number.
+   Link one or more events to it.
+4. Add reusable changes to the change library, then attach a release-specific
+   occurrence to the event or build. Mark it as delta, inherited, or cumulative
+   and as documented, partially documented, undocumented, or unknown.
+5. Write an original overview or article. Add citations to material claims and
+   page-level sources. Do not paste a publisher’s article or full release notes.
+6. Move the editorial review to Approved. Enable indexing only when the schema
+   accepts the source and content gates.
+
+Do not duplicate new appearances in `releaseVersion.milestones`. That field is
+an optional compatibility container for the audited pre-event chronology; the
+read layer automatically projects first-class events into forecasts, timeline
+statistics, family summaries, and calendar exports.
+
+Version pages work before all editorial layers are complete: the audited
+chronology is shown with a visible legacy provenance state until first-class
+events and citations are published.
+
+## Sources, citations, and reuse
+
+`source` documents store a canonical URL, publisher, author, source class,
+publication/access dates, archive URL, link status, and reuse basis. Portable
+Text supports inline source annotations that render as numbered superscripts
+with an accessible reference ledger.
+
+The archive publishes an original synthesis of facts. Brief quotations are
+allowed only when exact wording matters and remain attributed. Licensed or
+owned editorial images require alt text, a rights basis, a rights holder, and
+an internal rights note before Sanity accepts them.
+
+Structured factual exports are CC0. Editorial prose, third-party prose, images,
+logos, and trademarks are not included in that license.
+
+## Parallel release research
+
+Research-only agents should follow
+[`docs/research-agent-handoff.md`](docs/research-agent-handoff.md). It defines
+disjoint assignment files, evidence custody, source and copyright standards,
+and the machine-readable findings packet expected by later page-building
+agents. Research agents must not write to production Sanity.
+
+## Audited chronology and migration
+
+Build and validate the frozen chronology with:
+
+```sh
+npm run data:build:check
 npm run data:validate
 npm test
 ```
 
-`original-apple-note` is the human-reviewed iOS/iPadOS chronology.
-`data:build` overlays those detailed records on the broader supplemental
-dataset, validates dates, lifecycle states, public-release consistency,
-release-train years, and duplicate identities, then writes
-`scripts/seed-data.json`. The old merge path was removed because it replaced
-detailed iOS histories with Public-only records.
+Plan the milestone-to-event migration locally:
 
 ```sh
-npm run sanity:seed
+npm run migration:events:plan
+npm run migration:events:plan -- --input snapshot.ndjson --json
 ```
 
-After `npx sanity login`, the seed command adds missing records from
-`scripts/seed-data.json`. It never overwrites records that friends have edited
-in Studio and never deletes CMS-only records. Routine updates should be made
-through `/studio`; published changes are reflected on the public site within
-about 60 seconds.
+The planner:
 
-Verified historical corrections use a separate dry-run-first reconciler:
+- has no Sanity client and no production write path;
+- rejects production/apply flags and snapshots containing drafts;
+- preserves exact milestone projection and unknown CMS fields;
+- emits stable event identities and a separately validated schema-ready
+  projection;
+- never infers builds from free-text notes;
+- places note-derived build, device, withdrawal, channel, and rename facts in
+  a human-review queue.
+
+The audited seed currently projects to 410 versions and 1,979 events with exact
+legacy parity. No event/build migration is applied automatically.
+
+The historical reconciler remains available as a guarded chronology tool:
 
 ```sh
 npm run sanity:history:check
-npm run sanity:history:apply -- --confirm-production --plan-sha <dry-run-sha>
 ```
 
-The reconciler is restricted to the production project and dataset, refuses
-open drafts and duplicates, caps its mutation scope, preserves unrelated CMS
-fields and source metadata, uses revision-guarded patches, writes a recoverable
-before-snapshot, and verifies the committed records. Deploy lifecycle-aware
-application code before applying a plan that marks a never-shipped cycle as
-Superseded.
+Its apply command remains intentionally explicit and revision-guarded. Do not
+run it as part of ordinary editorial work.
 
-The launch-only 2026 reconciliation is guarded and dry-run-first:
+The checked-in launch cohort has its own source-backed ingestion plan:
 
 ```sh
-npm run sanity:backfill:2026:check
-npm run sanity:backfill:2026:apply -- --confirm-production
+npm run sanity:launch:check
 ```
 
-It adds the official 26.4–26.6 cycles and active 27.0 records. The apply
-command will update only the known one-milestone 26.4 placeholders; it stops
-instead of overwriting later Studio edits. Do not use it for routine updates.
+That command is read-only against Sanity. It produces an exact plan hash and
+private rollback snapshot under `.migration-artifacts/`, validates the
+serialized transaction against the Content Lake payload ceiling, and prints
+the manual production-apply command. See
+[`scripts/LAUNCH_CONTENT_INGESTION.md`](scripts/LAUNCH_CONTENT_INGESTION.md)
+for the guarded review and apply workflow.
 
-## Deployment
+The old general seed and launch-only 2026 backfill are retired. Their scripts
+now fail loudly because they omit current lifecycle/provenance fields or target
+obsolete placeholder records.
 
-Pushing `main` deploys the application through the connected Vercel project.
-GitHub Pages is intentionally not used, so the Vercel production URL remains
-the single canonical host.
+## Search and research exports
 
-Set `CANONICAL_SITE_URL` to the custom production domain before attaching
-one, and add that exact origin to Sanity CORS with credentials enabled.
-Optional Google and Bing verification values are documented in
-`.env.local.example`.
+The public search page uses a generated, allowlisted index of releases, events,
+builds, and changes:
 
-## Search Console and analytics
+```text
+/search/
+/api/search-index/
+```
 
-Prefer a Google Search Console **Domain property** for `betacadence.com`.
-Verify it by adding Google's TXT record in Cloudflare DNS; that covers the apex,
-`www`, and any future subdomains. The optional
-`NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` value supports a URL-prefix property if
-needed. After verification, submit
-`https://www.betacadence.com/sitemap.xml`.
+Versioned structured exports are available as JSON and CSV:
 
-Vercel Web Analytics is the active primary traffic measurement service. It
-collects cookieless, aggregated page views on public routes and requires no
-analytics environment variable. The `/studio` editor is excluded. The
-`beforeSend` hook also strips URL query strings and fragments before an
-analytics event is sent, so those values do not appear in the Web Analytics
-payload.
+```text
+/exports/v1/manifest.json
+/exports/v1/README.txt
+/exports/v1/releases.{json,csv}
+/exports/v1/events.{json,csv}
+/exports/v1/builds.{json,csv}
+/exports/v1/changes.{json,csv}
+/exports/v1/occurrences.{json,csv}
+/exports/v1/citations.{json,csv}
+/exports/v1/provenance.{json,csv}
+```
 
-The Google Analytics 4 implementation remains in the codebase for possible
-future use, but production should leave `NEXT_PUBLIC_GA_MEASUREMENT_ID` unset.
-In that state, no Google tag or Google consent interface loads and no site data
-is sent to Google Analytics.
+Private moderation records and internal editorial fields are excluded by
+explicit allowlists.
 
-If GA4 is deliberately reactivated later, create a web data stream for the
-canonical production domain and set `NEXT_PUBLIC_GA_MEASUREMENT_ID` to its `G-`
-measurement ID. Google Consent Mode v2 defaults analytics and advertising
-storage to denied, the Google tag is not loaded until a visitor explicitly
-accepts analytics, and the visitor's choice is stored locally.
-Advertising-related consent remains denied even after analytics is accepted.
-Direct Studio loads never initialize the tag or show the consent prompt. The
-public site does not link into Studio, and an unexpected client-side transition
-to `/studio` forces a full reload into a tag-free editor page.
+## Private submissions and feed candidates
 
-Before adding the measurement ID, configure GA4 user-level event retention to
-two months and set `SITE_CONTACT_EMAIL` plus `SITE_OPERATOR_NAME`. Production
-builds intentionally fail if analytics is enabled without that public contact
-and controller information.
-
-Client components can import `sendAnalyticsEvent` from `@/lib/analytics` to
-send one of the typed product events. Event parameters must never contain
-names, email addresses, free-form user text, or other personal data.
-
-The dormant GA4 integration has typed product events wired for release views,
-forecast views, calendar exports, release-notes clicks, and timeline platform
-filters. Those events are sent only if GA4 is reactivated and the visitor
-accepts analytics. Standard GA4 page-view and engagement measurement would
-likewise begin only after consent.
-
-## Forecast validation
-
-Run the deterministic forecast checks after changing cohort selection,
-percentiles, confidence rules, or freshness safeguards:
+Community reports are accepted at `/submit/`. The API refuses to write unless
+all of these are configured:
 
 ```sh
+SANITY_MODERATION_PROJECT_ID=lh3yswzu
+SANITY_MODERATION_DATASET=moderation
+SANITY_MODERATION_WRITE_TOKEN=...
+```
+
+The moderation dataset must be private and must not be the public content
+dataset. Use a dedicated least-privilege token. The public Studio intentionally
+hides and disables moderation documents; reviewers need a separate Studio
+workspace pointed at the private dataset and reusing the moderation schemas.
+
+Submission intake is JSON-only and includes size limits, validation,
+same-origin checks, a honeypot, rate limiting, optional Turnstile, privacy
+attestations, and a 180-day deletion/anonymization date. Nothing is published
+automatically.
+
+The daily feed-candidate cron additionally requires:
+
+```sh
+CRON_SECRET=...
+FEED_INGEST_ALLOWED_HOSTS=developer.apple.com,support.apple.com
+```
+
+A feed must be enabled in the private Sanity dataset and its exact hostname
+must appear in the server allowlist. The worker rejects private/reserved network
+destinations and redirects, bounds responses, stores metadata only, and creates
+`publicationBlocked: true` candidates for human review.
+
+## Verification
+
+Before deployment:
+
+```sh
+npm run lint
+npm test
+npm run data:build:check
+npm run data:validate
 npm run forecast:validate
+npm run build
 ```
 
-The public methodology is at `/methodology/`. Forecasts automatically pause
-when source data is stale or a historical window has already elapsed.
+Sanity schema validation:
 
-## Advertising readiness
+```sh
+npx sanity schema validate
+```
 
-Advertising is intentionally inactive. About, methodology, sources/editorial
-policy, privacy, contact/corrections, and the unofficial-Apple disclosure must
-remain accessible before applying to AdSense.
+## Deployment and domain cutover
 
-When AdSense issues a publisher ID and the site is being added for review, set
-`GOOGLE_ADSENSE_PUBLISHER_ID` to `pub-` (or `ca-pub-`) followed by the
-16-digit ID. That publishes the AdSense account-verification meta tag and a
-valid `/ads.txt`; it does not load advertising scripts or render ad units.
-`SITE_CONTACT_EMAIL` and `SITE_OPERATOR_NAME` must also be configured. Ads
-must remain disabled until site approval and the consent/privacy work below are
-complete.
+Pushing the connected branch deploys through Vercel. Set
+`CANONICAL_SITE_URL=https://www.versionrecord.com`, attach the domain, add the exact
+origin to Sanity CORS with credentials enabled, and submit
+`https://www.versionrecord.com/sitemap.xml` to search engines only after the domain
+is serving the new build.
 
-Before ads are enabled:
+The implementation does not itself create datasets, change DNS, attach the
+domain, run production migrations, or deploy. Those operational steps are
+separate and should follow a reviewed dry run. The retired domain is
+intentionally not part of the public redirect set.
 
-- confirm the Vercel plan permits commercial use;
-- use a Google-certified consent management platform where required;
-- update `/privacy/` with the live advertising behavior;
-- keep ad storage and personalization disabled until the applicable consent;
-- label placements and avoid layouts that could be mistaken for navigation or
-  editorial content.
+Vercel Web Analytics remains the active cookieless traffic service. Google
+Analytics and advertising remain disabled unless their documented environment,
+consent, privacy, and operator-identity requirements are deliberately enabled.
 
-The custom analytics preference panel is not an advertising CMP and must not be
-treated as one.
+Version Record is independent and is not affiliated with or endorsed by Apple
+Inc. Apple product and platform names are trademarks of Apple Inc.

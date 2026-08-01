@@ -6,10 +6,10 @@ import { useRef } from "react";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
-  { href: "/", label: "Release index" },
+  { href: "/apple/", label: "Apple archive" },
+  { href: "/search/", label: "Search" },
   { href: "/forecasts/", label: "Forecasts" },
   { href: "/timeline/", label: "Timeline" },
-  { href: "/analytics/", label: "Analytics" },
 ];
 
 export function Header() {
@@ -19,20 +19,17 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <Link href="/" className="brand-lockup" aria-label="Beta Cadence home">
+        <Link href="/" className="brand-lockup" aria-label="Version Record home">
           <span className="brand-wordmark">
-            <strong>Beta Cadence</strong>
+            <strong>Version Record</strong>
           </span>
-          <span className="brand-descriptor">Apple OS release index</span>
+          <span className="brand-descriptor">Independent release archive</span>
         </Link>
 
         <div className="site-header__actions">
           <nav aria-label="Primary navigation" className="primary-nav">
             {navItems.map((item) => {
-              const isActive =
-                item.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(item.href);
+              const isActive = pathname.startsWith(item.href);
 
               return (
                 <Link
@@ -56,10 +53,7 @@ export function Header() {
             </summary>
             <nav aria-label="Mobile navigation" className="mobile-nav__panel">
               {navItems.map((item) => {
-                const isActive =
-                  item.href === "/"
-                    ? pathname === "/"
-                    : pathname.startsWith(item.href);
+                const isActive = pathname.startsWith(item.href);
 
                 return (
                   <Link

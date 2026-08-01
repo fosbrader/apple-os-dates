@@ -1,0 +1,473 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-developer-gap-priority",
+  "reviewedAt": "2026-07-31T05:09:20Z",
+  "reviewer": "codex-independent-review",
+  "independentOfResearcher": true,
+  "verdict": "passWithMandatorySourceQualificationsAndTwoResolvedConflicts",
+  "summary": {
+    "candidateCount": 17,
+    "chronologyApprovedCandidateCount": 17,
+    "approvedWithQualificationCount": 7,
+    "blockedCandidateCount": 0,
+    "cycleCount": 4,
+    "positiveIdentityCount": 17,
+    "negativeNextOrdinalTestCount": 4,
+    "preservedConflictCountReviewed": 2,
+    "preservedConflictCountResolved": 2,
+    "packetLockCountReproduced": 103,
+    "packetLockFailureCount": 0,
+    "sourceCount": 42,
+    "candidateEvidenceReferenceCount": 35,
+    "freshProductionExactRouteMatchCount": 0,
+    "freshProductionExactVersionChannelOrdinalDateMatchCount": 0
+  },
+  "candidateVerdict": {
+    "chronologyApproved": [
+      "candidate:apple:ios:9.2.1:beta-1",
+      "candidate:apple:ios:9.2.1:beta-2",
+      "candidate:apple:ios:10.2.1:beta-1",
+      "candidate:apple:ios:10.2.1:beta-2",
+      "candidate:apple:ios:10.2.1:beta-3",
+      "candidate:apple:ios:10.2.1:beta-4",
+      "candidate:apple:ios:10.3.2:beta-1",
+      "candidate:apple:ios:10.3.2:beta-2",
+      "candidate:apple:ios:10.3.2:beta-3",
+      "candidate:apple:ios:10.3.2:beta-4",
+      "candidate:apple:ios:10.3.2:beta-5",
+      "candidate:apple:ios:10.3.3:beta-1",
+      "candidate:apple:ios:10.3.3:beta-2",
+      "candidate:apple:ios:10.3.3:beta-3",
+      "candidate:apple:ios:10.3.3:beta-4",
+      "candidate:apple:ios:10.3.3:beta-5",
+      "candidate:apple:ios:10.3.3:beta-6"
+    ],
+    "chronologyApprovedWithQualification": [
+      "candidate:apple:ios:10.2.1:beta-1",
+      "candidate:apple:ios:10.2.1:beta-2",
+      "candidate:apple:ios:10.3.2:beta-1",
+      "candidate:apple:ios:10.3.2:beta-2",
+      "candidate:apple:ios:10.3.2:beta-3",
+      "candidate:apple:ios:10.3.3:beta-1",
+      "candidate:apple:ios:10.3.3:beta-2"
+    ],
+    "blocked": []
+  },
+  "checks": {
+    "packetJsonParsed": true,
+    "candidateIdsUnique": true,
+    "candidateIdentityKeysUnique": true,
+    "candidateSchemaValid": true,
+    "allCandidateChannelsAreDeveloperBeta": true,
+    "allCandidateOrdinalsExplicit": true,
+    "allCandidateEvidenceReferencesResolve": true,
+    "candidateEvidenceReferencesInspected": 35,
+    "uniqueCandidateSourcesInspected": 35,
+    "everyCandidateHasAtLeastTwoIndependentPublisherFamilies": true,
+    "allSourceLocatorsInspected": true,
+    "allPacketLocksReproduced": true,
+    "packetLocksReproduced": 103,
+    "packetLockFailures": 0,
+    "allRawEvidenceArtifactsReproduced": true,
+    "allSelectedEvidenceArtifactsReproduced": true,
+    "allLocatorMarkersReproduced": true,
+    "fullSequencesInspected": 4,
+    "negativeNextOrdinalBoundariesInspected": 4,
+    "missingOrdinalsWithinObservedRanges": 0,
+    "duplicateOrdinalsWithinObservedRanges": 0,
+    "withdrawalsOrRespinsObserved": 0,
+    "preservedConflictsInspected": 2,
+    "freshProductionQueryPerformed": true,
+    "freshExactRouteMatches": 0,
+    "freshExactVersionChannelOrdinalDateMatches": 0,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "packetIntegrity": {
+    "frozenAt": "2026-07-31T05:06:38Z",
+    "lockManifestPath": "research-handoffs/beta-chronology-gap/developer-gap-priority/packet-locks.json",
+    "lockManifestBytes": 23610,
+    "lockManifestSha256": "ed353c8f3db5e3a0fa7cb110aa9585c6c7a6473d60353391a10ab5fb44b60df0",
+    "lockManifestSelfExcluded": true,
+    "lockCount": 103,
+    "lockedBytes": 10029716,
+    "lockFailures": [],
+    "lockComposition": {
+      "packetAndResearchMaterialFiles": 17,
+      "rawEvidenceFiles": 42,
+      "selectedEvidenceFiles": 42,
+      "generatedEvidenceManifests": 2
+    },
+    "currentValidationLock": {
+      "bytes": 1204,
+      "sha256": "eda1297d659b73882bdc7214f9b12c57ab6d2c2838206190a2a7ddafe76826e9",
+      "reproduced": true
+    }
+  },
+  "sourceAndEvidenceIntegrity": {
+    "sourceCount": 42,
+    "retainedReinspectedSourceCount": 28,
+    "newlyCapturedSourceCount": 14,
+    "rawEvidenceFileCount": 42,
+    "rawEvidenceBytes": 9630269,
+    "rawByteAndSha256Matches": 42,
+    "rawFailures": [],
+    "selectedEvidenceFileCount": 42,
+    "selectedEvidenceBytes": 79051,
+    "selectedByteAndSha256Matches": 42,
+    "selectedFailures": [],
+    "locatorMarkersTested": 42,
+    "locatorMarkerFailures": [],
+    "candidateEvidenceReferenceCount": 35,
+    "candidateEvidenceReferencesResolved": 35,
+    "uniqueCandidateSourceCount": 35,
+    "cycleClosureOrConflictSourceCount": 7,
+    "minimumIndependentPublisherFamiliesPerCandidate": 2,
+    "maximumIndependentPublisherFamiliesPerCandidate": 3,
+    "candidateLineageFailures": []
+  },
+  "productionRecheck": {
+    "capturedAt": "2026-07-31T05:05:56.251Z",
+    "perspective": "published",
+    "useCdn": false,
+    "projectId": "lh3yswzu",
+    "dataset": "production",
+    "expectedIdentityCount": 17,
+    "productionCounts": {
+      "totalReleaseEvents": 2068,
+      "iosDeveloperBetaEventsAllVersions": 446,
+      "scopedReleaseEvents": 4,
+      "scopedDeveloperBetaEvents": 0
+    },
+    "zeroExactRouteCheckCount": 17,
+    "nonzeroExactRouteChecks": [],
+    "zeroExactVersionChannelOrdinalDateCheckCount": 17,
+    "nonzeroExactVersionChannelOrdinalDateChecks": [],
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "stableIdsAllocated": false
+  },
+  "candidateReviews": [
+    {
+      "candidateId": "candidate:apple:ios:9.2.1:beta-1",
+      "version": "9.2.1",
+      "channel": "developerBeta",
+      "sequence": 1,
+      "routeAlias": "beta-1",
+      "appearanceDate": "2015-12-16",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "9to5Mac"],
+      "finding": "Two independent contemporary reports explicitly identify the first iOS 9.2.1 beta for developers on December 16."
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.2.1:beta-2",
+      "version": "9.2.1",
+      "channel": "developerBeta",
+      "sequence": 2,
+      "routeAlias": "beta-2",
+      "appearanceDate": "2016-01-04",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "9to5Mac"],
+      "finding": "Two independent contemporary reports explicitly identify iOS 9.2.1 Beta 2 for developers on January 4."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:beta-1",
+      "version": "10.2.1",
+      "channel": "developerBeta",
+      "sequence": 1,
+      "routeAlias": "beta-1",
+      "appearanceDate": "2016-12-14",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iDownloadBlog", "MacRumors"],
+      "finding": "iDownloadBlog directly identifies developer Beta 1 on December 14; MacRumors independently reports the first public beta on December 15 as one day after the developer seed.",
+      "requiredQualificationIds": ["following-day-developer-date-corroboration"]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:beta-2",
+      "version": "10.2.1",
+      "channel": "developerBeta",
+      "sequence": 2,
+      "routeAlias": "beta-2",
+      "appearanceDate": "2016-12-20",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "AppleInsider"],
+      "finding": "Two independent December 21 public-beta reports explicitly identify the second developer seed as having occurred the prior day, December 20.",
+      "requiredQualificationIds": ["following-day-developer-date-corroboration"]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:beta-3",
+      "version": "10.2.1",
+      "channel": "developerBeta",
+      "sequence": 3,
+      "routeAlias": "beta-3",
+      "appearanceDate": "2017-01-09",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "OS X Daily"],
+      "finding": "Both same-day reports explicitly identify iOS 10.2.1 Beta 3, with MacRumors explicitly identifying the developer audience."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.2.1:beta-4",
+      "version": "10.2.1",
+      "channel": "developerBeta",
+      "sequence": 4,
+      "routeAlias": "beta-4",
+      "appearanceDate": "2017-01-12",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "AppleInsider"],
+      "finding": "Both same-day reports explicitly identify iOS 10.2.1 Beta 4 for developers."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:beta-1",
+      "version": "10.3.2",
+      "channel": "developerBeta",
+      "sequence": 1,
+      "routeAlias": "beta-1",
+      "appearanceDate": "2017-03-28",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iDownloadBlog", "MacRumors"],
+      "finding": "iDownloadBlog directly identifies the first developer beta on March 28; MacRumors independently reports on March 29 that the build was first released to developers on March 28.",
+      "requiredQualificationIds": ["following-day-developer-date-corroboration"]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:beta-2",
+      "version": "10.3.2",
+      "channel": "developerBeta",
+      "sequence": 2,
+      "routeAlias": "beta-2",
+      "appearanceDate": "2017-04-10",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iDownloadBlog", "MacRumors"],
+      "finding": "iDownloadBlog directly identifies developer Beta 2 on April 10; MacRumors independently says the April 11 public beta followed the second developer beta by one day.",
+      "requiredQualificationIds": ["following-day-developer-date-corroboration"]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:beta-3",
+      "version": "10.3.2",
+      "channel": "developerBeta",
+      "sequence": 3,
+      "routeAlias": "beta-3",
+      "appearanceDate": "2017-04-17",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "9to5Mac"],
+      "finding": "MacRumors directly identifies developer Beta 3 on April 17; 9to5Mac independently says the April 18 public beta followed the third developer version by one day.",
+      "requiredQualificationIds": ["following-day-developer-date-corroboration"]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:beta-4",
+      "version": "10.3.2",
+      "channel": "developerBeta",
+      "sequence": 4,
+      "routeAlias": "beta-4",
+      "appearanceDate": "2017-04-24",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "iDownloadBlog"],
+      "finding": "Two independent same-day reports explicitly identify iOS 10.3.2 Beta 4 for developers on April 24."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.2:beta-5",
+      "version": "10.3.2",
+      "channel": "developerBeta",
+      "sequence": 5,
+      "routeAlias": "beta-5",
+      "appearanceDate": "2017-04-27",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["MacRumors", "Macerkopf", "iDownloadBlog"],
+      "finding": "Three independent contemporary reports explicitly identify developer Beta 5 on April 27, outweighing the later MacRumors final-release sentence that incorrectly says the cycle had four betas.",
+      "conflictIds": ["conflict-ios1032-final-four-versus-beta-five"]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:beta-1",
+      "version": "10.3.3",
+      "channel": "developerBeta",
+      "sequence": 1,
+      "routeAlias": "beta-1",
+      "appearanceDate": "2017-05-16",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iDownloadBlog", "9to5Mac"],
+      "finding": "iDownloadBlog directly identifies the first developer beta on May 16; 9to5Mac independently reports on May 17 that the first developer beta shipped the prior day.",
+      "requiredQualificationIds": ["following-day-developer-date-corroboration"]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:beta-2",
+      "version": "10.3.3",
+      "channel": "developerBeta",
+      "sequence": 2,
+      "routeAlias": "beta-2",
+      "appearanceDate": "2017-05-30",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "iDownloadBlog"],
+      "finding": "MacRumors explicitly identifies developer Beta 2 on May 30. iDownloadBlog independently identifies the same version, ordinal, and date, but its retained prose does not literally state the developer audience.",
+      "requiredQualificationIds": ["ios1033-beta2-channel-source-precision"]
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:beta-3",
+      "version": "10.3.3",
+      "channel": "developerBeta",
+      "sequence": 3,
+      "routeAlias": "beta-3",
+      "appearanceDate": "2017-06-13",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "Macerkopf"],
+      "finding": "Both same-day reports explicitly identify iOS 10.3.3 Beta 3 for developers on June 13."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:beta-4",
+      "version": "10.3.3",
+      "channel": "developerBeta",
+      "sequence": 4,
+      "routeAlias": "beta-4",
+      "appearanceDate": "2017-06-22",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "zollotech"],
+      "finding": "MacRumors and zollotech independently identify iOS 10.3.3 Beta 4 for developers on June 22."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:beta-5",
+      "version": "10.3.3",
+      "channel": "developerBeta",
+      "sequence": 5,
+      "routeAlias": "beta-5",
+      "appearanceDate": "2017-06-28",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "iDownloadBlog"],
+      "finding": "Two independent same-day reports explicitly identify iOS 10.3.3 Beta 5 for developers on June 28."
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.3.3:beta-6",
+      "version": "10.3.3",
+      "channel": "developerBeta",
+      "sequence": 6,
+      "routeAlias": "beta-6",
+      "appearanceDate": "2017-07-05",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["MacRumors", "The Mac Observer"],
+      "finding": "Both same-day reports explicitly identify iOS 10.3.3 Beta 6 for developers on July 5."
+    }
+  ],
+  "sequenceBoundaryReviews": [
+    {
+      "version": "9.2.1",
+      "stableReleaseDate": "2016-01-19",
+      "observedDeveloperSequence": [1, 2],
+      "missingOrdinalsWithinObservedRange": [],
+      "duplicateOrdinals": [],
+      "testedNextOrdinal": 3,
+      "nextOrdinalDisposition": "doNotCreate",
+      "withdrawalOrRespinsObserved": false,
+      "finding": "Direct evidence supports Betas 1 and 2. AppleInsider explicitly reports two developer betas before stable release; MacRumors' total-of-three wording aggregates developers and public testers and does not establish developer Beta 3."
+    },
+    {
+      "version": "10.2.1",
+      "stableReleaseDate": "2017-01-23",
+      "observedDeveloperSequence": [1, 2, 3, 4],
+      "missingOrdinalsWithinObservedRange": [],
+      "duplicateOrdinals": [],
+      "testedNextOrdinal": 5,
+      "nextOrdinalDisposition": "doNotCreate",
+      "withdrawalOrRespinsObserved": false,
+      "finding": "The four candidate identities form a consecutive sequence, and the stable-release source explicitly closes the cycle at four betas."
+    },
+    {
+      "version": "10.3.2",
+      "stableReleaseDate": "2017-05-15",
+      "observedDeveloperSequence": [1, 2, 3, 4, 5],
+      "missingOrdinalsWithinObservedRange": [],
+      "duplicateOrdinals": [],
+      "testedNextOrdinal": 6,
+      "nextOrdinalDisposition": "doNotCreate",
+      "withdrawalOrRespinsObserved": false,
+      "finding": "Three direct reports establish Beta 5. Forbes' five-beta stable-release count supports the boundary; the MacRumors four-beta sentence is preserved as an error and does not establish Beta 6."
+    },
+    {
+      "version": "10.3.3",
+      "stableReleaseDate": "2017-07-19",
+      "observedDeveloperSequence": [1, 2, 3, 4, 5, 6],
+      "missingOrdinalsWithinObservedRange": [],
+      "duplicateOrdinals": [],
+      "testedNextOrdinal": 7,
+      "nextOrdinalDisposition": "doNotCreate",
+      "withdrawalOrRespinsObserved": false,
+      "finding": "The six candidate identities form a consecutive sequence, and two independent stable-release sources explicitly close the cycle at six betas."
+    }
+  ],
+  "conflictAdjudications": [
+    {
+      "conflictId": "conflict-ios921-cross-channel-aggregate-three",
+      "disposition": "resolvedNonBlocking",
+      "finding": "MacRumors says developers and public testers received a total of three betas; that is a cross-channel aggregate, not an explicit developer Beta 3. Two-source direct evidence supports developer Betas 1 and 2, and AppleInsider explicitly states there were two developer betas.",
+      "requiredHandling": "Keep developer Betas 1 and 2 only. Never derive developer Beta 3 from the aggregate sentence."
+    },
+    {
+      "conflictId": "conflict-ios1032-final-four-versus-beta-five",
+      "disposition": "resolvedNonBlocking",
+      "finding": "MacRumors' later four-beta aggregate conflicts with its own direct Beta 5 article, Macerkopf's Beta 5 article, iDownloadBlog's Beta 5 article, and Forbes' five-beta final count. The direct identity evidence controls.",
+      "requiredHandling": "Keep Beta 5 and classify the four-beta aggregate as a reporting error. Do not use either aggregate count to infer a Beta 6."
+    }
+  ],
+  "mandatoryQualifications": [
+    {
+      "qualificationId": "following-day-developer-date-corroboration",
+      "candidateIds": [
+        "candidate:apple:ios:10.2.1:beta-1",
+        "candidate:apple:ios:10.2.1:beta-2",
+        "candidate:apple:ios:10.3.2:beta-1",
+        "candidate:apple:ios:10.3.2:beta-2",
+        "candidate:apple:ios:10.3.2:beta-3",
+        "candidate:apple:ios:10.3.3:beta-1"
+      ],
+      "requiredHandling": "The following-day public-beta reports are evidence only for the explicit prior-day developer seed they describe. Do not replace the developer appearance date with the public article's publication date and do not merge the two channels."
+    },
+    {
+      "qualificationId": "ios1033-beta2-channel-source-precision",
+      "candidateIds": [
+        "candidate:apple:ios:10.3.3:beta-2"
+      ],
+      "requiredHandling": "Use MacRumors for the explicit developer channel. Use iDownloadBlog only for the independently reported iOS 10.3.3 second-beta identity and May 30 date; its retained prose does not literally say developer."
+    },
+    {
+      "qualificationId": "aggregate-count-not-identity-evidence",
+      "candidateIds": [
+        "candidate:apple:ios:9.2.1:beta-1",
+        "candidate:apple:ios:9.2.1:beta-2",
+        "candidate:apple:ios:10.3.2:beta-1",
+        "candidate:apple:ios:10.3.2:beta-2",
+        "candidate:apple:ios:10.3.2:beta-3",
+        "candidate:apple:ios:10.3.2:beta-4",
+        "candidate:apple:ios:10.3.2:beta-5"
+      ],
+      "requiredHandling": "Use final-release aggregate counts only for sequence-boundary context. They cannot create an ordinal, alter a directly evidenced identity, or collapse developer and public channels."
+    }
+  ],
+  "authorization": {
+    "chronologyApprovedCandidateCount": 17,
+    "chronologyApprovalScope": "Exact iOS version, developerBeta channel, ordinal, route alias, and appearance date only, subject to the mandatory source qualifications.",
+    "blockedCandidateCount": 0,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "productionIdAllocationAllowed": false,
+    "pageBuildAllowed": false,
+    "deploymentAllowed": false
+  },
+  "requiredNextGate": "Before any separately authorized mutation, retain every source-role qualification and repeat the exact published/no-CDN production overlap query."
+}

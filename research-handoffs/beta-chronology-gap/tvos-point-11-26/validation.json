@@ -1,0 +1,64 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-tvos-point-11-26",
+  "validatedAt": "2026-07-31T08:25:52.658Z",
+  "status": "passed",
+  "errorCount": 0,
+  "warningCount": 0,
+  "errors": [],
+  "warnings": [],
+  "checks": {
+    "scope": {
+      "targetParentCount": 32,
+      "assignmentParentCount": 32,
+      "coverageRowCount": 32,
+      "productionParentChecks": 32
+    },
+    "coverage": {
+      "sourceBytes": 662195,
+      "sourceSha256": "d2f80717f8afb25f5db652c7c7dc0d1b0be11384e4a498b9ca00f55c599e12bd",
+      "expectedBytes": 662195,
+      "expectedSha256": "d2f80717f8afb25f5db652c7c7dc0d1b0be11384e4a498b9ca00f55c599e12bd"
+    },
+    "production": {
+      "capturedAt": "2026-07-31T08:21:10.805Z",
+      "perspective": "published",
+      "useCdn": false,
+      "totalReleaseEvents": 2068,
+      "scopedReleaseEvents": 189,
+      "scopedPublicBetaEvents": 0,
+      "exactRouteMatches": 0,
+      "exactFullMatches": 0
+    },
+    "sources": {
+      "specs": 177,
+      "ledger": 177,
+      "rawLocks": 177,
+      "fetchSuccesses": 177,
+      "fetchFailures": 0
+    },
+    "chronology": {
+      "parentCount": 32,
+      "exactAppearanceCount": 116,
+      "supportableCount": 73,
+      "blockedCount": 43,
+      "negativeFindingCount": 15,
+      "conflictCount": 5
+    },
+    "candidateSchemaValid": true
+  },
+  "independentReview": {
+    "required": true,
+    "complete": false,
+    "authoredByThisResearcher": false,
+    "requiredPath": "research-handoffs/beta-chronology-gap/tvos-point-11-26/independent-review.json"
+  },
+  "safety": {
+    "chronologyApprovalGranted": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationAuthorized": false,
+    "deploymentPerformed": false
+  }
+}

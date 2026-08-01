@@ -16,6 +16,15 @@ import {
   latestDate,
   siteName,
 } from "@/lib/site";
+import {
+  applePlatformPath,
+  releaseFamilyPath,
+  releaseVersionPath,
+} from "@/lib/release-routes";
+import {
+  appleReleaseDatasetId,
+  factualDataset,
+} from "@/lib/structured-data";
 
 function latestPublicVersion(
   versions: ReleaseVersionSummary[],
@@ -46,9 +55,13 @@ function platformDescription(
   return `${base} Latest indexed public release: ${name} ${latest.version} on ${formatDate(latest.publicReleaseDate)}.`;
 }
 
+/**
+ * Legacy tree: every /:platform/ URL 308-redirects to /apple/:platform/
+ * before filesystem routing, so nothing is prerendered here. The /apple/
+ * route declares its own static params and re-exports this page.
+ */
 export async function generateStaticParams() {
-  const platforms = await getAllPlatforms();
-  return platforms.map((p) => ({ platform: p.slug.current }));
+  return [];
 }
 
 export async function generateMetadata({
@@ -75,7 +88,7 @@ export async function generateMetadata({
   return createPageMetadata({
     title: `${platform.name} Beta & Release Dates`,
     description: platformDescription(platform.name, versions),
-    path: `/${encodeURIComponent(slug)}/`,
+    path: applePlatformPath(slug),
   });
 }
 
@@ -107,8 +120,9 @@ export default async function PlatformPage({
     isActiveRelease,
   ).length;
   const description = platformDescription(platform.name, versions);
-  const canonical = absoluteUrl(`/${encodeURIComponent(slug)}/`);
+  const canonical = absoluteUrl(applePlatformPath(slug));
   const collectionId = `${canonical}#collection`;
+  const datasetId = `${canonical}#release-dataset`;
   const itemListId = `${canonical}#versions`;
   const breadcrumbId = `${canonical}#breadcrumb`;
   const dateModified = latestDate(versions.map((version) => version.updatedAt));
@@ -124,7 +138,7 @@ export default async function PlatformPage({
         dateModified,
         isPartOf: { "@id": `${absoluteUrl("/")}#website` },
         breadcrumb: { "@id": breadcrumbId },
-        mainEntity: { "@id": itemListId },
+        mainEntity: { "@id": datasetId },
       },
       {
         "@type": "BreadcrumbList",
@@ -139,11 +153,43 @@ export default async function PlatformPage({
           {
             "@type": "ListItem",
             position: 2,
+            name: "Apple",
+            item: absoluteUrl("/apple/"),
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
             name: platform.name,
             item: canonical,
           },
         ],
       },
+      factualDataset({
+        "@id": datasetId,
+        url: canonical,
+        name: `${platform.name} Release History`,
+        description: `Factual structured records of ${platform.name} versions, beta and release-candidate appearances, builds, and public-release dates.`,
+        dateModified,
+        isAccessibleForFree: true,
+        isPartOf: appleReleaseDatasetId(),
+        hasPart: versions.map(
+          (version) =>
+            `${absoluteUrl(releaseVersionPath(slug, version.version))}#release-dataset`,
+        ),
+        includedInDataCatalog: {
+          "@type": "DataCatalog",
+          name: "Version Record",
+          url: absoluteUrl("/apple/"),
+        },
+        variableMeasured: [
+          "Software version",
+          "Release appearance",
+          "Release date",
+          "Build number",
+        ],
+        measurementTechnique:
+          "Release data compiled from official documentation, public announcements, archived material, and attributed contemporaneous sources.",
+      }),
       {
         "@type": "ItemList",
         "@id": itemListId,
@@ -153,26 +199,21 @@ export default async function PlatformPage({
         itemListElement: versions.map((version, index) => {
           const releaseStatus = getReleaseStatus(version);
           const versionUrl = absoluteUrl(
-            `/${encodeURIComponent(slug)}/${encodeURIComponent(version.version)}`
+            releaseVersionPath(slug, version.version),
           );
 
           return {
             "@type": "ListItem",
             position: index + 1,
-            item: {
-              "@type": "Dataset",
-              "@id": `${versionUrl}#release-dataset`,
-              url: versionUrl,
-              name:
-                releaseStatus === "superseded"
-                  ? `${platform.name} ${version.version} Beta History`
-                  : `${platform.name} ${version.version} Release Dates`,
-              description:
-                releaseStatus === "superseded"
-                  ? `Recorded beta and release-candidate milestones for ${platform.name} ${version.version}, which was superseded before public release.`
-                  : `Beta, release candidate, and public release milestones for ${platform.name} ${version.version}.`,
-              dateModified: version.updatedAt,
-            },
+            url: versionUrl,
+            name:
+              releaseStatus === "superseded"
+                ? `${platform.name} ${version.version} Beta History`
+                : `${platform.name} ${version.version} Release Dates`,
+            description:
+              releaseStatus === "superseded"
+                ? `Recorded beta and release-candidate milestones for ${platform.name} ${version.version}, which was superseded before public release.`
+                : `Beta, release candidate, and public release milestones for ${platform.name} ${version.version}.`,
           };
         }),
       },
@@ -189,6 +230,8 @@ export default async function PlatformPage({
           style={{ "--delay": 0 } as React.CSSProperties}
         >
           <Link href="/">Overview</Link>
+          <span aria-hidden="true">/</span>
+          <Link href="/apple/">Apple</Link>
           <span aria-hidden="true">/</span>
           <span className="text-[var(--text)]" aria-current="page">
             {platform.name}
@@ -249,7 +292,9 @@ export default async function PlatformPage({
                   <div>
                     <p className="section-kicker">Major versions</p>
                     <h2>
-                      {platform.name} {majorVersion}
+                      <Link href={releaseFamilyPath(slug, majorVersion)}>
+                        {platform.name} {majorVersion}
+                      </Link>
                     </h2>
                   </div>
                   <p>
@@ -295,7 +340,10 @@ export default async function PlatformPage({
                           <tr key={`${version._id}-${index}`}>
                             <td data-label="Version">
                               <Link
-                                href={`/${slug}/${version.version}`}
+                                href={releaseVersionPath(
+                                  slug,
+                                  version.version,
+                                )}
                                 className="inline-flex items-center gap-2 group"
                               >
                                 <span className="font-mono font-semibold group-hover:text-[var(--accent)] transition-colors">
@@ -363,6 +411,15 @@ export default async function PlatformPage({
                     </tbody>
                   </table>
                 </div>
+                <p className="mt-5">
+                  <Link
+                    className="text-link"
+                    href={releaseFamilyPath(slug, majorVersion)}
+                  >
+                    Open the {platform.name} {majorVersion} family index{" "}
+                    <span aria-hidden="true">→</span>
+                  </Link>
+                </p>
                 <p className="horizontal-scroll__hint horizontal-scroll__hint--wide">
                   <span aria-hidden="true">↔</span>
                   Scroll horizontally to see the full release record.

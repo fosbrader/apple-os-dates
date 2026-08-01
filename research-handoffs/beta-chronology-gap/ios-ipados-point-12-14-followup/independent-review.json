@@ -1,0 +1,1120 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-ipados-point-12-14-followup",
+  "status": "completedPartialApproval",
+  "reviewedAt": "2026-07-31T07:11:57.193Z",
+  "reviewer": "codex-independent-review-ios-ipados-point-12-14-followup",
+  "independentOfResearcher": true,
+  "verdict": "approved37CandidatesBlocked3ForMissingSecondExactPublicOrdinalLineage",
+  "summary": {
+    "candidateCount": 40,
+    "chronologyApprovedCandidateCount": 37,
+    "blockedCandidateCount": 3,
+    "identityCorrectionCount": 0,
+    "supersessionCount": 0,
+    "retainedParentExclusionCount": 45,
+    "freshExactProductionMatchCount": 0,
+    "finding": "Thirty-seven mappings have two genuinely independent lineages proving the exact platform, version, publicBeta channel, displayed public ordinal, and America/Los_Angeles appearance date. Three mappings have only one such lineage because OS X Daily numbers a beta made available to both developer and public testers without displaying a public-beta ordinal."
+  },
+  "reasonCodeDefinitions": {
+    "APPROVED_EXACT_TWO_LINEAGES": "Two independent publisher families prove every required identity field at claim level.",
+    "BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING": "Only one independent lineage displays the required public-beta ordinal.",
+    "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC": "A developer ordinal plus a generic public-availability update does not prove the public ordinal.",
+    "EXCLUDE_BETA_NUMBER_WITH_PUBLIC_AUDIENCE": "A generic beta number offered to public and developer testers does not display the public-program ordinal.",
+    "EXCLUDE_LOCAL_DATE_MISMATCH": "A next-day local calendar row does not independently prove the earlier America/Los_Angeles date.",
+    "EXCLUDE_UNNUMBERED_PUBLIC_BETA": "An unnumbered public-beta report does not establish Public Beta 1.",
+    "QUALIFY_DATED_HEADING_ONLY": "Only the exact dated heading is selected; copied or mismatched body text is excluded.",
+    "QUALIFY_CONFLICTING_DATE": "A conflicting date remains provenance and is not selected.",
+    "QUALIFY_VISIBLE_LOCAL_TIMESTAMP": "A visible article timestamp is used where the structured publishedAt field is absent."
+  },
+  "candidateDisposition": {
+    "chronologyApprovedCandidateIds": [
+      "candidate:apple:ios:12.1:public-beta-2",
+      "candidate:apple:ios:12.1:public-beta-3",
+      "candidate:apple:ios:12.1:public-beta-4",
+      "candidate:apple:ios:12.1.1:public-beta-2",
+      "candidate:apple:ios:12.1.1:public-beta-3",
+      "candidate:apple:ios:12.1.3:public-beta-2",
+      "candidate:apple:ios:12.1.3:public-beta-3",
+      "candidate:apple:ios:12.2:public-beta-5",
+      "candidate:apple:ios:12.2:public-beta-6",
+      "candidate:apple:ios:12.3:public-beta-4",
+      "candidate:apple:ios:12.3:public-beta-5",
+      "candidate:apple:ios:12.3:public-beta-6",
+      "candidate:apple:ios:12.4:public-beta-3",
+      "candidate:apple:ios:13.2:public-beta-3",
+      "candidate:apple:ios:13.2:public-beta-4",
+      "candidate:apple:ios:13.4:public-beta-5",
+      "candidate:apple:ios:13.5:public-beta-2",
+      "candidate:apple:ios:13.5:public-beta-3",
+      "candidate:apple:ios:13.7:public-beta-1",
+      "candidate:apple:ios:14.5:public-beta-4",
+      "candidate:apple:ios:14.5:public-beta-7",
+      "candidate:apple:ios:14.5:public-beta-8",
+      "candidate:apple:ios:14.6:public-beta-3",
+      "candidate:apple:ios:14.7:public-beta-4",
+      "candidate:apple:ipados:13.1:public-beta-2",
+      "candidate:apple:ipados:13.2:public-beta-3",
+      "candidate:apple:ipados:13.2:public-beta-4",
+      "candidate:apple:ipados:13.4:public-beta-5",
+      "candidate:apple:ipados:13.5:public-beta-2",
+      "candidate:apple:ipados:13.5:public-beta-3",
+      "candidate:apple:ipados:13.7:public-beta-1",
+      "candidate:apple:ipados:14.4:public-beta-2",
+      "candidate:apple:ipados:14.5:public-beta-4",
+      "candidate:apple:ipados:14.5:public-beta-5",
+      "candidate:apple:ipados:14.5:public-beta-7",
+      "candidate:apple:ipados:14.5:public-beta-8",
+      "candidate:apple:ipados:14.6:public-beta-3"
+    ],
+    "blockedCandidateIds": [
+      "candidate:apple:ios:14.3:public-beta-3",
+      "candidate:apple:ipados:14.3:public-beta-3",
+      "candidate:apple:ipados:14.5:public-beta-6"
+    ]
+  },
+  "reviewedArtifactHashes": [
+    {"path": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/assignment.json", "sha256": "ca25635a6546082e02d19a9607eef6908110b4886839ca102a8d0ad23c3d5865"},
+    {"path": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/mappings.json", "sha256": "69166041bbf4fcde9e6786274589ebb324a1af19ea2b6479f244259571f02324"},
+    {"path": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/conflicts.json", "sha256": "bc7f32fb84c94b560edb6f5aaa5585316a15412b2f19782a1b508a5b439fa437"},
+    {"path": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/sources.json", "sha256": "5bd1ac49bad44fae622accb450152807399d2cffceb42594ae7735820dd444ec"},
+    {"path": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/production-snapshot.json", "sha256": "ba7c7e2f42823c9ade1983eae3a2f2a2380285f634412d012f9b80fc9ade4836"},
+    {"path": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/validation.json", "sha256": "a2a79189ebc09b0bb3a8200223cf629967d83fd6ff97ebeec0a3d943a03d16ef"},
+    {"path": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/report.md", "sha256": "52b1cced3a1ebbc997a79abb22537573d432a90c9d43f2e748c7fc5bb35b023c"},
+    {"path": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/self-review.json", "sha256": "cddfb8315352db3ebaa36c0cd789bc24111119d323cec576cc3a8e2579b3f1fa"}
+  ],
+  "lockedFileVerification": {
+    "packetLocksPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/packet-locks.json",
+    "packetLocksSha256": "b36ac15f0824e281e1a439a9da9e73bed47cae931bd20ef144458d05b584af52",
+    "declaredMaterialFileCount": 49,
+    "verifiedMaterialFileCount": 49,
+    "verifiedMaterialBytes": 3530768,
+    "packetByteFailures": 0,
+    "packetSha256Failures": 0,
+    "rawEvidenceLocksPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/raw-evidence-locks.json",
+    "rawEvidenceLocksSha256": "6f0b0ef6f78dd5314097cbf9a9228c867860b6b0557e3d6b165ed81c1a358d34",
+    "declaredRawEvidenceCount": 30,
+    "verifiedRawEvidenceCount": 30,
+    "verifiedRawEvidenceBytes": 2584334,
+    "rawByteFailures": 0,
+    "rawSha256Failures": 0,
+    "selectedTextHashCount": 30,
+    "selectedTextHashesVerified": 30,
+    "claimEvidenceHashCount": 43,
+    "claimEvidenceHashesVerified": 43,
+    "selectedOrClaimHashFailures": 0,
+    "failures": []
+  },
+  "parentIntegrityVerification": {
+    "parentValidationPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14/validation.json",
+    "parentValidationSha256": "9931c268a09ae90fbb99d77e1f002acf4e4759cf3d9c53dcc994383b05b28991",
+    "parentPacketLocksPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14/packet-locks.json",
+    "parentPacketLocksSha256": "b376e29c15b0f125f9ad80d33dd15a728bd3a45341dfe0811ac147ac8c752696",
+    "parentIndependentReviewPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14/independent-review.json",
+    "parentIndependentReviewSha256": "869aa88d8092a794b92f2bfd6916057c2a93c4abadbcbd13ee15e11955fab5cd",
+    "allPinnedParentHashesMatch": true
+  },
+  "checks": {
+    "allFortyMappingsInspected": true,
+    "allFortyCandidateIdsUnique": true,
+    "allRecommendedIdentitiesUnchanged": true,
+    "allParentAndSupplementRefsResolve": true,
+    "allFortyProductionIdentitiesRechecked": true,
+    "allFortyParentMappingsExist": true,
+    "retainedParentExclusionsInspected": 45,
+    "supplementSourceCount": 30,
+    "supplementClaimEvidenceCount": 43,
+    "parentSelectedSourceCount": 17,
+    "publicOrdinalsNotDerivedFromDeveloperOrdinals": true,
+    "genericPublicAvailabilityNotTreatedAsOrdinalProof": true,
+    "pairedPlatformTextNotInferredAcrossPlatforms": true,
+    "mechanicalLocatorMatchNotTreatedAsClaimProof": true,
+    "localCalendarDatesNormalizedToAmericaLosAngeles": true,
+    "terminalBoundariesPreserved": true,
+    "freshProductionQueryPerformed": true,
+    "freshProductionPerspective": "published",
+    "freshProductionUseCdn": false,
+    "sanityMutationPerformed": false,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "productionRecheck": {
+    "queryScriptPath": "research-handoffs/beta-chronology-gap/ios-ipados-point-12-14-followup/independent-review-query.ts",
+    "queriedAt": "2026-07-31T07:11:57.193Z",
+    "perspective": "published",
+    "useCdn": false,
+    "projectId": "lh3yswzu",
+    "dataset": "production",
+    "candidateCount": 40,
+    "targetVersionCount": 23,
+    "targetParentsFound": 23,
+    "missingParentIds": [],
+    "totalReleaseEvents": 2068,
+    "platformPublicBetaCounts": {"iOS": 10, "iPadOS": 10},
+    "scopedReleaseEvents": 134,
+    "scopedPublicBetaEvents": 2,
+    "exactRouteIdentityMatchCount": 0,
+    "exactFullCandidateMatchCount": 0,
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "finding": "All 23 parent documents exist. The two scoped public-beta events are previously known iOS/iPadOS 14.5 Public Beta 3 records, not any of the 40 follow-up targets. No target route identity or full identity matches production."
+  },
+  "sourceAndLineageAudit": {
+    "mappingEvidenceReferenceCount": 80,
+    "retainedParentSelectedSourceCount": 17,
+    "retainedParentSelectedPublisherFamilies": ["9to5Mac", "OS X Daily", "Purudo.net", "iCulture", "iMore", "iTopnews"],
+    "supplementSelectedSourceCount": 30,
+    "supplementSelectedPublisherFamilies": ["9to5Mac", "Gori.me", "Kobonemi", "Purudo.net", "Taisyo / 気になる、記になる…"],
+    "independentPublisherFamilyFailuresAmongApprovedCandidates": 0,
+    "unresolvedEvidenceRefs": [],
+    "finding": "Source-family independence was evaluated per candidate. Shared pages that explicitly contain separate iOS and iPadOS claim fragments may support both platform identities, but one platform was never inferred merely from mention of the other."
+  },
+  "candidateReviews": [
+    {
+      "candidateId": "candidate:apple:ios:12.1:public-beta-2",
+      "platform": "iOS",
+      "version": "12.1",
+      "appearanceDate": "2018-10-02",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit iOS 12.1 Publieke Beta 2 row gives October 2."},
+        {"sourceId": "kobonemi-ios-12-1-pb2", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names iOS 12.1 Public Beta 2; its timestamp normalizes to October 2 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1", "reason": "Selected for exact platform, version, public ordinal, and date."},
+        {"sourceId": "kobonemi-ios-12-1-pb2", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-ios-12-1-pb2", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "The numeral is the developer ordinal and the public update is generic."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.1:public-beta-3",
+      "platform": "iOS",
+      "version": "12.1",
+      "appearanceDate": "2018-10-09",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit iOS 12.1 Publieke Beta 3 row gives October 9."},
+        {"sourceId": "purudo-ios-12-1-pb3", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names iOS 12.1 Public Beta 3 and normalizes to October 9 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1", "reason": "Selected for the exact parent-packet claim."},
+        {"sourceId": "purudo-ios-12-1-pb3", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-ios-12-1-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "The numeral is the developer ordinal and the public update is generic."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.1:public-beta-4",
+      "platform": "iOS",
+      "version": "12.1",
+      "appearanceDate": "2018-10-15",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit iOS 12.1 Publieke Beta 4 row gives October 15."},
+        {"sourceId": "kobonemi-ios-12-1-pb4", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names iOS 12.1 Public Beta 4 and normalizes to October 15 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1", "reason": "Selected for the exact parent-packet claim."},
+        {"sourceId": "kobonemi-ios-12-1-pb4", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-ios-12-1-pb4", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "The numeral is the developer ordinal and the public update is generic."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.1.1:public-beta-2",
+      "platform": "iOS",
+      "version": "12.1.1",
+      "appearanceDate": "2018-11-07",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "imore-ios12-history", "packetScope": "parent", "publisherFamily": "iMore", "reason": "Its dated update explicitly says iOS 12.1.1 Public Beta 2 on November 7."},
+        {"sourceId": "kobonemi-ios-12-1-1-pb2", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names Public Beta 2 and normalizes to November 7 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "imore-ios12-history", "reason": "Selected for its exact dated history entry."},
+        {"sourceId": "kobonemi-ios-12-1-1-pb2", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1-1", "reasonCode": "EXCLUDE_LOCAL_DATE_MISMATCH", "reason": "Its local row is one calendar day later."},
+        {"sourceId": "mr-ios-12-1-1-pb2", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.1.1:public-beta-3",
+      "platform": "iOS",
+      "version": "12.1.1",
+      "appearanceDate": "2018-11-15",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "imore-ios12-history", "packetScope": "parent", "publisherFamily": "iMore", "reason": "Its dated update explicitly says iOS 12.1.1 Public Beta 3 on November 15."},
+        {"sourceId": "kobonemi-ios-12-1-1-pb3", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names Public Beta 3 and normalizes to November 15 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "imore-ios12-history", "reason": "Selected for its exact dated history entry."},
+        {"sourceId": "kobonemi-ios-12-1-1-pb3", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1-1", "reasonCode": "EXCLUDE_LOCAL_DATE_MISMATCH", "reason": "Its local row is one calendar day later."},
+        {"sourceId": "mr-ios-12-1-1-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.1.3:public-beta-2",
+      "platform": "iOS",
+      "version": "12.1.3",
+      "appearanceDate": "2018-12-19",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1-3", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit iOS 12.1.3 Publieke Beta 2 row gives December 19."},
+        {"sourceId": "kobonemi-ios-12-1-3-pb2", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names Public Beta 2 and normalizes to December 19 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1-3", "reason": "Selected for the exact identity and date."},
+        {"sourceId": "kobonemi-ios-12-1-3-pb2", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-ios-12-1-3-pb2", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes; Public Beta 1 remains attached to iOS 12.1.2 and must not be synthesized for 12.1.3."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.1.3:public-beta-3",
+      "platform": "iOS",
+      "version": "12.1.3",
+      "appearanceDate": "2019-01-07",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1-3", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit '(publieke) beta 3' row gives January 7."},
+        {"sourceId": "kobonemi-ios-12-1-3-pb3", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names Public Beta 3 and normalizes to January 7 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-1-3", "reason": "Selected for the explicit public-sequence row and date."},
+        {"sourceId": "kobonemi-ios-12-1-3-pb3", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-ios-12-1-3-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes; Public Beta 1 remains attached to iOS 12.1.2."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.2:public-beta-5",
+      "platform": "iOS",
+      "version": "12.2",
+      "appearanceDate": "2019-03-11",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-2", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit Public Beta 5 row gives March 11."},
+        {"sourceId": "kobonemi-ios-12-2-pb5", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names Public Beta 5 and normalizes to March 11 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-2", "reason": "Selected for the exact parent-packet claim."},
+        {"sourceId": "kobonemi-ios-12-2-pb5", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-ios-12-2-pb5", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.2:public-beta-6",
+      "platform": "iOS",
+      "version": "12.2",
+      "appearanceDate": "2019-03-18",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-2", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit Public Beta 6 row gives March 18."},
+        {"sourceId": "purudo-ios-12-2-pb6", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names Public Beta 6 and normalizes to March 18 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-2", "reason": "Selected for the exact parent-packet claim."},
+        {"sourceId": "purudo-ios-12-2-pb6", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-ios-12-2-pb6", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.3:public-beta-4",
+      "platform": "iOS",
+      "version": "12.3",
+      "appearanceDate": "2019-04-29",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "imore-ios12-history", "packetScope": "parent", "publisherFamily": "iMore", "reason": "Its dated heading explicitly says Public Beta 4 on April 29."},
+        {"sourceId": "kobonemi-ios-12-3-pb4", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names Public Beta 4 and normalizes to April 29 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "imore-ios12-history", "reason": "Selected for its exact dated update heading."},
+        {"sourceId": "kobonemi-ios-12-3-pb4", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-3", "reasonCode": "EXCLUDE_LOCAL_DATE_MISMATCH", "reason": "Its Public Beta 4 row uses April 30 local time."},
+        {"sourceId": "mr-ios-12-3-pb4", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.3:public-beta-5",
+      "platform": "iOS",
+      "version": "12.3",
+      "appearanceDate": "2019-05-07",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-3", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit Public Beta 5 row gives May 7."},
+        {"sourceId": "kobonemi-ios-12-3-pb5", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names Public Beta 5 and normalizes to May 7 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-3", "reason": "Selected for the exact parent-packet claim."},
+        {"sourceId": "kobonemi-ios-12-3-pb5", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-ios-12-3-pb5", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.3:public-beta-6",
+      "platform": "iOS",
+      "version": "12.3",
+      "appearanceDate": "2019-05-10",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-3", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit Public Beta 6 row gives May 10."},
+        {"sourceId": "purudo-ios-12-3-pb6", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names Public Beta 6 and normalizes to May 10 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-3", "reason": "Selected for the exact parent-packet claim."},
+        {"sourceId": "purudo-ios-12-3-pb6", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-ios-12-3-pb6", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:12.4:public-beta-3",
+      "platform": "iOS",
+      "version": "12.4",
+      "appearanceDate": "2019-05-28",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-4", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit Public Beta 3 row gives May 28."},
+        {"sourceId": "kobonemi-ios-12-4-pb3", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names Public Beta 3 and normalizes to May 28 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-12-4", "reason": "Selected for the exact parent-packet claim."},
+        {"sourceId": "kobonemi-ios-12-4-pb3", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-ios-12-4-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes; the parent packet's documented no-Public-Beta-1 skip remains unchanged."
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.2:public-beta-3",
+      "platform": "iOS",
+      "version": "13.2",
+      "appearanceDate": "2019-10-16",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-2", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit iOS 13.2 Public Beta 3 row gives October 16."},
+        {"sourceId": "9to5mac-ios-ipados-13-2-pb3", "packetScope": "followup", "publisherFamily": "9to5Mac", "reason": "The article explicitly names iOS 13.2 public beta 3 on October 16."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-2", "reason": "Selected for the exact parent-packet claim."},
+        {"sourceId": "9to5mac-ios-ipados-13-2-pb3", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-2-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.2:public-beta-4",
+      "platform": "iOS",
+      "version": "13.2",
+      "appearanceDate": "2019-10-23",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-2", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit iOS 13.2 Public Beta 4 section is dated October 23."},
+        {"sourceId": "9to5mac-ios-ipados-13-2-pb4", "packetScope": "followup", "publisherFamily": "9to5Mac", "reason": "The article explicitly names iOS 13.2 public beta 4 on October 23."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-2", "reason": "Selected for the exact parent-packet claim."},
+        {"sourceId": "9to5mac-ios-ipados-13-2-pb4", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-2-pb4", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.4:public-beta-5",
+      "platform": "iOS",
+      "version": "13.4",
+      "appearanceDate": "2020-03-10",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-4", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its iOS Public Beta 5 row gives March 10."},
+        {"sourceId": "purudo-ios-ipados-13-4-pb5", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names iOS 13.4 Public Beta 5 and normalizes to March 10 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-4", "reason": "Selected for the exact parent-packet claim."},
+        {"sourceId": "purudo-ios-ipados-13-4-pb5", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-4-pb5", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.5:public-beta-2",
+      "platform": "iOS",
+      "version": "13.5",
+      "appearanceDate": "2020-04-29",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-5", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its iOS Public Beta 2 row gives April 29."},
+        {"sourceId": "kobonemi-ios-ipados-13-5-pb2", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The article explicitly names iOS and iPadOS 13.5 Public Beta 2 and normalizes to April 29 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-5", "reason": "Selected for the exact iOS identity."},
+        {"sourceId": "kobonemi-ios-ipados-13-5-pb2", "reason": "Selected for its exact iOS claim fragment and date."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-5-pb2", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes; the earlier beta retained its iOS 13.4.5 label, so no iOS 13.5 Public Beta 1 is synthesized."
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.5:public-beta-3",
+      "platform": "iOS",
+      "version": "13.5",
+      "appearanceDate": "2020-05-06",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-5", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its iOS Public Beta 3 row gives May 6."},
+        {"sourceId": "purudo-ios-ipados-13-5-pb3", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names iOS 13.5 Public Beta 3 and normalizes to May 6 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-5", "reason": "Selected for the exact iOS identity."},
+        {"sourceId": "purudo-ios-ipados-13-5-pb3", "reason": "Selected for its exact iOS claim fragment and date."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-5-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes; the legacy-label boundary remains unchanged."
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.7:public-beta-1",
+      "platform": "iOS",
+      "version": "13.7",
+      "appearanceDate": "2020-08-26",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "purudo-ios-ipados-13-7-pb1", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its article explicitly names iOS 13.7 Public Beta 1 and normalizes to August 26 Pacific."},
+        {"sourceId": "gori-ios-ipados-13-7-pb1", "packetScope": "followup", "publisherFamily": "Gori.me", "reason": "Its headline explicitly applies Public Beta 1 to iOS/iPadOS 13.7 on August 26 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "purudo-ios-ipados-13-7-pb1", "reason": "Selected for the exact iOS claim fragment and date."},
+        {"sourceId": "gori-ios-ipados-13-7-pb1", "reason": "Selected as the second independent exact lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-7-pb1", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."},
+        {"sourceId": "corriente-13-7-pb1", "reasonCode": "EXCLUDE_UNNUMBERED_PUBLIC_BETA", "reason": "It establishes only an unnumbered public beta."}
+      ],
+      "finding": "Two new exact supplement lineages establish the unchanged candidate identity."
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.3:public-beta-3",
+      "platform": "iOS",
+      "version": "14.3",
+      "appearanceDate": "2020-12-02",
+      "disposition": "blocked",
+      "reasonCodes": ["BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING", "EXCLUDE_BETA_NUMBER_WITH_PUBLIC_AUDIENCE"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "osxd-ios-ipados-14-3-pb3", "packetScope": "parent", "publisherFamily": "OS X Daily", "reason": "The article establishes iOS 14.3 beta 3 availability to both public and developer testers on December 2, but not a displayed public ordinal."},
+        {"sourceId": "purudo-ios-ipados-14-3-pb3", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names iOS 14.3 Public Beta 3 and normalizes to December 2 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "purudo-ios-ipados-14-3-pb3", "reason": "Selected as the only exact public-ordinal lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "osxd-ios-ipados-14-3-pb3", "reasonCode": "EXCLUDE_BETA_NUMBER_WITH_PUBLIC_AUDIENCE", "reason": "The text says third beta versions and then says both public and developer betas are available; it never displays Public Beta 3 or third public beta."},
+        {"sourceId": "mr-14-3-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "Only Purudo proves the exact public ordinal; the candidate remains blocked."
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.5:public-beta-4",
+      "platform": "iOS",
+      "version": "14.5",
+      "appearanceDate": "2021-03-15",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit iOS Public Beta 4 row gives March 15."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb4", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names iOS 14.5 Public Beta 4 and normalizes to March 15 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "reason": "Selected for the exact iOS row."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb4", "reason": "Selected for its exact iOS claim fragment and date."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-14-5-pb4", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes; the existing Public Beta 3 production record remains outside the creation set."
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.5:public-beta-7",
+      "platform": "iOS",
+      "version": "14.5",
+      "appearanceDate": "2021-04-07",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit iOS Public Beta 7 row gives April 7."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb7", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names iOS 14.5 Public Beta 7 and normalizes to April 7 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "reason": "Selected for the exact iOS row."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb7", "reason": "Selected for its exact iOS claim fragment and date."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-14-5-pb7", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes; paired iPadOS support is separately proven in each selected source."
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.5:public-beta-8",
+      "platform": "iOS",
+      "version": "14.5",
+      "appearanceDate": "2021-04-13",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit iOS Public Beta 8 row gives April 13."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb8", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names iOS 14.5 Public Beta 8 and normalizes to April 13 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "reason": "Selected for the exact iOS row."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb8", "reason": "Selected for its exact iOS claim fragment and date."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-14-5-pb8", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes and remains the terminal numbered public beta before final release."
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.6:public-beta-3",
+      "platform": "iOS",
+      "version": "14.6",
+      "appearanceDate": "2021-05-10",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES", "QUALIFY_CONFLICTING_DATE"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-6", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its explicit iOS Public Beta 3 row gives May 10."},
+        {"sourceId": "purudo-ios-ipados-14-6-pb3", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names iOS 14.6 Public Beta 3 and is timestamped May 10 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-6", "reason": "Selected for the exact iOS identity and May 10 date."},
+        {"sourceId": "purudo-ios-ipados-14-6-pb3", "reason": "Selected as independent exact May 10 corroboration."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-14-6-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."},
+        {"sourceId": "imore-ios14-history", "reasonCode": "QUALIFY_CONFLICTING_DATE", "reason": "Its dated heading says May 11 and conflicts with the two exact May 10 lineages."}
+      ],
+      "finding": "The follow-up resolves the prior blocker at May 10; preserve iMore's May 11 disagreement as provenance."
+    },
+    {
+      "candidateId": "candidate:apple:ios:14.7:public-beta-4",
+      "platform": "iOS",
+      "version": "14.7",
+      "appearanceDate": "2021-06-29",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES", "QUALIFY_DATED_HEADING_ONLY"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "imore-ios14-history", "packetScope": "parent", "publisherFamily": "iMore", "reason": "Its dated heading explicitly says iOS 14.7 Public Beta 4 on June 29."},
+        {"sourceId": "purudo-ios-ipados-14-7-pb4", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "The article explicitly names iOS 14.7 Public Beta 4 and normalizes to June 29 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "imore-ios14-history", "reason": "Only the exact June 29 heading is selected."},
+        {"sourceId": "purudo-ios-ipados-14-7-pb4", "reason": "Selected as the independent exact corroborating lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-7", "reasonCode": "EXCLUDE_LOCAL_DATE_MISMATCH", "reason": "Its rolling row uses the next-day local calendar date."},
+        {"sourceId": "imore-ios14-history", "reasonCode": "QUALIFY_DATED_HEADING_ONLY", "reason": "The copied body paragraph incorrectly says iOS 14.6 and is not selected."}
+      ],
+      "finding": "The exact heading plus Purudo establish the identity; the documented missing Public Beta 2 remains a preserved sequence gap."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.1:public-beta-2",
+      "platform": "iPadOS",
+      "version": "13.1",
+      "appearanceDate": "2019-09-04",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "9to5mac-13-1-pb2", "packetScope": "parent", "publisherFamily": "9to5Mac", "reason": "Its body explicitly says iPadOS 13.1 public beta 2 was released September 4."},
+        {"sourceId": "purudo-ios-ipados-13-1-pb2", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its article explicitly names iPadOS 13.1 Public Beta 2 on September 4 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "9to5mac-13-1-pb2", "reason": "Selected for the exact iPadOS body sentence, not the developer-beta headline."},
+        {"sourceId": "purudo-ios-ipados-13-1-pb2", "reason": "Selected for its separate exact iPadOS claim fragment."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-1-pb2", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes without inferring iPadOS from iOS."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.2:public-beta-3",
+      "platform": "iPadOS",
+      "version": "13.2",
+      "appearanceDate": "2019-10-16",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-2", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its separate iPadOS Public Beta 3 row gives October 16."},
+        {"sourceId": "9to5mac-ios-ipados-13-2-pb3", "packetScope": "followup", "publisherFamily": "9to5Mac", "reason": "The article explicitly names iPadOS 13.2 public beta 3 on October 16."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-2", "reason": "Selected for the separate exact iPadOS row."},
+        {"sourceId": "9to5mac-ios-ipados-13-2-pb3", "reason": "Selected for its exact combined sentence naming iPadOS."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-2-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.2:public-beta-4",
+      "platform": "iPadOS",
+      "version": "13.2",
+      "appearanceDate": "2019-10-23",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-2", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its separate iPadOS Public Beta 4 row gives October 23."},
+        {"sourceId": "9to5mac-ios-ipados-13-2-pb4", "packetScope": "followup", "publisherFamily": "9to5Mac", "reason": "The article explicitly names iPadOS 13.2 public beta 4 on October 23."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-2", "reason": "Selected for the separate exact iPadOS row."},
+        {"sourceId": "9to5mac-ios-ipados-13-2-pb4", "reason": "Selected for its exact combined sentence naming iPadOS."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-2-pb4", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.4:public-beta-5",
+      "platform": "iPadOS",
+      "version": "13.4",
+      "appearanceDate": "2020-03-10",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-4", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its separate iPadOS Public Beta 5 row gives March 10."},
+        {"sourceId": "purudo-ios-ipados-13-4-pb5", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its retained body claim separately names iPadOS 13.4 Public Beta 5 and normalizes to March 10 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-4", "reason": "Selected for the separate exact iPadOS row."},
+        {"sourceId": "purudo-ios-ipados-13-4-pb5", "reason": "Selected for the exact iPadOS body claim, not merely the iOS headline."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-4-pb5", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes without paired-platform inference."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.5:public-beta-2",
+      "platform": "iPadOS",
+      "version": "13.5",
+      "appearanceDate": "2020-04-29",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-5", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its separate iPadOS Public Beta 2 row gives April 29."},
+        {"sourceId": "kobonemi-ios-ipados-13-5-pb2", "packetScope": "followup", "publisherFamily": "Kobonemi", "reason": "The retained claim explicitly names iOS and iPadOS 13.5 Public Beta 2 and normalizes to April 29 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-5", "reason": "Selected for the separate exact iPadOS row."},
+        {"sourceId": "kobonemi-ios-ipados-13-5-pb2", "reason": "Selected for its explicit iPadOS claim."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-5-pb2", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes; the earlier beta retained its iPadOS 13.4.5 label, so no iPadOS 13.5 Public Beta 1 is synthesized."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.5:public-beta-3",
+      "platform": "iPadOS",
+      "version": "13.5",
+      "appearanceDate": "2020-05-06",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-5", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its separate iPadOS Public Beta 3 row gives May 6."},
+        {"sourceId": "purudo-ios-ipados-13-5-pb3", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its retained body claim separately names iPadOS 13.5 Public Beta 3 and normalizes to May 6 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-13-5", "reason": "Selected for the separate exact iPadOS row."},
+        {"sourceId": "purudo-ios-ipados-13-5-pb3", "reason": "Selected for the exact iPadOS body claim."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-5-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes; the legacy-label boundary remains unchanged."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:13.7:public-beta-1",
+      "platform": "iPadOS",
+      "version": "13.7",
+      "appearanceDate": "2020-08-26",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "purudo-ios-ipados-13-7-pb1", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its body separately names iPadOS 13.7 Public Beta 1 and normalizes to August 26 Pacific."},
+        {"sourceId": "gori-ios-ipados-13-7-pb1", "packetScope": "followup", "publisherFamily": "Gori.me", "reason": "Its headline explicitly applies Public Beta 1 to iOS/iPadOS 13.7 on August 26 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "purudo-ios-ipados-13-7-pb1", "reason": "Selected for the separate exact iPadOS claim fragment."},
+        {"sourceId": "gori-ios-ipados-13-7-pb1", "reason": "Selected as the second independent exact lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-13-7-pb1", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."},
+        {"sourceId": "corriente-13-7-pb1", "reasonCode": "EXCLUDE_UNNUMBERED_PUBLIC_BETA", "reason": "It establishes only an unnumbered public beta."}
+      ],
+      "finding": "Two exact supplement lineages establish the iPadOS identity independently of the paired iOS identity."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.3:public-beta-3",
+      "platform": "iPadOS",
+      "version": "14.3",
+      "appearanceDate": "2020-12-02",
+      "disposition": "blocked",
+      "reasonCodes": ["BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING", "EXCLUDE_BETA_NUMBER_WITH_PUBLIC_AUDIENCE"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "osxd-ios-ipados-14-3-pb3", "packetScope": "parent", "publisherFamily": "OS X Daily", "reason": "The article establishes iPadOS 14.3 beta 3 availability to both public and developer testers on December 2, but not a displayed public ordinal."},
+        {"sourceId": "purudo-ios-ipados-14-3-pb3", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its body separately and explicitly names iPadOS 14.3 Public Beta 3 and normalizes to December 2 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "purudo-ios-ipados-14-3-pb3", "reason": "Selected as the only exact iPadOS public-ordinal lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "osxd-ios-ipados-14-3-pb3", "reasonCode": "EXCLUDE_BETA_NUMBER_WITH_PUBLIC_AUDIENCE", "reason": "The text never displays iPadOS Public Beta 3 or third iPadOS public beta."},
+        {"sourceId": "mr-14-3-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "Only Purudo proves the exact iPadOS public ordinal; the candidate remains blocked."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.4:public-beta-2",
+      "platform": "iPadOS",
+      "version": "14.4",
+      "appearanceDate": "2021-01-13",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "purudo-ios-ipados-14-4-pb2", "packetScope": "parent", "publisherFamily": "Purudo.net", "reason": "Its body explicitly names iPadOS 14.4 Public Beta 2; the January 14 JST timestamp normalizes to January 13 Pacific."},
+        {"sourceId": "taisyo-ios-ipados-14-4-pb2", "packetScope": "followup", "publisherFamily": "Taisyo / 気になる、記になる…", "reason": "Its article explicitly names iPadOS 14.4 Public Beta 2 and likewise normalizes to January 13 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "purudo-ios-ipados-14-4-pb2", "reason": "Selected for the separate exact iPadOS body claim and normalized date."},
+        {"sourceId": "taisyo-ios-ipados-14-4-pb2", "reason": "Selected as an independent exact iPadOS lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-14-4-pb2", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The previous evidence gap is closed at January 13 Pacific."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.5:public-beta-4",
+      "platform": "iPadOS",
+      "version": "14.5",
+      "appearanceDate": "2021-03-15",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its separate iPadOS Public Beta 4 row gives March 15."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb4", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its body separately names iPadOS 14.5 Public Beta 4 and normalizes to March 15 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "reason": "Selected for the separate exact iPadOS row."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb4", "reason": "Selected for the exact iPadOS body claim."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-14-5-pb4", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes; the existing iPadOS Public Beta 3 production record remains outside the creation set."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.5:public-beta-5",
+      "platform": "iPadOS",
+      "version": "14.5",
+      "appearanceDate": "2021-03-23",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES", "QUALIFY_VISIBLE_LOCAL_TIMESTAMP"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "itopnews-ios-ipados-14-5-pb5", "packetScope": "parent", "publisherFamily": "iTopnews", "reason": "Its headline and article body explicitly name iPadOS 14.5 Public Beta 5; the visible 23.03.2021 21:07 timestamp establishes March 23."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb5", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its body separately names iPadOS 14.5 Public Beta 5 and normalizes to March 23 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "itopnews-ios-ipados-14-5-pb5", "reason": "Selected with its visible local article timestamp; structured publishedAt is null."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb5", "reason": "Selected as the independently timestamped exact iPadOS lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-14-5-pb5", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "Two exact lineages establish the identity; iTopnews's visible timestamp is a mandatory locator qualification."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.5:public-beta-6",
+      "platform": "iPadOS",
+      "version": "14.5",
+      "appearanceDate": "2021-03-31",
+      "disposition": "blocked",
+      "reasonCodes": ["BLOCK_SECOND_EXACT_PUBLIC_ORDINAL_MISSING", "EXCLUDE_BETA_NUMBER_WITH_PUBLIC_AUDIENCE"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "osxd-ios-ipados-14-5-pb6", "packetScope": "parent", "publisherFamily": "OS X Daily", "reason": "The article establishes iPadOS 14.5 beta 6 availability to both public and developer testers, but not a displayed public ordinal."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb6", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its body separately and explicitly names iPadOS 14.5 Public Beta 6 and normalizes to March 31 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "purudo-ios-ipados-14-5-pb6", "reason": "Selected as the only exact iPadOS public-ordinal lineage."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "osxd-ios-ipados-14-5-pb6", "reasonCode": "EXCLUDE_BETA_NUMBER_WITH_PUBLIC_AUDIENCE", "reason": "The text never displays iPadOS Public Beta 6 or sixth iPadOS public beta."},
+        {"sourceId": "mr-14-5-pb6", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "Only Purudo proves the exact iPadOS public ordinal; the candidate remains blocked."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.5:public-beta-7",
+      "platform": "iPadOS",
+      "version": "14.5",
+      "appearanceDate": "2021-04-07",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its separate iPadOS Public Beta 7 row gives April 7."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb7", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its body separately names iPadOS 14.5 Public Beta 7 and normalizes to April 7 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "reason": "Selected for the separate exact iPadOS row."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb7", "reason": "Selected for the exact iPadOS body claim."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-14-5-pb7", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The unchanged candidate identity passes."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.5:public-beta-8",
+      "platform": "iPadOS",
+      "version": "14.5",
+      "appearanceDate": "2021-04-13",
+      "disposition": "chronologyApproved",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its separate iPadOS Public Beta 8 row gives April 13."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb8", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its body separately names iPadOS 14.5 Public Beta 8 and normalizes to April 13 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-5", "reason": "Selected for the separate exact iPadOS row."},
+        {"sourceId": "purudo-ios-ipados-14-5-pb8", "reason": "Selected for the exact iPadOS body claim."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-14-5-pb8", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."}
+      ],
+      "finding": "The identity passes and remains the terminal numbered public beta before final release."
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.6:public-beta-3",
+      "platform": "iPadOS",
+      "version": "14.6",
+      "appearanceDate": "2021-05-10",
+      "disposition": "chronologyApprovedWithQualification",
+      "reasonCodes": ["APPROVED_EXACT_TWO_LINEAGES", "QUALIFY_CONFLICTING_DATE"],
+      "acceptedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-6", "packetScope": "parent", "publisherFamily": "iCulture", "reason": "Its separate iPadOS Public Beta 3 row gives May 10."},
+        {"sourceId": "purudo-ios-ipados-14-6-pb3", "packetScope": "followup", "publisherFamily": "Purudo.net", "reason": "Its body separately names iPadOS 14.6 Public Beta 3 and is timestamped May 10 Pacific."}
+      ],
+      "selectedEvidenceRefs": [
+        {"sourceId": "iculture-ios-14-6", "reason": "Selected for the exact iPadOS identity and May 10 date."},
+        {"sourceId": "purudo-ios-ipados-14-6-pb3", "reason": "Selected as independent exact iPadOS May 10 corroboration."}
+      ],
+      "excludedEvidenceRefs": [
+        {"sourceId": "mr-14-6-pb3", "reasonCode": "EXCLUDE_DEVELOPER_ORDINAL_GENERIC_PUBLIC", "reason": "Developer numbering plus generic public availability is insufficient."},
+        {"sourceId": "imore-ios14-history", "reasonCode": "QUALIFY_CONFLICTING_DATE", "reason": "Its iOS-oriented dated heading says May 11 and cannot override two exact iPadOS May 10 lineages."}
+      ],
+      "finding": "The follow-up resolves the prior blocker at May 10 while preserving the date disagreement."
+    }
+  ],
+  "conflictAndExclusionReviews": [
+    {
+      "reviewId": "parent-exclusions",
+      "disposition": "preservedWithThreeAdditionalClaimLevelExclusions",
+      "finding": "All 45 retained parent exclusions remain excluded. OS X Daily is additionally excluded as exact public-ordinal proof for iOS 14.3 PB3, iPadOS 14.3 PB3, and iPadOS 14.5 PB6."
+    },
+    {
+      "reviewId": "ios-ipados-14-6-public-beta-3-date",
+      "disposition": "resolvedForBothCandidates",
+      "selectedEvidenceRefs": ["iculture-ios-14-6", "purudo-ios-ipados-14-6-pb3"],
+      "excludedEvidenceRefs": ["imore-ios14-history", "mr-14-6-pb3"],
+      "finding": "May 10 Pacific is now supported by two exact lineages for both platforms; iMore's May 11 heading remains a qualification."
+    },
+    {
+      "reviewId": "ios-12-1-3-rename",
+      "disposition": "preserved",
+      "finding": "Approve PB2 and PB3 without synthesizing PB1; the preceding public appearance remains labeled iOS 12.1.2 Public Beta 1."
+    },
+    {
+      "reviewId": "ios-ipados-13-5-legacy-label",
+      "disposition": "preserved",
+      "finding": "Approve PB2 and PB3 for both platforms without synthesizing PB1; the preceding public appearance retains the 13.4.5 label."
+    },
+    {
+      "reviewId": "ios-12-4-public-beta-1-skip",
+      "disposition": "preserved",
+      "finding": "Approval of Public Beta 3 does not alter the parent packet's supported absence of Public Beta 1."
+    },
+    {
+      "reviewId": "ios-ipados-14-7-public-beta-2-withheld",
+      "disposition": "preserved",
+      "finding": "Approval of iOS Public Beta 4 does not synthesize Public Beta 2 or alter the documented ordinal gap."
+    },
+    {
+      "reviewId": "ios-ipados-14-5-existing-public-beta-3",
+      "disposition": "preservedExistingMatches",
+      "finding": "The two existing production Public Beta 3 events remain outside the creation set; no approved follow-up identity duplicates them."
+    },
+    {
+      "reviewId": "local-calendar-rollovers",
+      "disposition": "pacificDatesRemainCanonical",
+      "finding": "Next-day iCulture, Purudo, Kobonemi, Taisyo, and other local timestamps are used only when an explicit datetime normalizes to the submitted America/Los_Angeles date."
+    }
+  ],
+  "sequenceBoundaryReviews": [
+    {"platform": "iOS", "version": "12.1", "modeledOrdinals": [1,2,3,4,5], "terminalBoundary": "publicRelease 2018-10-30", "finding": "No later ordinal is inferred."},
+    {"platform": "iOS", "version": "12.1.1", "modeledOrdinals": [1,2,3], "terminalBoundary": "publicRelease 2018-12-05", "finding": "No later ordinal is inferred."},
+    {"platform": "iOS", "version": "12.1.3", "modeledOrdinals": [2,3,4], "terminalBoundary": "publicRelease 2019-01-22", "finding": "PB1 remains under 12.1.2; no later ordinal is inferred."},
+    {"platform": "iOS", "version": "12.2", "modeledOrdinals": [1,2,3,4,5,6], "terminalBoundary": "publicRelease 2019-03-25", "finding": "No PB7 is inferred."},
+    {"platform": "iOS", "version": "12.3", "modeledOrdinals": [1,2,3,4,5,6], "terminalBoundary": "publicRelease 2019-05-13", "finding": "No PB7 is inferred."},
+    {"platform": "iOS", "version": "12.4", "modeledOrdinals": [2,3,4,5,6,7], "terminalBoundary": "publicRelease 2019-07-22", "finding": "The PB1 skip and PB7 terminal ordinal remain unchanged."},
+    {"platform": "iOS", "version": "13.2", "modeledOrdinals": [1,2,3,4], "terminalBoundary": "publicRelease 2019-10-28", "finding": "No PB5 is inferred."},
+    {"platform": "iOS", "version": "13.4", "modeledOrdinals": [1,2,3,4,5], "terminalBoundary": "publicRelease 2020-03-24", "finding": "No PB6 is inferred."},
+    {"platform": "iOS", "version": "13.5", "modeledOrdinals": [2,3], "terminalBoundary": "publicRelease 2020-05-20", "finding": "PB1 retains the 13.4.5 label; no PB4 is inferred."},
+    {"platform": "iOS", "version": "13.7", "modeledOrdinals": [1], "terminalBoundary": "publicRelease 2020-09-01", "finding": "No PB2 is inferred."},
+    {"platform": "iOS", "version": "14.3", "modeledOrdinals": [1,2,3], "terminalBoundary": "publicRelease 2020-12-14", "finding": "PB3 remains blocked at the second-lineage exact-ordinal gate."},
+    {"platform": "iOS", "version": "14.5", "modeledOrdinals": [1,2,3,4,5,6,7,8], "terminalBoundary": "publicRelease 2021-04-26", "finding": "PB3 already exists; no PB9 is inferred."},
+    {"platform": "iOS", "version": "14.6", "modeledOrdinals": [1,2,3], "terminalBoundary": "publicRelease 2021-05-24", "finding": "PB3 is approved at May 10; no PB4 is inferred."},
+    {"platform": "iOS", "version": "14.7", "modeledOrdinals": [1,3,4,5], "terminalBoundary": "publicRelease 2021-07-19", "finding": "PB2 remains a documented skip; no PB6 is inferred."},
+    {"platform": "iPadOS", "version": "13.1", "modeledOrdinals": [1,2,3,4], "terminalBoundary": "publicRelease 2019-09-24", "finding": "No PB5 is inferred."},
+    {"platform": "iPadOS", "version": "13.2", "modeledOrdinals": [1,2,3,4], "terminalBoundary": "publicRelease 2019-10-28", "finding": "No PB5 is inferred."},
+    {"platform": "iPadOS", "version": "13.4", "modeledOrdinals": [1,2,3,4,5], "terminalBoundary": "publicRelease 2020-03-24", "finding": "No PB6 is inferred."},
+    {"platform": "iPadOS", "version": "13.5", "modeledOrdinals": [2,3], "terminalBoundary": "publicRelease 2020-05-20", "finding": "PB1 retains the 13.4.5 label; no PB4 is inferred."},
+    {"platform": "iPadOS", "version": "13.7", "modeledOrdinals": [1], "terminalBoundary": "publicRelease 2020-09-01", "finding": "No PB2 is inferred."},
+    {"platform": "iPadOS", "version": "14.3", "modeledOrdinals": [1,2,3], "terminalBoundary": "publicRelease 2020-12-14", "finding": "PB3 remains blocked at the second-lineage exact-ordinal gate."},
+    {"platform": "iPadOS", "version": "14.4", "modeledOrdinals": [1,2], "terminalBoundary": "publicRelease 2021-01-26", "finding": "PB2 is approved at January 13 Pacific; no PB3 is inferred."},
+    {"platform": "iPadOS", "version": "14.5", "modeledOrdinals": [1,2,3,4,5,6,7,8], "terminalBoundary": "publicRelease 2021-04-26", "finding": "PB3 already exists and PB6 remains blocked; no PB9 is inferred."},
+    {"platform": "iPadOS", "version": "14.6", "modeledOrdinals": [1,2,3], "terminalBoundary": "publicRelease 2021-05-24", "finding": "PB3 is approved at May 10; no PB4 is inferred."}
+  ],
+  "sourceRoleQualifications": [
+    {
+      "sourceId": "osxd-ios-ipados-14-3-pb3",
+      "severity": "blockingForTwoCandidates",
+      "finding": "The text numbers a beta and states that public and developer versions are available, but it does not display Public Beta 3. It cannot be selected as public-ordinal evidence."
+    },
+    {
+      "sourceId": "osxd-ios-ipados-14-5-pb6",
+      "severity": "blockingForOneCandidate",
+      "finding": "The text numbers a beta and states that public and developer versions are available, but it does not display Public Beta 6. It cannot be selected as public-ordinal evidence."
+    },
+    {
+      "sourceId": "9to5mac-13-1-pb2",
+      "severity": "qualification",
+      "finding": "The developer-beta headline is not selected; the body sentence explicitly naming iOS 13.1 and iPadOS 13.1 public beta 2 is selected."
+    },
+    {
+      "sourceId": "itopnews-ios-ipados-14-5-pb5",
+      "severity": "qualification",
+      "finding": "The structured publishedAt field is null, but the captured article visibly shows 23.03.2021 21:07 and explicitly names iOS/iPadOS Public Beta 5."
+    },
+    {
+      "sourceId": "imore-ios14-history",
+      "severity": "qualification",
+      "finding": "For iOS 14.7 Public Beta 4, only the June 29 dated heading is selected; the copied 14.6 body text is excluded. Its May 11 14.6 heading remains a non-selected date conflict."
+    },
+    {
+      "qualificationGroupId": "purudo-ios-ipados-combined-sources",
+      "severity": "qualification",
+      "finding": "Where a Purudo headline names only iOS and another platform, the retained article body contains a separate exact iPadOS claim fragment. Approval uses that body fragment, never a paired-platform inference."
+    }
+  ],
+  "mandatoryQualifications": [
+    "Chronology approval applies only to the thirty-seven explicitly listed identities and only at platform, version, publicBeta channel, displayed public ordinal, and America/Los_Angeles date grain.",
+    "Keep iOS 14.3 Public Beta 3, iPadOS 14.3 Public Beta 3, and iPadOS 14.5 Public Beta 6 out of any implementation queue until a second independent exact public-ordinal lineage is captured.",
+    "All 45 parent exclusions remain binding. Developer ordinals, shared builds, generic public availability, comments, appearance counts, and paired-platform assumptions remain ineligible as public-ordinal proof.",
+    "Preserve the iOS 12.1.3 and iOS/iPadOS 13.5 legacy-label starts, the iOS 12.4 Public Beta 1 skip, and the iOS/iPadOS 14.7 Public Beta 2 skip.",
+    "Do not create duplicates for the two existing iOS/iPadOS 14.5 Public Beta 3 production events.",
+    "Use May 10 Pacific for iOS/iPadOS 14.6 Public Beta 3 while retaining iMore's May 11 disagreement as source provenance.",
+    "Repeat the exact published, useCdn:false production query immediately before any separately authorized Sanity write."
+  ],
+  "requiredNextGate": {
+    "blockedCandidateRequirement": "Capture one additional independent publisher lineage that explicitly displays the exact platform-specific public ordinal and establishes the submitted Pacific date.",
+    "productionRecheckRequiredBeforeWrite": true,
+    "separateSanityMutationAuthorizationRequired": true,
+    "separatePageBuildAuthorizationRequired": true
+  },
+  "authorization": {
+    "chronologyApprovedCandidateCount": 37,
+    "blockedCandidateCount": 3,
+    "identityCorrectionCount": 0,
+    "chronologyApprovalScope": "The thirty-seven explicitly listed candidate identities with all source-role and sequence-boundary qualifications mandatory.",
+    "sanityMutationAllowed": false,
+    "publicationEligible": false,
+    "pageBuildsAllowed": false,
+    "deploymentAllowed": false
+  },
+  "safety": {
+    "researchOnly": true,
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false,
+    "frozenPacketArtifactsModified": false,
+    "parentPacketArtifactsModified": false
+  }
+}

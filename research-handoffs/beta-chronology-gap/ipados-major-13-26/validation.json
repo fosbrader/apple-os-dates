@@ -1,0 +1,124 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ipados-major-13-26",
+  "validatedAt": "2026-07-31T03:56:29.372Z",
+  "status": "passedSelfCheckPendingIndependentReview",
+  "independentReviewComplete": false,
+  "checks": {
+    "packetJsonParsed": 6,
+    "candidateCount": 40,
+    "existingMatchCount": 3,
+    "notProposedCount": 2,
+    "sourceCount": 65,
+    "conflictCount": 7,
+    "observedByVersion": {
+      "13.0": 7,
+      "14.0": 7,
+      "15.0": 7,
+      "16.0": 4,
+      "17.0": 6,
+      "18.0": 6,
+      "26.0": 6
+    },
+    "candidatesByVersion": {
+      "13.0": 7,
+      "14.0": 7,
+      "15.0": 7,
+      "16.0": 3,
+      "17.0": 5,
+      "18.0": 6,
+      "26.0": 5
+    },
+    "candidatesByEvidenceState": {
+      "corroborated": 40
+    },
+    "candidatesByIdentityStatus": {
+      "confirmed": 39,
+      "conflict": 1
+    },
+    "candidatesByProductionStatus": {
+      "confirmedMissing": 39,
+      "existingIdentityConflict": 1
+    },
+    "sharedCandidateSchemaValid": true,
+    "assignmentTargetsResolved": 40,
+    "evidenceReferencesResolved": 101,
+    "existingMatchesVerified": 3,
+    "exceptionRecordsVerified": 2,
+    "productionSnapshotReadOnlyAndExact": true,
+    "rawSourcesVerified": 65,
+    "boundedSelectedTextVerified": 65,
+    "safetyBoundaryVerified": true,
+    "independentReviewStillRequired": true,
+    "packetFilesLocked": 9
+  },
+  "counts": {
+    "observedAppearances": 43,
+    "candidates": 40,
+    "exactExistingMatches": 3,
+    "notProposed": 2,
+    "sources": 65,
+    "rawSources": 65,
+    "conflicts": 7,
+    "confirmedMissingCandidates": 39,
+    "productionIdentityConflictCandidates": 1
+  },
+  "blockers": [
+    "Independent chronology review has not been completed.",
+    "The June 30, 2021 iPadOS 15 production event is stored as PB1 while evidence supports PB2; no duplicate or correction is authorized."
+  ],
+  "fileLocks": [
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/assignment.json",
+      "bytes": 19170,
+      "sha256": "f126d3981362a6f407b2377ce417359fe24322c45d0629f1982e499f1b59fe76"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/sources.json",
+      "bytes": 122142,
+      "sha256": "a8fb0cd3f98432a674c21ba0f981e83237a88bb35334da37c5fa7b2d8a9528ec"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+      "bytes": 131399,
+      "sha256": "df6b05057507a1c998c778c51fcefc79eb4fc6193dc9e3b05f66507f383ff4dd"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/conflicts.json",
+      "bytes": 4695,
+      "sha256": "8d9ec3e9622a08ac51a26aa03f4a86aa2655b920db668920e4387da91d8e8e7b"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/production-snapshot.json",
+      "bytes": 16913,
+      "sha256": "6be5a6cb865c8cbe3bacf5371123a0e3486bcd2d0adcda892b9febd8c6af1eee"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/review.json",
+      "bytes": 3244,
+      "sha256": "586a8a15871a562575d5d2431f8e42506595f61d418dda7251d9d77849687840"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/report.md",
+      "bytes": 7853,
+      "sha256": "7b460c4fcccc46c24b10951662ef75e0b6cb3bfdbcf3b8c57f443a09c6098ffc"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/build-packet.mjs",
+      "bytes": 36171,
+      "sha256": "411b0a53fb41adbe2f71f4ee21a3a4c3935485cd5b026e974abc987eeee4a7e5"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/query-production.ts",
+      "bytes": 4548,
+      "sha256": "07ca8f232e76223fd8aef6927576aea4f140bd30cad95ab5073f1535cbcbab9b"
+    }
+  ],
+  "safety": {
+    "sanityMutationPerformed": false,
+    "sanityMutationAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  },
+  "errors": []
+}

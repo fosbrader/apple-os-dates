@@ -1,0 +1,421 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-os27",
+  "researchCutoff": "2026-07-30",
+  "candidateCount": 6,
+  "candidates": [
+    {
+      "candidateId": "version-macos-27-0/public-beta-1",
+      "platformId": "platform-macos",
+      "platform": "macOS",
+      "releaseVersionId": "version-macos-27-0",
+      "version": "27.0",
+      "label": "Public Beta 1",
+      "routeAlias": "public-beta-1",
+      "channel": "publicBeta",
+      "appearanceDate": "2026-07-13",
+      "sequence": 1,
+      "isRevision": false,
+      "availabilityState": "available",
+      "closesReleaseCycle": false,
+      "build": {
+        "value": "26A5378n",
+        "verification": "reportedSharedPayload",
+        "confidence": "medium",
+        "payloadEquivalentTo": "macOS 27 developer beta 3 v2",
+        "notes": "The public appearance is strongly established. The build is the same-day revised developer payload reported alongside the public launch, but no preserved first-party public build feed was found."
+      },
+      "confidence": {
+        "identity": "high",
+        "date": "high",
+        "sequence": "high",
+        "build": "medium"
+      },
+      "citations": [
+        {
+          "sourceId": "source-005",
+          "claim": "Dedicated same-day report identifies the first macOS 27 public beta and its public-program installation route."
+        },
+        {
+          "sourceId": "source-017",
+          "claim": "Contemporaneous report identifies same-day macOS beta 3 v2 build 26A5378n as public betas dropped."
+        },
+        {
+          "sourceId": "source-001",
+          "claim": "Apple's public-program surface includes macOS 27."
+        }
+      ],
+      "productionInstruction": "Reconcile against current releaseEvent documents, then create only if absent. Reuse the existing 26A5378n build record if one exists."
+    },
+    {
+      "candidateId": "version-macos-27-0/public-beta-2",
+      "platformId": "platform-macos",
+      "platform": "macOS",
+      "releaseVersionId": "version-macos-27-0",
+      "version": "27.0",
+      "label": "Public Beta 2",
+      "routeAlias": "public-beta-2",
+      "channel": "publicBeta",
+      "appearanceDate": "2026-07-22",
+      "sequence": 2,
+      "isRevision": false,
+      "availabilityState": "available",
+      "closesReleaseCycle": false,
+      "build": {
+        "value": "26A5388g",
+        "verification": "corroboratedSharedPayload",
+        "confidence": "high",
+        "payloadEquivalentTo": "macOS 27 developer beta 4",
+        "notes": "9to5Mac directly identifies the public build; Apple's developer index independently identifies the same build as developer beta 4."
+      },
+      "confidence": {
+        "identity": "high",
+        "date": "high",
+        "sequence": "high",
+        "build": "high"
+      },
+      "citations": [
+        {
+          "sourceId": "source-010",
+          "claim": "Dedicated July 22 report identifies Public Beta 2 and build 26A5388g."
+        },
+        {
+          "sourceId": "source-004",
+          "claim": "Apple identifies 26A5388g as macOS 27 developer beta 4, supporting payload equivalence without proving the public channel by itself."
+        }
+      ],
+      "productionInstruction": "Reconcile against current releaseEvent documents, then create only if absent. Reuse the existing 26A5388g build record if one exists."
+    },
+    {
+      "candidateId": "version-watchos-27-0/public-beta-1",
+      "platformId": "platform-watchos",
+      "platform": "watchOS",
+      "releaseVersionId": "version-watchos-27-0",
+      "version": "27.0",
+      "label": "Public Beta 1",
+      "routeAlias": "public-beta-1",
+      "channel": "publicBeta",
+      "appearanceDate": "2026-07-13",
+      "sequence": 1,
+      "isRevision": false,
+      "availabilityState": "available",
+      "closesReleaseCycle": false,
+      "build": {
+        "value": "24R5315i",
+        "verification": "corroboratedSharedPayload",
+        "confidence": "high",
+        "payloadEquivalentTo": "watchOS 27 developer beta 3",
+        "notes": "MacRumors identifies the public payload as developer beta 3; iCulture's chronology supplies the build. Do not use AppleInsider's erroneous 23U5062b value."
+      },
+      "confidence": {
+        "identity": "high",
+        "date": "high",
+        "sequence": "high",
+        "build": "high"
+      },
+      "citations": [
+        {
+          "sourceId": "source-006",
+          "claim": "Dedicated same-day report identifies watchOS Public Beta 1 and says it equals developer beta 3."
+        },
+        {
+          "sourceId": "source-011",
+          "claim": "Chronology identifies July 13 Public Beta 1 build 24R5315i and pairs it with developer beta 3."
+        },
+        {
+          "sourceId": "source-002",
+          "claim": "Apple's public-program FAQ explicitly includes Apple Watch enrollment."
+        }
+      ],
+      "productionInstruction": "Reconcile against current releaseEvent documents, then create only if absent. Reuse the existing 24R5315i build record if one exists."
+    },
+    {
+      "candidateId": "version-watchos-27-0/public-beta-2",
+      "platformId": "platform-watchos",
+      "platform": "watchOS",
+      "releaseVersionId": "version-watchos-27-0",
+      "version": "27.0",
+      "label": "Public Beta 2",
+      "routeAlias": "public-beta-2",
+      "channel": "publicBeta",
+      "appearanceDate": "2026-07-22",
+      "sequence": 2,
+      "isRevision": false,
+      "availabilityState": "available",
+      "closesReleaseCycle": false,
+      "build": {
+        "value": "24R5325h",
+        "verification": "corroboratedSharedPayload",
+        "confidence": "high",
+        "payloadEquivalentTo": "watchOS 27 developer beta 4",
+        "notes": "iCulture identifies the public build; Apple's developer index independently identifies the same payload as developer beta 4."
+      },
+      "confidence": {
+        "identity": "high",
+        "date": "high",
+        "sequence": "high",
+        "build": "high"
+      },
+      "citations": [
+        {
+          "sourceId": "source-009",
+          "claim": "Dedicated July 22 report identifies watchOS Public Beta 2."
+        },
+        {
+          "sourceId": "source-011",
+          "claim": "Chronology identifies July 22 Public Beta 2 build 24R5325h."
+        },
+        {
+          "sourceId": "source-004",
+          "claim": "Apple identifies 24R5325h as watchOS 27 developer beta 4, supporting payload equivalence."
+        }
+      ],
+      "productionInstruction": "Reconcile against current releaseEvent documents, then create only if absent. Reuse the existing 24R5325h build record if one exists."
+    },
+    {
+      "candidateId": "version-tvos-27-0/public-beta-1",
+      "platformId": "platform-tvos",
+      "platform": "tvOS",
+      "releaseVersionId": "version-tvos-27-0",
+      "version": "27.0",
+      "label": "Public Beta 1",
+      "routeAlias": "public-beta-1",
+      "channel": "publicBeta",
+      "appearanceDate": "2026-07-13",
+      "sequence": 1,
+      "isRevision": false,
+      "availabilityState": "available",
+      "closesReleaseCycle": false,
+      "build": {
+        "value": "24J5315i",
+        "verification": "corroboratedSharedPayload",
+        "confidence": "high",
+        "payloadEquivalentTo": "tvOS 27 developer beta 3",
+        "notes": "MacRumors identifies the public payload as developer beta 3; iCulture's chronology supplies the build."
+      },
+      "confidence": {
+        "identity": "high",
+        "date": "high",
+        "sequence": "high",
+        "build": "high"
+      },
+      "citations": [
+        {
+          "sourceId": "source-006",
+          "claim": "Dedicated same-day report identifies tvOS Public Beta 1 and says it equals developer beta 3."
+        },
+        {
+          "sourceId": "source-012",
+          "claim": "Chronology identifies July 13 Public Beta 1 build 24J5315i and pairs it with developer beta 3."
+        },
+        {
+          "sourceId": "source-002",
+          "claim": "Apple's public-program FAQ explicitly includes Apple TV enrollment."
+        }
+      ],
+      "productionInstruction": "Reconcile against current releaseEvent documents, then create only if absent. Reuse the existing 24J5315i build record if one exists."
+    },
+    {
+      "candidateId": "version-tvos-27-0/public-beta-2",
+      "platformId": "platform-tvos",
+      "platform": "tvOS",
+      "releaseVersionId": "version-tvos-27-0",
+      "version": "27.0",
+      "label": "Public Beta 2",
+      "routeAlias": "public-beta-2",
+      "channel": "publicBeta",
+      "appearanceDate": "2026-07-22",
+      "sequence": 2,
+      "isRevision": false,
+      "availabilityState": "available",
+      "closesReleaseCycle": false,
+      "build": {
+        "value": "24J5325d",
+        "verification": "corroboratedSharedPayload",
+        "confidence": "high",
+        "payloadEquivalentTo": "tvOS 27 developer beta 4",
+        "notes": "iCulture identifies the public build; Apple's developer index independently identifies the same payload as developer beta 4."
+      },
+      "confidence": {
+        "identity": "high",
+        "date": "high",
+        "sequence": "high",
+        "build": "high"
+      },
+      "citations": [
+        {
+          "sourceId": "source-009",
+          "claim": "Dedicated July 22 report identifies tvOS Public Beta 2."
+        },
+        {
+          "sourceId": "source-012",
+          "claim": "Chronology identifies July 22 Public Beta 2 build 24J5325d."
+        },
+        {
+          "sourceId": "source-004",
+          "claim": "Apple identifies 24J5325d as tvOS 27 developer beta 4, supporting payload equivalence."
+        }
+      ],
+      "productionInstruction": "Reconcile against current releaseEvent documents, then create only if absent. Reuse the existing 24J5325d build record if one exists."
+    }
+  ],
+  "notProposed": [
+    {
+      "platformId": "platform-visionos",
+      "releaseVersionId": "version-visionos-27-0",
+      "apparentLabel": "Public Beta 1",
+      "apparentDate": "2026-07-13",
+      "apparentBuild": "24M5316k",
+      "disposition": "doNotCreate",
+      "classification": "publicDistributionNotEstablished",
+      "confidence": "high",
+      "reason": "Some cross-platform roundups label the developer beta 3 payload as Public Beta 1, but Apple's public-program landing page and FAQ omit Vision Pro, Apple's installation documentation provides only a developer-beta route, and a same-day platform-specialist report explicitly distinguishes the visionOS developer beta from the public wave."
+    },
+    {
+      "platformId": "platform-visionos",
+      "releaseVersionId": "version-visionos-27-0",
+      "apparentLabel": "Public Beta 2",
+      "apparentDate": "2026-07-22",
+      "apparentBuild": "24M5326g",
+      "disposition": "doNotCreate",
+      "classification": "publicDistributionNotEstablished",
+      "confidence": "high",
+      "reason": "One living chronology calls the developer beta 4 payload Public Beta 2 while its own installation section says visionOS betas require a developer account and are developer-only. Apple still offered no public-program route for Vision Pro at the research cutoff."
+    }
+  ],
+  "cutoffCheckpoint": {
+    "date": "2026-07-30",
+    "finding": "No credible Public Beta 3 appearance was found for macOS 27, watchOS 27, or tvOS 27 by the cutoff. This is a cutoff observation, not evidence that later Public Beta 3 releases will not occur.",
+    "productionInstruction": "Do not create speculative Public Beta 3 events."
+  },
+  "productionReconciliation": {
+    "queriedAt": "2026-07-31T02:40:40Z",
+    "target": {
+      "projectId": "lh3yswzu",
+      "dataset": "production",
+      "perspective": "published",
+      "useCdn": false
+    },
+    "queryScope": "All published releaseEvent documents whose releaseVersion reference is version-macos-27-0, version-watchos-27-0, version-tvos-27-0, or version-visionos-27-0.",
+    "publicBetaEventsFoundInScope": 0,
+    "candidateResults": [
+      {
+        "candidateId": "version-macos-27-0/public-beta-1",
+        "productionState": "missing",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0,
+        "reusableBuild": {
+          "_id": "release-build-b6325b76ecd8703365811fdc",
+          "storedBuildNumber": "26A5378N",
+          "currentlyReferencedByEventId": "release-event-71c88050b557d9a087b957d7",
+          "currentlyReferencedByLabel": "Beta 3 v2",
+          "currentlyReferencedByChannel": "developerBeta",
+          "currentlyReferencedByDate": "2026-07-13"
+        },
+        "actionAfterApproval": "createNewReleaseEventUsingExistingBuild"
+      },
+      {
+        "candidateId": "version-macos-27-0/public-beta-2",
+        "productionState": "missing",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0,
+        "reusableBuild": {
+          "_id": "release-build-f73dd012ff20b92b591c2317",
+          "storedBuildNumber": "26A5388G",
+          "currentlyReferencedByEventId": "release-event-0f1c752fc66a5da0d300511d",
+          "currentlyReferencedByLabel": "Beta 4",
+          "currentlyReferencedByChannel": "developerBeta",
+          "currentlyReferencedByDate": "2026-07-20"
+        },
+        "actionAfterApproval": "createNewReleaseEventUsingExistingBuild"
+      },
+      {
+        "candidateId": "version-watchos-27-0/public-beta-1",
+        "productionState": "missing",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0,
+        "reusableBuild": {
+          "_id": "release-build-8bd7c137d9e3e99ff4f06649",
+          "storedBuildNumber": "24R5315I",
+          "currentlyReferencedByEventId": "release-event-22c8b3d0014cfa0216f2410e",
+          "currentlyReferencedByLabel": "Beta 3",
+          "currentlyReferencedByChannel": "developerBeta",
+          "currentlyReferencedByDate": "2026-07-06"
+        },
+        "actionAfterApproval": "createNewReleaseEventUsingExistingBuild"
+      },
+      {
+        "candidateId": "version-watchos-27-0/public-beta-2",
+        "productionState": "missing",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0,
+        "reusableBuild": {
+          "_id": "release-build-fdf843582d3e0d40a26604a7",
+          "storedBuildNumber": "24R5325H",
+          "currentlyReferencedByEventId": "release-event-85aa5980458e6ae9f60a8133",
+          "currentlyReferencedByLabel": "Beta 4",
+          "currentlyReferencedByChannel": "developerBeta",
+          "currentlyReferencedByDate": "2026-07-20"
+        },
+        "actionAfterApproval": "createNewReleaseEventUsingExistingBuild"
+      },
+      {
+        "candidateId": "version-tvos-27-0/public-beta-1",
+        "productionState": "missing",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0,
+        "reusableBuild": {
+          "_id": "release-build-3ff0f0bb8f4ff8f43f6a9a7d",
+          "storedBuildNumber": "24J5315I",
+          "currentlyReferencedByEventId": "release-event-8c89f218950c13cc02be67b3",
+          "currentlyReferencedByLabel": "Beta 3",
+          "currentlyReferencedByChannel": "developerBeta",
+          "currentlyReferencedByDate": "2026-07-06"
+        },
+        "actionAfterApproval": "createNewReleaseEventUsingExistingBuild"
+      },
+      {
+        "candidateId": "version-tvos-27-0/public-beta-2",
+        "productionState": "missing",
+        "exactIdentityMatches": 0,
+        "routeAliasMatches": 0,
+        "channelSequenceDateMatches": 0,
+        "reusableBuild": {
+          "_id": "release-build-554bcf80b312c7bdd103d4b1",
+          "storedBuildNumber": "24J5325D",
+          "currentlyReferencedByEventId": "release-event-c70b5bdce7d4b7d3f0ce1068",
+          "currentlyReferencedByLabel": "Beta 4",
+          "currentlyReferencedByChannel": "developerBeta",
+          "currentlyReferencedByDate": "2026-07-20"
+        },
+        "actionAfterApproval": "createNewReleaseEventUsingExistingBuild"
+      }
+    ],
+    "visionOSCheck": {
+      "publicBetaEventsFound": 0,
+      "developerEventsPresent": [
+        {
+          "eventId": "release-event-0e9d07648b6699d3e500e945",
+          "label": "Beta 3",
+          "date": "2026-07-06",
+          "buildId": "release-build-21aef5a6a8a5eada63d48c27",
+          "storedBuildNumber": "24M5316K"
+        },
+        {
+          "eventId": "release-event-363170cee2917bcc820031c8",
+          "label": "Beta 4",
+          "date": "2026-07-20",
+          "buildId": "release-build-5c9c04da646492571bf55b69",
+          "storedBuildNumber": "24M5326G"
+        }
+      ],
+      "action": "noProductionMutation"
+    }
+  },
+  "reviewState": "readyForChronologyReview"
+}

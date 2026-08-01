@@ -1,0 +1,80 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ipados-major-13-26-second-lineage",
+  "createdAt": "2026-07-31T04:18:26.819Z",
+  "packetKind": "supplementalSecondLineageEvidence",
+  "objective": "Supply a second explicit public-ordinal publisher lineage for the nine candidates blocked by the frozen independent review, without altering or superseding the parent packet.",
+  "parentPacket": {
+    "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26",
+    "candidates": {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+      "bytes": 131399,
+      "sha256": "df6b05057507a1c998c778c51fcefc79eb4fc6193dc9e3b05f66507f383ff4dd"
+    },
+    "independentReview": {
+      "path": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+      "bytes": 16315,
+      "sha256": "a26cfc8953d600e9b9f976b2c939ba66ce77f483574daa3156da08b93a8c49c4",
+      "verdict": "partialPassWithNineBlockedCandidatesAndOneProductionCorrection",
+      "independentOfResearcher": true
+    },
+    "mutationPolicy": "Read-only. This supplement maps to frozen parent candidates and does not amend parent candidates, sources, conflicts, review, or validation."
+  },
+  "scope": {
+    "candidateCount": 9,
+    "sourceCount": 5,
+    "candidateIds": [
+      "candidate:apple:ipados:14.0:public-beta-6",
+      "candidate:apple:ipados:14.0:public-beta-7",
+      "candidate:apple:ipados:14.0:public-beta-8",
+      "candidate:apple:ipados:15.0:public-beta-5",
+      "candidate:apple:ipados:15.0:public-beta-7",
+      "candidate:apple:ipados:15.0:public-beta-8",
+      "candidate:apple:ipados:16.0:public-beta-4",
+      "candidate:apple:ipados:17.0:public-beta-6",
+      "candidate:apple:ipados:18.0:public-beta-6"
+    ],
+    "platforms": [
+      "iPadOS"
+    ],
+    "versions": [
+      "14.0",
+      "15.0",
+      "16.0",
+      "17.0",
+      "18.0"
+    ]
+  },
+  "datePolicy": {
+    "historicalCalendar": "America/Los_Angeles",
+    "sourcePublicationDateIsNotAutomaticallyAppearanceDate": true,
+    "explicitQualificationsRequired": [
+      "iPadOS 17.0 Public Beta 6: frozen appearance 2023-08-29; OS X Daily report 2023-08-30.",
+      "iPadOS 18.0 Public Beta 6: frozen appearance 2024-08-28; OS X Daily report 2024-08-29."
+    ]
+  },
+  "constraints": {
+    "noParentPacketEdits": true,
+    "noIndependentSelfApproval": true,
+    "noProductionIdCreation": true,
+    "noSanityWrites": true,
+    "noDeployment": true,
+    "productionQueryReadOnly": true,
+    "boundedIdentificationTextMaximumWords": 20,
+    "rawEvidenceHashesRequired": true
+  },
+  "deliverables": [
+    "assignment.json",
+    "sources.json",
+    "candidate-mapping.json",
+    "conflicts.json",
+    "production-snapshot.json",
+    "report.md",
+    "self-review.json",
+    "fetch-sources.mjs",
+    "build-packet.mjs",
+    "query-production.ts",
+    "validate-packet.mjs",
+    "validation.json"
+  ]
+}

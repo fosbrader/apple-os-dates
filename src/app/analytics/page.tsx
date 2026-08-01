@@ -6,6 +6,11 @@ import {
   createPageMetadata,
   latestDate,
 } from "@/lib/site";
+import {
+  appleReleaseDatasetId,
+  factualDataset,
+} from "@/lib/structured-data";
+import { buildAnalyticsViewModel } from "@/lib/view-models/analytics";
 
 const analyticsDescription =
   "Compare Apple OS beta-cycle length, release cadence, and historical timing trends across iOS, macOS, watchOS, tvOS, and more.";
@@ -22,6 +27,7 @@ export default async function AnalyticsPage() {
     getAllPlatforms(),
   ]);
   const canonical = absoluteUrl("/analytics/");
+  const analytics = buildAnalyticsViewModel(data, platforms);
   const dateModified = latestDate(data.map((version) => version.updatedAt));
   const structuredData: JsonLdValue = {
     "@context": "https://schema.org",
@@ -36,8 +42,7 @@ export default async function AnalyticsPage() {
         isPartOf: { "@id": `${absoluteUrl("/")}#website` },
         mainEntity: { "@id": `${canonical}#analytics-dataset` },
       },
-      {
-        "@type": "Dataset",
+      factualDataset({
         "@id": `${canonical}#analytics-dataset`,
         url: canonical,
         name: "Apple OS Beta Cycle Analytics",
@@ -45,10 +50,7 @@ export default async function AnalyticsPage() {
           "Calculated beta-cycle lengths, milestone intervals, and release timing comparisons derived from tracked Apple OS release dates.",
         dateModified,
         isAccessibleForFree: true,
-        isPartOf: { "@id": `${absoluteUrl("/")}#release-dataset` },
-        isBasedOn: { "@id": `${absoluteUrl("/")}#release-dataset` },
-        creator: { "@id": `${absoluteUrl("/")}#organization` },
-        publisher: { "@id": `${absoluteUrl("/")}#organization` },
+        isBasedOn: appleReleaseDatasetId(),
         measurementTechnique:
           "Cycle lengths and milestone intervals calculated from the recorded Apple OS release-date dataset.",
         variableMeasured: [
@@ -56,7 +58,7 @@ export default async function AnalyticsPage() {
           "Milestone interval",
           "Public release date",
         ],
-      },
+      }),
     ],
   };
 
@@ -86,7 +88,10 @@ export default async function AnalyticsPage() {
           className="animate-in"
           style={{ "--delay": 1 } as React.CSSProperties}
         >
-          <AnalyticsDashboard data={data} platforms={platforms} />
+          <AnalyticsDashboard
+            versions={analytics.versions}
+            platforms={analytics.platforms}
+          />
         </div>
       </div>
     </>

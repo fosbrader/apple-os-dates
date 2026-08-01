@@ -1,0 +1,30 @@
+{
+  "formatVersion": 1,
+  "batchId": "ios-patch-applicability-2026-07-31",
+  "generatedAt": "2026-07-31T08:09:13.938Z",
+  "conflictCount": 2,
+  "blockedVersions": [
+    "8.4.1"
+  ],
+  "conflicts": [
+    {
+      "conflictId": "conflict:ios:8.4.1:heise-combined-product-wording",
+      "version": "8.4.1",
+      "sourceId": "heise-ios-8-4-1-beta2-ambiguous",
+      "type": "platformApplicabilityAmbiguity",
+      "observation": "The summary says paid developers and public-beta-program participants can obtain 'the updates' while the article covers iOS 8.4.1 and OS X 10.10.5 together.",
+      "conflict": "The wording may aggregate audiences across two products rather than establish that iOS 8.4.1 itself reached public testers.",
+      "disposition": "Retain as contrary evidence; do not convert it into an iOS Public Beta 2 candidate and do not suppress it when reviewing the developer-only evidence."
+    },
+    {
+      "conflictId": "conflict:ios:8.4.1:iculture-approved-testers",
+      "version": "8.4.1",
+      "sourceId": "iculture-ios-8-4-1-beta2-ambiguous",
+      "type": "audienceIdentityAmbiguity",
+      "observation": "The article says developers and approved testers could download Beta 2, but its download instructions point to Apple's developer site.",
+      "conflict": "Approved testers is not an exact displayed public-beta identity, and a reader comment in the retained page questions whether public testers received it.",
+      "disposition": "Retain as ambiguity; no candidate and no irreversible no-beta claim."
+    }
+  ],
+  "resolution": "iOS 8.4.1 remains notEstablished pending better product-specific evidence."
+}

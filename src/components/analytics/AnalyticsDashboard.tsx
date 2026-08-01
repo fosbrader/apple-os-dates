@@ -1,55 +1,36 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import type { Platform, ReleaseVersion } from "@/lib/types";
-import {
-  computeBetaCycleDays,
-  computeAverageBetaInterval,
-} from "@/lib/utils";
 import { CycleLengthChart } from "./CycleLengthChart";
+import type { AnalyticsVersionStat } from "@/lib/view-models/analytics";
+import {
+  indexPlatformsBySlug,
+  resolvePlatform,
+  type ViewModelPlatform,
+} from "@/lib/view-models/platforms";
 
 interface AnalyticsDashboardProps {
-  data: ReleaseVersion[];
-  platforms: Platform[];
-}
-
-interface VersionStats {
-  platform: string;
-  platformColor: string;
-  version: string;
-  majorVersion: number;
-  milestoneCount: number;
-  cycleDays: number | null;
-  avgInterval: number | null;
-  publicReleaseDate?: string;
+  versions: AnalyticsVersionStat[];
+  platforms: ViewModelPlatform[];
 }
 
 export function AnalyticsDashboard({
-  data,
+  versions,
   platforms,
 }: AnalyticsDashboardProps) {
+  const platformsBySlug = useMemo(
+    () => indexPlatformsBySlug(platforms),
+    [platforms],
+  );
   const [selectedPlatform, setSelectedPlatform] = useState("all");
 
   const stats = useMemo(() => {
-    const filteredData =
+    const versionStats =
       selectedPlatform === "all"
-        ? data
-        : data.filter(
-            (version) =>
-              version.releaseTrain.platform.slug.current === selectedPlatform,
+        ? versions
+        : versions.filter(
+            (version) => version.platformSlug === selectedPlatform,
           );
-    const versionStats: VersionStats[] = filteredData
-      .filter((v) => v.milestones?.length > 0)
-      .map((v) => ({
-        platform: v.releaseTrain.platform.name,
-        platformColor: v.releaseTrain.platform.color,
-        version: v.version,
-        majorVersion: v.releaseTrain.majorVersion,
-        milestoneCount: v.milestones.length,
-        cycleDays: computeBetaCycleDays(v),
-        avgInterval: computeAverageBetaInterval(v.milestones),
-        publicReleaseDate: v.publicReleaseDate,
-      }));
 
     const completedVersions = versionStats.filter((v) => v.cycleDays !== null);
 
@@ -106,7 +87,7 @@ export function AnalyticsDashboard({
         0
       ),
     };
-  }, [data, selectedPlatform]);
+  }, [versions, selectedPlatform]);
   const sortedVersionStats = useMemo(
     () =>
       [...stats.versionStats].sort((a, b) =>
@@ -118,6 +99,24 @@ export function AnalyticsDashboard({
   );
   const initialMobileVersionStats = sortedVersionStats.slice(0, 24);
   const remainingMobileVersionStats = sortedVersionStats.slice(24);
+  const chartVersions = useMemo(
+    () =>
+      stats.completedVersions.map((version) => {
+        const platform = resolvePlatform(
+          platformsBySlug,
+          version.platformSlug,
+        );
+
+        return {
+          platform: platform.name,
+          platformColor: platform.color,
+          version: version.version,
+          cycleDays: version.cycleDays,
+          publicReleaseDate: version.publicReleaseDate,
+        };
+      }),
+    [stats.completedVersions, platformsBySlug],
+  );
 
   return (
     <div className="space-y-10">
@@ -134,7 +133,7 @@ export function AnalyticsDashboard({
           >
             <option value="all">All platforms</option>
             {platforms.map((platform) => (
-              <option key={platform._id} value={platform.slug.current}>
+              <option key={platform.slug} value={platform.slug}>
                 {platform.name}
               </option>
             ))}
@@ -175,72 +174,37 @@ export function AnalyticsDashboard({
       </div>
       <div className="analytics-records grid grid-cols-1 md:grid-cols-3 gap-4">
         {stats.longest && (
-          <div className="card">
-            <p className="text-label mb-2">Longest Beta Cycle</p>
-            <div className="stat-value mb-1">{stats.longest.cycleDays}d</div>
-            <p className="text-sm">
-              <span
-                className="platform-label"
-                style={
-                  {
-                    "--platform-color": stats.longest.platformColor,
-                  } as React.CSSProperties
-                }
-              >
-                <i aria-hidden="true" />
-                {stats.longest.platform}
-              </span>{" "}
-              <span className="font-mono text-[var(--text-secondary)]">
-                {stats.longest.version}
-              </span>
-            </p>
-          </div>
+          <CycleRecordCard
+            label="Longest Beta Cycle"
+            value={`${stats.longest.cycleDays}d`}
+            record={stats.longest}
+            platform={resolvePlatform(
+              platformsBySlug,
+              stats.longest.platformSlug,
+            )}
+          />
         )}
         {stats.shortest && (
-          <div className="card">
-            <p className="text-label mb-2">Shortest Beta Cycle</p>
-            <div className="stat-value mb-1">{stats.shortest.cycleDays}d</div>
-            <p className="text-sm">
-              <span
-                className="platform-label"
-                style={
-                  {
-                    "--platform-color": stats.shortest.platformColor,
-                  } as React.CSSProperties
-                }
-              >
-                <i aria-hidden="true" />
-                {stats.shortest.platform}
-              </span>{" "}
-              <span className="font-mono text-[var(--text-secondary)]">
-                {stats.shortest.version}
-              </span>
-            </p>
-          </div>
+          <CycleRecordCard
+            label="Shortest Beta Cycle"
+            value={`${stats.shortest.cycleDays}d`}
+            record={stats.shortest}
+            platform={resolvePlatform(
+              platformsBySlug,
+              stats.shortest.platformSlug,
+            )}
+          />
         )}
         {stats.mostBetas && (
-          <div className="card">
-            <p className="text-label mb-2">Most Milestones</p>
-            <div className="stat-value mb-1">
-              {stats.mostBetas.milestoneCount}
-            </div>
-            <p className="text-sm">
-              <span
-                className="platform-label"
-                style={
-                  {
-                    "--platform-color": stats.mostBetas.platformColor,
-                  } as React.CSSProperties
-                }
-              >
-                <i aria-hidden="true" />
-                {stats.mostBetas.platform}
-              </span>{" "}
-              <span className="font-mono text-[var(--text-secondary)]">
-                {stats.mostBetas.version}
-              </span>
-            </p>
-          </div>
+          <CycleRecordCard
+            label="Most Milestones"
+            value={stats.mostBetas.milestoneCount}
+            record={stats.mostBetas}
+            platform={resolvePlatform(
+              platformsBySlug,
+              stats.mostBetas.platformSlug,
+            )}
+          />
         )}
       </div>
 
@@ -255,7 +219,7 @@ export function AnalyticsDashboard({
             reference line.
           </p>
         </div>
-        <CycleLengthChart versions={stats.completedVersions} />
+        <CycleLengthChart versions={chartVersions} />
       </section>
 
       <section>
@@ -277,8 +241,12 @@ export function AnalyticsDashboard({
           <div className="mobile-analytics-list__items">
             {initialMobileVersionStats.map((version, index) => (
               <AnalyticsVersionCard
-                key={`${version.platform}-${version.version}-${index}`}
+                key={`${version.platformSlug}-${version.version}-${index}`}
                 version={version}
+                platform={resolvePlatform(
+                  platformsBySlug,
+                  version.platformSlug,
+                )}
               />
             ))}
           </div>
@@ -290,8 +258,12 @@ export function AnalyticsDashboard({
               <div className="mobile-analytics-list__items">
                 {remainingMobileVersionStats.map((version, index) => (
                   <AnalyticsVersionCard
-                    key={`${version.platform}-${version.version}-${index + 24}`}
+                    key={`${version.platformSlug}-${version.version}-${index + 24}`}
                     version={version}
+                    platform={resolvePlatform(
+                      platformsBySlug,
+                      version.platformSlug,
+                    )}
                   />
                 ))}
               </div>
@@ -321,20 +293,15 @@ export function AnalyticsDashboard({
               </thead>
               <tbody>
                 {sortedVersionStats.map((v, i) => (
-                  <tr key={`${v.platform}-${v.version}-${i}`}>
+                  <tr key={`${v.platformSlug}-${v.version}-${i}`}>
                     <td className="font-mono font-medium">{v.version}</td>
                     <td>
-                      <span
-                        className="platform-label"
-                        style={
-                          {
-                            "--platform-color": v.platformColor,
-                          } as React.CSSProperties
-                        }
-                      >
-                        <i aria-hidden="true" />
-                        {v.platform}
-                      </span>
+                      <PlatformLabel
+                        platform={resolvePlatform(
+                          platformsBySlug,
+                          v.platformSlug,
+                        )}
+                      />
                     </td>
                     <td className="text-right font-mono tabular-nums">
                       {v.milestoneCount}
@@ -360,21 +327,56 @@ export function AnalyticsDashboard({
   );
 }
 
-function AnalyticsVersionCard({ version }: { version: VersionStats }) {
+function PlatformLabel({ platform }: { platform: ViewModelPlatform }) {
+  return (
+    <span
+      className="platform-label"
+      style={
+        { "--platform-color": platform.color } as React.CSSProperties
+      }
+    >
+      <i aria-hidden="true" />
+      {platform.name}
+    </span>
+  );
+}
+
+function CycleRecordCard({
+  label,
+  value,
+  record,
+  platform,
+}: {
+  label: string;
+  value: string | number;
+  record: AnalyticsVersionStat;
+  platform: ViewModelPlatform;
+}) {
+  return (
+    <div className="card">
+      <p className="text-label mb-2">{label}</p>
+      <div className="stat-value mb-1">{value}</div>
+      <p className="text-sm">
+        <PlatformLabel platform={platform} />{" "}
+        <span className="font-mono text-[var(--text-secondary)]">
+          {record.version}
+        </span>
+      </p>
+    </div>
+  );
+}
+
+function AnalyticsVersionCard({
+  version,
+  platform,
+}: {
+  version: AnalyticsVersionStat;
+  platform: ViewModelPlatform;
+}) {
   return (
     <article className="mobile-analytics-card">
       <header className="mobile-analytics-card__header">
-        <span
-          className="platform-label"
-          style={
-            {
-              "--platform-color": version.platformColor,
-            } as React.CSSProperties
-          }
-        >
-          <i aria-hidden="true" />
-          {version.platform}
-        </span>
+        <PlatformLabel platform={platform} />
         <strong className="font-mono">{version.version}</strong>
       </header>
       <dl className="mobile-analytics-card__metrics">

@@ -32,7 +32,7 @@ function subscribeToConsent(onStoreChange: () => void) {
     }
 
     const consentWasRevoked =
-      window.__betaCadenceAnalyticsConsent === "granted" &&
+      window.__versionRecordAnalyticsConsent === "granted" &&
       (event.key === null || event.newValue !== "granted");
 
     if (consentWasRevoked) {
@@ -64,7 +64,7 @@ function subscribeToHydration() {
 }
 
 function updateGoogleConsent(consent: AnalyticsConsent) {
-  window.__betaCadenceAnalyticsConsent = consent;
+  window.__versionRecordAnalyticsConsent = consent;
   window.gtag?.("consent", "update", {
     ...deniedConsent,
     analytics_storage: consent,
@@ -79,12 +79,12 @@ function initializeGoogleConsent(consent: AnalyticsConsent | null) {
       window.dataLayer?.push(args);
     };
 
-  if (!window.__betaCadenceConsentDefaultsInitialized) {
+  if (!window.__versionRecordConsentDefaultsInitialized) {
     window.gtag("consent", "default", {
       ...deniedConsent,
       wait_for_update: 500,
     });
-    window.__betaCadenceConsentDefaultsInitialized = true;
+    window.__versionRecordConsentDefaultsInitialized = true;
   }
 
   if (consent) {
@@ -127,7 +127,7 @@ function ConsentedGoogleAnalytics({
   return (
     <>
       <Script
-        id="beta-cadence-ga-init"
+        id="version-record-ga-init"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
@@ -135,13 +135,13 @@ function ConsentedGoogleAnalytics({
             window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
             window.gtag('js', new Date());
             window.gtag('config', ${serializedMeasurementId});
-            window.__betaCadenceAnalyticsReady = true;
+            window.__versionRecordAnalyticsReady = true;
             window.dispatchEvent(new Event(${serializedReadyEvent}));
           `,
         }}
       />
       <Script
-        id="beta-cadence-ga"
+        id="version-record-ga"
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(
           measurementId,
@@ -196,7 +196,7 @@ export function AnalyticsConsentManager({
 
   function chooseConsent(nextConsent: AnalyticsConsent) {
     const isWithdrawal = consent === "granted" && nextConsent === "denied";
-    window.__betaCadenceAnalyticsConsent = nextConsent;
+    window.__versionRecordAnalyticsConsent = nextConsent;
     updateGoogleConsent(nextConsent);
     const wasPersisted = storeConsent(nextConsent);
     setMemoryConsent(wasPersisted ? null : nextConsent);

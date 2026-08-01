@@ -1,0 +1,925 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-29",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/120283",
+      "title": "What's new in the updates for macOS Sequoia 15",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["macOS", "Sequoia", "release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/121011",
+      "title": "What's new for enterprise in macOS Sequoia",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["macOS", "Sequoia", "enterprise", "release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-15-release-notes",
+      "title": "macOS Sequoia 15 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["macOS", "Sequoia", "developer release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_1-release-notes",
+      "title": "macOS Sequoia 15.1 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["macOS", "Sequoia", "developer release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_2-release-notes",
+      "title": "macOS Sequoia 15.2 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["macOS", "Sequoia", "developer release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_3-release-notes",
+      "title": "macOS Sequoia 15.3 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["macOS", "Sequoia", "developer release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_4-release-notes",
+      "title": "macOS Sequoia 15.4 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["macOS", "Sequoia", "developer release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_5-release-notes",
+      "title": "macOS Sequoia 15.5 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["macOS", "Sequoia", "developer release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_6-release-notes",
+      "title": "macOS Sequoia 15.6 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["macOS", "Sequoia", "developer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/121163",
+      "title": "About watchOS 11 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["watchOS", "release notes"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2024/09/watchos-11-is-available-today/",
+      "title": "watchOS 11 is available today",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2024-09-16T00:00:00.000Z",
+      "topics": ["watchOS", "availability", "features"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-11-release-notes",
+      "title": "watchOS 11 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["watchOS", "developer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/106336",
+      "title": "About Apple TV 4K and Apple TV HD software updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["tvOS", "Apple TV", "release notes"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2024/09/tvos-18-is-now-available/",
+      "title": "tvOS 18 is now available",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2024-09-16T00:00:00.000Z",
+      "topics": ["tvOS", "availability", "features"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-18-release-notes",
+      "title": "tvOS 18 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["tvOS", "developer release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-18_1-release-notes",
+      "title": "tvOS 18.1 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["tvOS", "developer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/121569",
+      "title": "About the security content of tvOS 18.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2024-10-28T00:00:00.000Z",
+      "topics": ["tvOS", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/121164",
+      "title": "About visionOS 2 Updates",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["visionOS", "release notes"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2024/09/visionos-2-for-apple-vision-pro-is-available-today/",
+      "title": "visionOS 2 for Apple Vision Pro is available today",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "publishedAt": "2024-09-16T00:00:00.000Z",
+      "topics": ["visionOS", "availability", "features"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-2-release-notes",
+      "title": "visionOS 2 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["visionOS", "developer release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-2_1-release-notes",
+      "title": "visionOS 2.1 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["visionOS", "developer release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-2_2-release-notes",
+      "title": "visionOS 2.2 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["visionOS", "developer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/121566",
+      "title": "About the security content of visionOS 2.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2024-10-28T00:00:00.000Z",
+      "topics": ["visionOS", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/121845",
+      "title": "About the security content of visionOS 2.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2024-12-11T00:00:00.000Z",
+      "topics": ["visionOS", "security", "CVE"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-15-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/macos-release-notes/macos-15-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "macOS Sequoia 15.0 centered its public release on Continuity and everyday productivity: iPhone Mirroring put an iPhone interface on the Mac, while native tiling added fast side-by-side and corner layouts. ",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.0 — iPhone Mirroring and Easier window tiling"}]
+              },
+              {
+                "text": "Safari, Passwords, Messages, Maps, Notes, Photos, and video-conferencing workflows also received substantial additions.",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.0"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Administration and development"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "For managed fleets, Sequoia introduced declarative software-update management, controls for Safari extensions and storage devices, and secure deployment of managed executables and scripts. ",
+                "citations": [{"url": "https://support.apple.com/en-us/121011", "locator": "macOS Sequoia 15.0 — Device Management"}]
+              },
+              {
+                "text": "The SDK notes also document compatibility changes and fixes across frameworks such as Maps, RealityKit, StoreKit, and SwiftUI.",
+                "citations": [{"url": "https://developer.apple.com/documentation/macos-release-notes/macos-15-release-notes", "locator": "macOS Sequoia 15 Release Notes"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-macos-15-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/macos-release-notes/macos-15_1-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "macOS 15.1 delivered Sequoia's first Apple Intelligence feature set on supported Apple-silicon Macs, including Writing Tools, a redesigned Siri experience, natural-language Photos search, Clean Up, notification summaries, and Reduce Interruptions. ",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.1 — Apple Intelligence"}]
+              },
+              {
+                "text": "It also added drag-and-drop file transfer to iPhone Mirroring and Hearing Protection support for eligible AirPods Pro 2 configurations.",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.1 — iPhone Mirroring and AirPods"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Managed environments"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "Administrators gained MDM controls for Writing Tools and Mail summaries, alongside fixes for login delays, upgrades involving incomplete local accounts, content filters, and older VPN products.",
+                "citations": [{"url": "https://support.apple.com/en-us/121011", "locator": "macOS Sequoia 15.1"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-macos-15-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/macos-release-notes/macos-15_2-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "macOS 15.2 expanded Apple Intelligence with Image Playground, ChatGPT access through Siri and Writing Tools, and a free-form instruction option for rewrites. ",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.2 — Apple Intelligence"}]
+              },
+              {
+                "text": "Safari added HTTPS upgrades and simpler data transfer, while Find My gained Share Item Location and the Weather app became available from the menu bar.",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.2 — Safari and additional improvements"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Administration"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "MDM could govern ChatGPT integration and image generation, and the release improved hardware-security-key authentication, firewall and content-filter stability, and enrollment service discovery.",
+                "citations": [{"url": "https://support.apple.com/en-us/121011", "locator": "macOS Sequoia 15.2"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-macos-15-3",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/macos-release-notes/macos-15_3-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "macOS 15.3 added Genmoji creation, repeat-equals behavior in Calculator, and clearer controls and presentation for notification summaries. ",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.3"}]
+              },
+              {
+                "text": "Apple temporarily suspended summaries for News & Entertainment apps while keeping the broader notification-summary system available.",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.3 — notification summaries"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Defaults and management"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "Apple Intelligence became enabled by default during supported setup and upgrade flows, while MDM added controls for external intelligence accounts and Notes transcript summaries. ",
+                "citations": [{"url": "https://support.apple.com/en-us/121011", "locator": "macOS Sequoia 15.3"}]
+              },
+              {
+                "text": "The SDK also corrected keyboard-event handling for text fields and editors inside NavigationSplitView.",
+                "citations": [{"url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_3-release-notes", "locator": "SwiftUI — Resolved Issues"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-macos-15-4",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/macos-release-notes/macos-15_4-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "macOS 15.4 brought Apple Intelligence memory movies to Photos, added Sketch to Image Playground, expanded supported languages and locales, and introduced Mail Categorization. ",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.4 — Apple Intelligence and Mail"}]
+              },
+              {
+                "text": "Photos organization, Matter robot-vacuum support, Screen Time persistence, accessibility behavior, and external-display Night Shift were also updated.",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.4 — Photos and additional enhancements"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Developer and enterprise scope"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "The 15.4 SDK made FSKit available for user-space file systems and documented new storage and driver capabilities. ",
+                "citations": [{"url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_4-release-notes", "locator": "FSKit and SCSIControllerDriverKit"}]
+              },
+              {
+                "text": "Managed deployments gained passkey and hardware-key enrollment, beta-program controls, and additional software-update and network policy behavior.",
+                "citations": [{"url": "https://support.apple.com/en-us/121011", "locator": "macOS Sequoia 15.4"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-macos-15-5",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/macos-release-notes/macos-15_5-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "macOS 15.5 was primarily a maintenance release. Its named consumer-facing change notified parents when a Screen Time passcode was used on a child's device. ",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.5"}]
+              },
+              {
+                "text": "Developer notes record fixes for large network-share enumeration, Pro Display calibration on M4 MacBook Pro, helper registration, and StoreKit eligibility checks.",
+                "citations": [{"url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_5-release-notes", "locator": "Resolved Issues"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Enterprise maintenance"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "Enterprise changes covered DHCPv6 naming, setup behavior, Platform SSO reliability, repeated screen-sharing alerts, and notice that the AFP client was deprecated.",
+                "citations": [{"url": "https://support.apple.com/en-us/121011", "locator": "macOS Sequoia 15.5"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-macos-15-6",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/macos-release-notes/macos-15_6-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "macOS 15.6 was a focused bug-fix and security update rather than a feature release. ",
+                "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.6"}]
+              },
+              {
+                "text": "Its developer notes identify a corrected DFU restore failure affecting Finder and Apple Configurator.",
+                "citations": [{"url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_6-release-notes", "locator": "General — Resolved Issues"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Enterprise reliability"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "Apple also documented fixes for full-installer downloads, DHCP behind transparent proxies, migration in Setup Assistant, unexpected Recovery boots, Platform SSO enrollment, and 802.1X credential timeouts.",
+                "citations": [{"url": "https://support.apple.com/en-us/121011", "locator": "macOS Sequoia 15.6"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-watchos-11-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/watchos-release-notes/watchos-11-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "watchOS 11 paired new health context from Vitals and training load with more flexible Activity rings and sleep-apnea notifications on eligible hardware and in supported regions. ",
+                "citations": [{"url": "https://www.apple.com/newsroom/2024/09/watchos-11-is-available-today/", "locator": "Health and fitness; Availability"}]
+              },
+              {
+                "text": "The Smart Stack gained suggested content and Live Activities, while Check In, Translate, Double Tap scrolling, and the Tides app broadened day-to-day use.",
+                "citations": [{"url": "https://www.apple.com/newsroom/2024/09/watchos-11-is-available-today/", "locator": "Smart Stack; Check In, Translate, and Double Tap; Tides App"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Developer changes"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "For apps, watchOS 11 added Swift Charts plotting capabilities and SwiftUI refinements, while deprecating StoreKit's original in-app-purchase API in favor of StoreKit 2.",
+                "citations": [{"url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-11-release-notes", "locator": "StoreKit, Swift Charts, and SwiftUI"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-tvos-18-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/tvos-release-notes/tvos-18-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "tvOS 18 added InSight to supported Apple TV+ playback, presenting scene-aware information about performers, characters, and music. ",
+                "citations": [{"url": "https://support.apple.com/en-us/106336", "locator": "tvOS 18 — InSight"}]
+              },
+              {
+                "text": "It also improved dialogue clarity and automatic subtitles, added Portraits screen savers and FaceTime Live Captions, redesigned Fitness+, and expanded SharePlay control in Music.",
+                "citations": [{"url": "https://support.apple.com/en-us/106336", "locator": "tvOS 18"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Developer changes"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "The tvOS 18 SDK increased on-demand resource limits, changed several framework behaviors, and documented migration work such as moving legacy in-app purchases to StoreKit 2.",
+                "citations": [{"url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-18-release-notes", "locator": "App Store, StoreKit, and framework notes"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-tvos-18-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/tvos-release-notes/tvos-18_1-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "tvOS 18.1 was a maintenance update described by Apple as improving performance and stability. ",
+                "citations": [{"url": "https://support.apple.com/en-us/106336", "locator": "tvOS 18.1"}]
+              },
+              {
+                "text": "Its SDK notes identify fixes for screen-saver availability reporting, StoreKit Testing offer identifiers, and availability checks in SwiftUI builders.",
+                "citations": [{"url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-18_1-release-notes", "locator": "Screen Saver, StoreKit, and SwiftUI"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Security content"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "The accompanying security advisory covers fixes across app support, media parsing, kernel and backup handling, and WebKit.",
+                "citations": [{"url": "https://support.apple.com/en-us/121569", "locator": "tvOS 18.1 security content"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-visionos-2-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/visionos-release-notes/visionos-2-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "visionOS 2 expanded Photos with spatial-photo conversion, SharePlay, collections, and video trimming; added faster system gestures; and allowed users to reorganize Home View. ",
+                "citations": [{"url": "https://support.apple.com/en-us/121164", "locator": "visionOS 2.0 — Photos, Home View, and Input"}]
+              },
+              {
+                "text": "Safari gained immersive video and panoramas, Guest User could retain a recent guest's calibration for 30 days, and Travel Mode added train support.",
+                "citations": [{"url": "https://support.apple.com/en-us/121164", "locator": "visionOS 2.0 — Safari, Guest User, and Travel Mode"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Spatial app platform"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "The visionOS 2 SDK expanded app placement and volumetric-window behavior, enabled game-controller interaction with system UI, restored scene placement, and added RealityKit, SwiftUI, and developer-tool capabilities.",
+                "citations": [{"url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-2-release-notes", "locator": "App Placement, Game Controller, Scenes, RealityKit, and SwiftUI"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-visionos-2-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/visionos-release-notes/visionos-2_1-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "visionOS 2.1 was a maintenance release that Apple characterized as containing important bug fixes and security updates. ",
+                "citations": [{"url": "https://support.apple.com/en-us/121164", "locator": "visionOS 2.1"}]
+              },
+              {
+                "text": "Apple's developer notes call out a fix for Apple Music songs and music videos that could fail to play.",
+                "citations": [{"url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-2_1-release-notes", "locator": "Apple Music — Resolved Issues"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Security content"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "The security record documents additional protections for shortcuts, media and font parsing, backups, Siri data, Safari privacy, and WebKit processing.",
+                "citations": [{"url": "https://support.apple.com/en-us/121566", "locator": "visionOS 2.1 security content"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-visionos-2-2",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://developer.apple.com/documentation/visionos-release-notes/visionos-2_2-release-notes",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {"style": "h2", "text": "Release overview"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "visionOS 2.2 made Mac Virtual Display available in wide and ultrawide aspect ratios, added Mac audio routing to Apple Vision Pro, and expanded Apple TV sports viewing with Multiview and SharePlay. ",
+                "citations": [{"url": "https://support.apple.com/en-us/121164", "locator": "visionOS 2.2 — Mac Virtual Display and Apple TV"}]
+              },
+              {
+                "text": "Safari also gained support for spatial photos and videos embedded on compatible web pages.",
+                "citations": [{"url": "https://support.apple.com/en-us/121164", "locator": "visionOS 2.2 — Safari"}]
+              }
+            ]
+          },
+          {"style": "h2", "text": "Developer and security changes"},
+          {
+            "style": "normal",
+            "spans": [
+              {
+                "text": "Developer notes document Mac Virtual Display compatibility fixes and new direct-manipulation and local-handoff behavior in TabletopKit. ",
+                "citations": [{"url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-2_2-release-notes", "locator": "Mac Virtual Display and TabletopKit"}]
+              },
+              {
+                "text": "The security advisory records fixes across storage, images, credentials, kernel memory, passwords, and WebKit.",
+                "citations": [{"url": "https://support.apple.com/en-us/121845", "locator": "visionOS 2.2 security content"}]
+              }
+            ]
+          }
+        ]
+      },
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"}
+    }
+  ],
+  "events": [
+    {
+      "target": {"releaseVersionId": "version-macos-15-0", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public macOS Sequoia 15.0 release introduced iPhone Mirroring, native window tiling, major Safari and Passwords changes, and a broad set of communication and administration features.",
+      "citations": [
+        {"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.0"},
+        {"url": "https://support.apple.com/en-us/121011", "locator": "macOS Sequoia 15.0"}
+      ],
+      "changes": [
+        {"key":"macos-15-iphone-mirroring","title":"iPhone Mirroring on Mac","canonicalSummary":"A Continuity experience lets a Mac display and control a nearby iPhone while also surfacing actionable iPhone notifications.","category":"feature","action":"introduced","inheritance":"delta","summary":"The initial Sequoia release added iPhone app control with Mac input devices and brought iPhone notifications into the Mac workflow.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.0 — iPhone Mirroring"}]},
+        {"key":"macos-15-window-tiling","title":"Built-in window tiling","canonicalSummary":"macOS gained native edge, corner, keyboard, and menu actions for arranging application windows in common tiled layouts.","category":"feature","action":"introduced","inheritance":"delta","summary":"Windows could be placed side by side or into screen corners without a separate window-management utility.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.0 — Easier window tiling"}]},
+        {"key":"macos-15-safari-reading-viewing-tools","title":"Safari Highlights, Reader, Viewer, and Distraction Control","canonicalSummary":"Safari added tools for extracting page context, simplifying articles and video, and hiding distracting page elements.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Browsing gained Highlights, a redesigned Reader, a focused video Viewer, and user-selected Distraction Control.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.0 — Safari"}]},
+        {"key":"macos-15-passwords-app","title":"Dedicated Passwords app","canonicalSummary":"A standalone app organizes passwords, passkeys, Wi-Fi credentials, and verification codes with encrypted synchronization across supported devices.","category":"feature","action":"introduced","inheritance":"delta","summary":"Credential management moved into a dedicated Passwords experience with verification-code support and iCloud synchronization.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.0 — Passwords"}]},
+        {"key":"macos-15-messages-formatting-scheduling","title":"Richer Messages composition and reactions","canonicalSummary":"Messages added animated text effects, text formatting, expanded Tapbacks, and scheduled sending.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Users could style text, react with emoji or stickers, animate parts of a message, and schedule messages for later delivery.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.0 — Messages"}]},
+        {"key":"macos-15-declarative-device-management","title":"Expanded declarative device management","canonicalSummary":"Managed Mac deployments gained declarative software-update control, Safari extension policy, storage restrictions, and secure managed executable delivery.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Sequoia broadened MDM control of updates, browser extensions, external or network storage, scripts, executables, and Platform SSO.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.0 — Device Management"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-macos-15-1", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public macOS 15.1 release delivered the first Apple Intelligence capabilities on supported Macs and completed file drag and drop for iPhone Mirroring.",
+      "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.1"}],
+      "changes": [
+        {"key":"macos-15-1-writing-tools","title":"Systemwide Writing Tools","canonicalSummary":"Supported text fields gained tools for rewriting, proofreading, and summarizing selected text.","category":"feature","action":"introduced","inheritance":"delta","summary":"Writing Tools became available across compatible applications, offering alternate phrasing, language corrections, and summaries.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.1 — Writing Tools"}]},
+        {"key":"macos-15-1-siri-redesign","title":"Redesigned Siri with typing and context","canonicalSummary":"Siri gained a new screen-edge presentation, typed input, stronger conversational continuity, and product-help knowledge.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Supported Macs received Type to Siri, a responsive visual treatment, better handling of conversational corrections, and Apple product guidance.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.1 — Siri"}]},
+        {"key":"macos-15-1-photos-intelligence","title":"Natural-language Photos tools","canonicalSummary":"Photos added descriptive search, generated memory movies, and Clean Up for removing distracting image elements.","category":"feature","action":"introduced","inheritance":"delta","summary":"Users could search for media in ordinary language, describe a memory movie, and remove unwanted objects from photos.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.1 — Photos"}]},
+        {"key":"macos-15-1-notification-intelligence","title":"Notification summaries and Reduce Interruptions","canonicalSummary":"Apple Intelligence added condensed notification views and a Focus mode intended to admit only time-sensitive alerts.","category":"feature","action":"introduced","inheritance":"delta","summary":"Supported Macs could summarize notifications and use Reduce Interruptions to suppress lower-priority alerts.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.1 — Notifications"}]},
+        {"key":"macos-15-1-iphone-mirroring-drag-drop","title":"Drag and drop for iPhone Mirroring","canonicalSummary":"Files and media can move between Mac and iPhone through direct drag-and-drop interaction in iPhone Mirroring.","category":"enhancement","action":"changed","inheritance":"delta","summary":"The release completed a key Continuity workflow by enabling direct transfer of files, photos, and videos in either direction.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.1 — iPhone Mirroring"}]},
+        {"key":"macos-15-1-enterprise-ai-controls","title":"Enterprise controls for Writing Tools and summaries","canonicalSummary":"MDM gained policy controls for Writing Tools and Mail summarization alongside login, upgrade, and networking fixes.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Administrators could manage initial AI features while benefiting from fixes to passcode-policy login, upgrades, content filters, and legacy VPN compatibility.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.1"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-macos-15-2", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public macOS 15.2 release expanded Apple Intelligence with image generation and ChatGPT integration while adding Safari, Find My, search, and menu-bar improvements.",
+      "citations": [{"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.2"}],
+      "changes": [
+        {"key":"macos-15-2-image-playground","title":"Image Playground","canonicalSummary":"A new image-generation experience creates stylized images from concepts, descriptions, and people in a user's photo library.","category":"feature","action":"introduced","inheritance":"delta","summary":"Image Playground arrived with animation and illustration styles and integrations in Messages, Freeform, and compatible third-party apps.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.2 — Image Playground"}]},
+        {"key":"macos-15-2-chatgpt-integration","title":"ChatGPT in Siri and Writing Tools","canonicalSummary":"Siri and Writing Tools can hand supported requests to ChatGPT, with optional account sign-in and a no-account path.","category":"feature","action":"introduced","inheritance":"delta","summary":"The release added ChatGPT-backed answers and composition while documenting different data handling for anonymous and signed-in use.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.2 — ChatGPT support"}]},
+        {"key":"macos-15-2-describe-writing-change","title":"Describe Your Change in Writing Tools","canonicalSummary":"Writing Tools gained an open-ended instruction field for transformations beyond preset rewrite, proofread, and summary actions.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Users could describe the form or tone they wanted instead of selecting only a predefined transformation.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.2 — Additional Apple Intelligence features"}]},
+        {"key":"macos-15-2-safari-security-transfer","title":"Safari HTTPS and data-transfer improvements","canonicalSummary":"Safari began attempting HTTPS upgrades broadly and simplified importing and exporting history, bookmarks, and passwords.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Browsing defaults favored encrypted connections and made browser-data transfer easier, alongside new Start Page backgrounds.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.2 — Safari"}]},
+        {"key":"macos-15-2-share-item-location","title":"Share Item Location in Find My","canonicalSummary":"Find My can create a temporary, privacy-conscious way to share an accessory's location with a trusted third party such as an airline.","category":"feature","action":"introduced","inheritance":"delta","summary":"Owners of AirTag and Find My network accessories gained a recovery workflow for sharing location with selected organizations or people.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.2 — additional improvements"}]},
+        {"key":"macos-15-2-managed-intelligence-integrations","title":"MDM controls for AI integrations and image generation","canonicalSummary":"Managed Mac administrators can restrict external Apple Intelligence integrations and image-generation capabilities.","category":"enhancement","action":"changed","inheritance":"delta","summary":"The update exposed management controls for ChatGPT and Image Playground and improved security-key and filtered-network reliability.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.2"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-macos-15-3", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public macOS 15.3 release added Genmoji, refined notification summaries, changed the Apple Intelligence setup default, and included targeted Calculator, networking, and SwiftUI fixes.",
+      "citations": [
+        {"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.3"},
+        {"url": "https://support.apple.com/en-us/121011", "locator": "macOS Sequoia 15.3"}
+      ],
+      "changes": [
+        {"key":"macos-15-3-genmoji","title":"Genmoji creation","canonicalSummary":"Apple Intelligence can generate custom emoji-like stickers from a description for use in Messages and compatible applications.","category":"feature","action":"introduced","inheritance":"delta","summary":"Genmoji creation became available across Messages and other supported text and sticker workflows.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.3 — Genmoji"}]},
+        {"key":"macos-15-3-calculator-repeat","title":"Repeat the last Calculator operation","canonicalSummary":"Calculator repeats the previous mathematical operation when the equals control is selected again.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Repeated equals presses now apply the last operation again, matching a familiar calculator interaction.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.3 — Calculator"}]},
+        {"key":"macos-15-3-notification-summary-controls","title":"Refined notification-summary controls","canonicalSummary":"Notification summaries gained Lock Screen settings and distinct styling, while News and Entertainment summaries were temporarily paused.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Users could manage summaries more directly, identify summarized alerts more easily, and were informed of a temporary category-specific suspension.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.3 — notification summaries"}]},
+        {"key":"macos-15-3-intelligence-default-enabled","title":"Apple Intelligence enabled by default during setup","canonicalSummary":"Eligible new and upgrading Mac configurations enable Apple Intelligence automatically unless the user or management configuration turns it off.","category":"behavior","action":"changed","inheritance":"delta","summary":"The onboarding default changed from opt-in behavior to automatic enablement on supported devices, subject to management controls.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/macos-release-notes/macos-15_3-release-notes","locator":"Apple Intelligence — New Features"}]},
+        {"key":"macos-15-3-enterprise-intelligence-policy","title":"External-intelligence account policy","canonicalSummary":"MDM can require a specified Workspace ID for external intelligence integrations and can disable Notes transcription summaries.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Organizations gained tighter identity and feature policy around ChatGPT-linked requests and AI-generated transcript summaries.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.3"}]},
+        {"key":"macos-15-3-swiftui-keypress-fix","title":"SwiftUI key-press handling fix","canonicalSummary":"The SwiftUI onKeyPress modifier now works in documented text-field and text-editor placements inside NavigationSplitView.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"A keyboard-event failure affecting text controls embedded in NavigationSplitView was corrected for developers.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/macos-release-notes/macos-15_3-release-notes","locator":"SwiftUI — Resolved Issues"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-macos-15-4", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public macOS 15.4 release expanded Apple Intelligence and Photos, introduced Mail Categorization and FSKit, and added Home, accessibility, and enterprise-management improvements.",
+      "citations": [
+        {"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.4"},
+        {"url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_4-release-notes", "locator": "macOS Sequoia 15.4 Release Notes"}
+      ],
+      "changes": [
+        {"key":"macos-15-4-memory-movies-sketch-languages","title":"Expanded Apple Intelligence creation tools","canonicalSummary":"Photos can generate memory movies from descriptions, Image Playground adds a Sketch style, and Apple Intelligence supports more languages and English locales.","category":"enhancement","action":"changed","inheritance":"delta","summary":"The update broadened supported languages and added new image and memory-generation options on eligible Macs.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.4 — Apple Intelligence"}]},
+        {"key":"macos-15-4-mail-categorization","title":"Mail Categorization","canonicalSummary":"Mail automatically groups incoming messages into categories intended to surface primary and time-sensitive communication.","category":"feature","action":"introduced","inheritance":"delta","summary":"The Mail inbox gained automatic categories to help users distinguish important messages from transactions, updates, and promotions.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.4 — Mail"}]},
+        {"key":"macos-15-4-photos-organization","title":"Photos filtering and organization controls","canonicalSummary":"Photos added additional library filters, album sorting, collection ordering, and controls for recently viewed or shared items.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Library management became more consistent across collections, and Clean Up gained a Retouch brush.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.4 — Photos"}]},
+        {"key":"macos-15-4-matter-robot-vacuums","title":"Matter robot-vacuum support in Home","canonicalSummary":"The Home app can control compatible Matter robot vacuums and include them in scenes and automations.","category":"feature","action":"introduced","inheritance":"delta","summary":"Supported robot vacuums joined the Home ecosystem with direct control and automation participation.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.4 — additional enhancements"}]},
+        {"key":"macos-15-4-display-screen-time-fixes","title":"External-display and Screen Time reliability","canonicalSummary":"The update corrected Night Shift on some external displays and kept child App Limits in force after an app was removed and reinstalled.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"Two user-facing fixes addressed external-display color scheduling and a route around Screen Time App Limits.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.4 — enhancements and bug fixes"}]},
+        {"key":"macos-15-4-fskit","title":"FSKit user-space file systems","canonicalSummary":"FSKit became available for delivering user-space file systems as application extensions integrated with Disk Arbitration.","category":"developerApi","action":"introduced","inheritance":"delta","summary":"Developers gained a supported framework for implementing file systems outside the kernel through app extensions.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/macos-release-notes/macos-15_4-release-notes","locator":"FSKit — New Features"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-macos-15-5", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public macOS 15.5 release concentrated on Screen Time, network shares, display calibration, helper registration, managed networking, and Platform SSO reliability.",
+      "citations": [
+        {"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.5"},
+        {"url": "https://developer.apple.com/documentation/macos-release-notes/macos-15_5-release-notes", "locator": "Resolved Issues"}
+      ],
+      "changes": [
+        {"key":"macos-15-5-screen-time-passcode-alert","title":"Screen Time passcode-use notification","canonicalSummary":"Parents receive a notification when the Screen Time passcode is used on a child's device.","category":"feature","action":"introduced","inheritance":"delta","summary":"The update made use of a child's Screen Time passcode visible to the managing parent.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/120283","locator":"macOS Sequoia 15.5"}]},
+        {"key":"macos-15-5-finder-network-share-enumeration","title":"Large network-share enumeration fix","canonicalSummary":"Finder corrected inaccurate enumeration of network shares containing large quantities of data.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"Network shares with substantial directory contents could be listed correctly after the Finder fix.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/macos-release-notes/macos-15_5-release-notes","locator":"Finder — Resolved Issues"}]},
+        {"key":"macos-15-5-pro-display-calibrator-reboot","title":"Pro Display Calibrator reboot fix","canonicalSummary":"Custom display calibration no longer causes a system reboot on affected 14-inch and 16-inch M4 MacBook Pro models.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"A hardware-specific restart during Pro Display Calibrator customization was corrected.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/macos-release-notes/macos-15_5-release-notes","locator":"Pro Display Calibrator — Resolved Issues"}]},
+        {"key":"macos-15-5-service-management-helper-registration","title":"Helper executable registration fix","canonicalSummary":"Service Management corrected a failure that prevented applications from registering helper executables.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"Apps using supported Service Management workflows could again register their helper components.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/macos-release-notes/macos-15_5-release-notes","locator":"Service Management — Resolved Issues"}]},
+        {"key":"macos-15-5-screen-sharing-alerts","title":"Repeated screen-sharing alert fix","canonicalSummary":"Control Center no longer repeatedly warns that the same screen-sharing application is accessing the display.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"The release removed duplicate privacy alerts for ongoing screen-sharing sessions in the documented case.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.5"}]},
+        {"key":"macos-15-5-platform-sso-dhcpv6","title":"Platform SSO and DHCPv6 improvements","canonicalSummary":"Enterprise networking gained DHCPv6 fully qualified domain-name support, while Platform SSO recovery and key attestation failures were corrected.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Managed environments received new DHCPv6 behavior and reliability fixes for Platform SSO during update and attestation workflows.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.5"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-macos-15-6", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public macOS 15.6 release was a maintenance update with documented fixes for DFU restore, installer retrieval, managed networking, Setup Assistant, Recovery boots, and Platform SSO.",
+      "citations": [
+        {"url": "https://support.apple.com/en-us/120283", "locator": "macOS Sequoia 15.6"},
+        {"url": "https://support.apple.com/en-us/121011", "locator": "macOS Sequoia 15.6"}
+      ],
+      "changes": [
+        {"key":"macos-15-6-dfu-restore","title":"DFU restore reliability","canonicalSummary":"Finder and Apple Configurator can again complete restores for devices affected by a documented DFU-mode failure.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"The update corrected unsuccessful DFU restores initiated through Finder or Apple Configurator.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/macos-release-notes/macos-15_6-release-notes","locator":"General — Resolved Issues"}]},
+        {"key":"macos-15-6-full-installer-fetch","title":"Full-installer download fix","canonicalSummary":"The softwareupdate command can successfully retrieve a complete macOS installer in the documented enterprise workflow.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"The command-line full-installer fetch operation was restored to reliable completion.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.6 — softwareupdate"}]},
+        {"key":"macos-15-6-transparent-proxy-dhcp","title":"DHCP through transparent proxies","canonicalSummary":"Mac computers can obtain an IP address through DHCP when a transparent proxy network extension is active.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"The release corrected DHCP address acquisition on networks using a transparent proxy extension.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.6 — DHCP"}]},
+        {"key":"macos-15-6-setup-assistant-migration","title":"Setup Assistant migration completion","canonicalSummary":"Setup Assistant completes when a managed configuration skips both terms acceptance and migration while a user attempts data transfer.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"A managed setup combination that could prevent migration from completing was corrected.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.6 — Setup Assistant"}]},
+        {"key":"macos-15-6-update-recovery-boot","title":"Post-update Recovery boot fix","canonicalSummary":"The update corrected a condition in which a Mac could boot into Recovery after software installation.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"Affected Macs now return to the normal startup path after applying an update.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.6 — Recovery"}]},
+        {"key":"macos-15-6-platform-sso-8021x","title":"Platform SSO and 802.1X reliability","canonicalSummary":"Platform SSO enrollment works with required associated domains, and manual 802.1X authentication allows more time for credential entry.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Two managed-authentication workflows were made more reliable through an enrollment fix and a longer credential timeout.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121011","locator":"macOS Sequoia 15.6 — Platform SSO and 802.1X"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-watchos-11-0", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public watchOS 11 release expanded health and training context, Activity flexibility, glanceable information, safety check-ins, translation, and outdoor planning.",
+      "citations": [
+        {"url": "https://www.apple.com/newsroom/2024/09/watchos-11-is-available-today/", "locator": "watchOS 11 is available today"},
+        {"url": "https://support.apple.com/en-us/121163", "locator": "watchOS 11"}
+      ],
+      "changes": [
+        {"key":"watchos-11-vitals-sleep-apnea","title":"Vitals and sleep-apnea notifications","canonicalSummary":"Vitals organizes overnight health metrics and can flag values outside a user's typical range, while eligible devices can surface signs associated with sleep apnea.","category":"feature","action":"introduced","inheritance":"delta","summary":"The release added overnight metric context and, where device and regional requirements were met, sleep-apnea notifications based on breathing disturbances.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://www.apple.com/newsroom/2024/09/watchos-11-is-available-today/","locator":"Health and fitness; availability footnotes"}]},
+        {"key":"watchos-11-training-load-activity-rings","title":"Training load and flexible Activity rings","canonicalSummary":"Workout effort can be compared across time through training load, and Activity goals can vary by day or pause without ending a streak.","category":"feature","action":"introduced","inheritance":"delta","summary":"Athletes gained longer-term exertion context, while rest days and variable schedules became easier to represent in Activity.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121163","locator":"watchOS 11 — Vitals, Training Load, and Activity"}]},
+        {"key":"watchos-11-smart-stack-live-activities","title":"Smarter Smart Stack and Live Activities","canonicalSummary":"The Smart Stack can suggest contextually relevant widgets, expose interactive controls, and show Live Activities from supported apps.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Glanceable information became more contextual and interactive, with live iPhone activity state available on the watch.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://www.apple.com/newsroom/2024/09/watchos-11-is-available-today/","locator":"Smart Stack"}]},
+        {"key":"watchos-11-check-in-translate-double-tap","title":"Check In, Translate, and Double Tap scrolling","canonicalSummary":"Apple Watch gained workout-aware Check In, on-watch translation, and broader one-handed scrolling through the Double Tap gesture.","category":"feature","action":"introduced","inheritance":"delta","summary":"Communication and safety tools expanded while supported watches gained another one-handed navigation option.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://www.apple.com/newsroom/2024/09/watchos-11-is-available-today/","locator":"Check In, the Translate App, and Scrolling with the Double Tap Gesture"}]},
+        {"key":"watchos-11-tides-offline-routes","title":"Tides and offline hiking routes","canonicalSummary":"A dedicated Tides app presents multi-day coastal conditions, while Maps can store supported hiking routes for offline use.","category":"feature","action":"introduced","inheritance":"delta","summary":"Outdoor planning gained tide forecasts and map-based access to routes when cellular or Wi-Fi service is unavailable.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://www.apple.com/newsroom/2024/09/watchos-11-is-available-today/","locator":"Tides App"},{"url":"https://support.apple.com/en-us/121163","locator":"watchOS 11 — Maps"}]},
+        {"key":"watchos-11-swift-charts-swiftui","title":"Swift Charts and SwiftUI additions","canonicalSummary":"The watchOS 11 SDK added function and vectorized plots plus SwiftUI controls for toolbar styling, input, and Dynamic Type behavior.","category":"developerApi","action":"introduced","inheritance":"delta","summary":"Developers gained more efficient chart rendering and watch-specific SwiftUI refinements for controls and text entry.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/watchos-release-notes/watchos-11-release-notes","locator":"Swift Charts and SwiftUI — New Features"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-tvos-18-0", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public tvOS 18 release added contextual information for Apple TV+ content, clearer speech and smarter subtitles, new screen savers, FaceTime captions, and redesigned fitness and music experiences.",
+      "citations": [
+        {"url": "https://support.apple.com/en-us/106336", "locator": "tvOS 18"},
+        {"url": "https://www.apple.com/newsroom/2024/09/tvos-18-is-now-available/", "locator": "tvOS 18 is now available"}
+      ],
+      "changes": [
+        {"key":"tvos-18-insight","title":"InSight for Apple TV+","canonicalSummary":"Supported Apple Original playback can display scene-aware actor, character, and song information, including through an iPhone used as the remote.","category":"feature","action":"introduced","inheritance":"delta","summary":"InSight added a contextual layer to eligible movies and series and provided a path to save identified music.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/106336","locator":"tvOS 18 — InSight"}]},
+        {"key":"tvos-18-enhance-dialogue","title":"Expanded Enhance Dialogue","canonicalSummary":"Real-time audio processing and machine learning make speech more distinct across additional speaker, receiver, and Bluetooth output configurations.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Dialogue enhancement expanded beyond its earlier output constraints on supported Apple TV 4K models.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/106336","locator":"tvOS 18 — Enhance Dialogue"}]},
+        {"key":"tvos-18-automatic-subtitles","title":"Context-aware automatic subtitles","canonicalSummary":"Subtitles can appear automatically after muting audio or skipping back, reducing the need to toggle captions manually.","category":"feature","action":"introduced","inheritance":"delta","summary":"tvOS began surfacing subtitles automatically in common situations where dialogue may have been missed.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/106336","locator":"tvOS 18 — Subtitles"}]},
+        {"key":"tvos-18-portraits-screensaver","title":"Portraits screen saver","canonicalSummary":"A Portraits category frames selected personal photos with layered color treatments and clock designs.","category":"feature","action":"introduced","inheritance":"delta","summary":"Supported Apple TV 4K models gained a personal-photo screen-saver style and faster category switching.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/106336","locator":"tvOS 18 — Screen savers"}]},
+        {"key":"tvos-18-facetime-live-captions-camera","title":"FaceTime Live Captions and dedicated Continuity Camera","canonicalSummary":"FaceTime can transcribe supported English conversations and keep an iPhone assigned for recurring Continuity Camera use.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Eligible Apple TV 4K models gained live call captions and a less repetitive camera-connection workflow.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/106336","locator":"tvOS 18 — FaceTime"}]},
+        {"key":"tvos-18-fitness-music-shareplay","title":"Redesigned Fitness+ and broader Music SharePlay","canonicalSummary":"Fitness+ reorganized discovery and saved content, while Music SharePlay let nearby participants queue songs and control playback from iPhone.","category":"enhancement","action":"changed","inheritance":"delta","summary":"The release refreshed workout navigation and made collaborative living-room music sessions easier to join and control.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/106336","locator":"tvOS 18 — Apple Fitness+ and Apple Music"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-tvos-18-1", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public tvOS 18.1 release was a maintenance update with documented screen-saver, StoreKit Testing, SwiftUI compatibility, and security fixes.",
+      "citations": [
+        {"url": "https://support.apple.com/en-us/106336", "locator": "tvOS 18.1"},
+        {"url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-18_1-release-notes", "locator": "Resolved Issues"}
+      ],
+      "changes": [
+        {"key":"tvos-18-1-performance-stability","title":"Performance and stability maintenance","canonicalSummary":"Apple characterized tvOS 18.1 as an update focused on performance and stability rather than new consumer features.","category":"enhancement","action":"changed","inheritance":"delta","summary":"The public release notes identify general platform maintenance without assigning additional named consumer features to 18.1.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/106336","locator":"tvOS 18.1"}]},
+        {"key":"tvos-18-1-screensaver-availability","title":"Screen-saver availability reporting fix","canonicalSummary":"Portraits and Memories or Slideshows screen savers now report their availability accurately in Settings and the screen-saver switcher.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"The interface no longer incorrectly presents affected screen-saver choices as available or unavailable.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/tvos-release-notes/tvos-18_1-release-notes","locator":"Screen Saver — Resolved Issues"}]},
+        {"key":"tvos-18-1-storekit-offer-identifier","title":"StoreKit Testing offer-identifier fix","canonicalSummary":"Subscription renewal information in StoreKit Testing now reports the correct offer identifier for offer codes.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"A testing-only metadata mismatch in subscription renewal data was corrected for developers.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/tvos-release-notes/tvos-18_1-release-notes","locator":"StoreKit — Resolved Issues"}]},
+        {"key":"tvos-18-1-swiftui-availability-builder","title":"SwiftUI availability-builder crash fix","canonicalSummary":"Availability checks inside WidgetBundleBuilder and SceneBuilder no longer crash on earlier operating-system versions with an unknown-version error.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"Developers could conditionally include widget and scene content without triggering the documented backward-compatibility crash.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/tvos-release-notes/tvos-18_1-release-notes","locator":"SwiftUI — Resolved Issues"}]},
+        {"key":"tvos-18-1-security-hardening","title":"Media, app, kernel, backup, and WebKit security fixes","canonicalSummary":"The tvOS 18.1 security update addressed flaws in shortcut consent, media and font parsing, private-data handling, backups, kernel memory, and web processing.","category":"security","action":"fixed","inheritance":"delta","summary":"Apple's advisory records multiple CVE-backed protections across system frameworks and WebKit for Apple TV HD and Apple TV 4K.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121569","locator":"tvOS 18.1 security content"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-visionos-2-0", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public visionOS 2 release expanded spatial memories, system navigation, app organization, immersive browsing, guest access, and travel use while broadening the spatial-app SDK.",
+      "citations": [
+        {"url": "https://support.apple.com/en-us/121164", "locator": "visionOS 2.0"},
+        {"url": "https://www.apple.com/newsroom/2024/09/visionos-2-for-apple-vision-pro-is-available-today/", "locator": "visionOS 2 availability"}
+      ],
+      "changes": [
+        {"key":"visionos-2-spatial-photos-shareplay","title":"Spatial-photo conversion and Photos SharePlay","canonicalSummary":"The Photos app can convert eligible library images into spatial photos and share supported memories with other Vision Pro users over FaceTime.","category":"feature","action":"introduced","inheritance":"delta","summary":"Past photos gained a one-tap spatial treatment, and Photos SharePlay created a shared viewing experience across headsets.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121164","locator":"visionOS 2.0 — Photos"}]},
+        {"key":"visionos-2-home-view-gestures","title":"Reorderable Home View and system gestures","canonicalSummary":"Users can rearrange native and compatible applications and use hand gestures to reach Home View, Control Center, time, volume, and battery information.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Application organization became user-controlled and common system functions became faster to access without looking upward.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121164","locator":"visionOS 2.0 — Home View and Input"}]},
+        {"key":"visionos-2-safari-immersive-web","title":"Immersive web video and panoramas","canonicalSummary":"Safari can present compatible web video on a large environment-backed screen and display panoramas as immersive surrounding images.","category":"feature","action":"introduced","inheritance":"delta","summary":"Web media gained spatial presentation modes alongside pinned tabs, profiles, and Siri page reading.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121164","locator":"visionOS 2.0 — Safari"}]},
+        {"key":"visionos-2-guest-user-retention","title":"Persistent recent Guest User setup","canonicalSummary":"Apple Vision Pro can retain the most recent guest's eye and hand calibration for up to 30 days.","category":"enhancement","action":"changed","inheritance":"delta","summary":"Repeat guests could avoid the full eye-and-hand setup process during the retention window.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121164","locator":"visionOS 2.0 — Guest User"}]},
+        {"key":"visionos-2-train-travel-mode-keyboard","title":"Train Travel Mode and keyboard awareness","canonicalSummary":"Travel Mode expanded to trains, and immersive experiences can reveal a paired Magic Keyboard or MacBook keyboard for physical typing.","category":"enhancement","action":"changed","inheritance":"delta","summary":"The release made the headset more practical on rail travel and reduced keyboard visibility friction in immersive spaces.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121164","locator":"visionOS 2.0 — Travel Mode and Input"}]},
+        {"key":"visionos-2-app-placement-volumes","title":"Flexible app placement and resizable volumes","canonicalSummary":"The system expanded placement distance and added controls for resizing volumetric windows, with updated volumes able to face a reclining user.","category":"developerApi","action":"introduced","inheritance":"delta","summary":"Spatial applications gained more flexible placement and volume presentation behavior through system and SDK changes.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/visionos-release-notes/visionos-2-release-notes","locator":"App Placement, Media Playback, and Window Resizing"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-visionos-2-1", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public visionOS 2.1 release focused on Apple Music playback reliability and a broad set of privacy, media-processing, backup, kernel, Siri, Safari, and WebKit security corrections.",
+      "citations": [
+        {"url": "https://support.apple.com/en-us/121164", "locator": "visionOS 2.1"},
+        {"url": "https://support.apple.com/en-us/121566", "locator": "visionOS 2.1 security content"}
+      ],
+      "changes": [
+        {"key":"visionos-2-1-apple-music-playback","title":"Apple Music playback fix","canonicalSummary":"Apple Music songs and music videos no longer fail to play in the documented visionOS 2.1 case.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"The developer release notes identify a direct playback reliability correction for audio and music-video content.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/visionos-release-notes/visionos-2_1-release-notes","locator":"Apple Music — Resolved Issues"}]},
+        {"key":"visionos-2-1-shortcuts-consent-security","title":"Shortcut consent and file-access protections","canonicalSummary":"Security fixes prevent a malicious app from running arbitrary shortcuts without consent or using shortcuts to reach restricted files.","category":"security","action":"fixed","inheritance":"delta","summary":"The release tightened path handling and logic around shortcut execution and protected-file access.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121566","locator":"App Support and Shortcuts"}]},
+        {"key":"visionos-2-1-media-font-image-security","title":"Media, font, and image parsing hardening","canonicalSummary":"Multiple bounds, memory, and validation fixes reduced crashes and information exposure from crafted video, font, image, and file inputs.","category":"security","action":"fixed","inheritance":"delta","summary":"Apple documented protections across AppleAVD, CoreText, Foundation, ImageIO, and Pro Res processing paths.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121566","locator":"AppleAVD, CoreText, Foundation, ImageIO, and Pro Res"}]},
+        {"key":"visionos-2-1-private-data-protections","title":"Private data, backup, and kernel protections","canonicalSummary":"The update corrected private-information exposure, sensitive logging, kernel memory handling, and malicious backup restoration paths.","category":"security","action":"fixed","inheritance":"delta","summary":"CoreMedia, IOSurface, Kernel, Managed Configuration, MobileBackup, and Siri received documented security corrections.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121566","locator":"CoreMedia Playback, IOSurface, Kernel, Managed Configuration, MobileBackup, and Siri"}]},
+        {"key":"visionos-2-1-safari-webkit-security","title":"Safari privacy and WebKit security fixes","canonicalSummary":"Safari and WebKit fixes addressed browsing-history leakage, cross-origin cookie handling, content-security-policy enforcement, and memory corruption.","category":"security","action":"fixed","inheritance":"delta","summary":"The release closed several browser privacy, isolation, and stability weaknesses documented with CVE identifiers.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121566","locator":"Safari Private Browsing and WebKit"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-visionos-2-2", "routeAlias": "public"},
+      "authorship": "originalSynthesis",
+      "summary": "The public visionOS 2.2 release centered on wide and ultrawide Mac Virtual Display, spatial web media, sports viewing, TabletopKit interaction, compatibility fixes, and security hardening.",
+      "citations": [
+        {"url": "https://support.apple.com/en-us/121164", "locator": "visionOS 2.2"},
+        {"url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-2_2-release-notes", "locator": "visionOS 2.2 Release Notes"}
+      ],
+      "changes": [
+        {"key":"visionos-2-2-mac-virtual-display-wide","title":"Wide and ultrawide Mac Virtual Display","canonicalSummary":"Mac Virtual Display gained wide and ultrawide layouts, including a 32:9 workspace described as equivalent to two side-by-side 5K displays.","category":"feature","action":"introduced","inheritance":"delta","summary":"Users could expand a connected Mac workspace far beyond the earlier single-display proportions.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121164","locator":"visionOS 2.2 — Mac Virtual Display"}]},
+        {"key":"visionos-2-2-mac-audio-routing","title":"Mac audio routed to Apple Vision Pro","canonicalSummary":"A Mac connected through Mac Virtual Display can route its audio output through Apple Vision Pro.","category":"feature","action":"introduced","inheritance":"delta","summary":"The virtual-display workflow gained headset audio output instead of limiting sound to the Mac or another device.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121164","locator":"visionOS 2.2 — Mac Virtual Display"}]},
+        {"key":"visionos-2-2-sports-multiview-shareplay","title":"Sports Multiview and live-event SharePlay","canonicalSummary":"The Apple TV app can show multiple supported MLS and MLB games at once and synchronize eligible live sports through SharePlay.","category":"feature","action":"introduced","inheritance":"delta","summary":"Sports viewing expanded to multi-game layouts and shared live-event sessions with other viewers.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121164","locator":"visionOS 2.2 — Apple TV"}]},
+        {"key":"visionos-2-2-safari-spatial-media","title":"Spatial media embedded on the web","canonicalSummary":"Safari can present compatible spatial photos and videos embedded directly in web pages.","category":"feature","action":"introduced","inheritance":"delta","summary":"Web publishers gained a route for delivering spatial media that users could enter from Safari.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://support.apple.com/en-us/121164","locator":"visionOS 2.2 — Safari"}]},
+        {"key":"visionos-2-2-mvd-compatibility-fixes","title":"Mac Virtual Display compatibility fixes","canonicalSummary":"Mac Virtual Display corrected Firefox video playback with Vision Pro speakers and aspect-ratio switching at non-default Mac resolutions.","category":"bugFix","action":"fixed","inheritance":"delta","summary":"Two documented failures involving browser video and custom display resolution were resolved.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/visionos-release-notes/visionos-2_2-release-notes","locator":"Mac Virtual Display — Resolved Issues"}]},
+        {"key":"visionos-2-2-tabletopkit-manipulation","title":"TabletopKit direct manipulation and handoff","canonicalSummary":"TabletopKit lets a user pick up nearby equipment with natural hand tracking and transfer it between hands without releasing it.","category":"developerApi","action":"introduced","inheritance":"delta","summary":"Spatial tabletop apps gained system-supported close manipulation and local hand-to-hand transfer behavior.","documentedStatus":"documented","evidenceState":"confirmed","citations":[{"url":"https://developer.apple.com/documentation/visionos-release-notes/visionos-2_2-release-notes","locator":"TabletopKit — New Features"}]}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-07-29T12:00:00Z"},
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

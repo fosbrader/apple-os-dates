@@ -1,0 +1,235 @@
+{
+  "formatVersion": "1.0",
+  "programId": "apple-beta-chronology-gap",
+  "generatedAt": "2026-07-31T08:09:13.938Z",
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "note": "Research candidates only. Validation does not authorize integration, IDs, Sanity mutation, page work, publication, or deployment."
+  },
+  "summary": {
+    "proposedCandidateCount": 3,
+    "notProposedCount": 0,
+    "byStatus": {
+      "readyForChronologyReview": 3
+    },
+    "byPlatform": {
+      "iOS": 3
+    },
+    "importantQualification": "Three iOS 13.3.1 public-beta identities pass the research evidence gate but remain blocked on independent chronology review."
+  },
+  "cohorts": [
+    {
+      "cohortId": "ios-patch-applicability",
+      "description": "Exact public-beta identities discovered during the 27-parent iOS patch applicability audit.",
+      "candidateCount": 3,
+      "sourcePaths": [
+        "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+        "research-handoffs/beta-chronology-gap/ios-patch-applicability/applicability-audit.json",
+        "research-handoffs/beta-chronology-gap/ios-patch-applicability/production-snapshot.json"
+      ],
+      "supersessionRule": "A later independently reviewed packet may supersede an identity only by naming the candidate ID and preserving the prior evidence/conflict trail."
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-1",
+      "originCohortId": "ios-patch-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.3.1",
+      "releaseVersionId": "version-ios-13-3-1",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2019-12-18",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T08:05:56.018Z",
+        "matchBasis": "Fresh published/no-CDN query found zero route or full identity matches; the exact releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "bgr-ios-13-3-1-pb1",
+          "locator": "sources.json sourceId=bgr-ios-13-3-1-pb1; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 1: exact iOS 13.3.1 public audience, displayed ordinal, and/or calendar date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "cultofmac-ios-13-3-1-pb1",
+          "locator": "sources.json sourceId=cultofmac-ios-13-3-1-pb1; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 1: exact iOS 13.3.1 public audience, displayed ordinal, and/or calendar date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-2",
+      "originCohortId": "ios-patch-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.3.1",
+      "releaseVersionId": "version-ios-13-3-1",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-01-14",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T08:05:56.018Z",
+        "matchBasis": "Fresh published/no-CDN query found zero route or full identity matches; the exact releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "9to5mac-ios-13-3-1-pb2",
+          "locator": "sources.json sourceId=9to5mac-ios-13-3-1-pb2; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 2: exact iOS 13.3.1 public audience, displayed ordinal, and/or calendar date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "forbes-ios-13-3-1-pb2",
+          "locator": "sources.json sourceId=forbes-ios-13-3-1-pb2; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 2: exact iOS 13.3.1 public audience, displayed ordinal, and/or calendar date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-3",
+      "originCohortId": "ios-patch-applicability",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "13.3.1",
+      "releaseVersionId": "version-ios-13-3-1",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2020-01-22",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "readyForChronologyReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T08:05:56.018Z",
+        "matchBasis": "Fresh published/no-CDN query found zero route or full identity matches; the exact releaseVersion parent exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "9to5mac-ios-13-3-1-pb3",
+          "locator": "sources.json sourceId=9to5mac-ios-13-3-1-pb3; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 3: exact iOS 13.3.1 public audience, displayed ordinal, and/or calendar date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+          "sourceId": "kobonemi-ios-13-3-1-pb3",
+          "locator": "sources.json sourceId=kobonemi-ios-13-3-1-pb3; verify the frozen raw and selected hashes in raw-evidence-locks.json before relying on the claim.",
+          "supports": "Public Beta 3: exact iOS 13.3.1 public audience, displayed ordinal, and/or calendar date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Independent chronology review is required before aggregation, ID creation, mutation, page work, publication, or deployment."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "notProposed": [],
+  "nextEvidenceWaves": [
+    {
+      "waveId": "ios-patch-applicability-independent-review",
+      "scope": "Independent review of candidates, negative applicability, reversible rows, production reconciliation, source independence, and conflicts.",
+      "artifactPaths": [
+        "research-handoffs/beta-chronology-gap/ios-patch-applicability/candidates.json",
+        "research-handoffs/beta-chronology-gap/ios-patch-applicability/applicability-audit.json",
+        "research-handoffs/beta-chronology-gap/ios-patch-applicability/conflicts.json"
+      ],
+      "estimatedCandidateCount": 3,
+      "countStatus": "confirmed",
+      "requiredNextStep": "A separate reviewer must author independent-review.json. The researcher must not author it."
+    }
+  ],
+  "validationStatus": {
+    "status": "passed",
+    "validatedAt": "2026-07-31T08:11:25.083Z",
+    "validator": "research-handoffs/beta-chronology-gap/ios-patch-applicability/validate-packet.mjs",
+    "summaryPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/validation.json"
+  }
+}

@@ -17,6 +17,10 @@ import * as fs from "fs";
 import * as path from "path";
 import * as dotenv from "dotenv";
 
+throw new Error(
+  "Retired: this seed omits audited lifecycle/provenance fields and uses unstable positional milestone keys. Use the audited history reconciler for chronology checks and migration:events:plan for the event/build migration.",
+);
+
 dotenv.config({ path: path.join(__dirname, "..", ".env.local") });
 
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;

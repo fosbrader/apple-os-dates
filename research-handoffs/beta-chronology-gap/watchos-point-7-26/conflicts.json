@@ -1,0 +1,116 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-watchos-point-7-26",
+  "generatedAt": "2026-07-31T07:53:46.696Z",
+  "conflictCount": 8,
+  "qualificationCount": 3,
+  "blockingConflictCount": 5,
+  "conflicts": [
+    {
+      "conflictId": "conflict:watchos:7.4:public-beta-7-living-table-omission",
+      "severity": "qualification",
+      "candidateKey": "watchOS|7.4|publicBeta|7|2021-04-07",
+      "sourceIds": [
+        "9to5-74-pb7",
+        "ithinkdiff-74-pb7",
+        "iculture-74-cycle"
+      ],
+      "disposition": "Retain the appearance with a mandatory qualification. Two independent exact reports outweigh a living-table omission; the omission is not affirmative contrary evidence.",
+      "version": "7.4",
+      "status": "retainedQualificationPendingIndependentReview"
+    },
+    {
+      "conflictId": "conflict:watchos:7.6:public-beta-5-living-table-omission",
+      "severity": "qualification",
+      "candidateKey": "watchOS|7.6|publicBeta|5|2021-07-08",
+      "sourceIds": [
+        "kob-76-pb5",
+        "nishiki-76-pb5",
+        "iculture-76-cycle"
+      ],
+      "disposition": "Retain the appearance with a mandatory qualification. Two independent exact reports support the public identity; preserve the living-table omission.",
+      "version": "7.6",
+      "status": "retainedQualificationPendingIndependentReview"
+    },
+    {
+      "conflictId": "conflict:watchos:8.1:first-public-label",
+      "severity": "blocking",
+      "candidateKey": "watchOS|8.1|publicBeta|2|2021-09-29",
+      "sourceIds": [
+        "forbes-81-first",
+        "kob-81-pb2",
+        "geeky-81-first"
+      ],
+      "disposition": "Blocked. The same first public appearance is explicitly labeled Public Beta 1 and Public Beta 2 by different publishers.",
+      "version": "8.1",
+      "status": "blockedPendingIndependentReview"
+    },
+    {
+      "conflictId": "conflict:watchos:8.4:public-beta-1-same-day-timing",
+      "severity": "qualification",
+      "candidateKey": "watchOS|8.4|publicBeta|1|2021-12-20",
+      "sourceIds": [
+        "kob-84-pb1",
+        "ontop-84-pb1",
+        "cultofmac-84-pb1-negative"
+      ],
+      "disposition": "Retain with timing qualification. The negative report predates the later same-day public appearance established by two independent sources.",
+      "version": "8.4",
+      "status": "retainedQualificationPendingIndependentReview"
+    },
+    {
+      "conflictId": "conflict:watchos:8.5:public-beta-4-date",
+      "severity": "blocking",
+      "candidateKey": "watchOS|8.5|publicBeta|4|2022-02-23",
+      "sourceIds": [
+        "imore8-public-rolling",
+        "kob-85-pb4",
+        "9to5-85-pb4",
+        "iculture-85-cycle"
+      ],
+      "disposition": "Blocked pending independent adjudication of February 22 versus February 23 for the public channel.",
+      "version": "8.5",
+      "status": "blockedPendingIndependentReview"
+    },
+    {
+      "conflictId": "conflict:watchos:8.5:public-beta-5-identity",
+      "severity": "blocking",
+      "candidateKey": "watchOS|8.5|publicBeta|5|2022-03-02",
+      "sourceIds": [
+        "imore8-public-rolling",
+        "9to5-85-pb5",
+        "iculture-85-cycle"
+      ],
+      "disposition": "Blocked because one retained article is internally inconsistent and the living chronology omits the public row.",
+      "version": "8.5",
+      "status": "blockedPendingIndependentReview"
+    },
+    {
+      "conflictId": "conflict:watchos:26.6:public-beta-3-date",
+      "severity": "blocking",
+      "candidateKey": "watchOS|26.6|publicBeta|3|2026-06-30",
+      "sourceIds": [
+        "mr-266-pb3",
+        "9to5-266-pb3",
+        "iculture-266-cycle"
+      ],
+      "disposition": "Blocked pending independent adjudication of June 29 versus June 30 for the public channel.",
+      "version": "26.6",
+      "status": "blockedPendingIndependentReview"
+    },
+    {
+      "conflictId": "conflict:watchos:26.6:public-beta-5-date",
+      "severity": "blocking",
+      "candidateKey": "watchOS|26.6|publicBeta|5|2026-07-14",
+      "sourceIds": [
+        "9to5-266-pb5",
+        "mr-266-pb5-dev",
+        "iculture-266-cycle"
+      ],
+      "disposition": "Blocked. The public update was observed July 14, while the living table assigns July 13 and the July 13 MacRumors report is developer-only.",
+      "version": "26.6",
+      "status": "blockedPendingIndependentReview"
+    }
+  ],
+  "reviewState": "pendingIndependentChronologyReview"
+}

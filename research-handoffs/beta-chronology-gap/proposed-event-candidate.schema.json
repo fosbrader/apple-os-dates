@@ -1,0 +1,739 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://versionrecord.com/schemas/apple-beta-chronology-candidate-register-1.0.json",
+  "title": "Apple beta chronology candidate register",
+  "description": "Research-only proposed releaseEvent identities. Validation never authorizes Sanity mutation or publication.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "formatVersion",
+    "programId",
+    "generatedAt",
+    "safety",
+    "summary",
+    "cohorts",
+    "candidates",
+    "notProposed",
+    "nextEvidenceWaves",
+    "validationStatus"
+  ],
+  "properties": {
+    "formatVersion": {
+      "const": "1.0"
+    },
+    "programId": {
+      "const": "apple-beta-chronology-gap"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "safety": {
+      "$ref": "#/$defs/safety"
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "proposedCandidateCount",
+        "notProposedCount",
+        "byStatus",
+        "byPlatform",
+        "importantQualification"
+      ],
+      "properties": {
+        "proposedCandidateCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "notProposedCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "byStatus": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "byPlatform": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "importantQualification": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "cohorts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/cohort"
+      }
+    },
+    "candidates": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidate"
+      }
+    },
+    "notProposed": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/notProposed"
+      }
+    },
+    "nextEvidenceWaves": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/nextEvidenceWave"
+      }
+    },
+    "validationStatus": {
+      "$ref": "#/$defs/validationStatus"
+    }
+  },
+  "$defs": {
+    "safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sanityMutationAllowed",
+        "publicationAuthorized",
+        "stableEventIdCreationAllowed",
+        "note"
+      ],
+      "properties": {
+        "sanityMutationAllowed": {
+          "const": false
+        },
+        "publicationAuthorized": {
+          "const": false
+        },
+        "stableEventIdCreationAllowed": {
+          "const": false
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "cohort": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cohortId",
+        "description",
+        "candidateCount",
+        "sourcePaths",
+        "supersessionRule"
+      ],
+      "properties": {
+        "cohortId": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidateCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sourcePaths": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "supersessionRule": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidateId",
+        "originCohortId",
+        "platform",
+        "platformId",
+        "version",
+        "releaseVersionId",
+        "proposedIdentity",
+        "ordinalBasis",
+        "candidateStatus",
+        "identityStatus",
+        "evidenceState",
+        "productionReconciliation",
+        "evidenceRefs",
+        "buildEvidenceStatus",
+        "contentDisposition",
+        "blockers",
+        "review",
+        "flags"
+      ],
+      "properties": {
+        "candidateId": {
+          "type": "string",
+          "pattern": "^candidate:apple:[a-z0-9-]+:[0-9]+(?:\\.[0-9]+){1,2}:public-beta-[0-9]+$"
+        },
+        "originCohortId": {
+          "type": "string",
+          "pattern": "^[a-z0-9-]+$"
+        },
+        "platform": {
+          "enum": [
+            "iOS",
+            "iPadOS",
+            "macOS",
+            "watchOS",
+            "tvOS",
+            "visionOS"
+          ]
+        },
+        "platformId": {
+          "enum": [
+            "platform-ios",
+            "platform-ipados",
+            "platform-macos",
+            "platform-watchos",
+            "platform-tvos",
+            "platform-visionos"
+          ]
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+(?:\\.[0-9]+)?$"
+        },
+        "releaseVersionId": {
+          "type": "string",
+          "pattern": "^version-[a-z0-9-]+$"
+        },
+        "proposedIdentity": {
+          "$ref": "#/$defs/proposedIdentity"
+        },
+        "ordinalBasis": {
+          "enum": [
+            "explicit",
+            "inferredFromPairedDeveloper",
+            "conflicted"
+          ]
+        },
+        "candidateStatus": {
+          "enum": [
+            "discovered",
+            "reuseReviewPending",
+            "researching",
+            "needsEvidenceReview",
+            "readyForChronologyReview",
+            "rejected",
+            "deferred"
+          ]
+        },
+        "identityStatus": {
+          "enum": [
+            "confirmed",
+            "conflict",
+            "unverified"
+          ]
+        },
+        "evidenceState": {
+          "enum": [
+            "reported",
+            "corroborated",
+            "confirmed"
+          ]
+        },
+        "productionReconciliation": {
+          "$ref": "#/$defs/productionReconciliation"
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidenceRef"
+          }
+        },
+        "pairedDeveloperRoute": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "additionalProperties": false,
+          "required": [
+            "releaseVersionId",
+            "routeAlias",
+            "relationship"
+          ],
+          "properties": {
+            "releaseVersionId": {
+              "type": "string",
+              "minLength": 1
+            },
+            "routeAlias": {
+              "type": "string",
+              "minLength": 1
+            },
+            "relationship": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "priorProposedStableEventId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "upstreamPacket": {
+          "type": "string",
+          "minLength": 1
+        },
+        "buildEvidenceStatus": {
+          "enum": [
+            "absent",
+            "direct",
+            "disputed",
+            "reportedSharedPayload",
+            "corroboratedSharedPayload"
+          ]
+        },
+        "build": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "confidence",
+            "existingBuildId",
+            "relationship"
+          ],
+          "properties": {
+            "value": {
+              "type": "string",
+              "minLength": 1
+            },
+            "confidence": {
+              "enum": [
+                "low",
+                "medium",
+                "high"
+              ]
+            },
+            "existingBuildId": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "relationship": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "contentDisposition": {
+          "enum": [
+            "timelineOnly",
+            "linkedToPairedDeveloper",
+            "distinctArticleUndetermined"
+          ]
+        },
+        "blockers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        },
+        "flags": {
+          "$ref": "#/$defs/candidateFlags"
+        }
+      }
+    },
+    "proposedIdentity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "label",
+        "routeAlias",
+        "channel",
+        "appearanceDate",
+        "sequence",
+        "isRevision",
+        "availabilityState",
+        "closesReleaseCycle"
+      ],
+      "properties": {
+        "label": {
+          "type": "string",
+          "pattern": "^Public Beta [0-9]+$"
+        },
+        "routeAlias": {
+          "type": "string",
+          "pattern": "^public-beta-[0-9]+$"
+        },
+        "channel": {
+          "const": "publicBeta"
+        },
+        "appearanceDate": {
+          "type": "string",
+          "format": "date"
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "isRevision": {
+          "type": "boolean"
+        },
+        "availabilityState": {
+          "enum": [
+            "announced",
+            "available",
+            "withdrawn",
+            "replaced"
+          ]
+        },
+        "closesReleaseCycle": {
+          "const": false
+        }
+      }
+    },
+    "productionReconciliation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "queriedAt",
+        "matchBasis",
+        "exactIdentityMatches"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "exactExistingMatch",
+            "existingIdentityConflict",
+            "confirmedMissing",
+            "plausibleInsufficientEvidence",
+            "evidenceBackedNotApplicable"
+          ]
+        },
+        "queriedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "matchBasis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exactIdentityMatches": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "evidenceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "locator",
+        "supports"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "foundationSource",
+            "packetSource",
+            "localEvidence"
+          ]
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "packetPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "localPath": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "supports": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "foundationSource"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "sourceId"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "packetSource"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "packetPath",
+              "sourceId"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "kind": {
+                "const": "localEvidence"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "localPath"
+            ]
+          }
+        }
+      ]
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "required",
+        "reviewer",
+        "reviewedAt",
+        "notes"
+      ],
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewedAt": {
+          "oneOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "candidateFlags": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sanityMutationAllowed",
+        "publicationEligible"
+      ],
+      "properties": {
+        "sanityMutationAllowed": {
+          "const": false
+        },
+        "publicationEligible": {
+          "const": false
+        }
+      }
+    },
+    "notProposed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recordId",
+        "originCohortId",
+        "platform",
+        "platformId",
+        "releaseVersionId",
+        "apparentIdentity",
+        "classification",
+        "reason",
+        "evidenceRefs",
+        "reversalEvidence",
+        "review",
+        "flags"
+      ],
+      "properties": {
+        "recordId": {
+          "type": "string",
+          "pattern": "^not-proposed:apple:[a-z0-9-]+:[0-9]+(?:\\.[0-9]+){1,2}:public-beta-[0-9]+$"
+        },
+        "originCohortId": {
+          "type": "string"
+        },
+        "platform": {
+          "enum": [
+            "iOS",
+            "iPadOS",
+            "macOS",
+            "watchOS",
+            "tvOS",
+            "visionOS"
+          ]
+        },
+        "platformId": {
+          "type": "string"
+        },
+        "releaseVersionId": {
+          "type": "string"
+        },
+        "apparentIdentity": {
+          "$ref": "#/$defs/proposedIdentity"
+        },
+        "classification": {
+          "enum": [
+            "publicDistributionNotEstablished",
+            "evidenceBackedNotApplicable",
+            "duplicateOfExistingEvent",
+            "disprovedIdentity"
+          ]
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidenceRef"
+          }
+        },
+        "reversalEvidence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "review": {
+          "$ref": "#/$defs/review"
+        },
+        "flags": {
+          "$ref": "#/$defs/candidateFlags"
+        }
+      }
+    },
+    "nextEvidenceWave": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "waveId",
+        "scope",
+        "artifactPaths",
+        "estimatedCandidateCount",
+        "countStatus",
+        "requiredNextStep"
+      ],
+      "properties": {
+        "waveId": {
+          "type": "string"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "artifactPaths": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "estimatedCandidateCount": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "countStatus": {
+          "enum": [
+            "estimate",
+            "confirmed"
+          ]
+        },
+        "requiredNextStep": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "validationStatus": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "validatedAt",
+        "validator",
+        "summaryPath"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "passed",
+            "failed"
+          ]
+        },
+        "validatedAt": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "validator": {
+          "type": "string"
+        },
+        "summaryPath": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -2,57 +2,47 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import {
-  getReleaseStatus,
-  type Platform,
-  type ReleaseStatus,
-  type ReleaseVersion,
-} from "@/lib/types";
 import { formatDate, getMilestoneType, daysBetween } from "@/lib/utils";
 import { sendAnalyticsEvent } from "@/lib/analytics";
+import { releaseVersionPath } from "@/lib/release-routes";
+import type { TimelineBar } from "@/lib/view-models/timeline";
+import {
+  indexPlatformsBySlug,
+  resolvePlatform,
+  type ViewModelPlatform,
+} from "@/lib/view-models/platforms";
 
 interface TimelineViewProps {
-  data: ReleaseVersion[];
-  platforms: Platform[];
-}
-
-interface VersionBar {
-  id: string;
-  platform: Platform;
-  version: string;
-  slug: string;
-  startDate: string;
-  endDate: string;
-  durationDays: number;
-  milestoneCount: number;
-  releaseStatus: ReleaseStatus;
-  isActive: boolean;
-  milestones: { label: string; date: string; type: string; pct: number }[];
+  bars: TimelineBar[];
+  platforms: ViewModelPlatform[];
 }
 
 type SortKey = "date" | "duration" | "betas" | "platform";
 type GroupKey = "year" | "platform" | "none";
 
-function MobileTimelineCard({ bar }: { bar: VersionBar }) {
+function MobileTimelineCard({
+  bar,
+  platform,
+}: {
+  bar: TimelineBar;
+  platform: ViewModelPlatform;
+}) {
+  const isActive = bar.releaseStatus === "active";
+
   return (
     <Link
-      href={`/${bar.slug}/${bar.version}`}
+      href={releaseVersionPath(bar.platformSlug, bar.version)}
       className="mobile-timeline-card"
     >
       <span className="mobile-timeline-card__header">
         <span className="mobile-timeline-card__identity">
-          <i
-            aria-hidden="true"
-            style={{ background: bar.platform.color }}
-          />
-          <strong>{bar.platform.name}</strong>
+          <i aria-hidden="true" style={{ background: platform.color }} />
+          <strong>{platform.name}</strong>
           <span className="font-mono">{bar.version}</span>
         </span>
         <span
           className={
-            bar.isActive
-              ? "badge badge-active"
-              : "mobile-timeline-card__status"
+            isActive ? "badge badge-active" : "mobile-timeline-card__status"
           }
         >
           {bar.releaseStatus === "active"
@@ -75,11 +65,7 @@ function MobileTimelineCard({ bar }: { bar: VersionBar }) {
                 ? "Public"
                 : "Last seed"}
           </dt>
-          <dd>
-            {bar.releaseStatus === "active"
-              ? "Today"
-              : formatDate(bar.endDate)}
-          </dd>
+          <dd>{isActive ? "Today" : formatDate(bar.endDate)}</dd>
         </div>
         <div>
           <dt>Duration</dt>
@@ -94,7 +80,69 @@ function MobileTimelineCard({ bar }: { bar: VersionBar }) {
   );
 }
 
-export function TimelineView({ data, platforms }: TimelineViewProps) {
+function TimelineTableRow({
+  bar,
+  platform,
+  effectiveMax,
+}: {
+  bar: TimelineBar;
+  platform: ViewModelPlatform;
+  effectiveMax: number;
+}) {
+  return (
+    <tr>
+      <td>
+        <Link
+          href={releaseVersionPath(bar.platformSlug, bar.version)}
+          className="flex items-center gap-2 group"
+        >
+          <span
+            className="w-2 h-2 rounded-full shrink-0"
+            style={{ background: platform.color }}
+          />
+          <span className="font-medium text-sm group-hover:text-[var(--accent)] transition-colors">
+            {platform.name}
+          </span>
+          <span className="font-mono text-sm text-[var(--text-secondary)] group-hover:text-[var(--accent)] transition-colors">
+            {bar.version}
+          </span>
+          {bar.releaseStatus === "active" && (
+            <span className="badge badge-active text-[0.5rem] py-0 px-1.5">
+              ACTIVE
+            </span>
+          )}
+          {bar.releaseStatus === "superseded" && (
+            <span className="font-mono text-[0.5rem] uppercase tracking-wide text-[var(--text-tertiary)]">
+              SUPERSEDED
+            </span>
+          )}
+        </Link>
+      </td>
+      <td className="text-[var(--text-secondary)] text-xs">
+        {formatDate(bar.startDate)}
+      </td>
+      <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
+        {bar.durationDays}
+      </td>
+      <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
+        {bar.milestoneCount}
+      </td>
+      <td>
+        <GanttBar
+          bar={bar}
+          platformColor={platform.color}
+          effectiveMax={effectiveMax}
+        />
+      </td>
+    </tr>
+  );
+}
+
+export function TimelineView({ bars, platforms }: TimelineViewProps) {
+  const platformsBySlug = useMemo(
+    () => indexPlatformsBySlug(platforms),
+    [platforms]
+  );
   const [selectedPlatform, setSelectedPlatform] = useState<string>("all");
   const [sortBy, setSortBy] = useState<SortKey>("date");
   const [groupBy, setGroupBy] = useState<GroupKey>("year");
@@ -102,70 +150,25 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
   const [showReleased, setShowReleased] = useState(true);
   const [showSuperseded, setShowSuperseded] = useState(true);
 
-  const bars = useMemo(() => {
-    const today = new Date().toISOString().split("T")[0];
-
-    return data
-      .filter((v) => v.milestones?.length > 0)
-      .filter(
-        (v) =>
-          selectedPlatform === "all" ||
-          v.releaseTrain.platform.slug.current === selectedPlatform
-      )
-      .filter((v) => {
-        const releaseStatus = getReleaseStatus(v);
-        if (releaseStatus === "active" && !showActive) return false;
-        if (releaseStatus === "released" && !showReleased) return false;
-        if (releaseStatus === "superseded" && !showSuperseded) return false;
-        return true;
-      })
-      .map((v): VersionBar => {
-        const releaseStatus = getReleaseStatus(v);
-        const startDate = v.milestones[0].date;
-        const lastMilestoneDate =
-          v.milestones[v.milestones.length - 1].date;
-        const endDate =
-          releaseStatus === "active"
-            ? today
-            : releaseStatus === "released"
-              ? v.publicReleaseDate || lastMilestoneDate
-              : lastMilestoneDate;
-        const durationDays = Math.max(1, daysBetween(startDate, endDate));
-
-        const milestones = v.milestones.map((m) => ({
-          label: m.label,
-          date: m.date,
-          type: getMilestoneType(m.label),
-          pct: Math.max(
-            0,
-            Math.min(100, (daysBetween(startDate, m.date) / durationDays) * 100)
-          ),
-        }));
-
-        return {
-          id: v._id,
-          platform: v.releaseTrain.platform,
-          version: v.version,
-          slug: v.releaseTrain.platform.slug.current,
-          startDate,
-          endDate,
-          durationDays,
-          milestoneCount: v.milestones.length,
-          releaseStatus,
-          isActive: releaseStatus === "active",
-          milestones,
-        };
-      });
-  }, [
-    data,
-    selectedPlatform,
-    showActive,
-    showReleased,
-    showSuperseded,
-  ]);
+  const visibleBars = useMemo(
+    () =>
+      bars
+        .filter(
+          (bar) =>
+            selectedPlatform === "all" || bar.platformSlug === selectedPlatform
+        )
+        .filter((bar) => {
+          if (bar.releaseStatus === "active" && !showActive) return false;
+          if (bar.releaseStatus === "released" && !showReleased) return false;
+          if (bar.releaseStatus === "superseded" && !showSuperseded)
+            return false;
+          return true;
+        }),
+    [bars, selectedPlatform, showActive, showReleased, showSuperseded]
+  );
 
   const sorted = useMemo(() => {
-    const s = [...bars];
+    const s = [...visibleBars];
     switch (sortBy) {
       case "date":
         s.sort((a, b) => b.startDate.localeCompare(a.startDate));
@@ -179,24 +182,25 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
       case "platform":
         s.sort(
           (a, b) =>
-            a.platform.sortOrder - b.platform.sortOrder ||
+            resolvePlatform(platformsBySlug, a.platformSlug).sortOrder -
+              resolvePlatform(platformsBySlug, b.platformSlug).sortOrder ||
             b.startDate.localeCompare(a.startDate)
         );
         break;
     }
     return s;
-  }, [bars, sortBy]);
+  }, [visibleBars, sortBy, platformsBySlug]);
 
   const grouped = useMemo(() => {
     if (groupBy === "none") return [{ key: "all", label: "All Versions", items: sorted }];
 
-    const map = new Map<string, VersionBar[]>();
+    const map = new Map<string, TimelineBar[]>();
     for (const bar of sorted) {
       let key: string;
       if (groupBy === "year") {
         key = bar.startDate.slice(0, 4);
       } else {
-        key = bar.platform.name;
+        key = resolvePlatform(platformsBySlug, bar.platformSlug).name;
       }
       if (!map.has(key)) map.set(key, []);
       map.get(key)!.push(bar);
@@ -213,16 +217,18 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
     }
 
     return entries;
-  }, [sorted, groupBy]);
+  }, [sorted, groupBy, platformsBySlug]);
 
   // Use 90th percentile as effective max so outliers don't crush everything
   const effectiveMax = useMemo(() => {
-    if (bars.length === 0) return 1;
-    const durations = bars.map((b) => b.durationDays).sort((a, b) => a - b);
+    if (visibleBars.length === 0) return 1;
+    const durations = visibleBars
+      .map((bar) => bar.durationDays)
+      .sort((a, b) => a - b);
     const p90Index = Math.floor(durations.length * 0.9);
     return Math.max(durations[p90Index], 30);
-  }, [bars]);
-  const completedBars = bars.filter(
+  }, [visibleBars]);
+  const completedBars = visibleBars.filter(
     (bar) => bar.releaseStatus === "released",
   );
   const averageCompletedCycle =
@@ -253,9 +259,9 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
             className="filter-control__input"
           >
             <option value="all">All</option>
-            {platforms.map((p) => (
-              <option key={p._id} value={p.slug.current}>
-                {p.name}
+            {platforms.map((platform) => (
+              <option key={platform.slug} value={platform.slug}>
+                {platform.name}
               </option>
             ))}
           </select>
@@ -341,12 +347,12 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
       <dl className="metric-rail metric-rail--three" aria-label="Timeline summary">
         <div className="metric-rail__item">
           <dt className="stat-label">Versions</dt>
-          <dd className="stat-value text-lg">{bars.length}</dd>
+          <dd className="stat-value text-lg">{visibleBars.length}</dd>
         </div>
         <div className="metric-rail__item">
           <dt className="stat-label">Active cycles</dt>
           <dd className="stat-value text-lg">
-            {bars.filter((b) => b.isActive).length}
+            {visibleBars.filter((bar) => bar.releaseStatus === "active").length}
           </dd>
         </div>
         <div className="metric-rail__item">
@@ -374,7 +380,7 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
             className="mobile-timeline-group"
             open={
               groupIndex === 0 ||
-              group.items.some((item) => item.isActive)
+              group.items.some((item) => item.releaseStatus === "active")
             }
           >
             <summary>
@@ -386,7 +392,11 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
               aria-label={`Release timeline for ${group.label}`}
             >
               {group.items.slice(0, 8).map((bar) => (
-                <MobileTimelineCard key={bar.id} bar={bar} />
+                <MobileTimelineCard
+                  key={bar.id}
+                  bar={bar}
+                  platform={resolvePlatform(platformsBySlug, bar.platformSlug)}
+                />
               ))}
               {group.items.length > 8 && (
                 <details className="mobile-timeline-list__more">
@@ -395,7 +405,14 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
                   </summary>
                   <div>
                     {group.items.slice(8).map((bar) => (
-                      <MobileTimelineCard key={bar.id} bar={bar} />
+                      <MobileTimelineCard
+                        key={bar.id}
+                        bar={bar}
+                        platform={resolvePlatform(
+                          platformsBySlug,
+                          bar.platformSlug
+                        )}
+                      />
                     ))}
                   </div>
                 </details>
@@ -426,47 +443,15 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
                 </thead>
                 <tbody>
                   {group.items.map((bar) => (
-                    <tr key={bar.id}>
-                      <td>
-                        <Link
-                          href={`/${bar.slug}/${bar.version}`}
-                          className="flex items-center gap-2 group"
-                        >
-                          <span
-                            className="w-2 h-2 rounded-full shrink-0"
-                            style={{ background: bar.platform.color }}
-                          />
-                          <span className="font-medium text-sm group-hover:text-[var(--accent)] transition-colors">
-                            {bar.platform.name}
-                          </span>
-                          <span className="font-mono text-sm text-[var(--text-secondary)] group-hover:text-[var(--accent)] transition-colors">
-                            {bar.version}
-                          </span>
-                          {bar.isActive && (
-                            <span className="badge badge-active text-[0.5rem] py-0 px-1.5">
-                              ACTIVE
-                            </span>
-                          )}
-                          {bar.releaseStatus === "superseded" && (
-                            <span className="font-mono text-[0.5rem] uppercase tracking-wide text-[var(--text-tertiary)]">
-                              SUPERSEDED
-                            </span>
-                          )}
-                        </Link>
-                      </td>
-                      <td className="text-[var(--text-secondary)] text-xs">
-                        {formatDate(bar.startDate)}
-                      </td>
-                      <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
-                        {bar.durationDays}
-                      </td>
-                      <td className="text-right font-mono text-sm text-[var(--text-secondary)]">
-                        {bar.milestoneCount}
-                      </td>
-                      <td>
-                        <GanttBar bar={bar} effectiveMax={effectiveMax} />
-                      </td>
-                    </tr>
+                    <TimelineTableRow
+                      key={bar.id}
+                      bar={bar}
+                      platform={resolvePlatform(
+                        platformsBySlug,
+                        bar.platformSlug
+                      )}
+                      effectiveMax={effectiveMax}
+                    />
                   ))}
                 </tbody>
               </table>
@@ -484,15 +469,29 @@ export function TimelineView({ data, platforms }: TimelineViewProps) {
 
 function GanttBar({
   bar,
+  platformColor,
   effectiveMax,
 }: {
-  bar: VersionBar;
+  bar: TimelineBar;
+  platformColor: string;
   effectiveMax: number;
 }) {
   // Clamp ratio at 1.0 (outliers past p90 just fill the bar)
   const ratio = Math.min(bar.durationDays / effectiveMax, 1);
   // Square-root scale so short bars still have visual weight
   const widthPct = Math.max(6, Math.sqrt(ratio) * 100);
+  const markers = bar.milestones.map(([label, date]) => ({
+    label,
+    date,
+    type: getMilestoneType(label),
+    pct: Math.max(
+      0,
+      Math.min(
+        100,
+        (daysBetween(bar.startDate, date) / bar.durationDays) * 100
+      )
+    ),
+  }));
 
   return (
     <div
@@ -500,7 +499,7 @@ function GanttBar({
       title={`${bar.durationDays} days, ${bar.milestoneCount} milestones`}
       role="img"
       aria-label={`${bar.durationDays} day cycle with ${bar.milestoneCount} milestones: ${bar.milestones
-        .map((milestone) => `${milestone.label} on ${formatDate(milestone.date)}`)
+        .map(([label, date]) => `${label} on ${formatDate(date)}`)
         .join(", ")}`}
     >
       {/* Background track */}
@@ -511,14 +510,14 @@ function GanttBar({
         className="relative h-6"
         style={{
           width: `${widthPct}%`,
-          background: `color-mix(in srgb, ${bar.platform.color} ${
-            bar.isActive ? 18 : 34
+          background: `color-mix(in srgb, ${platformColor} ${
+            bar.releaseStatus === "active" ? 18 : 34
           }%, transparent)`,
-          borderLeft: `2px solid ${bar.platform.color}`,
+          borderLeft: `2px solid ${platformColor}`,
         }}
       >
         {/* Milestone markers */}
-        {bar.milestones.map((m, i) => {
+        {markers.map((m, i) => {
           const isEnd = m.type === "public" || m.type === "gm";
           const isRC = m.type === "rc";
           return (

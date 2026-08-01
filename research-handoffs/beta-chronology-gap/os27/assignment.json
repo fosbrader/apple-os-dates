@@ -1,0 +1,51 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-os27",
+  "createdAt": "2026-07-31T02:32:48Z",
+  "createdBy": "codex-research-os27-public-beta",
+  "vendor": {
+    "name": "Apple",
+    "slug": "apple"
+  },
+  "researchCutoff": "2026-07-30",
+  "scopeRule": "Determine whether macOS 27.0, watchOS 27.0, tvOS 27.0, and visionOS 27.0 had public-beta appearances through 2026-07-30. Record exact public availability dates, public sequence labels, and builds only where channel-specific evidence supports them. A developer build reused on the same date is not, by itself, proof of public distribution.",
+  "platforms": [
+    {
+      "platformId": "platform-macos",
+      "platform": "macOS",
+      "releaseVersionId": "version-macos-27-0",
+      "version": "27.0"
+    },
+    {
+      "platformId": "platform-watchos",
+      "platform": "watchOS",
+      "releaseVersionId": "version-watchos-27-0",
+      "version": "27.0"
+    },
+    {
+      "platformId": "platform-tvos",
+      "platform": "tvOS",
+      "releaseVersionId": "version-tvos-27-0",
+      "version": "27.0"
+    },
+    {
+      "platformId": "platform-visionos",
+      "platform": "visionOS",
+      "releaseVersionId": "version-visionos-27-0",
+      "version": "27.0"
+    }
+  ],
+  "deliverables": [
+    "sources.json",
+    "candidates.json",
+    "conflicts.json",
+    "report.md"
+  ],
+  "constraints": [
+    "Research and evidence packaging only.",
+    "No Sanity writes.",
+    "Do not modify existing research packets.",
+    "Every production mutation must wait for independent evidence review and production reconciliation."
+  ],
+  "status": "researchCompleteIndependentReviewPassed"
+}

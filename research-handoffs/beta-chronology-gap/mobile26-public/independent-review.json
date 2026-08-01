@@ -1,0 +1,213 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-mobile26-public",
+  "reviewedAt": "2026-07-31T04:50:38Z",
+  "reviewer": "codex-root",
+  "independentOfResearcher": true,
+  "verdict": "passWithOneOrdinalEvidenceBlockerAndMandatoryQualifications",
+  "summary": {
+    "candidateCount": 42,
+    "chronologyApprovedCandidateCount": 41,
+    "blockedCandidateCount": 1,
+    "negativeNextOrdinalRecordCount": 12,
+    "negativeNextOrdinalRecordCountApproved": 12,
+    "sourceCount": 49,
+    "evidenceFileCount": 98,
+    "packetArtifactLockCount": 12,
+    "lockFailureCount": 0,
+    "productionIdentityMatchCount": 0
+  },
+  "candidateVerdict": {
+    "chronologyApproved": [
+      "candidate:apple:ios:26.1:public-beta-1",
+      "candidate:apple:ios:26.1:public-beta-2",
+      "candidate:apple:ios:26.1:public-beta-3",
+      "candidate:apple:ios:26.1:public-beta-4",
+      "candidate:apple:ios:26.2:public-beta-1",
+      "candidate:apple:ios:26.2:public-beta-2",
+      "candidate:apple:ios:26.3:public-beta-1",
+      "candidate:apple:ios:26.3:public-beta-2",
+      "candidate:apple:ios:26.3:public-beta-3",
+      "candidate:apple:ios:26.4:public-beta-1",
+      "candidate:apple:ios:26.4:public-beta-2",
+      "candidate:apple:ios:26.4:public-beta-3",
+      "candidate:apple:ios:26.5:public-beta-1",
+      "candidate:apple:ios:26.5:public-beta-2",
+      "candidate:apple:ios:26.5:public-beta-3",
+      "candidate:apple:ios:26.5:public-beta-4",
+      "candidate:apple:ios:26.6:public-beta-1",
+      "candidate:apple:ios:26.6:public-beta-2",
+      "candidate:apple:ios:26.6:public-beta-3",
+      "candidate:apple:ios:26.6:public-beta-4",
+      "candidate:apple:ios:26.6:public-beta-5",
+      "candidate:apple:ipados:26.1:public-beta-1",
+      "candidate:apple:ipados:26.1:public-beta-2",
+      "candidate:apple:ipados:26.1:public-beta-3",
+      "candidate:apple:ipados:26.1:public-beta-4",
+      "candidate:apple:ipados:26.2:public-beta-1",
+      "candidate:apple:ipados:26.2:public-beta-2",
+      "candidate:apple:ipados:26.3:public-beta-1",
+      "candidate:apple:ipados:26.3:public-beta-2",
+      "candidate:apple:ipados:26.3:public-beta-3",
+      "candidate:apple:ipados:26.4:public-beta-1",
+      "candidate:apple:ipados:26.4:public-beta-3",
+      "candidate:apple:ipados:26.5:public-beta-1",
+      "candidate:apple:ipados:26.5:public-beta-2",
+      "candidate:apple:ipados:26.5:public-beta-3",
+      "candidate:apple:ipados:26.5:public-beta-4",
+      "candidate:apple:ipados:26.6:public-beta-1",
+      "candidate:apple:ipados:26.6:public-beta-2",
+      "candidate:apple:ipados:26.6:public-beta-3",
+      "candidate:apple:ipados:26.6:public-beta-4",
+      "candidate:apple:ipados:26.6:public-beta-5"
+    ],
+    "approvedWithMandatoryQualification": [
+      "candidate:apple:ipados:26.1:public-beta-1",
+      "candidate:apple:ios:26.2:public-beta-2",
+      "candidate:apple:ipados:26.2:public-beta-2",
+      "candidate:apple:ios:26.4:public-beta-2",
+      "candidate:apple:ios:26.4:public-beta-3",
+      "candidate:apple:ipados:26.4:public-beta-3",
+      "candidate:apple:ios:26.5:public-beta-2",
+      "candidate:apple:ipados:26.5:public-beta-2",
+      "candidate:apple:ios:26.5:public-beta-3",
+      "candidate:apple:ipados:26.5:public-beta-3",
+      "candidate:apple:ios:26.5:public-beta-4",
+      "candidate:apple:ipados:26.5:public-beta-4",
+      "candidate:apple:ios:26.6:public-beta-3",
+      "candidate:apple:ipados:26.6:public-beta-3"
+    ],
+    "blocked": [
+      "candidate:apple:ipados:26.4:public-beta-2"
+    ],
+    "negativeNextOrdinalRecordsApproved": [
+      "not-proposed:apple:ios:26.1:public-beta-5",
+      "not-proposed:apple:ios:26.2:public-beta-3",
+      "not-proposed:apple:ios:26.3:public-beta-4",
+      "not-proposed:apple:ios:26.4:public-beta-4",
+      "not-proposed:apple:ios:26.5:public-beta-5",
+      "not-proposed:apple:ios:26.6:public-beta-6",
+      "not-proposed:apple:ipados:26.1:public-beta-5",
+      "not-proposed:apple:ipados:26.2:public-beta-3",
+      "not-proposed:apple:ipados:26.3:public-beta-4",
+      "not-proposed:apple:ipados:26.4:public-beta-4",
+      "not-proposed:apple:ipados:26.5:public-beta-5",
+      "not-proposed:apple:ipados:26.6:public-beta-6"
+    ]
+  },
+  "checks": {
+    "packetJsonParsed": true,
+    "sharedCandidateSchemaValid": true,
+    "candidateIdsUnique": true,
+    "candidateIdentityKeysUnique": true,
+    "candidateSourceReferencesResolved": true,
+    "allPacketArtifactLocksReproduced": true,
+    "packetArtifactLocksReproduced": 12,
+    "allRawEvidenceHashesReproduced": true,
+    "allSelectedEvidenceHashesReproduced": true,
+    "evidenceFilesReproduced": 98,
+    "evidenceBytesReproduced": 9822639,
+    "lockFailures": 0,
+    "allCandidatesHaveTwoIndependentAppearanceLineages": true,
+    "positiveSequenceRowsInspected": 42,
+    "negativeSequenceRowsInspected": 12,
+    "materialConflictRecordsInspected": 7,
+    "guardrailRecordsInspected": 2,
+    "freshProductionParentsExact": 12,
+    "freshExactProductionMatches": 0,
+    "freshRouteAliasMatches": 0,
+    "freshChannelSequenceDateMatches": 0,
+    "sanityMutationPerformed": false,
+    "productionIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "deploymentPerformed": false
+  },
+  "blockedCandidateReviews": [
+    {
+      "candidateId": "candidate:apple:ipados:26.4:public-beta-2",
+      "appearanceDate": "2026-03-05",
+      "disposition": "needsExplicitPublicOrdinalEvidence",
+      "finding": "MacRumors and Appleosophy independently establish a new iPadOS 26.4 public appearance on March 5, but neither retained source explicitly displays the Public Beta 2 ordinal. The explicit Onetech Public Beta 2 locator is iOS-only. A closed PB1-new-public-seed-PB3 sequence is strong evidence, but the program rule forbids manufacturing a displayed public label from sequence position alone.",
+      "requiredNextEvidence": "Capture a reliable contemporary source or archived tester surface that explicitly calls the March 5 iPadOS appearance Public Beta 2. Do not use the false February 24 report."
+    }
+  ],
+  "qualifications": [
+    {
+      "qualificationId": "ipados261-iculture-table-mislabel",
+      "candidateIds": [
+        "candidate:apple:ipados:26.1:public-beta-1"
+      ],
+      "requiredHandling": "Use MacRumors and iTopnews for the explicit Public Beta 1 identity. Preserve iCulture's Public Beta 2 table label as an error and do not repeat it as a second event."
+    },
+    {
+      "qualificationId": "mobile262-public-numbering-divergence",
+      "candidateIds": [
+        "candidate:apple:ios:26.2:public-beta-2",
+        "candidate:apple:ipados:26.2:public-beta-2"
+      ],
+      "requiredHandling": "Preserve the public sequence as PB1 then PB2. Do not create a public counterpart for developer Beta 2 or renumber the November 18 public appearance from the developer sequence."
+    },
+    {
+      "qualificationId": "ios264-pb2-revised-build-and-false-date",
+      "candidateIds": [
+        "candidate:apple:ios:26.4:public-beta-2"
+      ],
+      "requiredHandling": "Use March 5. Onetech explicitly supplies the iOS Public Beta 2 ordinal; MacRumors and Appleosophy independently establish the public appearance. Reject the uncaptured February 24 claim and do not infer the public ordinal from developer Beta 3."
+    },
+    {
+      "qualificationId": "mobile264-pb3-and-omitted-sequence",
+      "candidateIds": [
+        "candidate:apple:ios:26.4:public-beta-3",
+        "candidate:apple:ipados:26.4:public-beta-3"
+      ],
+      "requiredHandling": "Use March 9 and the explicit Public Beta 3 sources. Preserve iCulture's omission as an incomplete chronology, not evidence that the appearances did not occur."
+    },
+    {
+      "qualificationId": "mobile265-iculture-year-typos",
+      "candidateIds": [
+        "candidate:apple:ios:26.5:public-beta-2",
+        "candidate:apple:ipados:26.5:public-beta-2",
+        "candidate:apple:ios:26.5:public-beta-3",
+        "candidate:apple:ipados:26.5:public-beta-3",
+        "candidate:apple:ios:26.5:public-beta-4",
+        "candidate:apple:ipados:26.5:public-beta-4"
+      ],
+      "requiredHandling": "Use April 2026 from MacRumors and platform-specific 9to5Mac evidence. Preserve iCulture's displayed 2025 years as source errors."
+    },
+    {
+      "qualificationId": "mobile266-pb3-public-day",
+      "candidateIds": [
+        "candidate:apple:ios:26.6:public-beta-3",
+        "candidate:apple:ipados:26.6:public-beta-3"
+      ],
+      "requiredHandling": "Use June 30 for the public appearances. June 29 is the developer release; 9to5Mac's public update and MacRumors' explicit public article are dated June 30."
+    },
+    {
+      "qualificationId": "same-day-channels-remain-distinct",
+      "candidateIds": [],
+      "requiredHandling": "Never collapse a public appearance into its same-day developer appearance, even when reports indicate a shared payload."
+    },
+    {
+      "qualificationId": "rc-boundary-is-not-public-beta",
+      "candidateIds": [],
+      "requiredHandling": "Keep all 12 terminal records as release candidates. Do not convert public-tester RC access into a new numbered public-beta event."
+    }
+  ],
+  "integrity": {
+    "validationSha256": "f17fcb3c786665a137b775b686e0069a127c6aae85c5cfdbe5c7267bbf2f1c5b",
+    "packetManifestSha256": "7d991e2a004f763125870f195db73615a6563a98ab27fc57e3e435a52a631b41",
+    "validationStatus": "passed",
+    "packetArtifactLocksReproduced": 12,
+    "evidenceFilesReproduced": 98,
+    "lockFailures": 0
+  },
+  "authorization": {
+    "chronologyReviewEligibleCandidateCountAdded": 41,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdAllocationAllowed": false,
+    "pageBuildAllowed": false,
+    "deploymentAllowed": false
+  },
+  "nextGate": "Research the one blocked iPadOS ordinal explicitly, preserve every mandatory qualification, and repeat the exact production query immediately before any separately authorized mutation."
+}

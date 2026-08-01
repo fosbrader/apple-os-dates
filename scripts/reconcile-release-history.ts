@@ -1664,7 +1664,7 @@ async function run() {
 
   const result = await transaction.commit({
     visibility: "sync",
-    tag: "beta-cadence.reconcile-release-history",
+    tag: "version-record.reconcile-release-history",
   });
   console.log(`Committed transaction ${result.transactionId}.`);
 

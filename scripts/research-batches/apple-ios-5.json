@@ -1,0 +1,1475 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/102998",
+      "title": "About iOS 5",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2023-11-15T00:00:00.000Z",
+      "topics": ["iOS", "5", "consumer release notes"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/101444",
+      "title": "Apple security updates (2011 to 2012)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2023-08-10T00:00:00.000Z",
+      "topics": ["Apple software", "2011", "2012", "security release index"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103815",
+      "title": "About the security content of iOS 5 Software Update",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2023-11-06T00:00:00.000Z",
+      "topics": ["iOS", "5.0", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103595",
+      "title": "About the security content of iOS 5.0.1 Software Update",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2023-11-03T00:00:00.000Z",
+      "topics": ["iOS", "5.0.1", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103596",
+      "title": "About the security content of iOS 5.1 Software Update",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2023-11-03T00:00:00.000Z",
+      "topics": ["iOS", "5.1", "security", "CVE"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103597",
+      "title": "About the security content of iOS 5.1.1 Software Update",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "publishedAt": "2023-11-03T00:00:00.000Z",
+      "topics": ["iOS", "5.1.1", "security", "CVE"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+      "title": "New Version of iOS Includes Notification Center, iMessage, Newsstand, Twitter Integration Among 200 New Features",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2011-06-06T00:00:00.000Z",
+      "topics": ["iOS", "5.0", "features", "availability"]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2011/10/04Apple-to-Launch-iCloud-on-October-12/",
+      "title": "Apple to Launch iCloud on October 12",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2011-10-04T00:00:00.000Z",
+      "topics": ["iOS", "5.0", "iCloud", "public availability"]
+    },
+    {
+      "url": "https://developer.apple.com/news/?id=06062011a",
+      "title": "Download iOS 5 and iOS 5 SDK Beta Today",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "author": "Apple",
+      "publishedAt": "2011-06-06T00:00:00.000Z",
+      "topics": ["iOS", "5.0", "SDK", "developer APIs"]
+    },
+    {
+      "url": "https://developer.apple.com/library/archive/technotes/tn2287/_index.html",
+      "title": "iOS 5 and TLS 1.2 Interoperability Issues",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "author": "Apple",
+      "publishedAt": "2011-10-14T00:00:00.000Z",
+      "topics": ["iOS", "5.0", "TLS 1.2", "networking"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-ios-5-0",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102998",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 5 reorganized daily interaction around Notification Center, iMessage, Newsstand, Reminders, system-level Twitter support, richer Camera and Photos tools, and broader Mail, Calendar, Game Center, keyboard, and accessibility features.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102998",
+                "locator": "iOS 5 — Notifications through Accessibility improvements"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+                "locator": "Notification Center, iMessage, Newsstand, Reminders, Twitter, Camera, Photos, Mail, Game Center, AirPlay, and split keyboard"
+              }
+            ]
+          },
+          {
+            "text": "The release also moved setup, software updating, and iTunes synchronization away from a required cable, integrated iCloud services, exposed more than 1,500 developer APIs, and delivered security work spanning credentials, certificate trust, TLS, documents, networking, Safari, and WebKit.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102998",
+                "locator": "iOS 5 — PC Free, iCloud support, wireless sync, and developer APIs"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2011/10/04Apple-to-Launch-iCloud-on-October-12/",
+                "locator": "October 12 availability and iCloud services"
+              },
+              {
+                "url": "https://developer.apple.com/news/?id=06062011a",
+                "locator": "More than 1,500 APIs and principal SDK technologies"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103815",
+                "locator": "iOS 5 Software Update security content"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101444",
+                "locator": "iOS 5 Software Update — 12 Oct 2011"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102998",
+          "locator": "iOS 5"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2011/10/04Apple-to-Launch-iCloud-on-October-12/",
+          "locator": "iOS 5 and iCloud availability on October 12"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+          "locator": "iOS 5 feature preview"
+        },
+        {
+          "url": "https://developer.apple.com/news/?id=06062011a",
+          "locator": "iOS 5 SDK"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103815",
+          "locator": "iOS 5 Software Update"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 5 Software Update — 12 Oct 2011"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:59:01Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-5-0-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102998",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 5.0.1 addressed battery-life defects, brought multitasking gestures to the original iPad, repaired Documents in the Cloud behavior, and improved Australian English dictation recognition.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102998",
+                "locator": "iOS 5.0.1"
+              }
+            ]
+          },
+          {
+            "text": "Its security bulletin also records fixes for URL and DNS handling, malicious fonts, certificate trust, code-signing enforcement, and an iPad 2 Smart Cover passcode-bypass condition.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103595",
+                "locator": "iOS 5.0.1 Software Update security content"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101444",
+                "locator": "iOS 5.0.1 Software Update — 10 Nov 2011"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102998",
+          "locator": "iOS 5.0.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103595",
+          "locator": "iOS 5.0.1 Software Update"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 5.0.1 Software Update — 10 Nov 2011"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:59:01Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-5-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102998",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 5.1 added Japanese Siri support, Photo Stream deletion, more direct lock-screen Camera access, broader face highlighting, a redesigned iPad Camera app, new iTunes Match and iPad media controls, and targeted battery and call-audio repairs.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102998",
+                "locator": "iOS 5.1"
+              }
+            ]
+          },
+          {
+            "text": "Apple’s security bulletin documents additional protections for network requests, disk images, the application sandbox, DNS parsing, passcode lock, Safari Private Browsing, Siri on the lock screen, VPN configuration files, and WebKit.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103596",
+                "locator": "iOS 5.1 Software Update security content"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101444",
+                "locator": "iOS 5.1 Software Update — 07 Mar 2012"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102998",
+          "locator": "iOS 5.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103596",
+          "locator": "iOS 5.1 Software Update"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 5.1 Software Update — 07 Mar 2012"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:59:01Z"
+      }
+    },
+    {
+      "releaseVersionId": "version-ios-5-1-1",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://support.apple.com/en-us/102998",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "iOS 5.1.1 improved lock-screen HDR reliability, repaired cellular switching on the third-generation iPad, corrected AirPlay video playback, strengthened Safari bookmark and Reading List synchronization, and removed a misleading purchase alert.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/102998",
+                "locator": "iOS 5.1.1"
+              }
+            ]
+          },
+          {
+            "text": "The accompanying advisory describes a Safari location-bar spoofing fix and WebKit corrections for cross-site scripting and memory corruption.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/103597",
+                "locator": "iOS 5.1.1 Software Update security content"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101444",
+                "locator": "iOS 5.1.1 Software Update — 07 May 2012"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102998",
+          "locator": "iOS 5.1.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103597",
+          "locator": "iOS 5.1.1 Software Update"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 5.1.1 Software Update — 07 May 2012"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:59:01Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-5-0",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 5 release introduced a broad communications, notification, cloud, media, productivity, device-independence, accessibility, developer-platform, and security update.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102998",
+          "locator": "iOS 5"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2011/10/04Apple-to-Launch-iCloud-on-October-12/",
+          "locator": "October 12 availability"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+          "locator": "Principal iOS 5 features"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103815",
+          "locator": "iOS 5 Software Update"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 5 Software Update — 12 Oct 2011"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-5-0-notification-center",
+          "title": "Notification Center",
+          "canonicalSummary": "Notification Center consolidated alerts and added noninterruptive banners plus lock-screen access.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "A downward swipe opened a unified notification view, incoming alerts could appear briefly at the top of the screen, and lock-screen items could lead directly to their associated app.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Notifications"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+              "locator": "Notification Center"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-imessage",
+          "title": "iMessage",
+          "canonicalSummary": "iMessage added encrypted text, photo, and video conversations between devices running iOS 5.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The Messages app gained Wi-Fi and cellular conversations among iOS 5 devices, with group messaging, delivery and read receipts, and synchronization across a user’s devices.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — iMessage"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+              "locator": "iMessage"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-newsstand",
+          "title": "Newsstand",
+          "canonicalSummary": "Newsstand organized periodical subscriptions and supported automatic background delivery of new issues.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Magazine and newspaper subscriptions received a dedicated Home Screen location that displayed current covers and could download newly available issues in the background.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Newsstand"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+              "locator": "Newsstand"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-reminders",
+          "title": "Reminders",
+          "canonicalSummary": "A new Reminders app managed tasks with synchronization and supported time- or location-based alerts.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Users could organize tasks, synchronize them with iCloud, iCal, or Outlook, and on supported iPhones trigger reminders when arriving at or leaving a location.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Reminders"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+              "locator": "Reminders"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-twitter-integration",
+          "title": "System Twitter integration",
+          "canonicalSummary": "A single system sign-in enabled direct posting from Apple apps and supplied integration APIs to developers.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Twitter credentials could be configured once in Settings and used from Camera, Photos, Maps, Safari, YouTube, and compatible third-party applications.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Built-in support for Twitter"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+              "locator": "Twitter integration"
+            },
+            {
+              "url": "https://developer.apple.com/news/?id=06062011a",
+              "locator": "Twitter integration"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-camera-controls",
+          "title": "Faster and more controllable Camera",
+          "canonicalSummary": "Camera gained lock-screen access, volume-button capture, composition aids, zoom, and focus or exposure locking.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Supported devices could open Camera from the lock screen, use Volume Up as a shutter, enable grid lines, pinch to zoom, move between preview and Camera Roll, and lock focus or exposure where supported.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Camera improvements"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+              "locator": "Camera features"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-photos-editing",
+          "title": "On-device Photos editing",
+          "canonicalSummary": "Photos added cropping, rotation, red-eye removal, one-tap enhancement, and album organization.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The built-in Photos app could perform common corrections and organize images into albums without requiring a separate desktop workflow.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Photo improvements"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+              "locator": "Photos features"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-mail-composition",
+          "title": "Expanded Mail composition and triage",
+          "canonicalSummary": "Mail added rich-text formatting, indentation, draggable recipients, flags, bulk state changes, custom sounds, and S/MIME.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Users gained more control over message formatting and addressing, could flag or mark multiple messages together, choose mail alert sounds, and use S/MIME.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Mail improvements"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-calendar-views-attachments",
+          "title": "Calendar views and attachments",
+          "canonicalSummary": "Calendar added new device-specific views, faster event creation, and event-attachment access.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The iPad received a year view, iPhone and iPod touch received a week view, tapping could create an event, and users could view or add event attachments.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Calendar improvements"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-game-center-discovery",
+          "title": "Game Center profiles and discovery",
+          "canonicalSummary": "Game Center expanded profiles, score comparisons, friend discovery, and game recommendations.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Players could add profile photos, compare aggregate achievement scores, discover friends through recommendations and mutual connections, and receive customized game suggestions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Game Center improvements"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+              "locator": "Game Center"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-ipad-airplay-gestures",
+          "title": "AirPlay Mirroring and iPad multitasking gestures",
+          "canonicalSummary": "Supported iPads gained screen mirroring and four- or five-finger navigation gestures.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "iPad 2 and iPhone 4S could mirror through Apple TV, while iPad 2 added gestures to return Home, reveal multitasking, or switch among applications.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — AirPlay Mirroring and Multitasking Gestures"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+              "locator": "AirPlay Mirroring and iPad gestures"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-pc-free-ota-wifi-sync",
+          "title": "PC-free setup, over-the-air updates, and Wi-Fi Sync",
+          "canonicalSummary": "Devices could be activated and maintained without tethering and could synchronize with iTunes over Wi-Fi.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Setup Assistant enabled on-device activation and configuration, software updates could arrive over the air, and purchased content could synchronize wirelessly with an iTunes library.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Setup Assistant, software updates, and wireless sync"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/06/06New-Version-of-iOS-Includes-Notification-Center-iMessage-Newsstand-Twitter-Integration-Among-200-New-Features/",
+              "locator": "PC Free and Wi-Fi Sync"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-icloud-services",
+          "title": "iCloud integration",
+          "canonicalSummary": "iCloud connected purchases, photos, documents, backup, communications data, and device location across supported products.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The operating system integrated iTunes in the Cloud, Photo Stream, Documents in the Cloud, purchase history and automatic downloads, backup, Contacts, Calendar, Mail, and Find My iPhone.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — iCloud support"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2011/10/04Apple-to-Launch-iCloud-on-October-12/",
+              "locator": "iCloud services and October 12 availability"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-keyboard-input",
+          "title": "Keyboard and input improvements",
+          "canonicalSummary": "Keyboard updates added an iPad split layout, better correction and East Asian input, Emoji, a personal dictionary, and text shortcuts.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release expanded keyboard layouts and language behavior while allowing users to define shortcuts for frequently typed words or phrases.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Keyboard improvements"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-accessibility",
+          "title": "Broader accessibility controls",
+          "canonicalSummary": "Accessibility additions covered visual alerts, custom vibration, assistive input, spoken selections, and VoiceOver labeling.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Supported iPhones could flash the LED or use custom vibration patterns for alerts, and the system added mobility-device input, Speak Selection, and custom element labels for VoiceOver.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Accessibility improvements"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-exchange-activesync",
+          "title": "Exchange ActiveSync workflow improvements",
+          "canonicalSummary": "Exchange accounts gained task synchronization, message-state controls, offline improvements, and GAL contact saving.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Users could synchronize tasks wirelessly, flag or mark messages, work more effectively offline, and save new contacts from a Global Address List.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — Exchange ActiveSync improvements"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-developer-apis",
+          "title": "More than 1,500 new developer APIs",
+          "canonicalSummary": "The iOS 5 SDK exposed more than 1,500 APIs supporting the release’s new platform capabilities.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple described an SDK expansion spanning iCloud storage, Notification Center, Newsstand, iMessage, Twitter integration, Game Center, and other platform technologies.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5 — More than 1,500 new developer APIs"
+            },
+            {
+              "url": "https://developer.apple.com/news/?id=06062011a",
+              "locator": "iOS 5 SDK and more than 1,500 new APIs"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-credential-trust-tls-security",
+          "title": "Credential, certificate, and TLS hardening",
+          "canonicalSummary": "Security changes protected stored credentials, removed or constrained unsafe certificate trust, and added TLS 1.2.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple stopped locally logging Apple ID and Wi-Fi credentials, distrusted DigiNotar certificates, restricted MD5-signed certificates, and added TLS 1.2 support.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103815",
+              "locator": "CFNetwork credential logging; Data Security certificate trust and TLS; Wi-Fi credential logging"
+            },
+            {
+              "url": "https://developer.apple.com/library/archive/technotes/tn2287/_index.html",
+              "locator": "Introduction — iOS 5 TLS 1.2 implementation"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-content-and-web-security",
+          "title": "Content parsing and web-origin security",
+          "canonicalSummary": "The release corrected representative memory-safety, document-isolation, URL-spoofing, and cross-origin defects.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented repairs across CoreFoundation, CoreGraphics, ImageIO, ICU, libxml, OfficeImport, Safari, and WebKit, including code-execution and cross-origin risks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103815",
+              "locator": "CoreFoundation, CoreGraphics, ImageIO, ICU, libxml, OfficeImport, Safari, and WebKit"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:59:01Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-5-0-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 5.0.1 update combined four documented consumer improvements with targeted network, font, certificate, kernel, and lock-screen security repairs.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102998",
+          "locator": "iOS 5.0.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103595",
+          "locator": "iOS 5.0.1 Software Update"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 5.0.1 Software Update — 10 Nov 2011"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-5-0-1-battery-life",
+          "title": "Battery-life repairs",
+          "canonicalSummary": "The update corrected unspecified defects that affected battery life.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple’s consumer note identifies battery-life bug fixes without attributing a single battery symptom or device-specific cause.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.0.1 — battery life"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-1-original-ipad-gestures",
+          "title": "Multitasking gestures for the original iPad",
+          "canonicalSummary": "The original iPad gained the multitasking gestures introduced for iPad 2 in iOS 5.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "iOS 5.0.1 extended the documented multitasking gesture feature to the first-generation iPad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.0.1 — Multitasking Gestures"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-1-documents-cloud",
+          "title": "Documents in the Cloud repairs",
+          "canonicalSummary": "The update resolved unspecified defects affecting Documents in the Cloud.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple records a Documents in the Cloud repair but does not itemize the affected applications or failure modes.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.0.1 — Documents in the Cloud"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-1-australian-dictation",
+          "title": "Australian dictation recognition",
+          "canonicalSummary": "Voice recognition improved for Australian users who used dictation.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The dictation system received a language-region-specific recognition improvement for Australian users.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.0.1 — Australian dictation"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-1-url-dns-routing-security",
+          "title": "URL and DNS routing validation",
+          "canonicalSummary": "CFNetwork and libinfo were corrected to avoid routing crafted URLs or hostnames to unintended servers.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed URL and DNS lookup defects that could disclose sensitive information by resolving or navigating to an incorrect server.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103595",
+              "locator": "CFNetwork — CVE-2011-3246; libinfo — CVE-2011-3441"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-1-font-processing-security",
+          "title": "FreeType font-processing hardening",
+          "canonicalSummary": "CoreGraphics corrected FreeType memory-corruption defects reachable through crafted fonts.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update addressed multiple font-processing memory-corruption issues, including cases Apple said could enable arbitrary code execution.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103595",
+              "locator": "CoreGraphics — CVE-2011-3439"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-1-digicert-malaysia-trust",
+          "title": "DigiCert Malaysia trust restriction",
+          "canonicalSummary": "Default trust settings stopped trusting DigiCert Malaysia certificates associated with weak intermediates.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple changed certificate trust after weak intermediate certificates could not be revoked, reducing interception risk for affected certificate chains.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103595",
+              "locator": "Data Security — DigiCert Malaysia certificates"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-1-code-signing-enforcement",
+          "title": "Code-signing enforcement",
+          "canonicalSummary": "The kernel corrected mmap flag validation that could allow unsigned code to execute.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "A kernel logic error in validation of mmap flag combinations was repaired to prevent bypassing code-signing checks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103595",
+              "locator": "Kernel — CVE-2011-3442"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-0-1-smart-cover-passcode",
+          "title": "iPad 2 Smart Cover passcode protection",
+          "canonicalSummary": "The update closed a locked-state Smart Cover sequence that exposed limited data without a passcode.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected an iPad 2 condition in which opening a Smart Cover during power-off confirmation could bypass the normal passcode prompt and expose some data.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103595",
+              "locator": "Passcode Lock — CVE-2011-3440"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:59:01Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-5-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 5.1 update expanded Siri, Camera, Photo Stream, media, and carrier presentation behavior while addressing battery, calling, lock-screen, networking, and web security defects.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102998",
+          "locator": "iOS 5.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103596",
+          "locator": "iOS 5.1 Software Update"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 5.1 Software Update — 07 Mar 2012"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-5-1-siri-japanese",
+          "title": "Japanese Siri support",
+          "canonicalSummary": "Siri added Japanese language support, subject to Apple’s initial availability qualification.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The voice assistant expanded to Japanese, with Apple warning that availability could be limited during the initial rollout.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1 — Japanese language support for Siri"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-photo-stream-delete",
+          "title": "Photo Stream deletion",
+          "canonicalSummary": "Users could delete photos directly from Photo Stream.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Photo Stream gained an explicit deletion capability for removing individual images.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1 — Photo Stream deletion"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-camera-experience",
+          "title": "Camera access, face detection, and iPad redesign",
+          "canonicalSummary": "Camera became persistently accessible from supported lock screens, highlighted every detected face, and gained a redesigned iPad interface.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The lock-screen Camera shortcut was made continuously visible on listed devices, face detection highlighted all recognized faces, and the iPad Camera app received a new design.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1 — Camera improvements"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-itunes-match-genius",
+          "title": "Genius for iTunes Match",
+          "canonicalSummary": "iTunes Match subscribers gained Genius Mixes and Genius playlists.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The Music experience exposed Genius-created mixes and playlists to users with an iTunes Match subscription.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1 — Genius for iTunes Match subscribers"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-ipad-media-controls",
+          "title": "iPad media audio and podcast controls",
+          "canonicalSummary": "iPad media playback gained clearer audio tuning plus podcast speed and rewind controls.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple optimized TV-show and movie audio for greater clarity and volume and added podcast playback-speed control with a 30-second rewind.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1 — iPad media and podcast controls"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-att-network-indicator",
+          "title": "AT&T network indicator",
+          "canonicalSummary": "The update changed the network indicator shown for AT&T service.",
+          "category": "behavior",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple records an updated AT&T network indicator without describing any underlying radio or throughput change.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1 — Updated AT&T network indicator"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-battery-life",
+          "title": "Battery-life repairs",
+          "canonicalSummary": "The update corrected unspecified defects that affected battery life.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple lists battery-life bug fixes but does not assign them to a particular device, subsystem, or reproducible symptom.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1 — battery life"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-outgoing-call-audio",
+          "title": "Outgoing-call audio reliability",
+          "canonicalSummary": "The update fixed an intermittent loss of audio during outgoing calls.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple corrected a condition that could occasionally cause audio to drop while placing an outgoing call.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1 — outgoing call audio"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-cfnetwork-request-headers",
+          "title": "CFNetwork request-header privacy",
+          "canonicalSummary": "CFNetwork stopped sending unintended request headers when handling malformed URLs.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple repaired malformed-URL handling that could cause unexpected headers to be sent to a server and disclose sensitive information.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103596",
+              "locator": "CFNetwork — CVE-2012-0641"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-hfs-disk-images",
+          "title": "HFS disk-image validation",
+          "canonicalSummary": "HFS catalog parsing was hardened against an integer underflow in crafted disk images.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update corrected an underflow that Apple said could cause shutdown or arbitrary code execution when a malicious disk image was mounted.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103596",
+              "locator": "HFS — CVE-2012-0642"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-kernel-sandbox",
+          "title": "Kernel sandbox enforcement",
+          "canonicalSummary": "The kernel corrected debug-system-call handling that could bypass application sandbox restrictions.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a logic error that could let a malicious program execute code in another program with the same user privileges.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103596",
+              "locator": "Kernel — CVE-2012-0643"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-dns-record-parsing",
+          "title": "DNS resource-record parsing",
+          "canonicalSummary": "libresolv corrected an integer overflow in DNS resource-record handling.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The parser was hardened against crafted DNS data that could terminate an application or corrupt heap memory and enable code execution.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103596",
+              "locator": "libresolv — CVE-2011-3453"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-passcode-lock",
+          "title": "Passcode Lock gesture handling",
+          "canonicalSummary": "The lock screen corrected a race condition involving slide-to-dial gestures.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple addressed a physical-access sequence that could bypass Passcode Lock through competing slide-to-dial actions.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103596",
+              "locator": "Passcode Lock — CVE-2012-0644"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-private-browsing-history",
+          "title": "Safari Private Browsing history",
+          "canonicalSummary": "Safari stopped recording certain script-driven visits while Private Browsing was active.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Visits produced through the pushState or replaceState JavaScript methods were prevented from appearing in browser history during a private session.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103596",
+              "locator": "Safari — CVE-2012-0585"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-siri-lock-screen-mail",
+          "title": "Siri lock-screen Mail restriction",
+          "canonicalSummary": "Siri no longer forwarded the active Mail message while invoked from a locked device.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The lock-screen policy was tightened so a voice command could not send a frontmost email message to an arbitrary recipient without unlocking.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103596",
+              "locator": "Siri — CVE-2012-0645"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-vpn-configuration",
+          "title": "VPN configuration-file validation",
+          "canonicalSummary": "VPN configuration parsing was hardened against a format-string vulnerability.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple repaired racoon configuration-file handling that could allow crafted system configuration data to run code with system privileges.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103596",
+              "locator": "VPN — CVE-2012-0646"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-webkit-security",
+          "title": "WebKit origin and memory safety",
+          "canonicalSummary": "WebKit corrected cookie disclosure, cross-origin scripting, drag-and-drop, and memory-corruption defects.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The advisory groups fixes for cross-origin isolation and a broad set of memory-safety flaws, including cases capable of script injection, data disclosure, or arbitrary code execution.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103596",
+              "locator": "WebKit — CVE-2011-3887, CVE-2012-0590, CVE-2011-3881 through CVE-2012-0635"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:59:01Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-5-1-1",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The public iOS 5.1.1 update focused on HDR, cellular, AirPlay, Safari synchronization, and purchase-alert reliability plus Safari and WebKit security fixes.",
+      "citations": [
+        {
+          "url": "https://support.apple.com/en-us/102998",
+          "locator": "iOS 5.1.1"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103597",
+          "locator": "iOS 5.1.1 Software Update"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101444",
+          "locator": "iOS 5.1.1 Software Update — 07 May 2012"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-5-1-1-lock-screen-hdr",
+          "title": "Lock-screen HDR reliability",
+          "canonicalSummary": "HDR capture became more reliable when Camera was opened from the lock-screen shortcut.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple improved use of the HDR option specifically for photos taken after entering Camera through the lock screen.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1.1 — HDR and Lock Screen shortcut"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-1-ipad-cellular-switching",
+          "title": "Third-generation iPad cellular switching",
+          "canonicalSummary": "The update fixed defects that could prevent the third-generation iPad from changing between 2G and 3G service.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple addressed cellular-mode switching failures on the device it described at the time as the new iPad.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1.1 — new iPad 2G and 3G switching"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-1-airplay-video",
+          "title": "AirPlay video playback",
+          "canonicalSummary": "The update corrected defects affecting AirPlay video playback in some conditions.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple records an AirPlay video reliability repair without identifying the affected content type or receiving hardware.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1.1 — AirPlay video playback"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-1-safari-sync",
+          "title": "Safari bookmarks and Reading List sync",
+          "canonicalSummary": "Synchronization reliability improved for Safari bookmarks and Reading List.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The update addressed reliability of keeping bookmark and Reading List data synchronized.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1.1 — Safari bookmarks and Reading List"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-1-purchase-alert",
+          "title": "Post-purchase alert accuracy",
+          "canonicalSummary": "A misleading unable-to-purchase alert was removed from successful purchase flows.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple fixed a condition in which the system could report that a purchase failed even though it had completed successfully.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/102998",
+              "locator": "iOS 5.1.1 — Unable to purchase alert"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-1-safari-url-spoofing",
+          "title": "Safari location-bar integrity",
+          "canonicalSummary": "Safari improved URL handling to prevent a crafted site from spoofing the address shown in the location bar.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The browser corrected an address-display weakness that could make a malicious page appear to belong to a legitimate domain.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103597",
+              "locator": "Safari — CVE-2012-0674"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-1-webkit-xss",
+          "title": "WebKit cross-site scripting protection",
+          "canonicalSummary": "WebKit corrected multiple cross-site scripting vulnerabilities.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple addressed two documented WebKit conditions in which malicious web content could cross site boundaries and execute script.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103597",
+              "locator": "WebKit — CVE-2011-3046 and CVE-2011-3056"
+            }
+          ]
+        },
+        {
+          "key": "ios-5-1-1-webkit-memory",
+          "title": "WebKit memory safety",
+          "canonicalSummary": "WebKit corrected a memory-corruption flaw reachable through malicious web content.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The browser engine fixed a memory-safety issue Apple said could terminate an application or allow arbitrary code execution.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched to Apple’s version-specific consumer notes, security advisory, announcement, or developer documentation for this release.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103597",
+              "locator": "WebKit — CVE-2012-0672"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T04:59:01Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

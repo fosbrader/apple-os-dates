@@ -1,0 +1,1111 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+      "title": "Archived iOS & iPadOS 26.4 Beta Release Notes — February 19 snapshot",
+      "publisher": "Apple Developer",
+      "sourceClass": "archive",
+      "topics": [
+        "Apple Developer",
+        "iOS",
+        "iPadOS",
+        "26.4",
+        "Beta 1",
+        "Internet Archive",
+        "DocC snapshot"
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+      "title": "Archived macOS Tahoe 26.4 Beta Release Notes — February 16 snapshot",
+      "publisher": "Apple Developer",
+      "sourceClass": "archive",
+      "topics": [
+        "Apple Developer",
+        "macOS",
+        "26.4",
+        "Beta 1",
+        "Internet Archive",
+        "DocC snapshot"
+      ]
+    },
+    {
+      "url": "https://web.archive.org/web/20260225122433/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+      "title": "Archived macOS Tahoe 26.4 Beta 2 Release Notes — February 25 snapshot",
+      "publisher": "Apple Developer",
+      "sourceClass": "archive",
+      "topics": [
+        "Apple Developer",
+        "macOS",
+        "26.4",
+        "Beta 2",
+        "Internet Archive",
+        "DocC snapshot"
+      ]
+    }
+  ],
+  "versions": [],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-26-4",
+        "routeAlias": "beta-1"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The first retained raw Apple DocC state after iOS 26.4 Beta 1 and before Beta 2 documents Background Assets APIs and limitations, memory protection, RCS encryption testing, networking, StoreKit, SwiftUI, UIKit, Feedback, external media, and Reality Composer.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Archived Apple note state"
+          },
+          {
+            "text": "Internet Archive preserved Apple's iOS 26.4 beta documentation during the interval after Beta 1 and before Beta 2. The raw DocC payload identifies itself as the 26.4 beta notes and contains 12 structured items represented here.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+                "locator": "Human DocC capture 20260219170414; companion raw payload 20260219063222; iOS & iPadOS 26.4 Beta Release Notes"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented Beta 1 inventory"
+          },
+          {
+            "text": "The archived state covers Background Assets APIs and limitations, memory protection, RCS encryption testing, networking, StoreKit, SwiftUI, UIKit, Feedback, external media, and Reality Composer. Items are separated below so known issues, resolved issues, new APIs, and test-only capabilities remain distinguishable.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+                "locator": "Human DocC capture 20260219170414; companion raw payload 20260219063222; iOS & iPadOS 26.4 Beta Release Notes"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Attribution boundary"
+          },
+          {
+            "text": "This page records the first retained 26.4 note state, not a claim that every item debuted at the exact seed publication time. The raw capture predates Beta 2, which makes Beta 1 the only intervening 26.4 milestone; later beta, RC, and Public material is not copied backward.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+                "locator": "Human DocC capture 20260219170414; companion raw payload 20260219063222; iOS & iPadOS 26.4 Beta Release Notes"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+          "locator": "Human DocC capture 20260219170414; companion raw payload 20260219063222; iOS & iPadOS 26.4 Beta Release Notes"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ios-26-4-beta-1-background-assets-offline-state",
+          "title": "Offline Background Assets inspection and refresh APIs",
+          "canonicalSummary": "Background Assets added APIs for inspecting local asset-pack state while offline and requesting the latest locally available pack version.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial archived beta note documents offline status queries and an API for ensuring that the latest asset-pack version is available locally.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Background Assets — New Features; issues 164498466 and 166237389"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-background-assets-download-crash",
+          "title": "Background Assets download-crash known issue",
+          "canonicalSummary": "Apple documented a beta issue in which an application could crash while downloading an asset pack.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The beta note warns that an asset-pack download could crash the application and provides relaunch guidance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Background Assets — Known Issues; issue 169648111"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-external-hfs-automount",
+          "title": "External HFS automount known issue",
+          "canonicalSummary": "Apple documented that HFS-formatted external media might not mount automatically in the beta.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The shared iOS and iPadOS beta note records an automatic-mount failure for HFS external media and labels its command-line workaround as macOS-only.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "External Media — Known Issues; issue 168672160"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-feedback-close-button",
+          "title": "Feedback close-button known issue",
+          "canonicalSummary": "The Feedback interface could leave its close button unresponsive after a crash or panic report was submitted.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The initial beta note records an unresponsive close control after submitting a crash or panic report, with locking and unlocking as a workaround.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Feedback — Known Issues; issue 170091186"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-memory-integrity-full-protection",
+          "title": "Full Memory Integrity Enforcement opt-in",
+          "canonicalSummary": "Applications gained an option to use the full Memory Integrity Enforcement protection level instead of being limited to Soft Mode.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The archived beta note says applications can opt in to the full protection mode for stronger memory-safety enforcement.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Memory Integrity Enforcement for Applications — New Features; issue 160719439"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-rcs-e2ee-apple-device-testing",
+          "title": "RCS end-to-end encryption testing between Apple devices",
+          "canonicalSummary": "The beta exposed RCS end-to-end encryption for developer testing between supported Apple devices while explicitly withholding it from the public release.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple's initial beta note limits this RCS encryption test to Apple-device conversations and says it was not shipping to customers in 26.4.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Messages — New Features; issue 170160585"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-cfnetwork-pac-runloop-leak",
+          "title": "PAC configuration run-loop source leak fix",
+          "canonicalSummary": "CFNetwork corrected a run-loop source leak affecting processes that used automatic proxy configuration or discovery.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The beta note documents corrected ownership behavior around proxy auto-configuration callbacks and their returned Core Foundation objects.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Networking — Resolved Issues; issues 166839810 and FB21376045"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-reality-composer-export",
+          "title": "Reality Composer export known issue",
+          "canonicalSummary": "Reality Composer could present an empty export panel instead of exporting a project as Reality or USDZ content.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The archived note records an empty export menu that prevented Reality Composer projects from being exported in the documented formats.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Reality Composer — Known Issues; issue 170091896"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-storekit-revocation-fields",
+          "title": "StoreKit transaction revocation fields",
+          "canonicalSummary": "StoreKit Transaction records gained revocationType and revocationPercentage fields.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial beta note adds two revocation-related properties to StoreKit transaction data.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "StoreKit — New Features; issue 148858551"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-swiftui-current-user-activity",
+          "title": "SwiftUI current user-activity fix",
+          "canonicalSummary": "SwiftUI corrected a failure to expose the most recent userActivity value as the current user activity.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The archived beta note marks SwiftUI's stale current-user-activity behavior as resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "SwiftUI — Resolved Issues; issue 163136831"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-swiftui-realitykit-animation-grouping",
+          "title": "SwiftUI RealityKit animation-grouping limitation",
+          "canonicalSummary": "Implicit RealityKit component animations combine only when successive animations target the same property set.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple documents that overlapping implicit animations can remain independent and overwrite a property when their targeted component-property sets differ.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "SwiftUI — Known Issues; issue 169723142"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-4-beta-1-uikit-keyboard-notification",
+          "title": "UIKit keyboard-notification delivery fix",
+          "canonicalSummary": "UIKit corrected a case in which KeyboardNotification might not be delivered.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The initial beta note marks unreliable keyboard-notification delivery as fixed.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "UIKit — Resolved Issues; issue 165479264"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:11:05Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-26-4",
+        "routeAlias": "beta-1"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The first retained raw Apple DocC state after iPadOS 26.4 Beta 1 and before Beta 2 documents Background Assets APIs and limitations, memory protection, RCS encryption testing, networking, StoreKit, SwiftUI, UIKit, Feedback, external media, and Reality Composer.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Archived Apple note state"
+          },
+          {
+            "text": "Internet Archive preserved Apple's iPadOS 26.4 beta documentation during the interval after Beta 1 and before Beta 2. The raw DocC payload identifies itself as the 26.4 beta notes and contains 12 structured items represented here.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+                "locator": "Human DocC capture 20260219170414; companion raw payload 20260219063222; iOS & iPadOS 26.4 Beta Release Notes"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented Beta 1 inventory"
+          },
+          {
+            "text": "The archived state covers Background Assets APIs and limitations, memory protection, RCS encryption testing, networking, StoreKit, SwiftUI, UIKit, Feedback, external media, and Reality Composer. Items are separated below so known issues, resolved issues, new APIs, and test-only capabilities remain distinguishable.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+                "locator": "Human DocC capture 20260219170414; companion raw payload 20260219063222; iOS & iPadOS 26.4 Beta Release Notes"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Attribution boundary"
+          },
+          {
+            "text": "This page records the first retained 26.4 note state, not a claim that every item debuted at the exact seed publication time. The raw capture predates Beta 2, which makes Beta 1 the only intervening 26.4 milestone; later beta, RC, and Public material is not copied backward.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+                "locator": "Human DocC capture 20260219170414; companion raw payload 20260219063222; iOS & iPadOS 26.4 Beta Release Notes"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+          "locator": "Human DocC capture 20260219170414; companion raw payload 20260219063222; iOS & iPadOS 26.4 Beta Release Notes"
+        }
+      ],
+      "changes": [
+        {
+          "key": "ipados-26-4-beta-1-background-assets-offline-state",
+          "title": "Offline Background Assets inspection and refresh APIs",
+          "canonicalSummary": "Background Assets added APIs for inspecting local asset-pack state while offline and requesting the latest locally available pack version.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial archived beta note documents offline status queries and an API for ensuring that the latest asset-pack version is available locally.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Background Assets — New Features; issues 164498466 and 166237389"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-background-assets-download-crash",
+          "title": "Background Assets download-crash known issue",
+          "canonicalSummary": "Apple documented a beta issue in which an application could crash while downloading an asset pack.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The beta note warns that an asset-pack download could crash the application and provides relaunch guidance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Background Assets — Known Issues; issue 169648111"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-external-hfs-automount",
+          "title": "External HFS automount known issue",
+          "canonicalSummary": "Apple documented that HFS-formatted external media might not mount automatically in the beta.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The shared iOS and iPadOS beta note records an automatic-mount failure for HFS external media and labels its command-line workaround as macOS-only.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "External Media — Known Issues; issue 168672160"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-feedback-close-button",
+          "title": "Feedback close-button known issue",
+          "canonicalSummary": "The Feedback interface could leave its close button unresponsive after a crash or panic report was submitted.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The initial beta note records an unresponsive close control after submitting a crash or panic report, with locking and unlocking as a workaround.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Feedback — Known Issues; issue 170091186"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-memory-integrity-full-protection",
+          "title": "Full Memory Integrity Enforcement opt-in",
+          "canonicalSummary": "Applications gained an option to use the full Memory Integrity Enforcement protection level instead of being limited to Soft Mode.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The archived beta note says applications can opt in to the full protection mode for stronger memory-safety enforcement.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Memory Integrity Enforcement for Applications — New Features; issue 160719439"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-rcs-e2ee-apple-device-testing",
+          "title": "RCS end-to-end encryption testing between Apple devices",
+          "canonicalSummary": "The beta exposed RCS end-to-end encryption for developer testing between supported Apple devices while explicitly withholding it from the public release.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple's initial beta note limits this RCS encryption test to Apple-device conversations and says it was not shipping to customers in 26.4.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Messages — New Features; issue 170160585"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-cfnetwork-pac-runloop-leak",
+          "title": "PAC configuration run-loop source leak fix",
+          "canonicalSummary": "CFNetwork corrected a run-loop source leak affecting processes that used automatic proxy configuration or discovery.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The beta note documents corrected ownership behavior around proxy auto-configuration callbacks and their returned Core Foundation objects.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Networking — Resolved Issues; issues 166839810 and FB21376045"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-reality-composer-export",
+          "title": "Reality Composer export known issue",
+          "canonicalSummary": "Reality Composer could present an empty export panel instead of exporting a project as Reality or USDZ content.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The archived note records an empty export menu that prevented Reality Composer projects from being exported in the documented formats.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "Reality Composer — Known Issues; issue 170091896"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-storekit-revocation-fields",
+          "title": "StoreKit transaction revocation fields",
+          "canonicalSummary": "StoreKit Transaction records gained revocationType and revocationPercentage fields.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial beta note adds two revocation-related properties to StoreKit transaction data.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "StoreKit — New Features; issue 148858551"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-swiftui-current-user-activity",
+          "title": "SwiftUI current user-activity fix",
+          "canonicalSummary": "SwiftUI corrected a failure to expose the most recent userActivity value as the current user activity.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The archived beta note marks SwiftUI's stale current-user-activity behavior as resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "SwiftUI — Resolved Issues; issue 163136831"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-swiftui-realitykit-animation-grouping",
+          "title": "SwiftUI RealityKit animation-grouping limitation",
+          "canonicalSummary": "Implicit RealityKit component animations combine only when successive animations target the same property set.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple documents that overlapping implicit animations can remain independent and overwrite a property when their targeted component-property sets differ.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "SwiftUI — Known Issues; issue 169723142"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-4-beta-1-uikit-keyboard-notification",
+          "title": "UIKit keyboard-notification delivery fix",
+          "canonicalSummary": "UIKit corrected a case in which KeyboardNotification might not be delivered.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The initial beta note marks unreliable keyboard-notification delivery as fixed.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260219170414/https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-26_4-release-notes",
+              "locator": "UIKit — Resolved Issues; issue 165479264"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:11:05Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-macos-26-4",
+        "routeAlias": "beta-1"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "The first retained raw Apple DocC state after macOS Tahoe 26.4 Beta 1 and before Beta 2 documents 18 distinct API, compatibility, resolved-issue, and known-issue entries.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Archived Apple note state"
+          },
+          {
+            "text": "Apple's human documentation shell was archived on the Beta 1 date, and its raw DocC payload was captured the following day, before Beta 2. The payload identifies itself as macOS Tahoe 26.4 Beta Release Notes and contains 18 structured items represented here.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+                "locator": "Human DocC capture 20260216203520; companion raw payload 20260217150536; macOS Tahoe 26.4 Beta Release Notes"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented Beta 1 inventory"
+          },
+          {
+            "text": "The initial state spans AppKit, Background Assets, CoreMIDI, external boot and media, Exchange accounts, login and Recovery, networking, resource forks, Rosetta, StoreKit, SwiftUI, and virtualization. Known issues remain labeled separately from fixes and new capabilities.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+                "locator": "Human DocC capture 20260216203520; companion raw payload 20260217150536; macOS Tahoe 26.4 Beta Release Notes"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Attribution boundary"
+          },
+          {
+            "text": "This is an observed initial snapshot state rather than a claim that every item appeared at the exact release hour. Because the raw payload follows Beta 1 and precedes Beta 2, no later milestone is crossed and no final-note material is projected backward.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+                "locator": "Human DocC capture 20260216203520; companion raw payload 20260217150536; macOS Tahoe 26.4 Beta Release Notes"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+          "locator": "Human DocC capture 20260216203520; companion raw payload 20260217150536; macOS Tahoe 26.4 Beta Release Notes"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-26-4-beta-1-appkit-window-resize-pointer",
+          "title": "AppKit window-resize pointer fix",
+          "canonicalSummary": "AppKit corrected a resize pointer that did not follow the shape of a window corner.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The initial macOS beta note marks the mismatch between the resize pointer and the window-corner shape as resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "AppKit — Resolved Issues; issue 149726089"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-background-assets-offline-state",
+          "title": "Offline Background Assets inspection and refresh APIs",
+          "canonicalSummary": "Background Assets added APIs for inspecting local asset-pack state while offline and requesting the latest locally available pack version.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial macOS beta note documents offline status queries and an API for ensuring that the latest asset-pack version is available locally.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "Background Assets — New Features; issues 164498466 and 166237389"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-background-assets-url-override",
+          "title": "Background Assets URL-override known issue",
+          "canonicalSummary": "A previously configured URL override could disrupt App Store applications that use Apple-hosted Background Assets.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple's beta note warns developers to remove an existing URL override before installing or using affected App Store applications.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "Background Assets — Known Issues; issue 169558509"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-background-assets-download-crash",
+          "title": "Background Assets download-crash known issue",
+          "canonicalSummary": "Apple documented a beta issue in which an application could crash while downloading an asset pack.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The beta note warns that an asset-pack download could crash the application and provides relaunch guidance.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "Background Assets — Known Issues; issue 169648111"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-network-midi-2",
+          "title": "Network MIDI 2.0 support",
+          "canonicalSummary": "macOS expanded networked music-device communication with MIDI 2.0 capabilities.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial beta note introduces Network MIDI 2.0 sessions, local-network discovery, and UDP transport for Universal MIDI Packets.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "CoreMIDI — New Features; issue 118728162"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-external-boot-panic",
+          "title": "M1 external-boot panic known issue",
+          "canonicalSummary": "Some M1 Mac configurations could panic while booting an installation from an external disk.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple documents an external-disk boot panic on some M1 configurations and recommends a secondary APFS volume for testing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "External Boot — Known Issues; issue 170263142"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-external-hfs-automount",
+          "title": "External HFS automount known issue",
+          "canonicalSummary": "HFS-formatted external media might not mount automatically in the beta.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The macOS beta note records an automatic-mount failure and gives diskutil mount as a temporary workaround.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "External Media — Known Issues; issue 168672160"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-exchange-sync",
+          "title": "Exchange account synchronization known issue",
+          "canonicalSummary": "Exchange synchronization could fail for Calendar, Reminders, and Notes.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple documents failed Exchange synchronization and suggests disabling Notes sync to keep Calendar and Reminders updating.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "Internet Accounts — Known Issues; issue 168082477"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-touch-id-standard-user-unlock",
+          "title": "Standard-user Touch ID unlock known issue",
+          "canonicalSummary": "Touch ID might be unavailable for unlocking a standard user's screen after an update when FileVault and login order meet the documented conditions.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "The initial beta note says an administrator should sign in first to avoid the documented standard-account unlock state.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "Login — Known Issues; issue 169743642"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-recovery-activation-lock-erase",
+          "title": "Recovery Activation Lock erase known issue",
+          "canonicalSummary": "Deleting a boot volume from the Activation Lock window in macOS Recovery might not complete a full erase.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple directs testers to use Erase All Content and Settings from the running system instead of the affected Recovery workflow.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "macOS Recovery — Known Issues; issue 170280070"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-cfnetwork-pac-runloop-leak",
+          "title": "PAC configuration run-loop source leak fix",
+          "canonicalSummary": "CFNetwork corrected a run-loop source leak affecting processes that used automatic proxy configuration or discovery.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The beta note documents corrected ownership behavior around proxy auto-configuration callbacks and their returned Core Foundation objects.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "Networking — Resolved Issues; issues 166839810 and FB21376045"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-resource-fork-partial-writes",
+          "title": "Resource-fork partial-write restriction",
+          "canonicalSummary": "File systems without native extended attributes restrict partial writes within the first 286 bytes of the resource-fork attribute.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The initial beta note describes the supported replacement or beyond-offset write patterns for the com.apple.ResourceFork attribute.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "Resource fork — Resolved Issues; issue 156896699"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-rosetta-compatibility-notice",
+          "title": "Rosetta retirement compatibility notice",
+          "canonicalSummary": "macOS began warning about future compatibility changes for software that still depends on Rosetta translation.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The beta began accelerated compatibility notices for applications that depend on Rosetta, ahead of the previously announced support transition.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "Rosetta — Deprecations; issue 169228455"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-storekit-revocation-fields",
+          "title": "StoreKit transaction revocation fields",
+          "canonicalSummary": "StoreKit Transaction records gained revocationType and revocationPercentage fields.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The initial beta note adds two revocation-related properties to StoreKit transaction data.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "StoreKit — New Features; issue 148858551"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-swiftui-current-user-activity",
+          "title": "SwiftUI current user-activity fix",
+          "canonicalSummary": "SwiftUI corrected a failure to expose the most recent userActivity value as the current user activity.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The archived beta note marks SwiftUI's stale current-user-activity behavior as resolved.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "SwiftUI — Resolved Issues; issue 163136831"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-swiftui-glass-backdrop",
+          "title": "Inactive-window glass backdrop fix",
+          "canonicalSummary": "A non-opaque macOS window hosting glass content now refreshes the backdrop behind that glass while inactive.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The beta note marks backdrop updates behind glass content in inactive non-opaque windows as corrected.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "SwiftUI — Resolved Issues; issues 166828089 and FB21375029"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-beta-1-swiftui-realitykit-animation-grouping",
+          "title": "SwiftUI RealityKit animation-grouping limitation",
+          "canonicalSummary": "Implicit RealityKit component animations combine only when successive animations target the same property set.",
+          "category": "knownIssue",
+          "action": "knownIssue",
+          "inheritance": "delta",
+          "summary": "Apple documents that overlapping implicit animations can remain independent and overwrite a property when their targeted component-property sets differ.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "SwiftUI — Known Issues; issue 169723142"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-4-vm-install-display",
+          "title": "Virtual-machine installation display fix",
+          "canonicalSummary": "A virtualization fix addressed black-screen failures during supported guest installation workflows.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The initial beta note marks a black screen during new macOS Tahoe virtual-machine installation as resolved on affected hardware.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Observed in the first CDX-confirmed raw Apple DocC payload after Beta 1 and before Beta 2. This is initial snapshot-state attribution, not a claim about the exact hour the item first appeared.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "Virtualization — Resolved Issues; issue 169654019"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:11:05Z"
+      },
+      "isIndexable": true
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-macos-26-4",
+        "routeAlias": "beta-2"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "A sequential diff of CDX-confirmed Apple DocC payloads adds one macOS 26.4 Beta 2 note: a StoreKit purchase-intent fix for background app launches.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Sequential archive diff"
+          },
+          {
+            "text": "The retained raw Apple payload before Beta 2 contains the Beta 1 state. The next retained raw payload identifies itself as Beta 2 and adds one structured note item while retaining the earlier inventory.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+                "locator": "Raw payload 20260217150536; 19 ungrouped note items before Beta 2"
+              },
+              {
+                "url": "https://web.archive.org/web/20260225122433/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+                "locator": "Raw payload 20260225122435; macOS Tahoe 26.4 Beta 2 Release Notes; StoreKit — Resolved Issues"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Documented Beta 2 delta"
+          },
+          {
+            "text": "The added StoreKit resolved issue concerns purchase intents that might not be emitted from the intents sequence when an application is launched from the background.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260225122433/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+                "locator": "Raw payload 20260225122435; macOS Tahoe 26.4 Beta 2 Release Notes; StoreKit — Resolved Issues"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Attribution boundary"
+          },
+          {
+            "text": "The two raw payload captures bracket Beta 2 without crossing another macOS 26.4 milestone. This page therefore records the StoreKit item as a snapshot-derived Beta 2 delta; it does not import changes from the later cumulative Public notes.",
+            "citations": [
+              {
+                "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+                "locator": "Raw payload 20260217150536; 19 ungrouped note items before Beta 2"
+              },
+              {
+                "url": "https://web.archive.org/web/20260225122433/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+                "locator": "Raw payload 20260225122435; macOS Tahoe 26.4 Beta 2 Release Notes; StoreKit — Resolved Issues"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+          "locator": "Raw payload 20260217150536; 19 ungrouped note items before Beta 2"
+        },
+        {
+          "url": "https://web.archive.org/web/20260225122433/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+          "locator": "Raw payload 20260225122435; macOS Tahoe 26.4 Beta 2 Release Notes; StoreKit — Resolved Issues"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-26-4-beta-2-storekit-purchase-intents",
+          "title": "Background-launch StoreKit purchase-intent fix",
+          "canonicalSummary": "StoreKit corrected a case in which purchase intents were not emitted from the intents sequence after a background app launch.",
+          "category": "bugFix",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The Beta 2 snapshot adds a resolved issue for missing StoreKit purchase intents when an application launches from the background.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Sequential diff between CDX-confirmed raw Apple DocC payloads captured after Beta 1 and after Beta 2, with no intervening macOS 26.4 milestone.",
+          "citations": [
+            {
+              "url": "https://web.archive.org/web/20260216203520/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "StoreKit section before Beta 2"
+            },
+            {
+              "url": "https://web.archive.org/web/20260225122433/https://developer.apple.com/documentation/macos-release-notes/macos-26_4-release-notes",
+              "locator": "StoreKit — Resolved Issues; issues 168958783 and FB21767675"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T07:11:05Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

@@ -1,0 +1,44 @@
+{
+  "formatVersion": 1,
+  "batchId": "apple-platform-version-scope",
+  "createdAt": "YYYY-MM-DDTHH:mm:ssZ",
+  "createdBy": "coordinator-agent-name",
+  "vendor": {
+    "name": "Apple",
+    "slug": "apple"
+  },
+  "scopeRule": "Research only the exact target IDs listed below. Do not add, remove, rename, or move a target.",
+  "targets": [
+    {
+      "targetId": "version-ios-00-0/example-alias",
+      "platformId": "platform-ios",
+      "platform": "iOS",
+      "platformSlug": "ios",
+      "releaseVersionId": "version-ios-00-0",
+      "version": "00.0",
+      "stableEventId": "COPY-EXACT-STABLE-EVENT-ID",
+      "label": "Beta 1",
+      "routeAlias": "beta-1",
+      "channel": "developerBeta",
+      "appearanceDate": "YYYY-MM-DD",
+      "sequence": 1,
+      "isRevision": false,
+      "availabilityState": "available",
+      "closesReleaseCycle": false,
+      "currentCoverage": "timelineOnly",
+      "assignedTo": "research-agent-name",
+      "assignmentNotes": "Any known identity boundary or requested emphasis."
+    }
+  ],
+  "explicitlyOutOfScope": [
+    "Production Sanity writes",
+    "Chronology corrections",
+    "Page implementation",
+    "Deployment"
+  ],
+  "expectedOutputs": {
+    "findings": "research-handoffs/apple-platform-version-scope/findings.json",
+    "report": "research-handoffs/apple-platform-version-scope/report.md",
+    "evidenceDirectory": "tmp/research-evidence/apple-platform-version-scope/"
+  }
+}

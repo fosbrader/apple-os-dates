@@ -1,0 +1,2612 @@
+{
+  "formatVersion": "1.0",
+  "programId": "apple-beta-chronology-gap",
+  "generatedAt": "2026-07-31T06:37:42.659Z",
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "note": "Research packet only. Validation does not authorize Sanity writes, stable IDs, page work, publication, or deployment."
+  },
+  "summary": {
+    "proposedCandidateCount": 40,
+    "notProposedCount": 3,
+    "byStatus": {
+      "needsEvidenceReview": 40
+    },
+    "byPlatform": {
+      "macOS": 40
+    },
+    "importantQualification": "Forty displayed appearances are confirmed absent from production. Three dated false identities are structured as not-proposed records; two additional undated missing-ordinal findings for macOS 15.6 remain audit findings because no appearance date may be inferred."
+  },
+  "cohorts": [
+    {
+      "cohortId": "macos-point-15-26",
+      "description": "macOS 15.1–15.6 and 26.1–26.6 point-cycle public-beta chronology.",
+      "candidateCount": 40,
+      "sourcePaths": [
+        "research-handoffs/beta-chronology-gap/macos-point-15-26/assignment.json",
+        "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+        "research-handoffs/beta-chronology-gap/macos-point-15-26/raw-evidence-locks.json",
+        "research-handoffs/beta-chronology-gap/macos-point-15-26/production-snapshot.json",
+        "research-handoffs/beta-chronology-gap/macos-point-15-26/conflicts.json",
+        "research-handoffs/beta-chronology-gap/macos-point-15-26/full-sequence-audit.json"
+      ],
+      "supersessionRule": "Supersede an identity only with captured platform-specific evidence, a fresh exact production reconciliation, and independent chronology review."
+    }
+  ],
+  "candidates": [
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.1",
+      "releaseVersionId": "version-macos-15-1",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-09-19",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-151-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.1 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-151-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 15.1 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.1",
+      "releaseVersionId": "version-macos-15-1",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-09-24",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-151-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.1 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-151-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 15.1 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.1",
+      "releaseVersionId": "version-macos-15-1",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-10-07",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-151-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.1 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-151-pb3-update",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 15.1 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-151-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 15.1 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent review must adjudicate iCulture's October 8 row against two October 7 Pacific reports; only 9to5Mac independently supplies the displayed Public Beta 3 ordinal.",
+        "Mandatory source qualification: iCulture's retained rolling row says October 8. Two same-day Pacific reports support October 7; the one-day conflict remains explicit. 9to5Mac supplies the public ordinal, while MacRumors independently confirms public distribution and date.",
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.1:public-beta-4",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.1",
+      "releaseVersionId": "version-macos-15-1",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-10-16",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-151-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.1 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-151-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 15.1 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.2:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.2",
+      "releaseVersionId": "version-macos-15-2",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-11-06",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-152-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.2 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-152-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 15.2 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.2:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.2",
+      "releaseVersionId": "version-macos-15-2",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-11-12",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-152-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.2 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-152-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 15.2 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.2:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.2",
+      "releaseVersionId": "version-macos-15-2",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-11-20",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-152-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.2 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-152-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 15.2 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.3:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.3",
+      "releaseVersionId": "version-macos-15-3",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2024-12-18",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-153-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.3 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-153-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 15.3 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.3:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.3",
+      "releaseVersionId": "version-macos-15-3",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-01-08",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-153-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.3 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-153-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 15.3 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.3:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.3",
+      "releaseVersionId": "version-macos-15-3",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-01-16",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-153-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.3 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "osxdaily-153-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "OS X Daily evidence for macOS 15.3 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "9to5Mac explicitly establishes public-tester availability for Beta 3; OS X Daily independently corroborates the Beta 3 appearance through Apple's beta programs but does not state the word “public” in article prose.",
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.4",
+      "releaseVersionId": "version-macos-15-4",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-02-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-154-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.4 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-154-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 15.4 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.4",
+      "releaseVersionId": "version-macos-15-4",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-03-04",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-154-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.4 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-154-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 15.4 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.4",
+      "releaseVersionId": "version-macos-15-4",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-03-11",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-154-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.4 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-154-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 15.4 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.4:public-beta-4",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.4",
+      "releaseVersionId": "version-macos-15-4",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-03-17",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-154-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.4 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "osxdaily-154-pb4",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "OS X Daily evidence for macOS 15.4 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "9to5Mac explicitly supplies Public Beta 4; OS X Daily independently corroborates Beta 4 through Apple's beta program but does not distinguish public from developer enrollment in article prose.",
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.5:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.5",
+      "releaseVersionId": "version-macos-15-5",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-04-15",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-155-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.5 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-155-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 15.5 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent review must retain the two exact first-public-beta lineages while documenting iClarified's internally inconsistent “third public beta” wording.",
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.5:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.5",
+      "releaseVersionId": "version-macos-15-5",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-04-22",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-155-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.5 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-155-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 15.5 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.5:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.5",
+      "releaseVersionId": "version-macos-15-5",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-04-28",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "monomaniac-155-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "Monomaniac Garage evidence for macOS 15.5 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-155-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 15.5 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-155-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 15.5 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent review must adjudicate iCulture's conflicting Public Beta 4 label against the explicit Public Beta 3 build record and installer observation.",
+        "Mandatory source qualification: The public program called this Public Beta 3 even though it shared the fourth developer seed. iCulture's rolling table instead calls it Public Beta 4.",
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.6:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "15.6",
+      "releaseVersionId": "version-macos-15-6",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-07-15",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-156-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 15.6 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iclarified-156-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iClarified evidence for macOS 15.6 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.1:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.1",
+      "releaseVersionId": "version-macos-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-09-24",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-261-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.1 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-261-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.1 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.1:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.1",
+      "releaseVersionId": "version-macos-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-07",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-261-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.1 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-261-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.1 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.1:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.1",
+      "releaseVersionId": "version-macos-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-14",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-261-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.1 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-261-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.1 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.1:public-beta-4",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.1",
+      "releaseVersionId": "version-macos-26-1",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-10-20",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-261-pb4",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.1 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-261-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.1 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.2:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.2",
+      "releaseVersionId": "version-macos-26-2",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-11-07",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-262-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.2 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-262-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.2 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.2:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.2",
+      "releaseVersionId": "version-macos-26-2",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-11-13",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-262-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.2 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-262-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.2 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.2:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.2",
+      "releaseVersionId": "version-macos-26-2",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-11-18",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-262-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.2 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mactrast-262-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacTrast evidence for macOS 26.2 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent review must adjudicate two explicit Public Beta 3 reports against MacTech's Public Beta 2 wording.",
+        "Mandatory source qualification: MacTech called the November 18 seed the second public beta. Two platform-specific reports explicitly call it Public Beta 3, following the November 7 and November 13 public appearances.",
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.3:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.3",
+      "releaseVersionId": "version-macos-26-3",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-12-17",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-263-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.3 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-263-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.3 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.3:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.3",
+      "releaseVersionId": "version-macos-26-3",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-01-13",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-263-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.3 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-263-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.3 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.3:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.3",
+      "releaseVersionId": "version-macos-26-3",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-01-27",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-263-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.3 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-263-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.3 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.4:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.4",
+      "releaseVersionId": "version-macos-26-4",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-02-17",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-264-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.4 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-264-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.4 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.4:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.4",
+      "releaseVersionId": "version-macos-26-4",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-02-24",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-264-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.4 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mactrast-264-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacTrast evidence for macOS 26.4 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.4:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.4",
+      "releaseVersionId": "version-macos-26-4",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-03-04",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-264-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.4 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mactrast-264-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacTrast evidence for macOS 26.4 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.4:public-beta-4",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.4",
+      "releaseVersionId": "version-macos-26-4",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-03-09",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-264-pb4",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.4 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-264-pb4",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.4 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "9to5Mac explicitly supplies the public ordinal; MacRumors independently confirms the public appearance and date but uses a generic public-update label.",
+        "Mandatory source qualification: The second publisher lineage corroborates public distribution and date, but not the public ordinal independently.",
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.5:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.5",
+      "releaseVersionId": "version-macos-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-03",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-265-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.5 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "technopat-265-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "Technopat evidence for macOS 26.5 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.5:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.5",
+      "releaseVersionId": "version-macos-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-21",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-265-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.5 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-265-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.5 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent review must verify the explicit April 21 Public Beta 2 evidence against iCulture's shifted April 14 row.",
+        "Mandatory source qualification: Apple skipped a macOS public seed after Developer Beta 2. The April 21 public appearance was explicitly labeled Public Beta 2 even though it shared Developer Beta 3.",
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.5:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.5",
+      "releaseVersionId": "version-macos-26-5",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-27",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-265-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.5 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "monomaniac-265-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "Monomaniac Garage evidence for macOS 26.5 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent review must verify the explicit April 27 Public Beta 3 evidence against iCulture's shifted Public Beta 4 row.",
+        "Mandatory source qualification: The April 27 appearance was explicitly Public Beta 3 even though it shared Developer Beta 4. iCulture's rolling table shifts the public ordinals and dates.",
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-1",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.6",
+      "releaseVersionId": "version-macos-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 1",
+        "routeAlias": "public-beta-1",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-05-28",
+        "sequence": 1,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-266-pb1",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.6 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-266-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.6 Public Beta 1's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.6",
+      "releaseVersionId": "version-macos-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-06-16",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-266-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.6 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-266-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.6 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-3",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.6",
+      "releaseVersionId": "version-macos-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 3",
+        "routeAlias": "public-beta-3",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-06-30",
+        "sequence": 3,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "conflict",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-266-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.6 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-266-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.6 Public Beta 3's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent review must adjudicate June 30 public distribution against iCulture's June 29 developer-date row.",
+        "Mandatory source qualification: iCulture's retained row says June 29, matching the developer seed. MacRumors explicitly reports public distribution on June 30 Pacific; that date is retained.",
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-4",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.6",
+      "releaseVersionId": "version-macos-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-07",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-266-pb4",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for macOS 26.6 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-266-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for macOS 26.6 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.6:public-beta-5",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "version": "26.6",
+      "releaseVersionId": "version-macos-26-6",
+      "proposedIdentity": {
+        "label": "Public Beta 5",
+        "routeAlias": "public-beta-5",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-07-13",
+        "sequence": 5,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "ordinalBasis": "explicit",
+      "candidateStatus": "needsEvidenceReview",
+      "identityStatus": "confirmed",
+      "evidenceState": "corroborated",
+      "productionReconciliation": {
+        "status": "confirmedMissing",
+        "queriedAt": "2026-07-31T06:37:42.659Z",
+        "matchBasis": "Fresh published no-CDN query found zero matches on releaseVersionId, publicBeta channel, routeAlias, label, sequence, and appearanceDate; the exact parent releaseVersion exists.",
+        "exactIdentityMatches": 0
+      },
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-266-pb5",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for macOS 26.6 Public Beta 5's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "monomaniac-266-pb5",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "Monomaniac Garage evidence for macOS 26.6 Public Beta 5's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "buildEvidenceStatus": "absent",
+      "contentDisposition": "timelineOnly",
+      "blockers": [
+        "Independent chronology review is pending."
+      ],
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "A reviewer independent of the researcher must inspect the platform, audience, displayed public ordinal, Pacific date, source independence, skips, and conflicts."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "notProposed": [
+    {
+      "recordId": "not-proposed:apple:macos:15.5:public-beta-4",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "releaseVersionId": "version-macos-15-5",
+      "apparentIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2025-04-28",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "The April 28 public appearance is explicitly identified as Public Beta 3 by the installer observation and build history. Public Beta 4 is a shifted label in one living table and must not be inferred from Developer Beta 4.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "monomaniac-155-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "Monomaniac Garage evidence for apparent macOS 15.5 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-155-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for apparent macOS 15.5 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "reversalEvidence": "Two independent retained sources explicitly showing an additional macOS 15.5 appearance displayed as Public Beta 4.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Negative finding remains research-only pending independent review."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:macos:26.5:public-beta-2",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "releaseVersionId": "version-macos-26-5",
+      "apparentIdentity": {
+        "label": "Public Beta 2",
+        "routeAlias": "public-beta-2",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-14",
+        "sequence": 2,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "The April 14 public release article omits macOS, and platform-specific reporting says Apple skipped the macOS public seed that week. The actual Public Beta 2 appeared April 21.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-265-apr14-negative",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for apparent macOS 26.5 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-265-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for apparent macOS 26.5 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "mr-265-pb2",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "MacRumors evidence for apparent macOS 26.5 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-265-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for apparent macOS 26.5 Public Beta 2's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "reversalEvidence": "Contemporary evidence explicitly showing macOS Tahoe 26.5 Public Beta 2 available on April 14 Pacific.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Negative finding remains research-only pending independent review."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    },
+    {
+      "recordId": "not-proposed:apple:macos:26.5:public-beta-4",
+      "originCohortId": "macos-point-15-26",
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "releaseVersionId": "version-macos-26-5",
+      "apparentIdentity": {
+        "label": "Public Beta 4",
+        "routeAlias": "public-beta-4",
+        "channel": "publicBeta",
+        "appearanceDate": "2026-04-27",
+        "sequence": 4,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "classification": "disprovedIdentity",
+      "reason": "The April 27 public appearance is explicitly Public Beta 3. Public Beta 4 is a shifted rolling-table label derived from the developer sequence.",
+      "evidenceRefs": [
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "9to5-265-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "9to5Mac evidence for apparent macOS 26.5 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "monomaniac-265-pb3",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "Monomaniac Garage evidence for apparent macOS 26.5 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        },
+        {
+          "kind": "packetSource",
+          "packetPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/sources.json",
+          "sourceId": "iculture-265-cycle",
+          "locator": "Use the source-specific supportNote and retained raw-page locator in sources.json; apply all conflicts.json qualifications.",
+          "supports": "iCulture evidence for apparent macOS 26.5 Public Beta 4's public availability, displayed ordinal, and/or Pacific appearance date."
+        }
+      ],
+      "reversalEvidence": "Two independent retained sources explicitly showing a separate macOS 26.5 appearance displayed as Public Beta 4.",
+      "review": {
+        "required": true,
+        "reviewer": null,
+        "reviewedAt": null,
+        "notes": "Negative finding remains research-only pending independent review."
+      },
+      "flags": {
+        "sanityMutationAllowed": false,
+        "publicationEligible": false
+      }
+    }
+  ],
+  "nextEvidenceWaves": [
+    {
+      "waveId": "macos-point-15-26-independent-review",
+      "scope": "Independently inspect all 40 candidates, five negative findings, nine conflicts, source locators, and production absence proof.",
+      "artifactPaths": [
+        "research-handoffs/beta-chronology-gap/macos-point-15-26/independent-review.json",
+        "research-handoffs/beta-chronology-gap/macos-point-15-26/report.md",
+        "research-handoffs/beta-chronology-gap/macos-point-15-26/validation.json"
+      ],
+      "estimatedCandidateCount": 40,
+      "countStatus": "confirmed",
+      "requiredNextStep": "Assign a reviewer who did not perform this research. Implementation remains a separate authorization."
+    }
+  ],
+  "validationStatus": {
+    "status": "passed",
+    "validatedAt": "2026-07-31T06:37:42.659Z",
+    "validator": "research-handoffs/beta-chronology-gap/macos-point-15-26/validate-packet.mjs",
+    "summaryPath": "research-handoffs/beta-chronology-gap/macos-point-15-26/validation.json"
+  }
+}

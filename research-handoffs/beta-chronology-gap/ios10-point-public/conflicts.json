@@ -1,0 +1,247 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios10-point-public",
+  "conflictCount": 6,
+  "conflicts": [
+    {
+      "conflictId": "ios102-public-beta-3-date",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "iOS 10.2 Public Beta 3 appearance date",
+      "candidateIds": [
+        "candidate:apple:ios:10.2:public-beta-3"
+      ],
+      "positions": [
+        {
+          "position": "2016-11-14",
+          "sources": [
+            "source-ios102-pb3-macrumors-update"
+          ],
+          "summary": "The MacRumors page carries the original developer-article date and a later public-availability update with no independent update timestamp."
+        },
+        {
+          "position": "2016-11-15",
+          "sources": [
+            "source-ios102-pb3-idevice",
+            "source-ios102-pb3-iphonefaq",
+            "source-ios102-pb3-thinkapple"
+          ],
+          "summary": "Standalone public-facing reports identify the third public beta on November 15. The iPhone FAQ article has obvious body version-number typos, so only its correctly titled chronology and timestamp are used."
+        }
+      ],
+      "decision": {
+        "disposition": "propose2016-11-15",
+        "confidence": "high",
+        "rationale": "The November 14 timestamp belongs to a developer article whose public update is untimestamped; multiple standalone public reports are dated November 15."
+      },
+      "requiredHandling": "Do not collapse the public appearance onto the developer article date. Recheck the preserved locators during independent review."
+    },
+    {
+      "conflictId": "ios103-public-beta-4-date",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "iOS 10.3 Public Beta 4 appearance date",
+      "candidateIds": [
+        "candidate:apple:ios:10.3:public-beta-4"
+      ],
+      "positions": [
+        {
+          "position": "2017-02-27",
+          "sources": [
+            "source-ios103-pb4-macrumors-update"
+          ],
+          "summary": "The MacRumors page carries the original developer-article date and an untimestamped public-availability update."
+        },
+        {
+          "position": "2017-02-28",
+          "sources": [
+            "source-ios103-pb4-redmondpie",
+            "source-ios103-pb4-idevice"
+          ],
+          "summary": "Two standalone contemporary publishers report the public seed on February 28; Redmond Pie explicitly distinguishes it from the prior day's developer seed."
+        }
+      ],
+      "decision": {
+        "disposition": "propose2017-02-28",
+        "confidence": "high",
+        "rationale": "Public-specific reporting dates the availability one day after the developer seed."
+      },
+      "requiredHandling": "Preserve February 27 as the paired developer appearance, not the public appearance."
+    },
+    {
+      "conflictId": "ios1032-public-beta-3-date",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "iOS 10.3.2 Public Beta 3 appearance date",
+      "candidateIds": [
+        "candidate:apple:ios:10.3.2:public-beta-3"
+      ],
+      "positions": [
+        {
+          "position": "2017-04-17",
+          "sources": [
+            "source-ios1032-pb3-macrumors-update"
+          ],
+          "summary": "The MacRumors page carries the original developer-article date and an untimestamped public-availability update."
+        },
+        {
+          "position": "2017-04-18",
+          "sources": [
+            "source-ios1032-pb3-9to5mac",
+            "source-ios1032-pb3-idevice"
+          ],
+          "summary": "Two standalone contemporary publishers report the third public beta on April 18; 9to5Mac explicitly distinguishes it from the prior day's developer seed."
+        }
+      ],
+      "decision": {
+        "disposition": "propose2017-04-18",
+        "confidence": "high",
+        "rationale": "Public-specific reporting dates the availability one day after the developer seed."
+      },
+      "requiredHandling": "Preserve April 17 as the paired developer appearance, not the public appearance."
+    },
+    {
+      "conflictId": "ios1021-public-beta-3-editorial-lineage-gap",
+      "severity": "material",
+      "status": "unresolved",
+      "subject": "iOS 10.2.1 Public Beta 3 corroboration threshold",
+      "candidateIds": [
+        "candidate:apple:ios:10.2.1:public-beta-3"
+      ],
+      "positions": [
+        {
+          "position": "explicitEditorialReport",
+          "sources": [
+            "source-ios1021-pb3-macrumors"
+          ],
+          "summary": "MacRumors explicitly states that the third public beta was available."
+        },
+        {
+          "position": "independentWitnessAndAmbiguousContext",
+          "sources": [
+            "source-ios1021-pb3-idevicecentral-video",
+            "source-ios1021-pb3-osxdaily"
+          ],
+          "summary": "The first-hand video page independently contains a Public Beta 3 description and January 9 upload timestamp. OS X Daily covers beta 3 and says public versions typically follow, but does not independently state that the public seed was already available."
+        }
+      ],
+      "decision": {
+        "disposition": "retainReportedUnverified",
+        "confidence": "medium",
+        "rationale": "The identity is directly reported and independently witnessed, but the packet deliberately does not relabel that as two-editorial-lineage corroboration."
+      },
+      "requiredHandling": "Find a second independent contemporary editorial publisher before chronology approval."
+    },
+    {
+      "conflictId": "ios101-public-beta-5-device-scope",
+      "severity": "nonMaterial",
+      "status": "qualificationRequired",
+      "subject": "iOS 10.1 Public Beta 5 device applicability",
+      "candidateIds": [
+        "candidate:apple:ios:10.1:public-beta-5"
+      ],
+      "sources": [
+        "source-ios101-pb5-macrumors",
+        "source-ios101-pb5-iculture"
+      ],
+      "finding": "Both retained sources identify a fifth public seed limited to iPhone 7 and iPhone 7 Plus.",
+      "requiredHandling": "Display the device limitation on any eventual event page; do not imply this seed was offered to every iOS 10-capable device."
+    },
+    {
+      "conflictId": "ios1032-public-beta-1-device-scope",
+      "severity": "nonMaterial",
+      "status": "qualificationRequired",
+      "subject": "iOS 10.3.2 Public Beta 1 32-bit-device omission",
+      "candidateIds": [
+        "candidate:apple:ios:10.3.2:public-beta-1"
+      ],
+      "sources": [
+        "source-ios1032-pb1-macrumors",
+        "source-ios1032-pb1-appleinsider"
+      ],
+      "finding": "The first public seed lacked 32-bit binaries, affecting devices including iPhone 5, iPhone 5c, and iPad 4.",
+      "requiredHandling": "Display the initial 32-bit-device omission on any eventual event page."
+    }
+  ],
+  "developerBetaAuditGaps": [
+    {
+      "platform": "iOS",
+      "version": "10.2.1",
+      "releaseVersionId": "version-ios-10-2-1",
+      "productionDeveloperBetaEventCount": 0,
+      "classification": "developerChronologyAuditGap",
+      "requiredNextStep": "Open a separate developer-beta research assignment. Do not manufacture developer candidates from this public-beta packet."
+    },
+    {
+      "platform": "iOS",
+      "version": "10.3.2",
+      "releaseVersionId": "version-ios-10-3-2",
+      "productionDeveloperBetaEventCount": 0,
+      "classification": "developerChronologyAuditGap",
+      "requiredNextStep": "Open a separate developer-beta research assignment. Do not manufacture developer candidates from this public-beta packet."
+    },
+    {
+      "platform": "iOS",
+      "version": "10.3.3",
+      "releaseVersionId": "version-ios-10-3-3",
+      "productionDeveloperBetaEventCount": 0,
+      "classification": "developerChronologyAuditGap",
+      "requiredNextStep": "Open a separate developer-beta research assignment. Do not manufacture developer candidates from this public-beta packet."
+    }
+  ],
+  "captureFailures": [
+    {
+      "sourceId": "source-ios101-pb3-iphonetricks",
+      "canonicalUrl": "https://www.iphonetricks.org/ios-10-1-developer-and-public-beta-3-now-available-for-testing/",
+      "publisher": "iPhoneTricks.org",
+      "error": "fetch failed",
+      "disposition": "Not used as candidate evidence. An independently captured alternate source covers every affected identity."
+    },
+    {
+      "sourceId": "source-ios101-pb4-neowin",
+      "canonicalUrl": "https://www.neowin.net/news/apple-releases-ios-101-beta-4-to-developers-and-public-beta-testers/",
+      "publisher": "Neowin",
+      "error": "HTTP 403; 6051 response bytes",
+      "disposition": "Not used as candidate evidence. An independently captured alternate source covers every affected identity."
+    },
+    {
+      "sourceId": "source-ios102-pb3-neowin",
+      "canonicalUrl": "https://www.neowin.net/news/apple-releases-ios-102-and-macos-10122-public-beta-3-watchos-311-developer-beta-3/",
+      "publisher": "Neowin",
+      "error": "HTTP 403; 6114 response bytes",
+      "disposition": "Not used as candidate evidence. An independently captured alternate source covers every affected identity."
+    },
+    {
+      "sourceId": "source-ios102-pb4-neowin",
+      "canonicalUrl": "https://www.neowin.net/news/ios-102-and-macos-10122-sierra-beta-4-now-available-to-public-beta-testers/",
+      "publisher": "Neowin",
+      "error": "HTTP 403; 6093 response bytes",
+      "disposition": "Not used as candidate evidence. An independently captured alternate source covers every affected identity."
+    },
+    {
+      "sourceId": "source-ios103-pb2-neowin",
+      "canonicalUrl": "https://www.neowin.net/news/apple-seeds-ios-103-beta-2-to-public-beta-testers/",
+      "publisher": "Neowin",
+      "error": "HTTP 403; 5975 response bytes",
+      "disposition": "Not used as candidate evidence. An independently captured alternate source covers every affected identity."
+    },
+    {
+      "sourceId": "source-ios1033-pb6-neowin",
+      "canonicalUrl": "https://www.neowin.net/news/apple-seeds-new-builds-of-ios-1033-macos-10126-sierra-and-tvos-1022/",
+      "publisher": "Neowin",
+      "error": "HTTP 403; 6029 response bytes",
+      "disposition": "Not used as candidate evidence. An independently captured alternate source covers every affected identity."
+    }
+  ],
+  "exclusions": [
+    {
+      "identity": "Developer-beta candidates for 10.2.1, 10.3.2, and 10.3.3",
+      "reason": "Production has zero developerBeta events for those releaseVersion documents, but developer research was explicitly outside this assignment."
+    },
+    {
+      "identity": "Build numbers and substantive release-note claims",
+      "reason": "This packet freezes chronology identities only. It does not infer shared payloads or research article content."
+    }
+  ],
+  "reviewState": "pendingIndependentChronologyReview"
+}

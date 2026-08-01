@@ -1,0 +1,3073 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-watchos-point-7-26",
+  "generatedAt": "2026-07-31T07:53:46.696Z",
+  "normalizationZone": "America/Los_Angeles",
+  "cycleCount": 16,
+  "researchedAppearanceCount": 55,
+  "supportableAppearanceCount": 46,
+  "blockedAppearanceCount": 9,
+  "negativeFindingCount": 8,
+  "cycles": [
+    {
+      "version": "7.1",
+      "releaseVersionId": "version-watchos-7-1",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-e6a73a429df28bd3a88e81f2",
+          "appearanceDate": "2020-09-17",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-1",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-7-1:m0",
+          "version": "7.1"
+        },
+        {
+          "_id": "release-event-8034a0adde6f1ece076a8038",
+          "appearanceDate": "2020-09-29",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-1",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-7-1:m1",
+          "version": "7.1"
+        },
+        {
+          "_id": "release-event-6a021a41aa5fb80d65aacda8",
+          "appearanceDate": "2020-10-13",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-1",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-7-1:m2",
+          "version": "7.1"
+        },
+        {
+          "_id": "release-event-1209e9a931833e26a00840d0",
+          "appearanceDate": "2020-10-22",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-1",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-7-1:m3",
+          "version": "7.1"
+        },
+        {
+          "_id": "release-event-7cdc2a4e4a5189dbf44c6874",
+          "appearanceDate": "2020-11-05",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-1",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-1:m4",
+          "version": "7.1"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:7.1:public-beta-1",
+          "version": "7.1",
+          "releaseVersionId": "version-watchos-7-1",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2020-09-21",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore7-public-rolling",
+            "iculture-71-cycle"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.1:public-beta-2",
+          "version": "7.1",
+          "releaseVersionId": "version-watchos-7-1",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2020-10-01",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore7-public-rolling",
+            "iculture-71-cycle"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [],
+      "conflicts": [],
+      "notes": []
+    },
+    {
+      "version": "7.2",
+      "releaseVersionId": "version-watchos-7-2",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-481c5bc522352ff83eaf15eb",
+          "appearanceDate": "2020-11-12",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-2",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-7-2:m0",
+          "version": "7.2"
+        },
+        {
+          "_id": "release-event-fbe9647525cdaad40c3bac47",
+          "appearanceDate": "2020-11-18",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-2",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-7-2:m1",
+          "version": "7.2"
+        },
+        {
+          "_id": "release-event-52bc8a96709ba8bdc3b13f03",
+          "appearanceDate": "2020-12-02",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-2",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-7-2:m2",
+          "version": "7.2"
+        },
+        {
+          "_id": "release-event-596050152781629068afb47e",
+          "appearanceDate": "2020-12-08",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-2",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-2:m3",
+          "version": "7.2"
+        },
+        {
+          "_id": "release-event-ddabf30dced88269e46a3774",
+          "appearanceDate": "2020-12-14",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-2",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-2:m4",
+          "version": "7.2"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:7.2:public-beta-2",
+          "version": "7.2",
+          "releaseVersionId": "version-watchos-7-2",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2020-11-18",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore7-public-rolling",
+            "iphonecanada-72-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [
+        {
+          "findingId": "negative:watchos:7.2:public-beta-1",
+          "version": "7.2",
+          "sequence": 1,
+          "date": "2020-11-12",
+          "classification": "publicDistributionNotEstablished",
+          "sourceIds": [
+            "iculture-72-cycle",
+            "imore7-public-rolling"
+          ],
+          "finding": "The first seed was pulled and surviving sources do not establish a completed public-program appearance. One living iMore entry broadly says developer and public testers; it is not enough to overcome the withdrawal and developer-only reporting."
+        },
+        {
+          "findingId": "negative:watchos:7.2:public-beta-3",
+          "version": "7.2",
+          "sequence": 3,
+          "date": "2020-12-02",
+          "classification": "publicDistributionNotEstablished",
+          "sourceIds": [
+            "iculture-72-cycle",
+            "imore7-public-rolling"
+          ],
+          "finding": "The retained cycle chronology establishes Developer Beta 3, while a single living iMore entry reports broad tester availability. The exact public identity is not established."
+        }
+      ],
+      "conflicts": [],
+      "notes": [
+        "The November 12 first developer seed was pulled. Surviving evidence does not establish a public Public Beta 1 appearance.",
+        "The December 2 third developer seed is not promoted to a public appearance; one living page reports broad tester availability, while the retained cycle chronology identifies only the developer seed."
+      ]
+    },
+    {
+      "version": "7.3",
+      "releaseVersionId": "version-watchos-7-3",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-32e57c923517116cfcee79e8",
+          "appearanceDate": "2020-12-16",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-3",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-7-3:m0",
+          "version": "7.3"
+        },
+        {
+          "_id": "release-event-587c81343d5c0da98cc78d86",
+          "appearanceDate": "2021-01-13",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-3",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-7-3:m1",
+          "version": "7.3"
+        },
+        {
+          "_id": "release-event-93edb4a6531d2bc07c94b516",
+          "appearanceDate": "2021-01-21",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-3",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-3:m2",
+          "version": "7.3"
+        },
+        {
+          "_id": "release-event-789d93785a8571c6eb936cd6",
+          "appearanceDate": "2021-01-26",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-3",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-3:m3",
+          "version": "7.3"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:7.3:public-beta-2",
+          "version": "7.3",
+          "releaseVersionId": "version-watchos-7-3",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2021-01-13",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-73-pb2",
+            "mr-73-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [
+        {
+          "findingId": "negative:watchos:7.3:public-beta-1",
+          "version": "7.3",
+          "sequence": 1,
+          "date": "2020-12-16",
+          "classification": "publicDistributionNotEstablished",
+          "sourceIds": [
+            "cultofmac-73-pb1-negative"
+          ],
+          "finding": "Contemporary reporting identifies watchOS 7.3 Beta 1 as developer-only while the mobile betas entered public testing."
+        }
+      ],
+      "conflicts": [],
+      "notes": [
+        "The December 16 first developer seed is not promoted to Public Beta 1 because contemporary reporting identifies watchOS as developer-only while other platforms entered public testing."
+      ]
+    },
+    {
+      "version": "7.4",
+      "releaseVersionId": "version-watchos-7-4",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-7c9fc044dec083d3be09f933",
+          "appearanceDate": "2021-02-01",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-4",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-7-4:m0",
+          "version": "7.4"
+        },
+        {
+          "_id": "release-event-5085ecbff4c1fd7e781ddbbb",
+          "appearanceDate": "2021-02-16",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-4",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-7-4:m1",
+          "version": "7.4"
+        },
+        {
+          "_id": "release-event-b0fdd0dc29c36c9a632b1409",
+          "appearanceDate": "2021-03-04",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-4",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-7-4:m2",
+          "version": "7.4"
+        },
+        {
+          "_id": "release-event-25bc328d9b6e18a8c294312c",
+          "appearanceDate": "2021-03-23",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 5",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-4",
+          "routeAlias": "beta-5",
+          "sequence": 5,
+          "stableEventId": "version-watchos-7-4:m3",
+          "version": "7.4"
+        },
+        {
+          "_id": "release-event-b8f7bc485255af3604fd3b13",
+          "appearanceDate": "2021-03-31",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 6",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-4",
+          "routeAlias": "beta-6",
+          "sequence": 6,
+          "stableEventId": "version-watchos-7-4:m4",
+          "version": "7.4"
+        },
+        {
+          "_id": "release-event-3f7fd27180467fca6e137115",
+          "appearanceDate": "2021-04-20",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-4",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-4:m5",
+          "version": "7.4"
+        },
+        {
+          "_id": "release-event-534dc15df08a48b8e27bad48",
+          "appearanceDate": "2021-04-26",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-4",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-4:m6",
+          "version": "7.4"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:7.4:public-beta-1",
+          "version": "7.4",
+          "releaseVersionId": "version-watchos-7-4",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2021-02-04",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore7-public-rolling",
+            "iculture-74-cycle"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.4:public-beta-2",
+          "version": "7.4",
+          "releaseVersionId": "version-watchos-7-4",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2021-02-17",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "iculture-74-cycle",
+            "kob-74-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.4:public-beta-3",
+          "version": "7.4",
+          "releaseVersionId": "version-watchos-7-4",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2021-03-05",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "kob-74-pb3",
+            "macerkopf-74-pb3"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.4:public-beta-4",
+          "version": "7.4",
+          "releaseVersionId": "version-watchos-7-4",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-4",
+          "label": "Public Beta 4",
+          "sequence": 4,
+          "appearanceDate": "2021-03-15",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "iculture-74-cycle",
+            "ithinkdiff-74-pb4"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.4:public-beta-5",
+          "version": "7.4",
+          "releaseVersionId": "version-watchos-7-4",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-5",
+          "label": "Public Beta 5",
+          "sequence": 5,
+          "appearanceDate": "2021-03-23",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "iculture-74-cycle",
+            "kob-74-pb5"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.4:public-beta-7",
+          "version": "7.4",
+          "releaseVersionId": "version-watchos-7-4",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-7",
+          "label": "Public Beta 7",
+          "sequence": 7,
+          "appearanceDate": "2021-04-07",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-74-pb7",
+            "ithinkdiff-74-pb7"
+          ],
+          "qualification": "Two independent contemporary reports explicitly identify Beta 7 as available to public testers. iCulture's living table omits a public row for Beta 7; the omission is retained as a completeness qualification rather than treated as affirmative contrary evidence.",
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [
+        {
+          "findingId": "negative:watchos:7.4:public-beta-6",
+          "version": "7.4",
+          "sequence": 6,
+          "date": "2021-03-31",
+          "classification": "publicDistributionNotEstablished",
+          "sourceIds": [
+            "iculture-74-cycle"
+          ],
+          "finding": "The retained chronology has a Developer Beta 6 row but no public row. No exact public appearance is inferred."
+        }
+      ],
+      "conflicts": [
+        "conflict:watchos:7.4:public-beta-7-living-table-omission"
+      ],
+      "notes": [
+        "No Public Beta 6 appearance is established. Developer Beta 6 must not supply a public ordinal or date."
+      ]
+    },
+    {
+      "version": "7.5",
+      "releaseVersionId": "version-watchos-7-5",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-8ad00ff42262ebdb204b8b4e",
+          "appearanceDate": "2021-04-22",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-5",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-7-5:m0",
+          "version": "7.5"
+        },
+        {
+          "_id": "release-event-ddf1411766e738c4177107eb",
+          "appearanceDate": "2021-04-30",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-5",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-7-5:m1",
+          "version": "7.5"
+        },
+        {
+          "_id": "release-event-63ad8697dc204d41a8e083e8",
+          "appearanceDate": "2021-05-10",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-5",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-7-5:m2",
+          "version": "7.5"
+        },
+        {
+          "_id": "release-event-b5ab0bbf64025cea7859a64c",
+          "appearanceDate": "2021-05-17",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-5",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-5:m3",
+          "version": "7.5"
+        },
+        {
+          "_id": "release-event-c9874cf8e95b8a5be192534d",
+          "appearanceDate": "2021-05-24",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-5",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-5:m4",
+          "version": "7.5"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:7.5:public-beta-1",
+          "version": "7.5",
+          "releaseVersionId": "version-watchos-7-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2021-04-23",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore7-public-rolling",
+            "kob-75-pb1"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.5:public-beta-2",
+          "version": "7.5",
+          "releaseVersionId": "version-watchos-7-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2021-04-30",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-75-pb2",
+            "kob-75-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.5:public-beta-3",
+          "version": "7.5",
+          "releaseVersionId": "version-watchos-7-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2021-05-10",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-75-pb3",
+            "purudo-75-pb3"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [],
+      "conflicts": [],
+      "notes": []
+    },
+    {
+      "version": "7.6",
+      "releaseVersionId": "version-watchos-7-6",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-cc0c93b82642d226ea75ca22",
+          "appearanceDate": "2021-05-19",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-6",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-7-6:m0",
+          "version": "7.6"
+        },
+        {
+          "_id": "release-event-cc1684ce4e7500aa188ebc8c",
+          "appearanceDate": "2021-06-02",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-6",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-7-6:m1",
+          "version": "7.6"
+        },
+        {
+          "_id": "release-event-276570b37c45b83e5a730463",
+          "appearanceDate": "2021-06-14",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-6",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-7-6:m2",
+          "version": "7.6"
+        },
+        {
+          "_id": "release-event-21ea7c7b3b835b0098d9ebc1",
+          "appearanceDate": "2021-06-29",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-6",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-7-6:m3",
+          "version": "7.6"
+        },
+        {
+          "_id": "release-event-4f26922454e721526e11ba11",
+          "appearanceDate": "2021-07-08",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 5",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-6",
+          "routeAlias": "beta-5",
+          "sequence": 5,
+          "stableEventId": "version-watchos-7-6:m4",
+          "version": "7.6"
+        },
+        {
+          "_id": "release-event-4ad4d7677d53858e1378669f",
+          "appearanceDate": "2021-07-13",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-6",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-6:m5",
+          "version": "7.6"
+        },
+        {
+          "_id": "release-event-3d3406cf25bf2e995f7a3905",
+          "appearanceDate": "2021-07-19",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-7-6",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-7-6:m6",
+          "version": "7.6"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:7.6:public-beta-1",
+          "version": "7.6",
+          "releaseVersionId": "version-watchos-7-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2021-05-20",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "kob-76-pb1",
+            "wccftech-76-pb1"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.6:public-beta-3",
+          "version": "7.6",
+          "releaseVersionId": "version-watchos-7-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2021-06-15",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore7-public-rolling",
+            "9to5-76-pb3"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.6:public-beta-4",
+          "version": "7.6",
+          "releaseVersionId": "version-watchos-7-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-4",
+          "label": "Public Beta 4",
+          "sequence": 4,
+          "appearanceDate": "2021-06-29",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore7-public-rolling",
+            "9to5-76-pb4"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:7.6:public-beta-5",
+          "version": "7.6",
+          "releaseVersionId": "version-watchos-7-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-5",
+          "label": "Public Beta 5",
+          "sequence": 5,
+          "appearanceDate": "2021-07-08",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "kob-76-pb5",
+            "nishiki-76-pb5"
+          ],
+          "qualification": "Two independent same-cycle reports explicitly identify Public Beta 5. The retained iCulture table omits a public row for Beta 5, so that living-table omission remains visible.",
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [
+        {
+          "findingId": "negative:watchos:7.6:public-beta-2",
+          "version": "7.6",
+          "sequence": 2,
+          "date": null,
+          "classification": "publicDistributionNotEstablished",
+          "sourceIds": [
+            "iculture-76-cycle",
+            "imore7-public-rolling"
+          ],
+          "finding": "No exact Public Beta 2 appearance was established. The developer sequence is not used to manufacture a public date."
+        }
+      ],
+      "conflicts": [
+        "conflict:watchos:7.6:public-beta-5-living-table-omission"
+      ],
+      "notes": [
+        "No Public Beta 2 appearance is established. The paired developer seed is not used to infer one."
+      ]
+    },
+    {
+      "version": "8.1",
+      "releaseVersionId": "version-watchos-8-1",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-5daafe5538ef8faea54ea52f",
+          "appearanceDate": "2021-09-21",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-1",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-8-1:m0",
+          "version": "8.1"
+        },
+        {
+          "_id": "release-event-fdd14f207cb311ed2db2055e",
+          "appearanceDate": "2021-09-28",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-1",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-8-1:m1",
+          "version": "8.1"
+        },
+        {
+          "_id": "release-event-671c4d2c1b64f4bd36a3df58",
+          "appearanceDate": "2021-10-06",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-1",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-8-1:m2",
+          "version": "8.1"
+        },
+        {
+          "_id": "release-event-8519e2a2036edfc610b3da72",
+          "appearanceDate": "2021-10-13",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-1",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-8-1:m3",
+          "version": "8.1"
+        },
+        {
+          "_id": "release-event-faabafbba22bbcf99e761339",
+          "appearanceDate": "2021-10-18",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-1",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-1:m4",
+          "version": "8.1"
+        },
+        {
+          "_id": "release-event-8fbc777c309e4035f95fc7e2",
+          "appearanceDate": "2021-10-21",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": true,
+          "label": "RC 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-1",
+          "routeAlias": "rc-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-8-1:m5",
+          "version": "8.1"
+        },
+        {
+          "_id": "release-event-b66cbaf9275516da70b4a1c7",
+          "appearanceDate": "2021-10-25",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-1",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-1:m6",
+          "version": "8.1"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:8.1:public-beta-2",
+          "version": "8.1",
+          "releaseVersionId": "version-watchos-8-1",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2021-09-29",
+          "decision": "blocked",
+          "identityStatus": "conflict",
+          "sourceIds": [
+            "forbes-81-first",
+            "kob-81-pb2",
+            "geeky-81-first"
+          ],
+          "qualification": null,
+          "blockers": [
+            "The first defensible public appearance has an unresolved displayed-label conflict: Forbes calls it Public Beta 1, while Kobonemi calls the same appearance Public Beta 2 and Geeky Gadgets describes Beta 2 as public.",
+            "No candidate may be admitted until an independent reviewer resolves or preserves the platform's actual displayed public-program identity."
+          ],
+          "productionDisposition": "plausibleInsufficientEvidence"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.1:public-beta-3",
+          "version": "8.1",
+          "releaseVersionId": "version-watchos-8-1",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2021-10-07",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore8-public-rolling",
+            "9to5-81-pb3"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.1:public-beta-4",
+          "version": "8.1",
+          "releaseVersionId": "version-watchos-8-1",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-4",
+          "label": "Public Beta 4",
+          "sequence": 4,
+          "appearanceDate": "2021-10-13",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "kob-81-pb4",
+            "itopnews-81-pb4"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [],
+      "conflicts": [
+        "conflict:watchos:8.1:first-public-label"
+      ],
+      "notes": []
+    },
+    {
+      "version": "8.3",
+      "releaseVersionId": "version-watchos-8-3",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-930fb62f7f694a6da243b3f8",
+          "appearanceDate": "2021-10-27",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-3",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-8-3:m0",
+          "version": "8.3"
+        },
+        {
+          "_id": "release-event-588bc47848c47ea6a17ebd68",
+          "appearanceDate": "2021-11-09",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-3",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-8-3:m1",
+          "version": "8.3"
+        },
+        {
+          "_id": "release-event-322ff953ffd8d2eddc46a3ec",
+          "appearanceDate": "2021-11-16",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-3",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-8-3:m2",
+          "version": "8.3"
+        },
+        {
+          "_id": "release-event-4f45b31108b795e84fe55795",
+          "appearanceDate": "2021-12-02",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-3",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-8-3:m3",
+          "version": "8.3"
+        },
+        {
+          "_id": "release-event-2435b4818ab42aac94d408f7",
+          "appearanceDate": "2021-12-07",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-3",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-3:m4",
+          "version": "8.3"
+        },
+        {
+          "_id": "release-event-c0c8e556c8138b26b8a9a96a",
+          "appearanceDate": "2021-12-13",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-3",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-3:m5",
+          "version": "8.3"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:8.3:public-beta-1",
+          "version": "8.3",
+          "releaseVersionId": "version-watchos-8-3",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2021-10-28",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-83-pb1",
+            "ontop-83-pb1"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.3:public-beta-2",
+          "version": "8.3",
+          "releaseVersionId": "version-watchos-8-3",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2021-11-10",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore8-public-rolling",
+            "macerkopf-83-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.3:public-beta-3",
+          "version": "8.3",
+          "releaseVersionId": "version-watchos-8-3",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2021-11-16",
+          "decision": "blocked",
+          "identityStatus": "reported",
+          "sourceIds": [
+            "kob-83-pb3",
+            "9to5-83-pb3-dev"
+          ],
+          "qualification": null,
+          "blockers": [
+            "Kobonemi explicitly identifies watchOS 8.3 Public Beta 3 and the Pacific-day appearance, but the second retained publisher only establishes the same-day developer seed.",
+            "A second independent contemporary lineage must explicitly establish the public audience and ordinal."
+          ],
+          "productionDisposition": "plausibleInsufficientEvidence"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.3:public-beta-4",
+          "version": "8.3",
+          "releaseVersionId": "version-watchos-8-3",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-4",
+          "label": "Public Beta 4",
+          "sequence": 4,
+          "appearanceDate": "2021-12-02",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "kob-83-pb4",
+            "9to5-83-pb4"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [],
+      "conflicts": [],
+      "notes": []
+    },
+    {
+      "version": "8.4",
+      "releaseVersionId": "version-watchos-8-4",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-07678aad410c5e4f75037fa3",
+          "appearanceDate": "2021-12-17",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-4",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-8-4:m0",
+          "version": "8.4"
+        },
+        {
+          "_id": "release-event-d827d347d823948faa98f25d",
+          "appearanceDate": "2022-01-12",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-4",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-8-4:m1",
+          "version": "8.4"
+        },
+        {
+          "_id": "release-event-98d72e8ad873d31611938936",
+          "appearanceDate": "2022-01-20",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-4",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-4:m2",
+          "version": "8.4"
+        },
+        {
+          "_id": "release-event-336cb8707258ffa8e2eb3744",
+          "appearanceDate": "2022-01-26",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-4",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-4:m3",
+          "version": "8.4"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:8.4:public-beta-1",
+          "version": "8.4",
+          "releaseVersionId": "version-watchos-8-4",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2021-12-20",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "kob-84-pb1",
+            "ontop-84-pb1",
+            "cultofmac-84-pb1-negative"
+          ],
+          "qualification": "Cult of Mac reported watchOS as developer-only earlier on December 20. Kobonemi and ONTOP separately record the later public appearance; the negative source is a same-day timing boundary, not evidence that the appearance never occurred.",
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.4:public-beta-2",
+          "version": "8.4",
+          "releaseVersionId": "version-watchos-8-4",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2022-01-13",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "iculture-84-cycle",
+            "9to5-84-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [],
+      "conflicts": [
+        "conflict:watchos:8.4:public-beta-1-same-day-timing"
+      ],
+      "notes": []
+    },
+    {
+      "version": "8.5",
+      "releaseVersionId": "version-watchos-8-5",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-a7160497c0ff4b138ba1b000",
+          "appearanceDate": "2022-01-27",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-5",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-8-5:m0",
+          "version": "8.5"
+        },
+        {
+          "_id": "release-event-930852ea0fca1f6d05a6351a",
+          "appearanceDate": "2022-02-08",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-5",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-8-5:m1",
+          "version": "8.5"
+        },
+        {
+          "_id": "release-event-c526ad7498f7634d7a2d34cb",
+          "appearanceDate": "2022-02-15",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-5",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-8-5:m2",
+          "version": "8.5"
+        },
+        {
+          "_id": "release-event-cd27284cbf9ca6908af5f6cd",
+          "appearanceDate": "2022-02-22",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-5",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-8-5:m3",
+          "version": "8.5"
+        },
+        {
+          "_id": "release-event-16675bc5ab3e1e2106e74981",
+          "appearanceDate": "2022-03-01",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 5",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-5",
+          "routeAlias": "beta-5",
+          "sequence": 5,
+          "stableEventId": "version-watchos-8-5:m4",
+          "version": "8.5"
+        },
+        {
+          "_id": "release-event-ecfc34a419e957c5c17d63bf",
+          "appearanceDate": "2022-03-08",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-5",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-5:m5",
+          "version": "8.5"
+        },
+        {
+          "_id": "release-event-531c6a11532c892a319c6e4e",
+          "appearanceDate": "2022-03-14",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-5",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-5:m6",
+          "version": "8.5"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:8.5:public-beta-1",
+          "version": "8.5",
+          "releaseVersionId": "version-watchos-8-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2022-01-28",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "ithinkdiff-85-cycle",
+            "kob-85-pb1"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.5:public-beta-2",
+          "version": "8.5",
+          "releaseVersionId": "version-watchos-8-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2022-02-09",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore8-public-rolling",
+            "kob-85-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.5:public-beta-3",
+          "version": "8.5",
+          "releaseVersionId": "version-watchos-8-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2022-02-16",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore8-public-rolling",
+            "kob-85-pb3"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.5:public-beta-4",
+          "version": "8.5",
+          "releaseVersionId": "version-watchos-8-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-4",
+          "label": "Public Beta 4",
+          "sequence": 4,
+          "appearanceDate": "2022-02-23",
+          "decision": "blocked",
+          "identityStatus": "conflict",
+          "sourceIds": [
+            "imore8-public-rolling",
+            "kob-85-pb4",
+            "9to5-85-pb4",
+            "iculture-85-cycle"
+          ],
+          "qualification": null,
+          "blockers": [
+            "Multiple reports support a February 23 Pacific public appearance, while iCulture's living table dates Public Beta 4 to February 22, the developer-seed date.",
+            "The one-day channel-date conflict must be adjudicated independently before admission."
+          ],
+          "productionDisposition": "plausibleInsufficientEvidence"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.5:public-beta-5",
+          "version": "8.5",
+          "releaseVersionId": "version-watchos-8-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-5",
+          "label": "Public Beta 5",
+          "sequence": 5,
+          "appearanceDate": "2022-03-02",
+          "decision": "blocked",
+          "identityStatus": "conflict",
+          "sourceIds": [
+            "imore8-public-rolling",
+            "9to5-85-pb5",
+            "iculture-85-cycle"
+          ],
+          "qualification": null,
+          "blockers": [
+            "iMore explicitly records Public Beta 5 on March 2, but 9to5Mac's headline says Beta 5 while its body contains a Beta 4 typo and iCulture omits a public Beta 5 row.",
+            "The exact identity lacks two internally clean, conflict-free lineages."
+          ],
+          "productionDisposition": "plausibleInsufficientEvidence"
+        }
+      ],
+      "negativeFindings": [],
+      "conflicts": [
+        "conflict:watchos:8.5:public-beta-4-date",
+        "conflict:watchos:8.5:public-beta-5-identity"
+      ],
+      "notes": []
+    },
+    {
+      "version": "8.6",
+      "releaseVersionId": "version-watchos-8-6",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-9eda6563c652abec11dfae74",
+          "appearanceDate": "2022-04-05",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-6",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-8-6:m0",
+          "version": "8.6"
+        },
+        {
+          "_id": "release-event-e9026b5acfdcff79b3c20d81",
+          "appearanceDate": "2022-04-19",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-6",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-8-6:m1",
+          "version": "8.6"
+        },
+        {
+          "_id": "release-event-0f4f07b53d979e9c7aeaa638",
+          "appearanceDate": "2022-04-26",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-6",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-8-6:m2",
+          "version": "8.6"
+        },
+        {
+          "_id": "release-event-62404ac506e26d343acb801a",
+          "appearanceDate": "2022-05-03",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-6",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-8-6:m3",
+          "version": "8.6"
+        },
+        {
+          "_id": "release-event-e58e0d69cc4105ddecc14292",
+          "appearanceDate": "2022-05-12",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-6",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-6:m4",
+          "version": "8.6"
+        },
+        {
+          "_id": "release-event-e6644b5ebe5791f24696d01e",
+          "appearanceDate": "2022-05-16",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-6",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-6:m5",
+          "version": "8.6"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:8.6:public-beta-1",
+          "version": "8.6",
+          "releaseVersionId": "version-watchos-8-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2022-04-06",
+          "decision": "blocked",
+          "identityStatus": "reported",
+          "sourceIds": [
+            "ithinkdiff-86-cycle",
+            "geeky-86-pb1-negative"
+          ],
+          "qualification": null,
+          "blockers": [
+            "iThinkDiff explicitly reports Public Beta 1; the second retained publisher described the seed as developer-only at publication and only expected a later public release.",
+            "A second independent exact public-appearance lineage is required."
+          ],
+          "productionDisposition": "plausibleInsufficientEvidence"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.6:public-beta-2",
+          "version": "8.6",
+          "releaseVersionId": "version-watchos-8-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2022-04-20",
+          "decision": "blocked",
+          "identityStatus": "reported",
+          "sourceIds": [
+            "9to5-86-pb2",
+            "geeky-86-pb2-negative"
+          ],
+          "qualification": null,
+          "blockers": [
+            "9to5Mac explicitly establishes public availability of watchOS 8.6 Beta 2; the second retained publisher only says public availability was expected.",
+            "A second independent exact public-appearance lineage is required."
+          ],
+          "productionDisposition": "plausibleInsufficientEvidence"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.6:public-beta-3",
+          "version": "8.6",
+          "releaseVersionId": "version-watchos-8-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2022-04-27",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore8-public-rolling",
+            "9to5-86-pb3"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.6:public-beta-4",
+          "version": "8.6",
+          "releaseVersionId": "version-watchos-8-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-4",
+          "label": "Public Beta 4",
+          "sequence": 4,
+          "appearanceDate": "2022-05-04",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore8-public-rolling",
+            "9to5-86-pb4"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [],
+      "conflicts": [],
+      "notes": []
+    },
+    {
+      "version": "8.7",
+      "releaseVersionId": "version-watchos-8-7",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-83b89c55661508cd62c899f6",
+          "appearanceDate": "2022-05-18",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-7",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-8-7:m0",
+          "version": "8.7"
+        },
+        {
+          "_id": "release-event-f9c3028fd74a8d9f314d8440",
+          "appearanceDate": "2022-05-31",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-7",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-8-7:m1",
+          "version": "8.7"
+        },
+        {
+          "_id": "release-event-2b6599d5250b473827feee25",
+          "appearanceDate": "2022-06-14",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-7",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-8-7:m2",
+          "version": "8.7"
+        },
+        {
+          "_id": "release-event-89c0a141216c45c478afb528",
+          "appearanceDate": "2022-06-28",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-7",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-8-7:m3",
+          "version": "8.7"
+        },
+        {
+          "_id": "release-event-e70af820d9d3f6f1b221f493",
+          "appearanceDate": "2022-07-05",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 5",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-7",
+          "routeAlias": "beta-5",
+          "sequence": 5,
+          "stableEventId": "version-watchos-8-7:m4",
+          "version": "8.7"
+        },
+        {
+          "_id": "release-event-7b585c76cfa31ba28e7af14b",
+          "appearanceDate": "2022-07-12",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-7",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-7:m5",
+          "version": "8.7"
+        },
+        {
+          "_id": "release-event-9d5947d06a2943d692457bdb",
+          "appearanceDate": "2022-07-20",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-8-7",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-8-7:m6",
+          "version": "8.7"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:8.7:public-beta-1",
+          "version": "8.7",
+          "releaseVersionId": "version-watchos-8-7",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2022-05-19",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore8-public-rolling",
+            "9to5-87-pb1"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.7:public-beta-2",
+          "version": "8.7",
+          "releaseVersionId": "version-watchos-8-7",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2022-06-01",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "iculture-87-cycle",
+            "9to5-87-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.7:public-beta-3",
+          "version": "8.7",
+          "releaseVersionId": "version-watchos-8-7",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2022-06-15",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "imore8-public-rolling",
+            "iculture-87-cycle"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.7:public-beta-4",
+          "version": "8.7",
+          "releaseVersionId": "version-watchos-8-7",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-4",
+          "label": "Public Beta 4",
+          "sequence": 4,
+          "appearanceDate": "2022-06-28",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "iculture-87-cycle",
+            "9to5-87-pb4"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:8.7:public-beta-5",
+          "version": "8.7",
+          "releaseVersionId": "version-watchos-8-7",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-5",
+          "label": "Public Beta 5",
+          "sequence": 5,
+          "appearanceDate": "2022-07-05",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "iculture-87-cycle",
+            "kob-87-pb5"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [],
+      "conflicts": [],
+      "notes": []
+    },
+    {
+      "version": "9.1",
+      "releaseVersionId": "version-watchos-9-1",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-8684f9601cf572dca57e64aa",
+          "appearanceDate": "2022-09-14",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-9-1",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-9-1:m0",
+          "version": "9.1"
+        },
+        {
+          "_id": "release-event-78b1c04e536e1eb63439db94",
+          "appearanceDate": "2022-09-20",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-9-1",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-9-1:m1",
+          "version": "9.1"
+        },
+        {
+          "_id": "release-event-17db29aea72aa09ce9f5864a",
+          "appearanceDate": "2022-09-27",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-9-1",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-9-1:m2",
+          "version": "9.1"
+        },
+        {
+          "_id": "release-event-66c9535cd34dfafdcc31e976",
+          "appearanceDate": "2022-10-05",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-9-1",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-9-1:m3",
+          "version": "9.1"
+        },
+        {
+          "_id": "release-event-9ff558f6401cdd525fc50aec",
+          "appearanceDate": "2022-10-12",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 5",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-9-1",
+          "routeAlias": "beta-5",
+          "sequence": 5,
+          "stableEventId": "version-watchos-9-1:m4",
+          "version": "9.1"
+        },
+        {
+          "_id": "release-event-ce856a04138ef1418c9971ac",
+          "appearanceDate": "2022-10-18",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-9-1",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-9-1:m5",
+          "version": "9.1"
+        },
+        {
+          "_id": "release-event-d36ec0b4974289c6de6e4147",
+          "appearanceDate": "2022-10-24",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-9-1",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-9-1:m6",
+          "version": "9.1"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:9.1:public-beta-2",
+          "version": "9.1",
+          "releaseVersionId": "version-watchos-9-1",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2022-09-21",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-91-pb2",
+            "mr-91-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:9.1:public-beta-3",
+          "version": "9.1",
+          "releaseVersionId": "version-watchos-9-1",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2022-09-28",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-91-pb3",
+            "maclife-91-pb3"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:9.1:public-beta-4",
+          "version": "9.1",
+          "releaseVersionId": "version-watchos-9-1",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-4",
+          "label": "Public Beta 4",
+          "sequence": 4,
+          "appearanceDate": "2022-10-06",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-91-pb4",
+            "times-91-pb4"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:9.1:public-beta-5",
+          "version": "9.1",
+          "releaseVersionId": "version-watchos-9-1",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-5",
+          "label": "Public Beta 5",
+          "sequence": 5,
+          "appearanceDate": "2022-10-12",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-91-pb5",
+            "imore9-public-rolling"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [
+        {
+          "findingId": "negative:watchos:9.1:public-beta-1",
+          "version": "9.1",
+          "sequence": 1,
+          "date": "2022-09-14",
+          "classification": "publicDistributionNotEstablished",
+          "sourceIds": [
+            "kob-91-pb1-negative"
+          ],
+          "finding": "The source explicitly says the first watchOS 9.1 seed was not yet public. Public numbering starts with the first supported displayed public label, Public Beta 2."
+        }
+      ],
+      "conflicts": [],
+      "notes": [
+        "The September 14 first developer seed is explicitly retained as not yet public; Public Beta 1 is not inferred."
+      ]
+    },
+    {
+      "version": "26.4",
+      "releaseVersionId": "version-watchos-26-4",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-a78d8bc2d89c7b7fbad912f3",
+          "appearanceDate": "2026-02-16",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-4",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-26-4:m0",
+          "version": "26.4"
+        },
+        {
+          "_id": "release-event-6686f7794c96754f2f812fb3",
+          "appearanceDate": "2026-02-23",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-4",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-26-4:m1",
+          "version": "26.4"
+        },
+        {
+          "_id": "release-event-d9666846d6a4b82817d96b0a",
+          "appearanceDate": "2026-03-02",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-4",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-26-4:m2",
+          "version": "26.4"
+        },
+        {
+          "_id": "release-event-17a2d9fd9394bc9d55495af5",
+          "appearanceDate": "2026-03-05",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": true,
+          "label": "Beta 3 v2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-4",
+          "routeAlias": "beta-3-v2",
+          "sequence": 3,
+          "stableEventId": "version-watchos-26-4:m3",
+          "version": "26.4"
+        },
+        {
+          "_id": "release-event-f9db640c338a744ddb12f30e",
+          "appearanceDate": "2026-03-09",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-4",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-26-4:m4",
+          "version": "26.4"
+        },
+        {
+          "_id": "release-event-ebff1f8bfef6966fae8214cc",
+          "appearanceDate": "2026-03-18",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-4",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-26-4:m5",
+          "version": "26.4"
+        },
+        {
+          "_id": "release-event-a339eac01bafb146864a58a0",
+          "appearanceDate": "2026-03-24",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-4",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-26-4:m6",
+          "version": "26.4"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:26.4:public-beta-1",
+          "version": "26.4",
+          "releaseVersionId": "version-watchos-26-4",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2026-02-17",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-264-pb1",
+            "mr-264-pb1"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:26.4:public-beta-2",
+          "version": "26.4",
+          "releaseVersionId": "version-watchos-26-4",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2026-02-24",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "mr-264-pb2",
+            "buchi-264-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        }
+      ],
+      "negativeFindings": [
+        {
+          "findingId": "negative:watchos:26.4:public-beta-3",
+          "version": "26.4",
+          "sequence": 3,
+          "date": "2026-03-05",
+          "classification": "publicDistributionNotEstablished",
+          "sourceIds": [
+            "mr-264-pb3-negative"
+          ],
+          "finding": "The retained article identifies a third watchOS beta but does not establish a public audience or displayed Public Beta 3 label."
+        },
+        {
+          "findingId": "negative:watchos:26.4:public-beta-4",
+          "version": "26.4",
+          "sequence": 4,
+          "date": "2026-03-09",
+          "classification": "publicDistributionNotEstablished",
+          "sourceIds": [
+            "9to5-264-pb4-reported",
+            "mr-264-pb4-negative"
+          ],
+          "finding": "9to5Mac's full-lineup article was updated to say public betas rolled out later on March 9, but no second independent source explicitly establishes the watchOS public ordinal. The platform-specific MacRumors report establishes Developer Beta 4 only, so no exact Public Beta 4 identity is admitted."
+        }
+      ],
+      "conflicts": [],
+      "notes": [
+        "No exact public Public Beta 3 or Public Beta 4 appearance is established. Developer-seed reporting is retained only as negative boundary evidence."
+      ]
+    },
+    {
+      "version": "26.5",
+      "releaseVersionId": "version-watchos-26-5",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-c50850dc5c3988a206df013d",
+          "appearanceDate": "2026-03-30",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-5",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-26-5:m0",
+          "version": "26.5"
+        },
+        {
+          "_id": "release-event-ddf5d4f218b929ba996379a2",
+          "appearanceDate": "2026-04-13",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-5",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-26-5:m2",
+          "version": "26.5"
+        },
+        {
+          "_id": "release-event-6e946cf4f30f53b462d70965",
+          "appearanceDate": "2026-04-20",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-5",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-26-5:m3",
+          "version": "26.5"
+        },
+        {
+          "_id": "release-event-20864432de9abbe657fd58de",
+          "appearanceDate": "2026-04-27",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-5",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-26-5:m4",
+          "version": "26.5"
+        },
+        {
+          "_id": "release-event-b7bc0e01ab47e5dba69fcde2",
+          "appearanceDate": "2026-05-04",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-5",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-26-5:m5",
+          "version": "26.5"
+        },
+        {
+          "_id": "release-event-630ac9504c7d914aaa1ee6bf",
+          "appearanceDate": "2026-05-11",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-5",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-26-5:m7",
+          "version": "26.5"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:26.5:public-beta-1",
+          "version": "26.5",
+          "releaseVersionId": "version-watchos-26-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2026-04-03",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "mr-265-pb1",
+            "9to5-265-pb1"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:26.5:public-beta-2",
+          "version": "26.5",
+          "releaseVersionId": "version-watchos-26-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2026-04-14",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "mr-265-pb2",
+            "9to5-265-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:26.5:public-beta-3",
+          "version": "26.5",
+          "releaseVersionId": "version-watchos-26-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2026-04-21",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "9to5-265-pb3",
+            "tuttotech-265-pb3"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:26.5:public-beta-4",
+          "version": "26.5",
+          "releaseVersionId": "version-watchos-26-5",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-4",
+          "label": "Public Beta 4",
+          "sequence": 4,
+          "appearanceDate": "2026-04-27",
+          "decision": "blocked",
+          "identityStatus": "reported",
+          "sourceIds": [
+            "9to5-265-pb4",
+            "mr-265-pb4-dev"
+          ],
+          "qualification": null,
+          "blockers": [
+            "9to5Mac's same-day update explicitly says the Beta 4 releases reached public testers, including watchOS 26.5.",
+            "MacRumors establishes only the developer seed. A second independent exact public-appearance lineage is required."
+          ],
+          "productionDisposition": "plausibleInsufficientEvidence"
+        }
+      ],
+      "negativeFindings": [],
+      "conflicts": [],
+      "notes": []
+    },
+    {
+      "version": "26.6",
+      "releaseVersionId": "version-watchos-26-6",
+      "applicabilityStatus": "applicableWithEstablishedAppearances",
+      "parentExists": true,
+      "productionEvents": [
+        {
+          "_id": "release-event-1d333893a76bcde93e850e82",
+          "appearanceDate": "2026-05-26",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 1",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-6",
+          "routeAlias": "beta-1",
+          "sequence": 1,
+          "stableEventId": "version-watchos-26-6:m0",
+          "version": "26.6"
+        },
+        {
+          "_id": "release-event-26e5337d72c60ce4d655331e",
+          "appearanceDate": "2026-06-15",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 2",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-6",
+          "routeAlias": "beta-2",
+          "sequence": 2,
+          "stableEventId": "version-watchos-26-6:m1",
+          "version": "26.6"
+        },
+        {
+          "_id": "release-event-1a4c7c878371317d9f4ea274",
+          "appearanceDate": "2026-06-29",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 3",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-6",
+          "routeAlias": "beta-3",
+          "sequence": 3,
+          "stableEventId": "version-watchos-26-6:m2",
+          "version": "26.6"
+        },
+        {
+          "_id": "release-event-f7036b0ce615613c773c07f9",
+          "appearanceDate": "2026-07-06",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 4",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-6",
+          "routeAlias": "beta-4",
+          "sequence": 4,
+          "stableEventId": "version-watchos-26-6:m3",
+          "version": "26.6"
+        },
+        {
+          "_id": "release-event-5930cfe750050c4c3c7f652b",
+          "appearanceDate": "2026-07-13",
+          "availabilityState": "available",
+          "channel": "developerBeta",
+          "isRevision": false,
+          "label": "Beta 5",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-6",
+          "routeAlias": "beta-5",
+          "sequence": 5,
+          "stableEventId": "version-watchos-26-6:m4",
+          "version": "26.6"
+        },
+        {
+          "_id": "release-event-5dbcc37d30666256d7a7998a",
+          "appearanceDate": "2026-07-20",
+          "availabilityState": "available",
+          "channel": "releaseCandidate",
+          "isRevision": false,
+          "label": "RC",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-6",
+          "routeAlias": "rc",
+          "sequence": null,
+          "stableEventId": "version-watchos-26-6:m5",
+          "version": "26.6"
+        },
+        {
+          "_id": "release-event-9bb70d24858261a4b4f05ba1",
+          "appearanceDate": "2026-07-27",
+          "availabilityState": "available",
+          "channel": "public",
+          "isRevision": false,
+          "label": "Public",
+          "platform": "watchOS",
+          "releaseVersionId": "version-watchos-26-6",
+          "routeAlias": "public",
+          "sequence": null,
+          "stableEventId": "version-watchos-26-6:m6",
+          "version": "26.6"
+        }
+      ],
+      "researchedPublicAppearances": [
+        {
+          "candidateId": "candidate:apple:watchos:26.6:public-beta-1",
+          "version": "26.6",
+          "releaseVersionId": "version-watchos-26-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-1",
+          "label": "Public Beta 1",
+          "sequence": 1,
+          "appearanceDate": "2026-05-28",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "mr-266-pb1",
+            "9to5-266-pb1"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:26.6:public-beta-2",
+          "version": "26.6",
+          "releaseVersionId": "version-watchos-26-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-2",
+          "label": "Public Beta 2",
+          "sequence": 2,
+          "appearanceDate": "2026-06-16",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "mr-266-pb2",
+            "9to5-266-pb2"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:26.6:public-beta-3",
+          "version": "26.6",
+          "releaseVersionId": "version-watchos-26-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-3",
+          "label": "Public Beta 3",
+          "sequence": 3,
+          "appearanceDate": "2026-06-30",
+          "decision": "blocked",
+          "identityStatus": "conflict",
+          "sourceIds": [
+            "mr-266-pb3",
+            "9to5-266-pb3",
+            "iculture-266-cycle"
+          ],
+          "qualification": null,
+          "blockers": [
+            "MacRumors and 9to5Mac support the June 30 public appearance. iCulture labels the public row June 29, matching the developer release day.",
+            "The channel-date conflict must be independently adjudicated before admission."
+          ],
+          "productionDisposition": "plausibleInsufficientEvidence"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:26.6:public-beta-4",
+          "version": "26.6",
+          "releaseVersionId": "version-watchos-26-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-4",
+          "label": "Public Beta 4",
+          "sequence": 4,
+          "appearanceDate": "2026-07-07",
+          "decision": "supportable",
+          "identityStatus": "confirmed",
+          "sourceIds": [
+            "mr-266-pb4",
+            "iculture-266-cycle"
+          ],
+          "qualification": null,
+          "blockers": [],
+          "productionDisposition": "confirmedMissingCandidate"
+        },
+        {
+          "candidateId": "candidate:apple:watchos:26.6:public-beta-5",
+          "version": "26.6",
+          "releaseVersionId": "version-watchos-26-6",
+          "channel": "publicBeta",
+          "routeAlias": "public-beta-5",
+          "label": "Public Beta 5",
+          "sequence": 5,
+          "appearanceDate": "2026-07-14",
+          "decision": "blocked",
+          "identityStatus": "conflict",
+          "sourceIds": [
+            "9to5-266-pb5",
+            "mr-266-pb5-dev",
+            "iculture-266-cycle"
+          ],
+          "qualification": null,
+          "blockers": [
+            "9to5Mac's developer article was updated on July 14 to state that Public Beta 5 was available; its original developer appearance was July 13.",
+            "iCulture dates Public Beta 5 to July 13, while MacRumors' July 13 report is developer-only. The exact Pacific public date lacks two conflict-free lineages."
+          ],
+          "productionDisposition": "plausibleInsufficientEvidence"
+        }
+      ],
+      "negativeFindings": [],
+      "conflicts": [
+        "conflict:watchos:26.6:public-beta-3-date",
+        "conflict:watchos:26.6:public-beta-5-date"
+      ],
+      "notes": []
+    }
+  ],
+  "blockedAppearances": [
+    {
+      "candidateId": "candidate:apple:watchos:8.1:public-beta-2",
+      "version": "8.1",
+      "releaseVersionId": "version-watchos-8-1",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2021-09-29",
+      "identityStatus": "conflict",
+      "sourceIds": [
+        "forbes-81-first",
+        "kob-81-pb2",
+        "geeky-81-first"
+      ],
+      "blockers": [
+        "The first defensible public appearance has an unresolved displayed-label conflict: Forbes calls it Public Beta 1, while Kobonemi calls the same appearance Public Beta 2 and Geeky Gadgets describes Beta 2 as public.",
+        "No candidate may be admitted until an independent reviewer resolves or preserves the platform's actual displayed public-program identity."
+      ],
+      "candidateAdmitted": false
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.3:public-beta-3",
+      "version": "8.3",
+      "releaseVersionId": "version-watchos-8-3",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2021-11-16",
+      "identityStatus": "reported",
+      "sourceIds": [
+        "kob-83-pb3",
+        "9to5-83-pb3-dev"
+      ],
+      "blockers": [
+        "Kobonemi explicitly identifies watchOS 8.3 Public Beta 3 and the Pacific-day appearance, but the second retained publisher only establishes the same-day developer seed.",
+        "A second independent contemporary lineage must explicitly establish the public audience and ordinal."
+      ],
+      "candidateAdmitted": false
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.5:public-beta-4",
+      "version": "8.5",
+      "releaseVersionId": "version-watchos-8-5",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "appearanceDate": "2022-02-23",
+      "identityStatus": "conflict",
+      "sourceIds": [
+        "imore8-public-rolling",
+        "kob-85-pb4",
+        "9to5-85-pb4",
+        "iculture-85-cycle"
+      ],
+      "blockers": [
+        "Multiple reports support a February 23 Pacific public appearance, while iCulture's living table dates Public Beta 4 to February 22, the developer-seed date.",
+        "The one-day channel-date conflict must be adjudicated independently before admission."
+      ],
+      "candidateAdmitted": false
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.5:public-beta-5",
+      "version": "8.5",
+      "releaseVersionId": "version-watchos-8-5",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-5",
+      "label": "Public Beta 5",
+      "sequence": 5,
+      "appearanceDate": "2022-03-02",
+      "identityStatus": "conflict",
+      "sourceIds": [
+        "imore8-public-rolling",
+        "9to5-85-pb5",
+        "iculture-85-cycle"
+      ],
+      "blockers": [
+        "iMore explicitly records Public Beta 5 on March 2, but 9to5Mac's headline says Beta 5 while its body contains a Beta 4 typo and iCulture omits a public Beta 5 row.",
+        "The exact identity lacks two internally clean, conflict-free lineages."
+      ],
+      "candidateAdmitted": false
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.6:public-beta-1",
+      "version": "8.6",
+      "releaseVersionId": "version-watchos-8-6",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "label": "Public Beta 1",
+      "sequence": 1,
+      "appearanceDate": "2022-04-06",
+      "identityStatus": "reported",
+      "sourceIds": [
+        "ithinkdiff-86-cycle",
+        "geeky-86-pb1-negative"
+      ],
+      "blockers": [
+        "iThinkDiff explicitly reports Public Beta 1; the second retained publisher described the seed as developer-only at publication and only expected a later public release.",
+        "A second independent exact public-appearance lineage is required."
+      ],
+      "candidateAdmitted": false
+    },
+    {
+      "candidateId": "candidate:apple:watchos:8.6:public-beta-2",
+      "version": "8.6",
+      "releaseVersionId": "version-watchos-8-6",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "label": "Public Beta 2",
+      "sequence": 2,
+      "appearanceDate": "2022-04-20",
+      "identityStatus": "reported",
+      "sourceIds": [
+        "9to5-86-pb2",
+        "geeky-86-pb2-negative"
+      ],
+      "blockers": [
+        "9to5Mac explicitly establishes public availability of watchOS 8.6 Beta 2; the second retained publisher only says public availability was expected.",
+        "A second independent exact public-appearance lineage is required."
+      ],
+      "candidateAdmitted": false
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.5:public-beta-4",
+      "version": "26.5",
+      "releaseVersionId": "version-watchos-26-5",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "label": "Public Beta 4",
+      "sequence": 4,
+      "appearanceDate": "2026-04-27",
+      "identityStatus": "reported",
+      "sourceIds": [
+        "9to5-265-pb4",
+        "mr-265-pb4-dev"
+      ],
+      "blockers": [
+        "9to5Mac's same-day update explicitly says the Beta 4 releases reached public testers, including watchOS 26.5.",
+        "MacRumors establishes only the developer seed. A second independent exact public-appearance lineage is required."
+      ],
+      "candidateAdmitted": false
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.6:public-beta-3",
+      "version": "26.6",
+      "releaseVersionId": "version-watchos-26-6",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "label": "Public Beta 3",
+      "sequence": 3,
+      "appearanceDate": "2026-06-30",
+      "identityStatus": "conflict",
+      "sourceIds": [
+        "mr-266-pb3",
+        "9to5-266-pb3",
+        "iculture-266-cycle"
+      ],
+      "blockers": [
+        "MacRumors and 9to5Mac support the June 30 public appearance. iCulture labels the public row June 29, matching the developer release day.",
+        "The channel-date conflict must be independently adjudicated before admission."
+      ],
+      "candidateAdmitted": false
+    },
+    {
+      "candidateId": "candidate:apple:watchos:26.6:public-beta-5",
+      "version": "26.6",
+      "releaseVersionId": "version-watchos-26-6",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-5",
+      "label": "Public Beta 5",
+      "sequence": 5,
+      "appearanceDate": "2026-07-14",
+      "identityStatus": "conflict",
+      "sourceIds": [
+        "9to5-266-pb5",
+        "mr-266-pb5-dev",
+        "iculture-266-cycle"
+      ],
+      "blockers": [
+        "9to5Mac's developer article was updated on July 14 to state that Public Beta 5 was available; its original developer appearance was July 13.",
+        "iCulture dates Public Beta 5 to July 13, while MacRumors' July 13 report is developer-only. The exact Pacific public date lacks two conflict-free lineages."
+      ],
+      "candidateAdmitted": false
+    }
+  ],
+  "negativeFindings": [
+    {
+      "findingId": "negative:watchos:7.2:public-beta-1",
+      "version": "7.2",
+      "sequence": 1,
+      "date": "2020-11-12",
+      "classification": "publicDistributionNotEstablished",
+      "sourceIds": [
+        "iculture-72-cycle",
+        "imore7-public-rolling"
+      ],
+      "finding": "The first seed was pulled and surviving sources do not establish a completed public-program appearance. One living iMore entry broadly says developer and public testers; it is not enough to overcome the withdrawal and developer-only reporting."
+    },
+    {
+      "findingId": "negative:watchos:7.2:public-beta-3",
+      "version": "7.2",
+      "sequence": 3,
+      "date": "2020-12-02",
+      "classification": "publicDistributionNotEstablished",
+      "sourceIds": [
+        "iculture-72-cycle",
+        "imore7-public-rolling"
+      ],
+      "finding": "The retained cycle chronology establishes Developer Beta 3, while a single living iMore entry reports broad tester availability. The exact public identity is not established."
+    },
+    {
+      "findingId": "negative:watchos:7.3:public-beta-1",
+      "version": "7.3",
+      "sequence": 1,
+      "date": "2020-12-16",
+      "classification": "publicDistributionNotEstablished",
+      "sourceIds": [
+        "cultofmac-73-pb1-negative"
+      ],
+      "finding": "Contemporary reporting identifies watchOS 7.3 Beta 1 as developer-only while the mobile betas entered public testing."
+    },
+    {
+      "findingId": "negative:watchos:7.4:public-beta-6",
+      "version": "7.4",
+      "sequence": 6,
+      "date": "2021-03-31",
+      "classification": "publicDistributionNotEstablished",
+      "sourceIds": [
+        "iculture-74-cycle"
+      ],
+      "finding": "The retained chronology has a Developer Beta 6 row but no public row. No exact public appearance is inferred."
+    },
+    {
+      "findingId": "negative:watchos:7.6:public-beta-2",
+      "version": "7.6",
+      "sequence": 2,
+      "date": null,
+      "classification": "publicDistributionNotEstablished",
+      "sourceIds": [
+        "iculture-76-cycle",
+        "imore7-public-rolling"
+      ],
+      "finding": "No exact Public Beta 2 appearance was established. The developer sequence is not used to manufacture a public date."
+    },
+    {
+      "findingId": "negative:watchos:9.1:public-beta-1",
+      "version": "9.1",
+      "sequence": 1,
+      "date": "2022-09-14",
+      "classification": "publicDistributionNotEstablished",
+      "sourceIds": [
+        "kob-91-pb1-negative"
+      ],
+      "finding": "The source explicitly says the first watchOS 9.1 seed was not yet public. Public numbering starts with the first supported displayed public label, Public Beta 2."
+    },
+    {
+      "findingId": "negative:watchos:26.4:public-beta-3",
+      "version": "26.4",
+      "sequence": 3,
+      "date": "2026-03-05",
+      "classification": "publicDistributionNotEstablished",
+      "sourceIds": [
+        "mr-264-pb3-negative"
+      ],
+      "finding": "The retained article identifies a third watchOS beta but does not establish a public audience or displayed Public Beta 3 label."
+    },
+    {
+      "findingId": "negative:watchos:26.4:public-beta-4",
+      "version": "26.4",
+      "sequence": 4,
+      "date": "2026-03-09",
+      "classification": "publicDistributionNotEstablished",
+      "sourceIds": [
+        "9to5-264-pb4-reported",
+        "mr-264-pb4-negative"
+      ],
+      "finding": "9to5Mac's full-lineup article was updated to say public betas rolled out later on March 9, but no second independent source explicitly establishes the watchOS public ordinal. The platform-specific MacRumors report establishes Developer Beta 4 only, so no exact Public Beta 4 identity is admitted."
+    }
+  ],
+  "guardrails": [
+    "No public ordinal is inferred from a developer ordinal.",
+    "Generic beta wording is not treated as public-program evidence.",
+    "Same-day developer and public appearances remain separate events.",
+    "An absent middle ordinal remains absent unless explicit public evidence establishes it.",
+    "A search-index extract is labeled as such and never represented as a full direct capture.",
+    "No build identity is proposed by this packet."
+  ]
+}

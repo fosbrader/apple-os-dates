@@ -1,0 +1,707 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-major-11-26",
+  "reviewedAt": "2026-07-31T04:59:39Z",
+  "reviewer": "codex-independent-review",
+  "independentOfResearcher": true,
+  "verdict": "partialPassWithTenQualifiedAndFiveBlockedCandidates",
+  "summary": {
+    "candidateCount": 41,
+    "chronologyApprovedCandidateCount": 36,
+    "approvedWithoutQualificationCount": 26,
+    "approvedWithQualificationCount": 10,
+    "blockedCandidateCount": 5,
+    "blockedOrdinalOrDateConflictCount": 3,
+    "blockedLifecycleModelCount": 2,
+    "packetConflictCountReviewed": 9,
+    "newMaterialConflictCount": 1,
+    "exceptionalAppearanceCountReviewed": 2,
+    "notProposedCountReviewed": 4,
+    "candidateEvidenceReferenceCount": 102,
+    "candidateSourceIdsUsed": 64,
+    "candidatePublisherFamilyCount": 11,
+    "allCandidatesHaveAtLeastTwoIndependentPublisherFamilies": true,
+    "freshProductionExactIdentityMatchCount": 0
+  },
+  "candidateVerdict": {
+    "chronologyApproved": [
+      "candidate:apple:macos:11.0:public-beta-1",
+      "candidate:apple:macos:11.0:public-beta-2",
+      "candidate:apple:macos:11.0:public-beta-3",
+      "candidate:apple:macos:12.0:public-beta-1",
+      "candidate:apple:macos:12.0:public-beta-2",
+      "candidate:apple:macos:12.0:public-beta-9",
+      "candidate:apple:macos:13.0:public-beta-1",
+      "candidate:apple:macos:13.0:public-beta-2",
+      "candidate:apple:macos:13.0:public-beta-3",
+      "candidate:apple:macos:13.0:public-beta-4",
+      "candidate:apple:macos:13.0:public-beta-6",
+      "candidate:apple:macos:13.0:public-beta-7",
+      "candidate:apple:macos:13.0:public-beta-8",
+      "candidate:apple:macos:14.0:public-beta-1",
+      "candidate:apple:macos:14.0:public-beta-2",
+      "candidate:apple:macos:14.0:public-beta-3",
+      "candidate:apple:macos:15.0:public-beta-1",
+      "candidate:apple:macos:15.0:public-beta-2",
+      "candidate:apple:macos:15.0:public-beta-3",
+      "candidate:apple:macos:15.0:public-beta-4",
+      "candidate:apple:macos:15.0:public-beta-5",
+      "candidate:apple:macos:15.0:public-beta-6",
+      "candidate:apple:macos:26.0:public-beta-2",
+      "candidate:apple:macos:26.0:public-beta-3",
+      "candidate:apple:macos:26.0:public-beta-4",
+      "candidate:apple:macos:26.0:public-beta-6"
+    ],
+    "chronologyApprovedWithQualification": [
+      "candidate:apple:macos:11.0:public-beta-5",
+      "candidate:apple:macos:12.0:public-beta-4",
+      "candidate:apple:macos:12.0:public-beta-6",
+      "candidate:apple:macos:12.0:public-beta-7",
+      "candidate:apple:macos:12.0:public-beta-8",
+      "candidate:apple:macos:12.0:public-beta-10",
+      "candidate:apple:macos:13.0:public-beta-9",
+      "candidate:apple:macos:14.0:public-beta-4",
+      "candidate:apple:macos:14.0:public-beta-5",
+      "candidate:apple:macos:26.0:public-beta-5"
+    ],
+    "blocked": [
+      "candidate:apple:macos:11.0:public-beta-4",
+      "candidate:apple:macos:11.0:public-beta-6",
+      "candidate:apple:macos:12.0:public-beta-5",
+      "candidate:apple:macos:13.0:public-beta-5",
+      "candidate:apple:macos:26.0:public-beta-1"
+    ]
+  },
+  "checks": {
+    "packetJsonParsed": true,
+    "candidateIdsUnique": true,
+    "sourceIdsUnique": true,
+    "allEvidenceReferencesResolve": true,
+    "candidateEvidenceReferencesInspected": 102,
+    "uniqueCandidateSourcesInspected": 64,
+    "allCandidateLocatorsInspected": true,
+    "allNinePacketConflictsInspected": true,
+    "allExceptionalAppearancesInspected": true,
+    "allNotProposedRecordsInspected": true,
+    "allPacketArtifactHashesReproduced": true,
+    "packetArtifactsHashVerified": 11,
+    "allRawEvidenceHashesReproduced": true,
+    "rawEvidenceSourceRecordsVerified": 65,
+    "uniqueRawEvidenceArtifactsVerified": 51,
+    "rawEvidenceHashFailures": 0,
+    "candidateReferenceResolutionFailures": 0,
+    "candidateIndependentLineageFailures": 0,
+    "freshProductionQueryPerformed": true,
+    "freshExactProductionMatches": 0,
+    "sanityMutationPerformed": false,
+    "productionIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "lockedFileVerification": [
+    {
+      "path": "assignment.json",
+      "bytes": 16689,
+      "sha256": "6450d828bacbfe12c2378016054631a609a6ca4bd17be2b7917c6c69f6874d03",
+      "reproduced": true
+    },
+    {
+      "path": "build-packet.mjs",
+      "bytes": 55210,
+      "sha256": "3a86a940d158804fe3d815d3731268a38a77d7627aa1e6df953aadb70d2aca48",
+      "reproduced": true
+    },
+    {
+      "path": "candidates.json",
+      "bytes": 129315,
+      "sha256": "f19173aad6913c30899254381396d2b7c778b49513c42a1434f86c51dfe150fa",
+      "reproduced": true
+    },
+    {
+      "path": "conflicts.json",
+      "bytes": 8127,
+      "sha256": "f7b0ee09d067d930a00f7d02157de58be9018fc721b27f508e068dface2d94ac",
+      "reproduced": true
+    },
+    {
+      "path": "production-snapshot.json",
+      "bytes": 12607,
+      "sha256": "19a90cd4ebb028b06479219654da82015bde9f1f5cf0601c045b06deb69bc6be",
+      "reproduced": true
+    },
+    {
+      "path": "query-production.ts",
+      "bytes": 4452,
+      "sha256": "b9c3fda73e5055f1ea6e8097f7b608e8fcf400ccde2a2333c96e0a0c41945c48",
+      "reproduced": true
+    },
+    {
+      "path": "report.md",
+      "bytes": 4862,
+      "sha256": "b6f96f43ec96c4fb9a925ae07b5f340e1fe375b3742b7b8f7946de2605d2ccfc",
+      "reproduced": true
+    },
+    {
+      "path": "review.json",
+      "bytes": 4339,
+      "sha256": "144eea9a06f8a51ba9deed18bf4ef0509d69e9c7da0e1a7a3ec135c1732d47fb",
+      "reproduced": true
+    },
+    {
+      "path": "sources.json",
+      "bytes": 114339,
+      "sha256": "f235877506efc49e06848d5bfb7c25a8af5b4e356f53767a97ab0ecead17c3ba",
+      "reproduced": true
+    },
+    {
+      "path": "validate.mjs",
+      "bytes": 20825,
+      "sha256": "cf1079f5bfd28569cb80563f1f07f5aebc2cddea44e3995940b9d686ac6f6734",
+      "reproduced": true
+    },
+    {
+      "path": "validation.json",
+      "bytes": 3600,
+      "sha256": "cdbf2b2e8bff53111f84746eb5c838ba6bca2dfebc4a2438225719715fa43778",
+      "reproduced": true
+    }
+  ],
+  "rawEvidenceVerification": {
+    "sourceRecordCount": 65,
+    "uniqueRawArtifactCount": 51,
+    "sourceRecordWeightedBytes": 45001216,
+    "uniqueRawArtifactBytes": 22079920,
+    "expectedAndActualByteCountsMatched": 65,
+    "expectedAndActualSha256Matched": 65,
+    "failures": []
+  },
+  "sourceReferenceAndLineageAudit": {
+    "candidateEvidenceReferenceCount": 102,
+    "resolvedReferenceCount": 102,
+    "uniqueCandidateSourceIdCount": 64,
+    "unusedSourceIds": [
+      "source-9to5-macos-12-pb4"
+    ],
+    "uniquePublisherFamilyCount": 11,
+    "publisherFamilies": [
+      "9to5Mac",
+      "Apple Wiki",
+      "AppleInsider",
+      "Cisco",
+      "Heipg",
+      "Kobonemi",
+      "MacRumors",
+      "Mr. Macintosh",
+      "OS X Daily",
+      "iCulture",
+      "iThinkDifferent"
+    ],
+    "minimumIndependentPublisherFamiliesPerCandidate": 2,
+    "maximumIndependentPublisherFamiliesPerCandidate": 4,
+    "candidatesBelowTwoIndependentPublisherFamilies": []
+  },
+  "productionRecheck": {
+    "capturedAt": "2026-07-31T04:55:33.433Z",
+    "perspective": "published",
+    "useCdn": false,
+    "projectId": "lh3yswzu",
+    "dataset": "production",
+    "expectedIdentityCount": 41,
+    "productionCounts": {
+      "totalReleaseEvents": 2068,
+      "macOSPublicBetaEventsAllVersions": 0,
+      "scopedReleaseEvents": 68,
+      "scopedPublicBetaEvents": 0
+    },
+    "zeroExactCheckCount": 41,
+    "nonzeroExactChecks": [],
+    "queryOnly": true,
+    "sanityMutationPerformed": false
+  },
+  "candidateReviews": [
+    {
+      "candidateId": "candidate:apple:macos:11.0:public-beta-1",
+      "appearanceDate": "2020-08-06",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "The dated iCulture entry and 9to5Mac's opening of the Big Sur public-beta program support Public Beta 1 on August 6."
+    },
+    {
+      "candidateId": "candidate:apple:macos:11.0:public-beta-2",
+      "appearanceDate": "2020-08-20",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "Both sources explicitly identify the second Big Sur public beta and the August 20 date."
+    },
+    {
+      "candidateId": "candidate:apple:macos:11.0:public-beta-3",
+      "appearanceDate": "2020-09-08",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "MacRumors"],
+      "finding": "iCulture explicitly identifies Public Beta 3 on September 8, and the MacRumors archive independently records a new public-beta appearance that day."
+    },
+    {
+      "candidateId": "candidate:apple:macos:11.0:public-beta-4",
+      "appearanceDate": "2020-09-22",
+      "disposition": "blockedOrdinalAndDateConflict",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["MacRumors", "Apple Wiki", "iCulture"],
+      "finding": "Apple Wiki alone maps beta 8 to Public Beta 4, while iCulture calls September 30 Public Beta 4. The retained MacRumors page was originally published September 22 but its public-availability title update is modified and displayed September 23, so it does not establish the packet's claimed September 22 public date.",
+      "requiredHandling": "Obtain a second independent source that explicitly ties Public Beta 4 to its public appearance date before promotion."
+    },
+    {
+      "candidateId": "candidate:apple:macos:11.0:public-beta-5",
+      "appearanceDate": "2020-09-30",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["MacRumors", "Cisco", "Apple Wiki"],
+      "finding": "Cisco explicitly equates Big Sur beta 9 with public beta 5, Apple Wiki independently makes the same mapping, and MacRumors records the September 30 public appearance.",
+      "requiredQualification": "Do not use the generic MacRumors headline as literal ordinal evidence; the exact public ordinal comes from Cisco and Apple Wiki."
+    },
+    {
+      "candidateId": "candidate:apple:macos:11.0:public-beta-6",
+      "appearanceDate": "2020-10-15",
+      "disposition": "blockedOrdinalAndDateConflict",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["MacRumors", "OS X Daily", "Apple Wiki"],
+      "finding": "Apple Wiki is the only source that explicitly says Public Beta 6 and dates it October 16. MacRumors records public-program availability on October 15 without a public ordinal, while OS X Daily reports beta 10 on October 14 without clearly separating developer and public release timing.",
+      "requiredHandling": "Resolve the October 14/15/16 date conflict and obtain a second exact Public Beta 6 lineage."
+    },
+    {
+      "candidateId": "candidate:apple:macos:12.0:public-beta-1",
+      "appearanceDate": "2021-07-01",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "MacRumors"],
+      "finding": "Both sources explicitly identify the first Monterey public beta on July 1."
+    },
+    {
+      "candidateId": "candidate:apple:macos:12.0:public-beta-2",
+      "appearanceDate": "2021-07-16",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "iCulture identifies Public Beta 2, and 9to5Mac calls the July 16 build the second public release."
+    },
+    {
+      "candidateId": "candidate:apple:macos:12.0:public-beta-4",
+      "appearanceDate": "2021-07-28",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["iCulture", "AppleInsider", "OS X Daily"],
+      "finding": "Three independent sources explicitly identify July 28 as Public Beta 4. The retained but unused 9to5Mac post instead calls it technically the third public release.",
+      "requiredQualification": "Preserve the publisher disagreement and cite the three PB4-specific sources; do not describe the ordinal as universally reported."
+    },
+    {
+      "candidateId": "candidate:apple:macos:12.0:public-beta-5",
+      "appearanceDate": "2021-08-12",
+      "disposition": "blockedNewlyDetectedOrdinalConflict",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "iCulture labels August 12 Public Beta 5, but the assigned 9to5Mac source explicitly calls it technically public beta 4. The packet incorrectly counted that source as candidate-specific PB5 ordinal evidence.",
+      "requiredHandling": "Add independent exact Public Beta 5 evidence or revise the identity; do not promote while the two retained lineages conflict."
+    },
+    {
+      "candidateId": "candidate:apple:macos:12.0:public-beta-6",
+      "appearanceDate": "2021-08-31",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "iCulture explicitly identifies Public Beta 6 on August 31, while 9to5Mac independently records the beta 6 payload becoming available to public testers.",
+      "requiredQualification": "Use iCulture for the literal public ordinal and 9to5Mac only for public availability of the matching payload."
+    },
+    {
+      "candidateId": "candidate:apple:macos:12.0:public-beta-7",
+      "appearanceDate": "2021-09-22",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "MacRumors"],
+      "finding": "iCulture explicitly identifies Public Beta 7 on September 22. MacRumors independently confirms public availability of the seventh developer payload, but its retained archive byline is September 21 rather than the packet's claimed candidate-date byline.",
+      "requiredQualification": "Use iCulture for the public ordinal and September 22 appearance date; use MacRumors only as payload-availability corroboration."
+    },
+    {
+      "candidateId": "candidate:apple:macos:12.0:public-beta-8",
+      "appearanceDate": "2021-09-29",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "MacRumors"],
+      "finding": "iCulture explicitly identifies Public Beta 8 on September 29, and MacRumors independently records a new Monterey public beta on that date.",
+      "requiredQualification": "Use iCulture for the literal public ordinal; the MacRumors headline is unnumbered."
+    },
+    {
+      "candidateId": "candidate:apple:macos:12.0:public-beta-9",
+      "appearanceDate": "2021-10-07",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "Kobonemi"],
+      "finding": "The two sources independently identify Monterey Public Beta 9; Kobonemi's October 8 Japanese-local update is consistent with the October 7 Pacific appearance."
+    },
+    {
+      "candidateId": "candidate:apple:macos:12.0:public-beta-10",
+      "appearanceDate": "2021-10-13",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["9to5Mac", "Kobonemi", "iCulture"],
+      "finding": "Kobonemi explicitly identifies Public Beta 10 and 9to5Mac records beta 10 availability to public testers on October 13; iCulture's living chronology stops at Public Beta 9.",
+      "requiredQualification": "Preserve iCulture's omission as a chronology divergence and normalize Kobonemi's October 14 Japanese-local date to the October 13 Pacific appearance."
+    },
+    {
+      "candidateId": "candidate:apple:macos:13.0:public-beta-1",
+      "appearanceDate": "2022-07-11",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "Both sources record the opening Ventura public beta on July 11; this is the first public-beta appearance."
+    },
+    {
+      "candidateId": "candidate:apple:macos:13.0:public-beta-2",
+      "appearanceDate": "2022-07-28",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "MacRumors"],
+      "finding": "Both sources explicitly identify Ventura Public Beta 2 on July 28."
+    },
+    {
+      "candidateId": "candidate:apple:macos:13.0:public-beta-3",
+      "appearanceDate": "2022-08-09",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "MacRumors"],
+      "finding": "Both sources explicitly identify Ventura Public Beta 3 on August 9."
+    },
+    {
+      "candidateId": "candidate:apple:macos:13.0:public-beta-4",
+      "appearanceDate": "2022-08-26",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["iCulture", "MacRumors", "iThinkDifferent"],
+      "finding": "All three source histories support Ventura Public Beta 4 on August 26."
+    },
+    {
+      "candidateId": "candidate:apple:macos:13.0:public-beta-5",
+      "appearanceDate": "2022-09-09",
+      "disposition": "blockedLifecycleModel",
+      "sourceReferenceCount": 4,
+      "independentPublisherFamilies": ["9to5Mac", "iThinkDifferent", "iCulture", "Mr. Macintosh"],
+      "finding": "The September 9 Public Beta 5 appearance and withdrawal are corroborated, as is a same-label September 10 return. One route cannot truthfully represent both lifecycle appearances with a single appearanceDate and availabilityState.",
+      "requiredHandling": "Keep the route blocked until the route and data model define same-label withdrawal and return without creating a duplicate public-beta-5 route."
+    },
+    {
+      "candidateId": "candidate:apple:macos:13.0:public-beta-6",
+      "appearanceDate": "2022-09-21",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["iCulture", "MacRumors", "iThinkDifferent"],
+      "finding": "iCulture and MacRumors explicitly support Public Beta 6 on September 21. The isolated iThinkDifferent sentence saying fifth public beta is excluded as stale copy beneath its Public Beta 6 heading."
+    },
+    {
+      "candidateId": "candidate:apple:macos:13.0:public-beta-7",
+      "appearanceDate": "2022-09-28",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["iCulture", "MacRumors", "iThinkDifferent"],
+      "finding": "The retained histories consistently identify Ventura Public Beta 7 on September 28."
+    },
+    {
+      "candidateId": "candidate:apple:macos:13.0:public-beta-8",
+      "appearanceDate": "2022-10-05",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "iThinkDifferent"],
+      "finding": "Both sources explicitly identify Ventura Public Beta 8 on October 5."
+    },
+    {
+      "candidateId": "candidate:apple:macos:13.0:public-beta-9",
+      "appearanceDate": "2022-10-11",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "Heipg"],
+      "finding": "iCulture explicitly dates Public Beta 9 to October 11, and Heipg independently maps build 22A5373b to Public Beta 9 in a later report.",
+      "requiredQualification": "Use iCulture for the appearance date and Heipg only as later ordinal/build corroboration; do not substitute Heipg's October 14 publication date."
+    },
+    {
+      "candidateId": "candidate:apple:macos:14.0:public-beta-1",
+      "appearanceDate": "2023-07-12",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "Both sources identify the first Sonoma public beta on July 12."
+    },
+    {
+      "candidateId": "candidate:apple:macos:14.0:public-beta-2",
+      "appearanceDate": "2023-07-31",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "Both sources explicitly identify Sonoma Public Beta 2 on July 31."
+    },
+    {
+      "candidateId": "candidate:apple:macos:14.0:public-beta-3",
+      "appearanceDate": "2023-08-09",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "Both sources explicitly identify Sonoma Public Beta 3 on August 9."
+    },
+    {
+      "candidateId": "candidate:apple:macos:14.0:public-beta-4",
+      "appearanceDate": "2023-08-22",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 4,
+      "independentPublisherFamilies": ["iThinkDifferent", "Heipg", "AppleInsider", "OS X Daily"],
+      "finding": "iThinkDifferent and Heipg independently map build 23A5328b to Public Beta 4. AppleInsider establishes the build's August 22 public availability, while cross-platform AppleInsider and OS X Daily ordinal prose incorrectly calls the macOS build Public Beta 5.",
+      "requiredQualification": "Use Mac-specific sources for the PB4 ordinal, AppleInsider for the August 22 availability date, and preserve the cross-platform over-numbering conflict."
+    },
+    {
+      "candidateId": "candidate:apple:macos:14.0:public-beta-5",
+      "appearanceDate": "2023-08-30",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["iCulture", "Heipg", "OS X Daily"],
+      "finding": "Heipg and OS X Daily independently identify build 23A5337a as Public Beta 5; OS X Daily establishes August 30 Pacific availability. The captured iCulture page contains only Public Betas 1 through 3 and does not support the packet locator's PB5 claim.",
+      "requiredQualification": "Exclude iCulture from PB5 evidence, retain Heipg's August 31 local date as the same appearance, and do not create an apparent Public Beta 6."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.0:public-beta-1",
+      "appearanceDate": "2024-07-15",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "MacRumors"],
+      "finding": "Both sources explicitly identify Sequoia Public Beta 1 on July 15."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.0:public-beta-2",
+      "appearanceDate": "2024-07-24",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "Both sources explicitly identify Sequoia Public Beta 2 on July 24."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.0:public-beta-3",
+      "appearanceDate": "2024-08-06",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "Both sources explicitly identify Sequoia Public Beta 3 on August 6."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.0:public-beta-4",
+      "appearanceDate": "2024-08-12",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac", "MacRumors"],
+      "finding": "iCulture explicitly identifies Public Beta 4, and the two contemporary reports independently record the matching August 12 public-beta wave."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.0:public-beta-5",
+      "appearanceDate": "2024-08-20",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac", "OS X Daily"],
+      "finding": "iCulture and 9to5Mac explicitly identify Public Beta 5 on August 20; OS X Daily independently corroborates the ordinal in its August 21 report."
+    },
+    {
+      "candidateId": "candidate:apple:macos:15.0:public-beta-6",
+      "appearanceDate": "2024-08-28",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac", "MacRumors"],
+      "finding": "iCulture and 9to5Mac identify Public Beta 6 on August 28, and MacRumors independently records public availability of the matching developer payload."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.0:public-beta-1",
+      "appearanceDate": "2025-07-21",
+      "disposition": "blockedLifecycleModel",
+      "sourceReferenceCount": 5,
+      "independentPublisherFamilies": ["MacRumors", "AppleInsider", "9to5Mac", "iCulture"],
+      "finding": "Two sources corroborate the accidental July 21 Public Beta 1 distribution and withdrawal; three sources corroborate the official same-label July 24 return. One route cannot truthfully encode both appearances.",
+      "requiredHandling": "Keep the route blocked until the model represents the accidental withdrawal and official return without a duplicate public-beta-1 route."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.0:public-beta-2",
+      "appearanceDate": "2025-08-07",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "Both sources explicitly identify Tahoe Public Beta 2 on August 7."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.0:public-beta-3",
+      "appearanceDate": "2025-08-14",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "Both sources explicitly identify Tahoe Public Beta 3 on August 14."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.0:public-beta-4",
+      "appearanceDate": "2025-08-18",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "Both sources explicitly identify Tahoe Public Beta 4 on August 18."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.0:public-beta-5",
+      "appearanceDate": "2025-08-25",
+      "disposition": "chronologyApprovedWithQualification",
+      "sourceReferenceCount": 2,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac"],
+      "finding": "9to5Mac explicitly identifies Public Beta 5 on August 25 Pacific, while iCulture records the same build and ordinal on August 26.",
+      "requiredQualification": "Use August 25 under the packet's Pacific-date convention and retain August 26 as a publisher-local chronology difference, not a second event."
+    },
+    {
+      "candidateId": "candidate:apple:macos:26.0:public-beta-6",
+      "appearanceDate": "2025-09-02",
+      "disposition": "chronologyApproved",
+      "sourceReferenceCount": 3,
+      "independentPublisherFamilies": ["iCulture", "9to5Mac", "MacRumors"],
+      "finding": "All three sources identify the September 2 public-beta wave; iCulture and MacRumors explicitly call the macOS release Public Beta 6."
+    }
+  ],
+  "conflictAdjudications": [
+    {
+      "conflictId": "conflict-macos11-late-public-ordinal",
+      "disposition": "partiallyResolved",
+      "finding": "Public Beta 5 is adequately supported by Cisco and Apple Wiki plus MacRumors availability. Public Beta 4 and Public Beta 6 remain blocked because their exact ordinals and dates are not independently resolved."
+    },
+    {
+      "conflictId": "conflict-macos11-pb6-date",
+      "disposition": "unresolvedBlocking",
+      "finding": "The retained sources point to October 14, October 15, and October 16 at differing levels of specificity; the packet's October 15 choice is not sufficiently corroborated."
+    },
+    {
+      "conflictId": "conflict-macos12-skipped-pb3",
+      "disposition": "upheldWithPublisherDisagreement",
+      "finding": "Do not create a separate Public Beta 3 route. Three sources label the July 28 appearance Public Beta 4, although the retained unused 9to5Mac post calls it technically the third public release."
+    },
+    {
+      "conflictId": "conflict-macos12-pb10",
+      "disposition": "resolvedWithQualification",
+      "finding": "Kobonemi explicitly supplies Public Beta 10 and 9to5Mac supplies same-day public availability of beta 10; iCulture's omission is preserved."
+    },
+    {
+      "conflictId": "conflict-macos13-pb5-lifecycle",
+      "disposition": "unresolvedBlocking",
+      "finding": "The chronology is supported, but the unique route cannot encode both the September 9 withdrawal and September 10 same-label return."
+    },
+    {
+      "conflictId": "conflict-macos14-pb4-overnumber",
+      "disposition": "resolvedWithQualification",
+      "finding": "Mac-specific sources establish PB4 for build 23A5328b; cross-platform fifth-public-beta wording is rejected for macOS but retained as a documented conflict."
+    },
+    {
+      "conflictId": "conflict-macos14-pb5-date-and-ordinal",
+      "disposition": "resolvedWithQualification",
+      "finding": "Heipg and OS X Daily establish PB5 for build 23A5337a and August 30 Pacific availability. The iCulture locator is invalid and is excluded."
+    },
+    {
+      "conflictId": "conflict-macos26-pb1-lifecycle",
+      "disposition": "unresolvedBlocking",
+      "finding": "Both July 21 accidental availability and July 24 official availability are confirmed, but they share one displayed label and route."
+    },
+    {
+      "conflictId": "conflict-macos26-pb5-date",
+      "disposition": "resolvedWithQualification",
+      "finding": "August 25 is retained as the Pacific appearance date; iCulture's August 26 entry is treated as the same appearance in publisher-local chronology."
+    }
+  ],
+  "newlyDetectedConflicts": [
+    {
+      "conflictId": "independent-review-macos12-pb5-ordinal",
+      "candidateIds": [
+        "candidate:apple:macos:12.0:public-beta-5"
+      ],
+      "type": "explicitOrdinalContradiction",
+      "severity": "blocking",
+      "finding": "The packet assigns 9to5Mac post 744313 to Public Beta 5, but the retained body explicitly describes the August 12 release as technically public beta 4. iCulture calls it Public Beta 5.",
+      "requiredHandling": "Correct the source roles and candidate locator, add a conflict record, and obtain another exact PB5 lineage or revise the identity."
+    }
+  ],
+  "exceptionalAppearanceReviews": [
+    {
+      "appearanceId": "exceptional:apple:macos:13.0:public-beta-5-return",
+      "historicalAppearanceConfirmed": true,
+      "modelingDisposition": "blockedPendingRouteAndDataModel",
+      "finding": "The September 10 same-label return is supported, but it must not become a duplicate public-beta-5 route."
+    },
+    {
+      "appearanceId": "exceptional:apple:macos:26.0:public-beta-1-official-return",
+      "historicalAppearanceConfirmed": true,
+      "modelingDisposition": "blockedPendingRouteAndDataModel",
+      "finding": "The July 24 official same-label return is supported, but it must not become a duplicate public-beta-1 route."
+    }
+  ],
+  "notProposedReviews": [
+    {
+      "recordId": "not-proposed:apple:macos:12.0:public-beta-3-skipped",
+      "disposition": "upheldWithQualification",
+      "finding": "No separate PB3 appearance should be created. Preserve that 9to5Mac counted July 28 as the third public release while three other sources labeled that same appearance PB4."
+    },
+    {
+      "recordId": "not-proposed:apple:macos:13.0:public-beta-5-return",
+      "disposition": "upheldBlockedPendingModel",
+      "finding": "Do not create a duplicate route for the September 10 return."
+    },
+    {
+      "recordId": "not-proposed:apple:macos:14.0:apparent-public-beta-6",
+      "disposition": "upheld",
+      "finding": "The August 30/31 build is independently identified as PB5, so cross-platform over-numbering does not establish a separate macOS PB6."
+    },
+    {
+      "recordId": "not-proposed:apple:macos:26.0:public-beta-1-official-return",
+      "disposition": "upheldBlockedPendingModel",
+      "finding": "Do not create a duplicate route for the July 24 official return."
+    }
+  ],
+  "sourceLocatorFindings": [
+    {
+      "sourceId": "source-iculture-macos-14",
+      "severity": "materialNonBlockingForApprovedCandidates",
+      "finding": "The locator says the captured chronology lists Public Betas 1 through 5, but the retained HTML lists only Public Betas 1 through 3.",
+      "requiredHandling": "Do not cite this source for Sonoma PB4 or PB5; correct the source record before any downstream use."
+    },
+    {
+      "sourceId": "source-mr-bigsur-pb4",
+      "severity": "materialBlockingForCandidate",
+      "finding": "The locator claims a same-day September 22 public-beta update. The retained page has datePublished September 22, but dateModified and the displayed updated byline are September 23, and no body text states September 22 public availability."
+    },
+    {
+      "sourceId": "source-9to5-macos-12-pb5",
+      "severity": "materialBlockingForCandidate",
+      "finding": "The retained article explicitly calls the August 12 release technically public beta 4, contradicting its PB5 source assignment and publicOrdinal role."
+    },
+    {
+      "sourceId": "source-mr-macos-12-pb7",
+      "severity": "nonBlockingWithQualification",
+      "finding": "The locator claims a candidate-date September 22 byline, but the retained archive entry's byline is September 21; only the updated headline indicates later public availability."
+    },
+    {
+      "sourceId": "source-osxd-bigsur-pb6",
+      "severity": "materialBlockingForCandidate",
+      "finding": "The locator overstates the body as identifying availability to both developer and public-beta testers. The article identifies beta 10 for enrolled beta testers and links generic public-beta installation guidance, but does not establish the packet's October 15 public date or literal Public Beta 6 ordinal."
+    },
+    {
+      "sourceId": "source-ithinkdiff-ventura",
+      "severity": "nonBlockingExcludedCopy",
+      "finding": "Its Public Beta 6 heading is dated September 21, but the following sentence says fifth public beta. The two other PB6 sources control, and the stale sentence must not be cited."
+    }
+  ],
+  "authorization": {
+    "chronologyApprovedCandidateCount": 36,
+    "chronologyApprovalScope": "Public-beta identity, sequence, channel, and appearance date only, subject to every recorded qualification.",
+    "blockedCandidateCount": 5,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "productionIdAllocationAllowed": false,
+    "pageBuildAllowed": false,
+    "deploymentAllowed": false
+  },
+  "requiredNextGate": "Correct the packet source locators and roles, resolve the five blocked identities including both same-label lifecycle cases, and repeat the exact production query immediately before any separately authorized mutation."
+}

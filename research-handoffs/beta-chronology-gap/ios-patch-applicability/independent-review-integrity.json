@@ -1,0 +1,175 @@
+{
+  "formatVersion": 1,
+  "batchId": "ios-patch-applicability-2026-07-31",
+  "checkedAt": "2026-07-31T08:24:34Z",
+  "checker": "codex-independent-review-ios-patch-applicability",
+  "status": "passed",
+  "packetFreeze": {
+    "manifestPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/packet-locks.json",
+    "manifestBytes": 14768,
+    "manifestSha256": "23c6bac767883500103ecdb2108fb10ec49574f39119587da8a56835712aaa98",
+    "declaredMaterialFileCount": 63,
+    "verifiedMaterialFileCount": 63,
+    "verifiedMaterialBytes": 13727001,
+    "byteFailureCount": 0,
+    "sha256FailureCount": 0,
+    "failures": []
+  },
+  "evidenceCustody": {
+    "lockManifestPath": "research-handoffs/beta-chronology-gap/ios-patch-applicability/raw-evidence-locks.json",
+    "lockManifestBytes": 11727,
+    "lockManifestSha256": "cba42cf0d01fa210dff6780716beb02457e927f3fef26c15d460913e7637abd4",
+    "sourceCount": 21,
+    "uniqueSourceIdCount": 21,
+    "rawLockCount": 21,
+    "rawVerifiedCount": 21,
+    "rawVerifiedBytes": 13381181,
+    "selectedLockCount": 21,
+    "selectedVerifiedCount": 21,
+    "selectedVerifiedBytes": 42262,
+    "sourceToLockJoinCount": 21,
+    "sourceToLockJoinsVerified": 21,
+    "selectedLocatorSourceCount": 21,
+    "selectedLocatorSourcesVerified": 21,
+    "selectedLocatorCount": 59,
+    "requiredNeedleSetCount": 21,
+    "requiredNeedleSetsVerified": 21,
+    "byteOrHashFailureCount": 0,
+    "joinOrLocatorFailureCount": 0,
+    "failures": []
+  },
+  "frozenCorePins": [
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/assignment.json",
+      "bytes": 3091,
+      "sha256": "cf20af1cf947693f2eedc9dd990597263e4ba60d5026747f3821d1bc2062a749"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/scoped-coverage-snapshot.json",
+      "bytes": 12772,
+      "sha256": "0d7cc03431dc55ee185346eb42e66c2ba62ca5ba86642b440f570cc32c72f667"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/source-query-log.json",
+      "bytes": 28557,
+      "sha256": "7dcd9bb87d9b641ae604ead52b5e518fb349f8cc34c365e65ed9f374cb0d0248"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/sources.json",
+      "bytes": 36216,
+      "sha256": "e174ac7e1ad572dcac627b9e9fefbed6635be6e1ec65c71424b2de7003deecdb"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/raw-evidence-locks.json",
+      "bytes": 11727,
+      "sha256": "cba42cf0d01fa210dff6780716beb02457e927f3fef26c15d460913e7637abd4"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/applicability-audit.json",
+      "bytes": 53284,
+      "sha256": "ef50d0e04387d782a55946e96b569c89aa6e3dfbf40bd62ff07d0182fbbafa57"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/conflicts.json",
+      "bytes": 1641,
+      "sha256": "e5eb307ee001af116da317b0370fe9339a85d9481e3d63a037869302697c7133"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/candidates.json",
+      "bytes": 10239,
+      "sha256": "3062419ce68e3c89d16ce153657ce14c223504dca74e4ec084c38e4d0de44b41"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/packet-locks.json",
+      "bytes": 14768,
+      "sha256": "23c6bac767883500103ecdb2108fb10ec49574f39119587da8a56835712aaa98"
+    }
+  ],
+  "candidatePins": [
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-1",
+      "candidateRecordSha256": "0d237ffa24b82cb216cccdb2112bdc04271b8d1f7ab0f939bf9d419c5b1df506",
+      "identityFingerprintSha256": "8d21b9431bf3c5b3488c462c42fe18c3d73cf9f621e077911568418213e450cc",
+      "candidateRecordHashReproduced": true,
+      "identityFingerprintReproduced": true
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-2",
+      "candidateRecordSha256": "dd5a9b88d65b5419e9349ed44c575b282cfe5f3af2ddba08c8e808f45bf54bba",
+      "identityFingerprintSha256": "5f27caab02911e98b59ef00a3ce6dbcccb0d8b720cbcc5802082e357766fb336",
+      "candidateRecordHashReproduced": true,
+      "identityFingerprintReproduced": true
+    },
+    {
+      "candidateId": "candidate:apple:ios:13.3.1:public-beta-3",
+      "candidateRecordSha256": "3f0c49900cae12c547405c7d6169e3ee19f606a30d2e332d54b747e100bf400d",
+      "identityFingerprintSha256": "23ebcc2b933bf3e48115f3d29ff71f1b3e37d2f4ddae620514ce1e70a235c189",
+      "candidateRecordHashReproduced": true,
+      "identityFingerprintReproduced": true
+    }
+  ],
+  "reviewerArtifactPins": [
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review.json",
+      "bytes": 28912,
+      "sha256": "d82bb3821b2292ccc5117a3a4e3e9639f2d6ea0e649347344e79327b30d90ffb"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review-query.ts",
+      "bytes": 5923,
+      "sha256": "9409e4202af1fa2485f26a165cbddbc487ea82b05c1bfc7aeaaab31e9e8781fb"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review-production-snapshot.json",
+      "bytes": 28581,
+      "sha256": "67e8e233665ce97e4ac4ec4b0da5448e412c008dc0e0632d3d0f3837641f6959"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/ios-patch-applicability/independent-review-validation.json",
+      "bytes": 6798,
+      "sha256": "e488650761a3b5c7bdd572753e553032a65529c07c938043e043b7a246d969ec"
+    }
+  ],
+  "sharedCoveragePin": {
+    "path": "research-handoffs/beta-chronology-gap/coverage-matrix.json",
+    "expectedBytes": 662195,
+    "expectedSha256": "d2f80717f8afb25f5db652c7c7dc0d1b0be11384e4a498b9ca00f55c599e12bd",
+    "currentBytes": 662195,
+    "currentSha256": "d2f80717f8afb25f5db652c7c7dc0d1b0be11384e4a498b9ca00f55c599e12bd",
+    "matchesFrozenPin": true,
+    "modifiedByReviewer": false
+  },
+  "postWriteIntegrity": {
+    "reviewerArtifactsParsed": true,
+    "reviewerArtifactPinsReproduced": true,
+    "frozenCorePinsReproduced": true,
+    "allPacketLocksReproducedAfterReviewerWrites": true,
+    "allRawAndSelectedLocksReproducedAfterReviewerWrites": true,
+    "allSourceAndLocatorJoinsReproducedAfterReviewerWrites": true,
+    "candidatePinsReproducedAfterReviewerWrites": true,
+    "sharedCoveragePinReproducedAfterReviewerWrites": true,
+    "frozenResearchArtifactsModified": false,
+    "sharedAggregateArtifactsModified": false,
+    "failureCount": 0,
+    "driftCount": 0,
+    "failures": [],
+    "drift": []
+  },
+  "safety": {
+    "researchOnly": true,
+    "queryOnly": true,
+    "sanityMutationPerformed": false,
+    "stableEventIdsCreated": 0,
+    "pageBuildsPerformed": 0,
+    "publicationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "authorization": {
+    "researchHandoffAggregationAllowed": true,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "pageBuildsAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  }
+}

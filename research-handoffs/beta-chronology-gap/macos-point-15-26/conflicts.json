@@ -1,0 +1,147 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-point-15-26",
+  "conflictCount": 9,
+  "conflicts": [
+    {
+      "conflictId": "conflict:macos:15.1:public-beta-3:calendar-date",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "version": "15.1",
+      "candidateId": "candidate:apple:macos:15.1:public-beta-3",
+      "field": "appearanceDate",
+      "sourceIds": [
+        "9to5-151-cycle",
+        "mr-151-pb3-update",
+        "iculture-151-cycle"
+      ],
+      "finding": "Retained value: 2024-10-07. Conflicting value: 2024-10-08.",
+      "proposedResolution": "Retain October 7 in America/Los_Angeles. iCulture's one-day-later rolling row remains a source qualification."
+    },
+    {
+      "conflictId": "conflict:macos:15.5:april-15-public-ordinal",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "version": "15.5",
+      "candidateId": "candidate:apple:macos:15.5:public-beta-1",
+      "field": "sequence",
+      "sourceIds": [
+        "mr-155-pb1",
+        "9to5-155-cycle",
+        "iclarified-155-conflict"
+      ],
+      "finding": "Retained value: 1. Conflicting value: 3.",
+      "proposedResolution": "Retain Public Beta 1. iClarified's article text says third public beta on the first-public-beta date and conflicts with two exact contemporary lineages."
+    },
+    {
+      "conflictId": "conflict:macos:15.5:april-28-public-ordinal",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "version": "15.5",
+      "candidateId": "candidate:apple:macos:15.5:public-beta-3",
+      "field": "sequence",
+      "sourceIds": [
+        "monomaniac-155-pb3",
+        "iculture-155-cycle",
+        "9to5-155-cycle",
+        "mr-155-pb3"
+      ],
+      "finding": "Retained value: 3. Conflicting value: 4.",
+      "proposedResolution": "Retain displayed Public Beta 3. Do not infer Public Beta 4 from Developer Beta 4 or iCulture's shifted row."
+    },
+    {
+      "conflictId": "conflict:macos:15.6:missing-early-public-labels",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "version": "15.6",
+      "candidateId": "candidate:apple:macos:15.6:public-beta-3",
+      "field": "sequenceCompleteness",
+      "sourceIds": [
+        "mr-156-pb3",
+        "iclarified-156-pb3",
+        "iculture-156-cycle"
+      ],
+      "finding": "Retained value: Only Public Beta 3 independently established. Conflicting value: Assumed Public Beta 1 and 2 from developer chronology.",
+      "proposedResolution": "Do not create Public Beta 1 or 2. No retained source explicitly establishes those macOS public appearances."
+    },
+    {
+      "conflictId": "conflict:macos:26.2:november-18-public-ordinal",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "version": "26.2",
+      "candidateId": "candidate:apple:macos:26.2:public-beta-3",
+      "field": "sequence",
+      "sourceIds": [
+        "9to5-262-pb3",
+        "mactrast-262-pb3",
+        "mactech-262-conflict"
+      ],
+      "finding": "Retained value: 3. Conflicting value: 2.",
+      "proposedResolution": "Retain Public Beta 3. MacTech's second-public-beta wording conflicts with the platform-specific sequence."
+    },
+    {
+      "conflictId": "conflict:macos:26.2:iculture-public-row-omission",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "version": "26.2",
+      "candidateId": null,
+      "field": "sequenceCompleteness",
+      "sourceIds": [
+        "iculture-262-cycle",
+        "9to5-262-pb1",
+        "9to5-262-pb2",
+        "9to5-262-pb3"
+      ],
+      "finding": "Retained value: Three public appearances independently established. Conflicting value: No public rows in iCulture table.",
+      "proposedResolution": "Treat iCulture as an incomplete living chronology for this cycle, not negative evidence."
+    },
+    {
+      "conflictId": "conflict:macos:26.4:iculture-late-row-omissions",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "version": "26.4",
+      "candidateId": null,
+      "field": "sequenceCompleteness",
+      "sourceIds": [
+        "iculture-264-cycle",
+        "mr-264-pb3",
+        "9to5-264-pb4"
+      ],
+      "finding": "Retained value: Public Beta 1 through 4. Conflicting value: iCulture table stops after Public Beta 2.",
+      "proposedResolution": "Retain independently reported Public Beta 3 and 4; classify the rolling table as incomplete."
+    },
+    {
+      "conflictId": "conflict:macos:26.5:shifted-public-sequence",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "version": "26.5",
+      "candidateId": null,
+      "field": "sequenceAndDate",
+      "sourceIds": [
+        "iculture-265-cycle",
+        "mr-265-apr14-negative",
+        "9to5-265-pb2",
+        "mr-265-pb2",
+        "9to5-265-pb3",
+        "monomaniac-265-pb3"
+      ],
+      "finding": "Retained value: PB1 Apr 3; PB2 Apr 21; PB3 Apr 27. Conflicting value: PB1 Apr 3; PB2 Apr 14; PB3 Apr 21; PB4 Apr 27.",
+      "proposedResolution": "Retain the explicit public-program sequence. April 14 did not include a macOS public release; do not map developer ordinals into the public channel."
+    },
+    {
+      "conflictId": "conflict:macos:26.6:public-beta-3-calendar-date",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "version": "26.6",
+      "candidateId": "candidate:apple:macos:26.6:public-beta-3",
+      "field": "appearanceDate",
+      "sourceIds": [
+        "mr-266-pb3",
+        "iculture-266-cycle"
+      ],
+      "finding": "Retained value: 2026-06-30. Conflicting value: 2026-06-29.",
+      "proposedResolution": "Retain June 30 Pacific for public distribution. June 29 is the developer-seed date."
+    }
+  ],
+  "reviewState": "pendingIndependentChronologyReview"
+}

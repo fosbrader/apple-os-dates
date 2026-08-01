@@ -1,0 +1,316 @@
+{
+  "formatVersion": "1.0",
+  "programId": "apple-beta-chronology-gap",
+  "generatedAt": "2026-07-31T02:35:41Z",
+  "reportingDate": "2026-07-30",
+  "timezone": "America/New_York",
+  "scope": {
+    "vendor": "Apple",
+    "platforms": [
+      "iOS",
+      "iPadOS",
+      "macOS",
+      "watchOS",
+      "tvOS",
+      "visionOS"
+    ],
+    "channels": [
+      "developerBeta",
+      "publicBeta"
+    ],
+    "grain": "one externally identifiable channel appearance per release event",
+    "sanityMutationAllowed": false
+  },
+  "productionSnapshot": {
+    "queriedAt": "2026-07-30",
+    "queryMode": "live read-only Sanity queries with an authenticated user token",
+    "totalReleaseEvents": 2068,
+    "platformCounts": [
+      {
+        "platform": "iOS",
+        "platformId": "platform-ios",
+        "total": 729,
+        "byChannel": {
+          "developerBeta": 446,
+          "publicBeta": 10,
+          "releaseCandidate": 51,
+          "goldenMaster": 20,
+          "public": 202
+        }
+      },
+      {
+        "platform": "iPadOS",
+        "platformId": "platform-ipados",
+        "total": 349,
+        "byChannel": {
+          "developerBeta": 236,
+          "publicBeta": 10,
+          "releaseCandidate": 49,
+          "goldenMaster": 5,
+          "public": 49
+        }
+      },
+      {
+        "platform": "macOS",
+        "platformId": "platform-macos",
+        "total": 210,
+        "byChannel": {
+          "developerBeta": 150,
+          "publicBeta": 0,
+          "releaseCandidate": 23,
+          "goldenMaster": 3,
+          "public": 34
+        }
+      },
+      {
+        "platform": "watchOS",
+        "platformId": "platform-watchos",
+        "total": 330,
+        "byChannel": {
+          "developerBeta": 251,
+          "publicBeta": 0,
+          "releaseCandidate": 21,
+          "goldenMaster": 6,
+          "public": 52
+        }
+      },
+      {
+        "platform": "tvOS",
+        "platformId": "platform-tvos",
+        "total": 349,
+        "byChannel": {
+          "developerBeta": 271,
+          "publicBeta": 0,
+          "releaseCandidate": 22,
+          "goldenMaster": 5,
+          "public": 51
+        }
+      },
+      {
+        "platform": "visionOS",
+        "platformId": "platform-visionos",
+        "total": 101,
+        "byChannel": {
+          "developerBeta": 73,
+          "publicBeta": 0,
+          "releaseCandidate": 14,
+          "goldenMaster": 0,
+          "public": 14
+        }
+      }
+    ],
+    "publicBetaSummary": {
+      "total": 20,
+      "byPlatform": {
+        "iOS": 10,
+        "iPadOS": 10,
+        "macOS": 0,
+        "watchOS": 0,
+        "tvOS": 0,
+        "visionOS": 0
+      },
+      "earliestExisting": {
+        "platform": "iOS",
+        "version": "11.0",
+        "label": "Public Beta 1",
+        "appearanceDate": "2017-06-26"
+      },
+      "latestExisting": {
+        "platform": "iOS",
+        "version": "27.0",
+        "label": "Public Beta 1",
+        "appearanceDate": "2026-07-13"
+      },
+      "finding": "The production public-beta record is a sparse sample, not a complete program history."
+    },
+    "earliestModeledDeveloperBeta": [
+      {
+        "platform": "iOS",
+        "version": "2.0",
+        "label": "Beta 1",
+        "appearanceDate": "2008-03-06"
+      },
+      {
+        "platform": "iPadOS",
+        "version": "13.0",
+        "label": "Beta 1",
+        "appearanceDate": "2019-06-03"
+      },
+      {
+        "platform": "macOS",
+        "version": "10.6",
+        "label": "Beta 1",
+        "appearanceDate": "2008-06-09"
+      },
+      {
+        "platform": "watchOS",
+        "version": "2.0",
+        "label": "Beta 1",
+        "appearanceDate": "2015-06-08"
+      },
+      {
+        "platform": "tvOS",
+        "version": "9.0",
+        "label": "Beta 1",
+        "appearanceDate": "2015-09-09"
+      },
+      {
+        "platform": "visionOS",
+        "version": "1.0",
+        "label": "Beta 1",
+        "appearanceDate": "2023-06-21"
+      }
+    ],
+    "qualityAssessment": [
+      {
+        "dimension": "completeness",
+        "severity": "critical",
+        "confidence": "high",
+        "finding": "Four modeled platforms have no publicBeta events despite evidence-backed public programs for macOS, tvOS, and watchOS."
+      },
+      {
+        "dimension": "consistency",
+        "severity": "high",
+        "confidence": "high",
+        "finding": "Public-beta channel coverage is applied inconsistently across platforms and release cycles."
+      },
+      {
+        "dimension": "integrity",
+        "severity": "high",
+        "confidence": "high",
+        "finding": "A prior local-to-production reconciliation marked 28 iOS public-beta candidates applied although exact production identities are absent."
+      },
+      {
+        "dimension": "validity",
+        "severity": "medium",
+        "confidence": "medium",
+        "finding": "visionOS 27 public-beta eligibility is disputed and must not be inferred from developer distribution or third-party build claims."
+      }
+    ]
+  },
+  "legacyAndLocalSnapshot": {
+    "seedData": {
+      "path": "scripts/seed-data.json",
+      "releaseVersionCount": 410,
+      "publicBetaMilestoneCount": 20,
+      "publicBetaPlatforms": {
+        "iOS": 10,
+        "iPadOS": 10
+      },
+      "nonIosOrIpadPublicBetaMilestoneCount": 0,
+      "finding": "The original hand-curated seed has the same platform-level public-beta omission as production."
+    },
+    "researchBatches": {
+      "directory": "scripts/research-batches",
+      "jsonBatchCount": 73,
+      "batchesWithEvents": 73
+    },
+    "productionIdentityExport": {
+      "path": "tmp/all-event-identities.json",
+      "releaseEventCount": 2068,
+      "matchesLiveTotal": true
+    },
+    "boundedPrereleaseReconciliation": {
+      "candidateIdentityCount": 148,
+      "exactExistingMatchCount": 120,
+      "confirmedMissingCount": 28,
+      "localDuplicateIdentityCount": 0,
+      "exactMatches": {
+        "platform": "iOS",
+        "channel": "developerBeta",
+        "count": 120
+      },
+      "confirmedMissing": {
+        "platform": "iOS",
+        "channel": "publicBeta",
+        "count": 28,
+        "versions": [
+          {
+            "version": "11.1",
+            "count": 5
+          },
+          {
+            "version": "11.2",
+            "count": 6
+          },
+          {
+            "version": "11.3",
+            "count": 6
+          },
+          {
+            "version": "11.4",
+            "count": 6
+          },
+          {
+            "version": "11.4.1",
+            "count": 5
+          }
+        ],
+        "sourceManifest": "scripts/research-batches/apple-ios-11-point-prerelease.json",
+        "registerDisposition": "reuseReviewPending"
+      }
+    },
+    "reusableEvidence": [
+      {
+        "cohort": "iOS 8.3 and 8.4 public betas",
+        "candidateCount": 5,
+        "sourcePaths": [
+          "scripts/research-batches/apple-ios-8-point-prerelease.md",
+          "scripts/research-batches/build-apple-ios-8-point-prerelease.mjs"
+        ],
+        "priorDisposition": "ledger-only; paired developer route owns product changes",
+        "registerDisposition": "needsEvidenceReview"
+      },
+      {
+        "cohort": "iOS 9 point-release public betas",
+        "estimatedCandidateCount": 27,
+        "artifactCount": 65,
+        "sourcePath": "tmp/ios9-point-evidence",
+        "countStatus": "estimate pending structured review",
+        "registerDisposition": "not yet registered"
+      }
+    ]
+  },
+  "knownReconciliationDefect": {
+    "severity": "high",
+    "status": "confirmed",
+    "affectedCandidateCount": 28,
+    "affectedVersions": [
+      "iOS 11.1",
+      "iOS 11.2",
+      "iOS 11.3",
+      "iOS 11.4",
+      "iOS 11.4.1"
+    ],
+    "priorRecord": "research-handoffs/INDEX.md",
+    "finding": "The earlier applied-state conclusion was not supported by exact live production identity checks.",
+    "control": "Every future reconciliation must query the live releaseEvent identity by releaseVersionId, channel, and routeAlias. Missing rows in a local or partial export cannot prove an existing production match."
+  },
+  "subsequentResearchPackets": [
+    {
+      "scope": "Reusable iOS 8 and iOS 11 public-beta evidence",
+      "path": "research-handoffs/beta-chronology-gap/reusable-ios8-ios11/findings.json",
+      "proposedCandidateCount": 33,
+      "explicitPublicOrdinalCount": 24,
+      "inferredPublicOrdinalCount": 9,
+      "status": "needsEvidenceReview",
+      "sanityMutationAllowed": false
+    },
+    {
+      "scope": "macOS, watchOS, tvOS, and visionOS 27 public-beta chronology",
+      "path": "research-handoffs/beta-chronology-gap/os27/candidates.json",
+      "proposedCandidateCount": 6,
+      "notProposedCount": 2,
+      "status": "readyForChronologyReview",
+      "reviewPath": "research-handoffs/beta-chronology-gap/os27/review.json",
+      "sanityMutationAllowed": false
+    }
+  ],
+  "limitations": [
+    "The live snapshot is time-bounded and must be re-queried immediately before any chronology or publication decision.",
+    "The earliest modeled developer-beta row is a corpus boundary, not proof that no earlier developer preview existed.",
+    "The iOS 9 candidate count is an estimate based on retained evidence filenames and must not be treated as confirmed.",
+    "No raw source capture or checksum was added by this foundation pass; future completed research packets must follow the repository evidence-custody rules.",
+    "This audit did not create, patch, delete, import, or transact against Sanity."
+  ]
+}

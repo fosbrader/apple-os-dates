@@ -1,0 +1,96 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios10-point-public-followup",
+  "generatedAt": "2026-07-31T04:35:31.043Z",
+  "conflictCount": 5,
+  "conflicts": [
+    {
+      "conflictId": "ios102-public-beta-3-first-appearance-date",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "candidateIds": [
+        "candidate:apple:ios:10.2:public-beta-3"
+      ],
+      "positions": [
+        {
+          "position": "2016-11-14 America/Los_Angeles",
+          "sourceIds": [
+            "followup-ios102-pb3-macrumors-status-1302",
+            "followup-ios102-pb3-macrumors-revision-1129",
+            "followup-ios102-pb3-macrumors-revision-1455",
+            "followup-ios102-pb3-taisy0",
+            "followup-ios102-pb3-redmondpie",
+            "source-ios102-pb3-thinkapple"
+          ],
+          "finding": "A MacRumors negative/positive revision window places the public update after 13:02:49 and no later than 14:55:46 Pacific. ThinkApple, Taisy0, and both Redmond Pie machine timestamps are later November 14 Pacific positives."
+        },
+        {
+          "position": "2016-11-15 publisher-local or Pacific reporting date",
+          "sourceIds": [
+            "followup-ios102-pb3-neowin",
+            "followup-ios102-pb3-geekygadgets",
+            "source-ios102-pb3-idevice",
+            "source-ios102-pb3-iphonefaq"
+          ],
+          "finding": "Neowin explicitly says public testers received the build 'today' on November 15. The other sources establish availability on November 15 but do not prove first appearance."
+        }
+      ],
+      "researchDisposition": {
+        "proposedDate": "2016-11-14",
+        "confidence": "high",
+        "rationale": "The archived page-state transition directly proves the public update was visible on November 14 Pacific. Later November 15 availability reports cannot move first appearance forward, but Neowin's explicit 'today' wording remains a real contrary claim."
+      },
+      "requiredHandling": "Independent reviewer must inspect both archived revisions, verify the timestamps, and explicitly accept or reject the November 14 correction. Do not silently discard the Neowin position."
+    },
+    {
+      "conflictId": "ios102-public-beta-3-cross-zone-calendar-dates",
+      "severity": "material",
+      "status": "normalizationDocumentedPendingIndependentReview",
+      "candidateIds": [
+        "candidate:apple:ios:10.2:public-beta-3"
+      ],
+      "finding": "ThinkApple (UTC), Taisy0 (JST), and Redmond Pie (UTC) display or encode November 15 locally while their full timestamps fall on November 14 in America/Los_Angeles.",
+      "requiredHandling": "Preserve every original timestamp and offset. Normalize the chronology date only after conversion to America/Los_Angeles; never infer from URL or displayed date alone."
+    },
+    {
+      "conflictId": "ios102-public-beta-3-redmondpie-metadata",
+      "severity": "nonMaterial",
+      "status": "qualified",
+      "candidateIds": [
+        "candidate:apple:ios:10.2:public-beta-3"
+      ],
+      "sourceIds": [
+        "followup-ios102-pb3-redmondpie"
+      ],
+      "finding": "Redmond Pie exposes 2016-11-15T07:11:54Z in JSON-LD and its visible time element, but 2016-11-15T01:11:54Z in article:published_time. Both normalize to November 14 Pacific.",
+      "requiredHandling": "Do not claim exact publication time from this source; retain both metadata positions."
+    },
+    {
+      "conflictId": "ios1021-public-beta-3-editorial-lineage-gap",
+      "severity": "material",
+      "status": "researchResolvedPendingIndependentReview",
+      "candidateIds": [
+        "candidate:apple:ios:10.2.1:public-beta-3"
+      ],
+      "sourceIds": [
+        "source-ios1021-pb3-macrumors",
+        "followup-ios1021-pb3-taisy0"
+      ],
+      "finding": "Taisy0 explicitly identifies release of iOS 10.2.1 Public Beta 3 to beta testers at a timestamp equivalent to January 9 Pacific, providing a second publisher lineage independent from MacRumors.",
+      "requiredHandling": "Independent reviewer must verify the Taisy0 capture, timestamp conversion, translation summary, and publisher independence before closing the parent blocker."
+    },
+    {
+      "conflictId": "ios1021-public-beta-3-kobonemi-internal-ordinals",
+      "severity": "material",
+      "status": "sourceQualified",
+      "candidateIds": [
+        "candidate:apple:ios:10.2.1:public-beta-3"
+      ],
+      "sourceIds": [
+        "followup-ios1021-pb3-kobonemi"
+      ],
+      "finding": "Kobonemi's title and exact product name say Public Beta 3, but the prose calls it the second public beta and calls the developer seed Beta 2. Its date metadata also contains a modified-time inconsistency.",
+      "requiredHandling": "Use Kobonemi only as supplementary exact-title evidence. Do not repeat its erroneous prose ordinals and do not count it as the lineage that closes the gate."
+    }
+  ]
+}

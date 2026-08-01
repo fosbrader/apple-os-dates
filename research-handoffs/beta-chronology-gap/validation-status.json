@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "validatedAt": "2026-07-31T02:54:46.801Z",
+  "validator": "research-handoffs/beta-chronology-gap/validate.mjs",
+  "checks": {
+    "jsonFilesParsed": 17,
+    "candidateRegisterSchemaValid": true,
+    "proposedCandidateCount": 39,
+    "notProposedCount": 2,
+    "candidateIdsUnique": true,
+    "candidateIdentityKeysUnique": true,
+    "foundationSourceCount": 31,
+    "packetSourceLedgersResolved": 2,
+    "eligibilitySourceReferences": 25,
+    "reusableCandidatesExact": 33,
+    "os27CandidatesExact": 6,
+    "os27NotProposedExact": 2,
+    "finalProgramCounts": {
+      "proposed": 39,
+      "needsEvidenceReview": 33,
+      "readyForChronologyReview": 6,
+      "notProposed": 2
+    }
+  },
+  "errors": [],
+  "safety": {
+    "sanityMutationPerformed": false,
+    "publicationAuthorized": false
+  },
+  "note": "This validation confirms internal structure and reference integrity only. It does not authorize Sanity mutation or publication."
+}

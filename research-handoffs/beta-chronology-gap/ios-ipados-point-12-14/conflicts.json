@@ -1,0 +1,173 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-ipados-point-12-14",
+  "reviewState": "pendingIndependentReview",
+  "conflictCount": 13,
+  "conflicts": [
+    {
+      "conflictId": "ios-12-4-public-beta-4-date",
+      "severity": "material",
+      "status": "proposedResolutionPendingIndependentReview",
+      "subject": "iOS 12.4 Public Beta 4: June 11 versus June 12",
+      "sourceIds": [
+        "iculture-ios-12-4",
+        "mr-ios-12-4-dev4",
+        "gh-ios-12-4-pb4",
+        "forbes-ios-12-4-pb4"
+      ],
+      "finding": "June 11 was the developer seed. Independent same-cycle Gadget Hacks and Forbes reports explicitly place the public seed on June 12; the iCulture row displays June 11.",
+      "proposedResolution": "Use 2019-06-12 for the public candidate while preserving the disagreement and requiring independent review."
+    },
+    {
+      "conflictId": "ios-12-4-no-public-beta-1",
+      "severity": "material",
+      "status": "resolvedForResearchPendingIndependentReview",
+      "subject": "iOS 12.4 begins at Public Beta 2",
+      "sourceIds": [
+        "gh-ios-12-4-pb2",
+        "iculture-ios-12-4"
+      ],
+      "finding": "Contemporary reporting explicitly says Public Beta 1 was not released.",
+      "proposedResolution": "Retain PB2 as the first public appearance and do not synthesize PB1."
+    },
+    {
+      "conflictId": "ios-12-1-3-rename",
+      "severity": "material",
+      "status": "resolvedForResearchPendingIndependentReview",
+      "subject": "iOS 12.1.2 Public Beta 1 became the 12.1.3 branch",
+      "sourceIds": [
+        "mr-ios-12-1-2-pb1",
+        "iculture-ios-12-1-3"
+      ],
+      "finding": "The first appearance carried the 12.1.2 label; the first exact 12.1.3 public label was PB2.",
+      "proposedResolution": "Do not relabel the earlier seed as an exact 12.1.3 PB1 event."
+    },
+    {
+      "conflictId": "ios-ipados-13-5-legacy-label",
+      "severity": "material",
+      "status": "resolvedForResearchPendingIndependentReview",
+      "subject": "13.4.5 Public Beta 1 was renamed into the 13.5 branch",
+      "sourceIds": [
+        "iculture-ios-13-5",
+        "mr-13-5-pb2"
+      ],
+      "finding": "The branch began under the 13.4.5 label; exact 13.5 public numbering starts at PB2.",
+      "proposedResolution": "Preserve the legacy label and do not invent exact-label 13.5 PB1 events."
+    },
+    {
+      "conflictId": "ios-ipados-13-6-legacy-label",
+      "severity": "material",
+      "status": "resolvedForResearchPendingIndependentReview",
+      "subject": "13.5.5 Public Beta 1 was renamed into the 13.6 branch",
+      "sourceIds": [
+        "iculture-ios-13-6",
+        "mr-13-6-pb2"
+      ],
+      "finding": "The branch began under the 13.5.5 label; exact 13.6 public numbering starts at PB2.",
+      "proposedResolution": "Preserve the legacy label and do not invent exact-label 13.6 PB1 events."
+    },
+    {
+      "conflictId": "ios-ipados-14-1-no-beta-cycle",
+      "severity": "material",
+      "status": "resolvedForResearchPendingIndependentReview",
+      "subject": "iOS/iPadOS 14.1 had no public-beta cycle",
+      "sourceIds": [
+        "9to5mac-ios-ipados-14-1-skipped",
+        "mr-ios-ipados-14-1-gm-only"
+      ],
+      "finding": "Contemporary reporting says beta testing skipped straight to 14.2; 14.1 appears as GM/final only.",
+      "proposedResolution": "Create no 14.1 public-beta candidates."
+    },
+    {
+      "conflictId": "ios-ipados-14-7-public-beta-2-withheld",
+      "severity": "material",
+      "status": "resolvedForResearchPendingIndependentReview",
+      "subject": "14.7 Public Beta 2 was withheld",
+      "sourceIds": [
+        "mr-14-7-dev2",
+        "imore-ios14-history",
+        "iculture-ios-14-7"
+      ],
+      "finding": "Developer Beta 2 shipped, but public histories jump from PB1 to PB3 after reported SIM failures.",
+      "proposedResolution": "Retain the explicit ordinal gap; do not infer PB2 from the developer event."
+    },
+    {
+      "conflictId": "ios-ipados-14-8-released-without-beta",
+      "severity": "material",
+      "status": "resolvedForResearchPendingIndependentReview",
+      "subject": "iOS/iPadOS 14.8 had no beta testing",
+      "sourceIds": [
+        "9to5mac-ios-ipados-14-8-no-beta",
+        "mr-ios-ipados-14-8-final"
+      ],
+      "finding": "Contemporary final-release coverage explicitly reports that 14.8 was not beta tested.",
+      "proposedResolution": "Create no 14.8 public-beta candidates."
+    },
+    {
+      "conflictId": "ios-ipados-local-calendar-rollovers",
+      "severity": "qualification",
+      "status": "normalizedPendingIndependentReview",
+      "subject": "European and Japanese publication dates can be one day later",
+      "sourceIds": [
+        "iculture-ios-12-1-1",
+        "iculture-ios-12-3",
+        "iculture-ios-13-7",
+        "iculture-ios-14-3",
+        "iculture-ios-14-7",
+        "purudo-ios-ipados-14-4-pb2"
+      ],
+      "finding": "Several rolling pages display the local next-day date for a Pacific-time Apple release.",
+      "proposedResolution": "Normalize appearanceDate to America/Los_Angeles and preserve local dates as source qualifications."
+    },
+    {
+      "conflictId": "ios-ipados-14-6-public-beta-3-date",
+      "severity": "qualification",
+      "status": "resolvedForResearchPendingIndependentReview",
+      "subject": "14.6 Public Beta 3: May 10 versus May 11",
+      "sourceIds": [
+        "imore-ios14-history",
+        "imore-ipados14-history",
+        "iculture-ios-14-6",
+        "mr-14-6-pb3"
+      ],
+      "finding": "The iMore rolling pages show May 11, while multiple contemporary sources and Pacific publication timing support May 10.",
+      "proposedResolution": "Use 2021-05-10 and retain the rolling-page discrepancy."
+    },
+    {
+      "conflictId": "ios-ipados-14-5-existing-public-beta-3",
+      "severity": "guardrail",
+      "status": "productionReconciled",
+      "subject": "14.5 Public Beta 3 already exists for both platforms",
+      "sourceIds": [
+        "mr-14-5-pb3",
+        "iculture-ios-14-5"
+      ],
+      "finding": "Fresh production reconciliation found exact existing iOS and iPadOS PB3 events.",
+      "proposedResolution": "Exclude both identities from the candidate set; do not duplicate them."
+    },
+    {
+      "conflictId": "ipados-14-7-parent-model-gap",
+      "severity": "material",
+      "status": "blockedByDataModel",
+      "subject": "iPadOS 14.7 chronology exists but its parent releaseVersion does not",
+      "sourceIds": [
+        "imore-ios14-history",
+        "iculture-ios-14-7"
+      ],
+      "finding": "PB1, PB3, PB4, and PB5 are established for iPadOS 14.7, but production has no version-ipados-14-7 parent.",
+      "proposedResolution": "Record the sequence in full-sequence-audit.json but create no event candidates until the parent model is separately reviewed and authorized."
+    },
+    {
+      "conflictId": "ipados-14-8-parent-model-gap",
+      "severity": "material",
+      "status": "blockedByDataModel",
+      "subject": "iPadOS 14.8 final release exists historically but its parent releaseVersion does not",
+      "sourceIds": [
+        "9to5mac-ios-ipados-14-8-no-beta",
+        "mr-ios-ipados-14-8-final"
+      ],
+      "finding": "The historical final release and no-beta boundary are established, while production lacks version-ipados-14-8.",
+      "proposedResolution": "Handle the parent releaseVersion gap separately; no public-beta event is proposed."
+    }
+  ]
+}

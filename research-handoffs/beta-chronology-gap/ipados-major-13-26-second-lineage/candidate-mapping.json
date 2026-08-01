@@ -1,0 +1,564 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ipados-major-13-26-second-lineage",
+  "parentBatchId": "beta-chronology-gap-ipados-major-13-26",
+  "mappingCount": 9,
+  "summary": {
+    "secondExplicitOrdinalLineageLocated": 9,
+    "directSameDateSupport": 7,
+    "followingDayOrdinalOnly": 2,
+    "exactProductionMatches": 0,
+    "chronologyApprovedBySupplementResearcher": 0
+  },
+  "mappings": [
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-6",
+      "parentPacket": {
+        "candidatesPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+        "independentReviewPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+        "frozenIdentity": {
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "14.0",
+          "releaseVersionId": "version-ipados-14-0",
+          "label": "Public Beta 6",
+          "routeAlias": "public-beta-6",
+          "channel": "publicBeta",
+          "appearanceDate": "2020-08-25",
+          "sequence": 6,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        },
+        "blockedFinding": "iCulture explicitly records Public Beta 6 on 2020-08-25. MacRumors records same-day public availability only as an update to the Developer Beta 6 article.",
+        "blocker": "Obtain a second independent lineage that explicitly identifies the iPadOS 14 public payload as Public Beta 6.",
+        "existingExplicitOrdinalLineage": {
+          "sourceId": "iculture-ipados14",
+          "publisherFamily": "iCulture",
+          "locator": "14.0 cycle: the Public Beta 6 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal."
+        }
+      },
+      "supplementalEvidence": {
+        "sourceId": "imore-ipados14-pb6-pb8",
+        "publisherFamily": "iMore",
+        "corporateFamily": "Future plc",
+        "independentFromExistingExplicitOrdinalLineage": true,
+        "exactClaimToken": "iPadOS 14 public beta 6",
+        "locator": "The h3 beginning “August 25, 2020:” contains the exact ordinal token; its immediately following paragraph repeats that token and identifies Public Beta Software Program members.",
+        "publicAudienceExplicit": true,
+        "publicOrdinalExplicit": true,
+        "appearanceDateSupport": "directDatedHistoryHeading"
+      },
+      "dateAssessment": {
+        "frozenCandidateDate": "2020-08-25",
+        "supplementalSourceDate": "2020-08-25",
+        "status": "directSameDate",
+        "requiredQualification": null
+      },
+      "productionReconciliation": {
+        "capturedAt": "2026-07-31T04:18:26.819Z",
+        "perspective": "published",
+        "routeIdentityMatchCount": 0,
+        "sequenceDateMatchCount": 0,
+        "fullCandidateMatchCount": 0,
+        "status": "confirmedMissingAtSupplementCheck"
+      },
+      "supplementDisposition": {
+        "evidenceStatus": "secondExplicitOrdinalLineageLocated",
+        "reviewStatus": "readyForIndependentReReview",
+        "chronologyApprovedBySupplementResearcher": false,
+        "publicationEligible": false,
+        "sanityMutationAllowed": false,
+        "productionIdCreationAllowed": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-7",
+      "parentPacket": {
+        "candidatesPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+        "independentReviewPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+        "frozenIdentity": {
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "14.0",
+          "releaseVersionId": "version-ipados-14-0",
+          "label": "Public Beta 7",
+          "routeAlias": "public-beta-7",
+          "channel": "publicBeta",
+          "appearanceDate": "2020-09-03",
+          "sequence": 7,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        },
+        "blockedFinding": "iCulture explicitly records Public Beta 7 on 2020-09-03. MacRumors records public availability only as an update to the Developer Beta 7 article.",
+        "blocker": "Obtain a second independent lineage that explicitly identifies the iPadOS 14 public payload as Public Beta 7.",
+        "existingExplicitOrdinalLineage": {
+          "sourceId": "iculture-ipados14",
+          "publisherFamily": "iCulture",
+          "locator": "14.0 cycle: the Public Beta 7 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal."
+        }
+      },
+      "supplementalEvidence": {
+        "sourceId": "imore-ipados14-pb6-pb8",
+        "publisherFamily": "iMore",
+        "corporateFamily": "Future plc",
+        "independentFromExistingExplicitOrdinalLineage": true,
+        "exactClaimToken": "iPadOS 14 public beta 7",
+        "locator": "The h3 beginning “September 3, 2020:” contains the exact ordinal token; its immediately following paragraph repeats that token and identifies Public Beta Software Program members.",
+        "publicAudienceExplicit": true,
+        "publicOrdinalExplicit": true,
+        "appearanceDateSupport": "directDatedHistoryHeading"
+      },
+      "dateAssessment": {
+        "frozenCandidateDate": "2020-09-03",
+        "supplementalSourceDate": "2020-09-03",
+        "status": "directSameDate",
+        "requiredQualification": null
+      },
+      "productionReconciliation": {
+        "capturedAt": "2026-07-31T04:18:26.819Z",
+        "perspective": "published",
+        "routeIdentityMatchCount": 0,
+        "sequenceDateMatchCount": 0,
+        "fullCandidateMatchCount": 0,
+        "status": "confirmedMissingAtSupplementCheck"
+      },
+      "supplementDisposition": {
+        "evidenceStatus": "secondExplicitOrdinalLineageLocated",
+        "reviewStatus": "readyForIndependentReReview",
+        "chronologyApprovedBySupplementResearcher": false,
+        "publicationEligible": false,
+        "sanityMutationAllowed": false,
+        "productionIdCreationAllowed": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:14.0:public-beta-8",
+      "parentPacket": {
+        "candidatesPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+        "independentReviewPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+        "frozenIdentity": {
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "14.0",
+          "releaseVersionId": "version-ipados-14-0",
+          "label": "Public Beta 8",
+          "routeAlias": "public-beta-8",
+          "channel": "publicBeta",
+          "appearanceDate": "2020-09-09",
+          "sequence": 8,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        },
+        "blockedFinding": "iCulture explicitly records Public Beta 8 on 2020-09-09. MacRumors records public availability only as an update to the Developer Beta 8 article.",
+        "blocker": "Obtain a second independent lineage that explicitly identifies the iPadOS 14 public payload as Public Beta 8.",
+        "existingExplicitOrdinalLineage": {
+          "sourceId": "iculture-ipados14",
+          "publisherFamily": "iCulture",
+          "locator": "14.0 cycle: the Public Beta 8 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal."
+        }
+      },
+      "supplementalEvidence": {
+        "sourceId": "imore-ipados14-pb6-pb8",
+        "publisherFamily": "iMore",
+        "corporateFamily": "Future plc",
+        "independentFromExistingExplicitOrdinalLineage": true,
+        "exactClaimToken": "iPadOS 14 public beta 8",
+        "locator": "The h3 beginning “September 9, 2020:” contains the exact ordinal token; its immediately following paragraph repeats that token and identifies Public Beta Software Program members.",
+        "publicAudienceExplicit": true,
+        "publicOrdinalExplicit": true,
+        "appearanceDateSupport": "directDatedHistoryHeading"
+      },
+      "dateAssessment": {
+        "frozenCandidateDate": "2020-09-09",
+        "supplementalSourceDate": "2020-09-09",
+        "status": "directSameDate",
+        "requiredQualification": null
+      },
+      "productionReconciliation": {
+        "capturedAt": "2026-07-31T04:18:26.819Z",
+        "perspective": "published",
+        "routeIdentityMatchCount": 0,
+        "sequenceDateMatchCount": 0,
+        "fullCandidateMatchCount": 0,
+        "status": "confirmedMissingAtSupplementCheck"
+      },
+      "supplementDisposition": {
+        "evidenceStatus": "secondExplicitOrdinalLineageLocated",
+        "reviewStatus": "readyForIndependentReReview",
+        "chronologyApprovedBySupplementResearcher": false,
+        "publicationEligible": false,
+        "sanityMutationAllowed": false,
+        "productionIdCreationAllowed": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-5",
+      "parentPacket": {
+        "candidatesPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+        "independentReviewPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+        "frozenIdentity": {
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "15.0",
+          "releaseVersionId": "version-ipados-15-0",
+          "label": "Public Beta 5",
+          "routeAlias": "public-beta-5",
+          "channel": "publicBeta",
+          "appearanceDate": "2021-08-11",
+          "sequence": 5,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        },
+        "blockedFinding": "iCulture explicitly records Public Beta 5 on 2021-08-11. MacRumors calls it a new public beta equivalent to Developer Beta 5 but does not display the public ordinal.",
+        "blocker": "Obtain a second independent lineage that explicitly identifies the iPadOS 15 public payload as Public Beta 5.",
+        "existingExplicitOrdinalLineage": {
+          "sourceId": "iculture-ipados15",
+          "publisherFamily": "iCulture",
+          "locator": "15.0 cycle: the Public Beta 5 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal."
+        }
+      },
+      "supplementalEvidence": {
+        "sourceId": "imore-ipados15-pb5-pb8",
+        "publisherFamily": "iMore",
+        "corporateFamily": "Future plc",
+        "independentFromExistingExplicitOrdinalLineage": true,
+        "exactClaimToken": "iPadOS 15 public beta 5",
+        "locator": "The h3 beginning “August 11, 2021:” contains the exact ordinal token; its immediately following paragraph calls it the fifth public beta of iPadOS 15.",
+        "publicAudienceExplicit": true,
+        "publicOrdinalExplicit": true,
+        "appearanceDateSupport": "directDatedHistoryHeading"
+      },
+      "dateAssessment": {
+        "frozenCandidateDate": "2021-08-11",
+        "supplementalSourceDate": "2021-08-11",
+        "status": "directSameDate",
+        "requiredQualification": null
+      },
+      "productionReconciliation": {
+        "capturedAt": "2026-07-31T04:18:26.819Z",
+        "perspective": "published",
+        "routeIdentityMatchCount": 0,
+        "sequenceDateMatchCount": 0,
+        "fullCandidateMatchCount": 0,
+        "status": "confirmedMissingAtSupplementCheck"
+      },
+      "supplementDisposition": {
+        "evidenceStatus": "secondExplicitOrdinalLineageLocated",
+        "reviewStatus": "readyForIndependentReReview",
+        "chronologyApprovedBySupplementResearcher": false,
+        "publicationEligible": false,
+        "sanityMutationAllowed": false,
+        "productionIdCreationAllowed": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-7",
+      "parentPacket": {
+        "candidatesPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+        "independentReviewPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+        "frozenIdentity": {
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "15.0",
+          "releaseVersionId": "version-ipados-15-0",
+          "label": "Public Beta 7",
+          "routeAlias": "public-beta-7",
+          "channel": "publicBeta",
+          "appearanceDate": "2021-08-25",
+          "sequence": 7,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        },
+        "blockedFinding": "iCulture explicitly records Public Beta 7, with an August 26 European revision that can correspond to August 25 Pacific. MacRumors records public availability on its Developer Beta 7 article without an explicit public ordinal.",
+        "blocker": "Obtain a second independent lineage that explicitly identifies Public Beta 7 and preserves enough timestamp detail to confirm the August 25 Pacific date.",
+        "existingExplicitOrdinalLineage": {
+          "sourceId": "iculture-ipados15",
+          "publisherFamily": "iCulture",
+          "locator": "15.0 cycle: the Public Beta 7 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal."
+        }
+      },
+      "supplementalEvidence": {
+        "sourceId": "imore-ipados15-pb5-pb8",
+        "publisherFamily": "iMore",
+        "corporateFamily": "Future plc",
+        "independentFromExistingExplicitOrdinalLineage": true,
+        "exactClaimToken": "iPadOS 15 public beta 7",
+        "locator": "The h3 beginning “August 25, 2021:” contains the exact ordinal token; its immediately following paragraph calls it the seventh public beta of iPadOS 15.",
+        "publicAudienceExplicit": true,
+        "publicOrdinalExplicit": true,
+        "appearanceDateSupport": "directDatedHistoryHeading"
+      },
+      "dateAssessment": {
+        "frozenCandidateDate": "2021-08-25",
+        "supplementalSourceDate": "2021-08-25",
+        "status": "directSameDate",
+        "requiredQualification": null
+      },
+      "productionReconciliation": {
+        "capturedAt": "2026-07-31T04:18:26.819Z",
+        "perspective": "published",
+        "routeIdentityMatchCount": 0,
+        "sequenceDateMatchCount": 0,
+        "fullCandidateMatchCount": 0,
+        "status": "confirmedMissingAtSupplementCheck"
+      },
+      "supplementDisposition": {
+        "evidenceStatus": "secondExplicitOrdinalLineageLocated",
+        "reviewStatus": "readyForIndependentReReview",
+        "chronologyApprovedBySupplementResearcher": false,
+        "publicationEligible": false,
+        "sanityMutationAllowed": false,
+        "productionIdCreationAllowed": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:15.0:public-beta-8",
+      "parentPacket": {
+        "candidatesPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+        "independentReviewPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+        "frozenIdentity": {
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "15.0",
+          "releaseVersionId": "version-ipados-15-0",
+          "label": "Public Beta 8",
+          "routeAlias": "public-beta-8",
+          "channel": "publicBeta",
+          "appearanceDate": "2021-08-31",
+          "sequence": 8,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        },
+        "blockedFinding": "iCulture explicitly records Public Beta 8 on 2021-08-31. MacRumors records public availability only as an update to the Developer Beta 8 article.",
+        "blocker": "Obtain a second independent lineage that explicitly identifies the iPadOS 15 public payload as Public Beta 8.",
+        "existingExplicitOrdinalLineage": {
+          "sourceId": "iculture-ipados15",
+          "publisherFamily": "iCulture",
+          "locator": "15.0 cycle: the Public Beta 8 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal."
+        }
+      },
+      "supplementalEvidence": {
+        "sourceId": "imore-ipados15-pb5-pb8",
+        "publisherFamily": "iMore",
+        "corporateFamily": "Future plc",
+        "independentFromExistingExplicitOrdinalLineage": true,
+        "exactClaimToken": "iPadOS 15 public beta 8",
+        "locator": "The h3 beginning “August 31, 2021:” contains the exact ordinal token; its immediately following paragraph calls it the eighth public beta of iPadOS 15.",
+        "publicAudienceExplicit": true,
+        "publicOrdinalExplicit": true,
+        "appearanceDateSupport": "directDatedHistoryHeading"
+      },
+      "dateAssessment": {
+        "frozenCandidateDate": "2021-08-31",
+        "supplementalSourceDate": "2021-08-31",
+        "status": "directSameDate",
+        "requiredQualification": null
+      },
+      "productionReconciliation": {
+        "capturedAt": "2026-07-31T04:18:26.819Z",
+        "perspective": "published",
+        "routeIdentityMatchCount": 0,
+        "sequenceDateMatchCount": 0,
+        "fullCandidateMatchCount": 0,
+        "status": "confirmedMissingAtSupplementCheck"
+      },
+      "supplementDisposition": {
+        "evidenceStatus": "secondExplicitOrdinalLineageLocated",
+        "reviewStatus": "readyForIndependentReReview",
+        "chronologyApprovedBySupplementResearcher": false,
+        "publicationEligible": false,
+        "sanityMutationAllowed": false,
+        "productionIdCreationAllowed": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:16.0:public-beta-4",
+      "parentPacket": {
+        "candidatesPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+        "independentReviewPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+        "frozenIdentity": {
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "16.0",
+          "releaseVersionId": "version-ipados-16-0",
+          "label": "Public Beta 4",
+          "routeAlias": "public-beta-4",
+          "channel": "publicBeta",
+          "appearanceDate": "2022-08-15",
+          "sequence": 4,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        },
+        "blockedFinding": "iCulture explicitly records Public Beta 4 on 2022-08-15. MacRumors records public availability only as an update to the Developer Beta 6 article.",
+        "blocker": "Obtain a second independent lineage that explicitly identifies the iPadOS 16 public payload as Public Beta 4.",
+        "existingExplicitOrdinalLineage": {
+          "sourceId": "iculture-ipados16",
+          "publisherFamily": "iCulture",
+          "locator": "16.0 cycle: the Public Beta 4 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal."
+        }
+      },
+      "supplementalEvidence": {
+        "sourceId": "iphonetricks-ipados16-pb4",
+        "publisherFamily": "iPhoneTricks",
+        "corporateFamily": null,
+        "independentFromExistingExplicitOrdinalLineage": true,
+        "exactClaimToken": "iPadOS 16 Public Beta 4",
+        "locator": "The article’s terminal Related paragraph explicitly identifies the iPadOS ordinal and build 20A5349b; the article metadata supplies the August 15 publication date.",
+        "publicAudienceExplicit": true,
+        "publicOrdinalExplicit": true,
+        "appearanceDateSupport": "sameDayArticleMetadata"
+      },
+      "dateAssessment": {
+        "frozenCandidateDate": "2022-08-15",
+        "supplementalSourceDate": "2022-08-15",
+        "status": "directSameDate",
+        "requiredQualification": null
+      },
+      "productionReconciliation": {
+        "capturedAt": "2026-07-31T04:18:26.819Z",
+        "perspective": "published",
+        "routeIdentityMatchCount": 0,
+        "sequenceDateMatchCount": 0,
+        "fullCandidateMatchCount": 0,
+        "status": "confirmedMissingAtSupplementCheck"
+      },
+      "supplementDisposition": {
+        "evidenceStatus": "secondExplicitOrdinalLineageLocated",
+        "reviewStatus": "readyForIndependentReReview",
+        "chronologyApprovedBySupplementResearcher": false,
+        "publicationEligible": false,
+        "sanityMutationAllowed": false,
+        "productionIdCreationAllowed": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:17.0:public-beta-6",
+      "parentPacket": {
+        "candidatesPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+        "independentReviewPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+        "frozenIdentity": {
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "17.0",
+          "releaseVersionId": "version-ipados-17-0",
+          "label": "Public Beta 6",
+          "routeAlias": "public-beta-6",
+          "channel": "publicBeta",
+          "appearanceDate": "2023-08-29",
+          "sequence": 6,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        },
+        "blockedFinding": "iCulture explicitly records Public Beta 6 on 2023-08-29. MacRumors records public availability only as an update to the Developer Beta 8 article.",
+        "blocker": "Obtain a second independent lineage that explicitly identifies the iPadOS 17 public payload as Public Beta 6.",
+        "existingExplicitOrdinalLineage": {
+          "sourceId": "iculture-ipados17",
+          "publisherFamily": "iCulture",
+          "locator": "17.0 cycle: the Public Beta 6 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal."
+        }
+      },
+      "supplementalEvidence": {
+        "sourceId": "osxd-ipados17-pb6",
+        "publisherFamily": "OS X Daily",
+        "corporateFamily": null,
+        "independentFromExistingExplicitOrdinalLineage": true,
+        "exactClaimToken": "iPadOS 17 public beta 6",
+        "locator": "The lead paragraph explicitly attaches Public Beta 6 to iPadOS 17; the following download-section heading and step 3 repeat the identity.",
+        "publicAudienceExplicit": true,
+        "publicOrdinalExplicit": true,
+        "appearanceDateSupport": "noneFollowingDayReport"
+      },
+      "dateAssessment": {
+        "frozenCandidateDate": "2023-08-29",
+        "supplementalSourceDate": "2023-08-30",
+        "status": "followingDayReportOrdinalOnly",
+        "requiredQualification": "OS X Daily published on 2023-08-30, one calendar day after the frozen 2023-08-29 appearance date. Use this source for the explicit public ordinal only; preserve the parent evidence for the appearance date and do not create a second event."
+      },
+      "productionReconciliation": {
+        "capturedAt": "2026-07-31T04:18:26.819Z",
+        "perspective": "published",
+        "routeIdentityMatchCount": 0,
+        "sequenceDateMatchCount": 0,
+        "fullCandidateMatchCount": 0,
+        "status": "confirmedMissingAtSupplementCheck"
+      },
+      "supplementDisposition": {
+        "evidenceStatus": "secondExplicitOrdinalLineageLocated",
+        "reviewStatus": "readyForIndependentReReview",
+        "chronologyApprovedBySupplementResearcher": false,
+        "publicationEligible": false,
+        "sanityMutationAllowed": false,
+        "productionIdCreationAllowed": false
+      }
+    },
+    {
+      "candidateId": "candidate:apple:ipados:18.0:public-beta-6",
+      "parentPacket": {
+        "candidatesPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/candidates.json",
+        "independentReviewPath": "research-handoffs/beta-chronology-gap/ipados-major-13-26/independent-review.json",
+        "frozenIdentity": {
+          "platform": "iPadOS",
+          "platformId": "platform-ipados",
+          "version": "18.0",
+          "releaseVersionId": "version-ipados-18-0",
+          "label": "Public Beta 6",
+          "routeAlias": "public-beta-6",
+          "channel": "publicBeta",
+          "appearanceDate": "2024-08-28",
+          "sequence": 6,
+          "isRevision": false,
+          "availabilityState": "available",
+          "closesReleaseCycle": false
+        },
+        "blockedFinding": "iCulture explicitly records Public Beta 6 on 2024-08-28. 9to5Mac explicitly labels iOS 18 Public Beta 6 and reports a new iPadOS 18 public beta, but does not explicitly attach the ordinal to iPadOS.",
+        "blocker": "Obtain a second independent lineage that explicitly identifies the iPadOS 18 public payload as Public Beta 6.",
+        "existingExplicitOrdinalLineage": {
+          "sourceId": "iculture-ipados18",
+          "publisherFamily": "iCulture",
+          "locator": "18.0 cycle: the Public Beta 6 dated section or recap row. For 14.0 PB2 and 15.0 PB2–PB4, use only the date/appearance context described in conflicts.json, not the page's appearance-based ordinal."
+        }
+      },
+      "supplementalEvidence": {
+        "sourceId": "osxd-ipados18-pb6",
+        "publisherFamily": "OS X Daily",
+        "corporateFamily": null,
+        "independentFromExistingExplicitOrdinalLineage": true,
+        "exactClaimToken": "iPadOS 18 public beta 6",
+        "locator": "The lead paragraph explicitly attaches Public Beta 6 to iPadOS 18; the install-section heading and step 3 repeat the identity.",
+        "publicAudienceExplicit": true,
+        "publicOrdinalExplicit": true,
+        "appearanceDateSupport": "noneFollowingDayReport"
+      },
+      "dateAssessment": {
+        "frozenCandidateDate": "2024-08-28",
+        "supplementalSourceDate": "2024-08-29",
+        "status": "followingDayReportOrdinalOnly",
+        "requiredQualification": "OS X Daily published on 2024-08-29, one calendar day after the frozen 2024-08-28 appearance date. Use this source for the explicit public ordinal only; preserve the parent evidence for the appearance date and do not create a second event."
+      },
+      "productionReconciliation": {
+        "capturedAt": "2026-07-31T04:18:26.819Z",
+        "perspective": "published",
+        "routeIdentityMatchCount": 0,
+        "sequenceDateMatchCount": 0,
+        "fullCandidateMatchCount": 0,
+        "status": "confirmedMissingAtSupplementCheck"
+      },
+      "supplementDisposition": {
+        "evidenceStatus": "secondExplicitOrdinalLineageLocated",
+        "reviewStatus": "readyForIndependentReReview",
+        "chronologyApprovedBySupplementResearcher": false,
+        "publicationEligible": false,
+        "sanityMutationAllowed": false,
+        "productionIdCreationAllowed": false
+      }
+    }
+  ]
+}

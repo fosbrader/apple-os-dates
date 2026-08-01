@@ -1,0 +1,150 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios9-10-major",
+  "createdAt": "2026-07-31T03:19:15.769Z",
+  "createdBy": "codex-root",
+  "vendor": {
+    "name": "Apple",
+    "slug": "apple"
+  },
+  "researchCutoff": "2026-07-30",
+  "scopeRule": "Research and structure the missing public-beta appearances for the iOS 9.0 and iOS 10.0 major release cycles. Developer betas, golden masters, public releases, builds, and substantive change claims are out of scope except as chronology anchors.",
+  "targetCount": 10,
+  "cycles": [
+    {
+      "version": "9.0",
+      "targetCount": 3
+    },
+    {
+      "version": "10.0",
+      "targetCount": 7
+    }
+  ],
+  "targets": [
+    {
+      "candidateId": "candidate:apple:ios:9.0:public-beta-1",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "9.0",
+      "releaseVersionId": "version-ios-9-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "displayedLabel": "Public Beta 1",
+      "expectedAppearanceDate": "2015-07-09",
+      "expectedSequence": 1
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.0:public-beta-2",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "9.0",
+      "releaseVersionId": "version-ios-9-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "displayedLabel": "Public Beta 2",
+      "expectedAppearanceDate": "2015-07-22",
+      "expectedSequence": 2
+    },
+    {
+      "candidateId": "candidate:apple:ios:9.0:public-beta-3",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "9.0",
+      "releaseVersionId": "version-ios-9-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "displayedLabel": "Public Beta 3",
+      "expectedAppearanceDate": "2015-08-06",
+      "expectedSequence": 3
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-1",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-1",
+      "displayedLabel": "Public Beta 1",
+      "expectedAppearanceDate": "2016-07-07",
+      "expectedSequence": 1
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-2",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-2",
+      "displayedLabel": "Public Beta 2",
+      "expectedAppearanceDate": "2016-07-20",
+      "expectedSequence": 2
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-3",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-3",
+      "displayedLabel": "Public Beta 3",
+      "expectedAppearanceDate": "2016-08-02",
+      "expectedSequence": 3
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-4",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-4",
+      "displayedLabel": "Public Beta 4",
+      "expectedAppearanceDate": "2016-08-09",
+      "expectedSequence": 4
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-5",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-5",
+      "displayedLabel": "Public Beta 5",
+      "expectedAppearanceDate": "2016-08-15",
+      "expectedSequence": 5
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-6",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-6",
+      "displayedLabel": "Public Beta 6",
+      "expectedAppearanceDate": "2016-08-19",
+      "expectedSequence": 6
+    },
+    {
+      "candidateId": "candidate:apple:ios:10.0:public-beta-7",
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "version": "10.0",
+      "releaseVersionId": "version-ios-10-0",
+      "channel": "publicBeta",
+      "routeAlias": "public-beta-7",
+      "displayedLabel": "Public Beta 7",
+      "expectedAppearanceDate": "2016-08-26",
+      "expectedSequence": 7
+    }
+  ],
+  "safety": {
+    "productionMutationAllowed": false,
+    "sanityWriteAllowed": false,
+    "deploymentAllowed": false
+  }
+}

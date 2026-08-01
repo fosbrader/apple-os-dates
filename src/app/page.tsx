@@ -1,13 +1,11 @@
 import Link from "next/link";
+import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
+import { appleReleaseDatasetId } from "@/lib/structured-data";
 import {
   getAllPlatforms,
-  getActiveBetas,
-  getRecentReleases,
   getAnalyticsData,
+  getRecentReleases,
 } from "@/lib/sanity.fetch";
-import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
-import { buildReleaseForecasts } from "@/lib/forecasts";
-import { daysBetween, formatDate, timeAgo } from "@/lib/utils";
 import {
   absoluteUrl,
   createPageMetadata,
@@ -15,80 +13,62 @@ import {
   siteDescription,
   siteHost,
   siteName,
+  siteXUrl,
 } from "@/lib/site";
+import {
+  applePlatformPath,
+  releaseVersionPath,
+} from "@/lib/release-routes";
+import { formatDate } from "@/lib/utils";
 
-const homeTitle = "Beta Cadence — Apple OS Beta Dates & Forecasts";
+const homeTitle =
+  "Version Record — Software Release History & Release Notes Archive";
+const homeDescription =
+  "Explore independent, source-backed software release histories, builds, beta timelines, release notes, citations, and corrections. Apple is the first catalog.";
 
 export const metadata = createPageMetadata({
   title: homeTitle,
-  description: siteDescription,
+  description: homeDescription,
   path: "/",
   absoluteTitle: true,
 });
 
+function yearFromDate(value: string | undefined): string | undefined {
+  return value?.slice(0, 4);
+}
+
 export default async function HomePage() {
-  const [platforms, activeBetas, recentReleases, allData] = await Promise.all([
+  const [platforms, recentReleases, allData] = await Promise.all([
     getAllPlatforms(),
-    getActiveBetas(),
     getRecentReleases(),
     getAnalyticsData(),
   ]);
-  const totalMilestones = allData.reduce(
+  const totalAppearances = allData.reduce(
     (sum, version) => sum + version.milestones.length,
     0,
   );
-  const milestoneDates = allData.flatMap((version) =>
+  const appearanceDates = allData.flatMap((version) =>
     version.milestones.map((milestone) => milestone.date),
   );
-  const firstMilestoneDate = milestoneDates.reduce<string | undefined>(
+  const firstAppearanceDate = appearanceDates.reduce<string | undefined>(
     (earliest, date) => (!earliest || date < earliest ? date : earliest),
     undefined,
   );
-  const lastMilestoneDate = latestDate(milestoneDates);
-  const dateModified = latestDate(allData.map((version) => version.updatedAt));
-  const latestActiveMilestoneDate = latestDate(
-    activeBetas.flatMap((version) =>
-      version.milestones.map((milestone) => milestone.date),
-    ),
-  );
-  const activeDataAgeDays = latestActiveMilestoneDate
-    ? daysBetween(
-        latestActiveMilestoneDate,
-        new Date().toISOString().slice(0, 10),
-      )
-    : null;
-  const activeDataIsStale =
-    activeDataAgeDays !== null && activeDataAgeDays > 60;
-  const nextMilestoneForecast = buildReleaseForecasts(allData).find(
-    (forecast) =>
-      forecast.status === "active" && forecast.nextMilestoneWindow,
-  );
-  const nextMilestoneWindow = nextMilestoneForecast?.nextMilestoneWindow;
-  const latestPublicReleaseDate = latestDate(
-    recentReleases.map((release) => release.publicReleaseDate),
-  );
-  const latestPublicReleases = latestPublicReleaseDate
-    ? recentReleases.filter(
-        (release) => release.publicReleaseDate === latestPublicReleaseDate,
-      )
-    : [];
-  const recentReleaseGroups = Array.from(
-    recentReleases
-      .reduce((groups, release) => {
-        const releaseDate = release.publicReleaseDate ?? "undated";
-        const releasesForDate = groups.get(releaseDate) ?? [];
-        releasesForDate.push(release);
-        groups.set(releaseDate, releasesForDate);
-        return groups;
-      }, new Map<string, typeof recentReleases>())
-      .entries(),
-  ).sort(([leftDate], [rightDate]) =>
-    rightDate.localeCompare(leftDate),
-  );
+  const lastAppearanceDate = latestDate(appearanceDates);
+  const firstCoverageYear = yearFromDate(firstAppearanceDate);
+  const lastCoverageYear = yearFromDate(lastAppearanceDate);
+  const coverageYears =
+    firstCoverageYear && lastCoverageYear
+      ? firstCoverageYear === lastCoverageYear
+        ? firstCoverageYear
+        : `${firstCoverageYear}–${lastCoverageYear}`
+      : "Growing";
+  const recentAppleReleases = recentReleases.slice(0, 4);
+
   const canonical = absoluteUrl("/");
   const websiteId = `${canonical}#website`;
   const organizationId = `${canonical}#organization`;
-  const datasetId = `${canonical}#release-dataset`;
+  const pageId = `${canonical}#archive`;
   const organizationLogo = absoluteUrl("/icons/icon-512.png");
   const structuredData: JsonLdValue = {
     "@context": "https://schema.org",
@@ -98,19 +78,27 @@ export default async function HomePage() {
         "@id": websiteId,
         url: canonical,
         name: siteName,
-        alternateName: ["BetaCadence", siteHost],
+        alternateName: ["VersionRecord", siteHost],
         description: siteDescription,
         inLanguage: "en-US",
         publisher: { "@id": organizationId },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: `${absoluteUrl("/search/")}?q={search_term_string}`,
+          },
+          "query-input": "required name=search_term_string",
+        },
       },
       {
         "@type": "Organization",
         "@id": organizationId,
         url: canonical,
         name: siteName,
-        alternateName: ["BetaCadence", siteHost],
+        alternateName: ["VersionRecord", siteHost],
         description:
-          "Independent Apple operating-system release-date index and history-based forecasting project.",
+          "Independent, source-backed archive of software releases, builds, changes, and historical release data.",
         logo: {
           "@type": "ImageObject",
           url: organizationLogo,
@@ -118,43 +106,23 @@ export default async function HomePage() {
           width: 512,
           height: 512,
         },
-        sameAs: ["https://github.com/fosbrader/apple-os-dates"],
+        sameAs: [
+          "https://github.com/fosbrader/apple-os-dates",
+          siteXUrl,
+        ],
       },
       {
-        "@type": "Dataset",
-        "@id": datasetId,
-        name: "Apple OS Release Date Dataset",
-        description:
-          "Historical beta, release candidate, and public release dates across Apple operating systems.",
+        "@type": "CollectionPage",
+        "@id": pageId,
         url: canonical,
+        name: homeTitle,
+        description: homeDescription,
         isPartOf: { "@id": websiteId },
-        creator: { "@id": organizationId },
-        publisher: { "@id": organizationId },
-        isAccessibleForFree: true,
-        dateModified,
-        temporalCoverage:
-          firstMilestoneDate && lastMilestoneDate
-            ? `${firstMilestoneDate}/${lastMilestoneDate}`
-            : undefined,
-        keywords: [
-          "Apple OS release dates",
-          "iOS beta dates",
-          "macOS beta dates",
-          "Apple release history",
-        ],
-        variableMeasured: [
-          "Operating system version",
-          "Release milestone",
-          "Release date",
-        ],
-        measurementTechnique:
-          "Release dates compiled from official release notes, public announcements, and documented contemporaneous sources.",
-        hasPart: platforms.map((platform) => ({
-          "@type": "Dataset",
-          name: `${platform.name} Release Dates`,
-          description: `Historical beta, release candidate, and public release dates for ${platform.name}.`,
-          url: absoluteUrl(`/${encodeURIComponent(platform.slug.current)}/`),
-        })),
+        mainEntity: { "@id": appleReleaseDatasetId() },
+        about: {
+          "@type": "Thing",
+          name: "Software release history and release notes",
+        },
       },
     ],
   };
@@ -162,362 +130,271 @@ export default async function HomePage() {
   return (
     <>
       <JsonLd id="home-structured-data" data={structuredData} />
-      <div className="home-index">
-        <header className="home-index__intro">
-          <div className="home-index__masthead">
-            <div className="home-index__title">
-              {latestPublicReleaseDate &&
-                latestPublicReleases.length > 0 && (
-                  <div
-                    className="home-index__latest"
-                    aria-label={`Latest public releases from ${formatDate(
-                      latestPublicReleaseDate,
-                    )}`}
-                  >
-                    <div className="home-index__latest-heading">
-                      <p className="index-label">Latest public releases</p>
-                      <time dateTime={latestPublicReleaseDate}>
-                        {formatDate(latestPublicReleaseDate)}
-                      </time>
-                    </div>
-                    <p className="home-index__latest-items">
-                      {latestPublicReleases.map((release) => {
-                        const platform = release.releaseTrain.platform;
-
-                        return (
-                          <Link
-                            key={release._id}
-                            href={`/${platform.slug.current}/${release.version}`}
-                          >
-                            <strong>{platform.name}</strong>{" "}
-                            <code>{release.version}</code>
-                          </Link>
-                        );
-                      })}
-                    </p>
-                  </div>
-                )}
-              <p className="index-label">Independent release index</p>
-              <h1>Apple OS beta and release dates</h1>
-            </div>
-            <div className="home-index__lead">
-              <p className="home-index__description">
-                A historical index of beta, release candidate, and public
-                release milestones for iOS, iPadOS, macOS, watchOS, tvOS, and
-                visionOS. Next-beta, release-candidate, and public-release
-                forecasts are based on comparable prior cycles and published
-                as ranges.
-              </p>
-              <p className="home-index__meta">
-                <span>
-                  <strong>{allData.length}</strong>
-                  <small>versions</small>
-                </span>
-                <span>
-                  <strong>{totalMilestones}</strong>
-                  <small>milestones</small>
-                </span>
-                <span>
-                  <strong>{activeBetas.length}</strong>
-                  <small>active cycles</small>
-                </span>
-                <span>
-                  <strong>
-                    {lastMilestoneDate ? formatDate(lastMilestoneDate) : "—"}
-                  </strong>
-                  <small>updated</small>
-                </span>
-              </p>
-              <nav
-                className="home-index__links"
-                aria-label="Release index links"
-              >
-                <Link href="/forecasts/">View forecasts</Link>
-                <Link href="/methodology/">Read the methodology</Link>
-              </nav>
-              <p className="home-index__disclaimer">
-                Independent; not affiliated with Apple Inc.
-              </p>
-            </div>
+      <div className="archive-home">
+        <header className="archive-home__hero">
+          <div className="archive-home__hero-title">
+            <p className="index-label">
+              Independent software release knowledge base
+            </p>
+            <h1>A source-backed history of software releases</h1>
           </div>
-
-          <div className="home-index__current">
-            {nextMilestoneForecast && nextMilestoneWindow ? (
-              <aside
-                className="next-forecast"
-                aria-labelledby="next-forecast-heading"
-              >
-                <div className="next-forecast__label">
-                  <p className="index-label">Next milestone forecast</p>
-                  <Link href="/forecasts/">
-                    All forecasts <span aria-hidden="true">→</span>
-                  </Link>
-                </div>
-                <div className="next-forecast__identity">
-                  <i
-                    aria-hidden="true"
-                    style={{
-                      background:
-                        nextMilestoneForecast.release.releaseTrain.platform
-                          .color,
-                    }}
-                  />
-                  <h2 id="next-forecast-heading">
-                    {
-                      nextMilestoneForecast.release.releaseTrain.platform
-                        .name
-                    }{" "}
-                    <code>{nextMilestoneForecast.release.version}</code>
-                  </h2>
-                </div>
-                <div className="next-forecast__estimate">
-                  <p className="next-forecast__target">
-                    {nextMilestoneWindow.likelyLabel}
-                  </p>
-                  <p
-                    className="next-forecast__range"
-                    aria-label={`Estimated ${nextMilestoneWindow.likelyLabel} release window from ${formatDate(
-                      nextMilestoneWindow.earliestDate,
-                    )} to ${formatDate(nextMilestoneWindow.latestDate)}`}
-                  >
-                    <time dateTime={nextMilestoneWindow.earliestDate}>
-                      {formatDate(nextMilestoneWindow.earliestDate)}
-                    </time>
-                    <span aria-hidden="true">–</span>
-                    <time dateTime={nextMilestoneWindow.latestDate}>
-                      {formatDate(nextMilestoneWindow.latestDate)}
-                    </time>
-                  </p>
-                </div>
-                <p className="next-forecast__evidence">
-                  Median {formatDate(nextMilestoneWindow.medianDate)}
-                  {" · "}
-                  {nextMilestoneWindow.sampleSize} comparable cycles
-                  {" · "}
-                  {nextMilestoneWindow.labelAgreement}% label agreement
-                </p>
-                <p className="next-forecast__basis">
-                  From the latest recorded{" "}
-                  {nextMilestoneForecast.latestMilestone?.label ??
-                    nextMilestoneForecast.stageLabel ??
-                    "milestone"}
-                  {nextMilestoneForecast.latestMilestone
-                    ? ` on ${formatDate(nextMilestoneForecast.latestMilestone.date)}`
-                    : ""}
-                  . Independent estimate, not an Apple announcement.
-                </p>
-              </aside>
-            ) : (
-              <aside className="next-forecast next-forecast--empty">
-                <p className="index-label">Next milestone forecast</p>
-                <p>
-                  No active next-milestone forecast currently meets the
-                  publication safeguards.{" "}
-                  <Link href="/forecasts/">View forecast status</Link>.
-                </p>
-              </aside>
-            )}
-
-            <section
-              className="cycle-snapshot"
-              aria-labelledby="active-cycles-heading"
-            >
-              <div className="cycle-snapshot__heading">
-                <div>
-                  <h2 id="active-cycles-heading">Active release cycles</h2>
-                  <p>Latest recorded milestones</p>
-                </div>
-              </div>
-
-              <div className="cycle-snapshot__grid">
-                {activeBetas.length > 0 ? (
-                  activeBetas.map((beta) => {
-                    const platform = beta.releaseTrain.platform;
-                    const latest =
-                      beta.milestones[beta.milestones.length - 1];
-
-                    return (
-                      <Link
-                        key={beta._id}
-                      href={`/${platform.slug.current}/${beta.version}`}
-                        className="cycle-snapshot__row"
-                      >
-                        <span className="cycle-snapshot__identity">
-                          <i
-                            aria-hidden="true"
-                            style={{ background: platform.color }}
-                          />
-                          <strong>{platform.name}</strong>
-                          <code>{beta.version}</code>
-                        </span>
-                        <span className="cycle-snapshot__milestone">
-                          <strong>{latest?.label ?? "Awaiting data"}</strong>
-                          <small>
-                            {latest && (
-                              <>
-                                <time dateTime={latest.date}>
-                                  {formatDate(latest.date)}
-                                </time>
-                                <span aria-hidden="true"> · </span>
-                              </>
-                            )}
-                            {latest ? timeAgo(latest.date) : "No date"}
-                            {" · "}
-                            {beta.milestones.length} milestones
-                          </small>
-                        </span>
-                      </Link>
-                    );
-                  })
-                ) : (
-                  <p className="cycle-snapshot__empty">
-                    No active release cycles are currently recorded.
-                  </p>
-                )}
-              </div>
-
-              {activeDataIsStale && latestActiveMilestoneDate && (
-                <p className="cycle-snapshot__stale">
-                  Latest active data: {formatDate(latestActiveMilestoneDate)}.{" "}
-                  <Link href="/contact/">Report an update</Link>.
-                </p>
-              )}
-            </section>
+          <div className="archive-home__hero-copy">
+            <p className="archive-home__lede">
+              Version Record documents when software shipped, what changed,
+              and which sources support the record. It connects major versions,
+              point releases, betas, builds, release notes, community-found
+              changes, and corrections in one navigable history.
+            </p>
+            <p className="archive-home__scope">
+              Apple software is the first catalog. Other software ecosystems
+              can follow as their records can be sourced and maintained to the
+              same standard.
+            </p>
+            <div className="archive-home__actions">
+              <Link className="button button--primary" href="/apple/">
+                Explore Apple releases
+                <span aria-hidden="true">→</span>
+              </Link>
+              <Link className="button button--secondary" href="/sources/">
+                How the archive is sourced
+              </Link>
+            </div>
           </div>
         </header>
 
-        <section className="index-section index-section--releases">
-          <div className="index-section__heading">
-            <div>
-              <h2>Recent public releases</h2>
-              <p>
-                The newest public releases and their recorded milestone
-                histories.
-              </p>
-            </div>
+        <section
+          className="archive-home__model"
+          aria-labelledby="record-model-heading"
+        >
+          <div className="archive-home__section-intro">
+            <p className="index-label">More than a date tracker</p>
+            <h2 id="record-model-heading">One record, from version to evidence</h2>
+            <p>
+              The archive is organized like a reference work, so a release can
+              be understood at a glance and investigated in detail.
+            </p>
           </div>
-          <div className="release-cohorts">
-            {recentReleaseGroups.map(([releaseDate, releases], groupIndex) => (
-              <section
-                key={releaseDate}
-                className="release-cohort"
-                aria-labelledby={`release-cohort-${groupIndex}`}
-              >
-                <header className="release-cohort__heading">
-                  <h3 id={`release-cohort-${groupIndex}`}>
-                    <time
-                      dateTime={
-                        releaseDate === "undated" ? undefined : releaseDate
-                      }
-                    >
-                      {releaseDate === "undated"
-                        ? "Date not recorded"
-                        : formatDate(releaseDate)}
-                    </time>
-                  </h3>
-                  <span>
-                    {releases.length}{" "}
-                    {releases.length === 1 ? "release" : "releases"}
-                  </span>
-                </header>
-                <div className="release-cohort__items">
-                  {releases.map((release) => {
-                    const platform = release.releaseTrain.platform;
-
-                    return (
-                      <Link
-                        key={release._id}
-                        href={`/${platform.slug.current}/${release.version}`}
-                        className="release-cohort__item"
-                      >
-                        <span className="release-identity">
-                          <span
-                            className="release-identity__dot"
-                            style={{ background: platform.color }}
-                          />
-                          <span>
-                            <strong>{platform.name}</strong>
-                            <code>{release.version}</code>
-                          </span>
-                        </span>
-                        <span
-                          className="release-cohort__arrow"
-                          aria-hidden="true"
-                        >
-                          ↗
-                        </span>
-                        <span className="release-cohort__meta">
-                          {release.milestoneCount}{" "}
-                          {release.milestoneCount === 1
-                            ? "milestone"
-                            : "milestones"}
-                        </span>
-                        {release.versionNote && (
-                          <p className="release-cohort__note">
-                            {release.versionNote}
-                          </p>
-                        )}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </section>
-            ))}
-          </div>
+          <ol className="record-model">
+            <li>
+              <span>01</span>
+              <div>
+                <h3>Version history</h3>
+                <p>
+                  Follow a major release through point updates, release
+                  candidates, public launches, and individual beta appearances.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h3>Release knowledge</h3>
+                <p>
+                  Bring official notes together with attributed reporting,
+                  community-documented features, builds, fixes, and
+                  undocumented changes.
+                </p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h3>Visible evidence</h3>
+                <p>
+                  Citations stay attached to the claims they support. Source
+                  details, evidence state, editorial review, and corrections
+                  remain visible.
+                </p>
+              </div>
+            </li>
+          </ol>
         </section>
 
-        <section className="index-section index-section--platforms">
+        <section
+          className="catalog-index"
+          aria-labelledby="catalog-index-heading"
+        >
           <div className="index-section__heading">
             <div>
-              <h2>Browse by platform</h2>
-              <p>Open the complete version history for each operating system.</p>
+              <p className="index-label">Available catalogs</p>
+              <h2 id="catalog-index-heading">Start with Apple software</h2>
             </div>
+            <p>
+              Coverage currently focuses on Apple operating systems. This
+              dedicated catalog is the gateway to every platform, version,
+              appearance, and build in the archive.
+            </p>
           </div>
-          <div className="platform-directory">
-            {platforms.map((platform) => {
-              const versionCount = allData.filter(
-                (version) =>
-                  version.releaseTrain.platform.slug.current ===
-                  platform.slug.current,
-              ).length;
 
-              return (
-                <Link
-                  key={platform._id}
-                  href={`/${platform.slug.current}/`}
-                  className="platform-directory__row"
-                >
-                  <span>
+          <article className="catalog-feature">
+            <div className="catalog-feature__summary">
+              <div className="catalog-feature__eyebrow">
+                <span>Catalog 01</span>
+                <span>Available now</span>
+              </div>
+              <div>
+                <h3>Apple software releases</h3>
+                <p>
+                  Browse the independent history of iOS, iPadOS, macOS,
+                  watchOS, tvOS, and visionOS—from major release families down
+                  to individual beta and public-release records.
+                </p>
+              </div>
+              <div className="catalog-feature__platforms" aria-label="Apple platforms">
+                {platforms.map((platform) => (
+                  <Link
+                    href={applePlatformPath(platform.slug.current)}
+                    key={platform._id}
+                  >
                     <i
                       aria-hidden="true"
                       style={{ background: platform.color }}
                     />
-                    <strong>{platform.name}</strong>
-                  </span>
-                  <span>{versionCount} versions</span>
-                </Link>
-              );
-            })}
+                    {platform.name}
+                  </Link>
+                ))}
+              </div>
+              <Link className="button button--primary" href="/apple/">
+                Explore the Apple software release archive
+                <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+
+            <div className="catalog-feature__record">
+              <dl className="catalog-feature__metrics">
+                <div>
+                  <dt>Platforms</dt>
+                  <dd>{platforms.length.toLocaleString()}</dd>
+                </div>
+                <div>
+                  <dt>Apple versions</dt>
+                  <dd>{allData.length.toLocaleString()}</dd>
+                </div>
+                <div>
+                  <dt>Recorded appearances</dt>
+                  <dd>{totalAppearances.toLocaleString()}</dd>
+                </div>
+                <div>
+                  <dt>Archive span</dt>
+                  <dd>{coverageYears}</dd>
+                </div>
+              </dl>
+
+              {recentAppleReleases.length > 0 ? (
+                <div className="catalog-feature__recent">
+                  <div className="catalog-feature__recent-heading">
+                    <p className="index-label">Latest public records</p>
+                    <Link href="/apple/">
+                      All Apple releases <span aria-hidden="true">→</span>
+                    </Link>
+                  </div>
+                  <ul>
+                    {recentAppleReleases.map((release) => {
+                      const platform = release.releaseTrain.platform;
+
+                      return (
+                        <li key={release._id}>
+                          <Link
+                            href={releaseVersionPath(
+                              platform.slug.current,
+                              release.version,
+                            )}
+                          >
+                            <span>
+                              <i
+                                aria-hidden="true"
+                                style={{ background: platform.color }}
+                              />
+                              <strong>{platform.name}</strong>
+                              <code>{release.version}</code>
+                            </span>
+                            <time dateTime={release.publicReleaseDate}>
+                              {release.publicReleaseDate
+                                ? formatDate(release.publicReleaseDate)
+                                : "Date pending"}
+                            </time>
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ) : null}
+            </div>
+          </article>
+        </section>
+
+        <section
+          className="archive-home__principles"
+          aria-labelledby="archive-principles-heading"
+        >
+          <div className="archive-home__section-intro">
+            <p className="index-label">Editorial foundation</p>
+            <h2 id="archive-principles-heading">
+              A historical archive, not a press feed
+            </h2>
+            <p>
+              The goal is durable context: what was known, where it came from,
+              and how the record changed over time.
+            </p>
+          </div>
+          <div className="archive-principles">
+            <article>
+              <h3>Sources travel with the claim</h3>
+              <p>
+                Original reporting is credited and linked. Summaries are
+                written to preserve facts and context without republishing
+                another publisher&apos;s work.
+              </p>
+              <Link href="/sources/">
+                Read the sourcing policy <span aria-hidden="true">→</span>
+              </Link>
+            </article>
+            <article>
+              <h3>Facts and forecasts stay separate</h3>
+              <p>
+                Recorded history is presented as history. Estimates are
+                explicitly labeled, show their evidence, and never masquerade
+                as a vendor announcement.
+              </p>
+              <Link href="/methodology/">
+                Review the methodology <span aria-hidden="true">→</span>
+              </Link>
+            </article>
+            <article>
+              <h3>The record can be corrected</h3>
+              <p>
+                Conflicting sources and later discoveries are part of the
+                archive. Published corrections make substantive changes
+                inspectable instead of silently overwriting history.
+              </p>
+              <Link href="/corrections/">
+                View corrections <span aria-hidden="true">→</span>
+              </Link>
+            </article>
           </div>
         </section>
 
-        <section className="forecast-note">
-          <p className="index-label">About the forecasts</p>
+        <nav className="archive-home__explore" aria-label="Explore Version Record">
           <div>
-            <h2>History-based release ranges</h2>
-            <p>
-              Release forecasts summarize outcomes from comparable historical
-              beta cycles. Each forecast includes its date range, median,
-              sample size, confidence assessment, and prior-only backtest
-              result. Forecasts are independent estimates, not Apple
-              announcements.
-            </p>
-            <p className="forecast-note__links">
-              <Link href="/forecasts/">View forecasts</Link>
-              <Link href="/methodology/">Read the methodology</Link>
-            </p>
+            <p className="index-label">Research the archive</p>
+            <h2>Find a release from any angle</h2>
           </div>
-        </section>
+          <div className="archive-home__explore-links">
+            <Link href="/search/">
+              <strong>Search records</strong>
+              <span>Versions, betas, builds, changes, and publishers</span>
+            </Link>
+            <Link href="/timeline/">
+              <strong>Browse the timeline</strong>
+              <span>Compare release appearances across the current catalog</span>
+            </Link>
+            <Link href="/forecasts/">
+              <strong>View forecasts</strong>
+              <span>History-based estimates kept separate from the record</span>
+            </Link>
+          </div>
+        </nav>
       </div>
     </>
   );

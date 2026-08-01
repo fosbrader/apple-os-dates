@@ -1,0 +1,43 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios-major-12-18",
+  "validatedAt": "2026-07-31T05:07:02.603Z",
+  "validator": "research-handoffs/beta-chronology-gap/ios-major-12-18/validate-packet.mjs",
+  "status": "passed",
+  "errorCount": 0,
+  "warningCount": 0,
+  "checks": {
+    "sharedCandidateRegisterSchemaValid": true,
+    "observedAppearanceCount": 49,
+    "candidateCount": 46,
+    "exactExistingMatchCount": 3,
+    "notProposedCount": 9,
+    "candidatesByVersion": {
+      "12.0": 10,
+      "13.0": 7,
+      "14.0": 7,
+      "15.0": 6,
+      "16.0": 5,
+      "17.0": 5,
+      "18.0": 6
+    },
+    "sources": {
+      "attempted": 66,
+      "captured": 66,
+      "reused": 49,
+      "fresh": 17,
+      "failed": 0
+    },
+    "conflictCount": 14
+  },
+  "errors": [],
+  "warnings": [],
+  "authorization": {
+    "independentChronologyReviewComplete": false,
+    "sanityMutationAllowed": false,
+    "stableEventIdCreationAllowed": false,
+    "pageWorkAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-2014-2019",
+  "validatedAt": "2026-07-31T03:58:47.603Z",
+  "status": "passedSelfCheckPendingIndependentReview",
+  "independentReviewComplete": false,
+  "checks": {
+    "packetJsonParsed": 7,
+    "candidateCount": 45,
+    "notProposedCount": 3,
+    "sourceCount": 83,
+    "conflictCount": 9,
+    "candidatesByVersion": {
+      "10.10": 6,
+      "10.11": 5,
+      "10.12": 7,
+      "10.13": 8,
+      "10.14": 10,
+      "10.15": 9
+    },
+    "candidatesByEvidenceState": {
+      "corroborated": 39,
+      "reported": 6
+    },
+    "candidatesByIdentityStatus": {
+      "confirmed": 38,
+      "conflict": 1,
+      "unverified": 6
+    },
+    "sharedCandidateSchemaValid": true,
+    "catalinaPublicBeta5CorrectionVerified": true,
+    "assignmentTargetsResolved": 45,
+    "evidenceReferencesResolved": 94,
+    "exceptionRecordsPreserved": 3,
+    "productionSnapshotReadOnly": true,
+    "independentReviewArtifactPreserved": true,
+    "independentReviewStillRequired": true,
+    "rawSourceFilesVerified": 77,
+    "webOnlySourcesVerified": 6,
+    "packetFilesLocked": 10
+  },
+  "counts": {
+    "candidates": 45,
+    "notProposed": 3,
+    "sources": 83,
+    "rawSources": 77,
+    "webOnlySources": 6,
+    "conflicts": 9,
+    "independentChronologyApproved": 37,
+    "independentCorrectionApplied": 1,
+    "readyForIndependentChronologyReview": 38,
+    "needsAdditionalEvidenceOrModeling": 7
+  },
+  "blockers": [
+    "The independent review is partial: 37 candidates were approved, its Catalina Public Beta 5 correction is now applied, and seven candidates remain blocked by evidence or modeling issues.",
+    "OS X 10.9.3 has an unnumbered public Beta Seed identity and no production releaseVersion parent.",
+    "El Capitan Public Beta 5 was withdrawn and reappeared under the same displayed identity, with an August 19/20 source-date conflict.",
+    "Six late-cycle candidates remain reported pending stronger independent editorial corroboration."
+  ],
+  "fileLocks": [
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/assignment.json",
+      "bytes": 20821,
+      "sha256": "741eb02809c4b857edba43698257cfb937fa158105020195e2f66cc0dcc7e338"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/sources.json",
+      "bytes": 111084,
+      "sha256": "e3bbac9443978c319266d70a36e007e06adf91238ad45c8546eabd28f721af8c"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/candidates.json",
+      "bytes": 126738,
+      "sha256": "578cf98833b8e3441f9b7432a46dd0e2fd9ca08e0f52cb3db9d4fbee0e75dc08"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/conflicts.json",
+      "bytes": 6251,
+      "sha256": "c78addc3096f0c9978e443d37a9a628f982cf159ccf6c2e418e79ee225b80e59"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/production-snapshot.json",
+      "bytes": 1138,
+      "sha256": "729b1a6c055b74ae4e5a546bb48a6f9ad63026ad63c68175f146e39369b9f943"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/review.json",
+      "bytes": 3658,
+      "sha256": "9af5c1a6835fe4c8a85af7d2eaf891bfb22443e73577f7cd0108cbbeb775a59f"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/independent-review.json",
+      "bytes": 8447,
+      "sha256": "f06cf803e2add0db6227005a2fee2fae97bd3abd5f5d47b980edb3863cd63e59"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/report.md",
+      "bytes": 8281,
+      "sha256": "390fb6619da0c0b4eaa5f9bab273216833c0fc4437a0c45aa67d253850ede0a5"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/build-packet.mjs",
+      "bytes": 49044,
+      "sha256": "1e0dd488d455989b26ded89380ac5e7a7ef91d6ca280d9f472be153fad06f32a"
+    },
+    {
+      "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/query-production.ts",
+      "bytes": 2175,
+      "sha256": "b24555812dcc82713c9f3da81c072c82a66d7a83dadd21982faec727a5824a74"
+    }
+  ],
+  "safety": {
+    "sanityMutationPerformed": false,
+    "sanityMutationAllowed": false,
+    "publicationEligible": false,
+    "deploymentAllowed": false
+  },
+  "errors": []
+}

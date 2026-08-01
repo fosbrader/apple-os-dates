@@ -1,0 +1,84 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-tvos-major-11-26",
+  "createdAt": "2026-07-31T03:03:34.000Z",
+  "createdBy": "codex-review-ios9-public-betas",
+  "vendor": {
+    "name": "Apple",
+    "slug": "apple"
+  },
+  "researchCutoff": "2026-07-30",
+  "scopeRule": "Research every explicitly evidenced Apple Beta Software Program appearance for tvOS 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, and 26.0. Preserve publisher-displayed public ordinals; do not infer from developer numbering or builds. Exclude developer/private-only seeds, GM/RC, final public releases, tvOS 27, and point/patch cycles.",
+  "targetCount": 60,
+  "notProposedCount": 7,
+  "cycles": [
+    {
+      "version": "11.0",
+      "releaseVersionId": "version-tvos-11-0",
+      "targetCount": 9,
+      "productionPublicBetaCount": 0
+    },
+    {
+      "version": "12.0",
+      "releaseVersionId": "version-tvos-12-0",
+      "targetCount": 8,
+      "productionPublicBetaCount": 0
+    },
+    {
+      "version": "13.0",
+      "releaseVersionId": "version-tvos-13-0",
+      "targetCount": 6,
+      "productionPublicBetaCount": 0
+    },
+    {
+      "version": "14.0",
+      "releaseVersionId": "version-tvos-14-0",
+      "targetCount": 7,
+      "productionPublicBetaCount": 0
+    },
+    {
+      "version": "15.0",
+      "releaseVersionId": "version-tvos-15-0",
+      "targetCount": 7,
+      "productionPublicBetaCount": 0
+    },
+    {
+      "version": "16.0",
+      "releaseVersionId": "version-tvos-16-0",
+      "targetCount": 5,
+      "productionPublicBetaCount": 0
+    },
+    {
+      "version": "17.0",
+      "releaseVersionId": "version-tvos-17-0",
+      "targetCount": 6,
+      "productionPublicBetaCount": 0
+    },
+    {
+      "version": "18.0",
+      "releaseVersionId": "version-tvos-18-0",
+      "targetCount": 6,
+      "productionPublicBetaCount": 0
+    },
+    {
+      "version": "26.0",
+      "releaseVersionId": "version-tvos-26-0",
+      "targetCount": 6,
+      "productionPublicBetaCount": 0
+    }
+  ],
+  "evidenceRequirements": {
+    "preferredLineages": 2,
+    "publicOrdinalMustBeExplicit": true,
+    "developerOrdinalInferenceAllowed": false,
+    "buildInferenceAllowed": false,
+    "copyrightHandling": "Store source metadata, hashes and pinpoint locators; paraphrase findings and avoid reproducing article text."
+  },
+  "safety": {
+    "sanityMutationAllowed": false,
+    "publicationAuthorized": false,
+    "stableEventIdCreationAllowed": false,
+    "deploymentAllowed": false
+  },
+  "productionSnapshot": "research-handoffs/beta-chronology-gap/tvos-major-11-26/production-snapshot.json"
+}

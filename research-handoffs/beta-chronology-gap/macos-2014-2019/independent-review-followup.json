@@ -1,0 +1,45 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-macos-2014-2019",
+  "reviewedAt": "2026-07-30",
+  "reviewer": "codex-root-independent-review",
+  "independentOfResearcher": true,
+  "reviewedReviewArtifact": {
+    "path": "research-handoffs/beta-chronology-gap/macos-2014-2019/independent-review.json",
+    "sha256": "f06cf803e2add0db6227005a2fee2fae97bd3abd5f5d47b980edb3863cd63e59"
+  },
+  "verdict": "requiredCorrectionVerified",
+  "candidateVerdict": {
+    "chronologyApproved": [
+      "candidate:apple:macos:10.15:public-beta-5"
+    ],
+    "stillBlocked": []
+  },
+  "checks": {
+    "candidateAppearanceDate": "2019-08-19",
+    "assignmentAppearanceDate": "2019-08-19",
+    "candidateAndAssignmentAgree": true,
+    "pacificDateConventionApplied": true,
+    "sourceLocatorsCorrected": true,
+    "dedicatedConflictRecordPresent": true,
+    "packetValidationPassed": true,
+    "rawEvidenceHashesReproducedByPacketValidator": 77,
+    "rawEvidenceHashFailures": 0,
+    "originalIndependentReviewPreserved": true,
+    "sanityMutationPerformed": false,
+    "deploymentPerformed": false
+  },
+  "decision": {
+    "candidateId": "candidate:apple:macos:10.15:public-beta-5",
+    "disposition": "chronologyApprovedWithQualification",
+    "finding": "The researcher applied the independent review's required correction. MacRumors records Catalina Public Beta 5 availability on August 19 Pacific, and iCulture's August 20 08:32 CEST entry converts to August 19 23:32 PDT.",
+    "requiredQualification": "Use 2019-08-19 under the packet's America/Los_Angeles convention. Preserve August 20 as the European local date, not as a second appearance."
+  },
+  "authorization": {
+    "additionalChronologyApprovedCandidateCount": 1,
+    "publicationEligible": false,
+    "sanityMutationAllowed": false,
+    "deploymentAllowed": false,
+    "preWriteRequirement": "Repeat the exact published-production reconciliation immediately before any separately authorized write."
+  }
+}

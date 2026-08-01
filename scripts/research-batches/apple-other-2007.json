@@ -1,0 +1,967 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/104190",
+      "title": "Apple security updates (25-Jan-2005 to 21-Dec-2007)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Apple software",
+        "2007",
+        "release dates",
+        "security updates",
+        "archive completeness"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+      "title": "Apple Unveils Near Final Mac OS X Leopard",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2007-06-11T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Leopard",
+        "10.5",
+        "near-final preview",
+        "features",
+        "developer tools"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+      "title": "Apple to Ship Mac OS X Leopard on October 26",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2007-10-16T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Leopard",
+        "10.5",
+        "public availability",
+        "features",
+        "compatibility"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2007/10/30Apple-Sells-Two-Million-Copies-of-Mac-OS-X-Leopard-in-First-Weekend/",
+      "title": "Apple Sells Two Million Copies of Mac OS X Leopard in First Weekend",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2007-10-30T00:00:00.000Z",
+      "topics": [
+        "Mac OS X",
+        "Leopard",
+        "10.5",
+        "first-weekend sales",
+        "vendor-reported adoption"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/112593",
+      "title": "Mac OS X 10.5 - Technical Specifications",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Mac OS X",
+        "Leopard",
+        "10.5",
+        "system requirements",
+        "included software",
+        "developer technologies"
+      ]
+    },
+    {
+      "url": "https://cdsassets.apple.com/live/6GJYWVAV/misc/ma348_leopard_install-setup.pdf",
+      "title": "Mac OS X 10.5 Leopard Installation and Setup Guide",
+      "publisher": "Apple",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Mac OS X",
+        "Leopard",
+        "10.5",
+        "installation",
+        "setup",
+        "migration"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/102685",
+      "title": "About the security content of the Mac OS X 10.5.1 Update (client and server)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Mac OS X",
+        "Leopard",
+        "10.5.1",
+        "security",
+        "later-version boundary"
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-10-5",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "Mac OS X Leopard 10.5 went on sale on October 26, 2007. The release joined a redesigned desktop and Finder with Stacks, Quick Look, Spaces, Time Machine, remote file access, new Mail and iChat workflows, refreshed bundled applications, a dual-architecture platform baseline, and a revised developer toolchain.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+                "locator": "October 26 availability and launch feature descriptions"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112593",
+                "locator": "Applications, technologies, and development lists"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Development and release"
+          },
+          {
+            "text": "Apple presented a near-final Leopard build on June 11 with an October target. Its October 16 announcement set public sales for Friday, October 26 at 6:00 p.m. through Apple retail stores and authorized resellers, while accepting online pre-orders before release.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+                "locator": "June 11 near-final status and October target"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+                "locator": "October 16 announcement and October 26 availability"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Desktop, files, and recovery"
+          },
+          {
+            "text": "Stacks and a more consistent window design reshaped the desktop, while Finder added Cover Flow, a redesigned sidebar, network browsing and search, and Back to My Mac. Quick Look reduced the need to open files just to inspect them; Spaces separated work into multiple desktops; and Time Machine added automated history plus file and full-system recovery.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+                "locator": "Desktop through Time Machine paragraphs"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112593",
+                "locator": "Time Machine and screen-sharing requirements"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Communication and bundled applications"
+          },
+          {
+            "text": "Mail gained stationery, Notes, To Dos, data detectors, and RSS. iChat added presentations, screen sharing, and effects. Parental Controls, Boot Camp, Web Clip, Photo Booth, Dictionary, iCal, and Front Row broadened the rest of the client release.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+                "locator": "Mail, iChat, and other new features"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Platform and developer technology"
+          },
+          {
+            "text": "Apple documented 64-bit application support alongside 32-bit software, Core Animation, and a final developer suite that included Xcode 3, Interface Builder 3, Instruments, Dashcode, and DTrace. These entries describe Apple's shipped platform record; they do not adopt the near-final Xray product name where the final technical specification instead lists Instruments.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+                "locator": "Processor technologies and development tools"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112593",
+                "locator": "Key Technologies and Development"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Installation and compatibility"
+          },
+          {
+            "text": "The single-user US retail price was $129. Apple's final specification supports listed Intel and PowerPC Macs with at least 512MB of memory, a DVD drive, and 9GB of free storage. The included guide describes upgrade, Archive and Install, and Erase and Install workflows from the installation disc.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+                "locator": "Pricing & Availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112593",
+                "locator": "General requirements and What's in the Box"
+              },
+              {
+                "url": "https://cdsassets.apple.com/live/6GJYWVAV/misc/ma348_leopard_install-setup.pdf",
+                "locator": "Pages 4–8; installation workflows"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Early sales"
+          },
+          {
+            "text": "On October 30, Apple reported more than two million Leopard copies sold or delivered under maintenance agreements during the first weekend, including retail, reseller, online, maintenance, and new-Mac channels. This is an Apple-supplied shipment and sales claim, retained as launch-history context rather than an independently audited adoption measure.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/30Apple-Sells-Two-Million-Copies-of-Mac-OS-X-Leopard-in-First-Weekend/",
+                "locator": "October 30 first-weekend sales report"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "This article records the initial 10.5 public package only. Apple's archived security chronology contains no initial Leopard 10.5 entry and separately lists 10.5.1 on November 15. The retained 10.5.1 advisory describes later firewall repairs, so none are projected back to October 26. June-only claims that final sources do not confirm—including Time Machine backup to an AirPort Extreme attached disk—are excluded, and no undocumented behavior or build number is inferred.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+                "locator": "June near-final Time Machine description"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+                "locator": "October public Time Machine description and footnote"
+              },
+              {
+                "url": "https://support.apple.com/en-us/104190",
+                "locator": "Mac OS X 10.5.1 — 15 Nov 2007"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102685",
+                "locator": "Mac OS X v10.5.1 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+          "locator": "June 11, 2007"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+          "locator": "October 26, 2007 availability"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2007/10/30Apple-Sells-Two-Million-Copies-of-Mac-OS-X-Leopard-in-First-Weekend/",
+          "locator": "October 30, 2007"
+        },
+        {
+          "url": "https://support.apple.com/en-us/112593",
+          "locator": "Mac OS X 10.5 final technical specifications"
+        },
+        {
+          "url": "https://cdsassets.apple.com/live/6GJYWVAV/misc/ma348_leopard_install-setup.pdf",
+          "locator": "October 2007 installation guide"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104190",
+          "locator": "2007 security chronology"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102685",
+          "locator": "Mac OS X v10.5.1 later-version boundary"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:02:26Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-macos-10-5",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Mac OS X Leopard 10.5 reached the public channel on October 26, 2007 with a redesigned desktop and Finder, Time Machine, Quick Look, Spaces, expanded communications and bundled apps, new platform technologies, and broad PowerPC and Intel support.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple announced that Leopard would go on sale at 6:00 p.m. on October 26, 2007 through its retail stores and authorized resellers. The launch package used an installation DVD and retained a hardware baseline spanning supported PowerPC G4, PowerPC G5, and Intel Macs.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+                "locator": "October 26 availability and system requirements"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112593",
+                "locator": "General requirements and What's in the Box"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What this page records"
+          },
+          {
+            "text": "The structured entries synthesize twenty-five confirmed parts of the public package across the Dock and desktop, Finder and remote access, preview and workspace management, backup and restore, Mail and iChat, family and bundled applications, platform technology, developer tools, and installation compatibility.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+                "locator": "Launch feature descriptions"
+              },
+              {
+                "url": "https://support.apple.com/en-us/112593",
+                "locator": "Applications, technologies, and development lists"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Release and installation context"
+          },
+          {
+            "text": "The retail release was sold as a single-user or family license rather than a phased software rollout. Apple's setup guide documents upgrade, archival, and erase-and-install paths from the same Leopard installation media.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+                "locator": "Pricing & Availability"
+              },
+              {
+                "url": "https://cdsassets.apple.com/live/6GJYWVAV/misc/ma348_leopard_install-setup.pdf",
+                "locator": "Pages 4–8; installation choices"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Security and point-release boundary"
+          },
+          {
+            "text": "Apple's retained 2005–2007 security index does not list the initial 10.5 release. It separately dates Mac OS X 10.5.1 to November 15, and the retained 10.5.1 advisory records application-firewall corrections for 10.5 systems. Because the local catalog has no 10.5.1 route, this event includes no structured initial-security fixes and does not merge the later update.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/104190",
+                "locator": "Mac OS X 10.5.1 — 15 Nov 2007"
+              },
+              {
+                "url": "https://support.apple.com/en-us/102685",
+                "locator": "Mac OS X v10.5.1 security content"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Reporting boundary"
+          },
+          {
+            "text": "Apple's October 30 statement supplies the first-weekend figure. The page labels it as Apple's report, preserves that its count combined sales and maintenance deliveries, and does not convert it into an independent market-share conclusion.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2007/10/30Apple-Sells-Two-Million-Copies-of-Mac-OS-X-Leopard-in-First-Weekend/",
+                "locator": "First-weekend sales and channel definitions"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+          "locator": "June 11, 2007"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+          "locator": "October 26, 2007 availability"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2007/10/30Apple-Sells-Two-Million-Copies-of-Mac-OS-X-Leopard-in-First-Weekend/",
+          "locator": "October 30, 2007"
+        },
+        {
+          "url": "https://support.apple.com/en-us/112593",
+          "locator": "Mac OS X 10.5 final technical specifications"
+        },
+        {
+          "url": "https://cdsassets.apple.com/live/6GJYWVAV/misc/ma348_leopard_install-setup.pdf",
+          "locator": "October 2007 installation guide"
+        },
+        {
+          "url": "https://support.apple.com/en-us/104190",
+          "locator": "2007 security chronology"
+        },
+        {
+          "url": "https://support.apple.com/en-us/102685",
+          "locator": "Mac OS X v10.5.1 later-version boundary"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-10-5-dock-stacks",
+          "title": "Dock Stacks",
+          "canonicalSummary": "Leopard added Stacks to the Dock for compact access to folders, documents, applications, and downloads.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Stacks exposed a folder's contents directly from the Dock and automatically gave common downloads a dedicated location, while allowing users to create additional stacks for frequently used material.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "New desktop and Dock; Stacks"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Dock and Stacks paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-unified-desktop-design",
+          "title": "Unified desktop design",
+          "canonicalSummary": "Leopard gave application windows a more consistent visual treatment and made active windows more distinct.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The public release applied a common window theme across applications and used stronger visual emphasis to distinguish the focused window.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Desktop visual-design paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-finder-cover-flow-sidebar",
+          "title": "Finder Cover Flow and redesigned sidebar",
+          "canonicalSummary": "Finder gained Cover Flow browsing and a reorganized sidebar for local and shared locations.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The redesigned file browser added a visual way to move through files and applications while simplifying access to folders and computers exposed on a local network.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Updated Finder paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Finder and sidebar paragraphs"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-finder-network-search-sharing",
+          "title": "Finder network search and sharing",
+          "canonicalSummary": "Finder could browse, search, copy from, and share with supported Macs and PCs on a local network.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Leopard brought shared computers into the main Finder workflow and extended Spotlight and drag-and-drop operations to supported network content.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Updated Finder network paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-back-to-my-mac",
+          "title": "Back to My Mac",
+          "canonicalSummary": "Back to My Mac let eligible .Mac members browse and reach files on their remote Macs over the internet.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The service extended Finder-style access beyond the local network for users with the required .Mac membership and compatible remote setup.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Finder paragraph; Back to My Mac"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Finder paragraph; Back to My Mac"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-quick-look",
+          "title": "Quick Look",
+          "canonicalSummary": "Quick Look previewed supported documents and media without launching their creating applications.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Leopard added high-resolution and full-screen previews from Finder so users could inspect many files, including playable media, before opening an editor or viewer.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Quick Look paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Finder and Quick Look paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-spaces",
+          "title": "Spaces",
+          "canonicalSummary": "Spaces introduced multiple customized desktops for grouping applications and documents by activity.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Users could separate projects into distinct workspaces and switch among them with mouse or keyboard controls rather than keeping every window in one desktop.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Spaces paragraph"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Other new features; Spaces"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-time-machine",
+          "title": "Time Machine",
+          "canonicalSummary": "Time Machine automated backup history and restored individual items or an entire Mac from an external drive.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Leopard added one-click backup setup, maintained an up-to-date history on additional storage, and provided search-and-restore workflows for deleted data plus full-system recovery.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Time Machine paragraphs and external-drive footnote"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112593",
+              "locator": "Feature-specific requirements; Time Machine"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-mail-stationery",
+          "title": "Mail stationery",
+          "canonicalSummary": "Mail added more than thirty stationery designs for formatted messages viewable on Mac and Windows systems.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The updated client provided reusable visual layouts for composing graphic-rich email while retaining cross-platform viewing as an explicit launch goal.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Mail paragraph; stationery"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-mail-notes-todos",
+          "title": "Mail Notes and To Dos",
+          "canonicalSummary": "Mail integrated notes and task lists with drafts, Smart Mailboxes, iCal, and multi-Mac synchronization.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Leopard placed lightweight note-taking and task management inside the email application so those records could participate in familiar mailbox and calendar workflows.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Mail paragraph; Notes and To Dos"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Other new features; Mail"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-mail-data-detectors-rss",
+          "title": "Mail data detectors and RSS",
+          "canonicalSummary": "Mail recognized contact and event details in messages and included an RSS feed reader.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Data detectors offered shortcuts from detected phone numbers, addresses, and dates into Address Book or iCal, while feed subscriptions appeared alongside email.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Mail paragraph; data detectors and RSS"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-ichat-theater",
+          "title": "iChat Theater",
+          "canonicalSummary": "iChat Theater presented photos, slides, video, and files inside a video conference.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The communication app gained a presentation surface for sharing supported media and documents with call participants without replacing the conference context.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "iChat paragraph; iChat Theater"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Other new features; iChat"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-ichat-screen-sharing",
+          "title": "iChat screen sharing",
+          "canonicalSummary": "iChat added remote screen viewing and control between supported Macs.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Leopard extended a conversation into an interactive remote-desktop session, subject to the network requirements documented for iChat and Finder screen sharing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "iChat paragraph; screen sharing"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112593",
+              "locator": "Feature-specific requirements; screen sharing"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-ichat-effects-backdrops",
+          "title": "iChat effects and backdrops",
+          "canonicalSummary": "iChat added Photo Booth-style live effects and user-selected photo or video backdrops.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Video chats could apply visual distortions or color treatments and replace the apparent background with compatible still or moving media.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "iChat paragraph; effects and backdrops"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112593",
+              "locator": "Photo Booth and backdrop feature requirements"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-parental-controls",
+          "title": "Expanded Parental Controls",
+          "canonicalSummary": "Leopard expanded parental tools with website filtering, time limits, and remotely accessible activity logs.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The update combined content restrictions and scheduled-use controls with reporting that could be reviewed from another Mac on the home network.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Other new features; Parental Controls"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-boot-camp-final",
+          "title": "Boot Camp final release",
+          "canonicalSummary": "Leopard moved Boot Camp out of beta and included native Windows startup support for eligible Intel Macs.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The operating system shipped the completed Boot Camp utility for compatible Intel hardware, with a separately licensed supported Windows version still required.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Other new features; Boot Camp and footnote"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112593",
+              "locator": "Feature-specific requirements; Boot Camp"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-dashboard-web-clip",
+          "title": "Dashboard Web Clip",
+          "canonicalSummary": "Web Clip turned a selected portion of a webpage into a live Dashboard widget.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Leopard let users monitor a chosen region of a site from Dashboard without requiring a separately authored widget.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Other new features; Web Clip"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Other new features; Web Clip"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-photo-booth-animation-effects",
+          "title": "Expanded Photo Booth effects",
+          "canonicalSummary": "Photo Booth added animated iChat buddy icons plus additional still and video effects and backdrops.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The bundled camera app broadened its output beyond still images, while some effects remained dependent on the processor and camera capabilities listed in Apple's specifications.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Other new features; Photo Booth"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112593",
+              "locator": "Photo Booth feature-specific requirements"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-dictionary-wikipedia",
+          "title": "Wikipedia in Dictionary",
+          "canonicalSummary": "Dictionary added integrated access to Wikipedia entries.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The reference application gained a web-backed encyclopedia view alongside its existing language resources.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Other new features; Dictionary"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-ical-caldav",
+          "title": "iCal CalDAV group calendaring",
+          "canonicalSummary": "iCal added multi-user calendar coordination based on the CalDAV standard.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Leopard expanded the calendar from personal scheduling toward standards-based shared and group calendars.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Other new features; iCal"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Other new features; iCal"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-front-row-update",
+          "title": "Updated Front Row",
+          "canonicalSummary": "Front Row refreshed the remote-controlled interface for music, movies, television, and photos.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The media-browsing experience received an update while retaining an Apple Remote and compatible built-in infrared hardware as its documented baseline.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Other new features; Front Row"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112593",
+              "locator": "Feature-specific requirements; Front Row"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-native-64-bit-coexistence",
+          "title": "Native 64-bit application support",
+          "canonicalSummary": "Leopard supported native 64-bit applications alongside existing 32-bit applications and drivers.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple's near-final announcement described a mixed-width runtime model intended to let developers use 64-bit processing without abandoning the installed 32-bit software and driver ecosystem; the final 10.5 specification lists 64-bit computing among the shipped technologies.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Processor technologies paragraph; 64-bit support"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112593",
+              "locator": "Key Technologies; 64-bit computing"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-core-animation",
+          "title": "Core Animation",
+          "canonicalSummary": "Core Animation gave developers a system technology for building animated application interfaces.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The framework exposed animation capabilities related to effects used in Leopard's own interface, and Apple's final specifications list it as a key 10.5 technology.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Processor technologies paragraph; Core Animation"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112593",
+              "locator": "Key Technologies; Core Animation"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-developer-toolchain",
+          "title": "Leopard developer toolchain",
+          "canonicalSummary": "Leopard's developer suite included Xcode 3, Interface Builder 3, Objective-C 2.0 support, Instruments, Dashcode, and DTrace.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Apple paired a revised IDE and interface-design workflow with language, widget, tracing, and performance-analysis tools. The June near-final announcement used the provisional name Xray for its performance application; the final specification lists Instruments instead.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/06/11Apple-Unveils-Near-Final-Mac-OS-X-Leopard/",
+              "locator": "Other new features; development tools"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112593",
+              "locator": "Development tools list"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-5-powerpc-intel-dvd-baseline",
+          "title": "PowerPC, Intel, and DVD installation baseline",
+          "canonicalSummary": "Leopard supported listed Intel, PowerPC G5, and 867MHz-or-faster PowerPC G4 Macs with 512MB of memory, a DVD drive, and 9GB of free space.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The retail release maintained support across two processor architectures and used installation media that offered upgrade, Archive and Install, or Erase and Install paths, subject to the documented storage and memory requirements.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's October 2007 ship announcement or final 10.5 technical documentation to the existing audited Leopard 10.5 public-release event; June near-final detail is used only when an October or final-version source confirms the shipped surface.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2007/10/16Apple-to-Ship-Mac-OS-X-Leopard-on-October-26/",
+              "locator": "Pricing & Availability; system requirements"
+            },
+            {
+              "url": "https://support.apple.com/en-us/112593",
+              "locator": "General requirements and What's in the Box"
+            },
+            {
+              "url": "https://cdsassets.apple.com/live/6GJYWVAV/misc/ma348_leopard_install-setup.pdf",
+              "locator": "Pages 4–8; installation choices"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T06:02:26Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

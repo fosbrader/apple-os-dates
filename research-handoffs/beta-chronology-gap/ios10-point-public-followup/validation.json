@@ -1,0 +1,89 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-ios10-point-public-followup",
+  "validatedAt": "2026-07-31T04:43:59.949Z",
+  "validator": "research-handoffs/beta-chronology-gap/ios10-point-public-followup/validate-packet.mjs",
+  "status": "passed",
+  "errorCount": 0,
+  "errors": [],
+  "checks": {
+    "candidateCount": 2,
+    "newSourceCount": 9,
+    "retainedSourceReinspectionCount": 7,
+    "conflictCount": 5,
+    "sharedCandidateSchemaValid": true,
+    "production": {
+      "capturedAt": "2026-07-31T04:35:31.043Z",
+      "perspective": "published",
+      "useCdn": false,
+      "exactVariantCount": 3,
+      "exactMatches": 0,
+      "scopedPublicBetaEvents": 0
+    },
+    "newRawArtifactsReproduced": 9,
+    "newSelectedArtifactsReproduced": 9,
+    "retainedRawArtifactsReproduced": 7,
+    "retainedSelectedArtifactsReproduced": 7,
+    "parentPacketLocksReproduced": 8,
+    "timezoneNormalizationsVerified": 7,
+    "safety": {
+      "chronologyApprovedCandidateCount": 0,
+      "publicationEligible": false,
+      "sanityMutationAllowed": false,
+      "stableEventIdsCreated": 0,
+      "pageBuildsPerformed": 0,
+      "deploymentPerformed": false
+    }
+  },
+  "validatedPacketLocks": {
+    "assignment.json": {
+      "bytes": 2182,
+      "sha256": "35a8d0e57790509b01c8a576ad97b17d3055f183b69158dd6dd251222f29aafb"
+    },
+    "sources.json": {
+      "bytes": 24776,
+      "sha256": "2d7e12e6d302a0f312fa4ed829c4829f8d86e824dba0bfd96462200265266e86"
+    },
+    "retained-source-reinspection.json": {
+      "bytes": 8213,
+      "sha256": "05f535e71061637087a2910253f6c15f80db3364e4a3af4865a4b87ebe6b4ee3"
+    },
+    "candidates.json": {
+      "bytes": 11536,
+      "sha256": "321ddce7c5e076b1e2dcf7b7b035523036f10cb345e0bb7f41c9ca81c605ce95"
+    },
+    "conflicts.json": {
+      "bytes": 4945,
+      "sha256": "d4dbbd2e1f3f5e4bebff5c5ccff6157f5a0ceb41ccfd8c3a762d750bbc6fe2a6"
+    },
+    "production-snapshot.json": {
+      "bytes": 7813,
+      "sha256": "f412842f170c3a154de2029d4794d61f2c7a816a7969ee4f064af1fa26e7a18e"
+    },
+    "self-review.json": {
+      "bytes": 1371,
+      "sha256": "2104b7ce1ad7347984fbb631bafea27c6b7ac0679fde6f7d71fd21cf118ceead"
+    },
+    "report.md": {
+      "bytes": 4757,
+      "sha256": "76c298436fb2c5e3f7406b6499902da1d2209dda08a9fbc5825be011be0f2465"
+    },
+    "fetch-sources.mjs": {
+      "bytes": 6002,
+      "sha256": "d658bae3c4174d0d2c07d6c3699246201aadbf75ad2f9966f4b35f50444f3ca2"
+    },
+    "query-production.ts": {
+      "bytes": 6521,
+      "sha256": "0a4b0ebf6cc31698144d8f5124be44db33ca49b8ef7510e518178b23e4ee022e"
+    },
+    "build-packet.mjs": {
+      "bytes": 46543,
+      "sha256": "6b9053a83cd8166dfdc2badbf61d28aa99c24008719c057e9b4325b0e59da90f"
+    },
+    "validate-packet.mjs": {
+      "bytes": 16597,
+      "sha256": "f4c0929506ca9b45153ebd0155bbde0a9ea70cb9b365bb681254bcd1e02351b5"
+    }
+  },
+  "note": "A passing packet validation is a structural/evidence self-check only. It does not constitute independent chronology review, publication approval, or Sanity write authorization."
+}

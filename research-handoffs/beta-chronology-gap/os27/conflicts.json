@@ -1,0 +1,183 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-os27",
+  "conflictCount": 5,
+  "conflicts": [
+    {
+      "conflictId": "visionos-public-beta-1-channel",
+      "severity": "high",
+      "subject": "Whether visionOS 27 had Public Beta 1 on 2026-07-13",
+      "positions": [
+        {
+          "position": "publicBetaExisted",
+          "sources": [
+            "source-007",
+            "source-008",
+            "source-014"
+          ],
+          "summary": "Three secondary pages label the July 6 developer beta 3 payload, 24M5316k, as visionOS Public Beta 1 on July 13."
+        },
+        {
+          "position": "publicDistributionNotEstablished",
+          "sources": [
+            "source-001",
+            "source-002",
+            "source-003",
+            "source-013",
+            "source-016"
+          ],
+          "summary": "Apple's public-program surfaces omit Vision Pro/visionOS, Apple's install page exposes only a developer route, and two contemporaneous specialist reports explicitly distinguish visionOS from the public wave."
+        }
+      ],
+      "analysis": [
+        "A shared developer build is payload evidence, not channel evidence.",
+        "The positive reports provide no Vision Pro public-enrollment path or device UI showing a Public Beta choice.",
+        "MacStories published on July 13 and explicitly called the tested visionOS 27 build a developer beta while acknowledging the newly released public OS 27 wave.",
+        "AppleInsider's cross-platform build list contains an unrelated watchOS build error, reducing confidence in its visionOS line.",
+        "Macworld also misdates the beta 3 developer wave, reducing confidence in its broad all-platform statement."
+      ],
+      "decision": {
+        "disposition": "doNotCreatePublicBetaEvent",
+        "classification": "publicDistributionNotEstablished",
+        "confidence": "high",
+        "reviewState": "independentEvidenceReviewPassed"
+      },
+      "reversalEvidence": "A dated Apple public-program guide naming visionOS 27, an archived signed-in Apple Beta enrollment screen for Vision Pro, or a dated Vision Pro screenshot that clearly offers 'visionOS 27 Public Beta' would justify reopening this decision."
+    },
+    {
+      "conflictId": "visionos-public-beta-2-channel",
+      "severity": "high",
+      "subject": "Whether visionOS 27 had Public Beta 2 on 2026-07-22",
+      "positions": [
+        {
+          "position": "publicBetaExisted",
+          "sources": [
+            "source-014"
+          ],
+          "summary": "iCulture labels 24M5326g as visionOS Public Beta 2 on July 22."
+        },
+        {
+          "position": "developerOnly",
+          "sources": [
+            "source-001",
+            "source-002",
+            "source-003",
+            "source-004",
+            "source-014"
+          ],
+          "summary": "Apple's public program still omits Vision Pro; Apple identifies 24M5326g as developer beta 4; iCulture's own installation section supplies only a developer-account route and calls the betas developer-only."
+        }
+      ],
+      "analysis": [
+        "The sole dedicated positive chronology is internally contradictory about channel eligibility.",
+        "Its public-beta dates and builds mechanically mirror developer beta 3 and beta 4 payloads.",
+        "No independent, channel-specific Public Beta 2 enrollment or availability evidence was found."
+      ],
+      "decision": {
+        "disposition": "doNotCreatePublicBetaEvent",
+        "classification": "publicDistributionNotEstablished",
+        "confidence": "high",
+        "reviewState": "independentEvidenceReviewPassed"
+      },
+      "reversalEvidence": "The same channel-specific proof described for Public Beta 1, dated no later than July 22."
+    },
+    {
+      "conflictId": "appleinsider-watchos-build-cross-version",
+      "severity": "high",
+      "subject": "watchOS 27 Public Beta 1 build number",
+      "positions": [
+        {
+          "position": "23U5062b",
+          "sources": [
+            "source-007"
+          ],
+          "summary": "AppleInsider assigns 23U5062b to watchOS 27 Public Beta 1."
+        },
+        {
+          "position": "24R5315i",
+          "sources": [
+            "source-006",
+            "source-011"
+          ],
+          "summary": "MacRumors says the public payload equals watchOS 27 developer beta 3, and iCulture identifies both as 24R5315i."
+        }
+      ],
+      "analysis": [
+        "The 23U prefix is inconsistent with the watchOS 27 build family recorded across the cycle.",
+        "Apple's search-indexed release listing observed during research identifies 23U5062b as watchOS 26.6 beta 5 and 24R5315i as watchOS 27 beta 3; the rolling live index no longer preserved those rows in the downloaded HTML.",
+        "Do not copy AppleInsider's cross-platform build list into production."
+      ],
+      "decision": {
+        "preferredValue": "24R5315i",
+        "rejectedValue": "23U5062b",
+        "confidence": "high"
+      }
+    },
+    {
+      "conflictId": "apple-newsroom-public-beta-scope",
+      "severity": "medium",
+      "subject": "Scope of Apple's June 8 statement that a public beta would arrive next month",
+      "positions": [
+        {
+          "position": "allSixPlatforms",
+          "sources": [
+            "source-015"
+          ],
+          "summary": "The public-beta sentence follows an announcement discussing six OS families and links all six product pages."
+        },
+        {
+          "position": "unspecifiedSubset",
+          "sources": [
+            "source-001",
+            "source-002",
+            "source-003",
+            "source-015"
+          ],
+          "summary": "The sentence uses the singular generic phrase 'a public beta' and does not enumerate channel membership; the actual public-program surfaces omit visionOS."
+        }
+      ],
+      "analysis": [
+        "The Newsroom wording supports an upcoming public-beta wave, not a per-platform public-channel identity.",
+        "Use the explicit program enrollment surfaces to determine channel applicability."
+      ],
+      "decision": {
+        "disposition": "doNotUseAsSoleProofForVisionOS",
+        "confidence": "high"
+      }
+    },
+    {
+      "conflictId": "current-apple-program-page-temporality",
+      "severity": "medium",
+      "subject": "Whether a July 30 live page can prove the exact July 13 program state",
+      "positions": [
+        {
+          "position": "currentOmissionIsSufficient",
+          "sources": [
+            "source-001",
+            "source-002",
+            "source-003"
+          ],
+          "summary": "Apple's current public-program and installation pages consistently omit a public Vision Pro route."
+        },
+        {
+          "position": "archiveStillDesirable",
+          "sources": [
+            "source-013",
+            "source-016"
+          ],
+          "summary": "Live pages can change; contemporaneous July 13-14 secondary evidence is needed to anchor the earlier state."
+        }
+      ],
+      "analysis": [
+        "The current first-party surfaces are strong but not byte-preserved July 13 snapshots.",
+        "MacStories on July 13 and Gadgets Now on July 14 independently record the same developer-only distinction.",
+        "An independent reviewer should still seek a July 13 web archive or signed-in device capture if available."
+      ],
+      "decision": {
+        "disposition": "currentConclusionSupportedButArchiveRequested",
+        "confidence": "mediumHigh"
+      }
+    }
+  ],
+  "reviewState": "independentEvidenceReviewPassed"
+}

@@ -1,0 +1,59 @@
+{
+  "formatVersion": 1,
+  "batchId": "beta-chronology-gap-tvos-major-11-26",
+  "validatedAt": "2026-07-31T03:38:03.420Z",
+  "validator": "codex-review-ios9-public-betas",
+  "status": "passedSelfCheckPendingIndependentReview",
+  "checks": {
+    "exactTargetClosure": true,
+    "assignmentTargetCount": 60,
+    "candidateCount": 60,
+    "notProposedCount": 7,
+    "sourceCount": 58,
+    "uniqueCandidateIds": true,
+    "uniqueCandidateIdentities": true,
+    "uniqueSourceIds": true,
+    "allEvidenceRefsResolve": true,
+    "rawEvidenceArtifactsReproduced": 58,
+    "rawHashesReproduced": true,
+    "publicOrdinalInferredFromDeveloperCount": 0,
+    "exactProductionMatches": 0,
+    "publicBetaEventsInScopedProduction": 0,
+    "buildsIncluded": 0,
+    "sanityWritesPerformed": 0,
+    "deploymentsPerformed": 0,
+    "independentEvidenceReviewComplete": false
+  },
+  "errors": [],
+  "fileLocks": {
+    "assignment.json": {
+      "bytes": 2591,
+      "sha256": "0549939a27d8f6ca38eb7ac547239210c3bac1937a29b2e0f39b8e17202f96a3"
+    },
+    "sources.json": {
+      "bytes": 80602,
+      "sha256": "b570aa1007d2452d75459c3793cf36f270992199f24e7b6ada4bb5845faa07b8"
+    },
+    "candidates.json": {
+      "bytes": 174660,
+      "sha256": "8c86ee39301656993b8ab169e99e06da8e034d23f2280f6acdebf35819637cdc"
+    },
+    "conflicts.json": {
+      "bytes": 5339,
+      "sha256": "f7d8da0ab96d09df4c578a1c7489996888dfb9a0caec6976164cc03a4c7697ef"
+    },
+    "report.md": {
+      "bytes": 6163,
+      "sha256": "2b13c3dad4dca03faae401f3a6d39eee15e3d9c1ca94a3d3aac0063a0fbe0536"
+    },
+    "production-snapshot.json": {
+      "bytes": 48840,
+      "sha256": "e05d07ac599a0e0ae9c014b941ecd8af349c2ca1a299961c324ece5bdb9307c9"
+    }
+  },
+  "limitations": [
+    "The researcher performed the mechanical self-check; it is not an independent chronology review.",
+    "Single-lineage candidates remain blocked for an additional independent contemporary publisher.",
+    "Three candidates preserve material date/ordinal conflicts and require adjudication."
+  ]
+}

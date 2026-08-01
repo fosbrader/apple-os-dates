@@ -1,0 +1,742 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-07-30",
+  "sources": [
+    {
+      "url": "https://support.apple.com/en-us/101445",
+      "title": "Apple security updates (2014)",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "Apple software",
+        "2014",
+        "release dates",
+        "security updates"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+      "title": "Apple Announces OS X Yosemite",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2014-06-02T00:00:00.000Z",
+      "topics": [
+        "OS X",
+        "Yosemite",
+        "10.10",
+        "developer preview",
+        "features"
+      ]
+    },
+    {
+      "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+      "title": "OS X Yosemite Available Today as a Free Upgrade",
+      "publisher": "Apple Newsroom",
+      "sourceClass": "firstPartyAnnouncement",
+      "author": "Apple",
+      "publishedAt": "2014-10-16T00:00:00.000Z",
+      "topics": [
+        "OS X",
+        "Yosemite",
+        "10.10",
+        "availability",
+        "features"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/103394",
+      "title": "About the security content of OS X Yosemite v10.10",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "author": "Apple",
+      "topics": [
+        "OS X",
+        "Yosemite",
+        "10.10",
+        "security",
+        "CVE"
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-10-10",
+      "authorship": "originalSynthesis",
+      "releaseNotesUrl": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Release overview"
+          },
+          {
+            "text": "OS X Yosemite 10.10 reached the Mac App Store on October 16, 2014. The major release combined a broad visual redesign with Continuity, cloud-file, search, notification, browser, mail, messaging, media, family-account, developer-platform, compatibility, and security changes.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+                "locator": "October 16, 2014; launch overview and feature list"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101445",
+                "locator": "OS X Yosemite v10.10 — 16 Oct 2014"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103394",
+                "locator": "OS X Yosemite v10.10 security content"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Development and release"
+          },
+          {
+            "text": "Apple announced Yosemite on June 2 and made a developer preview available that day. It also announced a customer beta program for later in the summer. The retained launch announcement then confirms October 16 as the public availability date; this article attaches editorial content only to that durable public route.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+                "locator": "June 2, 2014; developer preview and beta-program timing"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+                "locator": "October 16, 2014; Pricing & Availability"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Design and cross-device workflow"
+          },
+          {
+            "text": "The release revised core interface materials and typography while adding several ways for compatible Macs and iOS devices to cooperate: activity handoff, easier hotspot access, cross-platform AirDrop, carrier-message relay, and iPhone calling.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+                "locator": "System redesign and Continuity paragraphs"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+                "locator": "Design and Continuity paragraphs"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Apps, services, and developer platform"
+          },
+          {
+            "text": "Yosemite added Today widgets, broader Spotlight results, Finder-based iCloud Drive, new Safari and Mail workflows, richer Messages controls, iTunes 12, and Family Sharing. Apple also tied the release to Swift and expanded SpriteKit and SceneKit tooling.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+                "locator": "Feature list and developer platform paragraph"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+                "locator": "Apps and developer platform paragraphs"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Evidence boundary"
+          },
+          {
+            "text": "The structured public-release changes below require confirmation in Apple's October launch material or its version-specific 10.10 advisory. June-only preview details are not promoted into public deltas, later 10.10.x fixes are not projected backward, comparative Safari statements remain attributed to Apple, and no build number or undocumented behavior is inferred.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+                "locator": "June 2 developer-preview scope"
+              },
+              {
+                "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+                "locator": "October 16 public-launch scope and test qualifications"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101445",
+                "locator": "OS X Yosemite v10.10 and v10.10.1 release lines"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103394",
+                "locator": "OS X Yosemite v10.10 security content"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+          "locator": "June 2, 2014"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+          "locator": "October 16, 2014"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101445",
+          "locator": "OS X Yosemite v10.10 — 16 Oct 2014"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103394",
+          "locator": "OS X Yosemite v10.10"
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:38:23Z"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-macos-10-10",
+        "routeAlias": "public"
+      },
+      "authorship": "originalSynthesis",
+      "summary": "OS X Yosemite 10.10 reached the public channel on October 16, 2014 with a redesigned Mac experience, new cross-device workflows, expanded apps and services, developer technologies, broad compatibility, and a documented security baseline.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "style": "h2",
+            "text": "Public release"
+          },
+          {
+            "text": "Apple made Yosemite available on October 16, 2014 as a free download from the Mac App Store. Apple's archived 2014 security index independently places OS X Yosemite v10.10 on the same date and lists Mac OS X 10.6.8 or later as the upgrade audience.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+                "locator": "October 16, 2014; Pricing & Availability"
+              },
+              {
+                "url": "https://support.apple.com/en-us/101445",
+                "locator": "OS X Yosemite v10.10 — 16 Oct 2014"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "What this page records"
+          },
+          {
+            "text": "The release entries synthesize the confirmed launch package across system design, Continuity, Notification Center, Spotlight, iCloud Drive, Safari, Mail, Messages, iTunes, Family Sharing, developer frameworks, installation compatibility, and the initial Yosemite security advisory.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+                "locator": "Launch overview through developer platform paragraph"
+              },
+              {
+                "url": "https://support.apple.com/en-us/103394",
+                "locator": "OS X Yosemite v10.10 security content"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Availability qualifications"
+          },
+          {
+            "text": "Apple described a broad Mac hardware baseline but imposed narrower requirements on some Continuity features. Those features depended on iOS 8.1 and, in some cases, newer Bluetooth LE and Wi-Fi capabilities; hotspot and calling also remained subject to carrier service and possible cellular charges.",
+            "citations": [
+              {
+                "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+                "locator": "Pricing & Availability and feature footnotes"
+              }
+            ]
+          },
+          {
+            "style": "h2",
+            "text": "Version boundary"
+          },
+          {
+            "text": "This event is the initial 10.10 public release only. Apple's 2014 index separately lists 10.10.1 on November 17, but the local catalog has no corresponding durable version route, so that point release and its fixes are excluded rather than folded into Yosemite 10.10.",
+            "citations": [
+              {
+                "url": "https://support.apple.com/en-us/101445",
+                "locator": "OS X Yosemite v10.10 — 16 Oct 2014; OS X Yosemite v10.10.1 — 17 Nov 2014"
+              }
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+          "locator": "October 16, 2014; Pricing & Availability"
+        },
+        {
+          "url": "https://support.apple.com/en-us/101445",
+          "locator": "OS X Yosemite v10.10 — 16 Oct 2014"
+        },
+        {
+          "url": "https://support.apple.com/en-us/103394",
+          "locator": "OS X Yosemite v10.10"
+        }
+      ],
+      "changes": [
+        {
+          "key": "macos-10-10-system-design",
+          "title": "Redesigned system appearance",
+          "canonicalSummary": "Yosemite refreshed the Mac interface with streamlined toolbars, translucency, redesigned icons, and a new system typeface.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The public release reworked core visual surfaces while retaining familiar Mac interaction patterns, giving content more room and using translucent sidebars and controls to convey context.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "System redesign paragraphs"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "June 2 design announcement"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-handoff",
+          "title": "Handoff between Mac and iOS devices",
+          "canonicalSummary": "Handoff let supported Mac and iOS apps transfer an in-progress activity from one nearby device to another.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "A user could begin work such as composing mail or browsing the web on one supported device and continue the same activity on another, subject to Apple's Continuity requirements.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Continuity paragraph; Handoff"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "Continuity and Handoff paragraphs"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-instant-hotspot",
+          "title": "Instant Hotspot",
+          "canonicalSummary": "Instant Hotspot simplified connecting a Mac to a nearby iPhone's personal hotspot.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Yosemite exposed an eligible iPhone hotspot through the Mac's network workflow without a separate manual setup sequence; carrier availability still applied.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Continuity paragraph; Instant Hotspot; footnotes"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "Continuity paragraph; carrier qualification"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-cross-platform-airdrop",
+          "title": "AirDrop between Mac and iOS",
+          "canonicalSummary": "AirDrop expanded to exchange content directly between supported Macs and iOS devices.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The release removed the earlier same-platform boundary from Apple's nearby file-sharing workflow, allowing compatible Mac and iOS devices to send content to one another.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Continuity paragraph; AirDrop"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-sms-mms-relay",
+          "title": "SMS and MMS relay on Mac",
+          "canonicalSummary": "Messages on Mac could display and send SMS and MMS traffic relayed through a nearby iPhone.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Yosemite extended the Mac messaging experience beyond iMessage by using a compatible iPhone to relay carrier text and multimedia messages across a user's devices.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Continuity paragraph; SMS messages"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "Continuity paragraph; SMS and MMS"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-iphone-calling",
+          "title": "iPhone calls on Mac",
+          "canonicalSummary": "A Mac could place and receive cellular calls through a nearby compatible iPhone.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The Continuity calling path let the Mac act as a speakerphone for the user's iPhone, with Apple's cellular-charge and device-capability qualifications still in force.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Continuity paragraph; iPhone calls; footnotes"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "Continuity calling paragraph; cellular qualification"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-notification-center-today-widgets",
+          "title": "Notification Center Today view and widgets",
+          "canonicalSummary": "Notification Center gained a Today view with Apple information panels and support for downloadable widgets.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The new view collected timely information such as calendars, weather, stocks, reminders, clocks, and social activity, and it could be extended with compatible Mac App Store widgets.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Feature list; Today view"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "Today view paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-spotlight-rich-results",
+          "title": "Spotlight rich results",
+          "canonicalSummary": "Spotlight moved to a prominent desktop search interface and added results from Apple services, maps, reference material, the web, news, and showtimes.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "Yosemite broadened Spotlight from local search into a combined discovery surface that could return contextual information from several online and on-device categories.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Feature list; Spotlight"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "Spotlight paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-icloud-drive",
+          "title": "iCloud Drive in Finder",
+          "canonicalSummary": "iCloud Drive exposed cloud files as a Finder location with folders, tags, search, and access from supported Apple devices and Windows PCs.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The release gave users a general-purpose file hierarchy for organizing arbitrary document types in iCloud and reaching them across supported platforms.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Feature list; iCloud Drive"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "iCloud Drive paragraph"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-safari-redesign-efficiency",
+          "title": "Streamlined Safari with efficiency improvements",
+          "canonicalSummary": "Safari adopted a simplified interface, while Apple reported faster browsing performance and longer Mac battery life for web and Netflix HD video.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Yosemite launch positioned Safari around a content-first layout and efficiency gains. The performance and battery statements are Apple's launch claims rather than independent benchmark findings.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Feature list; Safari"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "Safari design, standards, and Apple testing footnotes",
+              "note": "Used only to explain the scope and test-qualified nature of Apple's own performance claims."
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-mail-markup",
+          "title": "Markup in Mail",
+          "canonicalSummary": "Mail added tools for annotating images and completing or signing forms and PDFs without leaving a message.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "The composer gained an integrated attachment-editing workflow for common review, annotation, form-completion, and signature tasks.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Feature list; Mail Markup"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "Mail paragraph; Markup"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-mail-drop",
+          "title": "Mail Drop for large attachments",
+          "canonicalSummary": "Mail Drop provided an Apple-hosted delivery path for attachments as large as 5 GB.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Yosemite let Mail users send files that would commonly exceed email attachment limits, with the launch material setting a maximum size of 5 GB.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Feature list; Mail Drop"
+            },
+            {
+              "url": "https://www.apple.com/newsroom/2014/06/02Apple-Announces-OS-X-Yosemite/",
+              "locator": "Mail paragraph; Mail Drop"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-messages-group-controls",
+          "title": "Expanded Messages conversation controls",
+          "canonicalSummary": "Messages added controls for group membership, shared locations, conversation attachments, and notification muting.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The public release made group threads easier to manage by allowing participant changes, location viewing, quick attachment access, and per-conversation notification suppression.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Feature list; Messages"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-itunes-12-redesign",
+          "title": "iTunes 12 redesign and Recents",
+          "canonicalSummary": "iTunes 12 introduced a new interface, simpler library-to-store navigation, and a Recents view for recently acquired or played media.",
+          "category": "enhancement",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The bundled media app was reorganized to reduce friction between a user's collection and store discovery while surfacing recent activity in one place.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Feature list; iTunes 12"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-family-sharing",
+          "title": "Family Sharing purchases",
+          "canonicalSummary": "Family Sharing let participating family members browse and download one another's eligible Apple media and Mac App Store purchases.",
+          "category": "feature",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Yosemite brought the shared-purchase side of Apple's family account model to the Mac across supported iTunes, iBooks, and Mac App Store content.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Feature list; Family Sharing"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-swift",
+          "title": "Swift development language",
+          "canonicalSummary": "Yosemite's developer platform included Apple's new Swift programming language for building OS X and iOS software.",
+          "category": "developerApi",
+          "action": "introduced",
+          "inheritance": "delta",
+          "summary": "Apple presented Swift as a modern language integrated into its application-development stack, with goals that included interactivity, reliability, and safer implementation.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Developer platform paragraph; Swift"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-spritekit-scenekit",
+          "title": "Expanded SpriteKit and SceneKit game tools",
+          "canonicalSummary": "SpriteKit gained richer motion, lighting, and physics workflows and could be combined with SceneKit for animated 3D scenes.",
+          "category": "developerApi",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The Yosemite developer stack expanded Apple's first-party frameworks for constructing two-dimensional game behavior and integrating it with three-dimensional scene content.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Developer platform paragraph; SpriteKit and SceneKit"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-free-upgrade-compatibility",
+          "title": "Free Mac App Store upgrade and hardware baseline",
+          "canonicalSummary": "Apple distributed Yosemite as a free Mac App Store upgrade for Macs from 2009 onward and selected 2007 and 2008 models.",
+          "category": "compatibility",
+          "action": "changed",
+          "inheritance": "delta",
+          "summary": "The broad installation baseline remained wider than the eligibility for every Continuity capability; Apple separately noted that some cross-device features required newer Bluetooth LE and Wi-Fi hardware and iOS 8.1.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://www.apple.com/newsroom/2014/10/16OS-X-Yosemite-Available-Today-as-a-Free-Upgrade/",
+              "locator": "Pricing & Availability; Continuity footnotes"
+            },
+            {
+              "url": "https://support.apple.com/en-us/101445",
+              "locator": "OS X Yosemite v10.10 — 16 Oct 2014"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-network-transport-security",
+          "title": "Network credential and transport repairs",
+          "canonicalSummary": "Yosemite's security baseline addressed Wi-Fi credential exposure, AFP address disclosure, Bluetooth pairing, certificate policy, and SSL 3.0 transport risks.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory records hardening across enterprise Wi-Fi authentication, file sharing, Bluetooth input connections, certificate trust, and Secure Transport, including its response to the SSL 3.0 CBC weakness.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103394",
+              "locator": "802.1X; AFP File Server; Bluetooth; Certificate Trust Policy; Secure Transport"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-access-session-signing-security",
+          "title": "Access control, session, and code-signing repairs",
+          "canonicalSummary": "The release tightened app sandbox access, screen-lock behavior, encrypted-volume state, account sessions, configuration profiles, and application signature validation.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "The version-specific advisory documents authorization, state-management, persistence, and signature-validation corrections spanning the sandbox, Dock, storage encryption, Lost Mode, login, profiles, SecurityAgent, and code signing.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103394",
+              "locator": "App Sandbox; CFPreferences; CoreStorage; Dock; fdesetup; iCloud Find My Mac; LaunchServices; LoginWindow; MCX Desktop Config Profiles; Security; Security - Code Signing"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-kernel-driver-filesystem-security",
+          "title": "Kernel, driver, and filesystem repairs",
+          "canonicalSummary": "Yosemite repaired memory-safety, validation, disclosure, privilege, and denial-of-service vulnerabilities in drivers, IOKit, filesystems, and the kernel.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple's advisory covers graphics and input drivers, IOKit data queues, HFS handling, Mach ports, IPv6 processing, system-control sockets, and early-boot hardening randomness.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103394",
+              "locator": "IOAcceleratorFamily; IOHIDFamily; IOKit; Kernel security content"
+            }
+          ]
+        },
+        {
+          "key": "macos-10-10-app-library-security",
+          "title": "Application and bundled-library repairs",
+          "canonicalSummary": "The initial Yosemite security release updated server components and repaired issues in Mail, file sharing, QuickTime, Safari, and related system services.",
+          "category": "security",
+          "action": "fixed",
+          "inheritance": "delta",
+          "summary": "Apple documented Apache and Bash updates plus corrections for unintended mail recipients, file-sharing state, malicious audio processing, Safari history and push behavior, and ASN.1 parsing. The advisory also states that Safari 8 incorporated Safari 7.1 security content.",
+          "documentedStatus": "documented",
+          "evidenceState": "confirmed",
+          "verificationMethod": "Matched Apple's dated public-launch announcement or version-specific security advisory to the existing audited Yosemite 10.10 public-release event.",
+          "citations": [
+            {
+              "url": "https://support.apple.com/en-us/103394",
+              "locator": "apache; Bash; Mail; NetFS Client Framework; QuickTime; Safari; Security; Safari 8 note"
+            }
+          ]
+        }
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {
+        "status": "approved",
+        "reviewedAt": "2026-07-30T05:38:23Z"
+      },
+      "isIndexable": true
+    }
+  ],
+  "builds": []
+}

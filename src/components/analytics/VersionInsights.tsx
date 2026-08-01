@@ -11,6 +11,7 @@ import {
   daysBetween,
   formatDate,
 } from "@/lib/utils";
+import { releaseVersionPath } from "@/lib/release-routes";
 
 interface VersionInsightsProps {
   version: ReleaseVersion;
@@ -409,7 +410,7 @@ export function VersionInsights({
                       data-label="Version"
                     >
                       <Link
-                        href={`/${row.slug}/${encodeURIComponent(row.version)}`}
+                        href={releaseVersionPath(row.slug, row.version)}
                         className="hover:text-[var(--accent)] hover:underline"
                       >
                         {row.name}
