@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Suspense } from "react";
 import {
   getResearchSearchIndex,
   searchResearchIndex,
@@ -7,6 +8,7 @@ import type {
   ResearchSearchFilters,
   SearchDocumentKind,
 } from "@/lib/research/types";
+import { getAllPlatforms } from "@/lib/sanity.fetch";
 import { createPageMetadata } from "@/lib/site";
 import { formatDate } from "@/lib/utils";
 
@@ -39,6 +41,158 @@ const kindLabels: Record<SearchDocumentKind, string> = {
   change: "Change",
 };
 
+/**
+ * Everything index-dependent renders here so the page shell can flush
+ * before the search index finishes building. Building the index is the
+ * slow path on a cold instance; the shell must never wait on it.
+ */
+async function SearchResults({
+  query,
+  filters,
+  hasCriteria,
+}: {
+  query: string;
+  filters: ResearchSearchFilters;
+  hasCriteria: boolean;
+}) {
+  let unavailable = false;
+  let documentCount = 0;
+  let publisherOptions: string[] = [];
+  let results: ReturnType<typeof searchResearchIndex> = [];
+
+  try {
+    const index = await getResearchSearchIndex();
+    documentCount = index.documents.length;
+    publisherOptions = Array.from(
+      new Set(
+        index.documents.flatMap((document) => document.publishers),
+      ),
+    ).sort();
+    results = searchResearchIndex(index, query, filters, 60);
+  } catch (error) {
+    console.error("Search page index failed", error);
+    unavailable = true;
+  }
+
+  return (
+    <>
+      {/* Bound to the publisher input in the form shell by id. */}
+      <datalist id="search-publishers">
+        {publisherOptions.map((option) => (
+          <option key={option} value={option} />
+        ))}
+      </datalist>
+
+      <div className="section-heading">
+        <div>
+          <p className="section-kicker">
+            {hasCriteria ? "Matching records" : "Recent records"}
+          </p>
+          <h2 id="search-results-heading">
+            {unavailable
+              ? "Search is temporarily unavailable"
+              : `${results.length} result${results.length === 1 ? "" : "s"}`}
+          </h2>
+        </div>
+        <p>
+          {documentCount > 0
+            ? `${documentCount.toLocaleString()} public records are currently indexed. `
+            : null}
+          Search data is also available as a public, versioned JSON index
+          and as reusable research exports.
+        </p>
+      </div>
+
+      {unavailable ? (
+        <div className="content-notice">
+          <h2>Please try again shortly</h2>
+          <p className="content-notice__body">
+            The release archive remains browsable from the{" "}
+            <Link href="/apple/">Apple catalog</Link>.
+          </p>
+        </div>
+      ) : results.length > 0 ? (
+        <ol className="search-result-list">
+          {results.map(({ document }) => (
+            <li key={document.id}>
+              <article>
+                <div className="search-result-list__meta">
+                  <span>{kindLabels[document.kind]}</span>
+                  {document.platform ? (
+                    <span>{document.platform}</span>
+                  ) : null}
+                  {document.date ? (
+                    <time dateTime={document.date}>
+                      {formatDate(document.date)}
+                    </time>
+                  ) : null}
+                </div>
+                <h3>
+                  <Link href={document.href}>{document.title}</Link>
+                </h3>
+                {document.text ? (
+                  <p>{resultSnippet(document.text)}</p>
+                ) : null}
+                <div className="search-result-list__badges">
+                  {document.status ? (
+                    <span>{document.status}</span>
+                  ) : null}
+                  {document.channel ? (
+                    <span>{document.channel}</span>
+                  ) : null}
+                  {document.build_number ? (
+                    <code>{document.build_number}</code>
+                  ) : null}
+                  {document.documented_status ? (
+                    <span>{document.documented_status}</span>
+                  ) : null}
+                  {document.evidence_state ? (
+                    <span>{document.evidence_state}</span>
+                  ) : null}
+                </div>
+                {document.publishers.length > 0 ? (
+                  <p className="search-result-list__sources">
+                    Sources: {document.publishers.join(", ")}
+                  </p>
+                ) : null}
+              </article>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <div className="content-notice">
+          <h2>No records matched those terms</h2>
+          <p className="content-notice__body">
+            Try a shorter version number, remove a filter, or{" "}
+            <Link href="/submit/">submit a missing source</Link>.
+          </p>
+        </div>
+      )}
+    </>
+  );
+}
+
+function SearchResultsFallback({
+  hasCriteria,
+}: {
+  hasCriteria: boolean;
+}) {
+  return (
+    <div className="section-heading">
+      <div>
+        <p className="section-kicker">
+          {hasCriteria ? "Matching records" : "Recent records"}
+        </p>
+        <h2 id="search-results-heading">Searching the record…</h2>
+      </div>
+      <p>
+        Search data is also available as a public, versioned JSON index and
+        as reusable research exports.
+      </p>
+    </div>
+  );
+}
+
 export default async function SearchPage({
   searchParams,
 }: {
@@ -60,34 +214,6 @@ export default async function SearchPage({
     evidence_state: evidenceState || undefined,
     documented_status: documentedStatus || undefined,
   };
-
-  let unavailable = false;
-  let documentCount = 0;
-  let platformOptions: string[] = [];
-  let publisherOptions: string[] = [];
-  let results: Awaited<ReturnType<typeof searchResearchIndex>> = [];
-
-  try {
-    const index = await getResearchSearchIndex();
-    documentCount = index.documents.length;
-    platformOptions = Array.from(
-      new Set(
-        index.documents
-          .map((document) => document.platform)
-          .filter((value): value is string => Boolean(value)),
-      ),
-    ).sort();
-    publisherOptions = Array.from(
-      new Set(
-        index.documents.flatMap((document) => document.publishers),
-      ),
-    ).sort();
-    results = searchResearchIndex(index, query, filters, 60);
-  } catch (error) {
-    console.error("Search page index failed", error);
-    unavailable = true;
-  }
-
   const hasCriteria = Boolean(
     query ||
       kind ||
@@ -96,6 +222,18 @@ export default async function SearchPage({
       evidenceState ||
       documentedStatus,
   );
+
+  // Small, data-cached query — unlike the search index, this never
+  // blocks the shell for a meaningful amount of time.
+  let platformOptions: string[] = [];
+  try {
+    const platforms = await getAllPlatforms();
+    platformOptions = platforms
+      .map((entry) => entry.slug.current)
+      .sort();
+  } catch (error) {
+    console.error("Search page platform options failed", error);
+  }
 
   return (
     <div className="search-page">
@@ -111,9 +249,7 @@ export default async function SearchPage({
             hiding it behind a generic relevance score.
           </p>
           <p className="text-sm text-[var(--text-tertiary)]">
-            {documentCount > 0
-              ? `${documentCount.toLocaleString()} public records are currently indexed.`
-              : "The public index is assembled from published Sanity records."}
+            The public index is assembled from published Sanity records.
           </p>
         </div>
       </header>
@@ -181,11 +317,6 @@ export default async function SearchPage({
             name="publisher"
             placeholder="Any cited publisher"
           />
-          <datalist id="search-publishers">
-            {publisherOptions.map((option) => (
-              <option key={option} value={option} />
-            ))}
-          </datalist>
         </label>
         <div className="search-form__actions">
           <button className="button button--primary" type="submit">
@@ -203,88 +334,13 @@ export default async function SearchPage({
         aria-labelledby="search-results-heading"
         className="search-results"
       >
-        <div className="section-heading">
-          <div>
-            <p className="section-kicker">
-              {hasCriteria ? "Matching records" : "Recent records"}
-            </p>
-            <h2 id="search-results-heading">
-              {unavailable
-                ? "Search is temporarily unavailable"
-                : `${results.length} result${results.length === 1 ? "" : "s"}`}
-            </h2>
-          </div>
-          <p>
-            Search data is also available as a public, versioned JSON index and
-            as reusable research exports.
-          </p>
-        </div>
-
-        {unavailable ? (
-          <div className="content-notice">
-            <h2>Please try again shortly</h2>
-            <p className="content-notice__body">
-              The release archive remains browsable from the{" "}
-              <Link href="/apple/">Apple catalog</Link>.
-            </p>
-          </div>
-        ) : results.length > 0 ? (
-          <ol className="search-result-list">
-            {results.map(({ document }) => (
-              <li key={document.id}>
-                <article>
-                  <div className="search-result-list__meta">
-                    <span>{kindLabels[document.kind]}</span>
-                    {document.platform ? (
-                      <span>{document.platform}</span>
-                    ) : null}
-                    {document.date ? (
-                      <time dateTime={document.date}>
-                        {formatDate(document.date)}
-                      </time>
-                    ) : null}
-                  </div>
-                  <h3>
-                    <Link href={document.href}>{document.title}</Link>
-                  </h3>
-                  {document.text ? (
-                    <p>{resultSnippet(document.text)}</p>
-                  ) : null}
-                  <div className="search-result-list__badges">
-                    {document.status ? (
-                      <span>{document.status}</span>
-                    ) : null}
-                    {document.channel ? (
-                      <span>{document.channel}</span>
-                    ) : null}
-                    {document.build_number ? (
-                      <code>{document.build_number}</code>
-                    ) : null}
-                    {document.documented_status ? (
-                      <span>{document.documented_status}</span>
-                    ) : null}
-                    {document.evidence_state ? (
-                      <span>{document.evidence_state}</span>
-                    ) : null}
-                  </div>
-                  {document.publishers.length > 0 ? (
-                    <p className="search-result-list__sources">
-                      Sources: {document.publishers.join(", ")}
-                    </p>
-                  ) : null}
-                </article>
-              </li>
-            ))}
-          </ol>
-        ) : (
-          <div className="content-notice">
-            <h2>No records matched those terms</h2>
-            <p className="content-notice__body">
-              Try a shorter version number, remove a filter, or{" "}
-              <Link href="/submit/">submit a missing source</Link>.
-            </p>
-          </div>
-        )}
+        <Suspense fallback={<SearchResultsFallback hasCriteria={hasCriteria} />}>
+          <SearchResults
+            query={query}
+            filters={filters}
+            hasCriteria={hasCriteria}
+          />
+        </Suspense>
       </section>
 
       <aside className="search-export-note">
