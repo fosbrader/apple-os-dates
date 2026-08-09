@@ -21,6 +21,7 @@
     "historical:validate": "tsx scripts/validate-historical-analysis-dataset.ts",
     "walk-forward:validate": "tsx scripts/validate-walk-forward-evaluation.ts",
     "release-date:validate": "tsx scripts/validate-release-date-candidates.ts",
+    "release-date:interval-calibration:validate": "tsx scripts/validate-release-date-interval-calibration.ts",
     "evidence:inventory": "tsx scripts/generate-evidence-inventory.ts --write",
     "evidence:inventory:check": "tsx scripts/generate-evidence-inventory.ts --check",
     "migration:events:plan": "tsx scripts/plan-release-event-migration.ts",

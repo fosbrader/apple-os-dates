@@ -236,3 +236,48 @@ fingerprints.
 ```sh
 npm run release-date:validate -- path/to/release-date-candidates.json
 ```
+
+## Release-date interval calibration v1 (FR-010)
+
+`src/lib/release-date-interval-calibration.ts` is a second, separate pure
+artifact. It consumes an already validated `release-date-candidates/v1`
+artifact and revalidates/rederives that artifact before using a point forecast.
+It does not change storage, APIs, UI, Sanity, or public forecast behavior.
+
+For each historical selected FR-009 forecast, an inner residual is admissible
+only if the inner origin is strictly earlier than the outer origin, the inner
+public outcome fact was first observed by the outer origin, and the inner
+prediction was not trained on its own target. The outer target is never a
+residual. A residual is `abs(actualDays - selectedPointDays)` and may retain a
+deterministic finite fractional day from the hierarchical point model. No
+target result is consulted when selecting its point model or residual pool.
+
+Pools are platform-partitioned. The module prefers the same platform,
+public-release target kind, canonical anchor stage, selected candidate, and
+resolved cohort/fallback path. A matched hierarchical path binds the actual
+held-out product family, release class, and numeric release-position values;
+a fallback tier records only fallback and never invents a child value.
+Otherwise pooling uses same platform, target kind, and selected candidate.
+Both 50% and 80% intervals use precisely the same
+selected residual pool. Fewer than eight residuals leaves the point forecast
+available and emits typed unavailable intervals; a foreign platform never
+rescues a pool.
+
+For confidence `c` in `[.5, .8]`, with `m` sorted residuals, the selected rank
+is `min(m, max(1, ceil(c * (m + 1))))`. The rank residual `q` gives numeric
+bounds `[pointDays - q, pointDays + q]`. Bounds are inclusive, nested, and
+contain the point. Numeric bounds are kept as-is. When exposing calendar
+dates, rounding happens once from the anchor: lower is `floor`, the point uses
+the FR-009 positive half-up rule, and upper is `ceil`; this is explicitly
+outward so no numeric uncertainty is silently narrowed.
+
+The artifact contains calibrated historical folds, complete residual/exclusion
+ledgers, interval scores, and overall/platform/family/stage/point-horizon
+metrics. Groups with fewer than eight calibrated scores are typed unreportable
+rather than represented as zero coverage. `calibrateActiveReleaseDateForecast`
+only accepts matching validated source, FR-009 artifact, and calibration
+artifact and uses historical residuals visible at `sourceAsOfDate`.
+
+```sh
+npm run release-date:interval-calibration:validate -- path/to/release-date-interval-calibration.json
+```
