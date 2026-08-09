@@ -130,6 +130,10 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
     forecast.status === "paused-window-passed";
   const window = forecast.publicReleaseWindow;
   const nextWindow = forecast.nextMilestoneWindow;
+  const elapsedWindow =
+    forecast.status === "paused-window-passed"
+      ? nextWindow ?? window
+      : window;
   const evidenceSummary = [
     `${(nextWindow ?? window)?.sampleSize ?? 0} comparable cycles`,
     nextWindow ? `${nextWindow.labelAgreement}% label agreement` : null,
@@ -233,13 +237,17 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
         </div>
       )}
 
-      {window && isPaused && (
+      {elapsedWindow && isPaused && (
         <div className="forecast-card__elapsed">
-          <p className="text-label">Elapsed historical window</p>
+          <p className="text-label">
+            {forecast.status === "paused-window-passed" && nextWindow
+              ? "Elapsed next-milestone window"
+              : "Elapsed historical window"}
+          </p>
           <p>
             <DateRange
-              earliest={window.earliestDate}
-              latest={window.latestDate}
+              earliest={elapsedWindow.earliestDate}
+              latest={elapsedWindow.latestDate}
             />
           </p>
         </div>

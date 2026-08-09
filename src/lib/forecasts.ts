@@ -624,16 +624,23 @@ export function buildReleaseForecasts(
       let statusMessage =
         "Current estimate based on the latest recorded milestone and comparable historical cycles.";
 
+      // The next milestone window is the forecast visitors see first. A
+      // cycle can therefore be anomalous even while its longer public-release
+      // window is still ahead. Check the displayed window before falling back
+      // to the public-release estimate.
+      const displayedForecastWindow =
+        nextMilestoneWindow ?? publicReleaseWindow;
+
       if (daysSinceLatestMilestone > FORECAST_STALE_AFTER_DAYS) {
         status = "paused-stale";
         statusMessage = `Forecast paused: the latest recorded milestone is ${daysSinceLatestMilestone} days old. Add the newest milestone in Sanity to resume the estimate.`;
       } else if (
-        (parseIsoDay(publicReleaseWindow.latestDate) ??
+        (parseIsoDay(displayedForecastWindow.latestDate) ??
           Number.NEGATIVE_INFINITY) < asOfDay
       ) {
         status = "paused-window-passed";
         statusMessage =
-          "Forecast paused: this cycle has moved beyond the historical date window. A newer milestone is needed before publishing another estimate.";
+          "Forecast paused: the expected next milestone window passed without a recorded milestone. This is anomalous against comparable Apple release cycles, not normal release timing; a newer milestone is needed before publishing another estimate.";
       }
 
       return {

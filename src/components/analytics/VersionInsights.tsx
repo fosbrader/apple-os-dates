@@ -39,8 +39,9 @@ export function VersionForecastCard({
 }: {
   forecast?: ReleaseForecast;
 }) {
+  const isAnomaly = forecast?.status === "paused-window-passed";
   const window =
-    forecast?.status === "active"
+    forecast?.status === "active" || isAnomaly
       ? forecast.nextMilestoneWindow ?? forecast.publicReleaseWindow
       : null;
 
@@ -52,22 +53,31 @@ export function VersionForecastCard({
 
   return (
     <section
-      className="surface version-forecast-card"
+      className={`surface version-forecast-card${
+        isAnomaly ? " version-forecast-card--anomaly" : ""
+      }`}
       aria-labelledby="version-forecast-heading"
     >
       <div className="version-forecast-card__heading">
         <div>
-          <p className="text-label">Methodology-backed forecast</p>
+          <p className="text-label">
+            {isAnomaly ? "Forecast window passed" : "Methodology-backed forecast"}
+          </p>
           <h2 id="version-forecast-heading">
-            {isNextMilestoneForecast
+            {isAnomaly
+              ? `${forecast.nextMilestoneWindow?.likelyLabel ?? "Next milestone"} not recorded`
+              : isNextMilestoneForecast
               ? forecast.nextMilestoneWindow?.likelyLabel
               : "Estimated public release"}
           </h2>
         </div>
-        <span className="version-forecast-card__status">Independent estimate</span>
+        <span className="version-forecast-card__status">
+          {isAnomaly ? "Anomalous delay" : "Independent estimate"}
+        </span>
       </div>
 
       <p className="version-forecast-card__range">
+        {isAnomaly ? "Expected " : ""}
         {forecastDateRange(window)}
       </p>
 
@@ -89,8 +99,9 @@ export function VersionForecastCard({
       </dl>
 
       <p className="version-forecast-card__note">
-        Calculated from comparable completed cycles. This is not an Apple
-        announcement.
+        {isAnomaly
+          ? forecast.statusMessage
+          : "Calculated from comparable completed cycles. This is not an Apple announcement."}
       </p>
       <p className="version-forecast-card__links">
         <Link href="/forecasts/">View all forecasts &rarr;</Link>
