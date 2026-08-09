@@ -11,6 +11,7 @@ export const sitePage = defineType({
   ],
   initialValue: {
     editorialReview: { status: "draft" },
+    byline: "Version Record",
   },
   fields: [
     defineField({
@@ -35,6 +36,7 @@ export const sitePage = defineType({
       group: "content",
       options: {
         list: [
+          { title: "Article / site news", value: "article" },
           { title: "About", value: "about" },
           { title: "Methodology", value: "methodology" },
           { title: "Editorial policy", value: "editorialPolicy" },
@@ -78,6 +80,86 @@ export const sitePage = defineType({
       type: "date",
       group: "publishing",
       description: "Recommended for policies and contributor terms.",
+    }),
+    defineField({
+      name: "byline",
+      title: "Public Byline",
+      type: "string",
+      group: "publishing",
+      description:
+        "Fixed to the Version Record organization. Personal attribution is intentionally disabled.",
+      hidden: ({ document }) => document?.pageKind !== "article",
+      readOnly: ({ document }) => document?.pageKind === "article",
+      validation: (rule) =>
+        rule.custom((value, context) => {
+          if (context.document?.pageKind !== "article") return true;
+          return value === "Version Record"
+            ? true
+            : "Articles must use the Version Record organization byline.";
+        }),
+    }),
+    defineField({
+      name: "publishedAt",
+      title: "Published At",
+      type: "datetime",
+      group: "publishing",
+      description:
+        "Assigned automatically on first publication and preserved on later updates.",
+      hidden: ({ document }) => document?.pageKind !== "article",
+      readOnly: ({ document }) => document?.pageKind === "article",
+      validation: (rule) =>
+        rule.custom((value, context) => {
+          const document = context.document as
+            | {
+                pageKind?: string;
+                editorialReview?: { status?: string };
+              }
+            | undefined;
+          if (
+            document?.pageKind !== "article" ||
+            document.editorialReview?.status !== "approved"
+          ) {
+            return true;
+          }
+          return value
+            ? true
+            : "Approved articles require their first publication timestamp.";
+        }),
+    }),
+    defineField({
+      name: "updatedAt",
+      title: "Updated At",
+      type: "datetime",
+      group: "publishing",
+      description:
+        "Refreshed automatically whenever a published article is updated.",
+      hidden: ({ document }) => document?.pageKind !== "article",
+      readOnly: ({ document }) => document?.pageKind === "article",
+      validation: (rule) =>
+        rule.custom((value, context) => {
+          const document = context.document as
+            | {
+                pageKind?: string;
+                publishedAt?: string;
+                editorialReview?: { status?: string };
+              }
+            | undefined;
+          if (document?.pageKind !== "article") return true;
+          if (
+            document.editorialReview?.status === "approved" &&
+            !value
+          ) {
+            return "Approved articles require a modification timestamp.";
+          }
+          if (
+            value &&
+            document.publishedAt &&
+            Date.parse(value) < Date.parse(document.publishedAt)
+          ) {
+            return "Updated At cannot be earlier than Published At.";
+          }
+          return true;
+        }),
     }),
     defineField({
       name: "editorialReview",

@@ -386,6 +386,7 @@ export interface PublishedCorrection {
 
 export interface SitePageRecord {
   _id: string;
+  updatedAt?: string;
   title: string;
   slug: SlugValue;
   pageKind: string;
@@ -393,6 +394,8 @@ export interface SitePageRecord {
   body: PortableTextBlock[];
   citations?: CitationRecord[];
   effectiveDate?: string;
+  byline?: string;
+  publishedAt?: string;
   editorialReview?: EditorialReview;
 }
 
