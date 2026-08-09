@@ -103,6 +103,41 @@ export function VersionForecastCard({
           ? forecast.statusMessage
           : "Calculated from comparable completed cycles. This is not an Apple announcement."}
       </p>
+      {isAnomaly && forecast.nextMilestoneWindow && (
+        <div className="version-forecast-card__context">
+          <p className="text-label">Why this is marked anomalous</p>
+          <p>
+            {forecast.release.version} has gone{" "}
+            {forecast.daysSinceLatestMilestone === null
+              ? "an extended interval"
+              : String(forecast.daysSinceLatestMilestone) + " days"}{" "}
+            since {forecast.latestMilestone?.label ?? "its latest milestone"}.
+            In{" "}
+            {forecast.nextMilestoneWindow.sampleSize} comparable cycles, the
+            middle half reached the next milestone{" "}
+            {forecast.nextMilestoneWindow.p25Days}–
+            {forecast.nextMilestoneWindow.p75Days} days later (median{" "}
+            {forecast.nextMilestoneWindow.medianDays}). The expected window
+            ended {formatDate(forecast.nextMilestoneWindow.latestDate)}.
+          </p>
+          {forecast.publicReleaseWindow && (
+            <p>
+              This flags a late next milestone, not a late public release. The
+              comparable public-release window still runs{" "}
+              {formatDate(forecast.publicReleaseWindow.earliestDate)} –{" "}
+              {formatDate(forecast.publicReleaseWindow.latestDate)} (median{" "}
+              {formatDate(forecast.publicReleaseWindow.medianDate)}).
+            </p>
+          )}
+          <p>
+            Rare historical exceptions are documented in the{" "}
+            <Link href="/methodology/#anomaly-status">
+              forecast methodology
+            </Link>
+            .
+          </p>
+        </div>
+      )}
       <p className="version-forecast-card__links">
         <Link href="/forecasts/">View all forecasts &rarr;</Link>
         <Link href="/methodology/">Read the methodology &rarr;</Link>

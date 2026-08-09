@@ -150,6 +150,60 @@ export default function MethodologyPage() {
           </p>
         </ContentSection>
 
+        <ContentSection
+          id="anomaly-status"
+          title="When a forecast becomes an anomaly"
+        >
+          <p>
+            A next-milestone forecast has a different job from a public-release
+            forecast. If the next milestone window&rsquo;s upper bound passes
+            without a newly recorded distinct milestone, the estimate is
+            paused and labeled an anomaly. The expected dates remain visible so
+            the comparison can be inspected, but the site does not publish a
+            new date by extending the window indefinitely.
+          </p>
+          <p>
+            This is a scoped cadence signal: the next developer milestone is
+            late relative to the selected comparison cohort. It is not a claim
+            that Apple canceled the release, that the public release is late,
+            or that Apple has never allowed a gap this long.
+          </p>
+          <BulletList>
+            <li>
+              <strong className="text-[var(--text)]">
+                Recent iOS Beta 4 comparisons:
+              </strong>{" "}
+              the iOS 27 Beta 4 case documented here used the 12 most recent
+              same-position cycles. Their middle half of next-milestone
+              arrivals fell at 12–14 days, with no observed interval longer
+              than 16 days.
+            </li>
+            <li>
+              <strong className="text-[var(--text)]">
+                Historical exceptions:
+              </strong>{" "}
+              iOS 4 moved from Beta 4 to GM after 20 days, while iOS 6 moved
+              from Beta 4 to Public after 44 days without a Beta 5. Those
+              precedents are why the site calls the current state rare and
+              cohort-relative rather than impossible.
+            </li>
+            <li>
+              <strong className="text-[var(--text)]">
+                Public-release context:
+              </strong>{" "}
+              the public-release window is calculated separately. A stalled
+              next milestone can be anomalous while the eventual public date
+              remains inside its broader historical range.
+            </li>
+          </BulletList>
+          <p>
+            When a new dated milestone is added and published, the next-stage
+            comparison is rebuilt from the updated record. The anomaly state
+            therefore describes the evidence currently available, not a
+            permanent judgment about the cycle.
+          </p>
+        </ContentSection>
+
         <ContentSection title="Sample size and confidence">
           <p>
             No date estimate is shown with fewer than three eligible historical
@@ -192,9 +246,12 @@ export default function MethodologyPage() {
         <ContentSection title="Freshness safeguards">
           <p>
             A date window stops being presented as upcoming when the latest
-            recorded milestone is more than 60 days old or when the historical
-            upper-bound date has already passed. This avoids showing an
-            obviously stale countdown as if the underlying cycle were current.
+            recorded milestone is more than 60 days old or when the displayed
+            next-milestone or public-release upper bound has already passed.
+            For a passed next-milestone window, the site keeps the expected
+            range visible and switches to the anomaly explanation above. This
+            avoids showing an obviously stale countdown as if the underlying
+            cycle were current.
           </p>
           <p>
             The estimate can resume after a newer milestone is added to the
