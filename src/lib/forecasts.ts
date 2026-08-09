@@ -640,7 +640,7 @@ export function buildReleaseForecasts(
       ) {
         status = "paused-window-passed";
         statusMessage =
-          "Forecast paused: the expected next milestone window passed without a recorded milestone. This cycle is anomalous against comparable Apple release cycles; a newer milestone is needed before publishing another estimate.";
+          "Forecast paused: the expected next milestone window passed without a recorded milestone. This is anomalous against comparable Apple release cycles, not normal release timing; a newer milestone is needed before publishing another estimate.";
       }
 
       return {
