@@ -52,26 +52,49 @@ release-hold, and resolve. IDs never appear in the URL. The route requires the
 independent `SUBMISSION_OPERATOR_SECRET`, checks it in constant time, and is
 unavailable outside Production.
 
-The local operator command uses `vercel env run -e production` only to load the
-operator secret. A minimal shell bootstrap reduces the environment to that one
-secret before Node or any JavaScript dependency starts. The client captures the
-secret and removes it from its process environment before it sends one HTTPS
-request to the fixed Production route. It does not access Blob directly, does
-not use local OIDC, and starts no helper process. Run it only from a trusted
-checkout on an operator's terminal.
+The local operator command reads its credential from the macOS login keychain.
+A minimal shell bootstrap reduces the environment to that one secret before
+Node or any JavaScript dependency starts. The client captures the secret and
+removes it from its process environment before it sends one HTTPS request to
+the fixed Production route. Routine moderation does not download the Production
+environment, invoke Vercel CLI, access Blob directly, use local OIDC, or start a
+helper process. Run it only from a trusted checkout on an authorized operator's
+terminal.
 
-The npm command pins Vercel CLI `58.9.0`, the version reviewed with this
-credential boundary. Review the bootstrap and rerun its security tests before
-changing that version. Do not replace the pin with `latest`.
+Credential provisioning and rotation use the pinned Vercel CLI version
+`58.9.0`. Routine moderation does not use Vercel CLI. Review the provisioner,
+bootstrap, and security tests before changing the pin. Do not replace it with
+`latest`.
 
-Prerequisites:
+Provision or rotate the operator credential:
 
-1. Authenticate Vercel CLI as an authorized project member.
-2. Link this checkout to the correct Vercel project.
-3. Confirm that exactly one private Blob store is linked to Production.
-4. Confirm that `SUBMISSION_OPERATOR_SECRET` is a Sensitive Production variable.
+1. Use an authorized macOS account with an unlocked login keychain set as the
+   account's default keychain.
+2. Authenticate Vercel CLI as an authorized project member.
+3. Link this checkout to the correct Vercel project.
+4. Confirm that exactly one private Blob store is linked only to Production.
 5. Confirm that the deployed operator route is from the reviewed release.
-6. Keep the terminal and shell history private.
+6. Run `npm run submissions:operator:provision`.
+7. Redeploy Production before running a moderation command.
+8. Run `npm run submissions:moderate -- list` to verify access.
+
+The provisioner generates a new high-entropy credential, stores it in the macOS
+login keychain, and streams the same value to Vercel as a Sensitive
+Production-only variable. It does not print the value or place it in an
+argument, file, child environment, or deployment log. If Vercel rejects the
+update or its result cannot be confirmed, treat the remote state as unknown and
+rerun the provisioner before deployment. After initial setup, routine moderation
+requires neither Vercel authentication nor a Production environment download.
+
+If provisioning is interrupted, do not redeploy or run moderation. The remote
+and local updates can have different outcomes. Rerun the provision command to
+establish one new matching value, then redeploy Production.
+
+The first moderation command after provisioning or rotation can display a
+macOS Keychain access dialog. Confirm that the request is for the Version Record
+submission operator item and `/usr/bin/security`, then enter the login-keychain
+password yourself and select **Always Allow**. The command never receives or
+stores that password. Do not approve a differently named item or requester.
 
 List queue records with safe metadata only:
 
@@ -123,11 +146,12 @@ inspect the private store; do not delete either object speculatively.
 
 ## Repository setup
 
-Generate three independent, high-entropy values. Use at least 32 random bytes
-for each value. Set `SUBMISSION_MONITOR_SECRET`, `CRON_SECRET`, and
-`SUBMISSION_OPERATOR_SECRET` as Sensitive Production variables in Vercel, then
-redeploy. Do not add the operator secret to Preview, Development, or GitHub.
-Add only `SUBMISSION_MONITOR_SECRET` as a repository Actions secret:
+Generate two independent, high-entropy values of at least 32 random bytes for
+`SUBMISSION_MONITOR_SECRET` and `CRON_SECRET`. Set both as Sensitive Production
+variables in Vercel. Provision `SUBMISSION_OPERATOR_SECRET` separately with
+`npm run submissions:operator:provision`; do not create a second local copy
+manually. Keep all three values out of Preview and Development, then redeploy
+Production. Add only `SUBMISSION_MONITOR_SECRET` as a repository Actions secret:
 
 1. Open **Settings → Secrets and variables → Actions**.
 2. Select **New repository secret**.
@@ -135,8 +159,11 @@ Add only `SUBMISSION_MONITOR_SECRET` as a repository Actions secret:
 4. Set its value to the same secret that protects the production status route.
 
 Do not store any secret in a repository variable, workflow file, issue, comment,
-runbook, or deployment log. Rotate the monitor's Production value and Actions
-secret together. Rotate the operator and cron secrets independently.
+runbook, `.env` file, or deployment log. Rotate the monitor's Production value
+and Actions secret together. Rotate the cron secret independently. Rotate the
+operator credential by rerunning `npm run submissions:operator:provision`, then
+redeploy Production immediately. Avoid operator rotation while an urgent queue
+review depends on the currently deployed credential.
 
 The workflow uses the built-in `GITHUB_TOKEN`. Its only explicit permission is
 `issues: write`; it does not check out repository contents and it has no
@@ -245,7 +272,13 @@ treats requests as human unless BotID development overrides are used.
 - The monitor secret authenticates only the narrow polling request. It is not a
   Sanity token and must not grant read or write access to moderation records.
 - The independent operator secret grants access to private moderation actions.
-  Keep it only in Vercel Production and rotate it after suspected exposure.
+  Keep it only as a Sensitive Production variable and as the matching
+  login-keychain item on an authorized operator Mac. Rotate it with the
+  provisioner after suspected exposure, then redeploy Production immediately.
+- The login-keychain item is encrypted at rest. While that keychain is unlocked,
+  another process running as the operator's macOS account can invoke the trusted
+  system Keychain client and retrieve it. Treat that local account as privileged,
+  lock the Mac when unattended, and do not run untrusted software in the account.
 - BotID must remain configured at the free `basic` check level in both
   `src/instrumentation-client.ts` and the server route. A mismatch fails
   verification. Turnstile remains optional defense in depth when both of its

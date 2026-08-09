@@ -1,15 +1,41 @@
 #!/bin/bash
 
-# Vercel's environment runner supplies every Production variable to this
-# process. Reduce that environment before Node or any JavaScript dependency
-# starts. The moderation client needs only its independent operator secret.
+# Read the independent operator credential from the macOS login keychain, then
+# reduce the process environment before Node or any JavaScript dependency
+# starts. Routine moderation never downloads the Production environment.
 set +x
 set -euo pipefail
 
-declare vr_operator_secret="${SUBMISSION_OPERATOR_SECRET-}"
+declare -r vr_keychain_service="com.versionrecord.submission-operator.v1"
+declare vr_keychain_account
+vr_keychain_account=$(/usr/bin/id -un 2>/dev/null || true)
+declare vr_keychain_path
+vr_keychain_path=$(/usr/bin/security login-keychain 2>/dev/null || true)
+vr_keychain_path=${vr_keychain_path#"${vr_keychain_path%%[![:space:]]*}"}
+vr_keychain_path=${vr_keychain_path%"${vr_keychain_path##*[![:space:]]}"}
+vr_keychain_path=${vr_keychain_path#\"}
+vr_keychain_path=${vr_keychain_path%\"}
+if [ -z "$vr_keychain_account" ] || [ ! -f "$vr_keychain_path" ]; then
+  echo "The local submission operator credential is unavailable." >&2
+  exit 1
+fi
+
+declare vr_operator_secret
+if ! vr_operator_secret=$(
+  /usr/bin/security find-generic-password \
+    -a "$vr_keychain_account" \
+    -s "$vr_keychain_service" \
+    -w \
+    "$vr_keychain_path" 2>/dev/null
+); then
+  echo "The local submission operator credential is unavailable." >&2
+  echo "Run npm run submissions:operator:provision from this checkout." >&2
+  exit 1
+fi
+
 declare vr_ci="${CI-}"
 if [ "${#vr_operator_secret}" -lt 24 ]; then
-  echo "SUBMISSION_OPERATOR_SECRET is not configured for Production." >&2
+  echo "The local submission operator credential is invalid." >&2
   exit 1
 fi
 
@@ -43,6 +69,9 @@ fi
 # builtins, so the operator secret never appears in an intermediate argv.
 export -n \
   vr_operator_secret \
+  vr_keychain_service \
+  vr_keychain_account \
+  vr_keychain_path \
   vr_ci \
   vr_node_binary \
   vr_script_directory \
