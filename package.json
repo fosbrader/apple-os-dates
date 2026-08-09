@@ -18,6 +18,8 @@
     "data:build:check": "tsx scripts/build-release-data.ts",
     "data:validate": "tsx scripts/validate-release-data.ts",
     "forecast:validate": "tsx scripts/validate-forecasts.ts",
+    "evidence:inventory": "tsx scripts/generate-evidence-inventory.ts --write",
+    "evidence:inventory:check": "tsx scripts/generate-evidence-inventory.ts --check",
     "migration:events:plan": "tsx scripts/plan-release-event-migration.ts",
     "migration:chronology-metadata:plan": "tsx scripts/plan-chronology-metadata-migration.ts",
     "research:validate": "node --import tsx scripts/validate-research-batches.ts",
