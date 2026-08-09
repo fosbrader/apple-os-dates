@@ -19,6 +19,7 @@
     "data:validate": "tsx scripts/validate-release-data.ts",
     "forecast:validate": "tsx scripts/validate-forecasts.ts",
     "migration:events:plan": "tsx scripts/plan-release-event-migration.ts",
+    "migration:chronology-metadata:plan": "tsx scripts/plan-chronology-metadata-migration.ts",
     "research:validate": "node --import tsx scripts/validate-research-batches.ts",
     "sanity:coverage:report": "sanity exec scripts/report-content-coverage.ts --with-user-token --",
     "sanity:launch:check": "sanity exec scripts/ingest-launch-content.ts --with-user-token -- --content scripts/apple-launch-content-2026.json",

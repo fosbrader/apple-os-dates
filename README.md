@@ -164,6 +164,24 @@ The planner:
 The audited seed currently projects to 410 versions and 1,979 events with exact
 legacy parity. No event/build migration is applied automatically.
 
+Plan chronology metadata from a published local snapshot only:
+
+```sh
+npm run migration:chronology-metadata:plan -- \
+  --input snapshot.json \
+  --terminal-dates reviewed-terminal-dates.json \
+  --write-artifacts
+```
+
+This dry-run-only planner has no Sanity client or apply mode. It emits exact
+revision-guarded patch IDs, a deterministic plan hash, and a rollback artifact.
+It defaults event `firstObservedAt` only from Sanity `_createdAt`, gives released
+versions their `publicReleaseDate`, and requires a local cited terminal-date
+record before it gives a superseded version a status-effective date. Supplied
+terminal sources become deterministic version citations. Rollback entries
+separate fields to restore from fields to unset, so a missing old value is
+never written as data.
+
 The historical reconciler remains available as a guarded chronology tool:
 
 ```sh
