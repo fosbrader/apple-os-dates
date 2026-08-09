@@ -52,6 +52,16 @@ export interface ArticleSummary {
   };
 }
 
+// Published Site News documents live in the private Sanity dataset. Keep the
+// read token server-only and use the published perspective for anonymous page
+// requests; the public CDN client cannot see these documents when anonymous
+// dataset reads are disabled.
+const publishedClient = client.withConfig({
+  token: process.env.SANITY_API_READ_TOKEN?.trim(),
+  perspective: "published",
+  useCdn: false,
+});
+
 const articleProjection = `{
   _id,
   title,
@@ -193,7 +203,7 @@ export async function getDraftArticle(
 export async function getPublishedArticle(
   slug: string,
 ): Promise<ArticleDocument | null> {
-  return client.fetch<ArticleDocument | null>(
+  return publishedClient.fetch<ArticleDocument | null>(
     publishedArticleQuery,
     { slug },
     publishedFetchOptions,
@@ -203,7 +213,7 @@ export async function getPublishedArticle(
 export async function getPublishedArticleSummaries(): Promise<
   ArticleSummary[]
 > {
-  return client.fetch<ArticleSummary[]>(
+  return publishedClient.fetch<ArticleSummary[]>(
     publishedArticleSummariesQuery,
     {},
     publishedFetchOptions,
