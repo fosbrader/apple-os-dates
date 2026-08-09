@@ -87,3 +87,46 @@ ambiguous stages, contradictory release-status dates, and insufficient
 replacement evidence all fail closed with a ledger exclusion. Invalid global
 `asOfDate` or `issuedAt` values throw `ReleaseObservationInputError` before any
 result is produced, preserving the result type's validated-dataset guarantee.
+
+## Historical-analysis dataset v1
+
+`src/lib/historical-analysis-dataset.ts` builds the versioned
+`historical-analysis-dataset/v1` product from a validated
+`ReleaseObservationAdapterResult` plus a separately sourced `releaseId` metadata
+sidecar. The sidecar requires stable `platformId`, `productFamilyId`, closed v1
+`releaseClass` (`major`, `minor`, or `patch`), `releasePosition`, and
+`releaseCycleId`. The builder never parses display versions, labels, notes, or
+source-array order to supply them.
+
+Each metadata assertion and every derived row retains non-empty stable evidence
+IDs. Output includes release-cycle rows, adapter-collapsed canonical-event rows,
+lifecycle outcomes, stage intervals, the inclusion/exclusion ledger, provenance,
+and SHA-256 input/code/dataset fingerprints. Input normalization removes
+presentation-only fields and sorts logical arrays, so equivalent input ordering
+produces identical serialized output and fingerprints.
+
+Chronology coverage is an explicit sourced `complete` or `unknown` state. The
+unknown reasons are `not-reviewed`, `source-coverage-incomplete`, and
+`same-day-order-unknown`. The builder only reduces coverage: same-day entries
+without independently verified unique `sameDayOrder` values result in unknown
+coverage. A public-release or GM event and its matching same-day lifecycle
+outcome are one closure observation, not unordered duplicate timeline facts.
+Intervals are unavailable with machine-readable reasons rather than inferred;
+same-calendar-day intervals are never zero days.
+
+Superseded cycles remain only as excluded release-cycle and ledger rows. Future,
+withdrawn, replaced, superseded, and revision-predecessor observations stay
+excluded through the adapter ledger and cannot re-enter the dataset. Developer
+and public betas remain separate because the builder uses canonical `stage` and
+`channel`, never descriptive text.
+
+Validate a serialized dataset without rebuilding it:
+
+```sh
+npm run historical:validate -- path/to/historical-analysis-dataset.json
+```
+
+`validateHistoricalAnalysisInput` rejects stale adapter/forecast contracts,
+extra or missing metadata, malformed ISO issuance instants, and invalid sidecar
+values before a build. `validateHistoricalAnalysisDataset` validates every row,
+ordering, endpoint/interval relation, source linkage, and fingerprint.
