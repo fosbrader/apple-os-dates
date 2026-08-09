@@ -5,9 +5,15 @@ import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "./schemas";
 import { dataset, projectId } from "./env";
+import { createArticlePublishAction } from "./actions/articlePublishAction";
 
+const privateDocumentTypes = new Set([
+  "submission",
+  "feedSource",
+  "ingestCandidate",
+]);
 const inactiveDocumentTypes = new Set([
-  "sitePage",
+  ...privateDocumentTypes,
   "siteSettings",
 ]);
 
@@ -153,6 +159,18 @@ export default defineConfig({
                   ])
               ),
             S.documentTypeListItem("releaseChange").title("Change Library"),
+            S.listItem()
+              .title("Site News")
+              .child(
+                S.documentList()
+                  .title("Site News")
+                  .schemaType("sitePage")
+                  .filter('_type == "sitePage" && pageKind == "article"')
+                  .defaultOrdering([
+                    { field: "publishedAt", direction: "desc" },
+                    { field: "_updatedAt", direction: "desc" },
+                  ])
+              ),
             S.divider(),
             S.listItem()
               .title("Sources & Provenance")
@@ -182,7 +200,15 @@ export default defineConfig({
         (template) =>
           !inactiveDocumentTypes.has(template.templateId)
       ),
-    actions: (previous, context) =>
-      inactiveDocumentTypes.has(context.schemaType) ? [] : previous,
+    actions: (previous, context) => {
+      if (inactiveDocumentTypes.has(context.schemaType)) return [];
+      if (context.schemaType !== "sitePage") return previous;
+
+      return previous.map((action) =>
+        action.action === "publish"
+          ? createArticlePublishAction(action)
+          : action
+      );
+    },
   },
 });
