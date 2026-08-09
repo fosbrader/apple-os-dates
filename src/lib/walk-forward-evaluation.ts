@@ -5,6 +5,7 @@ import {
   validateHistoricalAnalysisDataset,
   type HistoricalAnalysisDatasetV1,
 } from "./historical-analysis-dataset";
+import type { CanonicalForecastStage } from "./forecast-analysis-contracts";
 
 /** A deterministic, offline backtest for the historical-analysis v1 product. */
 export const WALK_FORWARD_EVALUATION_VERSION = "walk-forward-evaluation/v1";
@@ -47,8 +48,10 @@ export interface WalkForwardTimingTargetV1 {
   releaseId: string;
   platformId: string;
   productFamilyId: string;
-  stage: string;
+  stage: CanonicalForecastStage;
   anchorEventId: string;
+  /** Calendar day of the anchor appearance; used only for seasonal grouping. */
+  anchorOccurredOn: string;
   originOn: string;
   endpoint: Endpoint;
   /** Verified elapsed occurrence days; origin is the anchor fact-known day. */
@@ -109,7 +112,7 @@ export interface WalkForwardScoreV1 {
   baseline: WalkForwardBaseline;
   platformId: string;
   productFamilyId: string;
-  stage: string;
+  stage: CanonicalForecastStage;
   horizonId: string;
   actualDays: number;
   predictionDays: number;
@@ -131,7 +134,7 @@ export interface WalkForwardAggregateMetricV1 {
   baseline: WalkForwardBaseline;
   group: WalkForwardMetricGroup;
   familyId?: string;
-  stage?: string;
+  stage?: CanonicalForecastStage;
   horizonId?: string;
   scoreCount: number;
   reportable: boolean;
@@ -203,7 +206,7 @@ function quantile(values: readonly number[], percentile: number): number {
   return sorted[Math.max(0, Math.ceil(percentile * sorted.length) - 1)]!;
 }
 function sorted<T>(rows: readonly T[], key: (row: T) => string): T[] { return [...rows].sort((a, b) => compareText(key(a), key(b))); }
-function uniqueSorted(values: readonly string[]): string[] { return [...new Set(values)].sort(compareText); }
+function uniqueSorted<T extends string>(values: readonly T[]): T[] { return [...new Set(values)].sort(compareText) as T[]; }
 
 function normalizeConfig(config: WalkForwardEvaluationConfigV1): WalkForwardEvaluationConfigV1 {
   return {
@@ -258,7 +261,7 @@ function deriveTargets(sourceDataset: HistoricalAnalysisDatasetV1, config: WalkF
     const horizonId = horizonFor(interval.interval.days, config);
     if (!horizonId) { exclusionLedger.push({ ...base, included: false, reason: "unknown-horizon" }); continue; }
     const id = targetId(interval.releaseId, anchor.eventId, endpoint);
-    targets.push({ targetId: id, releaseId: interval.releaseId, platformId: anchor.platformId, productFamilyId: anchor.productFamilyId, stage: anchor.stage, anchorEventId: anchor.eventId, originOn: anchor.firstObservedOn, endpoint, actualDays: interval.interval.days, horizonId, sourceEvidenceIds: uniqueSorted([...interval.sourceEvidenceIds, ...anchor.sourceEvidenceIds, ...endpoint.sourceEvidenceIds]) });
+    targets.push({ targetId: id, releaseId: interval.releaseId, platformId: anchor.platformId, productFamilyId: anchor.productFamilyId, stage: anchor.stage, anchorEventId: anchor.eventId, anchorOccurredOn: anchor.occurredOn, originOn: anchor.firstObservedOn, endpoint, actualDays: interval.interval.days, horizonId, sourceEvidenceIds: uniqueSorted([...interval.sourceEvidenceIds, ...anchor.sourceEvidenceIds, ...endpoint.sourceEvidenceIds]) });
     exclusionLedger.push({ ...base, included: true, targetId: id });
   }
   return { targets: sorted(targets, (target) => target.targetId), exclusionLedger: sorted(exclusionLedger, (row) => `${row.intervalReleaseId}\u0000${row.startEventId}`) };
@@ -271,8 +274,10 @@ function eligibleTrainingTargets(heldout: WalkForwardTimingTargetV1, targets: re
 function cohortFor(baseline: WalkForwardBaseline, heldout: WalkForwardTimingTargetV1, training: readonly WalkForwardTimingTargetV1[]) {
   const platform = training.filter((target) => target.platformId === heldout.platformId);
   const stage = platform.filter((target) => target.stage === heldout.stage);
-  if (baseline === "platform-stage-median") return { name: "stage" as const, targets: stage };
-  const exactSeasonal = stage.filter((target) => target.originOn.slice(5, 7) === heldout.originOn.slice(5, 7));
+  if (baseline === "platform-stage-median") return stage.length >= WALK_FORWARD_MINIMUM_TRAINING_OUTCOMES
+    ? { name: "stage" as const, targets: stage }
+    : { name: "platform-pooled" as const, targets: platform };
+  const exactSeasonal = stage.filter((target) => target.anchorOccurredOn.slice(5, 7) === heldout.anchorOccurredOn.slice(5, 7));
   if (exactSeasonal.length >= WALK_FORWARD_MINIMUM_TRAINING_OUTCOMES) return { name: "exact-seasonal" as const, targets: exactSeasonal };
   if (stage.length >= WALK_FORWARD_MINIMUM_TRAINING_OUTCOMES) return { name: "stage" as const, targets: stage };
   return { name: "platform-pooled" as const, targets: platform };
@@ -307,7 +312,7 @@ function aggregate(scores: readonly WalkForwardScoreV1[]): WalkForwardAggregateM
     for (const stage of uniqueSorted(baselineScores.map((score) => score.stage))) metrics.push(metricFor(baseline, "stage", baselineScores.filter((score) => score.stage === stage), { stage }));
     for (const horizonId of uniqueSorted(baselineScores.map((score) => score.horizonId))) metrics.push(metricFor(baseline, "horizon", baselineScores.filter((score) => score.horizonId === horizonId), { horizonId }));
     for (const key of uniqueSorted(baselineScores.map((score) => `${score.productFamilyId}\u0000${score.stage}\u0000${score.horizonId}`))) {
-      const [familyId, stage, horizonId] = key.split("\u0000");
+      const [familyId, stage, horizonId] = key.split("\u0000") as [string, CanonicalForecastStage, string];
       metrics.push(metricFor(baseline, "family-stage-horizon", baselineScores.filter((score) => score.productFamilyId === familyId && score.stage === stage && score.horizonId === horizonId), { familyId, stage, horizonId }));
     }
   }
@@ -331,7 +336,7 @@ function deriveCore(sourceDataset: HistoricalAnalysisDatasetV1, config: WalkForw
   return { evaluationVersion: WALK_FORWARD_EVALUATION_VERSION, config: normalizeConfig(config), sourceDataset, targets, exclusionLedger, folds: sorted(folds, (fold) => fold.foldId), predictions: sorted(predictions, (prediction) => `${prediction.baseline}\u0000${prediction.foldId}`), scores, aggregateMetrics: aggregate(scores) } as const;
 }
 
-const CODE_MANIFEST = { algorithm: "walk-forward-v1;known-at-origin;platform-only;median;nearest-rank-intervals", historicalDatasetVersion: HISTORICAL_ANALYSIS_DATASET_VERSION, evaluationVersion: WALK_FORWARD_EVALUATION_VERSION, minimumTrainingOutcomes: WALK_FORWARD_MINIMUM_TRAINING_OUTCOMES } as const;
+const CODE_MANIFEST = { algorithm: "walk-forward-v1;known-at-origin;anchor-occurrence-season;platform-only-stage-fallback;median;nearest-rank-intervals", historicalDatasetVersion: HISTORICAL_ANALYSIS_DATASET_VERSION, evaluationVersion: WALK_FORWARD_EVALUATION_VERSION, minimumTrainingOutcomes: WALK_FORWARD_MINIMUM_TRAINING_OUTCOMES } as const;
 export const WALK_FORWARD_EVALUATION_CODE_FINGERPRINT = historicalAnalysisFingerprint(CODE_MANIFEST);
 
 /** Build a deterministic artifact; it uses neither a clock, network, nor randomness. */

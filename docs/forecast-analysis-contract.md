@@ -155,8 +155,10 @@ observed by it. The held-out target is always excluded.
 
 The two v1 baselines never cross platforms:
 
-- `platform-stage-median` uses same-platform, same-stage outcomes.
-- `seasonal-median` tries same-platform exact anchor calendar month and stage,
+- `platform-stage-median` tries same-platform, same-stage outcomes, then
+  same-platform pooled outcomes when that stage has fewer than eight samples.
+- `seasonal-median` tries same-platform exact **anchor occurrence** calendar
+  month and stage (never the first-observed/fold-origin month),
   then same-platform stage, then same-platform pooled outcomes.
 
 Every selected cohort needs at least eight outcomes. Otherwise the artifact
@@ -178,3 +180,9 @@ npm run walk-forward:validate -- path/to/walk-forward-evaluation.json
 
 This FR-008 contract deliberately does not introduce a hierarchical candidate
 model, calibration generation/storage, API, or UI.
+
+Historical analysis v1 intentionally revision-collapses each canonical stage
+to its effective appearance before this evaluator receives it. Consequently an
+evaluation source snapshot cannot reconstruct hypothetical earlier folds based
+on a revision state that was later replaced; such folds remain out of scope
+rather than being inferred from revision labels or current knowledge.
