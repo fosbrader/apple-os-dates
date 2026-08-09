@@ -138,3 +138,51 @@ extra or missing metadata, malformed ISO issuance instants, invalid sidecar
 values, and incomplete or extra lifecycle outcomes before a build.
 `validateHistoricalAnalysisDataset` validates every row, ordering,
 endpoint/interval relation, source linkage, and fingerprint.
+
+## Walk-forward evaluation v1
+
+`src/lib/walk-forward-evaluation.ts` is a separate, pure
+`walk-forward-evaluation/v1` artifact builder. It consumes only a validated
+`historical-analysis-dataset/v1`; it does not read storage, use the clock,
+make network requests, or change the forecast UI/API.
+
+Each eligible stage interval becomes a timing target. A fold origin is exactly
+the anchor event's `firstObservedOn`, while the timing target remains the
+verified interval days. The endpoint must be source-linked and first observed
+strictly after that origin. Training samples must have an anchor known at the
+fold origin, an endpoint that occurred by it, and an endpoint fact first
+observed by it. The held-out target is always excluded.
+
+The two v1 baselines never cross platforms:
+
+- `platform-stage-median` tries same-platform, same-stage outcomes, then
+  same-platform pooled outcomes when that stage has fewer than eight samples.
+- `seasonal-median` tries same-platform exact **anchor occurrence** calendar
+  month and stage (never the first-observed/fold-origin month),
+  then same-platform stage, then same-platform pooled outcomes.
+
+Every selected cohort needs at least eight outcomes. Otherwise the artifact
+records a typed `no-forecast`, never an invented fallback. Horizon buckets are
+reporting labels only and cannot influence training or predictions. The output
+records every target/exclusion, fold cohort IDs, prediction, score, group
+metrics, and fingerprints. Group metrics are reportable only at eight scores;
+MAE, median absolute error, signed bias, and optional inclusive 50/80 empirical
+coverage are emitted deterministically. Empirical intervals are opt-in on the
+config and are evaluation rows only, not a calibration artifact or service.
+
+The evaluation artifact embeds its historical source dataset so the standalone
+validator can recompute folds, leakage rules, cohort selection, scores,
+metrics, source evidence, and fingerprints from one file:
+
+```sh
+npm run walk-forward:validate -- path/to/walk-forward-evaluation.json
+```
+
+This FR-008 contract deliberately does not introduce a hierarchical candidate
+model, calibration generation/storage, API, or UI.
+
+Historical analysis v1 intentionally revision-collapses each canonical stage
+to its effective appearance before this evaluator receives it. Consequently an
+evaluation source snapshot cannot reconstruct hypothetical earlier folds based
+on a revision state that was later replaced; such folds remain out of scope
+rather than being inferred from revision labels or current knowledge.
