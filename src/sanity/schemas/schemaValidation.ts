@@ -6,6 +6,15 @@ interface ReferenceValue {
   _ref?: string;
 }
 
+export interface ChronologyCoverageValue {
+  status?: string;
+  auditedChannels?: string[];
+  coverageThrough?: string;
+  knownGapNote?: string;
+  verifiedAt?: string;
+  auditBatch?: ReferenceValue;
+}
+
 interface CitationValue {
   source?: ReferenceValue;
 }
@@ -29,6 +38,128 @@ function currentDocumentIds(context: ValidationContext): string[] {
 
 function referencedId(value: unknown): string | undefined {
   return normalizeDocumentId((value as ReferenceValue | undefined)?._ref);
+}
+
+export function validateStatusEffectiveDate(
+  value: string | undefined,
+  context: ValidationContext
+) {
+  if (!value) return true;
+
+  const publicReleaseDate = context.document?.publicReleaseDate as
+    | string
+    | undefined;
+  const explicitStatus = context.document?.releaseStatus as
+    | string
+    | undefined;
+  const effectiveStatus = explicitStatus ||
+    (publicReleaseDate ? "released" : "active");
+
+  if (effectiveStatus === "active") {
+    return "Active versions cannot have a status effective date.";
+  }
+
+  if (
+    effectiveStatus === "released" &&
+    publicReleaseDate &&
+    value !== publicReleaseDate
+  ) {
+    return "A released version's status effective date must match its public release date.";
+  }
+
+  if (effectiveStatus === "superseded") {
+    const citations = context.document?.citations as unknown[] | undefined;
+    const auditBatches = context.document?.auditBatches as
+      | ReferenceValue[]
+      | undefined;
+    const coverage = context.document
+      ?.chronologyCoverage as ChronologyCoverageValue | undefined;
+    const hasEvidence = Boolean(
+      citations?.length ||
+      auditBatches?.some((batch) => referencedId(batch)) ||
+      referencedId(coverage?.auditBatch)
+    );
+
+    if (!hasEvidence) {
+      return "A superseded status effective date requires a version citation or audit-batch reference.";
+    }
+  }
+
+  return true;
+}
+
+export async function validateChronologyCoverage(
+  value: ChronologyCoverageValue | undefined,
+  context: ValidationContext
+) {
+  if (!value) return true;
+
+  const allowedStatuses = ["unknown", "partial", "complete"];
+  if (!value.status || !allowedStatuses.includes(value.status)) {
+    return "Choose Unknown, Partial, or Complete coverage.";
+  }
+
+  const allowedChannels = [
+    "developerBeta",
+    "publicBeta",
+    "releaseCandidate",
+    "goldenMaster",
+    "public",
+    "securityResponse",
+    "recovery",
+    "other",
+  ];
+  if (
+    value.auditedChannels?.some(
+      (channel) => !allowedChannels.includes(channel)
+    )
+  ) {
+    return "Audited channels must use a canonical release-event channel.";
+  }
+
+  if (value.status === "partial" && !value.knownGapNote?.trim()) {
+    return "Partial coverage requires a known-gap note.";
+  }
+
+  if (value.status !== "complete") return true;
+
+  if (!value.auditedChannels?.length) {
+    return "Complete coverage requires at least one audited channel.";
+  }
+  if (!value.coverageThrough) {
+    return "Complete coverage requires a coverage-through date.";
+  }
+  if (!value.verifiedAt) {
+    return "Complete coverage requires a verification time.";
+  }
+
+  const auditBatchId = referencedId(value.auditBatch);
+  if (!auditBatchId) {
+    return "Complete coverage requires an audit-batch reference.";
+  }
+
+  const audit = await context
+    .getClient({ apiVersion })
+    .fetch<{
+      status?: string;
+      editorialStatus?: string;
+      verifiedAt?: string;
+    } | null>(
+      `*[_id in $auditBatchIds] | order(_updatedAt desc)[0] {
+        status,
+        "editorialStatus": editorialReview.status,
+        verifiedAt
+      }`,
+      {
+        auditBatchIds: [auditBatchId, `drafts.${auditBatchId}`],
+      }
+    );
+
+  return audit?.status === "complete" &&
+    audit.editorialStatus === "approved" &&
+    Boolean(audit.verifiedAt)
+    ? true
+    : "Complete coverage requires a complete, approved, and verified audit batch.";
 }
 
 export async function uniqueSourceUrl(
