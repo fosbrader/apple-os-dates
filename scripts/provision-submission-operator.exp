@@ -1,0 +1,320 @@
+#!/usr/bin/expect -f
+
+# Generate one operator credential, store it in the macOS login keychain, and
+# stream the same value to Vercel. The value never enters argv, a file, stdout,
+# stderr, or a child environment.
+log_user 0
+set timeout 60
+
+proc fail {message} {
+  puts stderr $message
+  exit 1
+}
+
+if {$argc > 1 || ($argc == 1 && [lindex $argv 0] ne "--check")} {
+  fail "Usage: npm run submissions:operator:provision"
+}
+
+set check_only [expr {$argc == 1}]
+
+set npx_path ""
+foreach candidate [list /opt/homebrew/bin/npx /usr/local/bin/npx] {
+  if {[file executable $candidate]} {
+    set npx_path $candidate
+    break
+  }
+}
+if {$npx_path eq ""} {
+  fail "A trusted Homebrew npx installation is required."
+}
+
+set service "com.versionrecord.submission-operator.v1"
+set label "Version Record submission operator"
+if {[catch {exec /usr/bin/id -un} account]} {
+  fail "The macOS keychain account could not be determined."
+}
+set account [string trim $account]
+if {$account eq ""} {
+  fail "The macOS keychain account could not be determined."
+}
+
+if {[catch {
+  exec /usr/bin/dscl . -read "/Users/$account" NFSHomeDirectory
+} home_record] || ![regexp {^NFSHomeDirectory: (/.+)$} $home_record _ home]} {
+  fail "The macOS account home directory could not be determined."
+}
+set home [string trim $home]
+if {![file isdirectory $home]} {
+  fail "The macOS account home directory could not be determined."
+}
+
+if {![file exists ".vercel/project.json"]} {
+  fail "Run this command from the linked Version Record checkout."
+}
+
+set expected_link_digest "e23504226e8b49795eb459a7e95b060f72eb325f982cc99473719b601201a51b"
+if {[catch {
+  exec /usr/bin/plutil -extract projectId raw .vercel/project.json
+} project_id] || [catch {
+  exec /usr/bin/plutil -extract orgId raw .vercel/project.json
+} organization_id]} {
+  fail "The linked Vercel project could not be verified."
+}
+set link_identity "$organization_id:$project_id"
+if {[catch {
+  exec /usr/bin/openssl dgst -sha256 << $link_identity
+} link_digest] || ![regexp {([0-9a-fA-F]{64})$} $link_digest _ link_digest]} {
+  fail "The linked Vercel project could not be verified."
+}
+set project_id ""
+set organization_id ""
+set link_identity ""
+if {[string tolower $link_digest] ne $expected_link_digest} {
+  fail "This checkout is linked to the wrong Vercel project."
+}
+set link_digest ""
+
+if {[catch {exec /usr/bin/security login-keychain} login_keychain_output]} {
+  fail "The macOS login keychain could not be determined."
+}
+set login_keychain_output [string trim $login_keychain_output]
+if {[regexp {^"(.+)"$} $login_keychain_output _ keychain]} {
+  set keychain [string trim $keychain]
+} else {
+  set keychain $login_keychain_output
+}
+set login_keychain_output ""
+if {![string match "/*" $keychain] || ![file exists $keychain]} {
+  fail "The macOS login keychain could not be determined."
+}
+
+if {[catch {exec /usr/bin/security default-keychain} default_keychain_output]} {
+  fail "The macOS default keychain could not be determined."
+}
+set default_keychain_output [string trim $default_keychain_output]
+if {[regexp {^"(.+)"$} $default_keychain_output _ default_keychain]} {
+  set default_keychain [string trim $default_keychain]
+} else {
+  set default_keychain $default_keychain_output
+}
+set default_keychain_output ""
+if {$default_keychain ne $keychain} {
+  fail "The login keychain must be the default keychain during provisioning."
+}
+set default_keychain ""
+
+proc stream_value_to_command {command value} {
+  set null_channel [open /dev/null w]
+  set channel ""
+  set pipeline [linsert $command 0 |]
+  lappend pipeline >@ $null_channel 2>@1
+  set failed [catch {
+    set channel [open $pipeline w]
+    fconfigure $channel -translation binary -buffering none
+    puts -nonewline $channel "$value\n"
+    close $channel
+    set channel ""
+  }]
+  if {$channel ne ""} {
+    catch {close $channel}
+  }
+  catch {close $null_channel}
+  if {$failed} {
+    error "The child command failed."
+  }
+}
+
+if {$check_only} {
+  set check_command [list \
+    /usr/bin/env \
+    -i \
+    "PATH=/usr/bin:/bin" \
+    /bin/sh \
+    -c \
+    {IFS= read -r value && printf output && printf error >&2 && test "$value" = "operator-check"}]
+  if {[catch {stream_value_to_command $check_command "operator-check"}]} {
+    fail "The operator provisioner check failed."
+  }
+  log_user 1
+  puts "The operator provisioner check passed."
+  exit 0
+}
+
+set secret ""
+set previous ""
+proc handle_interrupt {} {
+  global secret previous
+  set secret ""
+  set previous ""
+  puts stderr "Provisioning was interrupted. Do not redeploy; rerun the provision command first."
+  exit 1
+}
+trap handle_interrupt {SIGINT SIGTERM SIGHUP}
+
+if {[catch {exec /usr/bin/openssl rand -base64 48} secret]} {
+  fail "A secure operator credential could not be generated."
+}
+set secret [string trim $secret]
+if {[string length $secret] < 64} {
+  fail "A secure operator credential could not be generated."
+}
+
+set had_previous 0
+set find_result [catch {
+  exec /usr/bin/security find-generic-password \
+    -a $account \
+    -s $service \
+    -w \
+    $keychain
+} previous find_options]
+if {$find_result == 0} {
+  set had_previous 1
+} else {
+  set error_code [dict get $find_options -errorcode]
+  if {[lindex $error_code 0] ne "CHILDSTATUS" || [lindex $error_code 2] != 44} {
+    fail "The macOS keychain is unavailable. Unlock it and try again."
+  }
+}
+
+proc store_keychain {account service label value} {
+  spawn -noecho /usr/bin/security add-generic-password \
+    -a $account \
+    -s $service \
+    -l $label \
+    -T /usr/bin/security \
+    -w
+  expect {
+    -re {password data for new item:} {
+      send -- "$value\r"
+    }
+    timeout {
+      catch {close}
+      catch {wait}
+      return 1
+    }
+    eof {
+      catch {wait}
+      return 1
+    }
+  }
+  expect {
+    -re {retype password for new item:} {
+      send -- "$value\r"
+    }
+    eof {
+      set result [wait]
+      return [lindex $result 3]
+    }
+    timeout {
+      catch {close}
+      catch {wait}
+      return 1
+    }
+  }
+  expect {
+    eof {}
+    timeout {
+      catch {close}
+      catch {wait}
+      return 1
+    }
+  }
+  set result [wait]
+  return [lindex $result 3]
+}
+
+proc delete_keychain_item {account service keychain allow_missing} {
+  set delete_result [catch {
+    exec /usr/bin/security delete-generic-password \
+      -a $account \
+      -s $service \
+      $keychain
+  } _ delete_options]
+  if {$delete_result == 0} {
+    return 0
+  }
+  set error_code [dict get $delete_options -errorcode]
+  if {$allow_missing && [lindex $error_code 0] eq "CHILDSTATUS" && [lindex $error_code 2] == 44} {
+    return 0
+  }
+  return 1
+}
+
+proc restore_keychain {had_previous account service label keychain previous} {
+  if {[delete_keychain_item $account $service $keychain 1] != 0} {
+    return 1
+  }
+  if {$had_previous} {
+    return [store_keychain $account $service $label $previous]
+  }
+  return 0
+}
+
+if {$had_previous && [delete_keychain_item $account $service $keychain 0] != 0} {
+  fail "The previous operator credential could not be replaced in the macOS keychain."
+}
+
+if {[store_keychain $account $service $label $secret] != 0} {
+  if {[restore_keychain $had_previous $account $service $label $keychain $previous] != 0} {
+    fail "The new operator credential could not be stored, and the keychain rollback also failed. Stop and repair operator access."
+  }
+  fail "The operator credential could not be stored in the macOS keychain."
+}
+
+if {[catch {
+  exec /usr/bin/security find-generic-password \
+    -a $account \
+    -s $service \
+    -w \
+    $keychain
+} stored_secret] || $stored_secret ne $secret} {
+  if {[restore_keychain $had_previous $account $service $label $keychain $previous] != 0} {
+    fail "The local credential check failed, and the keychain rollback also failed. Stop and repair operator access."
+  }
+  fail "The local credential check failed. The macOS keychain was restored."
+}
+set stored_secret ""
+
+set path "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+set temporary_directory "/private/tmp"
+
+set command [list \
+  /usr/bin/perl \
+  -e \
+  {alarm 180; exec @ARGV or exit 127} \
+  /usr/bin/env \
+  -i \
+  "HOME=$home" \
+  "PATH=$path" \
+  "TMPDIR=$temporary_directory" \
+  "NO_COLOR=1" \
+  "VERCEL_TELEMETRY_DISABLED=1" \
+  $npx_path \
+  --yes \
+  vercel@58.9.0 \
+  env \
+  add \
+  SUBMISSION_OPERATOR_SECRET \
+  production \
+  --sensitive \
+  --force \
+  --yes \
+  --no-color]
+
+set update_failed 0
+if {[catch {
+  stream_value_to_command $command $secret
+}]} {
+  set update_failed 1
+}
+
+if {$update_failed} {
+  set secret ""
+  set previous ""
+  fail "The Vercel update did not complete. Do not redeploy or run moderation; rerun the provision command first."
+}
+
+set secret ""
+set previous ""
+log_user 1
+puts "The operator credential is stored in the macOS keychain and configured as Sensitive Production-only. Redeploy Production before moderation."

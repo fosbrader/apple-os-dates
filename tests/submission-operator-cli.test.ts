@@ -12,7 +12,7 @@ import {
 const operatorSecret = "operator-secret-at-least-24-characters";
 const id = "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa";
 
-test("operator bootstrap minimizes Production env before Node starts", () => {
+test("operator bootstrap reads one fixed Keychain item and sanitizes before Node starts", () => {
   const packageJson = JSON.parse(
     readFileSync(new URL("../package.json", import.meta.url), "utf8"),
   ) as { scripts: Record<string, string> };
@@ -20,11 +20,37 @@ test("operator bootstrap minimizes Production env before Node starts", () => {
     new URL("../scripts/run-submission-operator.sh", import.meta.url),
     "utf8",
   );
+  const provisioner = readFileSync(
+    new URL("../scripts/provision-submission-operator.exp", import.meta.url),
+    "utf8",
+  );
 
   assert.equal(
     packageJson.scripts["submissions:moderate"],
-    "npx --yes vercel@58.9.0 env run -e production -- /usr/bin/env -u BASH_ENV -u ENV /bin/bash --noprofile --norc scripts/run-submission-operator.sh",
+    "/usr/bin/env -u BASH_ENV -u ENV -u SHELLOPTS -u BASHOPTS -u PS4 /bin/bash --noprofile --norc -p scripts/run-submission-operator.sh",
   );
+  assert.equal(
+    packageJson.scripts["submissions:operator:provision"],
+    "/usr/bin/expect scripts/provision-submission-operator.exp",
+  );
+  assert.doesNotMatch(
+    packageJson.scripts["submissions:moderate"],
+    /npx|vercel|env run|SUBMISSION_OPERATOR_SECRET/i,
+  );
+  const bootstrapService = bootstrap.match(/vr_keychain_service="([^"]+)"/);
+  const provisionerService = provisioner.match(/set service "([^"]+)"/);
+  assert.equal(bootstrapService?.[1], "com.versionrecord.submission-operator.v1");
+  assert.equal(provisionerService?.[1], bootstrapService?.[1]);
+  assert.match(bootstrap, /set \+x/);
+  assert.match(bootstrap, /vr_keychain_account=\$\(\/usr\/bin\/id -un/);
+  assert.match(bootstrap, /\/usr\/bin\/security login-keychain/);
+  assert.match(bootstrap, /\/usr\/bin\/security find-generic-password/);
+  assert.match(bootstrap, /-a "\$vr_keychain_account"/);
+  assert.match(bootstrap, /-s "\$vr_keychain_service"/);
+  assert.match(bootstrap, /-w \\\n    "\$vr_keychain_path" 2>\/dev\/null/);
+  assert.doesNotMatch(bootstrap, /security (?:add|delete)-generic-password/);
+  assert.doesNotMatch(bootstrap, /\$\{SUBMISSION_OPERATOR_SECRET-/);
+  assert.doesNotMatch(bootstrap, /\bnpx\b|\bvercel\b/);
   assert.match(bootstrap, /for vr_environment_name in \$\(compgen -e\)/);
   assert.match(bootstrap, /unset "\$vr_environment_name"/);
   assert.match(
@@ -40,9 +66,83 @@ test("operator bootstrap minimizes Production env before Node starts", () => {
   assert.doesNotMatch(bootstrap, /VERCEL_OIDC_TOKEN=/);
   assert.doesNotMatch(bootstrap, /SANITY_API_TOKEN=/);
   assert.ok(
+    bootstrap.indexOf("find-generic-password") <
+      bootstrap.indexOf("for vr_environment_name"),
+  );
+  assert.ok(
     bootstrap.indexOf("for vr_environment_name") <
       bootstrap.indexOf('exec "$vr_node_binary"'),
   );
+});
+
+test("operator provisioner keeps the generated credential out of argv and files", () => {
+  const provisioner = readFileSync(
+    new URL("../scripts/provision-submission-operator.exp", import.meta.url),
+    "utf8",
+  );
+  const commandBlock = provisioner.match(
+    /set command \[list \\([\s\S]*?)\]\n\nset update_failed/,
+  )?.[0];
+
+  assert.ok(commandBlock);
+  assert.match(provisioner, /exec \/usr\/bin\/openssl rand -base64 48/);
+  assert.match(provisioner, /\[string length \$secret\] < 64/);
+  assert.match(provisioner, /log_user 0/);
+  assert.match(provisioner, /\/opt\/homebrew\/bin\/npx/);
+  assert.match(provisioner, /\/usr\/local\/bin\/npx/);
+  assert.doesNotMatch(provisioner, /set path \$env\(PATH\)/);
+  assert.match(provisioner, /exec \/usr\/bin\/dscl/);
+  assert.match(provisioner, /exec \/usr\/bin\/security login-keychain/);
+  assert.match(provisioner, /exec \/usr\/bin\/security default-keychain/);
+  assert.match(provisioner, /\$default_keychain ne \$keychain/);
+  assert.match(provisioner, /expected_link_digest "[0-9a-f]{64}"/);
+  assert.match(provisioner, /exec \/usr\/bin\/plutil -extract projectId raw/);
+  assert.match(provisioner, /exec \/usr\/bin\/plutil -extract orgId raw/);
+  assert.doesNotMatch(provisioner, /prj_|team_/);
+  assert.match(provisioner, /set temporary_directory "\/private\/tmp"/);
+  assert.doesNotMatch(provisioner, /env\((?:HOME|PATH|TMPDIR)\)/);
+  assert.match(provisioner, /vercel@58\.9\.0/);
+  assert.match(commandBlock, /\/usr\/bin\/env \\\n  -i/);
+  assert.match(commandBlock, /\/usr\/bin\/perl \\\n  -e \\\n  \{alarm 180; exec @ARGV or exit 127\}/);
+  assert.match(commandBlock, /\$npx_path/);
+  assert.match(commandBlock, /env \\\n  add \\\n  SUBMISSION_OPERATOR_SECRET \\\n  production/);
+  assert.match(commandBlock, /--sensitive/);
+  assert.match(commandBlock, /--force/);
+  assert.match(commandBlock, /--yes/);
+  assert.match(commandBlock, /--no-color/);
+  assert.doesNotMatch(commandBlock, /\$(?:secret|previous)/);
+  assert.doesNotMatch(commandBlock, /SUBMISSION_OPERATOR_SECRET=/);
+  assert.doesNotMatch(commandBlock, /env (?:run|pull)/);
+  assert.match(
+    provisioner,
+    /set pipeline \[linsert \$command 0 \|\][\s\S]*lappend pipeline >@ \$null_channel 2>@1[\s\S]*open \$pipeline w[\s\S]*puts -nonewline \$channel "\$value\\n"/,
+  );
+  assert.match(provisioner, /printf output && printf error >&2/);
+  assert.match(
+    provisioner,
+    /spawn -noecho \/usr\/bin\/security add-generic-password[\s\S]*?-T \/usr\/bin\/security \\\n    -w\n/,
+  );
+  assert.doesNotMatch(provisioner, /add-generic-password \\\n    -U/);
+  assert.match(provisioner, /send -- "\$value\\r"/);
+  assert.match(provisioner, /retype password for new item:/);
+  assert.equal(provisioner.match(/send -- "\$value\\r"/g)?.length, 2);
+  assert.match(provisioner, /restore_keychain/);
+  assert.match(provisioner, /security delete-generic-password/);
+  assert.match(provisioner, /proc delete_keychain_item/);
+  assert.match(
+    provisioner,
+    /store_keychain \$account \$service \$label \$previous/,
+  );
+  assert.match(provisioner, /set secret ""[\s\S]*set previous ""[\s\S]*log_user 1/);
+  assert.match(provisioner, /Do not redeploy; rerun the provision command first/);
+  assert.match(provisioner, /The Vercel update did not complete/);
+  assert.doesNotMatch(provisioner, /--value/);
+  assert.doesNotMatch(provisioner, /-w\s+\$(?:secret|value)/);
+  assert.doesNotMatch(
+    provisioner,
+    /SUBMISSION_OPERATOR_SECRET=\$(?:secret|value)/,
+  );
+  assert.doesNotMatch(provisioner, /mktemp|temporary.*(?:secret|credential)/i);
 });
 
 function jsonResponse(body: unknown, status = 200): Response {

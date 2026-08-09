@@ -287,8 +287,13 @@ SUBMISSION_OPERATOR_SECRET=...
 same value in the repository Actions secret of the same name. The status route
 returns only `{"pending": boolean}`. It never returns a count, object path,
 contact field, source, or submission text. `SUBMISSION_OPERATOR_SECRET`
-protects the Production-only `/api/submissions/operator/` route used by the
-local moderation CLI. Keep the three values independent.
+protects the Production-only `/api/submissions/operator/` route. Provision or
+rotate it from an authorized Mac with
+`npm run submissions:operator:provision`, then redeploy Production. The
+provisioner stores the matching local credential in the macOS login keychain
+and configures it as a Sensitive Production-only Vercel variable without
+printing it. macOS can require one operator-approved Keychain access dialog
+after provisioning or rotation. Keep the three values independent.
 
 Submission intake is JSON-only and includes streaming size limits, validation,
 same-origin checks, a honeypot, rate limiting, Vercel BotID Basic, optional
@@ -302,10 +307,12 @@ The scheduled GitHub Action polls only that Boolean status and manages one
 generic public issue when review is needed. Submission contents and counts
 never leave the private store. Use `npm run submissions:moderate -- list` to see
 PII-safe queue metadata, then use the explicit-ID operator commands in the
-moderation runbook. The CLI calls the fixed Production HTTPS route; local OIDC
-does not access Blob. Resolving a record deletes that exact object; the daily
-retention job is the backstop. A legal hold moves the immutable object to a
-private hold prefix that automatic retention does not scan.
+moderation runbook. Routine moderation reads the operator credential from the
+macOS login keychain and calls the fixed Production HTTPS route. It does not
+download the Production environment, invoke Vercel CLI, or access Blob through
+local OIDC. Resolving a record deletes that exact object; the daily retention
+job is the backstop. A legal hold moves the immutable object to a private hold
+prefix that automatic retention does not scan.
 
 See `docs/operations/submission-moderation.md` for the queue workflow, failure
 handling, and security boundaries.
