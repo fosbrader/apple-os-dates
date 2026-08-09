@@ -130,13 +130,24 @@ export interface ReleaseDateScoreV1 {
   absoluteErrorDays: number;
 }
 
-export interface ReleaseDateCandidateMetricsV1 {
+export type ReleaseDateCandidateMetricsV1 = {
   candidateId: ReleaseDateCandidateId;
   scoreCount: number;
-  maeDays: number;
-  medianAbsoluteErrorDays: number;
-  signedBiasDays: number;
-}
+} & (
+  | {
+      reportable: true;
+      maeDays: number;
+      medianAbsoluteErrorDays: number;
+      signedBiasDays: number;
+    }
+  | {
+      reportable: false;
+      reason: "minimum-score-count";
+      maeDays: null;
+      medianAbsoluteErrorDays: null;
+      signedBiasDays: null;
+    }
+);
 
 export type ReleaseDateSelectionV1 =
   | {
@@ -301,20 +312,21 @@ function predictionsFor(fold: ReleaseDateFoldV1, heldout: Pick<ReleaseDateTarget
 }
 
 function metrics(candidateId: ReleaseDateCandidateId, scores: readonly ReleaseDateScoreV1[]): ReleaseDateCandidateMetricsV1 {
-  return { candidateId, scoreCount: scores.length, maeDays: scores.reduce((sum, score) => sum + score.absoluteErrorDays, 0) / scores.length, medianAbsoluteErrorDays: median(scores.map((score) => score.absoluteErrorDays)), signedBiasDays: scores.reduce((sum, score) => sum + score.signedErrorDays, 0) / scores.length };
+  if (scores.length < RELEASE_DATE_MINIMUM_OUTCOMES) return { candidateId, scoreCount: scores.length, reportable: false, reason: "minimum-score-count", maeDays: null, medianAbsoluteErrorDays: null, signedBiasDays: null };
+  return { candidateId, scoreCount: scores.length, reportable: true, maeDays: scores.reduce((sum, score) => sum + score.absoluteErrorDays, 0) / scores.length, medianAbsoluteErrorDays: median(scores.map((score) => score.absoluteErrorDays)), signedBiasDays: scores.reduce((sum, score) => sum + score.signedErrorDays, 0) / scores.length };
 }
 
 function selectionFor(fold: ReleaseDateFoldV1, candidates: readonly ReleaseDateCandidatePredictionV1[], scores: readonly ReleaseDateScoreV1[]): ReleaseDateSelectionV1 {
   const baseline = candidates.find((row) => row.candidateId === "platform-stage-median")!;
   const heldout = candidates[0]!;
-  if (!baseline.available) return { available: false, status: "no-forecast-baseline-unavailable", comparedScores: [] };
-  const available = candidates.filter((row): row is Extract<ReleaseDateCandidatePredictionV1, { available: true }> => row.available);
-  const scoreGroups = available.map((candidate) => {
-    const rows = scores.filter((score) => score.candidateId === candidate.candidateId && score.platformId === heldout.explanation.platformId && score.outcomeFirstObservedOn <= fold.originOn);
-    return { candidateId: candidate.candidateId, rows };
+  const comparison = RELEASE_DATE_CANDIDATES.map((candidateId) => {
+    const rows = scores.filter((score) => score.candidateId === candidateId && score.platformId === heldout.explanation.platformId && score.outcomeFirstObservedOn <= fold.originOn);
+    return metrics(candidateId, rows);
   });
-  if (scoreGroups.some((group) => group.rows.length < RELEASE_DATE_MINIMUM_OUTCOMES)) return { available: true, status: "baseline-default-insufficient-comparison", selectedCandidateId: "platform-stage-median", comparedScores: scoreGroups.map((group) => group.rows.length ? metrics(group.candidateId, group.rows) : { candidateId: group.candidateId, scoreCount: 0, maeDays: 0, medianAbsoluteErrorDays: 0, signedBiasDays: 0 }) };
-  const ranked = scoreGroups.map((group) => metrics(group.candidateId, group.rows)).sort((left, right) => left.maeDays - right.maeDays || left.medianAbsoluteErrorDays - right.medianAbsoluteErrorDays || Math.abs(left.signedBiasDays) - Math.abs(right.signedBiasDays) || compareText(left.candidateId, right.candidateId));
+  if (!baseline.available) return { available: false, status: "no-forecast-baseline-unavailable", comparedScores: comparison };
+  const allCandidatesAvailable = RELEASE_DATE_CANDIDATES.every((candidateId) => candidates.some((row) => row.candidateId === candidateId && row.available));
+  if (!allCandidatesAvailable || comparison.some((row) => !row.reportable)) return { available: true, status: "baseline-default-insufficient-comparison", selectedCandidateId: "platform-stage-median", comparedScores: comparison };
+  const ranked = comparison.filter((row): row is Extract<ReleaseDateCandidateMetricsV1, { reportable: true }> => row.reportable).sort((left, right) => left.maeDays - right.maeDays || left.medianAbsoluteErrorDays - right.medianAbsoluteErrorDays || Math.abs(left.signedBiasDays) - Math.abs(right.signedBiasDays) || compareText(left.candidateId, right.candidateId));
   return { available: true, status: "winner", selectedCandidateId: ranked[0]!.candidateId, comparedScores: ranked };
 }
 
@@ -337,7 +349,7 @@ function deriveCore(sourceDataset: HistoricalAnalysisDatasetV1, config: ReleaseD
   return { candidatesVersion: RELEASE_DATE_CANDIDATES_VERSION, config, sourceDataset, targets, exclusionLedger, folds: sorted(folds, (row) => row.foldId), predictions: sorted(predictions, (row) => `${row.candidateId}\u0000${row.foldId}`), scores, forecasts } as const;
 }
 
-const CODE_MANIFEST = { algorithm: "release-date-candidates-v1;public-release-only;known-at-origin;platform-only;median;hierarchical-strength-4;half-up-positive-days", historicalDatasetVersion: HISTORICAL_ANALYSIS_DATASET_VERSION, candidatesVersion: RELEASE_DATE_CANDIDATES_VERSION, minimumOutcomes: RELEASE_DATE_MINIMUM_OUTCOMES, hierarchicalPriorStrength: RELEASE_DATE_HIERARCHICAL_PRIOR_STRENGTH, roundingRule: RELEASE_DATE_ROUNDING_RULE } as const;
+const CODE_MANIFEST = { algorithm: "release-date-candidates-v1;public-release-only;historical-anchor-origin;active-source-as-of-origin;platform-only;median;hierarchical-strength-4;two-candidate-reportable-selection;half-up-positive-days", historicalDatasetVersion: HISTORICAL_ANALYSIS_DATASET_VERSION, candidatesVersion: RELEASE_DATE_CANDIDATES_VERSION, minimumOutcomes: RELEASE_DATE_MINIMUM_OUTCOMES, hierarchicalPriorStrength: RELEASE_DATE_HIERARCHICAL_PRIOR_STRENGTH, roundingRule: RELEASE_DATE_ROUNDING_RULE } as const;
 export const RELEASE_DATE_CANDIDATE_CODE_FINGERPRINT = historicalAnalysisFingerprint(CODE_MANIFEST);
 
 /** Builds a standalone, deterministic candidate-comparison artifact. */
@@ -355,14 +367,15 @@ export function buildReleaseDateCandidates(sourceDataset: HistoricalAnalysisData
   return result;
 }
 
-/** Predicts an active canonical anchor using only outcome rows admitted at its observed origin. */
+/** Predicts an active canonical anchor using facts admitted by the source snapshot cutoff. */
 export function predictReleaseDateForAnchor(sourceDataset: HistoricalAnalysisDatasetV1, anchorEventId: string, artifact: ReleaseDateCandidatesV1 = buildReleaseDateCandidates(sourceDataset)): ReleaseDateForecastV1 | null {
   if (validateHistoricalAnalysisDataset(sourceDataset).length || validateReleaseDateCandidates(artifact).length || artifact.fingerprints.sourceDatasetFingerprint !== sourceDataset.fingerprints.datasetFingerprint) return null;
   const anchor = sourceDataset.canonicalEvents.find((row) => row.eventId === anchorEventId);
   const cycle = anchor && sourceDataset.releaseCycles.find((row) => row.releaseId === anchor.releaseId);
-  if (!anchor || !cycle?.included || cycle.lifecycle === "superseded" || cycle.chronologyCoverage.state !== "complete") return null;
-  const fold: ReleaseDateFoldV1 = { foldId: `active:${anchor.eventId}`, heldoutTargetId: `active:${anchor.eventId}`, originOn: anchor.firstObservedOn, trainingTargetIds: sorted(trainingFor(null, anchor.firstObservedOn, artifact.targets), (row) => row.targetId).map((row) => row.targetId) };
-  const heldout = { platformId: anchor.platformId, productFamilyId: anchor.productFamilyId, releaseClass: anchor.releaseClass, releasePosition: anchor.releasePosition, stage: anchor.stage, originOn: anchor.firstObservedOn };
+  const originOn = sourceDataset.provenance.sourceAsOfDate;
+  if (!anchor || !cycle?.included || cycle.lifecycle !== "active" || cycle.chronologyCoverage.state !== "complete" || anchor.firstObservedOn > originOn) return null;
+  const fold: ReleaseDateFoldV1 = { foldId: `active:${anchor.eventId}`, heldoutTargetId: `active:${anchor.eventId}`, originOn, trainingTargetIds: sorted(trainingFor(null, originOn, artifact.targets), (row) => row.targetId).map((row) => row.targetId) };
+  const heldout = { platformId: anchor.platformId, productFamilyId: anchor.productFamilyId, releaseClass: anchor.releaseClass, releasePosition: anchor.releasePosition, stage: anchor.stage, originOn };
   const candidates = sorted(predictionsFor(fold, heldout, trainingFor(null, fold.originOn, artifact.targets), artifact.fingerprints.sourceDatasetFingerprint), (row) => row.candidateId);
   return resolved({ fold, candidates, selection: selectionFor(fold, candidates, artifact.scores) }, anchor.occurredOn);
 }

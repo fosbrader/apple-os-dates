@@ -27,6 +27,7 @@ interface Cycle {
   channel?: "developerBeta" | "publicBeta" | "goldenMaster";
   coverage?: "complete" | "unknown";
   superseded?: boolean;
+  revision?: boolean;
 }
 
 function source(cycles: readonly Cycle[], reverse = false) {
@@ -36,10 +37,13 @@ function source(cycles: readonly Cycle[], reverse = false) {
     : cycle.publicDay === undefined
       ? { id: cycle.id, lifecycle: "active" as const }
       : { id: cycle.id, lifecycle: "released" as const, publicReleaseDate: day(cycle.publicDay), statusEffectiveOn: day(cycle.publicDay), statusFirstObservedAt: `${day(cycle.observedDay ?? cycle.publicDay)}T12:00:00.000Z` });
-  const events = cycles.map((cycle) => ({
-    id: `${cycle.id}-anchor`, releaseId: cycle.id, occurredOn: day(cycle.anchorDay), firstObservedAt: `${day(cycle.anchorDay)}T12:00:00.000Z`,
-    channel: cycle.channel ?? "developerBeta", ...(cycle.channel === "goldenMaster" ? {} : { sequence: 1 }), availability: "available" as const,
-  }));
+  const events = cycles.flatMap((cycle) => {
+    const event = {
+      id: `${cycle.id}-anchor`, releaseId: cycle.id, occurredOn: day(cycle.anchorDay), firstObservedAt: `${day(cycle.anchorDay)}T12:00:00.000Z`,
+      channel: cycle.channel ?? "developerBeta", ...(cycle.channel === "goldenMaster" ? {} : { sequence: 1 }), availability: "available" as const,
+    };
+    return cycle.revision ? [{ ...event, id: `${cycle.id}-anchor-original` }, { ...event, isRevision: true, revisionOfId: `${cycle.id}-anchor-original` }] : [event];
+  });
   const metadata = cycles.map((cycle, index) => ({
     releaseId: cycle.id, platformId: cycle.platform ?? "ios", productFamilyId: cycle.family ?? "iphone",
     releaseClass: cycle.releaseClass ?? "major", releasePosition: cycle.position ?? index + 1, releaseCycleId: `${cycle.id}-cycle`,
@@ -73,6 +77,44 @@ test("FR-009 uses only source-linked public outcomes and has no cross-platform r
   assert.ok(artifact.targets.every((target) => target.publicOutcomeEvidenceId.includes("release:")));
   assert.equal(roundReleaseDatePointDays(10.5), 11);
   assert.equal(RELEASE_DATE_HIERARCHICAL_PRIOR_STRENGTH, 4);
+});
+
+test("active forecasts use the source as-of cutoff, require active lifecycle, and keep beta channels distinct", () => {
+  const dataset = source([
+    ...Array.from({ length: 8 }, (_, index) => ({ id: `later-${index}`, anchorDay: 10 + index * 12, publicDay: 20 + index * 12, observedDay: 21 + index * 12 })),
+    { id: "active-public-beta", anchorDay: 1, channel: "publicBeta" },
+  ]);
+  const artifact = buildReleaseDateCandidates(dataset);
+  const anchor = dataset.canonicalEvents.find((row) => row.releaseId === "active-public-beta")!;
+  assert.equal(anchor.stage, "public-beta:1");
+  assert.ok(artifact.targets.filter((row) => row.releaseId.startsWith("later-")).every((row) => row.stage === "developer-beta:1"));
+
+  const forecast = predictReleaseDateForAnchor(dataset, anchor.eventId, artifact)!;
+  assert.equal(forecast.fold.originOn, dataset.provenance.sourceAsOfDate);
+  assert.equal(forecast.fold.trainingTargetIds.length, 8);
+  assert.ok(forecast.fold.trainingTargetIds.every((id) => artifact.targets.find((row) => row.targetId === id)!.publicFirstObservedOn > anchor.firstObservedOn));
+
+  const releasedAnchor = dataset.canonicalEvents.find((row) => row.releaseId === "later-0")!;
+  assert.equal(predictReleaseDateForAnchor(dataset, releasedAnchor.eventId, artifact), null);
+});
+
+test("baseline-only selection defaults without a winner and zero-score metrics stay null", () => {
+  const dataset = source([...history(8), { id: "active-public-beta", anchorDay: 130, channel: "publicBeta" }]);
+  const artifact = buildReleaseDateCandidates(dataset);
+  const forecast = predictReleaseDateForAnchor(dataset, "event:active-public-beta-anchor", artifact)!;
+  const baseline = forecast.candidates.find((row) => row.candidateId === "platform-stage-median")!;
+  const hierarchy = forecast.candidates.find((row) => row.candidateId === "hierarchical-platform-cadence")!;
+  assert.equal(baseline.available, true);
+  assert.equal(hierarchy.available, false);
+  assert.deepEqual(forecast.selection, {
+    available: true,
+    status: "baseline-default-insufficient-comparison",
+    selectedCandidateId: "platform-stage-median",
+    comparedScores: [
+      { candidateId: "platform-stage-median", scoreCount: 0, reportable: false, reason: "minimum-score-count", maeDays: null, medianAbsoluteErrorDays: null, signedBiasDays: null },
+      { candidateId: "hierarchical-platform-cadence", scoreCount: 0, reportable: false, reason: "minimum-score-count", maeDays: null, medianAbsoluteErrorDays: null, signedBiasDays: null },
+    ],
+  });
 });
 
 test("known-at-origin folds exclude self, future and late-observed public outcomes", () => {
@@ -124,6 +166,28 @@ test("hierarchy applies strength four in family, class, numeric-position order a
     const family = tiers[1]!;
     assert.equal(family.posteriorDays, (family.count * family.rawMedianDays! + 4 * tiers[0]!.posteriorDays) / (family.count + 4));
   }
+});
+
+test("revision collapse is explicit and GM can be an anchor but never a release outcome", () => {
+  const dataset = source([
+    { id: "revision", anchorDay: 10, publicDay: 20, observedDay: 21, revision: true },
+    { id: "gm-released", anchorDay: 30, publicDay: 40, observedDay: 41, channel: "goldenMaster" },
+    { id: "gm-active", anchorDay: 50, channel: "goldenMaster" },
+  ]);
+  const artifact = buildReleaseDateCandidates(dataset);
+  const revision = artifact.targets.find((row) => row.releaseId === "revision")!;
+  assert.equal(revision.anchorEventId, "event:revision-anchor");
+  assert.equal(artifact.targets.some((row) => row.anchorEventId.includes("original")), false);
+  const gm = artifact.targets.find((row) => row.releaseId === "gm-released")!;
+  assert.equal(gm.stage, "golden-master");
+  assert.equal(dataset.lifecycleOutcomes.find((row) => row.outcomeEvidenceId === gm.publicOutcomeEvidenceId)?.closure, "public-release");
+  assert.equal(artifact.exclusionLedger.find((row) => row.releaseId === "gm-active")?.reason, "missing-public-release-outcome");
+
+  const forged = {
+    ...dataset,
+    lifecycleOutcomes: dataset.lifecycleOutcomes.map((row, index) => index ? row : { ...row, closure: "golden-master" }),
+  };
+  assert.throws(() => buildReleaseDateCandidates(forged as typeof dataset));
 });
 
 test("exclusions, sparse nested comparison, malformed input, and tampering fail closed", () => {

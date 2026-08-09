@@ -204,6 +204,13 @@ were both known by that day. The held-out target is always excluded. The
 artifact records source-derived exclusions rather than parsing presentation
 labels. It preserves developer and public beta stage identities.
 
+Historical folds use that anchor-observation origin. A production prediction
+is available only for a release cycle whose snapshot lifecycle is exactly
+`active`; its origin and training cutoff are the embedded source dataset's
+`sourceAsOfDate`, provided the anchor itself was known by that cutoff. Released,
+superseded, closed, future-observed, and incomplete-chronology anchors fail
+closed.
+
 The fixed candidates are same-platform only: an empirical stage median (with
 an explicit same-platform pooled fallback) and a hierarchical same-platform
 cadence model. Both require at least eight root outcomes. Hierarchy is stage,
@@ -219,9 +226,12 @@ public outcome fact was known by the current origin. Each available candidate
 needs eight such prior scores; rank is MAE, median absolute error, absolute
 bias, then candidate ID. Sparse comparisons explicitly retain the empirical
 baseline as `baseline-default-insufficient-comparison`; they do not claim a
-winner. Without an empirical baseline, no forecast is emitted. The standalone
-validator recomputes source linkage, exclusions, folds, models, selection,
-scores, dates, ordering, and bound source/config/code/result fingerprints.
+winner. This includes a baseline-only prediction when hierarchy is unavailable.
+Insufficient metric rows retain their real score count and `null` metrics;
+zero is never fabricated. Without an empirical baseline, no forecast is emitted.
+The standalone validator recomputes source linkage, exclusions, folds, models,
+selection, scores, dates, ordering, and bound source/config/code/result
+fingerprints.
 
 ```sh
 npm run release-date:validate -- path/to/release-date-candidates.json
