@@ -7,6 +7,7 @@ import {
 } from "@/lib/sanity.fetch";
 import type { ReleaseVersionRoute } from "@/lib/types";
 import { absoluteUrl } from "@/lib/site";
+import { getPublishedArticleSummaries } from "@/lib/articles";
 import {
   applePlatformPath,
   releaseBuildPath,
@@ -69,11 +70,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     fetchedVersionRoutes,
     buildRoutes,
     eventRoutes,
+    publishedArticles,
   ] = await Promise.all([
     getAllPlatforms(),
     getAllVersionRoutes(),
     getAllBuildRoutes(),
     getAllEventRoutes(),
+    getPublishedArticleSummaries(),
   ]);
   const versionRoutes = uniqueVersionRoutes(fetchedVersionRoutes).sort(
     (left, right) =>
@@ -98,6 +101,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     siteLastModified = newerDate(
       siteLastModified,
       toDate(route.updatedAt),
+    );
+  }
+  for (const article of publishedArticles) {
+    siteLastModified = newerDate(
+      siteLastModified,
+      toDate(article.updatedAt),
     );
   }
 
@@ -261,8 +270,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     }));
 
+  const newsEntries: MetadataRoute.Sitemap = publishedArticles.length
+    ? [
+        {
+          url: absoluteUrl("/news/"),
+          lastModified: publishedArticles.reduce<Date | undefined>(
+            (latest, article) =>
+              newerDate(latest, toDate(article.updatedAt)),
+            undefined,
+          ),
+          changeFrequency: "monthly",
+          priority: 0.55,
+        },
+        ...publishedArticles.map((article) => ({
+          url: absoluteUrl(`/news/${article.slug.current}/`),
+          lastModified: toDate(article.updatedAt),
+          changeFrequency: "monthly" as const,
+          priority: 0.65,
+        })),
+      ]
+    : [];
+
   return [
     ...staticEntries,
+    ...newsEntries,
     ...platformEntries,
     ...familyEntries,
     ...versionEntries,

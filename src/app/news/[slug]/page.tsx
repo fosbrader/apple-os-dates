@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
 import { PortableArticle } from "@/components/editorial/PortableArticle";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
@@ -10,167 +11,41 @@ import {
   formatArticleTimestamp,
 } from "@/lib/article";
 import {
+  getDraftArticle,
+  getPublishedArticle,
+  type ArticleDocument,
+} from "@/lib/articles";
+import {
   absoluteUrl,
   siteName,
   siteXHandle,
 } from "@/lib/site";
-import type {
-  CitationRecord,
-  PortableTextBlock,
-  SlugValue,
-} from "@/lib/types";
-import { client } from "@/sanity/client";
 
 export const revalidate = 60;
-
-interface ArticleDocument {
-  _id: string;
-  title: string;
-  slug: SlugValue;
-  summary: string;
-  byline?: string;
-  publishedAt?: string;
-  updatedAt?: string;
-  body: PortableTextBlock[];
-  citations?: CitationRecord[];
-  seo?: {
-    title?: string;
-    description?: string;
-    noIndex?: boolean;
-    image?: {
-      asset?: {
-        url?: string;
-        metadata?: {
-          dimensions?: {
-            width?: number;
-            height?: number;
-          };
-        };
-      };
-    };
-  };
-}
 
 interface ArticleResult {
   page: ArticleDocument;
   isDraftPreview: boolean;
 }
 
-const articleProjection = `{
-  _id,
-  title,
-  slug,
-  summary,
-  byline,
-  publishedAt,
-  updatedAt,
-  body[]{
-    ...,
-    asset->{
-      _id,
-      url,
-      metadata{dimensions}
-    },
-    markDefs[]{
-      ...,
-      source->{
-        _id,
-        title,
-        publisher,
-        author,
-        canonicalUrl,
-        publishedAt,
-        accessedAt,
-        archiveUrl,
-        sourceClass
-      }
-    },
-    sourceCitation{
-      ...,
-      source->{
-        _id,
-        title,
-        publisher,
-        author,
-        canonicalUrl,
-        publishedAt,
-        accessedAt,
-        archiveUrl,
-        sourceClass
-      }
-    }
-  },
-  citations[]{
-    ...,
-    source->{
-      _id,
-      title,
-      publisher,
-      author,
-      canonicalUrl,
-      publishedAt,
-      accessedAt,
-      archiveUrl,
-      sourceClass
-    }
-  },
-  seo{
-    title,
-    description,
-    noIndex,
-    image{
-      asset->{
-        _id,
-        url,
-        metadata{dimensions}
-      }
-    }
-  }
-}`;
-
-const draftArticleQuery = `*[
-  _type == "sitePage" &&
-  _id in path("drafts.**") &&
-  pageKind == "article" &&
-  slug.current == $slug
-][0]${articleProjection}`;
-
-const publishedArticleQuery = `*[
-  _type == "sitePage" &&
-  !(_id in path("drafts.**")) &&
-  pageKind == "article" &&
-  slug.current == $slug &&
-  editorialReview.status == "approved" &&
-  defined(publishedAt) &&
-  defined(updatedAt)
-][0]${articleProjection}`;
-
 async function getArticle(slug: string): Promise<ArticleResult | null> {
-  const previewToken = process.env.SANITY_API_TOKEN?.trim();
-  const canPreviewDraft =
-    process.env.NODE_ENV !== "production" && Boolean(previewToken);
+  const { isEnabled: draftSessionEnabled } = await draftMode();
+  const isLocalDevelopment = process.env.NODE_ENV !== "production";
+  const previewToken =
+    process.env.SANITY_API_READ_TOKEN?.trim() ||
+    (isLocalDevelopment
+      ? process.env.SANITY_API_TOKEN?.trim()
+      : undefined);
+  const canPreviewDraft = Boolean(previewToken) &&
+    (draftSessionEnabled || isLocalDevelopment);
 
   if (canPreviewDraft && previewToken) {
-    const draft = await client
-      .withConfig({
-        token: previewToken,
-        useCdn: false,
-        perspective: "raw",
-      })
-      .fetch<ArticleDocument | null>(
-        draftArticleQuery,
-        { slug },
-        { cache: "no-store" },
-      );
+    const draft = await getDraftArticle(slug, previewToken);
 
     if (draft) return { page: draft, isDraftPreview: true };
   }
 
-  const page = await client.fetch<ArticleDocument | null>(
-    publishedArticleQuery,
-    { slug },
-    { next: { revalidate } },
-  );
+  const page = await getPublishedArticle(slug);
 
   return page ? { page, isDraftPreview: false } : null;
 }
@@ -306,6 +181,11 @@ export default async function ArticlePage({
                 This page is rendering the current draft directly from Sanity.
                 It is set to noindex and has not been published.
               </p>
+              <form action="/api/draft-mode/disable" method="post">
+                <button className="text-link" type="submit">
+                  Exit private preview →
+                </button>
+              </form>
             </div>
           </aside>
         ) : null}
@@ -360,6 +240,46 @@ export default async function ArticlePage({
               </figcaption>
             ) : null}
           </figure>
+        ) : null}
+
+        {isDraftPreview && socialImageUrl ? (
+          <aside
+            aria-label="Rich link preview"
+            className="mx-auto w-full max-w-[38rem] space-y-3 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 shadow-sm"
+          >
+            <p className="section-kicker">Rich link preview</p>
+            <div className="overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--background)]">
+              <Image
+                alt="Version Record launch article social preview"
+                className="h-auto w-full"
+                height={
+                  page.seo?.image?.asset?.metadata?.dimensions?.height ??
+                  heroHeight
+                }
+                sizes="(max-width: 640px) 100vw, 608px"
+                src={socialImageUrl}
+                width={
+                  page.seo?.image?.asset?.metadata?.dimensions?.width ??
+                  heroWidth
+                }
+              />
+              <div className="space-y-1 border-t border-[var(--border)] p-4">
+                <p className="font-mono text-[0.65rem] uppercase tracking-[0.12em] text-[var(--text-tertiary)]">
+                  versionrecord.com
+                </p>
+                <p className="text-base font-semibold text-[var(--text-primary)]">
+                  {page.title}
+                </p>
+                <p className="line-clamp-2 text-sm text-[var(--text-secondary)]">
+                  {page.seo?.description ?? page.summary}
+                </p>
+              </div>
+            </div>
+            <p className="text-xs text-[var(--text-tertiary)]">
+              This is an on-page approximation using the exact image, title,
+              and description supplied to social crawlers.
+            </p>
+          </aside>
         ) : null}
 
         <div className="mx-auto w-full max-w-[48rem] animate-in">

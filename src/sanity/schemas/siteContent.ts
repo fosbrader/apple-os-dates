@@ -87,14 +87,15 @@ export const sitePage = defineType({
       type: "string",
       group: "publishing",
       description:
-        "Shown publicly and included in article metadata. Use the Version Record brand unless an author explicitly opts into personal attribution.",
+        "Fixed to the Version Record organization. Personal attribution is intentionally disabled.",
       hidden: ({ document }) => document?.pageKind !== "article",
+      readOnly: ({ document }) => document?.pageKind === "article",
       validation: (rule) =>
         rule.custom((value, context) => {
           if (context.document?.pageKind !== "article") return true;
-          return typeof value === "string" && value.trim().length > 0
+          return value === "Version Record"
             ? true
-            : "Articles require a public byline.";
+            : "Articles must use the Version Record organization byline.";
         }),
     }),
     defineField({
@@ -103,8 +104,9 @@ export const sitePage = defineType({
       type: "datetime",
       group: "publishing",
       description:
-        "Set once, at the first public publication. The guarded article-publishing command preserves this value on later updates.",
+        "Assigned automatically on first publication and preserved on later updates.",
       hidden: ({ document }) => document?.pageKind !== "article",
+      readOnly: ({ document }) => document?.pageKind === "article",
       validation: (rule) =>
         rule.custom((value, context) => {
           const document = context.document as
@@ -130,8 +132,9 @@ export const sitePage = defineType({
       type: "datetime",
       group: "publishing",
       description:
-        "Refreshed whenever an article is published after an editorial change.",
+        "Refreshed automatically whenever a published article is updated.",
       hidden: ({ document }) => document?.pageKind !== "article",
+      readOnly: ({ document }) => document?.pageKind === "article",
       validation: (rule) =>
         rule.custom((value, context) => {
           const document = context.document as

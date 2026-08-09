@@ -2,10 +2,20 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   articleHasMeaningfulUpdate,
+  articlePublishingFeatureVersion,
   createArticlePublicationStamp,
   defaultArticleByline,
   formatArticleTimestamp,
 } from "../src/lib/article";
+import {
+  articleDeploymentIsReady,
+  productionArticleDeploymentOrigin,
+  verifyArticleDeployment,
+} from "../src/lib/article-deployment";
+import {
+  createArticlePreviewToken,
+  verifyArticlePreviewToken,
+} from "../src/lib/article-preview";
 
 test("first publication uses the brand byline and one shared timestamp", () => {
   const now = new Date("2026-08-09T01:15:00.000Z");
@@ -51,5 +61,106 @@ test("an invalid existing publication timestamp is rejected", () => {
         now: new Date("2026-08-10T14:30:00.000Z"),
       }),
     /existing publication time is invalid/i,
+  );
+});
+
+test("signed article preview tokens are scoped, short-lived, and tamper evident", () => {
+  const secret = "a-private-preview-secret-with-at-least-32-characters";
+  const now = new Date("2026-08-09T01:15:00.000Z");
+  const token = createArticlePreviewToken({
+    slug: "launching-version-record",
+    secret,
+    now,
+    lifetimeSeconds: 600,
+  });
+
+  assert.deepEqual(
+    verifyArticlePreviewToken({ token, secret, now }),
+    {
+      version: 1,
+      slug: "launching-version-record",
+      expiresAt: 1786238700,
+    },
+  );
+  assert.equal(
+    verifyArticlePreviewToken({
+      token: `${token.slice(0, -1)}x`,
+      secret,
+      now,
+    }),
+    null,
+  );
+  assert.equal(
+    verifyArticlePreviewToken({
+      token,
+      secret,
+      now: new Date("2026-08-09T01:25:00.000Z"),
+    }),
+    null,
+  );
+});
+
+test("preview token creation rejects weak secrets and unsafe slugs", () => {
+  assert.throws(
+    () =>
+      createArticlePreviewToken({
+        slug: "launching-version-record",
+        secret: "too-short",
+      }),
+    /at least 32 characters/i,
+  );
+  assert.throws(
+    () =>
+      createArticlePreviewToken({
+        slug: "../private",
+        secret: "a-private-preview-secret-with-at-least-32-characters",
+      }),
+    /slug is invalid/i,
+  );
+});
+
+test("publication deployment checks require the canonical production origin", () => {
+  assert.equal(
+    productionArticleDeploymentOrigin("https://www.versionrecord.com/news/"),
+    "https://www.versionrecord.com",
+  );
+  assert.throws(
+    () => productionArticleDeploymentOrigin("http://www.versionrecord.com"),
+    /requires the production origin/i,
+  );
+  assert.throws(
+    () => productionArticleDeploymentOrigin("https://preview.vercel.app"),
+    /requires the production origin/i,
+  );
+});
+
+test("publication readiness requires deployed code and private preview", async () => {
+  const readyPayload = {
+    featureVersion: articlePublishingFeatureVersion,
+    production: true,
+    previewConfigured: true,
+  };
+  assert.equal(articleDeploymentIsReady(readyPayload), true);
+  assert.equal(
+    articleDeploymentIsReady({
+      ...readyPayload,
+      previewConfigured: false,
+    }),
+    false,
+  );
+
+  const fetcher = (async (input: string | URL | Request) => {
+    assert.equal(
+      String(input),
+      "https://www.versionrecord.com/api/news-readiness/",
+    );
+    return Response.json(readyPayload);
+  }) as typeof fetch;
+  assert.deepEqual(
+    await verifyArticleDeployment(
+      "https://www.versionrecord.com",
+      fetcher,
+    ),
+    readyPayload,
   );
 });

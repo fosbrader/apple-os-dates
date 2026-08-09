@@ -1,5 +1,6 @@
 export const defaultArticleByline = "Version Record";
 export const articleTimeZone = "America/New_York";
+export const articlePublishingFeatureVersion = "site-news-v1";
 
 export interface ArticlePublicationStamp {
   byline: string;

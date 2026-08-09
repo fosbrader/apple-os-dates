@@ -9,6 +9,7 @@
  *   npx sanity exec scripts/publish-site-article.ts --with-user-token -- \
  *     --id sitePage.launching-version-record \
  *     --at <ISO_TIMESTAMP> \
+ *     --deployment-url https://www.versionrecord.com \
  *     --apply --confirm-production --plan-sha <PLAN_SHA>
  *
  * First publication sets both publishedAt and updatedAt. Later publications
@@ -22,6 +23,7 @@ import {
   createArticlePublicationStamp,
   defaultArticleByline,
 } from "../src/lib/article";
+import { verifyArticleDeployment } from "../src/lib/article-deployment";
 import { stableStringify } from "./lib/release-event-migration";
 
 const apiVersion = "2024-01-01";
@@ -134,6 +136,7 @@ async function main(): Promise<void> {
     "--confirm-production",
   );
   const acknowledgedPlanSha = argumentValue("--plan-sha");
+  const deploymentUrl = argumentValue("--deployment-url")?.trim();
   const publishedId = normalizePublishedId(argumentValue("--id"));
   const draftId = `drafts.${publishedId}`;
   const at = publicationTime(applyChanges);
@@ -202,7 +205,7 @@ async function main(): Promise<void> {
 
   if (!applyChanges) {
     console.log(
-      `Review the plan, then rerun with --at ${plan.updatedAt} --apply --confirm-production --plan-sha ${sha}.`,
+      `Review the plan, deploy and privately preview the article feature, then rerun with --at ${plan.updatedAt} --deployment-url https://www.versionrecord.com --apply --confirm-production --plan-sha ${sha}.`,
     );
     return;
   }
@@ -215,6 +218,23 @@ async function main(): Promise<void> {
       `Plan SHA mismatch. Expected --plan-sha ${sha} for the current draft revision.`,
     );
   }
+  if (!deploymentUrl) {
+    throw new Error(
+      "Apply mode requires --deployment-url https://www.versionrecord.com.",
+    );
+  }
+
+  const readiness = await verifyArticleDeployment(deploymentUrl);
+  console.log(
+    stableStringify(
+      {
+        deploymentVerified: true,
+        featureVersion: readiness.featureVersion,
+        previewConfigured: readiness.previewConfigured,
+      },
+      2,
+    ),
+  );
 
   const nextDocument = publishedDocument(draft, plan);
   const transaction = client
