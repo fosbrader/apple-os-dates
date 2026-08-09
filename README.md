@@ -133,6 +133,21 @@ disjoint assignment files, evidence custody, source and copyright standards,
 and the machine-readable findings packet expected by later page-building
 agents. Research agents must not write to production Sanity.
 
+The checked-in offline evidence inventory lists every local legacy release
+record, its observed source links, and the bounded review batches for missing
+or conflicting evidence. It is deliberately not a chronology-correction or
+Sanity-write plan:
+
+```sh
+npm run evidence:inventory:check
+```
+
+See [`research-handoffs/evidence-inventory.md`](research-handoffs/evidence-inventory.md)
+for the exact current counts and
+[`research-handoffs/evidence-inventory-batches.json`](research-handoffs/evidence-inventory-batches.json)
+for the reviewable record-ID manifest. Regenerate only after reviewing a local
+seed-data change with `npm run evidence:inventory`.
+
 ## Audited chronology and migration
 
 Build and validate the frozen chronology with:
@@ -361,6 +376,7 @@ npm test
 npm run data:build:check
 npm run data:validate
 npm run forecast:validate
+npm run evidence:inventory:check
 npm run build
 ```
 
