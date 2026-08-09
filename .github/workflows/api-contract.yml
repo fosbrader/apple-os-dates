@@ -26,5 +26,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run lint
+      - run: npm test
+      - run: npm run data:build:check
+      - run: npm run data:validate
+      - run: npm run forecast:validate
+      - run: npm run research:validate
       - run: npm run api:contract
       - run: npm run build
