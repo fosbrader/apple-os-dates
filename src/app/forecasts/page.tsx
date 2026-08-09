@@ -234,6 +234,16 @@ function ForecastCard({ forecast }: { forecast: ReleaseForecast }) {
           <p className="mt-1 text-sm text-[var(--text-secondary)]">
             {forecast.statusMessage}
           </p>
+          {forecast.status === "paused-window-passed" && (
+            <p className="mt-2 text-sm">
+              <Link
+                href="/methodology/#anomaly-status"
+                className="text-[var(--accent)] underline underline-offset-4"
+              >
+                Why this is marked anomalous &rarr;
+              </Link>
+            </p>
+          )}
         </div>
       )}
 
