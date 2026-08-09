@@ -245,8 +245,10 @@ export default async function VersionDetailPage({
   const datasetId = `${canonical}#release-dataset`;
   const firstMilestone = detail.milestones[0];
   const lastMilestone = detail.milestones[detail.milestones.length - 1];
+  const forecastIsAnomaly =
+    versionForecast?.status === "paused-window-passed";
   const activeForecastWindow =
-    versionForecast?.status === "active"
+    versionForecast?.status === "active" || forecastIsAnomaly
       ? versionForecast.nextMilestoneWindow ??
         versionForecast.publicReleaseWindow
       : undefined;
@@ -263,11 +265,13 @@ export default async function VersionDetailPage({
         },
         {
           value:
-            versionForecast?.nextMilestoneWindow?.likelyLabel ??
-            (versionForecast?.publicReleaseWindow
-              ? "Public release"
-              : "Pending"),
-          label: "Next forecast",
+            forecastIsAnomaly
+              ? "Anomaly"
+              : versionForecast?.nextMilestoneWindow?.likelyLabel ??
+                (versionForecast?.publicReleaseWindow
+                  ? "Public release"
+                  : "Pending"),
+          label: forecastIsAnomaly ? "Forecast status" : "Next forecast",
         },
         {
           value: detail.milestones.length,

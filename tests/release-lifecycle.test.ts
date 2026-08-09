@@ -38,12 +38,14 @@ function release({
   version,
   betaOne,
   betaTwo,
+  betaThree,
   publicDate,
   status,
 }: {
   version: string;
   betaOne: string;
   betaTwo: string;
+  betaThree?: string;
   publicDate?: string;
   status?: ReleaseStatus;
 }): ReleaseVersion {
@@ -66,14 +68,24 @@ function release({
         date: betaOne,
         isRevision: false,
       },
-      {
-        _key: "beta-2",
-        label: "Beta 2",
-        date: betaTwo,
-        isRevision: false,
-      },
-      ...(publicDate
-        ? [
+        {
+          _key: "beta-2",
+          label: "Beta 2",
+          date: betaTwo,
+          isRevision: false,
+        },
+        ...(betaThree
+          ? [
+              {
+                _key: "beta-3",
+                label: "Beta 3",
+                date: betaThree,
+                isRevision: false,
+              },
+            ]
+          : []),
+        ...(publicDate
+          ? [
             {
               _key: "public",
               label: "Public",
@@ -222,6 +234,60 @@ test("superseded cycles are neither forecast targets nor historical forecast sam
     "legacy released records remain valid forecast history",
   );
   assert.equal(forecasts[0].publicReleaseWindow?.sampleSize, 4);
+});
+
+test("an expired next-milestone window is marked as an Apple-cycle anomaly", () => {
+  const histories = [
+    release({
+      version: "24.0",
+      betaOne: "2023-06-01",
+      betaTwo: "2023-06-08",
+      betaThree: "2023-06-15",
+      publicDate: "2023-09-18",
+      status: "released",
+    }),
+    release({
+      version: "25.0",
+      betaOne: "2024-06-03",
+      betaTwo: "2024-06-10",
+      betaThree: "2024-06-17",
+      publicDate: "2024-09-16",
+      status: "released",
+    }),
+    release({
+      version: "26.0",
+      betaOne: "2025-06-02",
+      betaTwo: "2025-06-09",
+      betaThree: "2025-06-16",
+      publicDate: "2025-09-15",
+      status: "released",
+    }),
+  ];
+  const activeTarget = release({
+    version: "27.0",
+    betaOne: "2026-07-06",
+    betaTwo: "2026-07-20",
+    status: "active",
+  });
+
+  const forecast = buildReleaseForecasts(
+    [...histories, activeTarget],
+    new Date("2026-08-09T12:00:00.000Z"),
+  ).find((candidate) => candidate.release._id === activeTarget._id);
+
+  assert.ok(forecast);
+  assert.equal(forecast.status, "paused-window-passed");
+  assert.match(forecast.statusMessage, /anomalous/i);
+  assert.ok(forecast.nextMilestoneWindow);
+  assert.ok(forecast.publicReleaseWindow);
+  assert.ok(
+    forecast.nextMilestoneWindow.latestDate < "2026-08-09",
+    "the displayed next-milestone window should have passed",
+  );
+  assert.ok(
+    forecast.publicReleaseWindow.latestDate >= "2026-08-09",
+    "the longer public-release window should still be ahead",
+  );
 });
 
 test("superseded cycles do not become completed-cycle analytics observations", () => {

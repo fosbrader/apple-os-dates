@@ -1604,6 +1604,10 @@ button {
   border-left: 3px solid var(--accent);
 }
 
+.version-forecast-card--anomaly {
+  border-left-color: var(--milestone-rc);
+}
+
 .version-forecast-card__heading {
   display: flex;
   align-items: start;
@@ -1622,6 +1626,10 @@ button {
   font-family: var(--font-mono);
   font-size: 0.65rem;
   white-space: nowrap;
+}
+
+.version-forecast-card--anomaly .version-forecast-card__status {
+  color: var(--milestone-rc);
 }
 
 .version-forecast-card__range {
