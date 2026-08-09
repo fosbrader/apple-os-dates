@@ -5,7 +5,9 @@ import {
   HISTORICAL_ANALYSIS_DATASET_VERSION,
   HistoricalAnalysisInputError,
   buildHistoricalAnalysisDataset,
+  historicalAnalysisFingerprint,
   stableSerializeHistoricalAnalysis,
+  validateHistoricalAnalysisInput,
   validateHistoricalAnalysisDataset,
   type HistoricalAnalysisDatasetInputV1,
   type HistoricalReleaseMetadataV1,
@@ -211,6 +213,47 @@ test("stale and malformed contracts are rejected before a dataset is emitted", (
   assert.ok(validateHistoricalAnalysisDataset(untampered).some(({ code }) => code === "invalid-fingerprint"));
 });
 
+test("fingerprint integrity binds analytical input and canonical event evidence", () => {
+  const result = buildHistoricalAnalysisDataset(input());
+  const fingerprintFor = (
+    dataset: Omit<typeof result, "fingerprints">,
+    inputFingerprint: string,
+    codeFingerprint = result.fingerprints.codeFingerprint,
+  ) => historicalAnalysisFingerprint({ core: dataset, inputFingerprint, codeFingerprint });
+
+  const core = Object.fromEntries(
+    Object.entries(result).filter(([key]) => key !== "fingerprints"),
+  ) as unknown as Omit<typeof result, "fingerprints">;
+  const zeroInputFingerprint = "0".repeat(64);
+  const inputTampered = {
+    ...result,
+    fingerprints: {
+      ...result.fingerprints,
+      inputFingerprint: zeroInputFingerprint,
+      datasetFingerprint: fingerprintFor(core, zeroInputFingerprint),
+    },
+  };
+  assert.ok(validateHistoricalAnalysisDataset(inputTampered).some(({ code }) => code === "invalid-fingerprint"));
+
+  const unrelatedEvidence = {
+    ...result,
+    canonicalEvents: result.canonicalEvents.map((event, index) =>
+      index === 0 ? { ...event, sourceEvidenceIds: ["event:unrelated"] } : event,
+    ),
+  };
+  const unrelatedCore = Object.fromEntries(
+    Object.entries(unrelatedEvidence).filter(([key]) => key !== "fingerprints"),
+  ) as unknown as Omit<typeof result, "fingerprints">;
+  const evidenceTampered = {
+    ...unrelatedEvidence,
+    fingerprints: {
+      ...result.fingerprints,
+      datasetFingerprint: fingerprintFor(unrelatedCore, result.fingerprints.inputFingerprint),
+    },
+  };
+  assert.ok(validateHistoricalAnalysisDataset(evidenceTampered).some(({ code }) => code === "invalid-row"));
+});
+
 test("a matching public event and lifecycle outcome remain one complete closure observation", () => {
   const source = input();
   source.adapterResult = adaptReleaseObservations({
@@ -249,6 +292,13 @@ test("adversarial adapter results and serialized row tampering fail closed witho
   };
   assert.throws(() => buildHistoricalAnalysisDataset(duplicatedOutcome), HistoricalAnalysisInputError);
 
+  const omittedOutcome = input();
+  omittedOutcome.adapterResult = {
+    ...omittedOutcome.adapterResult,
+    releasedOutcomes: [],
+  };
+  assert.throws(() => buildHistoricalAnalysisDataset(omittedOutcome), HistoricalAnalysisInputError);
+
   const unknownOutcome = input();
   unknownOutcome.adapterResult = {
     ...unknownOutcome.adapterResult,
@@ -266,10 +316,23 @@ test("adversarial adapter results and serialized row tampering fail closed witho
     { ...result, lifecycleOutcomes: ["bad"] },
     { ...result, stageIntervals: [null] },
     { ...result, inclusionLedger: [false] },
+    { ...result, canonicalEvents: [{ ...result.canonicalEvents[0]!, eventId: 123 }] },
+    { ...result, lifecycleOutcomes: [{ ...result.lifecycleOutcomes[0]!, outcomeEvidenceId: 123 }] },
   ]) {
     assert.doesNotThrow(() => validateHistoricalAnalysisDataset(malformed));
     assert.ok(validateHistoricalAnalysisDataset(malformed).length > 0);
   }
+
+  const malformedMetadata = input({
+    releaseMetadata: [
+      {
+        ...metadata(),
+        releaseId: 123 as unknown as string,
+      },
+    ],
+  });
+  assert.doesNotThrow(() => validateHistoricalAnalysisInput(malformedMetadata));
+  assert.throws(() => buildHistoricalAnalysisDataset(malformedMetadata), HistoricalAnalysisInputError);
 });
 
 test("interval validator rejects cross-release endpoints and missing endpoint evidence", () => {

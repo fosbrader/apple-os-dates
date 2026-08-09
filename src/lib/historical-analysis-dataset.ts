@@ -241,6 +241,10 @@ function isIsoInstant(value: unknown): value is string {
   return typeof value === "string" && ISO_INSTANT.test(value) && !Number.isNaN(new Date(value).getTime());
 }
 
+function isNonEmptyText(value: unknown): value is string {
+  return typeof value === "string" && value.trim().length > 0;
+}
+
 function compareText(left: string, right: string): number {
   return left < right ? -1 : left > right ? 1 : 0;
 }
@@ -341,8 +345,15 @@ function adapterIssues(result: unknown): HistoricalAnalysisValidationIssue[] {
     return issues;
   }
   const forecastDataset = result.dataset as unknown as ReleaseObservationAdapterResult["dataset"];
-  const datasetIssues = validateForecastAnalysisDataset(forecastDataset);
+  let datasetIssues;
+  try {
+    datasetIssues = validateForecastAnalysisDataset(forecastDataset);
+  } catch {
+    issues.push({ code: "invalid-source-contract", path: "adapterResult.dataset", message: "Canonical forecast dataset is malformed." });
+    return issues;
+  }
   for (const issue of datasetIssues) issues.push({ code: "invalid-source-contract", path: `adapterResult.dataset.${issue.path}`, message: issue.message });
+  if (datasetIssues.length) return issues;
   if (result.asOfDate !== result.dataset.dataCutoff || !isIsoDay(result.asOfDate)) issues.push({ code: "invalid-adapter-result", path: "adapterResult.asOfDate", message: "asOfDate must match the validated dataset cutoff." });
   if (!isIsoInstant(result.issuedAt)) issues.push({ code: "invalid-adapter-result", path: "adapterResult.issuedAt", message: "issuedAt must be an ISO instant." });
   if (!Array.isArray(result.effectiveEvents) || !Array.isArray(result.releasedOutcomes) || !Array.isArray(result.inclusionLedger) || !Array.isArray(result.exclusions)) {
@@ -376,12 +387,47 @@ function adapterIssues(result: unknown): HistoricalAnalysisValidationIssue[] {
       continue;
     }
     const release = forecastDataset.releases.find((entry) => entry.id === outcome.releaseId);
-    const ledger = (result.inclusionLedger as ReleaseObservationLedgerEntry[]).find((entry) => entry.evidenceId === outcome.evidenceId && entry.included);
+    const ledger = (result.inclusionLedger as ReleaseObservationLedgerEntry[]).find((entry) => isRecord(entry) && entry.evidenceId === outcome.evidenceId && entry.included === true);
     const publicOutcomeMatches = outcome.closure !== "public-release" || (release?.lifecycle === "released" && release.statusEffectiveOn === outcome.occurredOn);
     const gmOutcomeMatches = outcome.closure !== "golden-master" || actual.some((event) => isRecord(event) && event.releaseId === outcome.releaseId && event.stage === "golden-master" && event.occurredOn === outcome.occurredOn);
-    if (!outcome.evidenceId?.trim() || !release || !["public-release", "golden-master"].includes(outcome.closure) || !isIsoDay(outcome.occurredOn) || !isIsoDay(outcome.firstObservedOn) || outcome.firstObservedOn < outcome.occurredOn || outcome.occurredOn > forecastDataset.dataCutoff || outcome.firstObservedOn > forecastDataset.dataCutoff || !ledger || ledger.releaseId !== outcome.releaseId || ledger.occurredOn !== outcome.occurredOn || !publicOutcomeMatches || !gmOutcomeMatches || outcomeIds.has(outcome.evidenceId) || outcomeReleaseIds.has(outcome.releaseId)) issues.push({ code: "invalid-adapter-result", path: `adapterResult.releasedOutcomes[${index}]`, message: "Lifecycle outcome must be unique, release-consistent, ledger-linked, and point-in-time valid." });
+    if (!isNonEmptyText(outcome.evidenceId) || !release || !["public-release", "golden-master"].includes(outcome.closure) || !isIsoDay(outcome.occurredOn) || !isIsoDay(outcome.firstObservedOn) || outcome.firstObservedOn < outcome.occurredOn || outcome.occurredOn > forecastDataset.dataCutoff || outcome.firstObservedOn > forecastDataset.dataCutoff || !ledger || ledger.releaseId !== outcome.releaseId || ledger.occurredOn !== outcome.occurredOn || !publicOutcomeMatches || !gmOutcomeMatches || outcomeIds.has(outcome.evidenceId) || outcomeReleaseIds.has(outcome.releaseId)) issues.push({ code: "invalid-adapter-result", path: `adapterResult.releasedOutcomes[${index}]`, message: "Lifecycle outcome must be unique, release-consistent, ledger-linked, and point-in-time valid." });
     outcomeIds.add(outcome.evidenceId);
     outcomeReleaseIds.add(outcome.releaseId);
+  }
+  const expectedOutcomeLedger = (result.inclusionLedger as ReleaseObservationLedgerEntry[])
+    .filter(
+      (entry): entry is ReleaseObservationLedgerEntry =>
+        isRecord(entry) &&
+        entry.source === "release" &&
+        entry.evidenceId === `release:${entry.releaseId}:outcome`,
+    );
+  const expectedOutcomeByRelease = new Map<string, ReleaseObservationLedgerEntry>();
+  for (const entry of expectedOutcomeLedger) {
+    if (expectedOutcomeByRelease.has(entry.releaseId)) {
+      issues.push({ code: "invalid-adapter-result", path: "adapterResult.inclusionLedger", message: `Release outcome ledger is duplicated for ${entry.releaseId}.` });
+    }
+    expectedOutcomeByRelease.set(entry.releaseId, entry);
+  }
+  for (const release of forecastDataset.releases) {
+    const expectedLedger = expectedOutcomeByRelease.get(release.id);
+    const actualOutcome = (result.releasedOutcomes as ReleasedOutcome[]).find(
+      (outcome) => isRecord(outcome) && outcome.releaseId === release.id,
+    );
+    if (!expectedLedger || expectedLedger.included !== Boolean(actualOutcome)) {
+      issues.push({ code: "invalid-adapter-result", path: "adapterResult.releasedOutcomes", message: `Release outcome is incomplete for ${release.id}.` });
+      continue;
+    }
+    if (actualOutcome && (actualOutcome.evidenceId !== expectedLedger.evidenceId || actualOutcome.occurredOn !== expectedLedger.occurredOn)) {
+      issues.push({ code: "invalid-adapter-result", path: "adapterResult.releasedOutcomes", message: `Release outcome does not match its included ledger entry for ${release.id}.` });
+    }
+    if (release.lifecycle === "released") {
+      if (!actualOutcome || actualOutcome.closure !== "public-release" || actualOutcome.occurredOn !== release.statusEffectiveOn || actualOutcome.firstObservedOn !== release.statusFirstObservedOn) {
+        issues.push({ code: "invalid-adapter-result", path: "adapterResult.releasedOutcomes", message: `Released cycle ${release.id} requires its canonical public-release outcome.` });
+      }
+    }
+  }
+  if (expectedOutcomeLedger.length !== forecastDataset.releases.length) {
+    issues.push({ code: "invalid-adapter-result", path: "adapterResult.inclusionLedger", message: "Every canonical release requires exactly one outcome ledger entry." });
   }
   return issues;
 }
@@ -401,7 +447,7 @@ export function validateHistoricalAnalysisInput(input: unknown): HistoricalAnaly
       continue;
     }
     const typedEntry = entry as HistoricalReleaseMetadataV1;
-    if (!typedEntry.releaseId?.trim() || !typedEntry.platformId?.trim() || !typedEntry.productFamilyId?.trim() || !RELEASE_CLASS_SET.has(typedEntry.releaseClass) || !Number.isSafeInteger(typedEntry.releasePosition) || typedEntry.releasePosition < 1 || !typedEntry.releaseCycleId?.trim() || !validEvidenceIds(typedEntry.sourceEvidenceIds)) issues.push({ code: "invalid-release-metadata", path, message: "Metadata requires stable release, platform, family, closed class, position, cycle, and evidence identities." });
+    if (!isNonEmptyText(typedEntry.releaseId) || !isNonEmptyText(typedEntry.platformId) || !isNonEmptyText(typedEntry.productFamilyId) || !RELEASE_CLASS_SET.has(typedEntry.releaseClass) || !Number.isSafeInteger(typedEntry.releasePosition) || typedEntry.releasePosition < 1 || !isNonEmptyText(typedEntry.releaseCycleId) || !validEvidenceIds(typedEntry.sourceEvidenceIds)) issues.push({ code: "invalid-release-metadata", path, message: "Metadata requires stable release, platform, family, closed class, position, cycle, and evidence identities." });
     if (seen.has(typedEntry.releaseId)) issues.push({ code: "duplicate-release-metadata", path: `${path}.releaseId`, message: `Release metadata is duplicated for ${typedEntry.releaseId}.` });
     seen.add(typedEntry.releaseId);
     const coverage = typedEntry.chronologyCoverage;
@@ -496,10 +542,12 @@ export function buildHistoricalAnalysisDataset(input: HistoricalAnalysisDatasetI
     lifecycleOutcomes: sorted(lifecycleOutcomes, (row) => `${row.releaseId}\u0000${row.occurredOn}\u0000${row.outcomeEvidenceId}`),
     inclusionLedger: sorted(inclusionLedger, (row) => `${row.releaseId}\u0000${row.entryId}`),
   } as const;
+  const inputFingerprint = historicalAnalysisFingerprint({ adapterResult: normalizedAdapterForFingerprint(adapter), releaseMetadata: normalizedMetadata(input.releaseMetadata) });
+  const codeFingerprint = HISTORICAL_ANALYSIS_CODE_FINGERPRINT;
   const fingerprints = {
-    inputFingerprint: historicalAnalysisFingerprint({ adapterResult: normalizedAdapterForFingerprint(adapter), releaseMetadata: normalizedMetadata(input.releaseMetadata) }),
-    codeFingerprint: HISTORICAL_ANALYSIS_CODE_FINGERPRINT,
-    datasetFingerprint: historicalAnalysisFingerprint(core),
+    inputFingerprint,
+    codeFingerprint,
+    datasetFingerprint: historicalAnalysisFingerprint({ core, inputFingerprint, codeFingerprint }),
   };
   const output = { ...core, fingerprints };
   const outputIssues = validateHistoricalAnalysisDataset(output);
@@ -561,7 +609,7 @@ export function validateHistoricalAnalysisDataset(dataset: unknown): HistoricalA
     }
     const cycle = cycleById.get(row?.releaseId);
     const validStage = row && canonicalForecastStage(row) === row.stage;
-    if (!row || row.rowType !== "canonical-event" || !cycle || !cycle.included || !sameCycleFields(row as unknown as Record<string, unknown>, cycle) || !row.eventId?.trim() || !validStage || !isIsoDay(row.occurredOn) || !isIsoDay(row.firstObservedOn) || row.firstObservedOn < row.occurredOn || (row.sameDayOrder !== undefined && (!Number.isSafeInteger(row.sameDayOrder) || row.sameDayOrder < 1)) || !validSortedEvidenceIds(row.sourceEvidenceIds)) issues.push({ code: "invalid-row", path: `canonicalEvents[${index}]`, message: "Canonical event is malformed, excluded, or lacks exact source linkage." });
+    if (!row || row.rowType !== "canonical-event" || !cycle || !cycle.included || !sameCycleFields(row as unknown as Record<string, unknown>, cycle) || !isNonEmptyText(row.eventId) || !validStage || !isIsoDay(row.occurredOn) || !isIsoDay(row.firstObservedOn) || row.firstObservedOn < row.occurredOn || (row.sameDayOrder !== undefined && (!Number.isSafeInteger(row.sameDayOrder) || row.sameDayOrder < 1)) || !validSortedEvidenceIds(row.sourceEvidenceIds) || !row.sourceEvidenceIds.includes(row.eventId)) issues.push({ code: "invalid-row", path: `canonicalEvents[${index}]`, message: "Canonical event is malformed, excluded, or lacks its exact event evidence ID." });
     if (eventsById.has(row.eventId)) issues.push({ code: "invalid-row", path: `canonicalEvents[${index}].eventId`, message: "Canonical event IDs must be unique." });
     eventsById.set(row.eventId, row);
   }
@@ -574,7 +622,7 @@ export function validateHistoricalAnalysisDataset(dataset: unknown): HistoricalA
       continue;
     }
     const cycle = cycleById.get(row?.releaseId);
-    if (!row || row.rowType !== "lifecycle-outcome" || !cycle || !cycle.included || !sameCycleFields(row as unknown as Record<string, unknown>, cycle) || !row.outcomeEvidenceId?.trim() || !["public-release", "golden-master"].includes(row.closure) || !isIsoDay(row.occurredOn) || !isIsoDay(row.firstObservedOn) || row.firstObservedOn < row.occurredOn || !validSortedEvidenceIds(row.sourceEvidenceIds) || !row.sourceEvidenceIds.includes(row.outcomeEvidenceId)) issues.push({ code: "invalid-row", path: `lifecycleOutcomes[${index}]`, message: "Lifecycle outcome is malformed, excluded, or lacks its outcome evidence ID." });
+    if (!row || row.rowType !== "lifecycle-outcome" || !cycle || !cycle.included || !sameCycleFields(row as unknown as Record<string, unknown>, cycle) || !isNonEmptyText(row.outcomeEvidenceId) || !["public-release", "golden-master"].includes(row.closure) || !isIsoDay(row.occurredOn) || !isIsoDay(row.firstObservedOn) || row.firstObservedOn < row.occurredOn || !validSortedEvidenceIds(row.sourceEvidenceIds) || !row.sourceEvidenceIds.includes(row.outcomeEvidenceId)) issues.push({ code: "invalid-row", path: `lifecycleOutcomes[${index}]`, message: "Lifecycle outcome is malformed, excluded, or lacks its outcome evidence ID." });
     if (outcomeById.has(row.outcomeEvidenceId)) issues.push({ code: "invalid-row", path: `lifecycleOutcomes[${index}].outcomeEvidenceId`, message: "Lifecycle outcome IDs must be unique." });
     outcomeById.set(row.outcomeEvidenceId, row);
   }
@@ -605,15 +653,15 @@ export function validateHistoricalAnalysisDataset(dataset: unknown): HistoricalA
   if (!sortedBy(intervals, (row) => `${row.releaseId}\u0000${row.startEventId}`)) issues.push({ code: "invalid-row", path: "stageIntervals", message: "Stage intervals are not in canonical order." });
   const ledger = dataset.inclusionLedger as HistoricalAnalysisLedgerEntry[];
   for (const [index, row] of ledger.entries()) {
-    if (!isRecord(row) || !row.entryId?.trim() || !cycleById.has(row.releaseId as string) || !["adapter-observation", "release-metadata", "release-cycle"].includes(row.scope as string) || typeof row.included !== "boolean" || !validSortedEvidenceIds(row.sourceEvidenceIds) || (!row.included && !row.reason)) issues.push({ code: "invalid-row", path: `inclusionLedger[${index}]`, message: "Ledger entry is malformed or lacks source linkage." });
+    if (!isRecord(row) || !isNonEmptyText(row.entryId) || !cycleById.has(row.releaseId as string) || !["adapter-observation", "release-metadata", "release-cycle"].includes(row.scope as string) || typeof row.included !== "boolean" || !validSortedEvidenceIds(row.sourceEvidenceIds) || (!row.included && !row.reason)) issues.push({ code: "invalid-row", path: `inclusionLedger[${index}]`, message: "Ledger entry is malformed or lacks source linkage." });
   }
   if (!sortedBy(ledger, (row) => `${row.releaseId}\u0000${row.entryId}`)) issues.push({ code: "invalid-row", path: "inclusionLedger", message: "Ledger is not in canonical order." });
-  if (!isRecord(dataset.fingerprints) || typeof dataset.fingerprints.inputFingerprint !== "string" || !SHA_256.test(dataset.fingerprints.inputFingerprint) || dataset.fingerprints.codeFingerprint !== HISTORICAL_ANALYSIS_CODE_FINGERPRINT || !SHA_256.test(dataset.fingerprints.datasetFingerprint as string)) issues.push({ code: "invalid-fingerprint", path: "fingerprints", message: "Fingerprint metadata is missing, malformed, or code fingerprint is stale." });
+  if (!isRecord(dataset.fingerprints) || typeof dataset.fingerprints.inputFingerprint !== "string" || !SHA_256.test(dataset.fingerprints.inputFingerprint) || /^0{64}$/.test(dataset.fingerprints.inputFingerprint) || dataset.fingerprints.codeFingerprint !== HISTORICAL_ANALYSIS_CODE_FINGERPRINT || !SHA_256.test(dataset.fingerprints.datasetFingerprint as string)) issues.push({ code: "invalid-fingerprint", path: "fingerprints", message: "Fingerprint metadata is missing, malformed, all-zero, or code fingerprint is stale." });
   else {
     const core = Object.fromEntries(
       Object.entries(dataset).filter(([key]) => key !== "fingerprints"),
     );
-    if (historicalAnalysisFingerprint(core) !== dataset.fingerprints.datasetFingerprint) issues.push({ code: "invalid-fingerprint", path: "fingerprints.datasetFingerprint", message: "Dataset fingerprint does not match stable serialization." });
+    if (historicalAnalysisFingerprint({ core, inputFingerprint: dataset.fingerprints.inputFingerprint, codeFingerprint: dataset.fingerprints.codeFingerprint }) !== dataset.fingerprints.datasetFingerprint) issues.push({ code: "invalid-fingerprint", path: "fingerprints.datasetFingerprint", message: "Dataset fingerprint does not bind the dataset body and input/code fingerprints." });
   }
   return issues;
 }

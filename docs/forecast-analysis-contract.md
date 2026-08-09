@@ -101,9 +101,11 @@ source-array order to supply them.
 Each metadata assertion and every derived row retains non-empty stable evidence
 IDs. Output includes release-cycle rows, adapter-collapsed canonical-event rows,
 lifecycle outcomes, stage intervals, the inclusion/exclusion ledger, provenance,
-and SHA-256 input/code/dataset fingerprints. Input normalization removes
-presentation-only fields and sorts logical arrays, so equivalent input ordering
-produces identical serialized output and fingerprints.
+and SHA-256 input/code/dataset fingerprints. The dataset fingerprint binds the
+canonical row body and the input/code fingerprints, so changing any of the
+three cannot be masked by recomputing only a body hash. Input normalization
+removes presentation-only fields and sorts logical arrays, so equivalent input
+ordering produces identical serialized output and fingerprints.
 
 Chronology coverage is an explicit sourced `complete` or `unknown` state. The
 unknown reasons are `not-reviewed`, `source-coverage-incomplete`, and
@@ -112,7 +114,9 @@ without independently verified unique `sameDayOrder` values result in unknown
 coverage. A public-release or GM event and its matching same-day lifecycle
 outcome are one closure observation, not unordered duplicate timeline facts.
 Intervals are unavailable with machine-readable reasons rather than inferred;
-same-calendar-day intervals are never zero days.
+same-calendar-day intervals are never zero days. Canonical-event rows must
+include their exact `eventId` in `sourceEvidenceIds`, not an unrelated non-empty
+evidence reference.
 
 Superseded cycles remain only as excluded release-cycle and ledger rows. Future,
 withdrawn, replaced, superseded, and revision-predecessor observations stay
@@ -127,6 +131,7 @@ npm run historical:validate -- path/to/historical-analysis-dataset.json
 ```
 
 `validateHistoricalAnalysisInput` rejects stale adapter/forecast contracts,
-extra or missing metadata, malformed ISO issuance instants, and invalid sidecar
-values before a build. `validateHistoricalAnalysisDataset` validates every row,
-ordering, endpoint/interval relation, source linkage, and fingerprint.
+extra or missing metadata, malformed ISO issuance instants, invalid sidecar
+values, and incomplete or extra lifecycle outcomes before a build.
+`validateHistoricalAnalysisDataset` validates every row, ordering,
+endpoint/interval relation, source linkage, and fingerprint.
