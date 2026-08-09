@@ -149,6 +149,8 @@ function buildSearchDocuments({
     documents.push({
       id: `release:${release.id}`,
       kind: "release",
+      record_id: release.id,
+      api_dataset: "releases",
       title: `${platform} ${release.version}`,
       href: releaseHref(release.platform, release.version),
       text: compactText(
@@ -177,6 +179,8 @@ function buildSearchDocuments({
     documents.push({
       id: `event:${event.id}`,
       kind: "event",
+      record_id: event.id,
+      api_dataset: "events",
       title: `${platform} ${event.version} ${event.label}`,
       href: eventHref(
         event.platform,
@@ -212,6 +216,8 @@ function buildSearchDocuments({
     documents.push({
       id: `build:${build.id}`,
       kind: "build",
+      record_id: build.id,
+      api_dataset: "builds",
       title: `${platform} ${build.version} (${build.display_build_number})`,
       href: buildHref(
         build.platform,
@@ -272,6 +278,8 @@ function buildSearchDocuments({
     documents.push({
       id: `change:${occurrence.id}`,
       kind: "change",
+      record_id: occurrence.id,
+      api_dataset: "occurrences",
       title: occurrence.change_title,
       href: `${href}#change-${encodeURIComponent(occurrence.id)}`,
       text: compactText(
@@ -300,13 +308,25 @@ function buildSearchDocuments({
   return documents;
 }
 
-function normalizeSearchText(value: string): string {
+/**
+ * Normalize query and indexed text in the same way. Keep Unicode letters and
+ * numbers so a non-English query is not silently reduced to a match-all.
+ */
+export function normalizeResearchSearchText(value: string): string {
   return value
     .normalize("NFKD")
     .replace(/\p{Diacritic}/gu, "")
     .toLowerCase()
-    .replace(/[^a-z0-9.]+/g, " ")
+    .replace(/[^\p{L}\p{N}.]+/gu, " ")
     .trim();
+}
+
+export function researchSearchTerms(value: string): string[] {
+  return normalizeResearchSearchText(value).split(/\s+/).filter(Boolean);
+}
+
+export function hasResearchSearchTerm(value: string): boolean {
+  return researchSearchTerms(value).some((term) => /[\p{L}\p{N}]/u.test(term));
 }
 
 function matchesFilter(
@@ -318,17 +338,17 @@ function matchesFilter(
   );
   return entries.every(([key, value]) => {
     if (key === "publisher") {
-      const wanted = normalizeSearchText(String(value));
+      const wanted = normalizeResearchSearchText(String(value));
       return document.publishers.some(
-        (publisher) => normalizeSearchText(publisher) === wanted,
+        (publisher) => normalizeResearchSearchText(publisher) === wanted,
       );
     }
     const documentValue =
       document[key as keyof ResearchSearchDocument];
     return (
       typeof documentValue === "string" &&
-      normalizeSearchText(documentValue) ===
-        normalizeSearchText(String(value))
+      normalizeResearchSearchText(documentValue) ===
+        normalizeResearchSearchText(String(value))
     );
   });
 }
@@ -337,12 +357,12 @@ function relevanceScore(
   document: ResearchSearchDocument,
   query: string,
 ): number {
-  const normalizedQuery = normalizeSearchText(query);
-  if (!normalizedQuery) return 1;
+  const normalizedQuery = normalizeResearchSearchText(query);
+  const terms = researchSearchTerms(query);
+  if (!terms.some((term) => /[\p{L}\p{N}]/u.test(term))) return 0;
 
-  const terms = normalizedQuery.split(/\s+/).filter(Boolean);
-  const title = normalizeSearchText(document.title);
-  const metadata = normalizeSearchText(
+  const title = normalizeResearchSearchText(document.title);
+  const metadata = normalizeResearchSearchText(
     [
       document.vendor,
       document.platform,
@@ -359,7 +379,7 @@ function relevanceScore(
       .filter(Boolean)
       .join(" "),
   );
-  const body = normalizeSearchText(document.text);
+  const body = normalizeResearchSearchText(document.text);
 
   if (
     !terms.every(
@@ -392,9 +412,25 @@ export function searchResearchIndex(
   filters: ResearchSearchFilters = {},
   limit = 25,
 ): ResearchSearchResult[] {
-  const boundedLimit = Math.max(1, Math.min(100, limit));
+  return searchResearchIndexPage(index, query, filters, limit).results;
+}
 
-  return index.documents
+/**
+ * Return one bounded page from the ranked search result set. The public API
+ * needs the total count and offset support; the site search keeps its simpler
+ * array return value through searchResearchIndex above.
+ */
+export function searchResearchIndexPage(
+  index: ResearchSearchIndex,
+  query: string,
+  filters: ResearchSearchFilters = {},
+  limit = 25,
+  offset = 0,
+): { results: ResearchSearchResult[]; total: number } {
+  const boundedLimit = Math.max(1, Math.min(100, limit));
+  const boundedOffset = Math.max(0, Math.floor(offset));
+
+  const matches = index.documents
     .filter((document) => matchesFilter(document, filters))
     .map((document) => ({
       document,
@@ -408,6 +444,10 @@ export function searchResearchIndex(
           left.document.date || "",
         ) ||
         left.document.title.localeCompare(right.document.title),
-    )
-    .slice(0, boundedLimit);
+    );
+
+  return {
+    results: matches.slice(boundedOffset, boundedOffset + boundedLimit),
+    total: matches.length,
+  };
 }

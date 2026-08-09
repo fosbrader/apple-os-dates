@@ -179,9 +179,20 @@ export type SearchDocumentKind =
   | "build"
   | "change";
 
+/** The public-record collection behind a search document. */
+export type SearchRecordDataset =
+  | "releases"
+  | "events"
+  | "builds"
+  | "occurrences";
+
 export interface ResearchSearchDocument {
   id: string;
   kind: SearchDocumentKind;
+  /** Exact record identifier for a follow-up public API request. */
+  record_id: string;
+  /** Collection that owns record_id in the public API. */
+  api_dataset: SearchRecordDataset;
   title: string;
   href: string;
   text: string;

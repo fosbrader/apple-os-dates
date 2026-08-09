@@ -1,24 +1,97 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { formatDate, getMilestoneType, daysBetween } from "@/lib/utils";
 import { sendAnalyticsEvent } from "@/lib/analytics";
 import { releaseVersionPath } from "@/lib/release-routes";
-import type { TimelineBar } from "@/lib/view-models/timeline";
+import type {
+  TimelineBar,
+  TimelineViewModel,
+} from "@/lib/view-models/timeline";
 import {
   indexPlatformsBySlug,
   resolvePlatform,
   type ViewModelPlatform,
 } from "@/lib/view-models/platforms";
 
-interface TimelineViewProps {
-  bars: TimelineBar[];
-  platforms: ViewModelPlatform[];
-}
-
 type SortKey = "date" | "duration" | "betas" | "platform";
 type GroupKey = "year" | "platform" | "none";
+
+const timelineDataUrl = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/timeline/data/`;
+
+function isTimelineViewModel(value: unknown): value is TimelineViewModel {
+  if (!value || typeof value !== "object") {
+    return false;
+  }
+
+  const candidate = value as Partial<TimelineViewModel>;
+  return Array.isArray(candidate.bars) && Array.isArray(candidate.platforms);
+}
+
+export function TimelineView() {
+  const [timeline, setTimeline] = useState<TimelineViewModel | null>(null);
+  const [hasError, setHasError] = useState(false);
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    async function loadTimeline() {
+      try {
+        const response = await fetch(timelineDataUrl, {
+          signal: controller.signal,
+          headers: { Accept: "application/json" },
+        });
+
+        if (!response.ok) {
+          throw new Error(`Timeline request failed with ${response.status}`);
+        }
+
+        const payload: unknown = await response.json();
+        if (!isTimelineViewModel(payload)) {
+          throw new Error("Timeline response has an unexpected shape");
+        }
+
+        setTimeline(payload);
+      } catch (error) {
+        if (!controller.signal.aborted) {
+          console.error("Timeline data request failed", error);
+          setHasError(true);
+        }
+      }
+    }
+
+    void loadTimeline();
+
+    return () => controller.abort();
+  }, []);
+
+  if (hasError) {
+    return (
+      <div className="content-notice" role="alert">
+        <h2>Interactive timeline is temporarily unavailable</h2>
+        <p className="content-notice__body">
+          The release archive remains available from the{" "}
+          <Link href="/apple/">Apple catalog</Link>.
+        </p>
+      </div>
+    );
+  }
+
+  if (!timeline) {
+    return (
+      <div className="content-notice" role="status" aria-live="polite">
+        <h2>Loading the full release timeline…</h2>
+        <p className="content-notice__body">
+          The archive summary and platform links remain available while the
+          interactive comparison loads.
+        </p>
+      </div>
+    );
+  }
+
+  return <TimelineDataView {...timeline} />;
+}
 
 function MobileTimelineCard({
   bar,
@@ -138,7 +211,7 @@ function TimelineTableRow({
   );
 }
 
-export function TimelineView({ bars, platforms }: TimelineViewProps) {
+export function TimelineDataView({ bars, platforms }: TimelineViewModel) {
   const platformsBySlug = useMemo(
     () => indexPlatformsBySlug(platforms),
     [platforms]

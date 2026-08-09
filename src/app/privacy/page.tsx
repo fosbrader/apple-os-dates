@@ -11,7 +11,7 @@ import { absoluteUrl, createPageMetadata } from "@/lib/site";
 
 const pageDescription =
   "Learn how Version Record handles cookieless analytics, operational hosting data, private submissions, and optional future services.";
-const lastUpdated = "July 29, 2026";
+const lastUpdated = "August 8, 2026";
 
 const linkClass =
   "text-[var(--accent)] hover:text-[var(--accent-hover)] underline underline-offset-4";
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
     name: "Privacy Notice",
     description: pageDescription,
     inLanguage: "en-US",
-    dateModified: "2026-07-28",
+    dateModified: "2026-08-08",
     isPartOf: { "@id": `${absoluteUrl("/")}#website` },
   };
 
@@ -255,9 +255,14 @@ export default function PrivacyPage() {
               private editorial form
             </Link>
             . The report, evidence links, optional email, and optional public
-            credit are stored in a dedicated private Sanity dataset that is
-            separate from public site content and research exports. Nothing is
-            published automatically. Reports opened in GitHub remain public.
+            credit are stored as authenticated objects in a private Vercel Blob
+            store that is separate from public site content and research
+            exports. Vercel BotID Basic checks browser and network security
+            signals before a report can enter that store. Cloudflare Turnstile
+            can supply a second anti-abuse check when it is enabled. Nothing is
+            published automatically. GitHub receives only a generic
+            queue-attention notice; submission contents are not sent there.
+            Reports that a visitor opens directly in GitHub remain public.
           </p>
           {publicContactEmail ? (
             <p>
@@ -377,14 +382,15 @@ export default function PrivacyPage() {
             secure, and troubleshoot the service.
           </p>
           <p>
-            Raw private submissions and contact details are scheduled for
-            deletion or anonymization within 180 days, normally sooner after
-            resolution. Approved public credit may remain on a release record
-            with the submitter’s consent. Public GitHub submissions and their
+            Raw private submissions and contact details are automatically
+            scheduled for deletion within 180 days unless a limited legal,
+            fraud, or security hold is necessary. A held record keeps its
+            original received date, and normal deletion resumes when the hold
+            ends. Approved public credit may remain on a release record with
+            the submitter’s consent. Public GitHub submissions and their
             revision history can remain visible after an issue is closed.
             Editorial source records are retained while useful to document and
-            correct the public dataset. Legal, fraud-prevention, or security
-            needs may require a longer period.
+            correct the public dataset.
           </p>
         </ContentSection>
 
@@ -392,9 +398,10 @@ export default function PrivacyPage() {
           <p>
             The site is a general technical reference and is not directed to
             children under 13. It does not ask public visitors to create an
-            account or submit a birth date. If a future feature intentionally
-            collects visitor contact information, this notice and the feature
-            design will be reviewed before launch.
+            account or submit a birth date. The private editorial form includes
+            an optional contact-email field, but it is not designed to collect
+            personal information from children. Do not submit personal
+            information about a child under 13.
           </p>
         </ContentSection>
 

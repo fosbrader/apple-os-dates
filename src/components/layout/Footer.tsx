@@ -1,5 +1,9 @@
 import Link from "next/link";
 import { siteXHandle, siteXUrl } from "@/lib/site";
+import {
+  createSiteBuildMetadata,
+  formatSiteUpdatedAt,
+} from "@/lib/site-version";
 
 const exploreLinks = [
   { href: "/search/", label: "Search" },
@@ -8,6 +12,7 @@ const exploreLinks = [
   { href: "/timeline/", label: "Timeline" },
   { href: "/analytics/", label: "Analytics" },
   { href: "/exports/", label: "Data exports" },
+  { href: "/api/", label: "Public API" },
 ];
 
 const projectLinks = [
@@ -24,6 +29,12 @@ const policyLinks = [
 ];
 
 export function Footer() {
+  const fallbackBuildMetadata = createSiteBuildMetadata();
+  const siteVersion =
+    process.env.NEXT_PUBLIC_SITE_VERSION ?? fallbackBuildMetadata.version;
+  const siteUpdatedAt =
+    process.env.NEXT_PUBLIC_SITE_UPDATED_AT ?? fallbackBuildMetadata.updatedAt;
+
   return (
     <footer className="site-footer">
       <div className="site-footer__lead">
@@ -87,6 +98,17 @@ export function Footer() {
           platform names are trademarks of Apple Inc.
         </p>
         <p>Structured archive data is published under CC0; editorial prose is protected.</p>
+        <p className="site-footer__version">
+          <span>
+            Site version <strong>{siteVersion}</strong>
+          </span>
+          <span>
+            Updated{" "}
+            <time dateTime={siteUpdatedAt}>
+              {formatSiteUpdatedAt(siteUpdatedAt)}
+            </time>
+          </span>
+        </p>
       </div>
     </footer>
   );

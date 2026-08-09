@@ -109,6 +109,12 @@ export default function ExportsPage() {
                 Read the export README →
               </a>
             </p>
+            <p>
+              Need filtered JSON records? Use the{" "}
+              <Link className="text-link" href="/api/">
+                public API reference →
+              </Link>
+            </p>
           </div>
         </header>
 

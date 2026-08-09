@@ -213,6 +213,11 @@ export function researchExportManifest(generatedAt: string) {
     generated_at: generatedAt,
     license: RESEARCH_EXPORT_LICENSE,
     license_url: RESEARCH_EXPORT_LICENSE_URL,
+    api: {
+      documentation: "/api/",
+      root: "/api/v1/",
+      openapi: "/api/v1/openapi.json",
+    },
     editorial_rights:
       "Original editorial prose, design, and media are not included in the CC0 grant.",
     datasets: RESEARCH_DATASET_NAMES.map((dataset) => ({
@@ -253,8 +258,8 @@ Model notes:
 - citation exports contain source metadata and locators, never mirrored
   publisher copy or private editorial notes.
 
-The versioned bulk files are the supported public data interface. The site's
-search-index endpoint is an internal implementation detail and is not a
-supported API.
+The versioned bulk files and the versioned public API are supported public
+data interfaces. The site's search-index endpoint is an internal
+implementation detail and is not a supported API.
 `;
 }

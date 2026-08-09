@@ -17,11 +17,6 @@ import { releaseBuild } from "./releaseBuild";
 import { releaseEvent } from "./releaseEvent";
 import { correction, correctionClaim } from "./correction";
 import { sitePage, siteSettings } from "./siteContent";
-import {
-  feedSource,
-  ingestCandidate,
-  submission,
-} from "./moderation";
 
 export const schemaTypes = [
   // Shared objects must be registered before documents that reference them.
@@ -49,9 +44,4 @@ export const schemaTypes = [
   correction,
   sitePage,
   siteSettings,
-
-  // These types belong in the dedicated private moderation dataset.
-  submission,
-  feedSource,
-  ingestCandidate,
 ];

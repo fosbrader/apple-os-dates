@@ -8,6 +8,10 @@
     "start": "next start",
     "lint": "eslint .",
     "test": "tsx --test tests/*.test.ts",
+    "api:client:generate": "tsx scripts/generate-public-api-client.ts",
+    "api:client:check": "tsx scripts/generate-public-api-client.ts --check",
+    "api:contract": "npm run api:client:check && npx tsc --noEmit && npm test",
+    "submissions:moderate": "npx --yes vercel@58.9.0 env run -e production -- /usr/bin/env -u BASH_ENV -u ENV /bin/bash --noprofile --norc scripts/run-submission-operator.sh",
     "data:parse-note": "tsx scripts/parse-apple-notes.ts",
     "data:build": "tsx scripts/build-release-data.ts --write",
     "data:build:check": "tsx scripts/build-release-data.ts",
@@ -31,33 +35,71 @@
     "url": "https://github.com/fosbrader/apple-os-dates/issues"
   },
   "homepage": "https://www.versionrecord.com/",
+  "engines": {
+    "node": "^22.13.0"
+  },
+  "overrides": {
+    "@module-federation/dts-plugin": {
+      "undici": "7.29.0"
+    },
+    "@module-federation/vite": {
+      "@module-federation/dts-plugin": "2.8.2"
+    },
+    "@redocly/openapi-core": {
+      "js-yaml": "4.3.1"
+    },
+    "@sanity/workbench-cli": {
+      "@module-federation/vite": "1.20.5"
+    },
+    "@sanity/runtime-cli": {
+      "adm-zip": "0.6.0"
+    },
+    "@vercel/frameworks": {
+      "js-yaml": "4.3.1",
+      "smol-toml": "1.7.1"
+    },
+    "next": {
+      "postcss": "$postcss",
+      "sharp": "0.35.0"
+    },
+    "postcss": {
+      "nanoid": "3.3.18"
+    },
+    "typeid-js": {
+      "uuid": "11.1.1"
+    }
+  },
   "dependencies": {
+    "@sanity/client": "^7.26.0",
     "@sanity/image-url": "^2.0.3",
-    "@sanity/vision": "^5.10.0",
-    "@tailwindcss/postcss": "^4.1.18",
-    "@types/d3": "^7.4.3",
-    "@types/node": "^25.2.3",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
+    "@sanity/vision": "^6.9.1",
     "@vercel/analytics": "^2.0.1",
+    "@vercel/blob": "^2.7.0",
+    "@vercel/firewall": "^1.2.2",
+    "botid": "^1.5.11",
     "clsx": "^2.1.1",
     "d3": "^7.9.0",
     "date-fns": "^4.1.0",
-    "eslint": "^9.39.2",
-    "eslint-config-next": "^16.1.6",
     "framer-motion": "^12.34.1",
     "next": "^16.1.6",
-    "next-sanity": "^12.1.0",
-    "postcss": "^8.5.6",
+    "next-sanity": "^13.3.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "sanity": "^5.10.0",
-    "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3"
+    "sanity": "^6.9.1"
   },
   "devDependencies": {
-    "@sanity/client": "^7.15.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/d3": "^7.4.3",
+    "@types/node": "^25.9.5",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
     "dotenv": "^17.3.1",
-    "tsx": "^4.21.0"
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.12",
+    "openapi-typescript": "^7.13.0",
+    "postcss": "^8.5.25",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
   }
 }

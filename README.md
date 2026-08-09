@@ -200,7 +200,52 @@ builds, and changes:
 /api/search-index/
 ```
 
-Versioned structured exports are available as JSON and CSV:
+The public API gives paged, filtered JSON records. It has no API key:
+
+```text
+/api/
+/api/v1/
+/api/v1/openapi.json
+/api/v1/releases/
+/api/v1/events/
+/api/v1/builds/
+/api/v1/changes/
+/api/v1/occurrences/
+/api/v1/citations/
+/api/v1/provenance/
+/api/v1/search/?q=ios
+```
+
+The API only reads the same explicitly allowlisted public fields as the bulk
+exports. Search returns derived matching metadata only; it does not return full
+editorial text and gives a canonical `record.api_path` for the factual record.
+The API sets public CORS headers, uses a stable application-error envelope, and
+limits each page to 100 records. Collection and search paths must use the
+trailing slash shown above. For a detail request, follow the returned
+`links.self` value because the canonical form depends on the record ID.
+
+The API reference uses ASD-STE100 writing principles. Its OpenAPI contract
+documents field types, nullability, error behavior, ordering, pagination, and
+the v1 compatibility policy.
+
+### API production protection
+
+Production uses one Vercel Firewall fixed-window rule for
+`POST /api/submissions/`: five requests per IP per 15 minutes. This uses the
+single rate-limit rule included with the Hobby plan without spending it on
+read-only API traffic. Submission intake also uses free Vercel BotID Basic and
+an in-process limit with the same five-attempt, 15-minute ceiling. BotID is initialized in
+`src/instrumentation-client.ts`, enforced again in the server route, and fails
+closed before a report can reach private storage. Do not remove the distributed
+rule or BotID when changing the application limiter.
+
+The optional `@vercel/firewall` integration remains available for a future
+application-specific rate-limit ID. If it is enabled, set
+`VERCEL_API_RATE_LIMIT_ID` and
+`VERCEL_API_RATE_LIMIT_WINDOW_SECONDS=60`. See [Vercel's rate-limit guide](https://vercel.com/kb/guide/add-rate-limiting-vercel)
+for the current dashboard flow and plan limits.
+
+Versioned structured exports are also available as JSON and CSV:
 
 ```text
 /exports/v1/manifest.json
@@ -217,31 +262,62 @@ Versioned structured exports are available as JSON and CSV:
 Private moderation records and internal editorial fields are excluded by
 explicit allowlists.
 
-## Private submissions and feed candidates
+## Private submissions
 
-Community reports are accepted at `/submit/`. The API refuses to write unless
-all of these are configured:
+Community reports are accepted at `/submit/`. Valid reports are stored as
+immutable JSON objects in the private `version-record-moderation` Vercel Blob
+store. Blob paths contain only a date and random UUID; they never contain a
+name, email address, URL, or submission text. Turnstile tokens and honeypot
+values are never stored.
 
-```sh
-SANITY_MODERATION_PROJECT_ID=lh3yswzu
-SANITY_MODERATION_DATASET=moderation
-SANITY_MODERATION_WRITE_TOKEN=...
-```
-
-The moderation dataset must be private and must not be the public content
-dataset. Use a dedicated least-privilege token. The public Studio intentionally
-hides and disables moderation documents; reviewers need a separate Studio
-workspace pointed at the private dataset and reusing the moderation schemas.
-
-Submission intake is JSON-only and includes size limits, validation,
-same-origin checks, a honeypot, rate limiting, optional Turnstile, privacy
-attestations, and a 180-day deletion/anonymization date. Nothing is published
-automatically.
-
-The daily feed-candidate cron additionally requires:
+The store must be private and linked to the Vercel Production environment.
+Vercel supplies short-lived OIDC credentials to Production functions; do not
+add a long-lived `BLOB_READ_WRITE_TOKEN`. Preview intentionally has no queue
+credentials and must fail closed. Development is also disconnected from the
+private store. These separate Production secrets are required:
 
 ```sh
 CRON_SECRET=...
+SUBMISSION_MONITOR_SECRET=...
+SUBMISSION_OPERATOR_SECRET=...
+```
+
+`CRON_SECRET` protects the daily `/api/cron/submission-retention/` job.
+`SUBMISSION_MONITOR_SECRET` protects `/api/submissions/status/` and must have the
+same value in the repository Actions secret of the same name. The status route
+returns only `{"pending": boolean}`. It never returns a count, object path,
+contact field, source, or submission text. `SUBMISSION_OPERATOR_SECRET`
+protects the Production-only `/api/submissions/operator/` route used by the
+local moderation CLI. Keep the three values independent.
+
+Submission intake is JSON-only and includes streaming size limits, validation,
+same-origin checks, a honeypot, rate limiting, Vercel BotID Basic, optional
+Turnstile as a second check, privacy attestations, and automatic deletion within
+180 days unless a legal, fraud, or security hold requires longer retention.
+Nothing is published automatically. The public Sanity dataset does not register
+moderation schemas, so submission records cannot be created accidentally
+through the public Studio.
+
+The scheduled GitHub Action polls only that Boolean status and manages one
+generic public issue when review is needed. Submission contents and counts
+never leave the private store. Use `npm run submissions:moderate -- list` to see
+PII-safe queue metadata, then use the explicit-ID operator commands in the
+moderation runbook. The CLI calls the fixed Production HTTPS route; local OIDC
+does not access Blob. Resolving a record deletes that exact object; the daily
+retention job is the backstop. A legal hold moves the immutable object to a
+private hold prefix that automatic retention does not scan.
+
+See `docs/operations/submission-moderation.md` for the queue workflow, failure
+handling, and security boundaries.
+
+The older feed-candidate worker is intentionally not scheduled. It requires a
+genuinely private moderation database and remains disabled while the project
+uses only free plans. If it is activated later, it additionally requires:
+
+```sh
+SANITY_MODERATION_PROJECT_ID=...
+SANITY_MODERATION_DATASET=...
+SANITY_MODERATION_WRITE_TOKEN=...
 FEED_INGEST_ALLOWED_HOSTS=developer.apple.com,support.apple.com
 ```
 

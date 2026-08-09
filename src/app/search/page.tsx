@@ -14,12 +14,26 @@ import { formatDate } from "@/lib/utils";
 
 export const revalidate = 300;
 
-export const metadata = createPageMetadata({
-  title: "Search Software Release Records",
-  description:
-    "Search Version Record by version, beta, build, change, platform, evidence state, or cited publisher.",
-  path: "/search/",
-});
+export const metadata = {
+  ...createPageMetadata({
+    title: "Search Software Release Records",
+    description:
+      "Search Version Record by version, beta, build, change, platform, evidence state, or cited publisher.",
+    path: "/search/",
+  }),
+  // Query and facet combinations are useful in-product, but they are not
+  // durable editorial pages for web search. Keep their result links
+  // crawlable without inviting an unbounded set of search-result URLs into
+  // the index.
+  robots: {
+    index: false,
+    follow: true,
+    googleBot: {
+      index: false,
+      follow: true,
+    },
+  },
+};
 
 type SearchValue = string | string[] | undefined;
 

@@ -27,10 +27,12 @@ export default function SubmitPage() {
     >
       <Notice title="Public evidence only" tone="warning">
         <p>
-          Do not submit leaks, credentials, personal data, confidential
-          information, NDA-covered material, full articles, or full publisher
-          release notes. Version Record records facts in original language and
-          links back to the source.
+          Submit only evidence that is already available to the public. Do not
+          put leaks, credentials, personal data, confidential information,
+          NDA-covered material, full articles, or full publisher release notes
+          in the report text or evidence. You may provide your own optional
+          contact email only in the labeled Contact email field. Version Record
+          records facts in original language and links back to the source.
         </p>
       </Notice>
 
@@ -46,9 +48,11 @@ export default function SubmitPage() {
           evidence is incomplete.
         </p>
         <p>
-          Contact details stay in the private moderation dataset and are never
-          part of public search, exports, or release pages. Raw submissions are
-          scheduled for deletion or anonymization within 180 days.
+          Contact details stay in the private Vercel submission store and are
+          never part of public search, exports, release pages, or GitHub queue
+          notices. Raw submissions are automatically scheduled for deletion
+          within 180 days, except during a limited legal, fraud, or security
+          hold described in the privacy notice.
         </p>
       </ContentSection>
     </ContentPage>

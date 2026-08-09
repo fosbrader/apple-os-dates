@@ -2,6 +2,10 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { POST as submitReport } from "../src/app/api/submissions/route";
 import {
+  createSubmissionHandler,
+  isPermittedSubmissionOrigin,
+} from "../src/app/api/submissions/handler";
+import {
   getFeedIngestConfig,
   getModerationConfig,
   getTurnstileConfig,
@@ -24,6 +28,7 @@ import {
   canonicalizePublicHttpsUrl,
   isBlockedIpAddress,
 } from "../src/lib/moderation/urls";
+import { SubmissionBlobSizeError } from "../src/lib/moderation/blob";
 
 const validSubmission = {
   submissionType: "correction",
@@ -52,6 +57,20 @@ const rssSource: FeedSourceRecord = {
   feedUrl: "https://developer.apple.com/news/releases/rss/releases.rss",
   feedKind: "rss",
 };
+
+function submissionRequest(
+  body: unknown,
+  origin = "https://www.versionrecord.com",
+): Request {
+  return new Request("https://www.versionrecord.com/api/submissions/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Origin: origin,
+    },
+    body: JSON.stringify(body),
+  });
+}
 
 test("moderation configuration cannot fall back to the public dataset or token", () => {
   assert.throws(
@@ -162,6 +181,62 @@ test("submission validation normalizes sources and requires privacy attestations
   assert.equal(externalTarget.ok, false);
   if (!externalTarget.ok) {
     assert.match(externalTarget.errors.pageUrl, /versionrecord\.com/);
+  }
+});
+
+test("submission validation rejects terminal and bidi controls in every text field", () => {
+  const unsafeCharacters = [
+    "\u0080",
+    "\u009b",
+    "\u009f",
+    "\u061c",
+    "\u200e",
+    "\u200f",
+    "\u2028",
+    "\u2029",
+    "\u202a",
+    "\u202b",
+    "\u202c",
+    "\u202d",
+    "\u202e",
+    "\u2066",
+    "\u2067",
+    "\u2068",
+    "\u2069",
+  ];
+
+  for (const character of unsafeCharacters) {
+    const variants = [
+      { ...validSubmission, platform: `iOS${character}` },
+      { ...validSubmission, version: `26.3${character}` },
+      { ...validSubmission, summary: `${validSubmission.summary}${character}` },
+      { ...validSubmission, details: `${validSubmission.details}${character}` },
+      {
+        ...validSubmission,
+        pageUrl: `https://versionrecord.com/apple/ios/26.3/${character}`,
+      },
+      {
+        ...validSubmission,
+        sourceUrls: [`https://developer.apple.com/example/${character}`],
+      },
+      { ...validSubmission, publicCredit: `Contributor${character}` },
+      {
+        ...validSubmission,
+        contactEmail: `editor${character}@example.com`,
+      },
+      { ...validSubmission, turnstileToken: `challenge${character}` },
+    ];
+
+    for (const variant of variants) {
+      const result = validateSubmission(variant);
+      assert.equal(result.ok, false);
+      if (!result.ok) {
+        assert.equal(
+          result.errors.form,
+          "The submission contains unsupported control characters.",
+        );
+      }
+    }
   }
 });
 
@@ -391,4 +466,177 @@ test("the submission route rejects cross-origin and non-JSON requests without wr
   );
   assert.equal(honeypot.status, 202);
   assert.deepEqual(await honeypot.json(), { accepted: true });
+});
+
+test("production intake accepts only the canonical origin", () => {
+  const request = submissionRequest(validSubmission);
+  assert.equal(
+    isPermittedSubmissionOrigin(request, {
+      canonicalOrigin: "https://www.versionrecord.com",
+      vercelEnvironment: "production",
+      deploymentHost: "preview.example.vercel.app",
+    }),
+    true,
+  );
+  assert.equal(
+    isPermittedSubmissionOrigin(
+      submissionRequest(validSubmission, "https://preview.example.vercel.app"),
+      {
+        canonicalOrigin: "https://www.versionrecord.com",
+        vercelEnvironment: "production",
+        deploymentHost: "preview.example.vercel.app",
+      },
+    ),
+    false,
+  );
+});
+
+test("validated submissions are acknowledged only after durable storage", async () => {
+  let stored: unknown;
+  const handler = createSubmissionHandler({
+    storeSubmission: async (submission) => {
+      stored = submission;
+    },
+    checkBot: async () => ({ isBot: false }),
+    getTurnstileConfiguration: () => null,
+    verifyChallenge: async () => true,
+    checkRateLimit: () => ({ allowed: true, retryAfterSeconds: 0 }),
+  });
+
+  const response = await handler(submissionRequest(validSubmission));
+
+  assert.equal(response.status, 202);
+  assert.deepEqual(await response.json(), { accepted: true });
+  assert.ok(stored);
+  assert.equal(
+    (stored as { contactEmail: string }).contactEmail,
+    "editor@example.com",
+  );
+});
+
+test("storage failures return a generic retryable response", async (context) => {
+  context.mock.method(console, "error", () => undefined);
+  const handler = createSubmissionHandler({
+    storeSubmission: async () => {
+      throw new Error("private@example.com must never reach the response");
+    },
+    checkBot: async () => ({ isBot: false }),
+    getTurnstileConfiguration: () => null,
+    verifyChallenge: async () => true,
+    checkRateLimit: () => ({ allowed: true, retryAfterSeconds: 0 }),
+  });
+
+  const response = await handler(submissionRequest(validSubmission));
+  const body = await response.text();
+
+  assert.equal(response.status, 503);
+  assert.equal(response.headers.get("retry-after"), "300");
+  assert.doesNotMatch(body, /private@example\.com/);
+});
+
+test("oversized canonical records return a safe response before storage", async () => {
+  const handler = createSubmissionHandler({
+    storeSubmission: async () => {
+      throw new SubmissionBlobSizeError();
+    },
+    checkBot: async () => ({ isBot: false }),
+    getTurnstileConfiguration: () => null,
+    verifyChallenge: async () => true,
+    checkRateLimit: () => ({ allowed: true, retryAfterSeconds: 0 }),
+  });
+
+  const response = await handler(submissionRequest(validSubmission));
+
+  assert.equal(response.status, 413);
+  assert.deepEqual(await response.json(), { error: "Submission is too large." });
+});
+
+test("BotID blocks automated submissions before challenge or storage", async () => {
+  let challengeCalls = 0;
+  let storageCalls = 0;
+  const handler = createSubmissionHandler({
+    storeSubmission: async () => {
+      storageCalls += 1;
+    },
+    checkBot: async () => ({ isBot: true }),
+    getTurnstileConfiguration: () => ({
+      siteKey: "public-site-key",
+      secretKey: "private-secret-key",
+    }),
+    verifyChallenge: async () => {
+      challengeCalls += 1;
+      return true;
+    },
+    checkRateLimit: () => ({ allowed: true, retryAfterSeconds: 0 }),
+  });
+
+  const response = await handler(submissionRequest(validSubmission));
+
+  assert.equal(response.status, 403);
+  assert.deepEqual(await response.json(), {
+    error: "The request could not be verified.",
+  });
+  assert.equal(challengeCalls, 0);
+  assert.equal(storageCalls, 0);
+});
+
+test("BotID failures fail closed without revealing verification details", async (context) => {
+  context.mock.method(console, "error", () => undefined);
+  let storageCalls = 0;
+  const handler = createSubmissionHandler({
+    storeSubmission: async () => {
+      storageCalls += 1;
+    },
+    checkBot: async () => {
+      throw new Error("private BotID diagnostic");
+    },
+    getTurnstileConfiguration: () => null,
+    verifyChallenge: async () => true,
+    checkRateLimit: () => ({ allowed: true, retryAfterSeconds: 0 }),
+  });
+
+  const response = await handler(submissionRequest(validSubmission));
+  const body = await response.text();
+
+  assert.equal(response.status, 503);
+  assert.equal(response.headers.get("retry-after"), "300");
+  assert.doesNotMatch(body, /BotID|diagnostic/);
+  assert.equal(storageCalls, 0);
+});
+
+test("submission bodies are rejected while streaming past the byte limit", async () => {
+  let storageCalls = 0;
+  const oversizedBody = new ReadableStream<Uint8Array>({
+    start(controller) {
+      controller.enqueue(new Uint8Array(16_001));
+      controller.enqueue(new Uint8Array(16_001));
+      controller.close();
+    },
+  });
+  const request = new Request(
+    "https://www.versionrecord.com/api/submissions/",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Origin: "https://www.versionrecord.com",
+      },
+      body: oversizedBody,
+      duplex: "half",
+    } as RequestInit & { duplex: "half" },
+  );
+  const handler = createSubmissionHandler({
+    storeSubmission: async () => {
+      storageCalls += 1;
+    },
+    checkBot: async () => ({ isBot: false }),
+    getTurnstileConfiguration: () => null,
+    verifyChallenge: async () => true,
+    checkRateLimit: () => ({ allowed: true, retryAfterSeconds: 0 }),
+  });
+
+  const response = await handler(request);
+
+  assert.equal(response.status, 413);
+  assert.equal(storageCalls, 0);
 });

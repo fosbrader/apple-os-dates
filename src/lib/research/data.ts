@@ -1,7 +1,16 @@
 import { client } from "@/sanity/client";
 import { eventLabelSlug } from "@/lib/release-routes";
 import { APPLE_VENDOR } from "@/lib/vendors";
-import { publicResearchSnapshotQuery } from "./queries";
+import {
+  publicResearchAuditBatchesQuery,
+  publicResearchBuildsQuery,
+  publicResearchChangesCountQuery,
+  publicResearchChangesPageQuery,
+  publicResearchCorrectionsQuery,
+  publicResearchEventsCountQuery,
+  publicResearchEventsPageQuery,
+  publicResearchReleasesQuery,
+} from "./queries";
 import type {
   PublicBuildRow,
   PublicChangeRow,
@@ -24,6 +33,11 @@ interface RawResearchSnapshot {
   corrections?: RawRecord[];
 }
 
+interface PublicResearchPageRange {
+  offset: number;
+  end: number;
+}
+
 export interface NormalizedResearchSnapshot {
   datasets: PublicResearchDatasets;
   releaseOverviewText: Map<string, string>;
@@ -35,10 +49,123 @@ const fetchOptions = {
   next: { revalidate: 300 },
 } as const;
 
+/**
+ * These bounds keep each Sanity response safely under Next's 2 MB data-cache
+ * entry limit, including unusually well-cited records. They deliberately use
+ * stable _id ordering so a page has a deterministic cache key.
+ */
+export const PUBLIC_RESEARCH_EVENT_PAGE_SIZE = 100;
+export const PUBLIC_RESEARCH_CHANGE_PAGE_SIZE = 500;
+const PUBLIC_RESEARCH_PAGE_CONCURRENCY = 4;
+
 function asRecord(value: unknown): RawRecord {
   return value && typeof value === "object" && !Array.isArray(value)
     ? (value as RawRecord)
     : {};
+}
+
+export function publicResearchPageRanges(
+  total: number,
+  pageSize: number,
+): PublicResearchPageRange[] {
+  if (
+    !Number.isSafeInteger(total) ||
+    !Number.isSafeInteger(pageSize) ||
+    total <= 0 ||
+    pageSize <= 0
+  ) {
+    return [];
+  }
+
+  const ranges: PublicResearchPageRange[] = [];
+  for (let offset = 0; offset < total; offset += pageSize) {
+    ranges.push({ offset, end: Math.min(offset + pageSize, total) });
+  }
+  return ranges;
+}
+
+async function fetchPublicResearchPages(
+  countQuery: string,
+  pageQuery: string,
+  pageSize: number,
+): Promise<RawRecord[]> {
+  const count = await client.fetch<number>(countQuery, {}, fetchOptions);
+  const ranges = publicResearchPageRanges(count, pageSize);
+  const records: RawRecord[] = [];
+
+  for (
+    let index = 0;
+    index < ranges.length;
+    index += PUBLIC_RESEARCH_PAGE_CONCURRENCY
+  ) {
+    const batch = ranges.slice(
+      index,
+      index + PUBLIC_RESEARCH_PAGE_CONCURRENCY,
+    );
+    const pages = await Promise.all(
+      batch.map(({ offset, end }) =>
+        client.fetch<RawRecord[]>(
+          pageQuery,
+          { offset, end },
+          fetchOptions,
+        ),
+      ),
+    );
+    records.push(...pages.flat());
+  }
+
+  return records;
+}
+
+async function getRawResearchSnapshot(): Promise<RawResearchSnapshot> {
+  const [
+    releases,
+    events,
+    builds,
+    changes,
+    auditBatches,
+    corrections,
+  ] = await Promise.all([
+    client.fetch<RawRecord[]>(
+      publicResearchReleasesQuery,
+      {},
+      fetchOptions,
+    ),
+    fetchPublicResearchPages(
+      publicResearchEventsCountQuery,
+      publicResearchEventsPageQuery,
+      PUBLIC_RESEARCH_EVENT_PAGE_SIZE,
+    ),
+    client.fetch<RawRecord[]>(
+      publicResearchBuildsQuery,
+      {},
+      fetchOptions,
+    ),
+    fetchPublicResearchPages(
+      publicResearchChangesCountQuery,
+      publicResearchChangesPageQuery,
+      PUBLIC_RESEARCH_CHANGE_PAGE_SIZE,
+    ),
+    client.fetch<RawRecord[]>(
+      publicResearchAuditBatchesQuery,
+      {},
+      fetchOptions,
+    ),
+    client.fetch<RawRecord[]>(
+      publicResearchCorrectionsQuery,
+      {},
+      fetchOptions,
+    ),
+  ]);
+
+  return {
+    releases,
+    events,
+    builds,
+    changes,
+    auditBatches,
+    corrections,
+  };
 }
 
 function asRecords(value: unknown): RawRecord[] {
@@ -927,13 +1054,9 @@ export function getNormalizedResearchSnapshot(): Promise<NormalizedResearchSnaps
     return snapshotCache.value;
   }
 
-  const value = client
-    .fetch<RawResearchSnapshot>(
-      publicResearchSnapshotQuery,
-      {},
-      fetchOptions,
-    )
-    .then((snapshot) => normalizeResearchSnapshot(snapshot || {}));
+  const value = getRawResearchSnapshot().then((snapshot) =>
+    normalizeResearchSnapshot(snapshot),
+  );
 
   const entry = { value, expiresAt: now + SNAPSHOT_CACHE_TTL_MS };
   snapshotCache = entry;

@@ -63,8 +63,15 @@ function lengthError(
   }
 }
 
-function containsUnsafeControlCharacters(value: string): boolean {
-  return /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f]/.test(value);
+/**
+ * Reject terminal control and bidirectional-formatting characters that can
+ * alter operator output. Newlines, tabs, and carriage returns remain valid in
+ * report prose because JSON serialization escapes them before terminal output.
+ */
+export function containsUnsafeSubmissionCharacters(value: string): boolean {
+  return /[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f-\u009f\u061c\u200e\u200f\u2028-\u202e\u2066-\u2069]/.test(
+    value,
+  );
 }
 
 function normalizeSourceUrls(value: unknown): {
@@ -129,6 +136,30 @@ export function validateSubmission(
     record.noConfidentialInformation === true;
   const turnstileToken = stringField(record, "turnstileToken");
 
+  const rawTextValues = [
+    "submissionType",
+    "platform",
+    "version",
+    "summary",
+    "details",
+    "pageUrl",
+    "publicCredit",
+    "contactEmail",
+    "turnstileToken",
+  ]
+    .map((name) => record[name])
+    .filter((value): value is string => typeof value === "string");
+  if (Array.isArray(record.sourceUrls)) {
+    rawTextValues.push(
+      ...record.sourceUrls.filter(
+        (value): value is string => typeof value === "string",
+      ),
+    );
+  }
+  if (rawTextValues.some(containsUnsafeSubmissionCharacters)) {
+    errors.form = "The submission contains unsupported control characters.";
+  }
+
   if (!submissionKinds.includes(submissionType as SubmissionKind)) {
     errors.submissionType = "Choose a submission type.";
   }
@@ -188,14 +219,6 @@ export function validateSubmission(
   if (turnstileToken.length > 2048) {
     errors.turnstileToken = "The anti-abuse token is invalid.";
   }
-  if (
-    [platform, version, summary, details, publicCredit, contactEmail].some(
-      containsUnsafeControlCharacters,
-    )
-  ) {
-    errors.form = "The submission contains unsupported control characters.";
-  }
-
   if (Object.keys(errors).length > 0) return { ok: false, errors };
 
   return {

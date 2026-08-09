@@ -14,6 +14,10 @@ import {
   releaseEventsForVersionsQuery,
   versionEventsQuery,
 } from "../src/lib/queries";
+import {
+  RELEASE_EVENT_VERSION_BATCH_SIZE,
+  releaseEventVersionIdBatches,
+} from "../src/lib/sanity.fetch";
 import type {
   BetaMilestone,
   ReleaseEvent,
@@ -71,6 +75,21 @@ function event(
     ...overrides,
   };
 }
+
+test("large event fan-outs use stable, bounded version batches", () => {
+  assert.equal(RELEASE_EVENT_VERSION_BATCH_SIZE, 50);
+  assert.deepEqual(
+    releaseEventVersionIdBatches(
+      ["version-1", "version-2", "version-1", "version-3"],
+      2,
+    ),
+    [["version-1", "version-2"], ["version-3"]],
+  );
+  assert.throws(
+    () => releaseEventVersionIdBatches(["version-1"], 0),
+    /positive integer/,
+  );
+});
 
 test("legacy-only versions retain their exact milestone array", () => {
   const milestones = [
