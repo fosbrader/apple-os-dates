@@ -54,3 +54,36 @@ serialization order. Its same-day tie-breakers do not establish chronology.
 Validate every adapter output with `validateForecastAnalysisDataset` before
 analysis, then use `eligibleForecastEvents` rather than filtering on display
 text or raw dates directly.
+
+## Canonical release-observation adapter
+
+`src/lib/release-observation-adapter.ts` is the sole pure projection boundary
+for forecast and historical-analysis inputs. It accepts release-cycle records,
+first-class events, compatibility milestones, and explicit `asOfDate` and
+`issuedAt` values. It has no Sanity client, UI, network, clock, or persistence
+dependency.
+
+The adapter returns a validated, revision-collapsed v1 dataset; effective
+canonical events; released outcomes; a deterministic inclusion ledger; and
+machine-readable exclusions. Evidence IDs use stable event identities or
+legacy source keys. Display labels and notes are retained only as descriptive
+context and never establish an ID, channel, sequence, stage, overlay, or tie.
+
+Only an eligible, effective first-class event can overlay an explicitly
+matching `legacySourceId`. Future, unobserved, unavailable, invalid, ambiguous,
+or replacement-invalid events cannot suppress good compatibility evidence. An
+unlinked duplicate stage is excluded as ambiguous rather than guessed. A
+revision or replacement must name exactly one unique same-release, same-stage
+predecessor. The terminal event is retained and predecessors are ledgered as
+replaced. A verified `closesReleaseCycle` Golden Master can form a closure
+outcome when a public-release outcome is not yet available.
+
+`firstObservedAt` is converted to a UTC calendar day and must be on or before
+the inclusive `asOfDate`, independently of the appearance date. Only when a
+legacy or older first-class record omits that field does the adapter use the
+explicit `issuedAt` day as a conservative lower bound; a malformed supplied
+timestamp is excluded. Invalid record dates, missing or duplicate stable IDs,
+ambiguous stages, contradictory release-status dates, and insufficient
+replacement evidence all fail closed with a ledger exclusion. Invalid global
+`asOfDate` or `issuedAt` values throw `ReleaseObservationInputError` before any
+result is produced, preserving the result type's validated-dataset guarantee.
