@@ -389,8 +389,7 @@ function adapterIssues(result: unknown): HistoricalAnalysisValidationIssue[] {
     const release = forecastDataset.releases.find((entry) => entry.id === outcome.releaseId);
     const ledger = (result.inclusionLedger as ReleaseObservationLedgerEntry[]).find((entry) => isRecord(entry) && entry.evidenceId === outcome.evidenceId && entry.included === true);
     const publicOutcomeMatches = outcome.closure !== "public-release" || (release?.lifecycle === "released" && release.statusEffectiveOn === outcome.occurredOn);
-    const gmOutcomeMatches = outcome.closure !== "golden-master" || actual.some((event) => isRecord(event) && event.releaseId === outcome.releaseId && event.stage === "golden-master" && event.occurredOn === outcome.occurredOn);
-    if (!isNonEmptyText(outcome.evidenceId) || !release || !["public-release", "golden-master"].includes(outcome.closure) || !isIsoDay(outcome.occurredOn) || !isIsoDay(outcome.firstObservedOn) || outcome.firstObservedOn < outcome.occurredOn || outcome.occurredOn > forecastDataset.dataCutoff || outcome.firstObservedOn > forecastDataset.dataCutoff || !ledger || ledger.releaseId !== outcome.releaseId || ledger.occurredOn !== outcome.occurredOn || !publicOutcomeMatches || !gmOutcomeMatches || outcomeIds.has(outcome.evidenceId) || outcomeReleaseIds.has(outcome.releaseId)) issues.push({ code: "invalid-adapter-result", path: `adapterResult.releasedOutcomes[${index}]`, message: "Lifecycle outcome must be unique, release-consistent, ledger-linked, and point-in-time valid." });
+    if (!isNonEmptyText(outcome.evidenceId) || !release || outcome.closure !== "public-release" || !isIsoDay(outcome.occurredOn) || !isIsoDay(outcome.firstObservedOn) || outcome.firstObservedOn < outcome.occurredOn || outcome.occurredOn > forecastDataset.dataCutoff || outcome.firstObservedOn > forecastDataset.dataCutoff || !ledger || ledger.releaseId !== outcome.releaseId || ledger.occurredOn !== outcome.occurredOn || !publicOutcomeMatches || outcomeIds.has(outcome.evidenceId) || outcomeReleaseIds.has(outcome.releaseId)) issues.push({ code: "invalid-adapter-result", path: `adapterResult.releasedOutcomes[${index}]`, message: "Lifecycle outcome must be a unique, release-consistent, ledger-linked public release; GM closure is fail-closed in v1." });
     outcomeIds.add(outcome.evidenceId);
     outcomeReleaseIds.add(outcome.releaseId);
   }
@@ -622,7 +621,7 @@ export function validateHistoricalAnalysisDataset(dataset: unknown): HistoricalA
       continue;
     }
     const cycle = cycleById.get(row?.releaseId);
-    if (!row || row.rowType !== "lifecycle-outcome" || !cycle || !cycle.included || !sameCycleFields(row as unknown as Record<string, unknown>, cycle) || !isNonEmptyText(row.outcomeEvidenceId) || !["public-release", "golden-master"].includes(row.closure) || !isIsoDay(row.occurredOn) || !isIsoDay(row.firstObservedOn) || row.firstObservedOn < row.occurredOn || !validSortedEvidenceIds(row.sourceEvidenceIds) || !row.sourceEvidenceIds.includes(row.outcomeEvidenceId)) issues.push({ code: "invalid-row", path: `lifecycleOutcomes[${index}]`, message: "Lifecycle outcome is malformed, excluded, or lacks its outcome evidence ID." });
+    if (!row || row.rowType !== "lifecycle-outcome" || !cycle || !cycle.included || !sameCycleFields(row as unknown as Record<string, unknown>, cycle) || !isNonEmptyText(row.outcomeEvidenceId) || row.closure !== "public-release" || !isIsoDay(row.occurredOn) || !isIsoDay(row.firstObservedOn) || row.firstObservedOn < row.occurredOn || !validSortedEvidenceIds(row.sourceEvidenceIds) || !row.sourceEvidenceIds.includes(row.outcomeEvidenceId)) issues.push({ code: "invalid-row", path: `lifecycleOutcomes[${index}]`, message: "Lifecycle outcome is malformed, excluded, or lacks its public-release evidence ID; GM closure is fail-closed in v1." });
     if (outcomeById.has(row.outcomeEvidenceId)) issues.push({ code: "invalid-row", path: `lifecycleOutcomes[${index}].outcomeEvidenceId`, message: "Lifecycle outcome IDs must be unique." });
     outcomeById.set(row.outcomeEvidenceId, row);
   }
@@ -647,7 +646,13 @@ export function validateHistoricalAnalysisDataset(dataset: unknown): HistoricalA
     }
     const expectedInterval = start && end ? forecastIntervalOutcome({ releaseId: row.releaseId, occurredOn: start.occurredOn }, { releaseId: row.releaseId, occurredOn: end.occurredOn }) : null;
     const intervalValid = row?.interval?.available === true ? Boolean(expectedInterval?.available && row.interval.days === expectedInterval.days) : row?.interval?.available === false && ["chronology-coverage-unknown", "same-calendar-day", "no-subsequent-stage-or-outcome"].includes(row.interval.reason) && ((row.interval.reason === "chronology-coverage-unknown" && cycle?.chronologyCoverage.state === "unknown" && end === null) || (row.interval.reason === "same-calendar-day" && expectedInterval?.available === false && expectedInterval.reason === "same-calendar-day") || (row.interval.reason === "no-subsequent-stage-or-outcome" && end === null));
-    const requiredEvidenceIds = uniqueSorted([...start?.sourceEvidenceIds ?? [], ...(end?.sourceEvidenceIds ?? [])]);
+    const startEvidenceIds = validSortedEvidenceIds(start?.sourceEvidenceIds)
+      ? start.sourceEvidenceIds
+      : [];
+    const endEvidenceIds = isRecord(end) && validSortedEvidenceIds(end.sourceEvidenceIds)
+      ? end.sourceEvidenceIds
+      : [];
+    const requiredEvidenceIds = uniqueSorted([...startEvidenceIds, ...endEvidenceIds]);
     if (!row || row.rowType !== "stage-interval" || !cycle || !cycle.included || !start || start.releaseId !== row.releaseId || !sameCycleFields(row as unknown as Record<string, unknown>, cycle) || row.startStage !== start.stage || !validEnd || !intervalValid || !validSortedEvidenceIds(row.sourceEvidenceIds) || !requiredEvidenceIds.every((id) => row.sourceEvidenceIds.includes(id))) issues.push({ code: "invalid-row", path: `stageIntervals[${index}]`, message: "Stage interval is malformed, noncanonical, or lacks exact endpoint linkage." });
   }
   if (!sortedBy(intervals, (row) => `${row.releaseId}\u0000${row.startEventId}`)) issues.push({ code: "invalid-row", path: "stageIntervals", message: "Stage intervals are not in canonical order." });

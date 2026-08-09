@@ -318,10 +318,26 @@ test("adversarial adapter results and serialized row tampering fail closed witho
     { ...result, inclusionLedger: [false] },
     { ...result, canonicalEvents: [{ ...result.canonicalEvents[0]!, eventId: 123 }] },
     { ...result, lifecycleOutcomes: [{ ...result.lifecycleOutcomes[0]!, outcomeEvidenceId: 123 }] },
+    { ...result, canonicalEvents: [{ ...result.canonicalEvents[0]!, sourceEvidenceIds: 123 }] },
   ]) {
     assert.doesNotThrow(() => validateHistoricalAnalysisDataset(malformed));
     assert.ok(validateHistoricalAnalysisDataset(malformed).length > 0);
   }
+
+  const intervalWithEnd = result.stageIntervals.find((row) => row.end !== null)!;
+  const primitiveEndEvidence = {
+    ...result,
+    stageIntervals: result.stageIntervals.map((row) =>
+      row.startEventId === intervalWithEnd.startEventId
+        ? {
+            ...row,
+            end: { ...row.end!, sourceEvidenceIds: 123 },
+          }
+        : row,
+    ),
+  };
+  assert.doesNotThrow(() => validateHistoricalAnalysisDataset(primitiveEndEvidence));
+  assert.ok(validateHistoricalAnalysisDataset(primitiveEndEvidence).length > 0);
 
   const malformedMetadata = input({
     releaseMetadata: [
@@ -333,6 +349,36 @@ test("adversarial adapter results and serialized row tampering fail closed witho
   });
   assert.doesNotThrow(() => validateHistoricalAnalysisInput(malformedMetadata));
   assert.throws(() => buildHistoricalAnalysisDataset(malformedMetadata), HistoricalAnalysisInputError);
+});
+
+test("golden-master closure is fail-closed even when a forged ledger claims it", () => {
+  const adapterResult = adaptReleaseObservations({
+    asOfDate: "2026-07-10",
+    issuedAt: "2026-07-10T12:00:00.000Z",
+    releases: [{ id: "release.ios.27", lifecycle: "active" }],
+    compatibilityMilestones: [],
+    events: [{ id: "gm", releaseId: "release.ios.27", occurredOn: "2026-07-10", firstObservedAt: "2026-07-10T12:00:00.000Z", channel: "goldenMaster", availability: "available", closesReleaseCycle: false }],
+  });
+  const outcomeEvidenceId = "release:release.ios.27:outcome";
+  const forged = {
+    ...adapterResult,
+    releasedOutcomes: [{
+      evidenceId: outcomeEvidenceId,
+      releaseId: "release.ios.27",
+      occurredOn: "2026-07-10",
+      firstObservedOn: "2026-07-10",
+      closure: "golden-master" as const,
+    }],
+    inclusionLedger: adapterResult.inclusionLedger.map((entry) =>
+      entry.evidenceId === outcomeEvidenceId
+        ? { ...entry, included: true, reason: undefined }
+        : entry,
+    ),
+  };
+  assert.throws(
+    () => buildHistoricalAnalysisDataset({ adapterResult: forged, releaseMetadata: [metadata()] }),
+    HistoricalAnalysisInputError,
+  );
 });
 
 test("interval validator rejects cross-release endpoints and missing endpoint evidence", () => {

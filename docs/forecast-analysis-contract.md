@@ -111,8 +111,11 @@ Chronology coverage is an explicit sourced `complete` or `unknown` state. The
 unknown reasons are `not-reviewed`, `source-coverage-incomplete`, and
 `same-day-order-unknown`. The builder only reduces coverage: same-day entries
 without independently verified unique `sameDayOrder` values result in unknown
-coverage. A public-release or GM event and its matching same-day lifecycle
-outcome are one closure observation, not unordered duplicate timeline facts.
+coverage. A public-release event and its matching same-day lifecycle outcome
+are one closure observation, not unordered duplicate timeline facts. Golden
+Master closure is deliberately fail-closed in historical-analysis dataset v1:
+the current adapter projection does not carry source-bound closure proof, so GM
+outcomes are not analytically admitted until a future contract preserves it.
 Intervals are unavailable with machine-readable reasons rather than inferred;
 same-calendar-day intervals are never zero days. Canonical-event rows must
 include their exact `eventId` in `sourceEvidenceIds`, not an unrelated non-empty
