@@ -41,6 +41,14 @@ const fetchOptions = {
   next: { revalidate: 60 },
 } as const;
 
+/**
+ * The all-version timeline and analytics queries can span hundreds of release
+ * records. Keep each event response under Next's 2 MB data-cache limit while
+ * preserving the existing per-version read model.
+ */
+export const RELEASE_EVENT_VERSION_BATCH_SIZE = 50;
+const RELEASE_EVENT_BATCH_CONCURRENCY = 4;
+
 interface VersionScopedReleaseEvent extends ReleaseEvent {
   releaseVersionId: string;
 }
@@ -61,22 +69,52 @@ export interface VersionChangeTargets {
   }>;
 }
 
+export function releaseEventVersionIdBatches(
+  versionIds: string[],
+  batchSize = RELEASE_EVENT_VERSION_BATCH_SIZE,
+): string[][] {
+  if (!Number.isSafeInteger(batchSize) || batchSize <= 0) {
+    throw new RangeError("Release-event batch size must be a positive integer.");
+  }
+
+  const uniqueIds = Array.from(
+    new Set(versionIds.filter((versionId) => Boolean(versionId))),
+  );
+  const batches: string[][] = [];
+  for (let index = 0; index < uniqueIds.length; index += batchSize) {
+    batches.push(uniqueIds.slice(index, index + batchSize));
+  }
+  return batches;
+}
+
 async function getEventsByVersionId(
   versionIds: string[],
 ): Promise<Map<string, ReleaseEvent[]>> {
   const grouped = new Map<string, ReleaseEvent[]>();
-  if (versionIds.length === 0) return grouped;
+  const batches = releaseEventVersionIdBatches(versionIds);
 
-  const events = await client.fetch<VersionScopedReleaseEvent[]>(
-    releaseEventsForVersionsQuery,
-    { releaseVersionIds: versionIds },
-    fetchOptions,
-  );
+  for (
+    let index = 0;
+    index < batches.length;
+    index += RELEASE_EVENT_BATCH_CONCURRENCY
+  ) {
+    const eventsByBatch = await Promise.all(
+      batches
+        .slice(index, index + RELEASE_EVENT_BATCH_CONCURRENCY)
+        .map((releaseVersionIds) =>
+          client.fetch<VersionScopedReleaseEvent[]>(
+            releaseEventsForVersionsQuery,
+            { releaseVersionIds },
+            fetchOptions,
+          ),
+        ),
+    );
 
-  for (const event of events) {
-    const current = grouped.get(event.releaseVersionId) ?? [];
-    current.push(event);
-    grouped.set(event.releaseVersionId, current);
+    for (const event of eventsByBatch.flat()) {
+      const current = grouped.get(event.releaseVersionId) ?? [];
+      current.push(event);
+      grouped.set(event.releaseVersionId, current);
+    }
   }
 
   return grouped;

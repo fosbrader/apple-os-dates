@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { absoluteUrl, basePath, siteOrigin } from "@/lib/site";
+import { absoluteUrl, basePath } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,6 +9,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: `${basePath}/studio/`,
     },
     sitemap: absoluteUrl("/sitemap.xml"),
-    host: siteOrigin,
   };
 }

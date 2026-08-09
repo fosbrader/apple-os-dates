@@ -1,8 +1,11 @@
 import type { NextConfig } from "next";
+import { withBotId } from "botid/next/config";
+import { createSiteBuildMetadata } from "./src/lib/site-version";
 
 const configuredBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const basePath =
   configuredBasePath === "/" ? "" : configuredBasePath.replace(/\/+$/, "");
+const siteBuildMetadata = createSiteBuildMetadata();
 const applePlatforms = [
   "ios",
   "ipados",
@@ -46,6 +49,10 @@ function legacyPlatformRedirects(
 const nextConfig: NextConfig = {
   basePath,
   trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_SITE_VERSION: siteBuildMetadata.version,
+    NEXT_PUBLIC_SITE_UPDATED_AT: siteBuildMetadata.updatedAt,
+  },
   // The OG image routes read the vendored fonts at runtime; make sure
   // serverless output tracing bundles them.
   outputFileTracingIncludes: {
@@ -84,4 +91,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withBotId(nextConfig);

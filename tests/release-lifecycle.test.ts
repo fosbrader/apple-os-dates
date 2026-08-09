@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import test from "node:test";
-import { TimelineView } from "../src/components/timeline/TimelineView";
+import { TimelineDataView } from "../src/components/timeline/TimelineView";
 import { buildReleaseForecasts } from "../src/lib/forecasts";
 import {
   getActiveBetas,
@@ -255,7 +255,7 @@ test("a superseded timeline ends at its last recorded seed, not today", () => {
     [platform],
   );
   const html = renderToStaticMarkup(
-    createElement(TimelineView, { bars, platforms }),
+    createElement(TimelineDataView, { bars, platforms }),
   );
 
   assert.match(html, /Last seed/);

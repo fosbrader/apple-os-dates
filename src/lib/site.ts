@@ -99,6 +99,12 @@ interface PageMetadataOptions {
    * segment outranks the generated image, so those routes pass false.
    */
   socialImage?: boolean;
+  /**
+   * Use a page-specific social card when that page has a distinct visual
+   * identity. The root site card remains the default for ordinary pages.
+   */
+  socialImagePath?: string;
+  socialImageAlt?: string;
 }
 
 export function createPageMetadata({
@@ -107,10 +113,15 @@ export function createPageMetadata({
   path,
   absoluteTitle = false,
   socialImage = true,
+  socialImagePath: pageSocialImagePath,
+  socialImageAlt: pageSocialImageAlt,
 }: PageMetadataOptions): Metadata {
   const canonical = absoluteUrl(path);
   const socialTitle = absoluteTitle ? title : `${title} | ${siteName}`;
-  const socialImageUrl = absoluteUrl(socialImagePath);
+  const socialImageUrl = absoluteUrl(
+    pageSocialImagePath || socialImagePath,
+  );
+  const socialImageDescription = pageSocialImageAlt || socialImageAlt;
 
   return {
     title: absoluteTitle ? { absolute: title } : title,
@@ -133,7 +144,7 @@ export function createPageMetadata({
                 width: 1200,
                 height: 630,
                 type: "image/png",
-                alt: socialImageAlt,
+                alt: socialImageDescription,
               },
             ],
           }
@@ -145,7 +156,7 @@ export function createPageMetadata({
       title: socialTitle,
       description,
       ...(socialImage
-        ? { images: [{ url: socialImageUrl, alt: socialImageAlt }] }
+        ? { images: [{ url: socialImageUrl, alt: socialImageDescription }] }
         : {}),
     },
   };

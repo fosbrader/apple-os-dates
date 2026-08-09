@@ -6,13 +6,7 @@ import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "./schemas";
 import { dataset, projectId } from "./env";
 
-const privateDocumentTypes = new Set([
-  "submission",
-  "feedSource",
-  "ingestCandidate",
-]);
 const inactiveDocumentTypes = new Set([
-  ...privateDocumentTypes,
   "sitePage",
   "siteSettings",
 ]);

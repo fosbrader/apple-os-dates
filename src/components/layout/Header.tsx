@@ -10,6 +10,7 @@ const navItems = [
   { href: "/search/", label: "Search" },
   { href: "/forecasts/", label: "Forecasts" },
   { href: "/timeline/", label: "Timeline" },
+  { href: "/api/", label: "API" },
 ];
 
 export function Header() {

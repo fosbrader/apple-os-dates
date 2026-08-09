@@ -1,0 +1,145 @@
+name: Submission monitor
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+concurrency:
+  group: submission-monitor
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    name: Reconcile review notice
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check private review status
+        id: status
+        shell: bash
+        env:
+          MONITOR_SECRET: ${{ secrets.SUBMISSION_MONITOR_SECRET }}
+          STATUS_URL: https://www.versionrecord.com/api/submissions/status/
+        run: |
+          set -euo pipefail
+          umask 077
+
+          if [[ -z "${MONITOR_SECRET}" ]]; then
+            echo "::error::The submission monitor secret is not configured."
+            exit 1
+          fi
+
+          response_file="$(mktemp)"
+          trap 'rm -f "${response_file}"' EXIT
+
+          if ! http_code="$(
+            curl \
+              --silent \
+              --output "${response_file}" \
+              --write-out "%{http_code}" \
+              --proto "=https" \
+              --tlsv1.2 \
+              --connect-timeout 10 \
+              --max-time 30 \
+              --max-filesize 1024 \
+              --request GET \
+              --header "Accept: application/json" \
+              --header "Authorization: Bearer ${MONITOR_SECRET}" \
+              "${STATUS_URL}" 2>/dev/null
+          )"; then
+            echo "::error::The submission status check failed."
+            exit 1
+          fi
+
+          if [[ "${http_code}" != "200" ]]; then
+            echo "::error::The submission status endpoint did not return success."
+            exit 1
+          fi
+
+          if ! jq -e \
+            'type == "object" and keys == ["pending"] and (.pending | type == "boolean")' \
+            "${response_file}" >/dev/null 2>&1; then
+            echo "::error::The submission status endpoint returned an invalid response."
+            exit 1
+          fi
+
+          pending="$(jq -r '.pending' "${response_file}")"
+          echo "pending=${pending}" >> "${GITHUB_OUTPUT}"
+
+      - name: Reconcile the public review notice
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PENDING: ${{ steps.status.outputs.pending }}
+          ISSUE_AUTHOR: app/github-actions
+          ISSUE_TITLE: Submission review queue needs attention
+          ISSUE_MARKER: "<!-- version-record-submission-monitor:v1 -->"
+          ISSUE_BODY: |
+            <!-- version-record-submission-monitor:v1 -->
+
+            The private submission review queue needs attention.
+
+            Review it in the private moderation system. Do not add submission information to this public issue.
+
+            This issue is managed automatically.
+        run: |
+          set -euo pipefail
+          umask 077
+
+          issues_file="$(mktemp)"
+          trap 'rm -f "${issues_file}"' EXIT
+
+          if ! gh issue list \
+            --repo "${GITHUB_REPOSITORY}" \
+            --state all \
+            --search "\"${ISSUE_TITLE}\" in:title author:${ISSUE_AUTHOR}" \
+            --limit 100 \
+            --json number,state,title,body,author > "${issues_file}" 2>/dev/null; then
+            echo "::error::The submission monitor could not read repository issues."
+            exit 1
+          fi
+
+          match_count="$(
+            jq --arg author "${ISSUE_AUTHOR}" --arg title "${ISSUE_TITLE}" --arg marker "${ISSUE_MARKER}" \
+              '[.[] | select(.author.is_bot == true and .author.login == $author and .title == $title and ((.body // "") | contains($marker)))] | length' \
+              "${issues_file}"
+          )"
+
+          if [[ "${match_count}" -gt 1 ]]; then
+            echo "::error::The submission monitor found duplicate managed issues."
+            exit 1
+          fi
+
+          issue_number="$(
+            jq -r --arg author "${ISSUE_AUTHOR}" --arg title "${ISSUE_TITLE}" --arg marker "${ISSUE_MARKER}" \
+              '.[] | select(.author.is_bot == true and .author.login == $author and .title == $title and ((.body // "") | contains($marker))) | .number' \
+              "${issues_file}"
+          )"
+          issue_state="$(
+            jq -r --arg author "${ISSUE_AUTHOR}" --arg title "${ISSUE_TITLE}" --arg marker "${ISSUE_MARKER}" \
+              '.[] | select(.author.is_bot == true and .author.login == $author and .title == $title and ((.body // "") | contains($marker))) | .state' \
+              "${issues_file}"
+          )"
+
+          if [[ "${PENDING}" == "true" && -z "${issue_number}" ]]; then
+            gh issue create \
+              --repo "${GITHUB_REPOSITORY}" \
+              --title "${ISSUE_TITLE}" \
+              --body "${ISSUE_BODY}" >/dev/null
+          elif [[ "${PENDING}" == "true" && "${issue_state}" == "CLOSED" ]]; then
+            gh issue reopen "${issue_number}" \
+              --repo "${GITHUB_REPOSITORY}" >/dev/null
+          elif [[ "${PENDING}" == "false" && "${issue_state}" == "OPEN" ]]; then
+            gh issue close "${issue_number}" \
+              --repo "${GITHUB_REPOSITORY}" \
+              --reason completed >/dev/null
+          elif [[ "${PENDING}" != "true" && "${PENDING}" != "false" ]]; then
+            echo "::error::The submission monitor received an invalid status."
+            exit 1
+          fi
+
+          echo "Submission monitor reconciliation completed."

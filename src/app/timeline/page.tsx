@@ -1,4 +1,4 @@
-import { getTimelineData, getAllPlatforms } from "@/lib/sanity.fetch";
+import Link from "next/link";
 import { TimelineView } from "@/components/timeline/TimelineView";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
 import {
@@ -7,7 +7,8 @@ import {
   latestDate,
 } from "@/lib/site";
 import { appleReleaseDatasetId } from "@/lib/structured-data";
-import { buildTimelineViewModel } from "@/lib/view-models/timeline";
+import { getTimelinePageData } from "@/lib/timeline";
+import { applePlatformPath } from "@/lib/release-routes";
 
 const timelineDescription =
   "Explore every tracked Apple OS beta, release candidate, and public release date together on one chronological timeline.";
@@ -19,13 +20,9 @@ export const metadata = createPageMetadata({
 });
 
 export default async function TimelinePage() {
-  const [data, platforms] = await Promise.all([
-    getTimelineData(),
-    getAllPlatforms(),
-  ]);
+  const { versions, timeline } = await getTimelinePageData();
   const canonical = absoluteUrl("/timeline/");
-  const timeline = buildTimelineViewModel(data, platforms);
-  const milestoneDates = data.flatMap((version) =>
+  const milestoneDates = versions.flatMap((version) =>
     version.milestones.map((milestone) => milestone.date)
   );
   const firstMilestoneDate = milestoneDates.reduce<string | undefined>(
@@ -40,7 +37,7 @@ export default async function TimelinePage() {
     url: canonical,
     name: "Apple OS Release Timeline",
     description: timelineDescription,
-    dateModified: latestDate(data.map((version) => version.updatedAt)),
+    dateModified: latestDate(versions.map((version) => version.updatedAt)),
     temporalCoverage:
       firstMilestoneDate && lastMilestoneDate
         ? `${firstMilestoneDate}/${lastMilestoneDate}`
@@ -48,6 +45,20 @@ export default async function TimelinePage() {
     isPartOf: { "@id": `${absoluteUrl("/")}#website` },
     about: appleReleaseDatasetId(),
   };
+  const recordedMilestones = timeline.bars.reduce(
+    (total, bar) => total + bar.milestoneCount,
+    0,
+  );
+  const activeCycles = timeline.bars.filter(
+    (bar) => bar.releaseStatus === "active",
+  ).length;
+  const activeCycleSentence =
+    activeCycles > 0
+      ? ` ${activeCycles} cycle${activeCycles === 1 ? " is" : "s are"} currently active.`
+      : "";
+  const archiveScopeDescription =
+    `This archive currently connects ${timeline.bars.length.toLocaleString()} release cycles and ${recordedMilestones.toLocaleString()} recorded milestones.` +
+    `${activeCycleSentence} Browse a platform directly or load the complete interactive comparison below.`;
 
   return (
     <>
@@ -76,10 +87,32 @@ export default async function TimelinePage() {
           className="animate-in"
           style={{ "--delay": 1 } as React.CSSProperties}
         >
-          <TimelineView
-            bars={timeline.bars}
-            platforms={timeline.platforms}
-          />
+          <section className="surface p-6 space-y-5" aria-labelledby="timeline-archive-scope">
+            <div className="space-y-2">
+              <p className="section-kicker">Archive scope</p>
+              <h2 id="timeline-archive-scope" className="text-heading text-xl">
+                A source-backed record across Apple platforms
+              </h2>
+              <p className="text-[var(--text-secondary)] max-w-3xl">
+                {archiveScopeDescription}
+              </p>
+            </div>
+            <nav aria-label="Browse the Apple release archive by platform">
+              <ul className="flex flex-wrap gap-x-4 gap-y-2">
+                {timeline.platforms.map((platform) => (
+                  <li key={platform.slug}>
+                    <Link
+                      href={applePlatformPath(platform.slug)}
+                      className="text-sm font-medium text-[var(--accent)] hover:underline"
+                    >
+                      {platform.name} release history
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </section>
+          <TimelineView />
         </div>
       </div>
     </>

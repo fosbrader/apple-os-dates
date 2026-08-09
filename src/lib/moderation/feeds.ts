@@ -378,11 +378,9 @@ export function isAuthorizedCron(
   const supplied = authorization?.startsWith("Bearer ")
     ? authorization.slice("Bearer ".length)
     : "";
-  const left = Buffer.from(supplied);
-  const right = Buffer.from(secret);
-  return (
-    left.length === right.length &&
-    left.length > 0 &&
-    timingSafeEqual(left, right)
-  );
+  if (!supplied || supplied.length > 4_096) return false;
+
+  const left = createHash("sha256").update(supplied).digest();
+  const right = createHash("sha256").update(secret).digest();
+  return timingSafeEqual(left, right);
 }

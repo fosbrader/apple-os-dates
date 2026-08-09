@@ -5,7 +5,16 @@ import {
   selectPublicColumns,
   serializeResearchCsv,
 } from "../src/lib/research/serialize";
-import { normalizeResearchSnapshot } from "../src/lib/research/data";
+import {
+  normalizeResearchSnapshot,
+  publicResearchPageRanges,
+  PUBLIC_RESEARCH_CHANGE_PAGE_SIZE,
+  PUBLIC_RESEARCH_EVENT_PAGE_SIZE,
+} from "../src/lib/research/data";
+import {
+  publicResearchChangesPageQuery,
+  publicResearchEventsPageQuery,
+} from "../src/lib/research/queries";
 import {
   eventHref,
   searchResearchIndex,
@@ -39,6 +48,25 @@ const datasets: PublicResearchDatasets = {
   citations: [],
   provenance: [],
 };
+
+test("large public collections use stable, bounded cache pages", () => {
+  assert.equal(PUBLIC_RESEARCH_EVENT_PAGE_SIZE, 100);
+  assert.equal(PUBLIC_RESEARCH_CHANGE_PAGE_SIZE, 500);
+  assert.deepEqual(publicResearchPageRanges(201, 100), [
+    { offset: 0, end: 100 },
+    { offset: 100, end: 200 },
+    { offset: 200, end: 201 },
+  ]);
+  assert.deepEqual(publicResearchPageRanges(0, 100), []);
+  assert.deepEqual(publicResearchPageRanges(100, 0), []);
+
+  for (const query of [
+    publicResearchEventsPageQuery,
+    publicResearchChangesPageQuery,
+  ]) {
+    assert.match(query, /order\(_id asc\)\[\$offset\.\.\.\$end\]/);
+  }
+});
 
 test("the serialization boundary removes undeclared and private fields", () => {
   const unsafe = {
@@ -103,6 +131,8 @@ test("local search requires every term and applies exact facets", () => {
       {
         id: "release:ios-26.3",
         kind: "release",
+        record_id: "ios-26.3",
+        api_dataset: "releases",
         title: "iOS 26.3",
         href: "/apple/ios/26.3",
         text: "Current beta cycle",
@@ -122,6 +152,8 @@ test("local search requires every term and applies exact facets", () => {
       {
         id: "event:ios-26.3-beta-4",
         kind: "event",
+        record_id: "ios-26.3-beta-4",
+        api_dataset: "events",
         title: "iOS 26.3 Beta 4",
         href: "/apple/ios/26.3/beta-4/",
         text: "Developer beta",
@@ -159,6 +191,8 @@ test("search result limits are bounded to one hundred", () => {
   const baseDocument = {
     id: "release:0",
     kind: "release" as const,
+    record_id: "0",
+    api_dataset: "releases" as const,
     title: "iOS release",
     href: "/apple/ios/26.0",
     text: "",
