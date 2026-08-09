@@ -25,6 +25,7 @@ export const releaseEvent = defineType({
   ],
   initialValue: () => ({
     stableEventId: `event:${crypto.randomUUID()}`,
+    firstObservedAt: new Date().toISOString(),
     availabilityState: "available",
     isRevision: false,
     closesReleaseCycle: false,
@@ -122,6 +123,20 @@ export const releaseEvent = defineType({
       type: "date",
       group: "identity",
       validation: (rule) => rule.required(),
+    }),
+    defineField({
+      name: "firstObservedAt",
+      title: "First Observed At",
+      type: "datetime",
+      group: "identity",
+      description:
+        "When Version Record first observed this event. This timestamp is not the event appearance date. Leave it empty when the observation time is unknown.",
+      options: {
+        dateFormat: "YYYY-MM-DD",
+        timeFormat: "HH:mm",
+        timeStep: 1,
+      },
+      readOnly: ({ document }) => Boolean(document?.firstObservedAt),
     }),
     defineField({
       name: "versionLabelAtAppearance",

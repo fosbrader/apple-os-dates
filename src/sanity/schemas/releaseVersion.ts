@@ -2,7 +2,9 @@ import { defineArrayMember, defineField, defineType } from "sanity";
 import { uniqueReleaseVersion } from "../validation";
 import {
   citationsRequiredWhenApproved,
+  validateChronologyCoverage,
   validateProvenanceStatus,
+  validateStatusEffectiveDate,
 } from "./schemaValidation";
 
 interface MilestoneValue {
@@ -19,6 +21,7 @@ export const releaseVersion = defineType({
   initialValue: {
     milestones: [],
     releaseStatus: "active",
+    chronologyCoverage: { status: "unknown" },
     provenanceStatus: "legacyImported",
     editorialReview: { status: "draft" },
   },
@@ -77,6 +80,94 @@ export const releaseVersion = defineType({
 
           return true;
         }),
+    }),
+    defineField({
+      name: "statusEffectiveDate",
+      title: "Status Effective Date",
+      type: "date",
+      description:
+        "Date when the recorded lifecycle status became effective. Leave it empty when the date is not supported by source evidence.",
+      validation: (rule) => rule.custom(validateStatusEffectiveDate),
+    }),
+    defineField({
+      name: "chronologyCoverage",
+      title: "Chronology Coverage",
+      type: "object",
+      description:
+        "Private evidence boundary for the recorded event chronology. Unknown is the safe default until coverage is reviewed.",
+      fields: [
+        defineField({
+          name: "status",
+          title: "Coverage Status",
+          type: "string",
+          options: {
+            list: [
+              { title: "Unknown", value: "unknown" },
+              { title: "Partial", value: "partial" },
+              { title: "Complete", value: "complete" },
+            ],
+            layout: "radio",
+          },
+          validation: (rule) => rule.required(),
+        }),
+        defineField({
+          name: "auditedChannels",
+          title: "Audited Channels",
+          type: "array",
+          of: [
+            defineArrayMember({
+              type: "string",
+              options: {
+                list: [
+                  { title: "Developer Beta", value: "developerBeta" },
+                  { title: "Public Beta", value: "publicBeta" },
+                  {
+                    title: "Release Candidate",
+                    value: "releaseCandidate",
+                  },
+                  { title: "Golden Master", value: "goldenMaster" },
+                  { title: "Public Release", value: "public" },
+                  {
+                    title: "Security Response",
+                    value: "securityResponse",
+                  },
+                  { title: "Recovery / Re-release", value: "recovery" },
+                  { title: "Other", value: "other" },
+                ],
+              },
+            }),
+          ],
+          validation: (rule) => rule.unique(),
+        }),
+        defineField({
+          name: "coverageThrough",
+          title: "Coverage Through",
+          type: "date",
+          description:
+            "Last appearance date included in the audit. This date is not a prediction cutoff.",
+        }),
+        defineField({
+          name: "knownGapNote",
+          title: "Known-Gap Note",
+          type: "text",
+          rows: 4,
+          description:
+            "Private editorial note. State known gaps and evidence limits without inferring missing events.",
+          validation: (rule) => rule.max(3000),
+        }),
+        defineField({
+          name: "verifiedAt",
+          title: "Verified At",
+          type: "datetime",
+        }),
+        defineField({
+          name: "auditBatch",
+          title: "Audit Batch",
+          type: "reference",
+          to: [{ type: "auditBatch" }],
+        }),
+      ],
+      validation: (rule) => rule.custom(validateChronologyCoverage),
     }),
     defineField({
       name: "releaseNotesUrl",
