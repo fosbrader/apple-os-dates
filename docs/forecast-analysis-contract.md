@@ -186,3 +186,53 @@ to its effective appearance before this evaluator receives it. Consequently an
 evaluation source snapshot cannot reconstruct hypothetical earlier folds based
 on a revision state that was later replaced; such folds remain out of scope
 rather than being inferred from revision labels or current knowledge.
+
+## Release-date candidates v1 (FR-009)
+
+`src/lib/release-date-candidates.ts` is a separate pure timing/cadence module.
+It consumes a validated, embedded `historical-analysis-dataset/v1` and never
+uses the legacy forecast display model, storage, APIs, UI, Sanity, a clock, or
+network. Each eligible canonical event is joined to that release's one
+source-linked `public-release` lifecycle outcome. Golden Master and next-stage
+events are never closure substitutes. The anchor-to-public interval must be
+forward, chronology complete, non-superseded/included, and have the public
+outcome fact first observed strictly after the anchor fact.
+
+At an anchor's `firstObservedOn` origin, training contains only other targets
+whose anchors were known and whose public occurrence and public-outcome fact
+were both known by that day. The held-out target is always excluded. The
+artifact records source-derived exclusions rather than parsing presentation
+labels. It preserves developer and public beta stage identities.
+
+Historical folds use that anchor-observation origin. A production prediction
+is available only for a release cycle whose snapshot lifecycle is exactly
+`active`; its origin and training cutoff are the embedded source dataset's
+`sourceAsOfDate`, provided the anchor itself was known by that cutoff. Released,
+superseded, closed, future-observed, and incomplete-chronology anchors fail
+closed.
+
+The fixed candidates are same-platform only: an empirical stage median (with
+an explicit same-platform pooled fallback) and a hierarchical same-platform
+cadence model. Both require at least eight root outcomes. Hierarchy is stage,
+then product family, release class, and numeric release position. A nonempty
+child posterior is `(n * childMedian + 4 * parentPosterior) / (n + 4)`;
+empty children retain the parent and record a fallback. Four is the exported,
+fixed prior strength, not a tuned/calibrated parameter. Point days remain
+unrounded; `half-up-positive-days/v1` is applied once only to resolve a public
+release date.
+
+Candidate selection considers only same-platform historical scores whose
+public outcome fact was known by the current origin. Each available candidate
+needs eight such prior scores; rank is MAE, median absolute error, absolute
+bias, then candidate ID. Sparse comparisons explicitly retain the empirical
+baseline as `baseline-default-insufficient-comparison`; they do not claim a
+winner. This includes a baseline-only prediction when hierarchy is unavailable.
+Insufficient metric rows retain their real score count and `null` metrics;
+zero is never fabricated. Without an empirical baseline, no forecast is emitted.
+The standalone validator recomputes source linkage, exclusions, folds, models,
+selection, scores, dates, ordering, and bound source/config/code/result
+fingerprints.
+
+```sh
+npm run release-date:validate -- path/to/release-date-candidates.json
+```
