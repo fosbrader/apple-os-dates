@@ -29,32 +29,29 @@ separate, final action. Deploying the code does not publish the article.
   the word `Apple` does not appear in the image copy.
 - The local archival set in `docs/marketing/launch-assets/` includes the 4K
   3840x2160 master plus HD, square, portrait, story, thumbnail, JPEG, WebP, and
-  AVIF renditions. Preserve and reconcile that currently uncommitted asset set
-  after the other workstream finishes; do not silently replace or discard it.
+  AVIF renditions. That set remains locally uncommitted in the source worktree;
+  archive it deliberately before cleaning that worktree, and do not silently
+  replace or discard it.
 - Keep the 4K master as an archive/downloadable source asset. Use the 1200x630
   rendition for Open Graph delivery so social crawlers receive a sharp image
   without an unnecessarily large payload.
 
-## Concurrent-work integration
+## Integration state
 
-The article implementation lives on the isolated
-`feat/article-publishing-metadata` branch. Do not apply it to the active dirty
-worktree while another agent is still working.
-
-After that agent commits:
-
-1. Create a fresh integration worktree from the agent's completed commit.
-2. Cherry-pick the Site News commits.
-3. Reconcile `src/sanity/sanity.config.ts` so the other agent's document-type
-   changes and the Site News structure/action are both preserved.
-4. Reconcile `src/app/sitemap.ts` so API/search decisions and published Site
-   News entries are both preserved.
-5. Recheck `src/lib/site.ts`, which is imported by the article route and is
-   being changed by the other workstream.
-6. Add a `News` navigation link only after reconciling the other workstream's
-   active `Header.tsx` changes.
-7. Add the two private environment-variable names below to the example env file
-   only after reconciling the other workstream's active env documentation.
+- Integration branch: `feat/site-news-launch-integration`
+- Deployed base: `origin/main` at `8f0d334`
+- Site News commits were reapplied as `2867702` and `eb6b2fd`.
+- The Sanity Studio merge keeps retired moderation document types inactive,
+  keeps `siteSettings` inactive, and enables only `sitePage` for Site News.
+- The sitemap keeps the deployed `/api/` entry, keeps `/search/` out, and adds
+  News URLs only when an approved, timestamped article actually exists.
+- The deployed page-specific social-image support in `src/lib/site.ts` is
+  compatible with the article route and remains intact.
+- The private preview variable names are documented in `.env.local.example`.
+- The existing header keeps its deployed API link. A News link is intentionally
+  deferred while `/news/` returns 404 before the first publication; do not add a
+  navigation link that points anonymous visitors to an empty section.
+- The user's main worktree and its unrelated local files were not modified.
 
 ## Server-only deployment configuration
 
