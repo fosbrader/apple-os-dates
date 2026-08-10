@@ -25,7 +25,6 @@ import {
 import {
   buildHistoricalAnalysisDataset,
   historicalAnalysisFingerprint,
-  stableSerializeHistoricalAnalysis,
   type HistoricalAnalysisDatasetV1,
   type HistoricalCanonicalEventRow,
   type HistoricalReleaseCycleRow,
@@ -56,9 +55,11 @@ import {
   FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS,
   FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
   FORECAST_SHADOW_MAX_SOURCE_METADATA,
+  FORECAST_SHADOW_MAX_SOURCE_NODES,
   FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS,
   FORECAST_SHADOW_MAX_SOURCE_RELEASES,
   FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES,
+  validatePublishedHistoricalReleaseSource,
   type PublishedHistoricalReleaseSource,
 } from "./historical-release-source";
 import { buildWalkForwardEvaluation } from "./walk-forward-evaluation";
@@ -70,6 +71,7 @@ export {
   FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS,
   FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
   FORECAST_SHADOW_MAX_SOURCE_METADATA,
+  FORECAST_SHADOW_MAX_SOURCE_NODES,
   FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS,
   FORECAST_SHADOW_MAX_SOURCE_RELEASES,
   FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES,
@@ -92,6 +94,7 @@ const pipelineCodeManifest = {
     evidenceIdsPerField: FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS,
     events: FORECAST_SHADOW_MAX_SOURCE_EVENTS,
     metadata: FORECAST_SHADOW_MAX_SOURCE_METADATA,
+    nodes: FORECAST_SHADOW_MAX_SOURCE_NODES,
     observations: FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS,
     releases: FORECAST_SHADOW_MAX_SOURCE_RELEASES,
     stringMaxBytes: FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES,
@@ -172,150 +175,15 @@ function assertRequest(request: ForecastShadowPipelineRequest): void {
   }
 }
 
-const FORECAST_SHADOW_MAX_SOURCE_NODES = 262_144;
-
-function failSourceContract(): never {
-  throw new TypeError("Invalid forecast shadow source contract.");
-}
-
-function assertRawObservationInstant(
-  value: unknown,
-  requestedAt: string,
-): void {
-  if (value === undefined || value === null) return;
-  if (
-    typeof value !== "string" ||
-    !validInstant(value) ||
-    value > requestedAt
-  ) {
-    failSourceContract();
-  }
-}
-
-function assertSourceValueBounds(source: PublishedHistoricalReleaseSource): void {
-  type StackEntry =
-    | { kind: "value"; value: unknown; field?: string }
-    | { kind: "exit"; value: object };
-  const ancestors = new WeakSet<object>();
-  const stack: StackEntry[] = [{ kind: "value", value: source }];
-  let nodeCount = 0;
-
-  while (stack.length > 0) {
-    const entry = stack.pop()!;
-    if (entry.kind === "exit") {
-      ancestors.delete(entry.value);
-      continue;
-    }
-    nodeCount += 1;
-    if (nodeCount > FORECAST_SHADOW_MAX_SOURCE_NODES) failSourceContract();
-
-    const { value } = entry;
-    if (
-      value === undefined ||
-      value === null ||
-      typeof value === "boolean"
-    ) {
-      continue;
-    }
-    if (typeof value === "number") {
-      if (!Number.isFinite(value)) failSourceContract();
-      continue;
-    }
-    if (typeof value === "string") {
-      if (encoder.encode(value).byteLength > FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES) {
-        failSourceContract();
-      }
-      continue;
-    }
-    if (typeof value !== "object") failSourceContract();
-
-    const object = value as object;
-    if (ancestors.has(object)) failSourceContract();
-    ancestors.add(object);
-    stack.push({ kind: "exit", value: object });
-
-    if (Array.isArray(value)) {
-      if (entry.field === "sourceEvidenceIds") {
-        if (
-          value.length > FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS ||
-          value.some(
-            (id) =>
-              typeof id !== "string" ||
-              encoder.encode(id).byteLength >
-                FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
-          )
-        ) {
-          failSourceContract();
-        }
-      }
-      for (let index = value.length - 1; index >= 0; index -= 1) {
-        stack.push({ kind: "value", value: value[index] });
-      }
-      continue;
-    }
-
-    const prototype = Object.getPrototypeOf(value);
-    if (prototype !== Object.prototype && prototype !== null) {
-      failSourceContract();
-    }
-    if (Object.getOwnPropertySymbols(value).length > 0) failSourceContract();
-    const entries = Object.entries(value as Record<string, unknown>);
-    for (let index = entries.length - 1; index >= 0; index -= 1) {
-      const [key, child] = entries[index]!;
-      if (encoder.encode(key).byteLength > FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES) {
-        failSourceContract();
-      }
-      if (key === "sourceEvidenceIds" && !Array.isArray(child)) {
-        failSourceContract();
-      }
-      stack.push({ kind: "value", value: child, field: key });
-    }
-  }
-}
-
 function assertSource(
   source: PublishedHistoricalReleaseSource,
   requestedAt: string,
 ): PublishedHistoricalReleaseSource {
   try {
-    if (
-      !source ||
-      !Array.isArray(source.releases) ||
-      !Array.isArray(source.events) ||
-      !Array.isArray(source.compatibilityMilestones) ||
-      !Array.isArray(source.releaseMetadata) ||
-      source.releases.length > FORECAST_SHADOW_MAX_SOURCE_RELEASES ||
-      source.events.length > FORECAST_SHADOW_MAX_SOURCE_EVENTS ||
-      source.compatibilityMilestones.length >
-        FORECAST_SHADOW_MAX_SOURCE_COMPATIBILITY_MILESTONES ||
-      source.events.length + source.compatibilityMilestones.length >
-        FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS ||
-      source.releaseMetadata.length > FORECAST_SHADOW_MAX_SOURCE_METADATA
-    ) {
-      failSourceContract();
-    }
-
-    for (const release of source.releases) {
-      assertRawObservationInstant(release?.statusFirstObservedAt, requestedAt);
-    }
-    for (const event of source.events) {
-      assertRawObservationInstant(event?.firstObservedAt, requestedAt);
-    }
-    for (const milestone of source.compatibilityMilestones) {
-      assertRawObservationInstant(milestone?.firstObservedAt, requestedAt);
-    }
-
-    assertSourceValueBounds(source);
-    if (
-      encoder.encode(stableSerializeHistoricalAnalysis(source)).byteLength >
-      FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES
-    ) {
-      failSourceContract();
-    }
+    return validatePublishedHistoricalReleaseSource(source, requestedAt);
   } catch {
     throw new ForecastShadowPipelineError("invalid-source");
   }
-  return source;
 }
 
 function addDays(value: string, days: number): string {

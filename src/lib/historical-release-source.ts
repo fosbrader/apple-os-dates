@@ -1,6 +1,9 @@
 import { groq } from "next-sanity";
 
-import type { HistoricalReleaseMetadataV1 } from "./historical-analysis-dataset";
+import {
+  stableSerializeHistoricalAnalysis,
+  type HistoricalReleaseMetadataV1,
+} from "./historical-analysis-dataset";
 import type {
   CompatibilityMilestoneInput,
   FirstClassReleaseEventInput,
@@ -27,6 +30,361 @@ export const FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES = 2_097_152;
 export const FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES = 512;
 export const FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES = 256;
 export const FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS = 128;
+export const FORECAST_SHADOW_MAX_SOURCE_NODES = 262_144;
+
+export type PublishedHistoricalReleaseSourceValidationCode =
+  | "invalid-source"
+  | "chronology-mismatch"
+  | "row-limit";
+
+export class PublishedHistoricalReleaseSourceValidationError extends Error {
+  constructor(
+    public readonly code: PublishedHistoricalReleaseSourceValidationCode,
+  ) {
+    super(`Published historical release source is invalid: ${code}.`);
+    this.name = "PublishedHistoricalReleaseSourceValidationError";
+  }
+}
+
+const encoder = new TextEncoder();
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function canonicalInstant(value: unknown): value is string {
+  if (typeof value !== "string") return false;
+  const parsed = new Date(value);
+  return !Number.isNaN(parsed.getTime()) && parsed.toISOString() === value;
+}
+
+function failSource(
+  code: PublishedHistoricalReleaseSourceValidationCode,
+): never {
+  throw new PublishedHistoricalReleaseSourceValidationError(code);
+}
+
+function assertRawObservationInstant(value: unknown, issuedAt: string): void {
+  if (value === undefined || value === null) return;
+  if (!canonicalInstant(value)) failSource("invalid-source");
+  if (value > issuedAt) failSource("chronology-mismatch");
+}
+
+function assertSourceValueBounds(source: PublishedHistoricalReleaseSource): void {
+  type StackEntry =
+    | { kind: "value"; value: unknown; field?: string }
+    | { kind: "exit"; value: object };
+  const ancestors = new WeakSet<object>();
+  const stack: StackEntry[] = [{ kind: "value", value: source }];
+  let nodeCount = 0;
+
+  while (stack.length > 0) {
+    const entry = stack.pop()!;
+    if (entry.kind === "exit") {
+      ancestors.delete(entry.value);
+      continue;
+    }
+    nodeCount += 1;
+    if (nodeCount > FORECAST_SHADOW_MAX_SOURCE_NODES) failSource("row-limit");
+
+    const { value } = entry;
+    if (
+      value === undefined ||
+      value === null ||
+      typeof value === "boolean"
+    ) {
+      continue;
+    }
+    if (typeof value === "number") {
+      if (!Number.isFinite(value)) failSource("invalid-source");
+      continue;
+    }
+    if (typeof value === "string") {
+      if (encoder.encode(value).byteLength > FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES) {
+        failSource("row-limit");
+      }
+      continue;
+    }
+    if (typeof value !== "object") failSource("invalid-source");
+
+    const object = value as object;
+    if (ancestors.has(object)) failSource("invalid-source");
+    ancestors.add(object);
+    stack.push({ kind: "exit", value: object });
+
+    if (Array.isArray(value)) {
+      if (entry.field === "sourceEvidenceIds") {
+        if (value.length > FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS) {
+          failSource("row-limit");
+        }
+        if (value.some((id) => typeof id !== "string")) {
+          failSource("invalid-source");
+        }
+        if (
+          value.some(
+            (id) =>
+              encoder.encode(id as string).byteLength >
+              FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
+          )
+        ) {
+          failSource("row-limit");
+        }
+      }
+      for (let index = value.length - 1; index >= 0; index -= 1) {
+        stack.push({ kind: "value", value: value[index] });
+      }
+      continue;
+    }
+
+    const prototype = Object.getPrototypeOf(value);
+    if (prototype !== Object.prototype && prototype !== null) {
+      failSource("invalid-source");
+    }
+    if (Object.getOwnPropertySymbols(value).length > 0) {
+      failSource("invalid-source");
+    }
+    const entries = Object.entries(value as Record<string, unknown>);
+    for (let index = entries.length - 1; index >= 0; index -= 1) {
+      const [key, child] = entries[index]!;
+      if (encoder.encode(key).byteLength > FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES) {
+        failSource("row-limit");
+      }
+      if (key === "sourceEvidenceIds" && !Array.isArray(child)) {
+        failSource("invalid-source");
+      }
+      stack.push({ kind: "value", value: child, field: key });
+    }
+  }
+}
+
+const nullableReleaseFields = [
+  "lifecycle",
+  "publicReleaseDate",
+  "statusEffectiveOn",
+  "statusFirstObservedAt",
+] as const;
+const nullableMilestoneFields = [
+  "channel",
+  "sequence",
+  "sameDayOrder",
+  "availability",
+  "isRevision",
+  "firstObservedAt",
+  "displayLabel",
+  "note",
+] as const;
+const nullableEventFields = [
+  "stableEventId",
+  "firstObservedAt",
+  "sequence",
+  "sameDayOrder",
+  "availability",
+  "isRevision",
+  "revisionOfId",
+  "replacesEventId",
+  "replacedByEventId",
+  "closesReleaseCycle",
+  "legacySourceId",
+  "displayLabel",
+  "note",
+] as const;
+
+function withoutNullFields<T extends object>(
+  value: T,
+  fields: readonly string[],
+): T {
+  let normalized: Record<string, unknown> | null = null;
+  const record = value as Record<string, unknown>;
+  for (const field of fields) {
+    if (record[field] !== null) continue;
+    normalized ??= { ...record };
+    delete normalized[field];
+  }
+  return (normalized ?? record) as T;
+}
+
+function normalizeSanityNulls(
+  source: PublishedHistoricalReleaseSource,
+): PublishedHistoricalReleaseSource {
+  return {
+    releases: source.releases.map((release) =>
+      withoutNullFields(release, nullableReleaseFields),
+    ),
+    events: source.events.map((event) =>
+      withoutNullFields(event, nullableEventFields),
+    ),
+    compatibilityMilestones: source.compatibilityMilestones.map((milestone) =>
+      withoutNullFields(milestone, nullableMilestoneFields),
+    ),
+    releaseMetadata: source.releaseMetadata.map((metadata) => {
+      if (!isRecord(metadata.chronologyCoverage)) return metadata;
+      const chronologyCoverage = withoutNullFields(
+        metadata.chronologyCoverage,
+        ["reason"],
+      );
+      return chronologyCoverage === metadata.chronologyCoverage
+        ? metadata
+        : ({ ...metadata, chronologyCoverage } as HistoricalReleaseMetadataV1);
+    }),
+  };
+}
+
+function optionalType(
+  record: Record<string, unknown>,
+  field: string,
+  type: "boolean" | "number" | "string",
+): boolean {
+  return record[field] === undefined || typeof record[field] === type;
+}
+
+function assertNormalizedSourceShape(
+  source: PublishedHistoricalReleaseSource,
+): void {
+  for (const release of source.releases) {
+    const row = release as unknown as Record<string, unknown>;
+    if (
+      typeof row.id !== "string" ||
+      !optionalType(row, "lifecycle", "string") ||
+      !optionalType(row, "publicReleaseDate", "string") ||
+      !optionalType(row, "statusEffectiveOn", "string") ||
+      !optionalType(row, "statusFirstObservedAt", "string")
+    ) {
+      failSource("invalid-source");
+    }
+  }
+  for (const milestone of source.compatibilityMilestones) {
+    const row = milestone as unknown as Record<string, unknown>;
+    if (
+      typeof row.id !== "string" ||
+      typeof row.releaseId !== "string" ||
+      typeof row.occurredOn !== "string" ||
+      !optionalType(row, "channel", "string") ||
+      !optionalType(row, "sequence", "number") ||
+      !optionalType(row, "sameDayOrder", "number") ||
+      !optionalType(row, "availability", "string") ||
+      !optionalType(row, "isRevision", "boolean") ||
+      !optionalType(row, "firstObservedAt", "string") ||
+      !optionalType(row, "displayLabel", "string") ||
+      !optionalType(row, "note", "string")
+    ) {
+      failSource("invalid-source");
+    }
+  }
+  for (const event of source.events) {
+    const row = event as unknown as Record<string, unknown>;
+    if (
+      typeof row.id !== "string" ||
+      typeof row.releaseId !== "string" ||
+      typeof row.occurredOn !== "string" ||
+      typeof row.channel !== "string" ||
+      !optionalType(row, "stableEventId", "string") ||
+      !optionalType(row, "firstObservedAt", "string") ||
+      !optionalType(row, "sequence", "number") ||
+      !optionalType(row, "sameDayOrder", "number") ||
+      !optionalType(row, "availability", "string") ||
+      !optionalType(row, "isRevision", "boolean") ||
+      !optionalType(row, "revisionOfId", "string") ||
+      !optionalType(row, "replacesEventId", "string") ||
+      !optionalType(row, "replacedByEventId", "string") ||
+      !optionalType(row, "closesReleaseCycle", "boolean") ||
+      !optionalType(row, "legacySourceId", "string") ||
+      !optionalType(row, "displayLabel", "string") ||
+      !optionalType(row, "note", "string")
+    ) {
+      failSource("invalid-source");
+    }
+  }
+  for (const metadata of source.releaseMetadata) {
+    const row = metadata as unknown as Record<string, unknown>;
+    const coverage = row.chronologyCoverage;
+    if (
+      typeof row.releaseId !== "string" ||
+      typeof row.platformId !== "string" ||
+      typeof row.productFamilyId !== "string" ||
+      typeof row.releaseClass !== "string" ||
+      typeof row.releasePosition !== "number" ||
+      typeof row.releaseCycleId !== "string" ||
+      !Array.isArray(row.sourceEvidenceIds) ||
+      !isRecord(coverage) ||
+      typeof coverage.state !== "string" ||
+      !optionalType(coverage, "reason", "string") ||
+      !Array.isArray(coverage.sourceEvidenceIds)
+    ) {
+      failSource("invalid-source");
+    }
+  }
+}
+
+/**
+ * Validate the complete bounded raw source contract and normalize Sanity's
+ * null projection for every optional scalar to the adapter's absent value.
+ * Callers receive a safe snapshot that can be passed to both the historical
+ * adapter and exact outcome-binding builder without semantic drift.
+ */
+export function validatePublishedHistoricalReleaseSource(
+  value: unknown,
+  issuedAt: string,
+): PublishedHistoricalReleaseSource {
+  if (!canonicalInstant(issuedAt) || !isRecord(value)) {
+    failSource("invalid-source");
+  }
+  const source = value as unknown as PublishedHistoricalReleaseSource;
+  if (
+    !Array.isArray(source.releases) ||
+    !Array.isArray(source.events) ||
+    !Array.isArray(source.compatibilityMilestones) ||
+    !Array.isArray(source.releaseMetadata)
+  ) {
+    failSource("invalid-source");
+  }
+  if (
+    source.releases.length > FORECAST_SHADOW_MAX_SOURCE_RELEASES ||
+    source.events.length > FORECAST_SHADOW_MAX_SOURCE_EVENTS ||
+    source.compatibilityMilestones.length >
+      FORECAST_SHADOW_MAX_SOURCE_COMPATIBILITY_MILESTONES ||
+    source.events.length + source.compatibilityMilestones.length >
+      FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS ||
+    source.releaseMetadata.length > FORECAST_SHADOW_MAX_SOURCE_METADATA
+  ) {
+    failSource("row-limit");
+  }
+  if (
+    source.releases.some((row) => !isRecord(row)) ||
+    source.events.some((row) => !isRecord(row)) ||
+    source.compatibilityMilestones.some((row) => !isRecord(row)) ||
+    source.releaseMetadata.some((row) => !isRecord(row))
+  ) {
+    failSource("invalid-source");
+  }
+
+  assertSourceValueBounds(source);
+  let canonicalBytes: number;
+  try {
+    canonicalBytes = encoder.encode(
+      stableSerializeHistoricalAnalysis(source),
+    ).byteLength;
+  } catch {
+    failSource("invalid-source");
+  }
+  if (canonicalBytes > FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES) {
+    failSource("row-limit");
+  }
+
+  const normalized = normalizeSanityNulls(source);
+  assertNormalizedSourceShape(normalized);
+
+  for (const release of normalized.releases) {
+    assertRawObservationInstant(release.statusFirstObservedAt, issuedAt);
+  }
+  for (const event of normalized.events) {
+    assertRawObservationInstant(event.firstObservedAt, issuedAt);
+  }
+  for (const milestone of normalized.compatibilityMilestones) {
+    assertRawObservationInstant(milestone.firstObservedAt, issuedAt);
+  }
+
+  return normalized;
+}
 
 const boundedCollectionNames = [
   "releases",
@@ -51,10 +409,6 @@ export class ForecastShadowSourceEnvelopeError extends Error {
     super("The bounded forecast source envelope is invalid.");
     this.name = "ForecastShadowSourceEnvelopeError";
   }
-}
-
-function isRecord(value: unknown): value is Record<string, unknown> {
-  return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
 const collectionLimits: Record<BoundedCollectionName, number> = {
