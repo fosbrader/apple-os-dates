@@ -12,11 +12,14 @@ calibration, and the artifact-builder code. Component versions must be exact
 v1 versions. Fingerprints are SHA-256 digests.
 
 Targets use the `public-release` or `next-eligible-prerelease-event` tag. An
-available target has a finite median point and calibrated 50% and 80%
-intervals. Both intervals use one residual count and the fixed finite-sample
-rank. The 50% bounds must be inside the 80% bounds. Calendar bounds round
-outward from the source-linked anchor. An unavailable target has a typed reason
-and no prediction or date fields.
+available target identifies the exact upstream point estimator and has a finite
+point plus calibrated 50% and 80% intervals. Public-release points name either
+`platform-stage-median` or `hierarchical-platform-cadence`; next-event points
+name `next-event-timing-median`. This prevents a hierarchical shrinkage estimate
+from being mislabeled as a raw median. Both intervals use one residual count and
+the fixed finite-sample rank. The 50% bounds must be inside the 80% bounds.
+Calendar bounds round outward from the source-linked anchor. An unavailable
+target has a typed reason and no prediction or date fields.
 
 This example uses the checked contract builder. It is preferable to assembling
 JSON by hand because the builder orders targets, metrics, exclusions, and

@@ -6,7 +6,11 @@ import {
   stableSerializeHistoricalAnalysis,
 } from "./historical-analysis-dataset";
 import { NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION, type EligiblePrereleaseStage } from "./next-eligible-prerelease-event";
-import { RELEASE_DATE_CANDIDATES_VERSION } from "./release-date-candidates";
+import {
+  RELEASE_DATE_CANDIDATES,
+  RELEASE_DATE_CANDIDATES_VERSION,
+  type ReleaseDateCandidateId,
+} from "./release-date-candidates";
 import { RELEASE_DATE_INTERVAL_CALIBRATION_VERSION } from "./release-date-interval-calibration";
 import { WALK_FORWARD_EVALUATION_VERSION } from "./walk-forward-evaluation";
 
@@ -22,8 +26,10 @@ export const FORECAST_ARTIFACT_MAX_EXCLUSIONS = 2_048;
 export const FORECAST_ARTIFACT_MAX_EVIDENCE_IDS = 4_096;
 export const FORECAST_POINTER_PATH = "forecast/pointers/private-shadow.json";
 export const FORECAST_RUN_IDENTITY_VERSION = "forecast-run-identity/v1";
+export const FORECAST_NEXT_EVENT_POINT_ESTIMATOR = "next-event-timing-median";
 
 export type ForecastTargetKind = "public-release" | "next-eligible-prerelease-event";
+export type ForecastPointEstimatorV1 = ReleaseDateCandidateId | typeof FORECAST_NEXT_EVENT_POINT_ESTIMATOR;
 export type ForecastArtifactAvailabilityReason = "insufficient-model-history" | "insufficient-calibration-history" | "ambiguous-chronology" | "weak-next-stage-mode" | "inactive-release" | "invalid-source-evidence";
 
 export interface ForecastArtifactProvenanceV1 {
@@ -68,7 +74,8 @@ export interface ForecastArtifactIntervalV1 {
 }
 
 export interface ForecastArtifactPredictionV1 {
-  statistic: "median";
+  /** Exact upstream algorithm that produced pointDays. */
+  pointEstimator: ForecastPointEstimatorV1;
   pointDays: number;
   pointCalendarDate: string;
   roundingRule: typeof FORECAST_INTERVAL_ROUNDING_RULE;
@@ -240,11 +247,15 @@ function intervalIssues(value: unknown, path: string, expectedLevel: 0.5 | 0.8, 
   return issues;
 }
 
-function predictionIssues(value: unknown, path: string, anchorOn: string, cohort: ForecastArtifactCohortV1): ForecastContractValidationIssue[] {
+function predictionIssues(value: unknown, path: string, targetKind: ForecastTargetKind, anchorOn: string, cohort: ForecastArtifactCohortV1): ForecastContractValidationIssue[] {
   if (!isRecord(value)) return [{ code: "invalid-interval", path, message: "An available target requires a calibrated prediction." }];
   const issues: ForecastContractValidationIssue[] = [];
-  exactKeys(value, ["statistic", "pointDays", "pointCalendarDate", "roundingRule", "intervals"], path, issues);
-  if (value.statistic !== "median" || !isFiniteNumber(value.pointDays) || (value.pointDays as number) < 0 || value.roundingRule !== FORECAST_INTERVAL_ROUNDING_RULE || !isDay(value.pointCalendarDate) || (isFiniteNumber(value.pointDays) && value.pointCalendarDate !== addDays(anchorOn, Math.floor((value.pointDays as number) + 0.5)))) issues.push({ code: "invalid-interval", path, message: "A finite non-negative median and its half-up point date are required." });
+  exactKeys(value, ["pointEstimator", "pointDays", "pointCalendarDate", "roundingRule", "intervals"], path, issues);
+  const estimatorIsValid = targetKind === "public-release"
+    ? RELEASE_DATE_CANDIDATES.includes(value.pointEstimator as ReleaseDateCandidateId)
+    : value.pointEstimator === FORECAST_NEXT_EVENT_POINT_ESTIMATOR;
+  if (!estimatorIsValid) issues.push({ code: "invalid-row", path: `${path}.pointEstimator`, message: "The point estimator must identify an exact upstream algorithm for the target kind." });
+  if (!isFiniteNumber(value.pointDays) || (value.pointDays as number) < 0 || value.roundingRule !== FORECAST_INTERVAL_ROUNDING_RULE || !isDay(value.pointCalendarDate) || (isFiniteNumber(value.pointDays) && value.pointCalendarDate !== addDays(anchorOn, Math.floor((value.pointDays as number) + 0.5)))) issues.push({ code: "invalid-interval", path, message: "A finite non-negative point estimate and its half-up point date are required." });
   if (!Array.isArray(value.intervals) || value.intervals.length !== 2 || !isFiniteNumber(value.pointDays) || !isDay(value.pointCalendarDate)) return [...issues, { code: "invalid-interval", path: `${path}.intervals`, message: "Exactly calibrated 50% and 80% intervals are required." }];
   issues.push(...intervalIssues(value.intervals[0], `${path}.intervals[0]`, 0.5, anchorOn, value.pointDays, value.pointCalendarDate, cohort.calibrationResidualCount));
   issues.push(...intervalIssues(value.intervals[1], `${path}.intervals[1]`, 0.8, anchorOn, value.pointDays, value.pointCalendarDate, cohort.calibrationResidualCount));
@@ -270,7 +281,7 @@ function targetIssues(value: unknown, index: number, provenance: ForecastArtifac
   issues.push(...cohortIssues(value.cohort, `${path}.cohort`));
   if (available && isRecord(value.cohort) && isCount(value.cohort.modelTrainingCount) && isCount(value.cohort.calibrationResidualCount)) {
     if (value.cohort.modelTrainingCount < 8 || value.cohort.calibrationResidualCount < 8) issues.push({ code: "invalid-row", path: `${path}.cohort`, message: "Available targets require at least eight model and calibration examples." });
-    if (isDay(value.anchorOccurredOn)) issues.push(...predictionIssues(value.prediction, `${path}.prediction`, value.anchorOccurredOn, value.cohort as unknown as ForecastArtifactCohortV1));
+    if (isDay(value.anchorOccurredOn)) issues.push(...predictionIssues(value.prediction, `${path}.prediction`, value.targetKind as ForecastTargetKind, value.anchorOccurredOn, value.cohort as unknown as ForecastArtifactCohortV1));
     if (next && !["developer-beta", "public-beta", "release-candidate"].includes(value.predictedEligibleStage as string)) issues.push({ code: "invalid-row", path: `${path}.predictedEligibleStage`, message: "Next-event target stage must be one of the three eligible prerelease classes." });
   } else if (!available && !(isText(value.reason) && ["insufficient-model-history", "insufficient-calibration-history", "ambiguous-chronology", "weak-next-stage-mode", "inactive-release", "invalid-source-evidence"].includes(value.reason))) issues.push({ code: "invalid-row", path: `${path}.reason`, message: "Unavailable targets require one v1 reason and no prediction dates." });
   return issues;

@@ -74,7 +74,7 @@ function draft(generatedAt = "2026-08-09T20:00:00.000Z"): ForecastArtifactDraftV
     modelFingerprint: provenance.publicReleaseModel.fingerprint,
     calibrationFingerprint: provenance.publicReleaseCalibration.fingerprint,
     cohort: { modelCohortId: "ios-stage", modelTrainingCount: 8, calibrationPoolId: "ios-stage-candidate", calibrationResidualCount: 8 },
-    prediction: { statistic: "median", pointDays: 10.5, pointCalendarDate: "2026-08-12", roundingRule: "outward-floor-half-up-ceil/v1", intervals: [interval(0.5, 2), interval(0.8, 4)] },
+    prediction: { pointEstimator: "platform-stage-median", pointDays: 10.5, pointCalendarDate: "2026-08-12", roundingRule: "outward-floor-half-up-ceil/v1", intervals: [interval(0.5, 2), interval(0.8, 4)] },
   };
   const nextUnavailable: ForecastArtifactTargetV1 = {
     targetId: "next:ios-27",
@@ -145,6 +145,11 @@ test("FR-012 binds evidence, models, calibration, intervals, metrics, rows, size
   assert.ok(validateForecastArtifact(tampered({ ...publicTarget, sourceEvidenceIds: ["not-in-provenance"] })).length > 0);
   assert.ok(validateForecastArtifact({ ...artifact, provenance: { ...artifact.provenance, publicReleaseModel: { ...artifact.provenance.publicReleaseModel, version: "release-date-candidates/v2" } } }).length > 0);
   if (publicTarget.availability === "available") {
+    const hierarchical = draft();
+    const hierarchicalTarget = hierarchical.targets.find((target) => target.targetKind === "public-release" && target.availability === "available")!;
+    hierarchical.targets = hierarchical.targets.map((target) => target === hierarchicalTarget ? { ...hierarchicalTarget, prediction: { ...hierarchicalTarget.prediction, pointEstimator: "hierarchical-platform-cadence" } } : target);
+    assert.doesNotThrow(() => buildForecastArtifact(hierarchical));
+    assert.ok(validateForecastArtifact(tampered({ ...publicTarget, prediction: { ...publicTarget.prediction, pointEstimator: "next-event-timing-median" } })).some((issue) => issue.path.endsWith(".pointEstimator")));
     const malformed = { ...publicTarget, prediction: { ...publicTarget.prediction, intervals: [{ ...publicTarget.prediction.intervals[0], lowerDays: 5 }, publicTarget.prediction.intervals[1]] } };
     assert.ok(validateForecastArtifact(tampered(malformed)).some((issue) => issue.code === "invalid-interval"));
   }
