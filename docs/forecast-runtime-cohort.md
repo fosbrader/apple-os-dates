@@ -51,12 +51,20 @@ active platforms, per-platform counts, observation count, exclusions, and
 code/config/result fingerprints. Its runtime validator rejects unexpected
 properties and recomputes all internal counts and fingerprints.
 
-`projectPublishedHistoricalReleaseSourceForRuntimeCohort` rebinds the full
-source to the selection fingerprint, then filters releases, raw events,
-compatibility milestones, and metadata by the exact selected release IDs. A
-selected release is projected as a whole. Rebuilding the projected source must
-produce a valid historical dataset; active cycles and their adapter exclusions
-remain present.
+`projectPublishedHistoricalReleaseSourceForRuntimeCohort` rebuilds the full
+dataset, rederives the authoritative selection, and requires exact equality
+with the supplied selection artifact, including its result fingerprint. A
+structurally valid or correctly re-signed artifact cannot select different
+active or historical releases.
+
+The helper then filters releases, raw events, compatibility milestones, and
+metadata by the exact selected release IDs. A selected release is projected as
+a whole. It rebuilds and validates the projected historical dataset, then
+requires its analytical rows and inclusion ledger to equal the selected subset
+of the full dataset. This rejects cross-boundary identity, replacement, or
+deduplication changes that would make an excluded raw event canonical after its
+conflicting release was removed. Active cycles and their original adapter
+exclusions remain present.
 
 ## Local verification
 

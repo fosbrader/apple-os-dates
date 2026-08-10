@@ -661,6 +661,33 @@ function projectionEventSort(
   );
 }
 
+function projectedAnalyticalCore(
+  dataset: HistoricalAnalysisDatasetV1,
+  selectedIds?: ReadonlySet<string>,
+) {
+  const included = (releaseId: string) =>
+    selectedIds === undefined || selectedIds.has(releaseId);
+  return {
+    datasetVersion: dataset.datasetVersion,
+    provenance: dataset.provenance,
+    releaseCycles: dataset.releaseCycles.filter((row) =>
+      included(row.releaseId),
+    ),
+    canonicalEvents: dataset.canonicalEvents.filter((row) =>
+      included(row.releaseId),
+    ),
+    stageIntervals: dataset.stageIntervals.filter((row) =>
+      included(row.releaseId),
+    ),
+    lifecycleOutcomes: dataset.lifecycleOutcomes.filter((row) =>
+      included(row.releaseId),
+    ),
+    inclusionLedger: dataset.inclusionLedger.filter((row) =>
+      included(row.releaseId),
+    ),
+  };
+}
+
 /**
  * Filter the exact source to whole selected cycles. The full source is rebound
  * to the selection fingerprint first, and no event inside a selected release
@@ -687,6 +714,19 @@ export function projectPublishedHistoricalReleaseSourceForRuntimeCohort(
   if (
     rebuilt.fingerprints.datasetFingerprint !==
     selection.sourceDataset.fingerprint
+  ) {
+    throw new ForecastRuntimeCohortError("source-dataset-mismatch");
+  }
+
+  let authoritativeSelection: ForecastRuntimeCohortSelectionV1;
+  try {
+    authoritativeSelection = buildForecastRuntimeCohortSelection(rebuilt, source);
+  } catch {
+    throw new ForecastRuntimeCohortError("source-dataset-mismatch");
+  }
+  if (
+    stableSerializeHistoricalAnalysis(authoritativeSelection) !==
+    stableSerializeHistoricalAnalysis(selection)
   ) {
     throw new ForecastRuntimeCohortError("source-dataset-mismatch");
   }
@@ -724,6 +764,29 @@ export function projectPublishedHistoricalReleaseSourceForRuntimeCohort(
     0,
   );
   if (projectedObservationCount !== selection.selectedObservationCount) {
+    throw new ForecastRuntimeCohortError("source-dataset-mismatch");
+  }
+
+  let projectedDataset: HistoricalAnalysisDatasetV1;
+  try {
+    projectedDataset = buildDatasetFromSource(projected, {
+      asOfDate: selection.sourceDataset.asOfDate,
+      issuedAt: selection.sourceDataset.issuedAt,
+    });
+    if (validateHistoricalAnalysisDataset(projectedDataset).length > 0) {
+      throw new ForecastRuntimeCohortError("source-dataset-mismatch");
+    }
+  } catch {
+    throw new ForecastRuntimeCohortError("source-dataset-mismatch");
+  }
+  if (
+    stableSerializeHistoricalAnalysis(
+      projectedAnalyticalCore(projectedDataset),
+    ) !==
+    stableSerializeHistoricalAnalysis(
+      projectedAnalyticalCore(rebuilt, selectedIds),
+    )
+  ) {
     throw new ForecastRuntimeCohortError("source-dataset-mismatch");
   }
   return projected;

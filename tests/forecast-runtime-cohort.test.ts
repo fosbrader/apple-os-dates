@@ -2,14 +2,20 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
+  FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
   FORECAST_RUNTIME_COHORT_CONFIG,
+  FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
   ForecastRuntimeCohortError,
   buildForecastRuntimeCohortSelection,
   buildHistoricalAnalysisDatasetFromPublishedSource,
   projectPublishedHistoricalReleaseSourceForRuntimeCohort,
   validateForecastRuntimeCohortSelection,
+  type ForecastRuntimeCohortSelectionV1,
 } from "../src/lib/forecast-runtime-cohort";
-import { validateHistoricalAnalysisDataset } from "../src/lib/historical-analysis-dataset";
+import {
+  historicalAnalysisFingerprint,
+  validateHistoricalAnalysisDataset,
+} from "../src/lib/historical-analysis-dataset";
 import type { PublishedHistoricalReleaseSource } from "../src/lib/historical-release-source";
 
 const AS_OF_DATE = "2026-08-09";
@@ -160,6 +166,23 @@ function dataset(source: PublishedHistoricalReleaseSource) {
 
 function clone<T>(value: T): T {
   return JSON.parse(JSON.stringify(value)) as T;
+}
+
+function resignSelection(
+  selection: ForecastRuntimeCohortSelectionV1,
+): ForecastRuntimeCohortSelectionV1 {
+  const core: Record<string, unknown> = { ...selection };
+  delete core.fingerprints;
+  selection.fingerprints = {
+    codeFingerprint: FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
+    configFingerprint: FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
+    resultFingerprint: historicalAnalysisFingerprint({
+      core,
+      codeFingerprint: FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
+      configFingerprint: FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
+    }),
+  };
+  return selection;
 }
 
 test("selects all active cycles plus deterministic 8+4 source-ranked training history", () => {
@@ -466,6 +489,109 @@ test("missing joins and non-exact sources fail before selection or projection", 
         driftedSource,
         selection,
       ),
+    (error: unknown) =>
+      error instanceof ForecastRuntimeCohortError &&
+      error.code === "source-dataset-mismatch",
+  );
+});
+
+test("projection rejects a structurally valid, re-signed active/inactive forgery", () => {
+  const source = buildSource({
+    platforms: ["ios"],
+    completedPerPlatform: 13,
+  });
+  const fullDataset = dataset(source);
+  const authoritative = buildForecastRuntimeCohortSelection(fullDataset, source);
+  const forged = clone(authoritative);
+  const active = forged.selectedCycles.find(
+    (cycle) => cycle.releaseId === "ios-active-0",
+  );
+  assert.ok(active);
+  const inactiveReleaseId = "ios-history-00";
+  assert.ok(
+    forged.exclusions.some(
+      (exclusion) => exclusion.releaseId === inactiveReleaseId,
+    ),
+  );
+
+  active.releaseId = inactiveReleaseId;
+  active.observationCount = 2;
+  forged.selectedCycles = [...forged.selectedCycles].sort((left, right) =>
+    left.releaseId.localeCompare(right.releaseId),
+  );
+  forged.selectedReleaseIds = forged.selectedCycles.map(
+    (cycle) => cycle.releaseId,
+  );
+  forged.exclusions = [
+    ...forged.exclusions.filter(
+      (exclusion) => exclusion.releaseId !== inactiveReleaseId,
+    ),
+    {
+      releaseId: "ios-active-0",
+      platformId: "ios",
+      reason: "lifecycle-not-completed" as const,
+    },
+  ].sort((left, right) => left.releaseId.localeCompare(right.releaseId));
+  forged.selectedObservationCount += 1;
+  forged.perPlatformCounts[0].selectedObservationCount += 1;
+  resignSelection(forged);
+
+  assert.deepEqual(validateForecastRuntimeCohortSelection(forged), []);
+  assert.throws(
+    () =>
+      projectPublishedHistoricalReleaseSourceForRuntimeCohort(source, forged),
+    (error: unknown) =>
+      error instanceof ForecastRuntimeCohortError &&
+      error.code === "source-dataset-mismatch",
+  );
+});
+
+test("projection rejects cross-boundary duplicate identity recanonicalization", () => {
+  const baseSource = buildSource({
+    platforms: ["ios"],
+    inactivePlatform: true,
+  });
+  const sharedStableEventId = "cross-boundary-shared-event";
+  const source: PublishedHistoricalReleaseSource = {
+    ...baseSource,
+    events: baseSource.events.map((event) =>
+      event.id === "ios-active-0-developer-1" ||
+      event.id === "tvos-history-inactive-developer-1"
+        ? { ...event, stableEventId: sharedStableEventId }
+        : event,
+    ),
+  };
+  const fullDataset = dataset(source);
+  const selection = buildForecastRuntimeCohortSelection(fullDataset, source);
+  const selectedIds = new Set(selection.selectedReleaseIds);
+
+  assert.ok(selectedIds.has("ios-active-0"));
+  assert.ok(!selectedIds.has("tvos-history-inactive"));
+  assert.ok(
+    !fullDataset.canonicalEvents.some(
+      (event) => event.eventId === `event:${sharedStableEventId}`,
+    ),
+  );
+
+  const unsafeProjection: PublishedHistoricalReleaseSource = {
+    releases: source.releases.filter((release) => selectedIds.has(release.id)),
+    events: source.events.filter((event) => selectedIds.has(event.releaseId)),
+    compatibilityMilestones: source.compatibilityMilestones.filter((milestone) =>
+      selectedIds.has(milestone.releaseId),
+    ),
+    releaseMetadata: source.releaseMetadata.filter((metadata) =>
+      selectedIds.has(metadata.releaseId),
+    ),
+  };
+  const unsafeDataset = dataset(unsafeProjection);
+  assert.ok(
+    unsafeDataset.canonicalEvents.some(
+      (event) => event.eventId === `event:${sharedStableEventId}`,
+    ),
+  );
+  assert.throws(
+    () =>
+      projectPublishedHistoricalReleaseSourceForRuntimeCohort(source, selection),
     (error: unknown) =>
       error instanceof ForecastRuntimeCohortError &&
       error.code === "source-dataset-mismatch",
