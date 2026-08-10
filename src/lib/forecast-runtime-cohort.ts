@@ -25,6 +25,7 @@ export const FORECAST_RUNTIME_COHORT_CONFIG = {
   maxAdditionalCompletedCyclesPerPlatform: 4,
   maxSelectedObservations: 768,
   maxSerializedSelectionBytes: 131_072,
+  maxIdentityUtf8Bytes: 512,
   observationUnit:
     "raw-event-or-compatibility-milestone-or-public-lifecycle-outcome/v1",
   completedCycleRanking:
@@ -155,6 +156,8 @@ const SHA_256 = /^[a-f0-9]{64}$/;
 const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;
 const ISO_INSTANT =
   /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/;
+const UNSAFE_IDENTITY_CHARACTERS =
+  /[\u0000-\u001f\u007f-\u009f\u061c\u200e\u200f\u2028\u2029\u202a-\u202e\u2066-\u2069]/u;
 const encoder = new TextEncoder();
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -192,8 +195,23 @@ function isIsoInstant(value: unknown): value is string {
   );
 }
 
+function isCanonicalUtcInstant(value: unknown): value is string {
+  return isIsoInstant(value) && new Date(value).toISOString() === value;
+}
+
 function isNonEmptyText(value: unknown): value is string {
   return typeof value === "string" && value.trim().length > 0;
+}
+
+function isSafeBoundedIdentity(value: unknown): value is string {
+  return (
+    typeof value === "string" &&
+    value.length > 0 &&
+    value === value.trim() &&
+    encoder.encode(value).byteLength <=
+      FORECAST_RUNTIME_COHORT_CONFIG.maxIdentityUtf8Bytes &&
+    !UNSAFE_IDENTITY_CHARACTERS.test(value)
+  );
 }
 
 function isNonNegativeSafeInteger(value: unknown): value is number {
@@ -210,10 +228,10 @@ function hasExactKeys(
   );
 }
 
-function isCanonicalTextArray(value: unknown): value is readonly string[] {
+function isCanonicalIdentityArray(value: unknown): value is readonly string[] {
   return (
     Array.isArray(value) &&
-    value.every(isNonEmptyText) &&
+    value.every(isSafeBoundedIdentity) &&
     value.every(
       (entry, index, all) => index === 0 || all[index - 1] < entry,
     )
@@ -223,7 +241,7 @@ function isCanonicalTextArray(value: unknown): value is readonly string[] {
 function runtimeCodeManifest() {
   return {
     algorithm:
-      "exact-raw-source-fingerprint-and-instant;exact-source-rebuild;all-active;outcome-ranked-eight-mandatory;four-round-robin;whole-cycle-raw-observation-cap;bounded-selection-artifact;strict-v1",
+      "exact-raw-source-fingerprint-and-instant;exact-source-rebuild;all-active;outcome-ranked-eight-mandatory;four-round-robin;whole-cycle-raw-observation-cap;bounded-selection-artifact-and-identities;strict-v1",
     historicalDatasetVersion: HISTORICAL_ANALYSIS_DATASET_VERSION,
     selectionVersion: FORECAST_RUNTIME_COHORT_SELECTION_VERSION,
   } as const;
@@ -305,10 +323,9 @@ function isCanonicalInstantAtOrBefore(
   issuedAt: string,
 ): boolean {
   if (value === null || value === undefined) return true;
-  if (!isIsoInstant(value)) return false;
+  if (!isCanonicalUtcInstant(value)) return false;
   const parsed = new Date(value);
   return (
-    parsed.toISOString() === value &&
     parsed.getTime() <= new Date(issuedAt).getTime()
   );
 }
@@ -1015,7 +1032,7 @@ export function validateForecastRuntimeCohortSelection(
       typeof value.sourceDataset.rawSourceFingerprint !== "string" ||
       !SHA_256.test(value.sourceDataset.rawSourceFingerprint) ||
       !isIsoDay(value.sourceDataset.asOfDate) ||
-      !isIsoInstant(value.sourceDataset.issuedAt)
+      !isCanonicalUtcInstant(value.sourceDataset.issuedAt)
     ) {
       issues.push({
         code: "invalid-source-dataset",
@@ -1025,18 +1042,18 @@ export function validateForecastRuntimeCohortSelection(
     }
   }
 
-  if (!isCanonicalTextArray(value.selectedReleaseIds)) {
+  if (!isCanonicalIdentityArray(value.selectedReleaseIds)) {
     issues.push({
       code: "invalid-order",
       path: "selectedReleaseIds",
-      message: "Selected release IDs must be unique and canonically sorted.",
+      message: "Selected release IDs must be safe, at most 512 UTF-8 bytes, unique, and canonically sorted.",
     });
   }
-  if (!isCanonicalTextArray(value.activePlatformIds)) {
+  if (!isCanonicalIdentityArray(value.activePlatformIds)) {
     issues.push({
       code: "invalid-order",
       path: "activePlatformIds",
-      message: "Active platform IDs must be unique and canonically sorted.",
+      message: "Active platform IDs must be safe, at most 512 UTF-8 bytes, unique, and canonically sorted.",
     });
   }
 
@@ -1090,8 +1107,8 @@ export function validateForecastRuntimeCohortSelection(
               (rank as number) >
                 FORECAST_RUNTIME_COHORT_CONFIG.mandatoryCompletedCyclesPerPlatform)));
       if (
-        !isNonEmptyText(candidate.releaseId) ||
-        !isNonEmptyText(candidate.platformId) ||
+        !isSafeBoundedIdentity(candidate.releaseId) ||
+        !isSafeBoundedIdentity(candidate.platformId) ||
         !isNonNegativeSafeInteger(candidate.observationCount) ||
         !roleMatchesRank ||
         ids.has(candidate.releaseId)
@@ -1102,7 +1119,7 @@ export function validateForecastRuntimeCohortSelection(
           message: "Selected cycle identity, role, rank, outcome, or count is invalid.",
         });
       }
-      if (isNonEmptyText(candidate.releaseId)) ids.add(candidate.releaseId);
+      if (isSafeBoundedIdentity(candidate.releaseId)) ids.add(candidate.releaseId);
       selectedCycles.push(candidate as unknown as ForecastRuntimeCohortSelectedCycleV1);
     }
     if (
@@ -1181,7 +1198,7 @@ export function validateForecastRuntimeCohortSelection(
     });
   }
 
-  const expectedPlatformCounts = derivedActivePlatformIds.map((platformId) => {
+  const expectedPlatformCounts = derivedActivePlatformIds.map((platformId, platformIndex) => {
     const cycles = selectedCycles.filter((cycle) => cycle.platformId === platformId);
     const mandatory = cycles.filter(
       (cycle) => cycle.role === "mandatory-training",
@@ -1202,7 +1219,7 @@ export function validateForecastRuntimeCohortSelection(
     ) {
       issues.push({
         code: "invalid-count",
-        path: `perPlatformCounts.${platformId}.mandatoryCompletedCount`,
+        path: `perPlatformCounts[${platformIndex}].mandatoryCompletedCount`,
         message: "Every active platform requires the eight most-recent completed cycles.",
       });
     }
@@ -1212,7 +1229,7 @@ export function validateForecastRuntimeCohortSelection(
     if (new Set(ranks).size !== ranks.length) {
       issues.push({
         code: "invalid-selected-cycle",
-        path: `selectedCycles.${platformId}`,
+        path: `selectedCycles.platform[${platformIndex}]`,
         message: "Training ranks must be unique within a platform.",
       });
     }
@@ -1257,6 +1274,12 @@ export function validateForecastRuntimeCohortSelection(
           code: "unexpected-property",
           path: `perPlatformCounts[${index}]`,
           message: "Per-platform count has unexpected properties.",
+        });
+      } else if (!isSafeBoundedIdentity(count.platformId)) {
+        issues.push({
+          code: "invalid-count",
+          path: `perPlatformCounts[${index}].platformId`,
+          message: "Per-platform identity is unsafe or exceeds 512 UTF-8 bytes.",
         });
       }
     }
@@ -1310,8 +1333,8 @@ export function validateForecastRuntimeCohortSelection(
         continue;
       }
       if (
-        !isNonEmptyText(exclusion.releaseId) ||
-        !isNonEmptyText(exclusion.platformId) ||
+        !isSafeBoundedIdentity(exclusion.releaseId) ||
+        !isSafeBoundedIdentity(exclusion.platformId) ||
         !reasons.has(exclusion.reason as ForecastRuntimeCohortExclusionReason) ||
         selectedIds.has(exclusion.releaseId) ||
         exclusionIds.has(exclusion.releaseId)
@@ -1322,20 +1345,20 @@ export function validateForecastRuntimeCohortSelection(
           message: "Exclusion identity or reason is invalid or overlaps selection.",
         });
       }
-      if (isNonEmptyText(exclusion.releaseId)) {
+      if (isSafeBoundedIdentity(exclusion.releaseId)) {
         exclusionIds.add(exclusion.releaseId);
       }
     }
     const exclusionOrderValid = value.exclusions.every(
       (exclusion, index, all) => {
-        if (!isRecord(exclusion) || !isNonEmptyText(exclusion.releaseId)) {
+        if (!isRecord(exclusion) || !isSafeBoundedIdentity(exclusion.releaseId)) {
           return false;
         }
         if (index === 0) return true;
         const previous = all[index - 1];
         return (
           isRecord(previous) &&
-          isNonEmptyText(previous.releaseId) &&
+          isSafeBoundedIdentity(previous.releaseId) &&
           previous.releaseId < exclusion.releaseId
         );
       },
