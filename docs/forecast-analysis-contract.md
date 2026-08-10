@@ -330,3 +330,19 @@ in the standalone validator:
 ```sh
 npm run next-prerelease:validate -- path/to/next-eligible-prerelease-event.json
 ```
+
+## Forecast artifact and pointer v1 (FR-012)
+
+`src/lib/forecast-artifact-contracts.ts` defines the private-shadow-only,
+storage-neutral `forecast-artifact/v1` and `forecast-pointer/v1` boundary. It
+binds the historical, evaluation, model, calibration, evidence, cutoff, and
+code provenance required to reproduce or reject a forecast. Available targets
+must contain a finite median and nested calibrated 50%/80% numeric and calendar
+bounds. Unavailable targets cannot contain invented prediction dates.
+
+Artifacts are canonical, bounded, immutable, and content-addressed. The small
+mutable pointer uses generation plus previous-pointer fingerprint CAS and keeps
+candidate, active, rollback, and reconciliation-root identities separate.
+Every v1 pointer remains private (`publicReadEnabled: false`). See
+`docs/forecast-artifact-contract.md` for the example artifact construction,
+transition table, reconciliation reservation, and rollback rules.
