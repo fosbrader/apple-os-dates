@@ -11,6 +11,7 @@ import {
 
 import {
   FORECAST_ARTIFACT_MAX_BYTES,
+  CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT,
   FORECAST_POINTER_MAX_BYTES,
   FORECAST_POINTER_PATH,
   activateForecastPointer,
@@ -96,6 +97,11 @@ function artifactDraft(
       nextEventCalibration: {
         version: "next-eligible-prerelease-event/v1",
         fingerprint: sha("6"),
+      },
+      currentPublicHeuristic: {
+        version: "current-public-heuristic/v1",
+        sourceFingerprint: sha("8"),
+        modelFingerprint: CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT,
       },
       codeFingerprint: sha("7"),
     },

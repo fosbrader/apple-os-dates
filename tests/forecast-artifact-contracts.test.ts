@@ -4,6 +4,8 @@ import test from "node:test";
 import {
   FORECAST_ARTIFACT_MAX_BYTES,
   FORECAST_ARTIFACT_MAX_TARGETS,
+  CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT,
+  FORECAST_ORIGIN_BENCHMARK_VERSION,
   FORECAST_POINTER_PATH,
   activateForecastPointer,
   buildForecastArtifact,
@@ -29,6 +31,7 @@ import {
   type ForecastPointerV1,
   type ImmutablePutResult,
 } from "../src/lib/forecast-artifact-contracts";
+import { NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT } from "../src/lib/next-eligible-prerelease-event";
 
 const encoder = new TextEncoder();
 function sha(char: string): string { return char.repeat(64); }
@@ -48,6 +51,8 @@ function interval(level: 0.5 | 0.8, q: number) {
 }
 
 function draft(generatedAt = "2026-08-09T20:00:00.000Z"): ForecastArtifactDraftV1 {
+  const modelTrainingIds = Array.from({ length: 8 }, (_, index) => `model-${index}`);
+  const calibrationResidualIds = Array.from({ length: 8 }, (_, index) => `residual-${index}`);
   const provenance = {
     sourceAsOfDate: "2026-08-09",
     sourceIssuedAt: "2026-08-09T19:55:00.000Z",
@@ -58,6 +63,11 @@ function draft(generatedAt = "2026-08-09T20:00:00.000Z"): ForecastArtifactDraftV
     publicReleaseCalibration: { version: "release-date-interval-calibration/v1" as const, fingerprint: sha("4") },
     nextEventModel: { version: "next-eligible-prerelease-event/v1" as const, fingerprint: sha("5") },
     nextEventCalibration: { version: "next-eligible-prerelease-event/v1" as const, fingerprint: sha("6") },
+    currentPublicHeuristic: {
+      version: "current-public-heuristic/v1" as const,
+      sourceFingerprint: sha("8"),
+      modelFingerprint: CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT,
+    },
     codeFingerprint: sha("7"),
   };
   const publicTarget: ForecastArtifactTargetV1 = {
@@ -66,6 +76,7 @@ function draft(generatedAt = "2026-08-09T20:00:00.000Z"): ForecastArtifactDraftV
     availability: "available",
     releaseId: "ios-27",
     platformId: "ios",
+    productFamilyId: "iphone",
     anchorEventId: "ios-27-beta-1",
     anchorStage: "developer-beta:1",
     anchorOccurredOn: "2026-08-01",
@@ -73,8 +84,46 @@ function draft(generatedAt = "2026-08-09T20:00:00.000Z"): ForecastArtifactDraftV
     sourceEvidenceIds: ["evidence-a"],
     modelFingerprint: provenance.publicReleaseModel.fingerprint,
     calibrationFingerprint: provenance.publicReleaseCalibration.fingerprint,
-    cohort: { modelCohortId: "ios-stage", modelTrainingCount: 8, calibrationPoolId: "ios-stage-candidate", calibrationResidualCount: 8 },
+    cohort: { modelCohortId: "ios-stage", modelTrainingCohorts: [{ role: "model-training", cohortId: "ios-stage", memberIds: modelTrainingIds, memberCount: 8 }], modelTrainingCount: 8, calibrationPoolId: "ios-stage-candidate", calibrationResidualIds, calibrationResidualCount: 8 },
     prediction: { pointEstimator: "platform-stage-median", pointDays: 10.5, pointCalendarDate: "2026-08-12", roundingRule: "outward-floor-half-up-ceil/v1", intervals: [interval(0.5, 2), interval(0.8, 4)] },
+    benchmarks: [
+      {
+        benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+        benchmarkId: "selected-private-model",
+        modelVersion: "release-date-candidates/v1",
+        sourceFingerprint: provenance.historicalDataset.fingerprint,
+        modelFingerprint: provenance.publicReleaseModel.fingerprint,
+        calibrationFingerprint: provenance.publicReleaseCalibration.fingerprint,
+        cohorts: [
+          { binding: "target", role: "calibration-residual", cohortId: "ios-stage-candidate", memberCount: 8 },
+          { binding: "target", role: "model-training", cohortId: "ios-stage", memberCount: 8 },
+        ],
+        availability: "available",
+        prediction: { targetKind: "public-release", pointDays: 10.5, pointCalendarDate: "2026-08-12", roundingRule: "outward-floor-half-up-ceil/v1", empiricalRange: { level: 0.5, lowerDays: 8.5, upperDays: 12.5, lowerCalendarDate: "2026-08-09", upperCalendarDate: "2026-08-14" } },
+      },
+      {
+        benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+        benchmarkId: "current-public-heuristic",
+        modelVersion: "current-public-heuristic/v1",
+        sourceFingerprint: provenance.currentPublicHeuristic.sourceFingerprint,
+        modelFingerprint: CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT,
+        calibrationFingerprint: null,
+        cohorts: [],
+        availability: "unavailable",
+        reason: "heuristic-paused",
+      },
+      {
+        benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+        benchmarkId: "simple-baseline",
+        modelVersion: "release-date-candidates/v1",
+        sourceFingerprint: provenance.historicalDataset.fingerprint,
+        modelFingerprint: provenance.publicReleaseModel.fingerprint,
+        calibrationFingerprint: null,
+        cohorts: [{ binding: "inline", role: "model-training", cohortId: "platform-stage", memberIds: modelTrainingIds, memberCount: 8 }],
+        availability: "available",
+        prediction: { targetKind: "public-release", pointDays: 11, pointCalendarDate: "2026-08-12", roundingRule: "outward-floor-half-up-ceil/v1" },
+      },
+    ],
   };
   const nextUnavailable: ForecastArtifactTargetV1 = {
     targetId: "next:ios-27",
@@ -83,6 +132,7 @@ function draft(generatedAt = "2026-08-09T20:00:00.000Z"): ForecastArtifactDraftV
     reason: "weak-next-stage-mode",
     releaseId: "ios-27",
     platformId: "ios",
+    productFamilyId: "iphone",
     anchorEventId: "ios-27-beta-1",
     anchorStage: "developer-beta:1",
     anchorOccurredOn: "2026-08-01",
@@ -90,7 +140,46 @@ function draft(generatedAt = "2026-08-09T20:00:00.000Z"): ForecastArtifactDraftV
     sourceEvidenceIds: ["evidence-b"],
     modelFingerprint: provenance.nextEventModel.fingerprint,
     calibrationFingerprint: provenance.nextEventCalibration.fingerprint,
-    cohort: { modelCohortId: "ios-stage", modelTrainingCount: 8, calibrationPoolId: "unavailable", calibrationResidualCount: 0 },
+    cohort: { modelCohortId: "ios-stage", modelTrainingCohorts: [{ role: "stage-training", cohortId: "ios-stage", memberIds: modelTrainingIds, memberCount: 8 }, { role: "timing-training", cohortId: "unavailable", memberIds: [], memberCount: 0 }], modelTrainingCount: 8, calibrationPoolId: "unavailable", calibrationResidualIds: [], calibrationResidualCount: 0 },
+    benchmarks: [
+      {
+        benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+        benchmarkId: "selected-private-model",
+        modelVersion: "next-eligible-prerelease-event/v1",
+        sourceFingerprint: provenance.historicalDataset.fingerprint,
+        modelFingerprint: provenance.nextEventModel.fingerprint,
+        calibrationFingerprint: provenance.nextEventCalibration.fingerprint,
+        cohorts: [
+          { binding: "target", role: "calibration-residual", cohortId: "unavailable", memberCount: 0 },
+          { binding: "target", role: "stage-training", cohortId: "ios-stage", memberCount: 8 },
+          { binding: "target", role: "timing-training", cohortId: "unavailable", memberCount: 0 },
+        ],
+        availability: "unavailable",
+        reason: "selected-target-unavailable",
+      },
+      {
+        benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+        benchmarkId: "current-public-heuristic",
+        modelVersion: "current-public-heuristic/v1",
+        sourceFingerprint: provenance.currentPublicHeuristic.sourceFingerprint,
+        modelFingerprint: CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT,
+        calibrationFingerprint: null,
+        cohorts: [],
+        availability: "unavailable",
+        reason: "incomparable-target-definition",
+      },
+      {
+        benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+        benchmarkId: "simple-baseline",
+        modelVersion: "next-event-simple-baseline/v1",
+        sourceFingerprint: provenance.historicalDataset.fingerprint,
+        modelFingerprint: NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT,
+        calibrationFingerprint: null,
+        cohorts: [],
+        availability: "unavailable",
+        reason: "minimum-training-examples",
+      },
+    ],
   };
   return {
     generatedAt,
@@ -152,8 +241,31 @@ test("FR-012 binds evidence, models, calibration, intervals, metrics, rows, size
     assert.ok(validateForecastArtifact(tampered({ ...publicTarget, prediction: { ...publicTarget.prediction, pointEstimator: "next-event-timing-median" } })).some((issue) => issue.path.endsWith(".pointEstimator")));
     const malformed = { ...publicTarget, prediction: { ...publicTarget.prediction, intervals: [{ ...publicTarget.prediction.intervals[0], lowerDays: 5 }, publicTarget.prediction.intervals[1]] } };
     assert.ok(validateForecastArtifact(tampered(malformed)).some((issue) => issue.code === "invalid-interval"));
+    const selected = publicTarget.benchmarks[0]!;
+    assert.ok(validateForecastArtifact(tampered({ ...publicTarget, benchmarks: [{ ...selected, calibrationFingerprint: sha("f") }, ...publicTarget.benchmarks.slice(1)] })).some((issue) => issue.path.endsWith("benchmarks[0]") && issue.code === "incompatible-artifact"));
+    assert.ok(validateForecastArtifact(tampered({ ...publicTarget, benchmarks: [{ ...selected, prediction: { ...(selected.availability === "available" ? selected.prediction : {}), pointDays: 99 } }, ...publicTarget.benchmarks.slice(1)] })).some((issue) => issue.path.endsWith("benchmarks[0].prediction") && issue.code === "incompatible-artifact"));
+    const selectedUnavailable = { ...selected, availability: "unavailable", reason: "selected-target-unavailable" } as Record<string, unknown>;
+    delete selectedUnavailable.prediction;
+    assert.ok(validateForecastArtifact(tampered({ ...publicTarget, benchmarks: [selectedUnavailable, ...publicTarget.benchmarks.slice(1)] })).some((issue) => issue.path.endsWith("benchmarks[0].availability") && issue.code === "incompatible-artifact"));
+    assert.ok(validateForecastArtifact(tampered({ ...publicTarget, benchmarks: [selected, { ...publicTarget.benchmarks[1]!, sourceFingerprint: sha("f") }, publicTarget.benchmarks[2]!] })).some((issue) => issue.path.endsWith("benchmarks[1]") && issue.code === "incompatible-artifact"));
+    const simple = publicTarget.benchmarks[2]!;
+    assert.ok(simple.availability === "available");
+    if (simple.availability === "available") {
+      const short = { ...simple.cohorts[0]!, memberIds: ["one"], memberCount: 1 };
+      assert.ok(validateForecastArtifact(tampered({ ...publicTarget, benchmarks: [selected, publicTarget.benchmarks[1]!, { ...simple, cohorts: [short] }] })).some((issue) => issue.path.endsWith("benchmarks[2].cohorts") && issue.code === "invalid-row"));
+    }
+    assert.ok(validateForecastArtifact(tampered({ ...publicTarget, cohort: { ...publicTarget.cohort, calibrationResidualCount: 7 } })).some((issue) => issue.path.endsWith("calibrationResidualCount")));
   }
-  const unavailable = artifact.targets.find((target) => target.availability === "unavailable")!;
+  const unavailableIndex = artifact.targets.findIndex((target) => target.availability === "unavailable");
+  const unavailable = artifact.targets[unavailableIndex]!;
+  const unavailableSelected = unavailable.benchmarks[0]!;
+  assert.equal(unavailableSelected.availability, "unavailable");
+  assert.ok(validateForecastArtifact({
+    ...artifact,
+    targets: artifact.targets.map((target, index) => index === unavailableIndex
+      ? { ...unavailable, benchmarks: [{ ...unavailableSelected, reason: "heuristic-unavailable" }, ...unavailable.benchmarks.slice(1)] }
+      : target),
+  }).some((issue) => issue.path.endsWith("benchmarks[0].reason") && issue.code === "incompatible-artifact"));
   assert.ok(validateForecastArtifact(tampered({ ...unavailable, prediction: (publicTarget as Extract<ForecastArtifactTargetV1, { availability: "available" }>).prediction })).some((issue) => issue.code === "unknown-property"));
   assert.ok(validateForecastArtifact({ ...artifact, surprise: true }).some((issue) => issue.code === "unknown-property"));
   assert.ok(validateForecastArtifact({ ...artifact, targets: [...artifact.targets].reverse() }).some((issue) => issue.code === "invalid-order"));
@@ -164,6 +276,164 @@ test("FR-012 binds evidence, models, calibration, intervals, metrics, rows, size
   const tooLarge = draft();
   tooLarge.exclusions = [{ ...tooLarge.exclusions[0]!, reason: "x".repeat(FORECAST_ARTIFACT_MAX_BYTES) }];
   assert.throws(() => buildForecastArtifact(tooLarge));
+});
+
+test("FR-012 keeps twelve active cycles with both targets inside the 262 KiB operational contract", () => {
+  const value = draft();
+  const publicTemplate = value.targets.find((target) => target.targetKind === "public-release" && target.availability === "available")!;
+  assert.equal(publicTemplate.availability, "available");
+  if (publicTemplate.availability !== "available") return;
+  const members = Array.from({ length: 24 }, (_, index) => `training-target-${String(index).padStart(2, "0")}-${"x".repeat(36)}`);
+  const residuals = Array.from({ length: 16 }, (_, index) => `calibration-residual-${String(index).padStart(2, "0")}-${"y".repeat(28)}`);
+  const currentMembers = members.slice(0, 12);
+  const targets: ForecastArtifactTargetV1[] = [];
+  const capacityInterval = (level: 0.5 | 0.8, q: number) => ({
+    ...interval(level, q),
+    residualCount: residuals.length,
+    rank: level === 0.5 ? 9 : 14,
+  });
+
+  for (let cycle = 0; cycle < 12; cycle += 1) {
+    const suffix = String(cycle).padStart(2, "0");
+    const publicCohort = {
+      modelCohortId: "ios-public-model",
+      modelTrainingCohorts: [{ role: "model-training" as const, cohortId: "ios-public-model", memberIds: members, memberCount: members.length }],
+      modelTrainingCount: members.length,
+      calibrationPoolId: "ios-public-calibration",
+      calibrationResidualIds: residuals,
+      calibrationResidualCount: residuals.length,
+    };
+    const publicPrediction = {
+      ...publicTemplate.prediction,
+      intervals: [capacityInterval(0.5, 2), capacityInterval(0.8, 4)] as const,
+    };
+    targets.push({
+      ...publicTemplate,
+      targetId: `public:active-${suffix}`,
+      releaseId: `active-${suffix}`,
+      anchorEventId: `event:active-${suffix}:developer-beta:1`,
+      cohort: publicCohort,
+      prediction: publicPrediction,
+      benchmarks: [
+        {
+          benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+          benchmarkId: "selected-private-model",
+          modelVersion: "release-date-candidates/v1",
+          sourceFingerprint: value.provenance.historicalDataset.fingerprint,
+          modelFingerprint: value.provenance.publicReleaseModel.fingerprint,
+          calibrationFingerprint: value.provenance.publicReleaseCalibration.fingerprint,
+          cohorts: [
+            { binding: "target", role: "calibration-residual", cohortId: publicCohort.calibrationPoolId, memberCount: residuals.length },
+            { binding: "target", role: "model-training", cohortId: publicCohort.modelCohortId, memberCount: members.length },
+          ],
+          availability: "available",
+          prediction: { targetKind: "public-release", pointDays: 10.5, pointCalendarDate: "2026-08-12", roundingRule: "outward-floor-half-up-ceil/v1", empiricalRange: { level: 0.5, lowerDays: 8.5, upperDays: 12.5, lowerCalendarDate: "2026-08-09", upperCalendarDate: "2026-08-14" } },
+        },
+        {
+          benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+          benchmarkId: "current-public-heuristic",
+          modelVersion: "current-public-heuristic/v1",
+          sourceFingerprint: value.provenance.currentPublicHeuristic.sourceFingerprint,
+          modelFingerprint: CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT,
+          calibrationFingerprint: null,
+          cohorts: [{ binding: "inline", role: "model-training", cohortId: "legacy:release-position:ios", memberIds: currentMembers, memberCount: currentMembers.length }],
+          availability: "available",
+          prediction: { targetKind: "public-release", pointDays: 10.5, pointCalendarDate: "2026-08-12", roundingRule: "outward-floor-half-up-ceil/v1", empiricalRange: { level: 0.5, lowerDays: 8.5, upperDays: 12.5, lowerCalendarDate: "2026-08-09", upperCalendarDate: "2026-08-14" } },
+        },
+        {
+          benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+          benchmarkId: "simple-baseline",
+          modelVersion: "release-date-candidates/v1",
+          sourceFingerprint: value.provenance.historicalDataset.fingerprint,
+          modelFingerprint: value.provenance.publicReleaseModel.fingerprint,
+          calibrationFingerprint: null,
+          cohorts: [{ binding: "inline", role: "model-training", cohortId: "platform-stage:ios", memberIds: members, memberCount: members.length }],
+          availability: "available",
+          prediction: { targetKind: "public-release", pointDays: 11, pointCalendarDate: "2026-08-12", roundingRule: "outward-floor-half-up-ceil/v1" },
+        },
+      ],
+    });
+
+    const nextPrediction = { pointEstimator: "next-event-timing-median" as const, pointDays: 10.5, pointCalendarDate: "2026-08-12", roundingRule: "outward-floor-half-up-ceil/v1" as const, intervals: [capacityInterval(0.5, 2), capacityInterval(0.8, 4)] as const };
+    const nextCohort = {
+      modelCohortId: "ios-next-model",
+      modelTrainingCohorts: [
+        { role: "stage-training" as const, cohortId: "ios-next-stage", memberIds: members, memberCount: members.length },
+        { role: "timing-training" as const, cohortId: "ios-next-timing", memberIds: members, memberCount: members.length },
+      ],
+      modelTrainingCount: members.length,
+      calibrationPoolId: "ios-next-calibration",
+      calibrationResidualIds: residuals,
+      calibrationResidualCount: residuals.length,
+    };
+    targets.push({
+      targetId: `next:active-${suffix}`,
+      targetKind: "next-eligible-prerelease-event",
+      availability: "available",
+      predictedEligibleStage: "developer-beta",
+      releaseId: `active-${suffix}`,
+      platformId: "ios",
+      productFamilyId: "iphone",
+      anchorEventId: `event:active-${suffix}:developer-beta:1`,
+      anchorStage: "developer-beta:1",
+      anchorOccurredOn: "2026-08-01",
+      originOn: "2026-08-09",
+      sourceEvidenceIds: ["evidence-a"],
+      modelFingerprint: value.provenance.nextEventModel.fingerprint,
+      calibrationFingerprint: value.provenance.nextEventCalibration.fingerprint,
+      cohort: nextCohort,
+      prediction: nextPrediction,
+      benchmarks: [
+        {
+          benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+          benchmarkId: "selected-private-model",
+          modelVersion: "next-eligible-prerelease-event/v1",
+          sourceFingerprint: value.provenance.historicalDataset.fingerprint,
+          modelFingerprint: value.provenance.nextEventModel.fingerprint,
+          calibrationFingerprint: value.provenance.nextEventCalibration.fingerprint,
+          cohorts: [
+            { binding: "target", role: "calibration-residual", cohortId: nextCohort.calibrationPoolId, memberCount: residuals.length },
+            { binding: "target", role: "stage-training", cohortId: "ios-next-stage", memberCount: members.length },
+            { binding: "target", role: "timing-training", cohortId: "ios-next-timing", memberCount: members.length },
+          ],
+          availability: "available",
+          prediction: { targetKind: "next-eligible-prerelease-event", pointDays: 10.5, pointCalendarDate: "2026-08-12", roundingRule: "outward-floor-half-up-ceil/v1", empiricalRange: { level: 0.5, lowerDays: 8.5, upperDays: 12.5, lowerCalendarDate: "2026-08-09", upperCalendarDate: "2026-08-14" }, predictedEligibleStage: "developer-beta" },
+        },
+        {
+          benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+          benchmarkId: "current-public-heuristic",
+          modelVersion: "current-public-heuristic/v1",
+          sourceFingerprint: value.provenance.currentPublicHeuristic.sourceFingerprint,
+          modelFingerprint: CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT,
+          calibrationFingerprint: null,
+          cohorts: [],
+          availability: "unavailable",
+          reason: "incomparable-target-definition",
+        },
+        {
+          benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+          benchmarkId: "simple-baseline",
+          modelVersion: "next-event-simple-baseline/v1",
+          sourceFingerprint: value.provenance.historicalDataset.fingerprint,
+          modelFingerprint: NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT,
+          calibrationFingerprint: null,
+          cohorts: [
+            { binding: "inline", role: "stage-training", cohortId: "simple-next-stage", memberIds: members, memberCount: members.length },
+            { binding: "inline", role: "timing-training", cohortId: "simple-next-timing", memberIds: members, memberCount: members.length },
+          ],
+          availability: "available",
+          prediction: { targetKind: "next-eligible-prerelease-event", pointDays: 10, pointCalendarDate: "2026-08-11", roundingRule: "outward-floor-half-up-ceil/v1", predictedEligibleStage: "developer-beta" },
+        },
+      ],
+    });
+  }
+
+  value.targets = targets;
+  value.metrics = [];
+  const artifact = buildForecastArtifact(value);
+  assert.equal(artifact.targets.length, 24);
+  assert.equal(artifact.targets.filter((target) => target.availability === "available").length, 24);
+  assert.ok(encoder.encode(serializeForecastArtifact(artifact)).byteLength < FORECAST_ARTIFACT_MAX_BYTES);
 });
 
 test("FR-012 pointer transitions preserve roots and forecast IDs exactly", () => {

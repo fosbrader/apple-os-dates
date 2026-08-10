@@ -15,6 +15,7 @@ export const NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION = "next-eligible-prerelease-
 export const NEXT_ELIGIBLE_PRERELEASE_EVENT_MINIMUM_EXAMPLES = 8;
 export const NEXT_ELIGIBLE_PRERELEASE_EVENT_MODE_THRESHOLD = 0.6;
 export const NEXT_ELIGIBLE_PRERELEASE_EVENT_INTERVAL_LEVELS = [0.5, 0.8] as const;
+export const NEXT_EVENT_SIMPLE_BASELINE_VERSION = "next-event-simple-baseline/v1";
 
 export type EligiblePrereleaseStage = "developer-beta" | "public-beta" | "release-candidate";
 export type NextEventTargetKind = "next-eligible-prerelease-event";
@@ -168,6 +169,40 @@ export interface NextEligiblePrereleaseEventModelV1 {
   residualLedger: readonly NextEligiblePrereleaseEventResidualV1[];
   fingerprints: NextEligiblePrereleaseEventFingerprintsV1;
 }
+
+export interface NextEventSimpleBaselineCohortV1 {
+  cohortId: string;
+  trainingTargetIds: readonly string[];
+  trainingCount: number;
+}
+
+interface NextEventSimpleBaselineBaseV1 {
+  baselineVersion: typeof NEXT_EVENT_SIMPLE_BASELINE_VERSION;
+  releaseId: string;
+  platformId: string;
+  originOn: string;
+  sourceFingerprint: string;
+  codeFingerprint: string;
+  resultFingerprint: string;
+  stageCohort: NextEventSimpleBaselineCohortV1;
+  timingCohort: NextEventSimpleBaselineCohortV1;
+}
+
+export type NextEventSimpleBaselineV1 =
+  | (NextEventSimpleBaselineBaseV1 & {
+      availability: "available";
+      predictedEligibleStage: EligiblePrereleaseStage;
+      modalCount: number;
+      modalShare: number;
+      pointDays: number;
+    })
+  | (NextEventSimpleBaselineBaseV1 & {
+      availability: "unavailable";
+      reason: "minimum-training-examples" | "weak-stage-mode";
+      predictedEligibleStage?: EligiblePrereleaseStage;
+      modalCount: number | null;
+      modalShare: number | null;
+    });
 
 export type NextEligiblePrereleaseEventValidationCode = "invalid-input" | "unsupported-version" | "invalid-config" | "invalid-source-dataset" | "invalid-row" | "invalid-fingerprint";
 export interface NextEligiblePrereleaseEventValidationIssue { code: NextEligiblePrereleaseEventValidationCode; path: string; message: string; }
@@ -349,6 +384,168 @@ function deriveCore(sourceDataset: HistoricalAnalysisDatasetV1, config: NextElig
 
 const CODE_MANIFEST = { algorithm: "next-eligible-prerelease-event-v1;immediate-verified-prerelease-only;historical-anchor-origin;active-latest-known-event-must-be-prerelease;known-at-origin-training;platform-only;unique-mode-60-percent;median;strict-earlier-origin-target-definition-calibration", version: NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION, minimumExamples: NEXT_ELIGIBLE_PRERELEASE_EVENT_MINIMUM_EXAMPLES, modeThreshold: NEXT_ELIGIBLE_PRERELEASE_EVENT_MODE_THRESHOLD, levels: NEXT_ELIGIBLE_PRERELEASE_EVENT_INTERVAL_LEVELS } as const;
 export const NEXT_ELIGIBLE_PRERELEASE_EVENT_CODE_FINGERPRINT = historicalAnalysisFingerprint(CODE_MANIFEST);
+
+const NEXT_EVENT_SIMPLE_BASELINE_CODE_MANIFEST = {
+  algorithm:
+    "next-event-simple-baseline-v1;same-platform-pooled-stage-mode;same-platform-predicted-stage-median;known-at-origin-only;unique-mode-60-percent;minimum-8",
+  baselineVersion: NEXT_EVENT_SIMPLE_BASELINE_VERSION,
+  sourceModelVersion: NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION,
+  minimumExamples: NEXT_ELIGIBLE_PRERELEASE_EVENT_MINIMUM_EXAMPLES,
+  modeThreshold: NEXT_ELIGIBLE_PRERELEASE_EVENT_MODE_THRESHOLD,
+} as const;
+export const NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT =
+  historicalAnalysisFingerprint(NEXT_EVENT_SIMPLE_BASELINE_CODE_MANIFEST);
+
+/**
+ * Origin-time simple comparator for the next eligible prerelease endpoint.
+ * It deliberately has no anchor-stage refinement: stage is the unique
+ * same-platform mode, and timing is the same-platform median for that exact
+ * predicted stage.
+ */
+export function buildNextEventSimpleBaseline(
+  sourceDataset: HistoricalAnalysisDatasetV1,
+  releaseId: string,
+  artifact: NextEligiblePrereleaseEventModelV1 =
+    buildNextEligiblePrereleaseEventModel(sourceDataset),
+): NextEventSimpleBaselineV1 | null {
+  try {
+    if (
+      validateHistoricalAnalysisDataset(sourceDataset).length ||
+      validateNextEligiblePrereleaseEventModel(artifact).length ||
+      artifact.fingerprints.sourceDatasetFingerprint !==
+        sourceDataset.fingerprints.datasetFingerprint
+    ) {
+      return null;
+    }
+    const cycle = sourceDataset.releaseCycles.find(
+      (row) => row.releaseId === releaseId,
+    );
+    const originOn = sourceDataset.provenance.sourceAsOfDate;
+    if (
+      !cycle?.included ||
+      cycle.lifecycle !== "active" ||
+      cycle.chronologyCoverage.state !== "complete"
+    ) {
+      return null;
+    }
+    const knownEvents = sourceDataset.canonicalEvents.filter(
+      (row) =>
+        row.releaseId === releaseId &&
+        row.firstObservedOn <= originOn &&
+        row.occurredOn <= originOn,
+    );
+    const ordering = orderCycle(knownEvents);
+    const anchor = ordering.events.at(-1);
+    if (
+      !anchor ||
+      !eligiblePrereleaseStage(anchor.stage) ||
+      ordering.ambiguousEventIds.has(anchor.eventId) ||
+      ordering.ambiguousFollowingEventIds.has(anchor.eventId)
+    ) {
+      return null;
+    }
+
+    const training = trainingFor(null, originOn, artifact.targets);
+    const stageRows = sorted(
+      training.filter((row) => row.platformId === anchor.platformId),
+      (row) => row.targetId,
+    );
+    const stageCohort: NextEventSimpleBaselineCohortV1 = {
+      cohortId: `platform-pooled:${anchor.platformId}`,
+      trainingTargetIds: stageRows.map((row) => row.targetId),
+      trainingCount: stageRows.length,
+    };
+    const emptyTimingCohort: NextEventSimpleBaselineCohortV1 = {
+      cohortId: `platform-predicted-stage:unavailable:${anchor.platformId}`,
+      trainingTargetIds: [],
+      trainingCount: 0,
+    };
+    const sourceFingerprint = sourceDataset.fingerprints.datasetFingerprint;
+    const base = {
+      baselineVersion: NEXT_EVENT_SIMPLE_BASELINE_VERSION,
+      releaseId,
+      platformId: anchor.platformId,
+      originOn,
+      sourceFingerprint,
+      codeFingerprint: NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT,
+      stageCohort,
+    } as const;
+    const finalize = <const T extends object>(
+      core: T,
+    ): T & { resultFingerprint: string } => ({
+      ...core,
+      resultFingerprint: historicalAnalysisFingerprint(core),
+    });
+
+    if (stageRows.length < NEXT_ELIGIBLE_PRERELEASE_EVENT_MINIMUM_EXAMPLES) {
+      return finalize({
+        ...base,
+        timingCohort: emptyTimingCohort,
+        availability: "unavailable",
+        reason: "minimum-training-examples",
+        modalCount: null,
+        modalShare: null,
+      });
+    }
+    const counts = new Map<EligiblePrereleaseStage, number>();
+    for (const row of stageRows) {
+      counts.set(
+        row.endpointEligibleStage,
+        (counts.get(row.endpointEligibleStage) ?? 0) + 1,
+      );
+    }
+    const ranked = [...counts.entries()].sort(
+      ([leftStage, leftCount], [rightStage, rightCount]) =>
+        rightCount - leftCount || textOrder(leftStage, rightStage),
+    );
+    const [predictedEligibleStage, modalCount] = ranked[0]!;
+    const modalShare = modalCount / stageRows.length;
+    if (
+      (ranked[1]?.[1] ?? -1) === modalCount ||
+      modalShare < NEXT_ELIGIBLE_PRERELEASE_EVENT_MODE_THRESHOLD
+    ) {
+      return finalize({
+        ...base,
+        timingCohort: emptyTimingCohort,
+        availability: "unavailable",
+        reason: "weak-stage-mode",
+        modalCount,
+        modalShare,
+      });
+    }
+
+    const timingRows = stageRows.filter(
+      (row) => row.endpointEligibleStage === predictedEligibleStage,
+    );
+    const timingCohort: NextEventSimpleBaselineCohortV1 = {
+      cohortId: `platform-predicted-stage:${anchor.platformId}:${predictedEligibleStage}`,
+      trainingTargetIds: timingRows.map((row) => row.targetId),
+      trainingCount: timingRows.length,
+    };
+    if (timingRows.length < NEXT_ELIGIBLE_PRERELEASE_EVENT_MINIMUM_EXAMPLES) {
+      return finalize({
+        ...base,
+        timingCohort,
+        availability: "unavailable",
+        reason: "minimum-training-examples",
+        predictedEligibleStage,
+        modalCount,
+        modalShare,
+      });
+    }
+    return finalize({
+      ...base,
+      timingCohort,
+      availability: "available",
+      predictedEligibleStage,
+      modalCount,
+      modalShare,
+      pointDays: median(timingRows.map((row) => row.actualDays)),
+    });
+  } catch {
+    return null;
+  }
+}
 
 export function buildNextEligiblePrereleaseEventModel(sourceDataset: HistoricalAnalysisDatasetV1, config: NextEligiblePrereleaseEventConfigV1 = DEFAULT_NEXT_ELIGIBLE_PRERELEASE_EVENT_CONFIG): NextEligiblePrereleaseEventModelV1 {
   const issues = [...validateHistoricalAnalysisDataset(sourceDataset).map((issue) => ({ code: "invalid-source-dataset" as const, path: `sourceDataset.${issue.path}`, message: issue.message })), ...configIssues(config)];

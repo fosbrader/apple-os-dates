@@ -8,8 +8,10 @@ not connect Vercel Blob, a cron job, an API, Sanity, or the public UI.
 `forecast-artifact/v1` has one fixed mode: `private-shadow`. Its provenance
 binds the source cutoff and evidence, historical dataset, walk-forward
 evaluation, public-release model and calibration, next-event model and
-calibration, and the artifact-builder code. Component versions must be exact
-v1 versions. Fingerprints are SHA-256 digests.
+calibration, the frozen current public heuristic, and the artifact-builder
+code. Component versions must be exact v1 versions. Fingerprints are SHA-256
+digests. The current-heuristic provenance binds both its exact bounded legacy
+source snapshot and its frozen algorithm fingerprint.
 
 Targets use the `public-release` or `next-eligible-prerelease-event` tag. An
 available target identifies the exact upstream point estimator and has a finite
@@ -20,6 +22,36 @@ from being mislabeled as a raw median. Both intervals use one residual count and
 the fixed finite-sample rank. The 50% bounds must be inside the 80% bounds.
 Calendar bounds round outward from the source-linked anchor. An unavailable
 target has a typed reason and no prediction or date fields.
+
+Every target also persists the exact product family, model-training members,
+and calibration-residual members used at the declared origin. Public-release
+targets have one `model-training` component. Next-event targets preserve
+separate `stage-training` and `timing-training` components. Their aggregate
+model count is the size of the union, so a member that appears in both
+components is counted once. Available targets require at least eight members
+in every required model component and at least eight calibration residuals.
+
+Each target contains exactly three immutable `forecast-origin-benchmark/v1`
+rows in this order:
+
+1. `selected-private-model` duplicates the target prediction and binds the
+   target's exact model and calibration fingerprints. Its cohorts reference
+   the target cohort instead of repeating the same member IDs.
+2. `current-public-heuristic` runs the frozen legacy public-release heuristic
+   against only facts known at the target origin. It includes exact inline
+   cohort members when available. The legacy heuristic has no comparable
+   next-eligible-event target, so that row is explicitly unavailable with
+   `incomparable-target-definition`.
+3. `simple-baseline` uses the exact upstream platform-stage median candidate
+   for public-release targets. For next-event targets it uses a same-platform
+   pooled eligible-stage mode and the median timing for that predicted stage.
+   Available comparator cohorts are exact, non-empty, and meet the algorithm's
+   minimum sample size.
+
+Benchmark availability, prediction values, target kind, cohort bindings, and
+source/model/calibration fingerprints are cross-validated against the target
+and provenance. A run cannot reconstruct a comparator after the outcome is
+known or silently substitute a different cohort.
 
 This example uses the checked contract builder. It is preferable to assembling
 JSON by hand because the builder orders targets, metrics, exclusions, and
@@ -54,8 +86,11 @@ Changing only `generatedAt` keeps the first two values and changes
 `artifactId`. A provenance change can change semantic content while retaining
 the same scheduled-run key. Changing `scheduledFor` changes the run key even
 when forecast semantics are otherwise equal. Artifact paths contain only that digest:
-`forecast/artifacts/<sha256>.json`. Canonical JSON is at most 1 MiB. Targets,
-metrics, exclusions, and evidence IDs also have explicit row bounds.
+`forecast/artifacts/<sha256>.json`. Canonical JSON is at most 262,144 bytes
+(256 KiB). An artifact has at most 32 targets, including at most 32 available
+targets. Targets, metrics, exclusions, cohort members, and evidence IDs also
+have explicit row bounds. Cohort-member limits follow the bounded source
+observation capacity; the byte limit is the stricter operational constraint.
 
 ## Mutable pointer
 

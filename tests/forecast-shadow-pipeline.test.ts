@@ -28,7 +28,7 @@ import {
   FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
   FORECAST_SHADOW_MAX_SOURCE_RELEASES,
   FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES,
-  type PublishedHistoricalReleaseSource,
+  type PublishedForecastShadowSource,
 } from "../src/lib/historical-release-source";
 
 const encoder = new TextEncoder();
@@ -37,12 +37,12 @@ function day(index: number): string {
   return new Date(Date.UTC(2024, 0, 1 + index)).toISOString().slice(0, 10);
 }
 
-function source(options: { reverse?: boolean; activeTail?: "public" } = {}): PublishedHistoricalReleaseSource {
+function source(options: { reverse?: boolean; activeTail?: "public" } = {}): PublishedForecastShadowSource {
   const historicalIds = Array.from(
     { length: 24 },
     (_, index) => `history-${String(index).padStart(2, "0")}`,
   );
-  const releases: PublishedHistoricalReleaseSource["releases"][number][] =
+  const releases: PublishedForecastShadowSource["releases"][number][] =
     historicalIds.map((id, index) => ({
       id,
       lifecycle: "released",
@@ -51,7 +51,7 @@ function source(options: { reverse?: boolean; activeTail?: "public" } = {}): Pub
       statusFirstObservedAt: `${day(index * 16 + 11)}T12:00:00.000Z`,
     }));
   releases.push({ id: "active", lifecycle: "active" });
-  const events: PublishedHistoricalReleaseSource["events"][number][] =
+  const events: PublishedForecastShadowSource["events"][number][] =
     historicalIds.flatMap((id, index) => {
       const base = index * 16;
       return [
@@ -63,6 +63,7 @@ function source(options: { reverse?: boolean; activeTail?: "public" } = {}): Pub
           channel: "developerBeta",
           sequence: 1,
           availability: "available",
+          legacySourceId: `${id}-legacy-dev-1`,
         },
         {
           id: `${id}-dev-2`,
@@ -72,6 +73,7 @@ function source(options: { reverse?: boolean; activeTail?: "public" } = {}): Pub
           channel: "developerBeta",
           sequence: 2,
           availability: "available",
+          legacySourceId: `${id}-legacy-dev-2`,
         },
       ];
     });
@@ -83,6 +85,7 @@ function source(options: { reverse?: boolean; activeTail?: "public" } = {}): Pub
     channel: "developerBeta",
     sequence: 1,
     availability: "available",
+    legacySourceId: "active-legacy-dev-1",
   });
   if (options.activeTail === "public") {
     events.push({
@@ -94,7 +97,7 @@ function source(options: { reverse?: boolean; activeTail?: "public" } = {}): Pub
       availability: "available",
     });
   }
-  const releaseMetadata: PublishedHistoricalReleaseSource["releaseMetadata"] = [
+  const releaseMetadata: PublishedForecastShadowSource["releaseMetadata"] = [
     ...historicalIds,
     "active",
   ].map((releaseId, index) => ({
@@ -110,13 +113,82 @@ function source(options: { reverse?: boolean; activeTail?: "public" } = {}): Pub
     },
     sourceEvidenceIds: [`metadata-${releaseId}`],
   }));
+  const compatibilityMilestones: PublishedForecastShadowSource["compatibilityMilestones"][number][] =
+    historicalIds.flatMap((id, index) => {
+      const base = index * 16;
+      return [
+        {
+          id: `${id}-legacy-dev-1`,
+          releaseId: id,
+          occurredOn: day(base),
+          displayLabel: "Beta 1",
+          firstObservedAt: `${day(base)}T12:00:00.000Z`,
+          channel: "developerBeta" as const,
+          sequence: 1,
+          availability: "available" as const,
+        },
+        {
+          id: `${id}-legacy-dev-2`,
+          releaseId: id,
+          occurredOn: day(base + 4),
+          displayLabel: "Beta 2",
+          firstObservedAt: `${day(base + 4)}T12:00:00.000Z`,
+          channel: "developerBeta" as const,
+          sequence: 2,
+          availability: "available" as const,
+        },
+      ];
+    });
+  compatibilityMilestones.push({
+    id: "active-legacy-dev-1",
+    releaseId: "active",
+    occurredOn: day(24 * 16),
+    displayLabel: "Beta 1",
+    firstObservedAt: `${day(24 * 16)}T12:00:00.000Z`,
+    channel: "developerBeta",
+    sequence: 1,
+    availability: "available",
+  });
+  const legacyForecastReleases: PublishedForecastShadowSource["legacyForecastReleases"] = [
+    ...historicalIds.map((id, index) => ({
+      id,
+      version: `${index + 1}.0`,
+      lifecycle: "released" as const,
+      publicReleaseDate: day(index * 16 + 10),
+      platform: { id: "ios", name: "iOS", slug: "ios", sortOrder: 1 },
+    })),
+    {
+      id: "active",
+      version: "27.0",
+      lifecycle: "active" as const,
+      platform: { id: "ios", name: "iOS", slug: "ios", sortOrder: 1 },
+    },
+  ];
+  const legacyForecastMilestones: PublishedForecastShadowSource["legacyForecastMilestones"] = [
+    ...historicalIds.flatMap((id, index) => {
+      const base = index * 16;
+      return [
+        { id: `${id}-legacy-dev-1`, releaseId: id, label: "Beta 1", occurredOn: day(base) },
+        { id: `${id}-legacy-dev-2`, releaseId: id, label: "Beta 2", occurredOn: day(base + 4) },
+      ];
+    }),
+    { id: "active-legacy-dev-1", releaseId: "active", label: "Beta 1", occurredOn: day(24 * 16) },
+  ];
   return {
     releases: options.reverse ? [...releases].reverse() : releases,
     events: options.reverse ? [...events].reverse() : events,
-    compatibilityMilestones: [],
+    compatibilityMilestones: options.reverse
+      ? [...compatibilityMilestones].reverse()
+      : compatibilityMilestones,
     releaseMetadata: options.reverse
       ? [...releaseMetadata].reverse()
       : releaseMetadata,
+    legacyForecastReleases: options.reverse
+      ? [...legacyForecastReleases].reverse()
+      : legacyForecastReleases,
+    legacyForecastMilestones: options.reverse
+      ? [...legacyForecastMilestones].reverse()
+      : legacyForecastMilestones,
   };
 }
 
@@ -230,6 +302,21 @@ test("FR-014 builds deterministic exact-estimator public and next-event targets"
       ),
     );
     assert.equal(publicTarget.anchorEventId, "event:active-dev-1");
+    assert.equal(publicTarget.productFamilyId, "iphone");
+    assert.deepEqual(
+      publicTarget.benchmarks.map((benchmark) => benchmark.benchmarkId),
+      ["selected-private-model", "current-public-heuristic", "simple-baseline"],
+    );
+    assert.equal(publicTarget.benchmarks[0]!.availability, "available");
+    assert.equal(
+      publicTarget.benchmarks[0]!.calibrationFingerprint,
+      publicTarget.calibrationFingerprint,
+    );
+    assert.equal(
+      publicTarget.benchmarks[1]!.sourceFingerprint,
+      first.provenance.currentPublicHeuristic.sourceFingerprint,
+    );
+    assert.equal(publicTarget.benchmarks[2]!.availability, "available");
   }
   if (nextTarget?.availability === "available") {
     assert.equal(
@@ -237,6 +324,23 @@ test("FR-014 builds deterministic exact-estimator public and next-event targets"
       "next-event-timing-median",
     );
     assert.equal(nextTarget.predictedEligibleStage, "developer-beta");
+    assert.deepEqual(
+      nextTarget.cohort.modelTrainingCohorts.map((cohort) => cohort.role),
+      ["stage-training", "timing-training"],
+    );
+    assert.equal(nextTarget.benchmarks[0]!.availability, "available");
+    assert.deepEqual(nextTarget.benchmarks[1], {
+      benchmarkVersion: "forecast-origin-benchmark/v1",
+      benchmarkId: "current-public-heuristic",
+      modelVersion: "current-public-heuristic/v1",
+      sourceFingerprint: first.provenance.currentPublicHeuristic.sourceFingerprint,
+      modelFingerprint: first.provenance.currentPublicHeuristic.modelFingerprint,
+      calibrationFingerprint: null,
+      cohorts: [],
+      availability: "unavailable",
+      reason: "incomparable-target-definition",
+    });
+    assert.equal(nextTarget.benchmarks[2]!.availability, "available");
   }
   assert.ok(first.provenance.sourceEvidenceIds.length > 24);
   assert.ok(
@@ -246,6 +350,45 @@ test("FR-014 builds deterministic exact-estimator public and next-event targets"
       ),
     ),
   );
+});
+
+test("FR-012 snapshots an available current public heuristic only after exact anchor proof", () => {
+  const originDay = day(24 * 16 + 2);
+  const artifact = buildForecastShadowArtifact(
+    {
+      requestedAt: `${originDay}T08:43:00.000Z`,
+      scheduledFor: originDay,
+    },
+    source(),
+  );
+  const target = artifact.targets.find(
+    (candidate) => candidate.targetKind === "public-release",
+  );
+  assert.ok(target);
+  const current = target?.benchmarks[1];
+  assert.ok(current?.availability === "available");
+  if (current?.availability === "available") {
+    assert.equal(current.prediction.targetKind, "public-release");
+    assert.equal(current.cohorts.length, 1);
+    assert.equal(current.cohorts[0]!.binding, "inline");
+    assert.equal(current.cohorts[0]!.memberCount, 12);
+  }
+
+  const unlinked = source();
+  unlinked.legacyForecastMilestones = unlinked.legacyForecastMilestones.filter(
+    (milestone) => milestone.releaseId !== "active",
+  );
+  const unavailable = buildForecastShadowArtifact(
+    {
+      requestedAt: `${originDay}T08:43:00.000Z`,
+      scheduledFor: originDay,
+    },
+    unlinked,
+  ).targets.find((candidate) => candidate.targetKind === "public-release");
+  assert.equal(unavailable?.benchmarks[1]?.availability, "unavailable");
+  if (unavailable?.benchmarks[1]?.availability === "unavailable") {
+    assert.equal(unavailable.benchmarks[1].reason, "anchor-mapping-unproven");
+  }
 });
 
 test("FR-014 activates once and a same-day rerun performs no fetch or write", async () => {
@@ -409,7 +552,7 @@ test("FR-014 rejects an unbounded source collection before model execution", () 
 
 test("FR-014 rejects raw observation instants later than the exact request instant", () => {
   const futureInstant = "2026-08-09T23:59:00.000Z";
-  const variants: PublishedHistoricalReleaseSource[] = [];
+  const variants: PublishedForecastShadowSource[] = [];
 
   const releaseVariant = source();
   releaseVariant.releases = releaseVariant.releases.map((release, index) =>
@@ -431,6 +574,7 @@ test("FR-014 rejects raw observation instants later than the exact request insta
       id: "future-milestone",
       releaseId: "active",
       occurredOn: day(24 * 16),
+      displayLabel: "Beta 1",
       channel: "developerBeta",
       firstObservedAt: futureInstant,
     },
@@ -449,7 +593,7 @@ test("FR-014 rejects raw observation instants later than the exact request insta
 
 test("FR-014 rejects malformed provided observation instants", () => {
   const malformedInstant = "2026-08-09T08:42:00Z";
-  const variants: PublishedHistoricalReleaseSource[] = [];
+  const variants: PublishedForecastShadowSource[] = [];
 
   const releaseVariant = source();
   releaseVariant.releases = releaseVariant.releases.map((release, index) =>
@@ -471,6 +615,7 @@ test("FR-014 rejects malformed provided observation instants", () => {
       id: "malformed-milestone",
       releaseId: "active",
       occurredOn: day(24 * 16),
+      displayLabel: "Beta 1",
       channel: "developerBeta",
       firstObservedAt: malformedInstant,
     },
@@ -485,6 +630,84 @@ test("FR-014 rejects malformed provided observation instants", () => {
         error.code === "invalid-source",
     );
   }
+});
+
+test("FR-012 rejects malformed legacy comparator rows and excludes future legacy facts", () => {
+  const malformed = source();
+  malformed.legacyForecastReleases = malformed.legacyForecastReleases.map(
+    (release, index) => index === 0 ? { ...release, surprise: true } : release,
+  );
+  assert.throws(
+    () => buildForecastShadowArtifact(request, malformed),
+    (error: unknown) =>
+      error instanceof ForecastShadowPipelineError &&
+      error.code === "invalid-source",
+  );
+
+  const mismatched = source();
+  mismatched.legacyForecastMilestones =
+    mismatched.legacyForecastMilestones.map((milestone, index) =>
+      index === 0 ? { ...milestone, occurredOn: day(2) } : milestone,
+    );
+  assert.throws(
+    () => buildForecastShadowArtifact(request, mismatched),
+    (error: unknown) =>
+      error instanceof ForecastShadowPipelineError &&
+      error.code === "invalid-source",
+  );
+
+  const mismatchedLabel = source();
+  mismatchedLabel.legacyForecastMilestones =
+    mismatchedLabel.legacyForecastMilestones.map((milestone, index) =>
+      index === 0 ? { ...milestone, label: "Release Candidate 1" } : milestone,
+    );
+  assert.throws(
+    () => buildForecastShadowArtifact(request, mismatchedLabel),
+    (error: unknown) =>
+      error instanceof ForecastShadowPipelineError &&
+      error.code === "invalid-source",
+  );
+
+  const duplicateMilestone = source();
+  duplicateMilestone.legacyForecastMilestones = [
+    ...duplicateMilestone.legacyForecastMilestones,
+    duplicateMilestone.legacyForecastMilestones[0]!,
+  ];
+  assert.throws(
+    () => buildForecastShadowArtifact(request, duplicateMilestone),
+    (error: unknown) =>
+      error instanceof ForecastShadowPipelineError &&
+      error.code === "invalid-source",
+  );
+
+  const baseline = buildForecastShadowArtifact(request, source());
+  const future = source();
+  future.compatibilityMilestones = [
+    ...future.compatibilityMilestones,
+    {
+      id: "active-future-dev-2",
+      releaseId: "active",
+      occurredOn: "2027-01-01",
+      displayLabel: "Beta 2",
+      channel: "developerBeta",
+      sequence: 2,
+      availability: "available",
+    },
+  ];
+  future.legacyForecastMilestones = [
+    ...future.legacyForecastMilestones,
+    {
+      id: "active-future-dev-2",
+      releaseId: "active",
+      label: "Beta 2",
+      occurredOn: "2027-01-01",
+    },
+  ];
+  const withFuture = buildForecastShadowArtifact(request, future);
+  assert.equal(
+    withFuture.provenance.currentPublicHeuristic.sourceFingerprint,
+    baseline.provenance.currentPublicHeuristic.sourceFingerprint,
+  );
 });
 
 test("FR-014 bounds source strings and evidence arrays", () => {
