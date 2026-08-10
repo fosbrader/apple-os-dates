@@ -14,6 +14,18 @@ const UNKNOWN_COVERAGE_REASONS = new Set([
   "same-day-order-unknown",
 ]);
 const EVIDENCE_TYPES = new Set(["source", "auditBatch"]);
+export const HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES = [
+  "auditBatch",
+  "historicalReleaseMetadata",
+  "platform",
+  "releaseEvent",
+  "releaseTrain",
+  "releaseVersion",
+  "source",
+] as const;
+const HISTORICAL_ANALYTICAL_SNAPSHOT_TYPE_SET = new Set<string>(
+  HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES,
+);
 const MANAGED_FIELDS = [
   "releaseVersion",
   "productFamilyId",
@@ -108,6 +120,10 @@ export interface HistoricalReleaseMetadataPlan {
   artifactType: "sanity-historical-release-metadata-plan";
   formatVersion: 1;
   sourceSnapshotDigest: string;
+  analyticalSnapshot: {
+    documentTypes: typeof HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES;
+    revisions: HistoricalAnalyticalSnapshotRevision[];
+  };
   curatedManifestDigest: string;
   planDigest: string;
   mutations: HistoricalMetadataMutation[];
@@ -121,6 +137,12 @@ export interface HistoricalReleaseMetadataPlan {
     chronologyEvidenceReferences: number;
     statusObservationEvidenceReferences: number;
   };
+}
+
+export interface HistoricalAnalyticalSnapshotRevision {
+  id: string;
+  documentType: (typeof HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES)[number];
+  expectedRevision: string;
 }
 
 export interface HistoricalLifecycleObservationPatch {
@@ -179,6 +201,19 @@ export interface HistoricalReleaseMetadataPlanOptions {
 
 function isRecord(value: unknown): value is UnknownRecord {
   return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
+function assertExactKeys(
+  value: UnknownRecord,
+  allowed: readonly string[],
+  path: string,
+): void {
+  const unknown = Object.keys(value)
+    .filter((key) => !allowed.includes(key))
+    .sort(compareText);
+  if (unknown.length) {
+    throw new Error(`${path} contains unknown propert${unknown.length === 1 ? "y" : "ies"}: ${unknown.join(", ")}.`);
+  }
 }
 
 function cloneJson<T>(value: T): T {
@@ -272,6 +307,11 @@ function normalizedEvidence(
     if (!isRecord(candidate)) {
       throw new Error(`${path}[${index}] must be an object.`);
     }
+    assertExactKeys(
+      candidate,
+      ["id", "expectedRevision"],
+      `${path}[${index}]`,
+    );
     return {
       id: validDocumentId(
         requiredString(candidate.id, `${path}[${index}].id`),
@@ -297,6 +337,11 @@ function normalizedMetadataEvidence(
   if (!isRecord(value)) {
     throw new Error(`${path} must be an object with assertion-scoped evidence.`);
   }
+  assertExactKeys(
+    value,
+    ["productFamily", "releaseClass", "releasePosition", "releaseCycle"],
+    path,
+  );
   return {
     productFamily: normalizedEvidence(
       value.productFamily,
@@ -352,6 +397,7 @@ function normalizedStatusFirstObservedAt(
   }
   const strategy = requiredString(value.strategy, `${path}.strategy`);
   if (strategy === "sanity-created-at") {
+    assertExactKeys(value, ["strategy"], path);
     if (value.value !== undefined || value.evidence !== undefined) {
       throw new Error(
         `${path} sanity-created-at strategy cannot include a value or evidence override.`,
@@ -362,6 +408,7 @@ function normalizedStatusFirstObservedAt(
   if (strategy !== "explicit") {
     throw new Error(`${path}.strategy must be explicit or sanity-created-at.`);
   }
+  assertExactKeys(value, ["strategy", "value", "evidence"], path);
   const observedAt = requiredString(value.value, `${path}.value`);
   if (!isIsoInstant(observedAt)) {
     throw new Error(`${path}.value must be an ISO timestamp with an offset.`);
@@ -402,6 +449,26 @@ function normalizeEntry(
     throw new Error(`entries[${index}] must be an object.`);
   }
   const path = `entries[${index}]`;
+  assertExactKeys(
+    value,
+    [
+      "metadataId",
+      "releaseVersionId",
+      "expectedReleaseVersionRevision",
+      "expectedReleaseTrainRevision",
+      "platformId",
+      "expectedPlatformRevision",
+      "expectedMetadataRevision",
+      "productFamilyId",
+      "releaseClass",
+      "releasePosition",
+      "releaseCycleId",
+      "metadataEvidence",
+      "chronologyCoverage",
+      "statusFirstObservedAt",
+    ],
+    path,
+  );
   const releaseVersionId = validDocumentId(
     requiredString(value.releaseVersionId, `${path}.releaseVersionId`),
     `${path}.releaseVersionId`,
@@ -447,6 +514,11 @@ function normalizeEntry(
   );
   let chronologyCoverage: CuratedHistoricalMetadataEntry["chronologyCoverage"];
   if (state === "unknown") {
+    assertExactKeys(
+      value.chronologyCoverage,
+      ["state", "reason", "evidence"],
+      `${path}.chronologyCoverage`,
+    );
     const reason = requiredString(
       value.chronologyCoverage.reason,
       `${path}.chronologyCoverage.reason`,
@@ -463,6 +535,11 @@ function normalizeEntry(
       evidence: coverageEvidence,
     };
   } else {
+    assertExactKeys(
+      value.chronologyCoverage,
+      ["state", "evidence"],
+      `${path}.chronologyCoverage`,
+    );
     if (value.chronologyCoverage.reason !== undefined) {
       throw new Error(`${path}.chronologyCoverage.reason is allowed only for unknown coverage.`);
     }
@@ -521,6 +598,7 @@ export function parseCuratedHistoricalMetadataManifest(
   if (!isRecord(input) || input.formatVersion !== 1 || !Array.isArray(input.entries)) {
     throw new Error("Curated manifest must have formatVersion 1 and an entries array.");
   }
+  assertExactKeys(input, ["formatVersion", "entries"], "Curated manifest");
   if (!input.entries.length) {
     throw new Error("Curated manifest contains no entries; no-op planning is blocked.");
   }
@@ -568,6 +646,48 @@ export function extractHistoricalMetadataSnapshotDocuments(
     throw new Error("Published snapshot contains duplicate document IDs.");
   }
   return records;
+}
+
+export function historicalAnalyticalSnapshotBinding(
+  documents: readonly HistoricalMetadataSnapshotDocument[],
+): HistoricalReleaseMetadataPlan["analyticalSnapshot"] {
+  const revisions = documents.map((document) => {
+    if (!HISTORICAL_ANALYTICAL_SNAPSHOT_TYPE_SET.has(document._type)) {
+      throw new Error(
+        `Published snapshot contains unsupported analytical document type ${document._type} at ${document._id}.`,
+      );
+    }
+    return {
+      id: document._id,
+      documentType:
+        document._type as HistoricalAnalyticalSnapshotRevision["documentType"],
+      expectedRevision: revisionOf(document, `snapshot.${document._id}`),
+    };
+  });
+  revisions.sort((left, right) => compareText(left.id, right.id));
+  return {
+    documentTypes: HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES,
+    revisions,
+  };
+}
+
+export function assertHistoricalAnalyticalSnapshotMatchesPlan(
+  plan: HistoricalReleaseMetadataPlan,
+  snapshotInput: unknown,
+): HistoricalMetadataSnapshotDocument[] {
+  const documents = extractHistoricalMetadataSnapshotDocuments(snapshotInput);
+  const binding = historicalAnalyticalSnapshotBinding(documents);
+  if (!exactEqualDocumentBody(binding, plan.analyticalSnapshot)) {
+    throw new Error(
+      "The complete live analytical document revision set changed since planning. Generate and approve a new plan.",
+    );
+  }
+  if (sha256(documents) !== plan.sourceSnapshotDigest) {
+    throw new Error(
+      "The complete live analytical snapshot changed since planning. Generate and approve a new plan.",
+    );
+  }
+  return documents;
 }
 
 export function historicalReleaseMetadataId(releaseVersionId: string): string {
@@ -796,6 +916,18 @@ export function buildHistoricalReleaseMetadataPlan(
   const documents = extractHistoricalMetadataSnapshotDocuments(snapshotInput);
   const manifest = parseCuratedHistoricalMetadataManifest(curatedManifestInput);
   const byId = new Map(documents.map((document) => [document._id, document]));
+  const snapshotReleaseIds = documents
+    .filter(({ _type }) => _type === "releaseVersion")
+    .map(({ _id }) => _id)
+    .sort(compareText);
+  const manifestReleaseIds = manifest.entries
+    .map(({ releaseVersionId }) => releaseVersionId)
+    .sort(compareText);
+  if (!exactEqualDocumentBody(snapshotReleaseIds, manifestReleaseIds)) {
+    throw new Error(
+      "Curated manifest must exactly cover every releaseVersion in the complete analytical snapshot.",
+    );
+  }
   const sidecars = documents.filter(
     (document) => document._type === "historicalReleaseMetadata",
   );
@@ -1107,6 +1239,7 @@ export function buildHistoricalReleaseMetadataPlan(
     compareText(left.id, right.id),
   );
   const sourceSnapshotDigest = sha256(documents);
+  const analyticalSnapshot = historicalAnalyticalSnapshotBinding(documents);
   const curatedManifestDigest = sha256(manifest);
   const summary = {
     entries: manifest.entries.length,
@@ -1131,6 +1264,7 @@ export function buildHistoricalReleaseMetadataPlan(
     artifactType: "sanity-historical-release-metadata-plan" as const,
     formatVersion: 1 as const,
     sourceSnapshotDigest,
+    analyticalSnapshot,
     curatedManifestDigest,
     mutations,
     lifecycleObservationPatches,
@@ -1145,15 +1279,384 @@ export function buildHistoricalReleaseMetadataPlan(
   return { plan, rollback };
 }
 
-export function validateHistoricalReleaseMetadataPlan(
+function recordUnknownArtifactKeys(
+  value: unknown,
+  allowed: readonly string[],
+  path: string,
+  failures: string[],
+): value is UnknownRecord {
+  if (!isRecord(value)) {
+    failures.push(`${path} must be an object`);
+    return false;
+  }
+  const unknown = Object.keys(value)
+    .filter((key) => !allowed.includes(key))
+    .sort(compareText);
+  if (unknown.length) {
+    failures.push(`${path} contains unknown properties: ${unknown.join(", ")}`);
+  }
+  return true;
+}
+
+function recordEvidenceArtifactKeys(
+  value: unknown,
+  path: string,
+  failures: string[],
+  temporal: boolean,
+): void {
+  recordUnknownArtifactKeys(
+    value,
+    temporal
+      ? [
+          "id",
+          "expectedRevision",
+          "documentType",
+          "availableOn",
+          "availabilityBasis",
+        ]
+      : ["id", "expectedRevision"],
+    path,
+    failures,
+  );
+}
+
+function recordMetadataEvidenceArtifactKeys(
+  value: unknown,
+  path: string,
+  failures: string[],
+): void {
+  if (
+    !recordUnknownArtifactKeys(
+      value,
+      ["productFamily", "releaseClass", "releasePosition", "releaseCycle"],
+      path,
+      failures,
+    )
+  ) {
+    return;
+  }
+  for (const scope of [
+    "productFamily",
+    "releaseClass",
+    "releasePosition",
+    "releaseCycle",
+  ] as const) {
+    const references = value[scope];
+    if (!Array.isArray(references)) {
+      failures.push(`${path}.${scope} must be an array`);
+      continue;
+    }
+    references.forEach((reference, index) =>
+      recordEvidenceArtifactKeys(
+        reference,
+        `${path}.${scope}[${index}]`,
+        failures,
+        false,
+      ),
+    );
+  }
+}
+
+function recordProjectedReferenceArtifactKeys(
+  value: unknown,
+  path: string,
+  failures: string[],
+  keyed: boolean,
+): void {
+  recordUnknownArtifactKeys(
+    value,
+    keyed ? ["_key", "_type", "_ref"] : ["_type", "_ref"],
+    path,
+    failures,
+  );
+}
+
+function recordManagedProjectionArtifactKeys(
+  value: unknown,
+  path: string,
+  failures: string[],
+): void {
+  if (!isRecord(value)) return;
+  if (Object.hasOwn(value, "releaseVersion")) {
+    recordProjectedReferenceArtifactKeys(
+      value.releaseVersion,
+      `${path}.releaseVersion`,
+      failures,
+      false,
+    );
+  }
+  if (Object.hasOwn(value, "metadataEvidence")) {
+    const metadataEvidence = value.metadataEvidence;
+    if (
+      recordUnknownArtifactKeys(
+        metadataEvidence,
+        ["productFamily", "releaseClass", "releasePosition", "releaseCycle"],
+        `${path}.metadataEvidence`,
+        failures,
+      )
+    ) {
+      for (const scope of [
+        "productFamily",
+        "releaseClass",
+        "releasePosition",
+        "releaseCycle",
+      ] as const) {
+        const references = metadataEvidence[scope];
+        if (!Array.isArray(references)) {
+          failures.push(`${path}.metadataEvidence.${scope} must be an array`);
+          continue;
+        }
+        references.forEach((reference, index) =>
+          recordProjectedReferenceArtifactKeys(
+            reference,
+            `${path}.metadataEvidence.${scope}[${index}]`,
+            failures,
+            true,
+          ),
+        );
+      }
+    }
+  }
+  if (Object.hasOwn(value, "chronologyCoverage")) {
+    const chronologyCoverage = value.chronologyCoverage;
+    if (isRecord(chronologyCoverage)) {
+      const allowed =
+        chronologyCoverage.state === "unknown"
+          ? ["state", "reason", "evidence"]
+          : ["state", "evidence"];
+      recordUnknownArtifactKeys(
+        chronologyCoverage,
+        allowed,
+        `${path}.chronologyCoverage`,
+        failures,
+      );
+      if (!Array.isArray(chronologyCoverage.evidence)) {
+        failures.push(`${path}.chronologyCoverage.evidence must be an array`);
+      } else {
+        chronologyCoverage.evidence.forEach((reference, index) =>
+          recordProjectedReferenceArtifactKeys(
+            reference,
+            `${path}.chronologyCoverage.evidence[${index}]`,
+            failures,
+            true,
+          ),
+        );
+      }
+    } else {
+      failures.push(`${path}.chronologyCoverage must be an object`);
+    }
+  }
+}
+
+function recordPlanAndRollbackArtifactKeys(
   plan: HistoricalReleaseMetadataPlan,
   rollback: HistoricalReleaseMetadataRollback,
 ): string[] {
   const failures: string[] = [];
+  if (
+    !recordUnknownArtifactKeys(
+      plan,
+      [
+        "artifactType",
+        "formatVersion",
+        "sourceSnapshotDigest",
+        "analyticalSnapshot",
+        "curatedManifestDigest",
+        "planDigest",
+        "mutations",
+        "lifecycleObservationPatches",
+        "summary",
+      ],
+      "plan",
+      failures,
+    )
+  ) {
+    return failures;
+  }
+  if (
+    recordUnknownArtifactKeys(
+      plan.analyticalSnapshot,
+      ["documentTypes", "revisions"],
+      "plan.analyticalSnapshot",
+      failures,
+    )
+  ) {
+    if (!Array.isArray(plan.analyticalSnapshot.revisions)) {
+      failures.push("plan.analyticalSnapshot.revisions must be an array");
+    } else {
+      plan.analyticalSnapshot.revisions.forEach((revision, index) =>
+        recordUnknownArtifactKeys(
+          revision,
+          ["id", "documentType", "expectedRevision"],
+          `plan.analyticalSnapshot.revisions[${index}]`,
+          failures,
+        ),
+      );
+    }
+  }
+  if (!Array.isArray(plan.mutations)) {
+    failures.push("plan.mutations must be an array");
+  } else {
+    plan.mutations.forEach((mutation, index) => {
+      const path = `plan.mutations[${index}]`;
+      if (
+        !recordUnknownArtifactKeys(
+          mutation,
+          [
+            "action",
+            "id",
+            "releaseVersionId",
+            "releaseVersionRevision",
+            "releaseTrainId",
+            "releaseTrainRevision",
+            "platformId",
+            "platformRevision",
+            "ifRevisionId",
+            "metadataEvidence",
+            "chronologyEvidence",
+            "before",
+            "after",
+            "set",
+            "unset",
+          ],
+          path,
+          failures,
+        )
+      ) {
+        return;
+      }
+      recordMetadataEvidenceArtifactKeys(
+        mutation.metadataEvidence,
+        `${path}.metadataEvidence`,
+        failures,
+      );
+      recordManagedProjectionArtifactKeys(mutation.set, `${path}.set`, failures);
+      recordManagedProjectionArtifactKeys(
+        mutation.after,
+        `${path}.after`,
+        failures,
+      );
+      if (!Array.isArray(mutation.chronologyEvidence)) {
+        failures.push(`${path}.chronologyEvidence must be an array`);
+      } else {
+        mutation.chronologyEvidence.forEach((reference, referenceIndex) =>
+          recordEvidenceArtifactKeys(
+            reference,
+            `${path}.chronologyEvidence[${referenceIndex}]`,
+            failures,
+            false,
+          ),
+        );
+      }
+    });
+  }
+  if (!Array.isArray(plan.lifecycleObservationPatches)) {
+    failures.push("plan.lifecycleObservationPatches must be an array");
+  } else {
+    plan.lifecycleObservationPatches.forEach((patch, index) => {
+      const path = `plan.lifecycleObservationPatches[${index}]`;
+      if (
+        !recordUnknownArtifactKeys(
+          patch,
+          ["id", "ifRevisionId", "basis", "evidence", "before", "after", "set", "unset"],
+          path,
+          failures,
+        )
+      ) {
+        return;
+      }
+      if (!Array.isArray(patch.evidence)) {
+        failures.push(`${path}.evidence must be an array`);
+      } else {
+        patch.evidence.forEach((reference, referenceIndex) =>
+          recordEvidenceArtifactKeys(
+            reference,
+            `${path}.evidence[${referenceIndex}]`,
+            failures,
+            true,
+          ),
+        );
+      }
+      recordUnknownArtifactKeys(
+        patch.set,
+        ["statusFirstObservedAt"],
+        `${path}.set`,
+        failures,
+      );
+    });
+  }
+  recordUnknownArtifactKeys(
+    plan.summary,
+    [
+      "entries",
+      "creates",
+      "patches",
+      "lifecycleObservationPatches",
+      "metadataEvidenceReferences",
+      "chronologyEvidenceReferences",
+      "statusObservationEvidenceReferences",
+    ],
+    "plan.summary",
+    failures,
+  );
+
+  if (
+    !recordUnknownArtifactKeys(
+      rollback,
+      [
+        "artifactType",
+        "formatVersion",
+        "planDigest",
+        "sourceSnapshotDigest",
+        "restoreMutations",
+        "instructions",
+        "rollbackDigest",
+      ],
+      "rollback",
+      failures,
+    )
+  ) {
+    return failures;
+  }
+  if (!Array.isArray(rollback.restoreMutations)) {
+    failures.push("rollback.restoreMutations must be an array");
+  } else {
+    rollback.restoreMutations.forEach((mutation, index) =>
+      recordUnknownArtifactKeys(
+        mutation,
+        ["action", "id", "requireCurrentPostApplyRevision", "set", "unset"],
+        `rollback.restoreMutations[${index}]`,
+        failures,
+      ),
+    );
+  }
+  return failures;
+}
+
+export function validateHistoricalReleaseMetadataPlan(
+  plan: HistoricalReleaseMetadataPlan,
+  rollback: HistoricalReleaseMetadataRollback,
+): string[] {
+  const failures = recordPlanAndRollbackArtifactKeys(plan, rollback);
+  if (
+    !isRecord(plan) ||
+    !isRecord(rollback) ||
+    !isRecord(plan.analyticalSnapshot) ||
+    !Array.isArray(plan.analyticalSnapshot.documentTypes) ||
+    !Array.isArray(plan.analyticalSnapshot.revisions) ||
+    !Array.isArray(plan.mutations) ||
+    !Array.isArray(plan.lifecycleObservationPatches) ||
+    !isRecord(plan.summary) ||
+    !Array.isArray(rollback.restoreMutations) ||
+    !Array.isArray(rollback.instructions)
+  ) {
+    return failures;
+  }
   const withoutPlanDigest = {
     artifactType: plan.artifactType,
     formatVersion: plan.formatVersion,
     sourceSnapshotDigest: plan.sourceSnapshotDigest,
+    analyticalSnapshot: plan.analyticalSnapshot,
     curatedManifestDigest: plan.curatedManifestDigest,
     mutations: plan.mutations,
     lifecycleObservationPatches: plan.lifecycleObservationPatches,
@@ -1165,6 +1668,31 @@ export function validateHistoricalReleaseMetadataPlan(
     plan.planDigest !== sha256(withoutPlanDigest)
   ) {
     failures.push("plan identity or SHA-256 digest is invalid");
+  }
+  const snapshotRevisions = plan.analyticalSnapshot.revisions;
+  if (
+    !/^[a-f0-9]{64}$/.test(plan.sourceSnapshotDigest) ||
+    !exactEqualDocumentBody(
+      plan.analyticalSnapshot.documentTypes,
+      HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES,
+    ) ||
+    snapshotRevisions.length < 1 ||
+    new Set(snapshotRevisions.map(({ id }) => id)).size !==
+      snapshotRevisions.length ||
+    !snapshotRevisions.every(
+      (revision) =>
+        DOCUMENT_ID_PATTERN.test(revision.id) &&
+        !revision.id.startsWith("drafts.") &&
+        revision.id.length <= 128 &&
+        HISTORICAL_ANALYTICAL_SNAPSHOT_TYPE_SET.has(revision.documentType) &&
+        Boolean(revision.expectedRevision.trim()),
+    ) ||
+    !exactEqualDocumentBody(
+      snapshotRevisions,
+      [...snapshotRevisions].sort((left, right) => compareText(left.id, right.id)),
+    )
+  ) {
+    failures.push("analytical snapshot revision binding is invalid");
   }
   if (!plan.mutations.length && !plan.lifecycleObservationPatches.length) {
     failures.push("plan contains no mutations");

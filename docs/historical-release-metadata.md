@@ -49,7 +49,12 @@ Planning requires a human-reviewed JSON manifest and a fresh published-only
 snapshot. No cohort assertion, evidence identity, or explicit observation
 timestamp is invented by the planner; it only copies a reviewed timestamp or
 immutable `_createdAt` and derives the reviewable availability day of
-explicitly cited evidence. Each entry must name:
+explicitly cited evidence. The manifest must contain exactly one entry for
+every published `releaseVersion` in the analytical source. Partial migration
+cohorts are not eligible for apply because they cannot prove that FR-007
+remains complete. Unknown properties are rejected at every manifest contract
+level, including nested coverage, evidence, and lifecycle-observation objects.
+Each entry must name:
 
 - the deterministic metadata ID and release-version ID;
 - exact current revisions for the release version, its release train, and its
@@ -140,6 +145,16 @@ revisions, scoped evidence refs, lifecycle-observation basis, revision-guarded
 sets, each explicit lifecycle evidence availability day and derivation basis,
 deterministic SHA-256, and exact rollback set/unset or delete-created operations.
 
+The reviewed snapshot must contain the complete full documents for these
+analytical types: `auditBatch`, `historicalReleaseMetadata`, `platform`,
+`releaseEvent`, `releaseTrain`, `releaseVersion`, and `source`. The plan binds
+the sorted ID/type/revision ledger for that entire set and a digest of the exact
+snapshot bytes. This includes every first-class release event and every legacy
+milestone embedded in a release-version revision. Plan and rollback contract
+objects reject unknown properties recursively; opaque Sanity before/after
+document bodies remain exact digest-bound payloads so unowned document fields
+can be preserved safely.
+
 This workflow is separate from and does not change the chronology metadata
 planner introduced for issue #26.
 
@@ -160,13 +175,18 @@ npm run sanity:historical-metadata:apply -- \
 ```
 
 The command is pinned to the existing project and `production` dataset. Before
-writing, it rejects drafts and rechecks every planned target and dependency
-revision. The transaction uses creates or per-document revision guards,
+writing, it rejects drafts; rechecks the complete live analytical
+ID/type/revision ledger and exact snapshot digest against the approved plan;
+and rechecks every planned target and dependency revision. It also requires the
+manifest and plan to cover the complete published release cohort, projects all
+reviewed sidecar and lifecycle mutations into the live source in memory, and
+builds and validates the resulting FR-007 dataset before a transaction object
+exists. The transaction uses creates or per-document revision guards,
 including any `releaseVersion.statusFirstObservedAt` patch. After commit it
 verifies exact sidecar and release-version bodies, rebuilds and validates the
-published FR-007 dataset, and replays the planner against post-apply revisions
-to require a zero-residual no-op. It writes a local receipt with the resulting
-revisions and historical-dataset fingerprint.
+published FR-007 dataset against the preflight result, and replays the planner
+against post-apply revisions to require a zero-residual no-op. It writes a local
+receipt with the resulting revisions and historical-dataset fingerprint.
 
 The apply preflight also re-derives every explicit lifecycle evidence
 availability day from the still-current evidence revision and requires it to
