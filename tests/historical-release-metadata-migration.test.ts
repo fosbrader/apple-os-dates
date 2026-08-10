@@ -4,12 +4,19 @@ import path from "node:path";
 import test from "node:test";
 
 import {
+  assertHistoricalAnalyticalSnapshotMatchesPlan,
   buildHistoricalReleaseMetadataPlan,
   HistoricalReleaseMetadataNoopPlanError,
   historicalReleaseEvidenceReference,
   historicalReleaseMetadataId,
+  parseCuratedHistoricalMetadataManifest,
   validateHistoricalReleaseMetadataPlan,
 } from "../scripts/lib/historical-release-metadata-migration";
+import {
+  assertExactHistoricalManifestCohortCoverage,
+  buildValidatedHistoricalPostPlanDataset,
+} from "../scripts/lib/historical-release-metadata-apply-preflight";
+import type { PublishedHistoricalReleaseSource } from "../src/lib/historical-release-source";
 
 const versionId = "version-testos-27-0";
 const metadataId = historicalReleaseMetadataId(versionId);
@@ -161,6 +168,19 @@ function plannedSidecar() {
   };
 }
 
+function publishedSource(
+  releases: PublishedHistoricalReleaseSource["releases"] = [
+    { id: versionId, lifecycle: "active" },
+  ],
+): PublishedHistoricalReleaseSource {
+  return {
+    releases,
+    events: [],
+    compatibilityMilestones: [],
+    releaseMetadata: [],
+  };
+}
+
 test("builds a deterministic create with exact evidence revisions and delete rollback", () => {
   const first = buildHistoricalReleaseMetadataPlan(snapshot(), manifest());
   const second = buildHistoricalReleaseMetadataPlan(
@@ -215,6 +235,105 @@ test("builds a deterministic create with exact evidence revisions and delete rol
   assert.deepEqual(
     validateHistoricalReleaseMetadataPlan(first.plan, first.rollback),
     [],
+  );
+});
+
+test("pre-commit FR-007 validation uses the exact complete manifest cohort", () => {
+  assert.throws(
+    () =>
+      buildHistoricalReleaseMetadataPlan(
+        snapshot([
+          {
+            _id: "version-testos-27-1",
+            _type: "releaseVersion",
+            _rev: "version-other-rev-1",
+            releaseTrain: { _type: "reference", _ref: "train-testos-27" },
+          },
+        ]),
+        manifest(),
+      ),
+    /exactly cover every releaseVersion in the complete analytical snapshot/,
+  );
+
+  const result = buildHistoricalReleaseMetadataPlan(snapshot(), manifest());
+  const dataset = buildValidatedHistoricalPostPlanDataset({
+    source: publishedSource(),
+    manifest: parseCuratedHistoricalMetadataManifest(manifest()),
+    plan: result.plan,
+    issuedAt: "2026-09-15T12:00:00.000Z",
+  });
+  assert.equal(dataset.releaseCycles.length, 1);
+  assert.equal(dataset.releaseCycles[0]?.releaseId, versionId);
+
+  const partialSource = publishedSource([
+    { id: versionId, lifecycle: "active" },
+    { id: "version-testos-27-1", lifecycle: "active" },
+  ]);
+  assert.throws(
+    () =>
+      assertExactHistoricalManifestCohortCoverage(
+        parseCuratedHistoricalMetadataManifest(manifest()),
+        result.plan,
+        partialSource,
+      ),
+    /exactly cover the complete published analytical release cohort/,
+  );
+  assert.throws(
+    () =>
+      buildValidatedHistoricalPostPlanDataset({
+        source: partialSource,
+        manifest: parseCuratedHistoricalMetadataManifest(manifest()),
+        plan: result.plan,
+        issuedAt: "2026-09-15T12:00:00.000Z",
+      }),
+    /exactly cover the complete published analytical release cohort/,
+  );
+});
+
+test("the approved plan binds every analytical document revision including release events", () => {
+  const event = {
+    _id: "event-testos-27-beta-1",
+    _type: "releaseEvent",
+    _rev: "event-rev-1",
+    stableEventId: "testos-27-beta-1",
+    releaseVersion: { _type: "reference", _ref: versionId },
+    appearanceDate: "2026-09-01",
+    channel: "developer-beta",
+  };
+  const plannedSnapshot = snapshot([event]);
+  const result = buildHistoricalReleaseMetadataPlan(
+    plannedSnapshot,
+    manifest(),
+  );
+  assert.doesNotThrow(() =>
+    assertHistoricalAnalyticalSnapshotMatchesPlan(result.plan, plannedSnapshot),
+  );
+
+  const changedRevision = structuredClone(plannedSnapshot);
+  const changedEvent = changedRevision.documents.find(
+    ({ _id }) => _id === event._id,
+  );
+  assert.ok(changedEvent);
+  changedEvent._rev = "event-rev-2";
+  assert.throws(
+    () =>
+      assertHistoricalAnalyticalSnapshotMatchesPlan(
+        result.plan,
+        changedRevision,
+      ),
+    /complete live analytical document revision set changed/,
+  );
+
+  const changedBytes = structuredClone(plannedSnapshot);
+  const changedEventBytes = changedBytes.documents.find(
+    ({ _id }) => _id === event._id,
+  );
+  assert.ok(changedEventBytes);
+  changedEventBytes.channel = "public-beta";
+  assert.throws(
+    () =>
+      assertHistoricalAnalyticalSnapshotMatchesPlan(result.plan, changedBytes),
+    /complete live analytical snapshot changed/,
   );
 });
 
@@ -715,6 +834,71 @@ test("manifest values stay explicit, closed, sourced, unique, and release keyed"
   );
 });
 
+test("manifest, plan, and rollback artifacts reject unknown properties recursively", () => {
+  const unknownManifestRoot = manifest() as Record<string, unknown>;
+  unknownManifestRoot.unreviewed = true;
+  assert.throws(
+    () => parseCuratedHistoricalMetadataManifest(unknownManifestRoot),
+    /Curated manifest contains unknown property: unreviewed/,
+  );
+
+  const unknownManifestEvidence = manifest();
+  const evidence = unknownManifestEvidence.entries[0].metadataEvidence
+    .productFamily[0] as Record<string, unknown>;
+  evidence.note = "not part of the reviewed contract";
+  assert.throws(
+    () => parseCuratedHistoricalMetadataManifest(unknownManifestEvidence),
+    /metadataEvidence\.productFamily\[0\] contains unknown property: note/,
+  );
+
+  const result = buildHistoricalReleaseMetadataPlan(snapshot(), manifest());
+  const unknownPlan = structuredClone(result.plan) as typeof result.plan & {
+    mutations: Array<
+      (typeof result.plan.mutations)[number] & { unreviewed?: boolean }
+    >;
+  };
+  unknownPlan.mutations[0].unreviewed = true;
+  assert.ok(
+    validateHistoricalReleaseMetadataPlan(unknownPlan, result.rollback).some(
+      (failure) =>
+        failure.includes("plan.mutations[0] contains unknown properties: unreviewed"),
+    ),
+  );
+
+  const unknownNestedPlan = structuredClone(result.plan);
+  const projectedReference = (
+    unknownNestedPlan.mutations[0].set.metadataEvidence as {
+      productFamily: Array<Record<string, unknown>>;
+    }
+  ).productFamily[0];
+  projectedReference.unreviewed = true;
+  assert.ok(
+    validateHistoricalReleaseMetadataPlan(
+      unknownNestedPlan,
+      result.rollback,
+    ).some((failure) =>
+      failure.includes(
+        "plan.mutations[0].set.metadataEvidence.productFamily[0] contains unknown properties: unreviewed",
+      ),
+    ),
+  );
+
+  const unknownRollback = structuredClone(result.rollback) as typeof result.rollback & {
+    restoreMutations: Array<
+      (typeof result.rollback.restoreMutations)[number] & { unreviewed?: boolean }
+    >;
+  };
+  unknownRollback.restoreMutations[0].unreviewed = true;
+  assert.ok(
+    validateHistoricalReleaseMetadataPlan(result.plan, unknownRollback).some(
+      (failure) =>
+        failure.includes(
+          "rollback.restoreMutations[0] contains unknown properties: unreviewed",
+        ),
+    ),
+  );
+});
+
 test("plan and rollback hashes bind every exact operation", () => {
   const result = buildHistoricalReleaseMetadataPlan(snapshot(), manifest());
   const tamperedPlan = structuredClone(result.plan);
@@ -771,6 +955,10 @@ test("the apply command retains all independent production gates", () => {
     "plan.lifecycleObservationPatches",
     "exactEqual(writableBody(current), mutation.after)",
     "historicalLifecycleObservationEvidence(",
+    "assertHistoricalAnalyticalSnapshotMatchesPlan(plan",
+    "HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES",
+    "buildValidatedHistoricalPostPlanDataset({",
+    "expectedPostPlanDataset",
     'perspective: "raw"',
     'perspective: "published"',
     "buildHistoricalAnalysisDataset",
@@ -779,4 +967,9 @@ test("the apply command retains all independent production gates", () => {
   ]) {
     assert.ok(source.includes(required), `missing apply guard: ${required}`);
   }
+  assert.ok(
+    source.indexOf("buildValidatedHistoricalPostPlanDataset({") <
+      source.indexOf("let transaction = client.transaction()"),
+    "FR-007 in-memory overlay validation must finish before a transaction exists",
+  );
 });

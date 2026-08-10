@@ -11,9 +11,11 @@ import * as path from "node:path";
 import { getCliClient } from "sanity/cli";
 
 import {
+  assertHistoricalAnalyticalSnapshotMatchesPlan,
   assertValidHistoricalReleaseMetadataPlan,
   buildHistoricalReleaseMetadataPlan,
   flattenedMetadataEvidence,
+  HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES,
   historicalLifecycleObservationEvidence,
   historicalReleaseEvidenceReference,
   HistoricalReleaseMetadataNoopPlanError,
@@ -23,6 +25,7 @@ import {
   type HistoricalReleaseMetadataPlan,
   type HistoricalReleaseMetadataRollback,
 } from "./lib/historical-release-metadata-migration";
+import { buildValidatedHistoricalPostPlanDataset } from "./lib/historical-release-metadata-apply-preflight";
 import { stableStringify } from "./lib/release-event-migration";
 import {
   PUBLISHED_HISTORICAL_RELEASE_FETCH_OPTIONS,
@@ -279,6 +282,13 @@ async function run(): Promise<void> {
     perspective: "published",
     useCdn: false,
   });
+  const issuedAt = new Date().toISOString();
+  const preApplySource =
+    await publishedClient.fetch<PublishedHistoricalReleaseSource>(
+      publishedHistoricalReleaseSourceQuery,
+      {},
+      PUBLISHED_HISTORICAL_RELEASE_FETCH_OPTIONS,
+    );
 
   const expectedRevisions = new Map<string, string>();
   const evidenceIds = new Set<string>();
@@ -317,32 +327,21 @@ async function run(): Promise<void> {
       ...plan.lifecycleObservationPatches.map(({ id }) => id),
     ]),
   ];
-  const dependencyIds = [...expectedRevisions.keys()];
-  const rawIds = [...new Set([...targetIds, ...dependencyIds])];
-  const plannedReleaseVersionIds = plan.mutations.map(
-    ({ releaseVersionId }) => releaseVersionId,
+  const rawAnalyticalDocuments = await rawClient.fetch<
+    HistoricalMetadataSnapshotDocument[]
+  >(
+    `*[_type in $types] | order(_id asc)`,
+    { types: HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES },
   );
-  const rawDocuments = await rawClient.fetch<HistoricalMetadataSnapshotDocument[]>(
-    `*[
-      _id in $ids ||
-      _id in $draftIds ||
-      (
-        _type == "historicalReleaseMetadata" &&
-        releaseVersion._ref in $releaseVersionIds
-      )
-    ] {
-      _id, _type, _rev, releaseVersion, publishedAt, accessedAt, verifiedAt
-    } | order(_id asc)`,
-    {
-      ids: rawIds,
-      draftIds: rawIds.map((id) => `drafts.${id}`),
-      releaseVersionIds: plannedReleaseVersionIds,
-    },
+  const draft = rawAnalyticalDocuments.find(({ _id }) =>
+    _id.startsWith("drafts."),
   );
-  const draft = rawDocuments.find(({ _id }) => _id.startsWith("drafts."));
   if (draft) {
     throw new Error(`Open draft ${draft._id} blocks this apply.`);
   }
+  const rawDocuments = assertHistoricalAnalyticalSnapshotMatchesPlan(plan, {
+    documents: rawAnalyticalDocuments,
+  });
   const plannedSidecarIds = new Set(plan.mutations.map(({ id }) => id));
   const unexpectedSidecar = rawDocuments.find(
     (document) =>
@@ -351,7 +350,7 @@ async function run(): Promise<void> {
   );
   if (unexpectedSidecar) {
     throw new Error(
-      `Unexpected sidecar ${unexpectedSidecar._id} now targets a planned release version. Generate and approve a new plan.`,
+      `Unexpected sidecar ${unexpectedSidecar._id} is outside the exact reviewed cohort. Generate and approve a new plan.`,
     );
   }
   const rawById = new Map(rawDocuments.map((document) => [document._id, document]));
@@ -418,6 +417,13 @@ async function run(): Promise<void> {
     }
   }
 
+  const expectedPostPlanDataset = buildValidatedHistoricalPostPlanDataset({
+    source: preApplySource,
+    manifest,
+    plan,
+    issuedAt,
+  });
+
   let transaction = client.transaction();
   for (const mutation of plan.mutations) {
     if (mutation.action === "create") {
@@ -472,7 +478,6 @@ async function run(): Promise<void> {
       )}. Use the reviewed rollback artifact for guarded recovery.`,
     );
   }
-  const issuedAt = new Date().toISOString();
   let liveDataset: ReturnType<typeof buildHistoricalAnalysisDataset>;
   try {
     const liveSource =
@@ -496,6 +501,11 @@ async function run(): Promise<void> {
     if (liveDatasetIssues.length) {
       throw new Error(stableStringify(liveDatasetIssues));
     }
+    if (!exactEqual(liveDataset, expectedPostPlanDataset)) {
+      throw new Error(
+        "Published FR-007 output does not match the validated in-memory post-plan dataset.",
+      );
+    }
   } catch (error) {
     throw new Error(
       `Transaction ${result.transactionId} committed, but post-apply FR-007 validation failed: ${error instanceof Error ? error.message : String(error)}. Use the reviewed rollback artifact for guarded recovery.`,
@@ -508,14 +518,7 @@ async function run(): Promise<void> {
     const postPlanningDocuments = await publishedClient.fetch<
       HistoricalMetadataSnapshotDocument[]
     >(`*[_type in $types]`, {
-      types: [
-        "platform",
-        "releaseTrain",
-        "releaseVersion",
-        "source",
-        "auditBatch",
-        "historicalReleaseMetadata",
-      ],
+      types: HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES,
     });
     const postPlanningById = new Map(
       postPlanningDocuments.map((document) => [document._id, document]),
