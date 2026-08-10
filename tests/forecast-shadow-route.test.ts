@@ -90,3 +90,32 @@ test("forecast shadow cron rejects an invalid clock and redacts pipeline failure
   });
   assert.doesNotMatch(JSON.stringify(logs), /secret\.json|forecast\/artifacts/);
 });
+
+test("forecast shadow cron rejects overlapping work in one function instance", async () => {
+  let release: (() => void) | undefined;
+  let started: (() => void) | undefined;
+  const didStart = new Promise<void>((resolve) => {
+    started = resolve;
+  });
+  const mayFinish = new Promise<void>((resolve) => {
+    release = resolve;
+  });
+  let calls = 0;
+  const handler = createForecastShadowHandler({
+    runForecastShadow: async () => {
+      calls += 1;
+      started?.();
+      await mayFinish;
+    },
+    getCronSecret: () => cronSecret,
+    now: () => new Date("2026-08-10T08:43:00.000Z"),
+  });
+
+  const first = handler(request(cronSecret));
+  await didStart;
+  const overlap = await handler(request(cronSecret));
+  assert.equal(overlap.status, 409);
+  assert.equal(calls, 1);
+  release?.();
+  assert.equal((await first).status, 200);
+});

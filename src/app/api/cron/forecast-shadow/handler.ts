@@ -41,6 +41,8 @@ export function createForecastShadowHandler({
   getCronSecret = () => process.env.CRON_SECRET,
   now = () => new Date(),
 }: ForecastShadowHandlerOptions) {
+  let runInProgress = false;
+
   return async function GET(request: Request): Promise<Response> {
     const secret = getCronSecret()?.trim();
     if (!secret || secret.length < 24) {
@@ -57,7 +59,11 @@ export function createForecastShadowHandler({
       console.error("Forecast shadow cron received an invalid clock value");
       return json({ error: "Forecast generation is unavailable." }, 503);
     }
+    if (runInProgress) {
+      return json({ error: "Forecast generation is already running." }, 409);
+    }
 
+    runInProgress = true;
     try {
       await runForecastShadow({
         requestedAt,
@@ -70,6 +76,8 @@ export function createForecastShadowHandler({
         error instanceof Error ? error.name : "UnknownError",
       );
       return json({ error: "Forecast generation failed." }, 503);
+    } finally {
+      runInProgress = false;
     }
   };
 }
