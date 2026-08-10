@@ -281,3 +281,52 @@ artifact and uses historical residuals visible at `sourceAsOfDate`.
 ```sh
 npm run release-date:interval-calibration:validate -- path/to/release-date-interval-calibration.json
 ```
+
+## Next eligible prerelease event v1 (FR-011)
+
+`src/lib/next-eligible-prerelease-event.ts` is a separate, private, pure
+model for the immediate next verified prerelease appearance. It neither changes
+the public forecast nor reads storage, a clock, a network, Sanity, or UI
+state. Its only endpoint classes are developer beta, public beta, and release
+candidate. Golden Master and public-release appearances are terminal or
+ineligible next events; they can never become a target by fallback.
+
+For every canonical prerelease anchor, the model takes exactly the immediate
+subsequent event in verified chronology. It never skips an intervening GM or
+public event to find a more convenient beta. A same-day group must have unique
+verified `sameDayOrder` values; otherwise any affected predecessor fails closed
+with `same-day-ambiguity`. A same-calendar-day transition has no measurable
+timing outcome and is excluded. The endpoint fact must have been first
+observed strictly after the anchor fact.
+
+Historical fold origins are the anchor's `firstObservedOn`. Training requires
+both the prior anchor and endpoint occurrence/fact to have been known by that
+origin; held-out targets are excluded. At an explicit snapshot cutoff,
+`predictNextEligiblePrereleaseEvent` selects the latest verified prerelease
+anchor only from an included, complete, active cycle. It first inspects the
+latest known event of every kind; if that event is GM, public release,
+descriptive, or ambiguously ordered, it does not skip backward to an older
+beta. It returns unavailable
+when the latest anchor is same-day ambiguous, the next-stage classifier is
+weak, or timing has inadequate evidence.
+
+The next-stage classifier uses the same platform and anchor stage when at
+least eight examples exist, otherwise the same-platform pooled cohort. It
+requires a unique modal endpoint class with a share of at least 60%; five of
+eight passes while four of eight and ties fail. Timing is then conditioned on
+that *predicted* endpoint class: same platform plus anchor stage and endpoint
+class, with a same-platform/end-class fallback, again requiring eight examples.
+Platforms are never mixed.
+
+Intervals are residual-calibrated only from strict earlier-origin forecasts
+whose endpoint facts were visible at the outer origin. Their pools preserve the
+target definition (platform and predicted endpoint class): a stage miss never
+contributes its elapsed days as a residual for the predicted class. Both 50% and
+80% levels use the same chosen residual pool. Fewer than eight residuals emits
+a typed unavailable interval. The artifact embeds its validated historical
+source and rederives every target, fold, prediction, residual, and fingerprint
+in the standalone validator:
+
+```sh
+npm run next-prerelease:validate -- path/to/next-eligible-prerelease-event.json
+```
