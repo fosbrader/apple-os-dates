@@ -8,7 +8,10 @@ import {
   type HistoricalLifecycleOutcomeRow,
   type HistoricalReleaseCycleRow,
 } from "./historical-analysis-dataset";
-import type { PublishedHistoricalReleaseSource } from "./historical-release-source";
+import {
+  validatePublishedHistoricalReleaseSource,
+  type PublishedHistoricalReleaseSource,
+} from "./historical-release-source";
 import { adaptReleaseObservations } from "./release-observation-adapter";
 
 /**
@@ -367,12 +370,26 @@ function buildDatasetFromSource(
   });
 }
 
+function validatedRuntimeSource(
+  source: PublishedHistoricalReleaseSource,
+  issuedAt: string,
+): PublishedHistoricalReleaseSource {
+  try {
+    return validatePublishedHistoricalReleaseSource(source, issuedAt);
+  } catch {
+    throw new ForecastRuntimeCohortError("source-dataset-mismatch");
+  }
+}
+
 /** Rebuild helper used by projection verification and local capacity tooling. */
 export function buildHistoricalAnalysisDatasetFromPublishedSource(
   source: PublishedHistoricalReleaseSource,
   cutoff: { asOfDate: string; issuedAt: string },
 ): HistoricalAnalysisDatasetV1 {
-  return buildDatasetFromSource(source, cutoff);
+  return buildDatasetFromSource(
+    validatedRuntimeSource(source, cutoff.issuedAt),
+    cutoff,
+  );
 }
 
 function assertSourceJoins(
@@ -557,7 +574,11 @@ export function buildForecastRuntimeCohortSelection(
   dataset: HistoricalAnalysisDatasetV1,
   source: PublishedHistoricalReleaseSource,
 ): ForecastRuntimeCohortSelectionV1 {
-  const rawObservationCounts = assertExactSource(dataset, source);
+  const boundedSource = validatedRuntimeSource(
+    source,
+    dataset.provenance.sourceIssuedAt,
+  );
+  const rawObservationCounts = assertExactSource(dataset, boundedSource);
   const outcomes = publicOutcomeByRelease(dataset);
   const eventCounts = new Map<string, number>();
   for (const event of dataset.canonicalEvents) {
@@ -747,7 +768,7 @@ export function buildForecastRuntimeCohortSelection(
       version: dataset.datasetVersion,
       fingerprint: dataset.fingerprints.datasetFingerprint,
       rawSourceFingerprint:
-        forecastRuntimeCohortRawSourceFingerprint(source),
+        forecastRuntimeCohortRawSourceFingerprint(boundedSource),
       asOfDate: dataset.provenance.sourceAsOfDate,
       issuedAt: dataset.provenance.sourceIssuedAt,
     },
@@ -833,17 +854,24 @@ export function projectPublishedHistoricalReleaseSourceForRuntimeCohort(
   if (validateForecastRuntimeCohortSelection(selection).length > 0) {
     throw new ForecastRuntimeCohortError("invalid-dataset");
   }
+  const boundedSource = validatedRuntimeSource(
+    source,
+    selection.sourceDataset.issuedAt,
+  );
   let rebuilt: HistoricalAnalysisDatasetV1;
   try {
-    assertSourceJoins(source);
-    assertRawObservationInstants(source, selection.sourceDataset.issuedAt);
+    assertSourceJoins(boundedSource);
+    assertRawObservationInstants(
+      boundedSource,
+      selection.sourceDataset.issuedAt,
+    );
     if (
-      forecastRuntimeCohortRawSourceFingerprint(source) !==
+      forecastRuntimeCohortRawSourceFingerprint(boundedSource) !==
       selection.sourceDataset.rawSourceFingerprint
     ) {
       throw new ForecastRuntimeCohortError("source-dataset-mismatch");
     }
-    rebuilt = buildDatasetFromSource(source, {
+    rebuilt = buildDatasetFromSource(boundedSource, {
       asOfDate: selection.sourceDataset.asOfDate,
       issuedAt: selection.sourceDataset.issuedAt,
     });
@@ -860,7 +888,10 @@ export function projectPublishedHistoricalReleaseSourceForRuntimeCohort(
 
   let authoritativeSelection: ForecastRuntimeCohortSelectionV1;
   try {
-    authoritativeSelection = buildForecastRuntimeCohortSelection(rebuilt, source);
+    authoritativeSelection = buildForecastRuntimeCohortSelection(
+      rebuilt,
+      boundedSource,
+    );
   } catch {
     throw new ForecastRuntimeCohortError("source-dataset-mismatch");
   }
@@ -873,15 +904,15 @@ export function projectPublishedHistoricalReleaseSourceForRuntimeCohort(
 
   const selectedIds = new Set(selection.selectedReleaseIds);
   const projected: PublishedHistoricalReleaseSource = {
-    releases: source.releases
+    releases: boundedSource.releases
       .filter((release) => selectedIds.has(release.id))
       .slice()
       .sort((left, right) => compareText(left.id, right.id)),
-    events: source.events
+    events: boundedSource.events
       .filter((event) => selectedIds.has(event.releaseId))
       .slice()
       .sort(projectionEventSort),
-    compatibilityMilestones: source.compatibilityMilestones
+    compatibilityMilestones: boundedSource.compatibilityMilestones
       .filter((milestone) => selectedIds.has(milestone.releaseId))
       .slice()
       .sort(
@@ -890,7 +921,7 @@ export function projectPublishedHistoricalReleaseSourceForRuntimeCohort(
           compareText(left.occurredOn, right.occurredOn) ||
           compareText(left.id, right.id),
       ),
-    releaseMetadata: source.releaseMetadata
+    releaseMetadata: boundedSource.releaseMetadata
       .filter((metadata) => selectedIds.has(metadata.releaseId))
       .slice()
       .sort((left, right) => compareText(left.releaseId, right.releaseId)),

@@ -504,12 +504,12 @@ test("serialized selection artifacts fail closed before exclusions grow unbounde
   assert.throws(
     () =>
       buildForecastRuntimeCohortSelection(
-        dataset(expandedSource),
+        dataset(source),
         expandedSource,
       ),
     (error: unknown) =>
       error instanceof ForecastRuntimeCohortError &&
-      error.code === "selection-artifact-limit",
+      error.code === "source-dataset-mismatch",
   );
 });
 
@@ -620,10 +620,6 @@ test("raw fingerprint and exact issuance instant reject same-day future drift", 
     ),
   };
 
-  assert.equal(
-    dataset(lateSource).fingerprints.datasetFingerprint,
-    exactDataset.fingerprints.datasetFingerprint,
-  );
   assert.notEqual(
     forecastRuntimeCohortRawSourceFingerprint(lateSource),
     selection.sourceDataset.rawSourceFingerprint,
@@ -653,6 +649,92 @@ test("raw fingerprint and exact issuance instant reject same-day future drift", 
         dataset(nonCanonicalSource),
         nonCanonicalSource,
       ),
+    (error: unknown) =>
+      error instanceof ForecastRuntimeCohortError &&
+      error.code === "source-dataset-mismatch",
+  );
+});
+
+test("selector and projection normalize a production-shaped Sanity null envelope", () => {
+  const omitted = clone(buildSource({ platforms: ["ios"] }));
+  for (const release of omitted.releases) {
+    delete release.statusFirstObservedAt;
+    if (release.lifecycle === "active") delete release.statusEffectiveOn;
+  }
+  for (const event of omitted.events) {
+    delete event.firstObservedAt;
+    delete event.sameDayOrder;
+    delete event.isRevision;
+    delete event.revisionOfId;
+    delete event.replacesEventId;
+    delete event.replacedByEventId;
+    delete event.closesReleaseCycle;
+    delete event.legacySourceId;
+  }
+  const groqShaped = {
+    ...omitted,
+    releases: omitted.releases.map((release) => ({
+      ...release,
+      statusFirstObservedAt: null,
+      ...(release.lifecycle === "active" ? { statusEffectiveOn: null } : {}),
+    })),
+    events: omitted.events.map((event) => ({
+      ...event,
+      firstObservedAt: null,
+      sameDayOrder: null,
+      isRevision: null,
+      revisionOfId: null,
+      replacesEventId: null,
+      replacedByEventId: null,
+      closesReleaseCycle: null,
+      legacySourceId: null,
+    })),
+    releaseMetadata: omitted.releaseMetadata.map((metadata) => ({
+      ...metadata,
+      chronologyCoverage: {
+        ...metadata.chronologyCoverage,
+        reason: null,
+      },
+    })),
+  } as unknown as PublishedHistoricalReleaseSource;
+  const exactDataset = dataset(omitted);
+
+  assert.equal(
+    dataset(groqShaped).fingerprints.datasetFingerprint,
+    exactDataset.fingerprints.datasetFingerprint,
+  );
+  const selection = buildForecastRuntimeCohortSelection(
+    exactDataset,
+    groqShaped,
+  );
+  assert.deepEqual(validateForecastRuntimeCohortSelection(selection), []);
+  const projected = projectPublishedHistoricalReleaseSourceForRuntimeCohort(
+    groqShaped,
+    selection,
+  );
+  assert.ok(
+    projected.events.every(
+      (event) =>
+        event.firstObservedAt === undefined &&
+        event.sameDayOrder === undefined &&
+        event.isRevision === undefined,
+    ),
+  );
+});
+
+test("selector applies the shared raw-source bounds before preprocessing", () => {
+  const source = buildSource({ platforms: ["ios"] });
+  const exactDataset = dataset(source);
+  const unbounded = {
+    ...source,
+    events: Array.from({ length: 2_049 }, (_, index) => ({
+      ...source.events[index % source.events.length]!,
+      id: `overflow-${index}`,
+    })),
+  };
+
+  assert.throws(
+    () => buildForecastRuntimeCohortSelection(exactDataset, unbounded),
     (error: unknown) =>
       error instanceof ForecastRuntimeCohortError &&
       error.code === "source-dataset-mismatch",
