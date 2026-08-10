@@ -61,7 +61,8 @@ forecast/pointers/private-shadow.json
 ```
 
 Artifact writes validate canonical `forecast-artifact/v1` JSON, its content
-identity, and the 1 MiB limit before upload. Reconciliation objects bind their
+identity, and the 262,144-byte (256 KiB) limit before upload. Reconciliation
+objects bind their
 raw bytes to the path digest. Score objects use the same raw digest binding and
 a separate 64 KiB cap. The adapter does not list score objects; FR-015 must read
 an exact score digest referenced by its typed reconciliation index. Immutable

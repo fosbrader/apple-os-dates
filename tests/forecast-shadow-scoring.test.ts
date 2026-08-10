@@ -3,6 +3,8 @@ import test from "node:test";
 
 import {
   FORECAST_ARTIFACT_MAX_BYTES,
+  CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT,
+  FORECAST_ORIGIN_BENCHMARK_VERSION,
   FORECAST_POINTER_PATH,
   buildForecastArtifact,
   forecastArtifactPath,
@@ -13,11 +15,13 @@ import {
   serializeForecastPointer,
   type AtomicCasResult,
   type ForecastArtifactDraftV1,
+  type ForecastArtifactBenchmarkV1,
   type ForecastArtifactTargetV1,
   type ForecastContractStorage,
   type ForecastPointerV1,
   type ImmutablePutResult,
 } from "../src/lib/forecast-artifact-contracts";
+import { NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT } from "../src/lib/next-eligible-prerelease-event";
 import {
   buildHistoricalAnalysisDataset,
   historicalAnalysisFingerprint,
@@ -260,23 +264,85 @@ function outcomeBindings(dataset: HistoricalAnalysisDatasetV1, overrides: Readon
   });
 }
 
+function originBenchmarks(args: {
+  targetKind: "public-release" | "next-eligible-prerelease-event";
+  datasetFingerprint: string;
+  modelFingerprint: string;
+  calibrationFingerprint: string;
+  currentSourceFingerprint: string;
+  modelComponents: readonly { role: "model-training" | "stage-training" | "timing-training"; cohortId: string; memberIds: readonly string[] }[];
+  calibrationPoolId: string;
+  calibrationResidualIds: readonly string[];
+  pointDays: number;
+  pointCalendarDate: string;
+  fifty: ReturnType<typeof interval>;
+  predictedEligibleStage?: "public-beta";
+}): readonly ForecastArtifactBenchmarkV1[] {
+  return [
+    {
+      benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+      benchmarkId: "selected-private-model" as const,
+      modelVersion: args.targetKind === "public-release" ? "release-date-candidates/v1" as const : "next-eligible-prerelease-event/v1" as const,
+      sourceFingerprint: args.datasetFingerprint,
+      modelFingerprint: args.modelFingerprint,
+      calibrationFingerprint: args.calibrationFingerprint,
+      cohorts: [
+        { binding: "target" as const, role: "calibration-residual" as const, cohortId: args.calibrationPoolId, memberCount: args.calibrationResidualIds.length },
+        ...args.modelComponents.map((component) => ({ binding: "target" as const, role: component.role, cohortId: component.cohortId, memberCount: component.memberIds.length })),
+      ],
+      availability: "available" as const,
+      prediction: args.targetKind === "next-eligible-prerelease-event"
+        ? { targetKind: args.targetKind, pointDays: args.pointDays, pointCalendarDate: args.pointCalendarDate, roundingRule: "outward-floor-half-up-ceil/v1" as const, empiricalRange: { level: 0.5 as const, lowerDays: args.fifty.lowerDays, upperDays: args.fifty.upperDays, lowerCalendarDate: args.fifty.lowerCalendarDate, upperCalendarDate: args.fifty.upperCalendarDate }, predictedEligibleStage: args.predictedEligibleStage! }
+        : { targetKind: args.targetKind, pointDays: args.pointDays, pointCalendarDate: args.pointCalendarDate, roundingRule: "outward-floor-half-up-ceil/v1" as const, empiricalRange: { level: 0.5 as const, lowerDays: args.fifty.lowerDays, upperDays: args.fifty.upperDays, lowerCalendarDate: args.fifty.lowerCalendarDate, upperCalendarDate: args.fifty.upperCalendarDate } },
+    },
+    {
+      benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+      benchmarkId: "current-public-heuristic" as const,
+      modelVersion: "current-public-heuristic/v1" as const,
+      sourceFingerprint: args.currentSourceFingerprint,
+      modelFingerprint: CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT,
+      calibrationFingerprint: null,
+      cohorts: [],
+      availability: "unavailable" as const,
+      reason: args.targetKind === "public-release" ? "heuristic-paused" as const : "incomparable-target-definition" as const,
+    },
+    {
+      benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+      benchmarkId: "simple-baseline" as const,
+      modelVersion: args.targetKind === "public-release" ? "release-date-candidates/v1" as const : "next-event-simple-baseline/v1" as const,
+      sourceFingerprint: args.datasetFingerprint,
+      modelFingerprint: args.targetKind === "public-release" ? sha("3") : NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT,
+      calibrationFingerprint: null,
+      cohorts: [],
+      availability: "unavailable" as const,
+      reason: "minimum-training-examples" as const,
+    },
+  ];
+}
+
 function forecastDraft(dataset: HistoricalAnalysisDatasetV1, suffixes: string | readonly string[] = "a", options: { scheduledFor?: string; generatedAt?: string; includeNext?: boolean; sameTargetId?: boolean } = {}): ForecastArtifactDraftV1 {
   const selected = typeof suffixes === "string" ? [suffixes] : [...suffixes];
   const scheduledFor = options.scheduledFor ?? "2026-08-09";
   const generatedAt = options.generatedAt ?? `${scheduledFor}T20:00:00.000Z`;
   const includeNext = options.includeNext ?? true;
   const targets: ForecastArtifactTargetV1[] = [];
+  const currentSourceFingerprint = sha("8");
   for (const suffix of selected) {
     const id = releaseId(suffix);
     const publicAnchor = dataset.canonicalEvents.find((row) => row.releaseId === id && row.stage === "developer-beta:1")!;
     const nextAnchor = dataset.canonicalEvents.find((row) => row.releaseId === id && row.stage === "developer-beta:2")!;
     const sharedId = `shared:${id}`;
+    const publicModelTrainingIds = Array.from({ length: 12 }, (_, index) => `public-model-${String(index).padStart(2, "0")}`);
+    const publicCalibrationIds = Array.from({ length: 8 }, (_, index) => `public-residual-${String(index).padStart(2, "0")}`);
+    const publicFifty = interval(publicAnchor.occurredOn, 10.5, 0.5, 2.5);
+    const publicPrediction = { pointEstimator: "hierarchical-platform-cadence" as const, pointDays: 10.5, pointCalendarDate: addDays(publicAnchor.occurredOn, 11), roundingRule: "outward-floor-half-up-ceil/v1" as const, intervals: [publicFifty, interval(publicAnchor.occurredOn, 10.5, 0.8, 4.5)] as const };
     targets.push({
       targetId: options.sameTargetId ? sharedId : `public:${id}`,
       targetKind: "public-release",
       availability: "available",
       releaseId: id,
       platformId: "ios",
+      productFamilyId: "iphone-os",
       anchorEventId: publicAnchor.eventId,
       anchorStage: publicAnchor.stage,
       anchorOccurredOn: publicAnchor.occurredOn,
@@ -284,9 +350,14 @@ function forecastDraft(dataset: HistoricalAnalysisDatasetV1, suffixes: string | 
       sourceEvidenceIds: publicAnchor.sourceEvidenceIds,
       modelFingerprint: sha("3"),
       calibrationFingerprint: sha("4"),
-      cohort: { modelCohortId: "ios-public-hierarchical", modelTrainingCount: 12, calibrationPoolId: "ios-public", calibrationResidualCount: 8 },
-      prediction: { pointEstimator: "hierarchical-platform-cadence", pointDays: 10.5, pointCalendarDate: addDays(publicAnchor.occurredOn, 11), roundingRule: "outward-floor-half-up-ceil/v1", intervals: [interval(publicAnchor.occurredOn, 10.5, 0.5, 2.5), interval(publicAnchor.occurredOn, 10.5, 0.8, 4.5)] },
+      cohort: { modelCohortId: "ios-public-hierarchical", modelTrainingCohorts: [{ role: "model-training", cohortId: "ios-public-hierarchical", memberIds: publicModelTrainingIds, memberCount: 12 }], modelTrainingCount: 12, calibrationPoolId: "ios-public", calibrationResidualIds: publicCalibrationIds, calibrationResidualCount: 8 },
+      prediction: publicPrediction,
+      benchmarks: originBenchmarks({ targetKind: "public-release", datasetFingerprint: dataset.fingerprints.datasetFingerprint, modelFingerprint: sha("3"), calibrationFingerprint: sha("4"), currentSourceFingerprint, modelComponents: [{ role: "model-training", cohortId: "ios-public-hierarchical", memberIds: publicModelTrainingIds }], calibrationPoolId: "ios-public", calibrationResidualIds: publicCalibrationIds, pointDays: publicPrediction.pointDays, pointCalendarDate: publicPrediction.pointCalendarDate, fifty: publicFifty }),
     });
+    const nextModelTrainingIds = Array.from({ length: 10 }, (_, index) => `next-model-${String(index).padStart(2, "0")}`);
+    const nextCalibrationIds = Array.from({ length: 8 }, (_, index) => `next-residual-${String(index).padStart(2, "0")}`);
+    const nextFifty = interval(nextAnchor.occurredOn, 7, 0.5, 1);
+    const nextPrediction = { pointEstimator: "next-event-timing-median" as const, pointDays: 7, pointCalendarDate: addDays(nextAnchor.occurredOn, 7), roundingRule: "outward-floor-half-up-ceil/v1" as const, intervals: [nextFifty, interval(nextAnchor.occurredOn, 7, 0.8, 2)] as const };
     if (includeNext) targets.push({
       targetId: options.sameTargetId ? sharedId : `next:${id}`,
       targetKind: "next-eligible-prerelease-event",
@@ -294,6 +365,7 @@ function forecastDraft(dataset: HistoricalAnalysisDatasetV1, suffixes: string | 
       predictedEligibleStage: "public-beta",
       releaseId: id,
       platformId: "ios",
+      productFamilyId: "iphone-os",
       anchorEventId: nextAnchor.eventId,
       anchorStage: nextAnchor.stage,
       anchorOccurredOn: nextAnchor.occurredOn,
@@ -301,8 +373,11 @@ function forecastDraft(dataset: HistoricalAnalysisDatasetV1, suffixes: string | 
       sourceEvidenceIds: nextAnchor.sourceEvidenceIds,
       modelFingerprint: sha("5"),
       calibrationFingerprint: sha("6"),
-      cohort: { modelCohortId: "ios-next-stage", modelTrainingCount: 10, calibrationPoolId: "ios-next-stage", calibrationResidualCount: 8 },
-      prediction: { pointEstimator: "next-event-timing-median", pointDays: 7, pointCalendarDate: addDays(nextAnchor.occurredOn, 7), roundingRule: "outward-floor-half-up-ceil/v1", intervals: [interval(nextAnchor.occurredOn, 7, 0.5, 1), interval(nextAnchor.occurredOn, 7, 0.8, 2)] },
+      cohort: { modelCohortId: "ios-next-stage", modelTrainingCohorts: [{ role: "stage-training", cohortId: "ios-next-stage-mode", memberIds: nextModelTrainingIds, memberCount: 10 }, { role: "timing-training", cohortId: "ios-next-stage-timing", memberIds: nextModelTrainingIds, memberCount: 10 }], modelTrainingCount: 10, calibrationPoolId: "ios-next-stage", calibrationResidualIds: nextCalibrationIds, calibrationResidualCount: 8 },
+      prediction: nextPrediction,
+      benchmarks: [
+        ...originBenchmarks({ targetKind: "next-eligible-prerelease-event", datasetFingerprint: dataset.fingerprints.datasetFingerprint, modelFingerprint: sha("5"), calibrationFingerprint: sha("6"), currentSourceFingerprint, modelComponents: [{ role: "stage-training", cohortId: "ios-next-stage-mode", memberIds: nextModelTrainingIds }, { role: "timing-training", cohortId: "ios-next-stage-timing", memberIds: nextModelTrainingIds }], calibrationPoolId: "ios-next-stage", calibrationResidualIds: nextCalibrationIds, pointDays: nextPrediction.pointDays, pointCalendarDate: nextPrediction.pointCalendarDate, fifty: nextFifty, predictedEligibleStage: "public-beta" }),
+      ],
     });
   }
   const sourceEvidenceIds = [...new Set(targets.flatMap((target) => target.sourceEvidenceIds))].sort();
@@ -319,6 +394,7 @@ function forecastDraft(dataset: HistoricalAnalysisDatasetV1, suffixes: string | 
       publicReleaseCalibration: { version: "release-date-interval-calibration/v1", fingerprint: sha("4") },
       nextEventModel: { version: "next-eligible-prerelease-event/v1", fingerprint: sha("5") },
       nextEventCalibration: { version: "next-eligible-prerelease-event/v1", fingerprint: sha("6") },
+      currentPublicHeuristic: { version: "current-public-heuristic/v1", sourceFingerprint: currentSourceFingerprint, modelFingerprint: CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT },
       codeFingerprint: sha("7"),
     },
     targets,

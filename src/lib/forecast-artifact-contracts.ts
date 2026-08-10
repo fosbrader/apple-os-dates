@@ -5,7 +5,17 @@ import {
   historicalAnalysisFingerprint,
   stableSerializeHistoricalAnalysis,
 } from "./historical-analysis-dataset";
-import { NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION, type EligiblePrereleaseStage } from "./next-eligible-prerelease-event";
+import {
+  FORECAST_MAX_SAMPLE,
+  FORECAST_MINIMUM_SAMPLE,
+  FORECAST_STALE_AFTER_DAYS,
+} from "./forecasts";
+import {
+  NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION,
+  NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT,
+  NEXT_EVENT_SIMPLE_BASELINE_VERSION,
+  type EligiblePrereleaseStage,
+} from "./next-eligible-prerelease-event";
 import {
   RELEASE_DATE_CANDIDATES,
   RELEASE_DATE_CANDIDATES_VERSION,
@@ -18,19 +28,55 @@ export const FORECAST_ARTIFACT_VERSION = "forecast-artifact/v1";
 export const FORECAST_POINTER_VERSION = "forecast-pointer/v1";
 export const FORECAST_ARTIFACT_MODE = "private-shadow";
 export const FORECAST_INTERVAL_ROUNDING_RULE = "outward-floor-half-up-ceil/v1";
-export const FORECAST_ARTIFACT_MAX_BYTES = 1_048_576;
+export const FORECAST_ARTIFACT_MAX_BYTES = 262_144;
 export const FORECAST_POINTER_MAX_BYTES = 16_384;
-export const FORECAST_ARTIFACT_MAX_TARGETS = 512;
+export const FORECAST_ARTIFACT_MAX_TARGETS = 32;
+export const FORECAST_ARTIFACT_MAX_AVAILABLE_TARGETS = 32;
+/** At most one member per bounded source observation; the byte cap remains stricter. */
+export const FORECAST_ARTIFACT_MAX_COHORT_MEMBERS = 4_096;
 export const FORECAST_ARTIFACT_MAX_METRICS = 512;
 export const FORECAST_ARTIFACT_MAX_EXCLUSIONS = 2_048;
 export const FORECAST_ARTIFACT_MAX_EVIDENCE_IDS = 4_096;
 export const FORECAST_POINTER_PATH = "forecast/pointers/private-shadow.json";
 export const FORECAST_RUN_IDENTITY_VERSION = "forecast-run-identity/v1";
 export const FORECAST_NEXT_EVENT_POINT_ESTIMATOR = "next-event-timing-median";
+export const FORECAST_ORIGIN_BENCHMARK_VERSION = "forecast-origin-benchmark/v1";
+export const FORECAST_CURRENT_PUBLIC_HEURISTIC_VERSION =
+  "current-public-heuristic/v1";
+const CURRENT_PUBLIC_HEURISTIC_CODE_MANIFEST = {
+  algorithm:
+    "frozen-current-public-heuristic-v1;legacy-milestone-anchor;release-position-then-release-class;median;p25-p75;active-status-only;exact-analytical-anchor-proof",
+  version: FORECAST_CURRENT_PUBLIC_HEURISTIC_VERSION,
+  minimumSample: FORECAST_MINIMUM_SAMPLE,
+  maximumSample: FORECAST_MAX_SAMPLE,
+  staleAfterDays: FORECAST_STALE_AFTER_DAYS,
+} as const;
+export const CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT =
+  historicalAnalysisFingerprint(CURRENT_PUBLIC_HEURISTIC_CODE_MANIFEST);
+export const FORECAST_BENCHMARK_IDS = [
+  "selected-private-model",
+  "current-public-heuristic",
+  "simple-baseline",
+] as const;
 
 export type ForecastTargetKind = "public-release" | "next-eligible-prerelease-event";
 export type ForecastPointEstimatorV1 = ReleaseDateCandidateId | typeof FORECAST_NEXT_EVENT_POINT_ESTIMATOR;
 export type ForecastArtifactAvailabilityReason = "insufficient-model-history" | "insufficient-calibration-history" | "ambiguous-chronology" | "weak-next-stage-mode" | "inactive-release" | "invalid-source-evidence";
+export type ForecastBenchmarkIdV1 = (typeof FORECAST_BENCHMARK_IDS)[number];
+export type ForecastBenchmarkCohortRoleV1 =
+  | "model-training"
+  | "calibration-residual"
+  | "stage-training"
+  | "timing-training";
+export type ForecastBenchmarkUnavailableReasonV1 =
+  | "selected-target-unavailable"
+  | "minimum-training-examples"
+  | "weak-stage-mode"
+  | "incomparable-target-definition"
+  | "release-mapping-unproven"
+  | "anchor-mapping-unproven"
+  | "heuristic-unavailable"
+  | "heuristic-paused";
 
 export interface ForecastArtifactProvenanceV1 {
   sourceAsOfDate: string;
@@ -43,6 +89,11 @@ export interface ForecastArtifactProvenanceV1 {
   nextEventModel: { version: typeof NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION; fingerprint: string };
   /** FR-011 owns its calibration internally, so this binds that same exact contract independently. */
   nextEventCalibration: { version: typeof NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION; fingerprint: string };
+  currentPublicHeuristic: {
+    version: typeof FORECAST_CURRENT_PUBLIC_HEURISTIC_VERSION;
+    sourceFingerprint: string;
+    modelFingerprint: typeof CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT;
+  };
   codeFingerprint: string;
 }
 
@@ -55,10 +106,82 @@ export interface ForecastArtifactRunIdentityV1 {
 
 export interface ForecastArtifactCohortV1 {
   modelCohortId: string;
+  modelTrainingCohorts: readonly ForecastArtifactModelTrainingCohortV1[];
   modelTrainingCount: number;
   calibrationPoolId: string;
+  calibrationResidualIds: readonly string[];
   calibrationResidualCount: number;
 }
+
+export interface ForecastArtifactModelTrainingCohortV1 {
+  role: "model-training" | "stage-training" | "timing-training";
+  cohortId: string;
+  memberIds: readonly string[];
+  memberCount: number;
+}
+
+export type ForecastArtifactBenchmarkCohortV1 =
+  | {
+      binding: "target";
+      role: ForecastBenchmarkCohortRoleV1;
+      cohortId: string;
+      memberCount: number;
+    }
+  | {
+      binding: "inline";
+      role: ForecastBenchmarkCohortRoleV1;
+      cohortId: string;
+      memberIds: readonly string[];
+      memberCount: number;
+    };
+
+export interface ForecastArtifactBenchmarkRangeV1 {
+  level: 0.5;
+  lowerDays: number;
+  upperDays: number;
+  lowerCalendarDate: string;
+  upperCalendarDate: string;
+}
+
+interface ForecastArtifactBenchmarkPredictionBaseV1 {
+  pointDays: number;
+  pointCalendarDate: string;
+  roundingRule: typeof FORECAST_INTERVAL_ROUNDING_RULE;
+  empiricalRange?: ForecastArtifactBenchmarkRangeV1;
+}
+
+export type ForecastArtifactBenchmarkPredictionV1 =
+  | (ForecastArtifactBenchmarkPredictionBaseV1 & {
+      targetKind: "public-release";
+    })
+  | (ForecastArtifactBenchmarkPredictionBaseV1 & {
+      targetKind: "next-eligible-prerelease-event";
+      predictedEligibleStage: EligiblePrereleaseStage;
+    });
+
+interface ForecastArtifactBenchmarkBaseV1 {
+  benchmarkVersion: typeof FORECAST_ORIGIN_BENCHMARK_VERSION;
+  benchmarkId: ForecastBenchmarkIdV1;
+  modelVersion:
+    | typeof RELEASE_DATE_CANDIDATES_VERSION
+    | typeof NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION
+    | typeof NEXT_EVENT_SIMPLE_BASELINE_VERSION
+    | typeof FORECAST_CURRENT_PUBLIC_HEURISTIC_VERSION;
+  sourceFingerprint: string;
+  modelFingerprint: string;
+  calibrationFingerprint: string | null;
+  cohorts: readonly ForecastArtifactBenchmarkCohortV1[];
+}
+
+export type ForecastArtifactBenchmarkV1 =
+  | (ForecastArtifactBenchmarkBaseV1 & {
+      availability: "available";
+      prediction: ForecastArtifactBenchmarkPredictionV1;
+    })
+  | (ForecastArtifactBenchmarkBaseV1 & {
+      availability: "unavailable";
+      reason: ForecastBenchmarkUnavailableReasonV1;
+    });
 
 export interface ForecastArtifactIntervalV1 {
   level: 0.5 | 0.8;
@@ -86,6 +209,7 @@ interface ForecastArtifactTargetBaseV1 {
   targetId: string;
   releaseId: string;
   platformId: string;
+  productFamilyId: string;
   anchorEventId: string;
   anchorStage: string;
   anchorOccurredOn: string;
@@ -94,6 +218,7 @@ interface ForecastArtifactTargetBaseV1 {
   modelFingerprint: string;
   calibrationFingerprint: string;
   cohort: ForecastArtifactCohortV1;
+  benchmarks: readonly ForecastArtifactBenchmarkV1[];
 }
 
 export type ForecastArtifactTargetV1 =
@@ -167,6 +292,26 @@ const SHA_256 = /^[a-f0-9]{64}$/;
 const ISO_DAY = /^\d{4}-\d{2}-\d{2}$/;
 const TRANSITIONS = new Set<ForecastPointerTransition>(["initialize", "candidate-written", "activate-shadow", "rollback-shadow", "reconciliation-committed"]);
 const TARGET_KINDS = new Set<ForecastTargetKind>(["public-release", "next-eligible-prerelease-event"]);
+const BENCHMARK_IDS = new Set<ForecastBenchmarkIdV1>(FORECAST_BENCHMARK_IDS);
+const BENCHMARK_REASONS = new Set<ForecastBenchmarkUnavailableReasonV1>([
+  "selected-target-unavailable",
+  "minimum-training-examples",
+  "weak-stage-mode",
+  "incomparable-target-definition",
+  "release-mapping-unproven",
+  "anchor-mapping-unproven",
+  "heuristic-unavailable",
+  "heuristic-paused",
+]);
+const BENCHMARK_COHORT_ROLES = new Set<ForecastBenchmarkCohortRoleV1>([
+  "model-training",
+  "calibration-residual",
+  "stage-training",
+  "timing-training",
+]);
+const benchmarkOrder = new Map(
+  FORECAST_BENCHMARK_IDS.map((id, index) => [id, index]),
+);
 const encoder = new TextEncoder();
 // Keep a UTF-8 BOM visible so JSON parsing rejects it. Canonical stored bytes
 // have exactly one representation and never silently normalize a prefix.
@@ -192,7 +337,32 @@ function canonicalTargetKey(target: ForecastArtifactTargetV1): string { return `
 function canonicalMetricKey(metric: ForecastArtifactMetricV1): string { return `${metric.targetKind}\u0000${metric.metricId}`; }
 function canonicalExclusionKey(exclusion: ForecastArtifactExclusionV1): string { return `${exclusion.targetKind}\u0000${exclusion.exclusionId}`; }
 function canonicalizeProvenance(value: ForecastArtifactProvenanceV1): ForecastArtifactProvenanceV1 { return { ...value, sourceEvidenceIds: sortedUnique(value.sourceEvidenceIds) }; }
-function canonicalizeTarget(value: ForecastArtifactTargetV1): ForecastArtifactTargetV1 { return { ...value, sourceEvidenceIds: sortedUnique(value.sourceEvidenceIds) }; }
+function canonicalizeBenchmark(value: ForecastArtifactBenchmarkV1): ForecastArtifactBenchmarkV1 {
+  return {
+    ...value,
+    cohorts: value.cohorts
+      .map((cohort) => cohort.binding === "inline"
+        ? { ...cohort, memberIds: sortedUnique(cohort.memberIds) }
+        : { ...cohort })
+      .sort((left, right) => textOrder(`${left.role}\u0000${left.cohortId}`, `${right.role}\u0000${right.cohortId}`)),
+  };
+}
+function canonicalizeTarget(value: ForecastArtifactTargetV1): ForecastArtifactTargetV1 {
+  return {
+    ...value,
+    sourceEvidenceIds: sortedUnique(value.sourceEvidenceIds),
+    cohort: {
+      ...value.cohort,
+      modelTrainingCohorts: value.cohort.modelTrainingCohorts
+        .map((cohort) => ({ ...cohort, memberIds: sortedUnique(cohort.memberIds) }))
+        .sort((left, right) => textOrder(`${left.role}\u0000${left.cohortId}`, `${right.role}\u0000${right.cohortId}`)),
+      calibrationResidualIds: sortedUnique(value.cohort.calibrationResidualIds),
+    },
+    benchmarks: value.benchmarks
+      .map(canonicalizeBenchmark)
+      .sort((left, right) => (benchmarkOrder.get(left.benchmarkId) ?? Number.MAX_SAFE_INTEGER) - (benchmarkOrder.get(right.benchmarkId) ?? Number.MAX_SAFE_INTEGER)),
+  };
+}
 function canonicalizeExclusion(value: ForecastArtifactExclusionV1): ForecastArtifactExclusionV1 { return { ...value, sourceEvidenceIds: sortedUnique(value.sourceEvidenceIds) }; }
 function semanticBody(provenance: ForecastArtifactProvenanceV1, targets: readonly ForecastArtifactTargetV1[], metrics: readonly ForecastArtifactMetricV1[], exclusions: readonly ForecastArtifactExclusionV1[]) { return { artifactVersion: FORECAST_ARTIFACT_VERSION, mode: FORECAST_ARTIFACT_MODE, provenance, targets, metrics, exclusions }; }
 function runKeyBody(identity: ForecastArtifactRunIdentityV1) { return { runKeyVersion: "forecast-run-key/v1", artifactVersion: FORECAST_ARTIFACT_VERSION, mode: FORECAST_ARTIFACT_MODE, runIdentity: identity }; }
@@ -209,7 +379,7 @@ function componentIssues(value: unknown, path: string, version: string): Forecas
 function provenanceIssues(value: unknown): ForecastContractValidationIssue[] {
   if (!isRecord(value)) return [{ code: "invalid-provenance", path: "provenance", message: "Provenance is required." }];
   const issues: ForecastContractValidationIssue[] = [];
-  exactKeys(value, ["sourceAsOfDate", "sourceIssuedAt", "sourceEvidenceIds", "historicalDataset", "evaluation", "publicReleaseModel", "publicReleaseCalibration", "nextEventModel", "nextEventCalibration", "codeFingerprint"], "provenance", issues);
+  exactKeys(value, ["sourceAsOfDate", "sourceIssuedAt", "sourceEvidenceIds", "historicalDataset", "evaluation", "publicReleaseModel", "publicReleaseCalibration", "nextEventModel", "nextEventCalibration", "currentPublicHeuristic", "codeFingerprint"], "provenance", issues);
   if (!isDay(value.sourceAsOfDate) || !isInstant(value.sourceIssuedAt)) issues.push({ code: "invalid-provenance", path: "provenance", message: "A valid source cutoff and canonical issuance timestamp are required." });
   issues.push(...evidenceIssues(value.sourceEvidenceIds, "provenance.sourceEvidenceIds"));
   issues.push(...componentIssues(value.historicalDataset, "provenance.historicalDataset", HISTORICAL_ANALYSIS_DATASET_VERSION));
@@ -218,6 +388,11 @@ function provenanceIssues(value: unknown): ForecastContractValidationIssue[] {
   issues.push(...componentIssues(value.publicReleaseCalibration, "provenance.publicReleaseCalibration", RELEASE_DATE_INTERVAL_CALIBRATION_VERSION));
   issues.push(...componentIssues(value.nextEventModel, "provenance.nextEventModel", NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION));
   issues.push(...componentIssues(value.nextEventCalibration, "provenance.nextEventCalibration", NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION));
+  if (!isRecord(value.currentPublicHeuristic)) issues.push({ code: "invalid-provenance", path: "provenance.currentPublicHeuristic", message: "Frozen current-heuristic provenance is required." });
+  else {
+    exactKeys(value.currentPublicHeuristic, ["version", "sourceFingerprint", "modelFingerprint"], "provenance.currentPublicHeuristic", issues);
+    if (value.currentPublicHeuristic.version !== FORECAST_CURRENT_PUBLIC_HEURISTIC_VERSION || !isSha(value.currentPublicHeuristic.sourceFingerprint) || value.currentPublicHeuristic.modelFingerprint !== CURRENT_PUBLIC_HEURISTIC_CODE_FINGERPRINT) issues.push({ code: "invalid-provenance", path: "provenance.currentPublicHeuristic", message: "Current heuristic provenance must bind its exact source and frozen v1 code." });
+  }
   if (!isSha(value.codeFingerprint)) issues.push({ code: "invalid-provenance", path: "provenance.codeFingerprint", message: "A code fingerprint is required." });
   return issues;
 }
@@ -225,8 +400,177 @@ function provenanceIssues(value: unknown): ForecastContractValidationIssue[] {
 function cohortIssues(value: unknown, path: string): ForecastContractValidationIssue[] {
   if (!isRecord(value)) return [{ code: "invalid-row", path, message: "Cohort provenance is required." }];
   const issues: ForecastContractValidationIssue[] = [];
-  exactKeys(value, ["modelCohortId", "modelTrainingCount", "calibrationPoolId", "calibrationResidualCount"], path, issues);
-  if (!isText(value.modelCohortId) || !isCount(value.modelTrainingCount) || !isText(value.calibrationPoolId) || !isCount(value.calibrationResidualCount)) issues.push({ code: "invalid-row", path, message: "Cohort IDs and non-negative counts are required." });
+  exactKeys(value, ["modelCohortId", "modelTrainingCohorts", "modelTrainingCount", "calibrationPoolId", "calibrationResidualIds", "calibrationResidualCount"], path, issues);
+  if (!isText(value.modelCohortId) || !isCount(value.modelTrainingCount) || !isText(value.calibrationPoolId) || !isCount(value.calibrationResidualCount) || !Array.isArray(value.modelTrainingCohorts)) issues.push({ code: "invalid-row", path, message: "Cohort IDs, exact model components, and non-negative counts are required." });
+  if (Array.isArray(value.modelTrainingCohorts)) {
+    const componentKeys: string[] = [];
+    const unionIds: string[] = [];
+    value.modelTrainingCohorts.forEach((component, index) => {
+      const componentPath = `${path}.modelTrainingCohorts[${index}]`;
+      if (!isRecord(component)) { issues.push({ code: "invalid-row", path: componentPath, message: "Model training cohort must be an object." }); return; }
+      exactKeys(component, ["role", "cohortId", "memberIds", "memberCount"], componentPath, issues);
+      const ids = component.memberIds;
+      if (!["model-training", "stage-training", "timing-training"].includes(component.role as string) || !isText(component.cohortId) || !isCount(component.memberCount) || !Array.isArray(ids)) issues.push({ code: "invalid-row", path: componentPath, message: "Model cohort role, identity, member IDs, and count are required." });
+      if (Array.isArray(ids)) {
+        if (ids.length > FORECAST_ARTIFACT_MAX_COHORT_MEMBERS || ids.some((id) => !isText(id)) || stableSerializeHistoricalAnalysis(ids) !== stableSerializeHistoricalAnalysis(sortedUnique(ids as string[]))) issues.push({ code: ids.length > FORECAST_ARTIFACT_MAX_COHORT_MEMBERS ? "row-limit" : "invalid-order", path: `${componentPath}.memberIds`, message: "Model member IDs must be bounded, unique, non-empty, and sorted." });
+        if (component.memberCount !== ids.length) issues.push({ code: "invalid-row", path: `${componentPath}.memberCount`, message: "Model member count must match exact persisted IDs." });
+        unionIds.push(...ids.filter((id): id is string => typeof id === "string"));
+      }
+      componentKeys.push(`${String(component.role)}\u0000${String(component.cohortId)}`);
+    });
+    if (stableSerializeHistoricalAnalysis(componentKeys) !== stableSerializeHistoricalAnalysis([...componentKeys].sort(textOrder)) || new Set(componentKeys).size !== componentKeys.length) issues.push({ code: "invalid-order", path: `${path}.modelTrainingCohorts`, message: "Model training cohorts must be unique and in canonical order." });
+    if (value.modelTrainingCount !== sortedUnique(unionIds).length) issues.push({ code: "invalid-row", path: `${path}.modelTrainingCount`, message: "Model training count must match the exact union of component member IDs." });
+  }
+  const residualIds = value.calibrationResidualIds;
+  if (!Array.isArray(residualIds) || residualIds.length > FORECAST_ARTIFACT_MAX_COHORT_MEMBERS || residualIds.some((id) => !isText(id)) || stableSerializeHistoricalAnalysis(residualIds) !== stableSerializeHistoricalAnalysis(sortedUnique(residualIds as string[]))) {
+    issues.push({ code: Array.isArray(residualIds) && residualIds.length > FORECAST_ARTIFACT_MAX_COHORT_MEMBERS ? "row-limit" : "invalid-order", path: `${path}.calibrationResidualIds`, message: "Calibration residual IDs must be bounded, unique, non-empty, and sorted." });
+  } else if (value.calibrationResidualCount !== residualIds.length) {
+    issues.push({ code: "invalid-row", path: `${path}.calibrationResidualCount`, message: "Calibration residual count must match exact persisted IDs." });
+  }
+  return issues;
+}
+
+function benchmarkCohortIssues(value: unknown, path: string): ForecastContractValidationIssue[] {
+  if (!isRecord(value)) return [{ code: "invalid-row", path, message: "Benchmark cohort must be an object." }];
+  const issues: ForecastContractValidationIssue[] = [];
+  const inline = value.binding === "inline";
+  exactKeys(value, ["binding", "role", "cohortId", ...(inline ? ["memberIds"] : []), "memberCount"], path, issues);
+  if (!["inline", "target"].includes(value.binding as string) || !BENCHMARK_COHORT_ROLES.has(value.role as ForecastBenchmarkCohortRoleV1) || !isText(value.cohortId) || !isCount(value.memberCount) || (inline && !Array.isArray(value.memberIds))) {
+    issues.push({ code: "invalid-row", path, message: "Benchmark cohort binding, role, identity, and count are required." });
+    return issues;
+  }
+  if (!inline) return issues;
+  const memberIds = value.memberIds as unknown[];
+  if (memberIds.length > FORECAST_ARTIFACT_MAX_COHORT_MEMBERS || memberIds.some((id) => !isText(id)) || stableSerializeHistoricalAnalysis(memberIds) !== stableSerializeHistoricalAnalysis(sortedUnique(memberIds as string[]))) {
+    issues.push({ code: memberIds.length > FORECAST_ARTIFACT_MAX_COHORT_MEMBERS ? "row-limit" : "invalid-order", path: `${path}.memberIds`, message: "Inline benchmark member IDs must be bounded, unique, non-empty, and sorted." });
+  }
+  if (value.memberCount !== memberIds.length) issues.push({ code: "invalid-row", path: `${path}.memberCount`, message: "Inline benchmark member count must match exact persisted IDs." });
+  return issues;
+}
+
+function benchmarkPredictionIssues(value: unknown, path: string, targetKind: ForecastTargetKind, anchorOn: string): ForecastContractValidationIssue[] {
+  if (!isRecord(value)) return [{ code: "invalid-row", path, message: "An available benchmark requires a prediction." }];
+  const issues: ForecastContractValidationIssue[] = [];
+  const next = targetKind === "next-eligible-prerelease-event";
+  const hasRange = Object.hasOwn(value, "empiricalRange");
+  exactKeys(value, ["targetKind", "pointDays", "pointCalendarDate", "roundingRule", ...(hasRange ? ["empiricalRange"] : []), ...(next ? ["predictedEligibleStage"] : [])], path, issues);
+  if (value.targetKind !== targetKind || !isFiniteNumber(value.pointDays) || (value.pointDays as number) < 0 || !isDay(value.pointCalendarDate) || (isFiniteNumber(value.pointDays) && value.pointCalendarDate !== addDays(anchorOn, Math.floor((value.pointDays as number) + 0.5))) || value.roundingRule !== FORECAST_INTERVAL_ROUNDING_RULE) {
+    issues.push({ code: "invalid-row", path, message: "Benchmark target, point estimate, calendar date, and rounding rule must match exactly." });
+  }
+  if (next && !["developer-beta", "public-beta", "release-candidate"].includes(value.predictedEligibleStage as string)) issues.push({ code: "invalid-row", path: `${path}.predictedEligibleStage`, message: "Next-event benchmarks require an eligible predicted stage." });
+  if (hasRange) {
+    const range = value.empiricalRange;
+    if (!isRecord(range)) issues.push({ code: "invalid-interval", path: `${path}.empiricalRange`, message: "Empirical range must be an object." });
+    else {
+      exactKeys(range, ["level", "lowerDays", "upperDays", "lowerCalendarDate", "upperCalendarDate"], `${path}.empiricalRange`, issues);
+      if (range.level !== 0.5 || !isFiniteNumber(range.lowerDays) || !isFiniteNumber(range.upperDays) || !isFiniteNumber(value.pointDays) || (range.lowerDays as number) > (value.pointDays as number) || (range.upperDays as number) < (value.pointDays as number) || !isDay(range.lowerCalendarDate) || !isDay(range.upperCalendarDate) || (isFiniteNumber(range.lowerDays) && range.lowerCalendarDate !== addDays(anchorOn, Math.floor(range.lowerDays as number))) || (isFiniteNumber(range.upperDays) && range.upperCalendarDate !== addDays(anchorOn, Math.ceil(range.upperDays as number)))) {
+        issues.push({ code: "invalid-interval", path: `${path}.empiricalRange`, message: "The optional 50% empirical range must contain the point and bind outward-rounded calendar dates." });
+      }
+    }
+  }
+  return issues;
+}
+
+function benchmarkIssues(value: unknown, path: string, targetKind: ForecastTargetKind, anchorOn: string): ForecastContractValidationIssue[] {
+  if (!isRecord(value)) return [{ code: "invalid-row", path, message: "Benchmark must be an object." }];
+  const issues: ForecastContractValidationIssue[] = [];
+  const available = value.availability === "available";
+  exactKeys(value, ["benchmarkVersion", "benchmarkId", "modelVersion", "sourceFingerprint", "modelFingerprint", "calibrationFingerprint", "cohorts", "availability", available ? "prediction" : "reason"], path, issues);
+  const expectedModelVersion = value.benchmarkId === "current-public-heuristic"
+    ? FORECAST_CURRENT_PUBLIC_HEURISTIC_VERSION
+    : value.benchmarkId === "simple-baseline" && targetKind === "next-eligible-prerelease-event"
+      ? NEXT_EVENT_SIMPLE_BASELINE_VERSION
+      : targetKind === "public-release"
+        ? RELEASE_DATE_CANDIDATES_VERSION
+        : NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION;
+  if (value.benchmarkVersion !== FORECAST_ORIGIN_BENCHMARK_VERSION || !BENCHMARK_IDS.has(value.benchmarkId as ForecastBenchmarkIdV1) || value.modelVersion !== expectedModelVersion || !isSha(value.sourceFingerprint) || !isSha(value.modelFingerprint) || !(value.calibrationFingerprint === null || isSha(value.calibrationFingerprint)) || !Array.isArray(value.cohorts) || !["available", "unavailable"].includes(value.availability as string)) {
+    issues.push({ code: "invalid-row", path, message: "Benchmark version, closed identity, fingerprints, cohorts, and availability are required." });
+  }
+  if (Array.isArray(value.cohorts)) {
+    value.cohorts.forEach((cohort, index) => issues.push(...benchmarkCohortIssues(cohort, `${path}.cohorts[${index}]`)));
+    const keys = value.cohorts.map((cohort) => isRecord(cohort) ? `${String(cohort.role)}\u0000${String(cohort.cohortId)}` : "");
+    if (stableSerializeHistoricalAnalysis(keys) !== stableSerializeHistoricalAnalysis([...keys].sort(textOrder)) || new Set(keys).size !== keys.length) issues.push({ code: "invalid-order", path: `${path}.cohorts`, message: "Benchmark cohorts must be unique and in canonical order." });
+  }
+  if (available) issues.push(...benchmarkPredictionIssues(value.prediction, `${path}.prediction`, targetKind, anchorOn));
+  else if (!BENCHMARK_REASONS.has(value.reason as ForecastBenchmarkUnavailableReasonV1)) issues.push({ code: "invalid-row", path: `${path}.reason`, message: "Unavailable benchmarks require one closed v1 reason." });
+  return issues;
+}
+
+function benchmarkBindingIssues(
+  target: Record<string, unknown>,
+  path: string,
+  provenance: ForecastArtifactProvenanceV1,
+): ForecastContractValidationIssue[] {
+  if (!Array.isArray(target.benchmarks) || !isRecord(target.cohort)) return [];
+  const issues: ForecastContractValidationIssue[] = [];
+  const targetKind = target.targetKind as ForecastTargetKind;
+  const selected = target.benchmarks[0];
+  const current = target.benchmarks[1];
+  const simple = target.benchmarks[2];
+  if (isRecord(selected)) {
+    const targetAvailable = target.availability === "available";
+    if (selected.availability !== target.availability) issues.push({ code: "incompatible-artifact", path: `${path}.benchmarks[0].availability`, message: "Selected benchmark availability must exactly match the target." });
+    if (selected.sourceFingerprint !== provenance.historicalDataset.fingerprint || selected.modelFingerprint !== target.modelFingerprint || selected.calibrationFingerprint !== target.calibrationFingerprint) issues.push({ code: "incompatible-artifact", path: `${path}.benchmarks[0]`, message: "Selected benchmark must bind the target dataset, model, and calibration exactly." });
+    const modelComponents = Array.isArray(target.cohort.modelTrainingCohorts)
+      ? target.cohort.modelTrainingCohorts.filter(isRecord)
+      : [];
+    const expectedCohorts = [
+      ...modelComponents.map((component) => ({
+        binding: "target",
+        role: component.role,
+        cohortId: component.cohortId,
+        memberCount: component.memberCount,
+      })),
+      {
+        binding: "target",
+        role: "calibration-residual",
+        cohortId: target.cohort.calibrationPoolId,
+        memberCount: target.cohort.calibrationResidualCount,
+      },
+    ].sort((left, right) => textOrder(`${String(left.role)}\u0000${String(left.cohortId)}`, `${String(right.role)}\u0000${String(right.cohortId)}`));
+    if (stableSerializeHistoricalAnalysis(selected.cohorts) !== stableSerializeHistoricalAnalysis(expectedCohorts)) issues.push({ code: "incompatible-artifact", path: `${path}.benchmarks[0].cohorts`, message: "Selected benchmark cohorts must reference the target model and calibration members exactly." });
+    if (!targetAvailable && selected.reason !== "selected-target-unavailable") issues.push({ code: "incompatible-artifact", path: `${path}.benchmarks[0].reason`, message: "An unavailable selected benchmark must use the target-unavailable reason." });
+    if (targetAvailable && isRecord(target.prediction) && Array.isArray(target.prediction.intervals)) {
+      const fifty = target.prediction.intervals.find((interval) => isRecord(interval) && interval.level === 0.5);
+      if (isRecord(fifty)) {
+        const expectedPrediction = {
+          targetKind,
+          pointDays: target.prediction.pointDays,
+          pointCalendarDate: target.prediction.pointCalendarDate,
+          roundingRule: FORECAST_INTERVAL_ROUNDING_RULE,
+          empiricalRange: {
+            level: 0.5,
+            lowerDays: fifty.lowerDays,
+            upperDays: fifty.upperDays,
+            lowerCalendarDate: fifty.lowerCalendarDate,
+            upperCalendarDate: fifty.upperCalendarDate,
+          },
+          ...(targetKind === "next-eligible-prerelease-event" ? { predictedEligibleStage: target.predictedEligibleStage } : {}),
+        };
+        if (stableSerializeHistoricalAnalysis(selected.prediction) !== stableSerializeHistoricalAnalysis(expectedPrediction)) issues.push({ code: "incompatible-artifact", path: `${path}.benchmarks[0].prediction`, message: "Selected benchmark prediction must exactly duplicate the target point, 50% interval, and eligible stage." });
+      }
+    }
+  }
+  if (isRecord(current)) {
+    if (current.sourceFingerprint !== provenance.currentPublicHeuristic.sourceFingerprint || current.modelFingerprint !== provenance.currentPublicHeuristic.modelFingerprint || current.calibrationFingerprint !== null) issues.push({ code: "incompatible-artifact", path: `${path}.benchmarks[1]`, message: "Current heuristic benchmark must bind the artifact's exact frozen source and code without calibration." });
+    if (targetKind === "next-eligible-prerelease-event" && (current.availability !== "unavailable" || current.reason !== "incomparable-target-definition" || !Array.isArray(current.cohorts) || current.cohorts.length !== 0)) issues.push({ code: "incompatible-artifact", path: `${path}.benchmarks[1]`, message: "Legacy next-milestone output is incomparable and must remain explicitly unavailable." });
+    if (current.availability === "available") {
+      const cohorts = Array.isArray(current.cohorts) ? current.cohorts : [];
+      if (cohorts.length !== 1 || !isRecord(cohorts[0]) || cohorts[0].binding !== "inline" || cohorts[0].role !== "model-training" || !Array.isArray(cohorts[0].memberIds) || cohorts[0].memberIds.length < FORECAST_MINIMUM_SAMPLE) issues.push({ code: "invalid-row", path: `${path}.benchmarks[1].cohorts`, message: "Available current heuristic benchmarks require the exact minimum-three inline model cohort." });
+    }
+  }
+  if (isRecord(simple)) {
+    const expectedModelFingerprint = targetKind === "public-release"
+      ? provenance.publicReleaseModel.fingerprint
+      : NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT;
+    if (simple.sourceFingerprint !== provenance.historicalDataset.fingerprint || simple.modelFingerprint !== expectedModelFingerprint || simple.calibrationFingerprint !== null) issues.push({ code: "incompatible-artifact", path: `${path}.benchmarks[2]`, message: "Simple baseline must bind the exact analytical source and frozen uncalibrated model." });
+    if (simple.availability === "available") {
+      const cohorts = Array.isArray(simple.cohorts) ? simple.cohorts : [];
+      const expectedRoles = targetKind === "public-release" ? ["model-training"] : ["stage-training", "timing-training"];
+      const roles = cohorts.map((cohort) => isRecord(cohort) ? String(cohort.role) : "").sort(textOrder);
+      if (stableSerializeHistoricalAnalysis(roles) !== stableSerializeHistoricalAnalysis(expectedRoles) || cohorts.some((cohort) => !isRecord(cohort) || cohort.binding !== "inline" || !Array.isArray(cohort.memberIds) || cohort.memberIds.length < 8)) issues.push({ code: "invalid-row", path: `${path}.benchmarks[2].cohorts`, message: "Available simple baselines require exact non-empty minimum-eight inline training cohorts." });
+    }
+  }
   return issues;
 }
 
@@ -268,19 +612,33 @@ function targetIssues(value: unknown, index: number, provenance: ForecastArtifac
   const path = `targets[${index}]`;
   if (!isRecord(value)) return [{ code: "invalid-row", path, message: "Target must be an object." }];
   const issues: ForecastContractValidationIssue[] = [];
-  const common = ["targetId", "targetKind", "availability", "releaseId", "platformId", "anchorEventId", "anchorStage", "anchorOccurredOn", "originOn", "sourceEvidenceIds", "modelFingerprint", "calibrationFingerprint", "cohort"];
+  const common = ["targetId", "targetKind", "availability", "releaseId", "platformId", "productFamilyId", "anchorEventId", "anchorStage", "anchorOccurredOn", "originOn", "sourceEvidenceIds", "modelFingerprint", "calibrationFingerprint", "cohort", "benchmarks"];
   const available = value.availability === "available";
   const next = value.targetKind === "next-eligible-prerelease-event";
   exactKeys(value, [...common, ...(available ? ["prediction", ...(next ? ["predictedEligibleStage"] : [])] : ["reason"])], path, issues);
-  if (!isText(value.targetId) || !TARGET_KINDS.has(value.targetKind as ForecastTargetKind) || !["available", "unavailable"].includes(value.availability as string) || !isText(value.releaseId) || !isText(value.platformId) || !isText(value.anchorEventId) || !isCanonicalStage(value.anchorStage) || !isDay(value.anchorOccurredOn) || !isDay(value.originOn) || (isDay(value.anchorOccurredOn) && isDay(value.originOn) && value.anchorOccurredOn > value.originOn) || (isDay(value.anchorOccurredOn) && value.anchorOccurredOn > provenance.sourceAsOfDate) || (isDay(value.originOn) && value.originOn > provenance.sourceAsOfDate) || (next && !/^(?:developer-beta|public-beta|release-candidate):[1-9]\d*$/.test(value.anchorStage as string))) issues.push({ code: "invalid-row", path, message: "Stable target identity, canonical stage, and source-cutoff-bounded anchor/origin are required." });
+  if (!isText(value.targetId) || !TARGET_KINDS.has(value.targetKind as ForecastTargetKind) || !["available", "unavailable"].includes(value.availability as string) || !isText(value.releaseId) || !isText(value.platformId) || !isText(value.productFamilyId) || !isText(value.anchorEventId) || !isCanonicalStage(value.anchorStage) || !isDay(value.anchorOccurredOn) || !isDay(value.originOn) || (isDay(value.anchorOccurredOn) && isDay(value.originOn) && value.anchorOccurredOn > value.originOn) || (isDay(value.anchorOccurredOn) && value.anchorOccurredOn > provenance.sourceAsOfDate) || (isDay(value.originOn) && value.originOn > provenance.sourceAsOfDate) || (next && !/^(?:developer-beta|public-beta|release-candidate):[1-9]\d*$/.test(value.anchorStage as string))) issues.push({ code: "invalid-row", path, message: "Stable target identity, product family, canonical stage, and source-cutoff-bounded anchor/origin are required." });
   issues.push(...evidenceIssues(value.sourceEvidenceIds, `${path}.sourceEvidenceIds`));
   if (Array.isArray(value.sourceEvidenceIds) && value.sourceEvidenceIds.some((id) => !provenance.sourceEvidenceIds.includes(id as string))) issues.push({ code: "invalid-evidence", path: `${path}.sourceEvidenceIds`, message: "Target evidence must be bound by artifact provenance." });
   const expectedModel = next ? provenance.nextEventModel.fingerprint : provenance.publicReleaseModel.fingerprint;
   const expectedCalibration = next ? provenance.nextEventCalibration.fingerprint : provenance.publicReleaseCalibration.fingerprint;
   if (value.modelFingerprint !== expectedModel || value.calibrationFingerprint !== expectedCalibration) issues.push({ code: "invalid-provenance", path, message: "Target model and calibration fingerprints must match the tagged artifact provenance." });
   issues.push(...cohortIssues(value.cohort, `${path}.cohort`));
+  if (!Array.isArray(value.benchmarks)) {
+    issues.push({ code: "invalid-row", path: `${path}.benchmarks`, message: "Exactly three origin-time benchmark rows are required." });
+  } else {
+    value.benchmarks.forEach((benchmark, benchmarkIndex) => {
+      if (TARGET_KINDS.has(value.targetKind as ForecastTargetKind) && isDay(value.anchorOccurredOn)) issues.push(...benchmarkIssues(benchmark, `${path}.benchmarks[${benchmarkIndex}]`, value.targetKind as ForecastTargetKind, value.anchorOccurredOn));
+    });
+    const ids = value.benchmarks.map((benchmark) => isRecord(benchmark) ? benchmark.benchmarkId : undefined);
+    if (stableSerializeHistoricalAnalysis(ids) !== stableSerializeHistoricalAnalysis(FORECAST_BENCHMARK_IDS)) issues.push({ code: "invalid-order", path: `${path}.benchmarks`, message: "Targets require exactly one benchmark for each closed v1 benchmark ID in canonical order." });
+  }
+  issues.push(...benchmarkBindingIssues(value, path, provenance));
   if (available && isRecord(value.cohort) && isCount(value.cohort.modelTrainingCount) && isCount(value.cohort.calibrationResidualCount)) {
-    if (value.cohort.modelTrainingCount < 8 || value.cohort.calibrationResidualCount < 8) issues.push({ code: "invalid-row", path: `${path}.cohort`, message: "Available targets require at least eight model and calibration examples." });
+    if (value.cohort.modelTrainingCount < 8 || value.cohort.calibrationResidualCount < 8) issues.push({ code: "invalid-row", path: `${path}.cohort`, message: "Available targets require at least eight exact model and calibration members." });
+    const components = Array.isArray(value.cohort.modelTrainingCohorts) ? value.cohort.modelTrainingCohorts : [];
+    const expectedRoles = next ? ["stage-training", "timing-training"] : ["model-training"];
+    const roles = components.map((component) => isRecord(component) ? String(component.role) : "").sort(textOrder);
+    if (stableSerializeHistoricalAnalysis(roles) !== stableSerializeHistoricalAnalysis(expectedRoles) || components.some((component) => !isRecord(component) || !Array.isArray(component.memberIds) || component.memberIds.length < 8)) issues.push({ code: "invalid-row", path: `${path}.cohort.modelTrainingCohorts`, message: "Available target model cohort roles and exact minimum-eight members must match the target kind." });
     if (isDay(value.anchorOccurredOn)) issues.push(...predictionIssues(value.prediction, `${path}.prediction`, value.targetKind as ForecastTargetKind, value.anchorOccurredOn, value.cohort as unknown as ForecastArtifactCohortV1));
     if (next && !["developer-beta", "public-beta", "release-candidate"].includes(value.predictedEligibleStage as string)) issues.push({ code: "invalid-row", path: `${path}.predictedEligibleStage`, message: "Next-event target stage must be one of the three eligible prerelease classes." });
   } else if (!available && !(isText(value.reason) && ["insufficient-model-history", "insufficient-calibration-history", "ambiguous-chronology", "weak-next-stage-mode", "inactive-release", "invalid-source-evidence"].includes(value.reason))) issues.push({ code: "invalid-row", path: `${path}.reason`, message: "Unavailable targets require one v1 reason and no prediction dates." });
@@ -330,6 +688,7 @@ export function validateForecastArtifact(value: unknown): ForecastContractValida
     if (isInstant(value.generatedAt) && isRecord(value.provenance) && isDay(value.provenance.sourceAsOfDate) && value.generatedAt.slice(0, 10) < value.provenance.sourceAsOfDate) issues.push({ code: "invalid-provenance", path: "artifact.generatedAt", message: "Artifact generation cannot precede its source cutoff day." });
     if (!Array.isArray(value.targets) || !Array.isArray(value.metrics) || !Array.isArray(value.exclusions)) return [...issues, { code: "invalid-row", path: "artifact", message: "Target, metric, and exclusion arrays are required." }];
     if (value.targets.length > FORECAST_ARTIFACT_MAX_TARGETS || value.metrics.length > FORECAST_ARTIFACT_MAX_METRICS || value.exclusions.length > FORECAST_ARTIFACT_MAX_EXCLUSIONS) issues.push({ code: "row-limit", path: "artifact", message: "One or more artifact row bounds are exceeded." });
+    if (value.targets.filter((target) => isRecord(target) && target.availability === "available").length > FORECAST_ARTIFACT_MAX_AVAILABLE_TARGETS) issues.push({ code: "row-limit", path: "artifact.targets", message: "Available target count exceeds the 32-target v1 operational bound." });
     if (isRecord(value.provenance)) {
       value.targets.forEach((row, index) => issues.push(...targetIssues(row, index, value.provenance as unknown as ForecastArtifactProvenanceV1)));
       value.metrics.forEach((row, index) => issues.push(...metricIssues(row, index)));
@@ -347,7 +706,7 @@ export function validateForecastArtifact(value: unknown): ForecastContractValida
       if (value.semanticFingerprint !== expectedSemantic || value.runKey !== expectedRunKey || value.artifactId !== historicalAnalysisFingerprint(artifactIdentity(withoutId)) || !isSha(value.semanticFingerprint) || !isSha(value.runKey) || !isSha(value.artifactId)) issues.push({ code: "invalid-fingerprint", path: "artifact", message: "Run, semantic, or full content fingerprint is invalid." });
     }
     const serialized = stableSerializeHistoricalAnalysis(value);
-    if (byteLength(serialized) > FORECAST_ARTIFACT_MAX_BYTES) issues.push({ code: "size-limit", path: "artifact", message: "Artifact exceeds 1 MiB canonical JSON." });
+    if (byteLength(serialized) > FORECAST_ARTIFACT_MAX_BYTES) issues.push({ code: "size-limit", path: "artifact", message: "Artifact exceeds 262 KiB canonical JSON." });
     return issues;
   } catch { return [{ code: "invalid-input", path: "artifact", message: "Artifact could not be validated safely." }]; }
 }
@@ -442,7 +801,7 @@ export type ReconciliationRootValidator = (bytes: Uint8Array, expectedArtifactId
 export type ForecastCommitResult = { committed: true; pointer: ForecastPointerV1 } | { committed: false; reason: "invalid" | "immutable-collision" | "missing-artifact" | "incompatible-artifact" | "non-atomic-adapter" | "stale-cas" | "storage-failure" };
 
 function compatibleArtifact(left: ForecastArtifactV1, right: ForecastArtifactV1): boolean {
-  return left.artifactVersion === right.artifactVersion && left.mode === right.mode && left.provenance.historicalDataset.version === right.provenance.historicalDataset.version && left.provenance.evaluation.version === right.provenance.evaluation.version && left.provenance.publicReleaseModel.version === right.provenance.publicReleaseModel.version && left.provenance.publicReleaseCalibration.version === right.provenance.publicReleaseCalibration.version && left.provenance.nextEventModel.version === right.provenance.nextEventModel.version && left.provenance.nextEventCalibration.version === right.provenance.nextEventCalibration.version;
+  return left.artifactVersion === right.artifactVersion && left.mode === right.mode && left.provenance.historicalDataset.version === right.provenance.historicalDataset.version && left.provenance.evaluation.version === right.provenance.evaluation.version && left.provenance.publicReleaseModel.version === right.provenance.publicReleaseModel.version && left.provenance.publicReleaseCalibration.version === right.provenance.publicReleaseCalibration.version && left.provenance.nextEventModel.version === right.provenance.nextEventModel.version && left.provenance.nextEventCalibration.version === right.provenance.nextEventCalibration.version && left.provenance.currentPublicHeuristic.version === right.provenance.currentPublicHeuristic.version;
 }
 
 async function loadArtifact(storage: ForecastContractStorage, artifactId: string): Promise<ForecastArtifactV1 | null> { const bytes = await storage.readExact(forecastArtifactPath(artifactId)); if (!bytes) return null; try { const artifact = parseForecastArtifact(bytes); return artifact.artifactId === artifactId ? artifact : null; } catch { return null; } }

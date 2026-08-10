@@ -1,7 +1,10 @@
 import {
   FORECAST_INTERVAL_ROUNDING_RULE,
+  FORECAST_CURRENT_PUBLIC_HEURISTIC_VERSION,
   FORECAST_NEXT_EVENT_POINT_ESTIMATOR,
+  FORECAST_ORIGIN_BENCHMARK_VERSION,
   FORECAST_POINTER_PATH,
+  ForecastContractError,
   activateForecastPointer,
   buildForecastArtifact,
   commitForecastArtifactTransition,
@@ -13,6 +16,7 @@ import {
   reconciliationRootArtifactPath,
   serializeForecastArtifact,
   type ForecastArtifactAvailabilityReason,
+  type ForecastArtifactBenchmarkV1,
   type ForecastArtifactDraftV1,
   type ForecastArtifactCohortV1,
   type ForecastArtifactIntervalV1,
@@ -23,6 +27,12 @@ import {
   type ReconciliationRootValidator,
 } from "./forecast-artifact-contracts";
 import {
+  buildCurrentPublicReleaseBenchmark,
+  buildFrozenCurrentPublicHeuristicSnapshot,
+  buildIncomparableCurrentNextEventBenchmark,
+  type FrozenCurrentPublicHeuristicSnapshotV1,
+} from "./forecast-origin-benchmarks";
+import {
   buildHistoricalAnalysisDataset,
   historicalAnalysisFingerprint,
   type HistoricalAnalysisDatasetV1,
@@ -31,12 +41,17 @@ import {
 } from "./historical-analysis-dataset";
 import {
   buildNextEligiblePrereleaseEventModel,
+  buildNextEventSimpleBaseline,
   eligiblePrereleaseStage,
+  NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION,
+  NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT,
+  NEXT_EVENT_SIMPLE_BASELINE_VERSION,
   predictNextEligiblePrereleaseEvent,
   type NextEligiblePrereleaseEventModelV1,
 } from "./next-eligible-prerelease-event";
 import {
   RELEASE_DATE_CANDIDATES,
+  RELEASE_DATE_CANDIDATES_VERSION,
   buildReleaseDateCandidates,
   type ReleaseDateCandidateId,
   type ReleaseDateCandidatesV1,
@@ -56,11 +71,13 @@ import {
   FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
   FORECAST_SHADOW_MAX_SOURCE_METADATA,
   FORECAST_SHADOW_MAX_SOURCE_NODES,
+  FORECAST_SHADOW_MAX_SOURCE_LEGACY_MILESTONES,
+  FORECAST_SHADOW_MAX_SOURCE_LEGACY_RELEASES,
   FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS,
   FORECAST_SHADOW_MAX_SOURCE_RELEASES,
   FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES,
-  validatePublishedHistoricalReleaseSource,
-  type PublishedHistoricalReleaseSource,
+  validatePublishedForecastShadowSource,
+  type PublishedForecastShadowSource,
 } from "./historical-release-source";
 import { buildWalkForwardEvaluation } from "./walk-forward-evaluation";
 
@@ -72,6 +89,8 @@ export {
   FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
   FORECAST_SHADOW_MAX_SOURCE_METADATA,
   FORECAST_SHADOW_MAX_SOURCE_NODES,
+  FORECAST_SHADOW_MAX_SOURCE_LEGACY_MILESTONES,
+  FORECAST_SHADOW_MAX_SOURCE_LEGACY_RELEASES,
   FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS,
   FORECAST_SHADOW_MAX_SOURCE_RELEASES,
   FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES,
@@ -84,7 +103,7 @@ export const FORECAST_SHADOW_MAX_POINTER_TRANSITIONS = 12;
 const pipelineCodeManifest = {
   version: FORECAST_SHADOW_PIPELINE_VERSION,
   algorithm:
-    "published-snapshot;exact-request-instant-cutoff;bounded-runtime-source;explicit-sidecar;latest-complete-active-anchor;public-and-next-event-models;exact-estimator;immutable-first;full-pointer-preflight;generation-and-fingerprint-cas;prior-active-preserved",
+    "published-snapshot;exact-request-instant-cutoff;bounded-runtime-source;explicit-sidecar;latest-complete-active-anchor;public-and-next-event-models;immutable-origin-benchmarks;exact-cohort-members;exact-estimator;immutable-first;full-pointer-preflight;generation-and-fingerprint-cas;prior-active-preserved",
   operationalArtifactMaxBytes: FORECAST_SHADOW_OPERATIONAL_MAX_BYTES,
   sourceContract: {
     canonicalMaxBytes: FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES,
@@ -93,6 +112,8 @@ const pipelineCodeManifest = {
     evidenceIdMaxBytes: FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
     evidenceIdsPerField: FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS,
     events: FORECAST_SHADOW_MAX_SOURCE_EVENTS,
+    legacyForecastMilestones: FORECAST_SHADOW_MAX_SOURCE_LEGACY_MILESTONES,
+    legacyForecastReleases: FORECAST_SHADOW_MAX_SOURCE_LEGACY_RELEASES,
     metadata: FORECAST_SHADOW_MAX_SOURCE_METADATA,
     nodes: FORECAST_SHADOW_MAX_SOURCE_NODES,
     observations: FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS,
@@ -114,7 +135,7 @@ export interface ForecastShadowPipelineRequest {
 
 export interface ForecastShadowPipelineDependencies {
   storage: ForecastContractStorage;
-  fetchPublishedSource: () => Promise<PublishedHistoricalReleaseSource>;
+  fetchPublishedSource: () => Promise<PublishedForecastShadowSource>;
   validateReconciliationRoot?: ReconciliationRootValidator;
 }
 
@@ -176,11 +197,11 @@ function assertRequest(request: ForecastShadowPipelineRequest): void {
 }
 
 function assertSource(
-  source: PublishedHistoricalReleaseSource,
+  source: PublishedForecastShadowSource,
   requestedAt: string,
-): PublishedHistoricalReleaseSource {
+): PublishedForecastShadowSource {
   try {
-    return validatePublishedHistoricalReleaseSource(source, requestedAt);
+    return validatePublishedForecastShadowSource(source, requestedAt);
   } catch {
     throw new ForecastShadowPipelineError("invalid-source");
   }
@@ -232,10 +253,227 @@ function orderedCycleEvents(
 function unavailableCohort() {
   return {
     modelCohortId: "unavailable",
+    modelTrainingCohorts: [],
     modelTrainingCount: 0,
     calibrationPoolId: "unavailable",
+    calibrationResidualIds: [],
     calibrationResidualCount: 0,
   } as const;
+}
+
+function benchmarkCohorts(
+  cohort: ForecastArtifactCohortV1,
+): ForecastArtifactBenchmarkV1["cohorts"] {
+  return [
+    ...cohort.modelTrainingCohorts.map((component) => ({
+      binding: "target" as const,
+      role: component.role,
+      cohortId: component.cohortId,
+      memberCount: component.memberCount,
+    })),
+    {
+      binding: "target",
+      role: "calibration-residual",
+      cohortId: cohort.calibrationPoolId,
+      memberCount: cohort.calibrationResidualCount,
+    },
+  ];
+}
+
+function selectedBenchmark(args: {
+  targetKind: "public-release" | "next-eligible-prerelease-event";
+  sourceFingerprint: string;
+  modelFingerprint: string;
+  calibrationFingerprint: string;
+  cohort: ForecastArtifactCohortV1;
+  availablePrediction?: {
+    pointDays: number;
+    pointCalendarDate: string;
+    intervals: readonly ForecastArtifactIntervalV1[];
+    predictedEligibleStage?: ReturnType<typeof eligiblePrereleaseStage>;
+  };
+}): ForecastArtifactBenchmarkV1 {
+  const common = {
+    benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+    benchmarkId: "selected-private-model" as const,
+    modelVersion:
+      args.targetKind === "public-release"
+        ? RELEASE_DATE_CANDIDATES_VERSION
+        : NEXT_ELIGIBLE_PRERELEASE_EVENT_VERSION,
+    sourceFingerprint: args.sourceFingerprint,
+    modelFingerprint: args.modelFingerprint,
+    calibrationFingerprint: args.calibrationFingerprint,
+    cohorts: benchmarkCohorts(args.cohort),
+  } as const;
+  const prediction = args.availablePrediction;
+  if (!prediction) {
+    return {
+      ...common,
+      availability: "unavailable",
+      reason: "selected-target-unavailable",
+    };
+  }
+  const fifty = prediction.intervals.find((interval) => interval.level === 0.5);
+  const empiricalRange = fifty
+    ? {
+        level: 0.5 as const,
+        lowerDays: fifty.lowerDays,
+        upperDays: fifty.upperDays,
+        lowerCalendarDate: fifty.lowerCalendarDate,
+        upperCalendarDate: fifty.upperCalendarDate,
+      }
+    : undefined;
+  if (args.targetKind === "next-eligible-prerelease-event") {
+    const predictedEligibleStage = prediction.predictedEligibleStage;
+    if (!predictedEligibleStage) {
+      return {
+        ...common,
+        availability: "unavailable",
+        reason: "selected-target-unavailable",
+      };
+    }
+    return {
+      ...common,
+      availability: "available",
+      prediction: {
+        targetKind: args.targetKind,
+        pointDays: prediction.pointDays,
+        pointCalendarDate: prediction.pointCalendarDate,
+        roundingRule: FORECAST_INTERVAL_ROUNDING_RULE,
+        ...(empiricalRange ? { empiricalRange } : {}),
+        predictedEligibleStage,
+      },
+    };
+  }
+  return {
+    ...common,
+    availability: "available",
+    prediction: {
+      targetKind: args.targetKind,
+      pointDays: prediction.pointDays,
+      pointCalendarDate: prediction.pointCalendarDate,
+      roundingRule: FORECAST_INTERVAL_ROUNDING_RULE,
+      ...(empiricalRange ? { empiricalRange } : {}),
+    },
+  };
+}
+
+function publicSimpleBaselineBenchmark(
+  anchor: HistoricalCanonicalEventRow,
+  dataset: HistoricalAnalysisDatasetV1,
+  candidates: ReleaseDateCandidatesV1,
+  forecast: ReturnType<typeof calibrateActiveReleaseDateForecast>,
+): ForecastArtifactBenchmarkV1 {
+  const baseline = forecast?.forecast.candidates.find(
+    (candidate) => candidate.candidateId === "platform-stage-median",
+  );
+  const memberIds = baseline?.trainingTargetIds ?? [];
+  const common = {
+    benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+    benchmarkId: "simple-baseline" as const,
+    modelVersion: RELEASE_DATE_CANDIDATES_VERSION,
+    sourceFingerprint: dataset.fingerprints.datasetFingerprint,
+    modelFingerprint: candidates.fingerprints.resultFingerprint,
+    calibrationFingerprint: null,
+    cohorts: [{
+      binding: "inline" as const,
+      role: "model-training" as const,
+      cohortId: baseline?.explanation.cohort ?? "unavailable",
+      memberIds,
+      memberCount: memberIds.length,
+    }],
+  } as const;
+  if (!baseline?.available) {
+    return {
+      ...common,
+      availability: "unavailable",
+      reason: "minimum-training-examples",
+    };
+  }
+  return {
+    ...common,
+    availability: "available",
+    prediction: {
+      targetKind: "public-release",
+      pointDays: baseline.pointDays,
+      pointCalendarDate: addDays(
+        anchor.occurredOn,
+        Math.floor(baseline.pointDays + 0.5),
+      ),
+      roundingRule: FORECAST_INTERVAL_ROUNDING_RULE,
+    },
+  };
+}
+
+function nextSimpleBaselineBenchmark(
+  cycle: HistoricalReleaseCycleRow,
+  anchor: HistoricalCanonicalEventRow,
+  dataset: HistoricalAnalysisDatasetV1,
+  model: NextEligiblePrereleaseEventModelV1,
+): ForecastArtifactBenchmarkV1 {
+  const baseline = buildNextEventSimpleBaseline(
+    dataset,
+    cycle.releaseId,
+    model,
+  );
+  if (!baseline) {
+    return {
+      benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+      benchmarkId: "simple-baseline",
+      modelVersion: NEXT_EVENT_SIMPLE_BASELINE_VERSION,
+      sourceFingerprint: dataset.fingerprints.datasetFingerprint,
+      modelFingerprint: NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT,
+      calibrationFingerprint: null,
+      cohorts: [],
+      availability: "unavailable",
+      reason: "anchor-mapping-unproven",
+    };
+  }
+  const common = {
+    benchmarkVersion: FORECAST_ORIGIN_BENCHMARK_VERSION,
+    benchmarkId: "simple-baseline" as const,
+    modelVersion: NEXT_EVENT_SIMPLE_BASELINE_VERSION,
+    sourceFingerprint: baseline.sourceFingerprint,
+    modelFingerprint: baseline.codeFingerprint,
+    calibrationFingerprint: null,
+    cohorts: [
+      {
+        binding: "inline" as const,
+        role: "stage-training" as const,
+        cohortId: baseline.stageCohort.cohortId,
+        memberIds: baseline.stageCohort.trainingTargetIds,
+        memberCount: baseline.stageCohort.trainingCount,
+      },
+      {
+        binding: "inline" as const,
+        role: "timing-training" as const,
+        cohortId: baseline.timingCohort.cohortId,
+        memberIds: baseline.timingCohort.trainingTargetIds,
+        memberCount: baseline.timingCohort.trainingCount,
+      },
+    ],
+  } as const;
+  if (baseline.availability === "unavailable") {
+    return {
+      ...common,
+      availability: "unavailable",
+      reason: baseline.reason,
+    };
+  }
+  return {
+    ...common,
+    availability: "available",
+    prediction: {
+      targetKind: "next-eligible-prerelease-event",
+      pointDays: baseline.pointDays,
+      pointCalendarDate: addDays(
+        anchor.occurredOn,
+        Math.floor(baseline.pointDays + 0.5),
+      ),
+      roundingRule: FORECAST_INTERVAL_ROUNDING_RULE,
+      predictedEligibleStage: baseline.predictedEligibleStage,
+    },
+  };
 }
 
 function targetBase(
@@ -250,6 +488,7 @@ function targetBase(
     targetId: `${targetKind}:${cycle.releaseId}:${anchor.eventId}:${dataset.provenance.sourceAsOfDate}`,
     releaseId: cycle.releaseId,
     platformId: cycle.platformId,
+    productFamilyId: cycle.productFamilyId,
     anchorEventId: anchor.eventId,
     anchorStage: anchor.stage,
     anchorOccurredOn: anchor.occurredOn,
@@ -263,6 +502,9 @@ function targetBase(
 function unavailablePublicTarget(
   base: ReturnType<typeof targetBase>,
   reason: ForecastArtifactAvailabilityReason,
+  sourceFingerprint: string,
+  currentBenchmark: ForecastArtifactBenchmarkV1,
+  simpleBenchmark: ForecastArtifactBenchmarkV1,
   cohort: ForecastArtifactCohortV1 = unavailableCohort(),
 ): ForecastArtifactTargetV1 {
   return {
@@ -271,6 +513,17 @@ function unavailablePublicTarget(
     availability: "unavailable",
     reason,
     cohort,
+    benchmarks: [
+      selectedBenchmark({
+        targetKind: "public-release",
+        sourceFingerprint,
+        modelFingerprint: base.modelFingerprint,
+        calibrationFingerprint: base.calibrationFingerprint,
+        cohort,
+      }),
+      currentBenchmark,
+      simpleBenchmark,
+    ],
   };
 }
 
@@ -297,6 +550,7 @@ function buildPublicTarget(
   dataset: HistoricalAnalysisDatasetV1,
   candidates: ReleaseDateCandidatesV1,
   calibration: ReleaseDateIntervalCalibrationV1,
+  currentSnapshot: FrozenCurrentPublicHeuristicSnapshotV1,
 ): ForecastArtifactTargetV1 {
   const base = targetBase(
     "public-release",
@@ -312,15 +566,38 @@ function buildPublicTarget(
     candidates,
     calibration,
   );
+  const currentBenchmark = buildCurrentPublicReleaseBenchmark({
+    snapshot: currentSnapshot,
+    cycle,
+    anchor,
+  });
+  const simpleBenchmark = publicSimpleBaselineBenchmark(
+    anchor,
+    dataset,
+    candidates,
+    calibrated,
+  );
   if (!calibrated?.forecast.selection.available || !calibrated.forecast.resolved) {
-    return unavailablePublicTarget(base, "insufficient-model-history");
+    return unavailablePublicTarget(
+      base,
+      "insufficient-model-history",
+      dataset.fingerprints.datasetFingerprint,
+      currentBenchmark,
+      simpleBenchmark,
+    );
   }
   const selected = calibrated.forecast.candidates.find(
     (candidate) =>
       candidate.candidateId === calibrated.candidateId && candidate.available,
   );
   if (!selected?.available) {
-    return unavailablePublicTarget(base, "insufficient-model-history");
+    return unavailablePublicTarget(
+      base,
+      "insufficient-model-history",
+      dataset.fingerprints.datasetFingerprint,
+      currentBenchmark,
+      simpleBenchmark,
+    );
   }
   const pointEstimator = RELEASE_DATE_CANDIDATES.includes(
     calibrated.candidateId as ReleaseDateCandidateId,
@@ -328,7 +605,13 @@ function buildPublicTarget(
     ? (calibrated.candidateId as ReleaseDateCandidateId)
     : null;
   if (!pointEstimator) {
-    return unavailablePublicTarget(base, "invalid-source-evidence");
+    return unavailablePublicTarget(
+      base,
+      "invalid-source-evidence",
+      dataset.fingerprints.datasetFingerprint,
+      currentBenchmark,
+      simpleBenchmark,
+    );
   }
   const fifty = calibrated.intervals.find(
     (interval) => interval.level === 0.5,
@@ -338,14 +621,26 @@ function buildPublicTarget(
   );
   const cohort = {
     modelCohortId: calibrated.cohortPathId,
+    modelTrainingCohorts: [{
+      role: "model-training" as const,
+      cohortId: calibrated.cohortPathId,
+      memberIds: selected.trainingTargetIds,
+      memberCount: selected.trainingTargetIds.length,
+    }],
     modelTrainingCount: selected.trainingTargetIds.length,
     calibrationPoolId: `${pointEstimator}:${calibrated.residualPool.selectedPool}:${calibrated.cohortPathId}`,
+    calibrationResidualIds: calibrated.residualPool.selectedResiduals.map(
+      (residual) => residual.residualId,
+    ),
     calibrationResidualCount: calibrated.residualPool.selectedResiduals.length,
   };
   if (!fifty?.available || !eighty?.available) {
     return unavailablePublicTarget(
       base,
       "insufficient-calibration-history",
+      dataset.fingerprints.datasetFingerprint,
+      currentBenchmark,
+      simpleBenchmark,
       cohort,
     );
   }
@@ -361,6 +656,22 @@ function buildPublicTarget(
       roundingRule: FORECAST_INTERVAL_ROUNDING_RULE,
       intervals: [publicInterval(fifty), publicInterval(eighty)],
     },
+    benchmarks: [
+      selectedBenchmark({
+        targetKind: "public-release",
+        sourceFingerprint: dataset.fingerprints.datasetFingerprint,
+        modelFingerprint: base.modelFingerprint,
+        calibrationFingerprint: base.calibrationFingerprint,
+        cohort,
+        availablePrediction: {
+          pointDays: calibrated.forecast.resolved.pointDays,
+          pointCalendarDate: calibrated.forecast.resolved.publicReleaseDate,
+          intervals: [publicInterval(fifty), publicInterval(eighty)],
+        },
+      }),
+      currentBenchmark,
+      simpleBenchmark,
+    ],
   };
 }
 
@@ -407,6 +718,7 @@ function buildNextTarget(
   anchor: HistoricalCanonicalEventRow,
   dataset: HistoricalAnalysisDatasetV1,
   model: NextEligiblePrereleaseEventModelV1,
+  currentSnapshot: FrozenCurrentPublicHeuristicSnapshotV1,
 ): ForecastArtifactTargetV1 {
   const base = targetBase(
     "next-eligible-prerelease-event",
@@ -421,15 +733,40 @@ function buildNextTarget(
     cycle.releaseId,
     model,
   );
-  const cohort =
-    forecast?.timing.available && forecast.stage.available
-      ? {
-          modelCohortId: forecast.timing.cohort,
-          modelTrainingCount: forecast.timing.trainingTargetIds.length,
-          calibrationPoolId: forecast.residualPool.selectedPool,
-          calibrationResidualCount: forecast.residualPool.residualTargetIds.length,
-        }
-      : unavailableCohort();
+  const modelTrainingIds = forecast
+    ? uniqueSorted([...forecast.stage.trainingTargetIds, ...forecast.timing.trainingTargetIds])
+    : [];
+  const cohort = forecast
+    ? {
+        modelCohortId: `stage:${forecast.stage.cohort};timing:${forecast.timing.cohort ?? "unavailable"}`,
+        modelTrainingCohorts: [
+          {
+            role: "stage-training" as const,
+            cohortId: forecast.stage.cohort,
+            memberIds: forecast.stage.trainingTargetIds,
+            memberCount: forecast.stage.trainingTargetIds.length,
+          },
+          {
+            role: "timing-training" as const,
+            cohortId: forecast.timing.cohort ?? "unavailable",
+            memberIds: forecast.timing.trainingTargetIds,
+            memberCount: forecast.timing.trainingTargetIds.length,
+          },
+        ],
+        modelTrainingCount: modelTrainingIds.length,
+        calibrationPoolId: forecast.residualPool.selectedPool,
+        calibrationResidualIds: forecast.residualPool.residualTargetIds,
+        calibrationResidualCount: forecast.residualPool.residualTargetIds.length,
+      }
+    : unavailableCohort();
+  const currentBenchmark =
+    buildIncomparableCurrentNextEventBenchmark(currentSnapshot);
+  const simpleBenchmark = nextSimpleBaselineBenchmark(
+    cycle,
+    anchor,
+    dataset,
+    model,
+  );
   const fifty = forecast?.intervals.find((interval) => interval.level === 0.5);
   const eighty = forecast?.intervals.find((interval) => interval.level === 0.8);
   if (
@@ -444,6 +781,17 @@ function buildNextTarget(
       availability: "unavailable",
       reason: nextUnavailableReason(forecast),
       cohort,
+      benchmarks: [
+        selectedBenchmark({
+          targetKind: "next-eligible-prerelease-event",
+          sourceFingerprint: dataset.fingerprints.datasetFingerprint,
+          modelFingerprint: base.modelFingerprint,
+          calibrationFingerprint: base.calibrationFingerprint,
+          cohort,
+        }),
+        currentBenchmark,
+        simpleBenchmark,
+      ],
     };
   }
   return {
@@ -465,6 +813,29 @@ function buildNextTarget(
         nextInterval(anchor.occurredOn, eighty),
       ],
     },
+    benchmarks: [
+      selectedBenchmark({
+        targetKind: "next-eligible-prerelease-event",
+        sourceFingerprint: dataset.fingerprints.datasetFingerprint,
+        modelFingerprint: base.modelFingerprint,
+        calibrationFingerprint: base.calibrationFingerprint,
+        cohort,
+        availablePrediction: {
+          pointDays: forecast.timing.pointDays,
+          pointCalendarDate: addDays(
+            anchor.occurredOn,
+            Math.floor(forecast.timing.pointDays + 0.5),
+          ),
+          intervals: [
+            nextInterval(anchor.occurredOn, fifty),
+            nextInterval(anchor.occurredOn, eighty),
+          ],
+          predictedEligibleStage: forecast.stage.predictedEligibleStage,
+        },
+      }),
+      currentBenchmark,
+      simpleBenchmark,
+    ],
   };
 }
 
@@ -473,6 +844,7 @@ function buildTargetsAndExclusions(
   candidates: ReleaseDateCandidatesV1,
   calibration: ReleaseDateIntervalCalibrationV1,
   nextModel: NextEligiblePrereleaseEventModelV1,
+  currentSnapshot: FrozenCurrentPublicHeuristicSnapshotV1,
 ): Pick<ForecastArtifactDraftV1, "targets" | "exclusions"> {
   const targets: ForecastArtifactTargetV1[] = [];
   const exclusions: ForecastArtifactDraftV1["exclusions"][number][] = [];
@@ -518,11 +890,26 @@ function buildTargetsAndExclusions(
       exclude(cycle, "public-release", "public-release-already-observed");
     } else {
       targets.push(
-        buildPublicTarget(cycle, anchor, dataset, candidates, calibration),
+        buildPublicTarget(
+          cycle,
+          anchor,
+          dataset,
+          candidates,
+          calibration,
+          currentSnapshot,
+        ),
       );
     }
     if (eligiblePrereleaseStage(anchor.stage)) {
-      targets.push(buildNextTarget(cycle, anchor, dataset, nextModel));
+      targets.push(
+        buildNextTarget(
+          cycle,
+          anchor,
+          dataset,
+          nextModel,
+          currentSnapshot,
+        ),
+      );
     } else {
       exclude(
         cycle,
@@ -536,7 +923,7 @@ function buildTargetsAndExclusions(
 
 export function buildForecastShadowArtifact(
   request: ForecastShadowPipelineRequest,
-  rawSource: PublishedHistoricalReleaseSource,
+  rawSource: PublishedForecastShadowSource,
 ): ForecastArtifactV1 {
   assertRequest(request);
   const source = assertSource(rawSource, request.requestedAt);
@@ -555,53 +942,81 @@ export function buildForecastShadowArtifact(
   const candidates = buildReleaseDateCandidates(dataset);
   const calibration = buildReleaseDateIntervalCalibration(candidates);
   const nextModel = buildNextEligiblePrereleaseEventModel(dataset);
+  let currentSnapshot: FrozenCurrentPublicHeuristicSnapshotV1;
+  try {
+    currentSnapshot = buildFrozenCurrentPublicHeuristicSnapshot({
+      source,
+      dataset,
+      requestedAt: request.requestedAt,
+      scheduledFor: request.scheduledFor,
+    });
+  } catch {
+    throw new ForecastShadowPipelineError("invalid-source");
+  }
   const { targets, exclusions } = buildTargetsAndExclusions(
     dataset,
     candidates,
     calibration,
     nextModel,
+    currentSnapshot,
   );
-  const artifact = buildForecastArtifact({
-    generatedAt: request.requestedAt,
-    runIdentity: {
-      version: "forecast-run-identity/v1",
-      pipeline: "daily-shadow",
-      scheduledFor: request.scheduledFor,
-    },
-    provenance: {
-      sourceAsOfDate: dataset.provenance.sourceAsOfDate,
-      sourceIssuedAt: dataset.provenance.sourceIssuedAt,
-      sourceEvidenceIds: evidenceForDataset(dataset),
-      historicalDataset: {
-        version: dataset.datasetVersion,
-        fingerprint: dataset.fingerprints.datasetFingerprint,
+  let artifact: ForecastArtifactV1;
+  try {
+    artifact = buildForecastArtifact({
+      generatedAt: request.requestedAt,
+      runIdentity: {
+        version: "forecast-run-identity/v1",
+        pipeline: "daily-shadow",
+        scheduledFor: request.scheduledFor,
       },
-      evaluation: {
-        version: evaluation.evaluationVersion,
-        fingerprint: evaluation.fingerprints.evaluationFingerprint,
+      provenance: {
+        sourceAsOfDate: dataset.provenance.sourceAsOfDate,
+        sourceIssuedAt: dataset.provenance.sourceIssuedAt,
+        sourceEvidenceIds: evidenceForDataset(dataset),
+        historicalDataset: {
+          version: dataset.datasetVersion,
+          fingerprint: dataset.fingerprints.datasetFingerprint,
+        },
+        evaluation: {
+          version: evaluation.evaluationVersion,
+          fingerprint: evaluation.fingerprints.evaluationFingerprint,
+        },
+        publicReleaseModel: {
+          version: candidates.candidatesVersion,
+          fingerprint: candidates.fingerprints.resultFingerprint,
+        },
+        publicReleaseCalibration: {
+          version: calibration.calibrationVersion,
+          fingerprint: calibration.fingerprints.resultFingerprint,
+        },
+        nextEventModel: {
+          version: nextModel.modelVersion,
+          fingerprint: nextModel.fingerprints.resultFingerprint,
+        },
+        nextEventCalibration: {
+          version: nextModel.modelVersion,
+          fingerprint: nextModel.fingerprints.resultFingerprint,
+        },
+        codeFingerprint: FORECAST_SHADOW_PIPELINE_CODE_FINGERPRINT,
+        currentPublicHeuristic: {
+          version: FORECAST_CURRENT_PUBLIC_HEURISTIC_VERSION,
+          sourceFingerprint: currentSnapshot.sourceFingerprint,
+          modelFingerprint: currentSnapshot.modelFingerprint,
+        },
       },
-      publicReleaseModel: {
-        version: candidates.candidatesVersion,
-        fingerprint: candidates.fingerprints.resultFingerprint,
-      },
-      publicReleaseCalibration: {
-        version: calibration.calibrationVersion,
-        fingerprint: calibration.fingerprints.resultFingerprint,
-      },
-      nextEventModel: {
-        version: nextModel.modelVersion,
-        fingerprint: nextModel.fingerprints.resultFingerprint,
-      },
-      nextEventCalibration: {
-        version: nextModel.modelVersion,
-        fingerprint: nextModel.fingerprints.resultFingerprint,
-      },
-      codeFingerprint: FORECAST_SHADOW_PIPELINE_CODE_FINGERPRINT,
-    },
-    targets,
-    metrics: [],
-    exclusions,
-  });
+      targets,
+      metrics: [],
+      exclusions,
+    });
+  } catch (error) {
+    if (
+      error instanceof ForecastContractError &&
+      error.issues.some((issue) => issue.code === "size-limit")
+    ) {
+      throw new ForecastShadowPipelineError("artifact-too-large");
+    }
+    throw error;
+  }
   if (
     encoder.encode(serializeForecastArtifact(artifact)).byteLength >
     FORECAST_SHADOW_OPERATIONAL_MAX_BYTES
@@ -662,7 +1077,9 @@ function compatibleStoredArtifact(
     left.provenance.nextEventModel.version ===
       right.provenance.nextEventModel.version &&
     left.provenance.nextEventCalibration.version ===
-      right.provenance.nextEventCalibration.version
+      right.provenance.nextEventCalibration.version &&
+    left.provenance.currentPublicHeuristic.version ===
+      right.provenance.currentPublicHeuristic.version
   );
 }
 

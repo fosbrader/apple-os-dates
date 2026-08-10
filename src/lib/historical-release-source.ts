@@ -21,11 +21,52 @@ export interface PublishedHistoricalReleaseSource {
   releaseMetadata: readonly HistoricalReleaseMetadataV1[];
 }
 
+export interface PublishedForecastShadowSource
+  extends PublishedHistoricalReleaseSource {
+  compatibilityMilestones: readonly ForecastShadowCompatibilityMilestoneInput[];
+  /**
+   * Frozen input for the public heuristic comparator. These rows are kept
+   * separate from analytical truth and are admitted only after the pipeline
+   * proves that each fact exists in the analytical projection at the same
+   * cutoff.
+   */
+  legacyForecastReleases: readonly LegacyForecastReleaseInput[];
+  legacyForecastMilestones: readonly LegacyForecastMilestoneInput[];
+}
+
+export interface ForecastShadowCompatibilityMilestoneInput
+  extends CompatibilityMilestoneInput {
+  /** Exact presentation label consumed only by the frozen legacy comparator. */
+  displayLabel: string;
+}
+
+export interface LegacyForecastReleaseInput {
+  id: string;
+  version: string;
+  lifecycle?: "active" | "released" | "superseded" | null;
+  publicReleaseDate?: string | null;
+  platform: {
+    id: string;
+    name: string;
+    slug: string;
+    sortOrder: number;
+  };
+}
+
+export interface LegacyForecastMilestoneInput {
+  id: string;
+  releaseId: string;
+  label: string;
+  occurredOn: string;
+}
+
 export const FORECAST_SHADOW_MAX_SOURCE_RELEASES = 512;
 export const FORECAST_SHADOW_MAX_SOURCE_EVENTS = 2_048;
 export const FORECAST_SHADOW_MAX_SOURCE_COMPATIBILITY_MILESTONES = 2_048;
 export const FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS = 4_096;
 export const FORECAST_SHADOW_MAX_SOURCE_METADATA = 512;
+export const FORECAST_SHADOW_MAX_SOURCE_LEGACY_RELEASES = 512;
+export const FORECAST_SHADOW_MAX_SOURCE_LEGACY_MILESTONES = 2_048;
 export const FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES = 2_097_152;
 export const FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES = 512;
 export const FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES = 256;
@@ -386,11 +427,184 @@ export function validatePublishedHistoricalReleaseSource(
   return normalized;
 }
 
+function exactObjectKeys(
+  value: Record<string, unknown>,
+  required: readonly string[],
+  optional: readonly string[] = [],
+): boolean {
+  const allowed = new Set([...required, ...optional]);
+  return (
+    required.every((key) => Object.hasOwn(value, key)) &&
+    Object.keys(value).every((key) => allowed.has(key))
+  );
+}
+
+function nonEmptyString(value: unknown): value is string {
+  return typeof value === "string" && value.trim().length > 0;
+}
+
+function validIsoDay(value: unknown): value is string {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    return false;
+  }
+  const [year, month, day] = value.split("-").map(Number);
+  const parsed = new Date(Date.UTC(year, month - 1, day));
+  return (
+    parsed.getUTCFullYear() === year &&
+    parsed.getUTCMonth() === month - 1 &&
+    parsed.getUTCDate() === day
+  );
+}
+
+function validLegacyForecastRelease(
+  value: unknown,
+): value is LegacyForecastReleaseInput {
+  if (
+    !isRecord(value) ||
+    !exactObjectKeys(
+      value,
+      ["id", "version", "platform"],
+      ["lifecycle", "publicReleaseDate"],
+    ) ||
+    !nonEmptyString(value.id) ||
+    !nonEmptyString(value.version) ||
+    !isRecord(value.platform) ||
+    !exactObjectKeys(value.platform, ["id", "name", "slug", "sortOrder"]) ||
+    !nonEmptyString(value.platform.id) ||
+    !nonEmptyString(value.platform.name) ||
+    !nonEmptyString(value.platform.slug) ||
+    !Number.isSafeInteger(value.platform.sortOrder)
+  ) {
+    return false;
+  }
+  if (
+    value.lifecycle !== undefined &&
+    value.lifecycle !== null &&
+    !["active", "released", "superseded"].includes(value.lifecycle as string)
+  ) {
+    return false;
+  }
+  return (
+    value.publicReleaseDate === undefined ||
+    value.publicReleaseDate === null ||
+    validIsoDay(value.publicReleaseDate)
+  );
+}
+
+function validLegacyForecastMilestone(
+  value: unknown,
+): value is LegacyForecastMilestoneInput {
+  return (
+    isRecord(value) &&
+    exactObjectKeys(value, ["id", "releaseId", "label", "occurredOn"]) &&
+    nonEmptyString(value.id) &&
+    nonEmptyString(value.releaseId) &&
+    nonEmptyString(value.label) &&
+    validIsoDay(value.occurredOn)
+  );
+}
+
+/**
+ * Validate the route-only extension used to freeze the existing public
+ * heuristic at forecast origin. The analytical arrays use the shared
+ * normalizer; the separate legacy projection must be complete and match the
+ * exact release and compatibility-milestone identities.
+ */
+export function validatePublishedForecastShadowSource(
+  value: unknown,
+  issuedAt: string,
+): PublishedForecastShadowSource {
+  if (!isRecord(value)) failSource("invalid-source");
+  const raw = value as unknown as PublishedForecastShadowSource;
+  if (
+    !Array.isArray(raw.legacyForecastReleases) ||
+    !Array.isArray(raw.legacyForecastMilestones) ||
+    raw.legacyForecastReleases.length >
+      FORECAST_SHADOW_MAX_SOURCE_LEGACY_RELEASES ||
+    raw.legacyForecastMilestones.length >
+      FORECAST_SHADOW_MAX_SOURCE_LEGACY_MILESTONES
+  ) {
+    failSource("row-limit");
+  }
+  if (
+    raw.legacyForecastReleases.some(
+      (release) => !validLegacyForecastRelease(release),
+    ) ||
+    raw.legacyForecastMilestones.some(
+      (milestone) => !validLegacyForecastMilestone(milestone),
+    )
+  ) {
+    failSource("invalid-source");
+  }
+
+  // This call performs the shared node, string, evidence, canonical-byte,
+  // chronology, and analytical-row checks against the complete raw object.
+  const analytical = validatePublishedHistoricalReleaseSource(value, issuedAt);
+  const analyticalReleaseIds = analytical.releases
+    .map(({ id }) => id)
+    .sort();
+  const legacyReleaseIds = raw.legacyForecastReleases
+    .map(({ id }) => id)
+    .sort();
+  if (
+    new Set(analyticalReleaseIds).size !== analyticalReleaseIds.length ||
+    new Set(legacyReleaseIds).size !== legacyReleaseIds.length ||
+    stableSerializeHistoricalAnalysis(analyticalReleaseIds) !==
+      stableSerializeHistoricalAnalysis(legacyReleaseIds)
+  ) {
+    failSource("invalid-source");
+  }
+
+  const analyticalMilestones = new Map<string, CompatibilityMilestoneInput>();
+  for (const milestone of analytical.compatibilityMilestones) {
+    const key = `${milestone.releaseId}\u0000${milestone.id}`;
+    if (analyticalMilestones.has(key)) failSource("invalid-source");
+    analyticalMilestones.set(key, milestone);
+  }
+  const legacyMilestoneKeys = new Set<string>();
+  for (const milestone of raw.legacyForecastMilestones) {
+    const key = `${milestone.releaseId}\u0000${milestone.id}`;
+    const analyticalMilestone = analyticalMilestones.get(key);
+    if (
+      legacyMilestoneKeys.has(key) ||
+      !analyticalMilestone ||
+      analyticalMilestone.occurredOn !== milestone.occurredOn ||
+      analyticalMilestone.displayLabel !== milestone.label
+    ) {
+      failSource("invalid-source");
+    }
+    legacyMilestoneKeys.add(key);
+  }
+  if (
+    legacyMilestoneKeys.size !== analyticalMilestones.size ||
+    [...analyticalMilestones.keys()].some(
+      (key) => !legacyMilestoneKeys.has(key),
+    )
+  ) {
+    failSource("invalid-source");
+  }
+
+  return {
+    ...analytical,
+    compatibilityMilestones:
+      analytical.compatibilityMilestones as readonly ForecastShadowCompatibilityMilestoneInput[],
+    legacyForecastReleases: raw.legacyForecastReleases.map((release) => ({
+      ...release,
+      platform: { ...release.platform },
+    })),
+    legacyForecastMilestones: raw.legacyForecastMilestones.map(
+      (milestone) => ({ ...milestone }),
+    ),
+  };
+}
+
 const boundedCollectionNames = [
   "releases",
   "events",
   "compatibilityMilestones",
   "releaseMetadata",
+  "legacyForecastReleases",
+  "legacyForecastMilestones",
 ] as const;
 
 type BoundedCollectionName = (typeof boundedCollectionNames)[number];
@@ -400,6 +614,8 @@ interface ForecastShadowSourceEnvelope {
   events: unknown;
   compatibilityMilestones: unknown;
   releaseMetadata: unknown;
+  legacyForecastReleases: unknown;
+  legacyForecastMilestones: unknown;
   sourceCounts: Record<BoundedCollectionName | "observations", unknown>;
   sourceOverflow: Record<BoundedCollectionName | "observations", unknown>;
 }
@@ -417,6 +633,8 @@ const collectionLimits: Record<BoundedCollectionName, number> = {
   compatibilityMilestones:
     FORECAST_SHADOW_MAX_SOURCE_COMPATIBILITY_MILESTONES,
   releaseMetadata: FORECAST_SHADOW_MAX_SOURCE_METADATA,
+  legacyForecastReleases: FORECAST_SHADOW_MAX_SOURCE_LEGACY_RELEASES,
+  legacyForecastMilestones: FORECAST_SHADOW_MAX_SOURCE_LEGACY_MILESTONES,
 };
 
 /**
@@ -425,7 +643,7 @@ const collectionLimits: Record<BoundedCollectionName, number> = {
  */
 export function extractBoundedForecastShadowSource(
   value: unknown,
-): PublishedHistoricalReleaseSource {
+): PublishedForecastShadowSource {
   if (!isRecord(value)) throw new ForecastShadowSourceEnvelopeError();
   const envelope = value as unknown as ForecastShadowSourceEnvelope;
   if (!isRecord(envelope.sourceCounts) || !isRecord(envelope.sourceOverflow)) {
@@ -468,12 +686,16 @@ export function extractBoundedForecastShadowSource(
 
   return {
     releases:
-      envelope.releases as PublishedHistoricalReleaseSource["releases"],
-    events: envelope.events as PublishedHistoricalReleaseSource["events"],
+      envelope.releases as PublishedForecastShadowSource["releases"],
+    events: envelope.events as PublishedForecastShadowSource["events"],
     compatibilityMilestones:
-      envelope.compatibilityMilestones as PublishedHistoricalReleaseSource["compatibilityMilestones"],
+      envelope.compatibilityMilestones as PublishedForecastShadowSource["compatibilityMilestones"],
     releaseMetadata:
-      envelope.releaseMetadata as PublishedHistoricalReleaseSource["releaseMetadata"],
+      envelope.releaseMetadata as PublishedForecastShadowSource["releaseMetadata"],
+    legacyForecastReleases:
+      envelope.legacyForecastReleases as PublishedForecastShadowSource["legacyForecastReleases"],
+    legacyForecastMilestones:
+      envelope.legacyForecastMilestones as PublishedForecastShadowSource["legacyForecastMilestones"],
   };
 }
 
@@ -596,7 +818,8 @@ export const boundedForecastShadowSourceQuery = groq`
         sameDayOrder,
         "availability": availabilityState,
         isRevision,
-        firstObservedAt
+        firstObservedAt,
+        "displayLabel": label
       }
     }.milestones[])[0...${FORECAST_SHADOW_MAX_SOURCE_COMPATIBILITY_MILESTONES + 1}],
     "events": *[
@@ -643,6 +866,32 @@ export const boundedForecastShadowSourceQuery = groq`
         "sourceEvidenceIds": chronologyCoverage.evidence[]->_id
       }
     },
+    "legacyForecastReleases": *[
+      _type == "releaseVersion" &&
+      !(_id in path("drafts.**"))
+    ] | order(_id asc) [0...${FORECAST_SHADOW_MAX_SOURCE_LEGACY_RELEASES + 1}] {
+      "id": _id,
+      version,
+      "lifecycle": releaseStatus,
+      publicReleaseDate,
+      "platform": {
+        "id": releaseTrain->platform->_id,
+        "name": releaseTrain->platform->name,
+        "slug": releaseTrain->platform->slug.current,
+        "sortOrder": releaseTrain->platform->sortOrder
+      }
+    },
+    "legacyForecastMilestones": (*[
+      _type == "releaseVersion" &&
+      !(_id in path("drafts.**"))
+    ] | order(_id asc) {
+      "milestones": milestones[] | order(_key asc) {
+        "id": _key,
+        "releaseId": ^._id,
+        label,
+        "occurredOn": date
+      }
+    }.milestones[])[0...${FORECAST_SHADOW_MAX_SOURCE_LEGACY_MILESTONES + 1}],
     "sourceCounts": {
       "releases": count(*[
         _type == "releaseVersion" && !(_id in path("drafts.**"))
@@ -656,6 +905,12 @@ export const boundedForecastShadowSourceQuery = groq`
       "releaseMetadata": count(*[
         _type == "historicalReleaseMetadata" && !(_id in path("drafts.**"))
       ]),
+      "legacyForecastReleases": count(*[
+        _type == "releaseVersion" && !(_id in path("drafts.**"))
+      ]),
+      "legacyForecastMilestones": count(*[
+        _type == "releaseVersion" && !(_id in path("drafts.**"))
+      ].milestones[]),
       "observations": count(*[
         _type == "releaseEvent" && !(_id in path("drafts.**"))
       ]) + count(*[
@@ -675,6 +930,12 @@ export const boundedForecastShadowSourceQuery = groq`
       "releaseMetadata": count(*[
         _type == "historicalReleaseMetadata" && !(_id in path("drafts.**"))
       ]) > ${FORECAST_SHADOW_MAX_SOURCE_METADATA},
+      "legacyForecastReleases": count(*[
+        _type == "releaseVersion" && !(_id in path("drafts.**"))
+      ]) > ${FORECAST_SHADOW_MAX_SOURCE_LEGACY_RELEASES},
+      "legacyForecastMilestones": count(*[
+        _type == "releaseVersion" && !(_id in path("drafts.**"))
+      ].milestones[]) > ${FORECAST_SHADOW_MAX_SOURCE_LEGACY_MILESTONES},
       "observations": count(*[
         _type == "releaseEvent" && !(_id in path("drafts.**"))
       ]) + count(*[

@@ -5,7 +5,7 @@ import {
   PUBLISHED_HISTORICAL_RELEASE_FETCH_OPTIONS,
   boundedForecastShadowSourceQuery,
   extractBoundedForecastShadowSource,
-  type PublishedHistoricalReleaseSource,
+  type PublishedForecastShadowSource,
 } from "@/lib/historical-release-source";
 import { client } from "@/sanity/client";
 
@@ -22,7 +22,7 @@ const forecastSourceClient = client.withConfig({
   retryDelay: () => 250,
 });
 
-async function fetchPublishedSource(): Promise<PublishedHistoricalReleaseSource> {
+async function fetchPublishedSource(): Promise<PublishedForecastShadowSource> {
   const envelope = await forecastSourceClient.fetch<unknown>(
     boundedForecastShadowSourceQuery,
     {},
