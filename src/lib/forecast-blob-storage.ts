@@ -996,10 +996,21 @@ class VercelForecastBlobStorage implements ForecastBlobStorage {
     bytes: Uint8Array,
   ): Promise<ImmutablePutResult> {
     const descriptor = checkedPath(pathname);
-    checkedImmutableBytes(pathname, descriptor, bytes);
+    if (!(bytes instanceof Uint8Array)) {
+      throw new ForecastBlobIntegrityError(
+        "Immutable forecast storage requires a byte array.",
+      );
+    }
+    if (bytes.byteLength > descriptor.maximumBytes) {
+      throw new ForecastBlobSizeError(pathname, descriptor.maximumBytes);
+    }
+    // Never retain caller-owned mutable bytes across credential, network, or
+    // recovery awaits. Validate, upload, and compare one owned snapshot.
+    const ownedBytes = Uint8Array.from(bytes);
+    checkedImmutableBytes(pathname, descriptor, ownedBytes);
 
     try {
-      await this.#putOnce(pathname, bytes, descriptor.maximumBytes, {
+      await this.#putOnce(pathname, ownedBytes, descriptor.maximumBytes, {
         allowOverwrite: false,
       });
       return { status: "created" };
@@ -1012,7 +1023,7 @@ class VercelForecastBlobStorage implements ForecastBlobStorage {
       } catch {
         throw error;
       }
-      if (existing && bytesEqual(existing.bytes, bytes)) {
+      if (existing && bytesEqual(existing.bytes, ownedBytes)) {
         return { status: precondition ? "exists" : "created" };
       }
       if (existing || precondition) {
@@ -1043,13 +1054,22 @@ class VercelForecastBlobStorage implements ForecastBlobStorage {
         "Forecast pointer CAS requires an exact generation and fingerprint pair.",
       );
     }
+    if (!(nextBytes instanceof Uint8Array)) {
+      throw new ForecastBlobIntegrityError(
+        "Forecast pointer CAS requires a byte array.",
+      );
+    }
     if (nextBytes.byteLength > FORECAST_POINTER_MAX_BYTES) {
       throw new ForecastBlobSizeError(pathname, FORECAST_POINTER_MAX_BYTES);
     }
+    // The pointer must remain byte-for-byte identical to the value validated
+    // before any asynchronous reads, credential resolution, or conditional
+    // write. Caller mutation cannot alter this owned snapshot.
+    const ownedNextBytes = Uint8Array.from(nextBytes);
 
     let next: ForecastPointerV1;
     try {
-      next = parseForecastPointer(nextBytes);
+      next = parseForecastPointer(ownedNextBytes);
     } catch (cause) {
       throw new ForecastBlobIntegrityError(
         "Forecast pointer CAS requires canonical forecast-pointer/v1 bytes.",
@@ -1078,7 +1098,7 @@ class VercelForecastBlobStorage implements ForecastBlobStorage {
     try {
       await this.#putOnce(
         pathname,
-        nextBytes,
+        ownedNextBytes,
         FORECAST_POINTER_MAX_BYTES,
         current
           ? {
@@ -1097,7 +1117,7 @@ class VercelForecastBlobStorage implements ForecastBlobStorage {
 
       if (error instanceof BlobPreconditionFailedError) {
         const raced = await this.#readPointerOnce();
-        if (raced && bytesEqual(raced.bytes, nextBytes)) {
+        if (raced && bytesEqual(raced.bytes, ownedNextBytes)) {
           return {
             status: "applied",
             atomic: true,
@@ -1117,7 +1137,7 @@ class VercelForecastBlobStorage implements ForecastBlobStorage {
       } catch {
         throw error;
       }
-      if (recovered && bytesEqual(recovered.bytes, nextBytes)) {
+      if (recovered && bytesEqual(recovered.bytes, ownedNextBytes)) {
         return {
           status: "applied",
           atomic: true,

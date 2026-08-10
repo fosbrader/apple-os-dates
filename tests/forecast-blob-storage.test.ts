@@ -620,6 +620,39 @@ test("FR-013 immutable writes are idempotent, collision-safe, and recover an amb
   );
 });
 
+test("FR-013 snapshots immutable input before asynchronous credential resolution", async () => {
+  const artifact = buildForecastArtifact(artifactDraft());
+  // Buffer.slice() is a shared view, so this also proves that the adapter
+  // creates an owned Uint8Array instead of calling the input's slice method.
+  const input = Buffer.from(encoder.encode(serializeForecastArtifact(artifact)));
+  const original = Uint8Array.from(input);
+  const pathname = forecastArtifactPath(artifact.artifactId);
+  const operations = new MemoryForecastBlobOperations();
+  let releaseCredential!: (token: string) => void;
+  let markCredentialStarted!: () => void;
+  const credentialStarted = new Promise<void>((resolve) => {
+    markCredentialStarted = resolve;
+  });
+  const credential = new Promise<string>((resolve) => {
+    releaseCredential = resolve;
+  });
+  const adapter = storage(operations, {
+    oidcTokenProvider: async () => {
+      markCredentialStarted();
+      return credential;
+    },
+  });
+
+  const pending = adapter.putImmutable(pathname, input);
+  await credentialStarted;
+  input[0] = "[".charCodeAt(0);
+  releaseCredential(testOidcToken);
+
+  assert.deepEqual(await pending, { status: "created" });
+  assert.notDeepEqual(input, original);
+  assert.deepEqual(operations.files.get(pathname)?.bytes, original);
+});
+
 test("FR-013 initializes and updates the pointer with real no-overwrite and ETag CAS options", async () => {
   const operations = new MemoryForecastBlobOperations();
   const adapter = storage(operations);
@@ -659,6 +692,38 @@ test("FR-013 initializes and updates the pointer with real no-overwrite and ETag
   assert.equal(operations.putCalls[2]?.options.allowOverwrite, true);
   assert.equal(operations.putCalls[2]?.options.ifMatch, oldEtag);
   assert.deepEqual((await adapter.readForecastPointer())?.pointer, next);
+});
+
+test("FR-013 snapshots pointer input before an asynchronous current-pointer read", async () => {
+  const initial = initializeForecastPointer("2026-08-09T20:01:00.000Z");
+  const input = encoder.encode(serializeForecastPointer(initial));
+  const original = input.slice();
+  const operations = new MemoryForecastBlobOperations();
+  let releaseRead!: () => void;
+  let markReadStarted!: () => void;
+  const readStarted = new Promise<void>((resolve) => {
+    markReadStarted = resolve;
+  });
+  operations.getOverride = async () => {
+    markReadStarted();
+    await new Promise<void>((resolve) => {
+      releaseRead = resolve;
+    });
+    return null;
+  };
+
+  const pending = storage(operations).compareAndSwapPointer(
+    FORECAST_POINTER_PATH,
+    { fingerprint: null, generation: 0 },
+    input,
+  );
+  await readStarted;
+  input[0] = "[".charCodeAt(0);
+  releaseRead();
+
+  assert.equal((await pending).status, "applied");
+  assert.notDeepEqual(input, original);
+  assert.deepEqual(operations.files.get(FORECAST_POINTER_PATH)?.bytes, original);
 });
 
 test("FR-013 accepts equivalent initialization and rejects stale-ETag races", async () => {
