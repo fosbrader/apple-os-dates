@@ -97,6 +97,11 @@ Adapters without atomic CAS fail closed. Put failures, collisions, stale
 fingerprints, lost updates, and ABA generations leave the prior pointer as the
 committed state.
 
+The Production-only Vercel implementation and its provisioning gate are in
+[`forecast-blob-storage.md`](./forecast-blob-storage.md). The adapter uses a
+dedicated private store and short-lived OIDC. It is not enabled by this
+contract alone.
+
 Validate stored canonical artifact or pointer bytes with:
 
 ```sh
