@@ -88,6 +88,18 @@ replacement evidence all fail closed with a ledger exclusion. Invalid global
 `asOfDate` or `issuedAt` values throw `ReleaseObservationInputError` before any
 result is produced, preserving the result type's validated-dataset guarantee.
 
+Release lifecycle observations follow the same knowledge-time boundary.
+`releaseVersion.statusFirstObservedAt` is projected when present; otherwise
+the adapter's `issuedAt` fallback cannot prove historical availability before
+the current snapshot. FR-021's
+[`historical-release-metadata.md`](historical-release-metadata.md) workflow
+adds that optional timestamp only through a revision-guarded explicit-evidence
+or conservative immutable-`_createdAt` plan. `_updatedAt` is forbidden because
+later editorial changes would leak future knowledge into older backtests.
+An explicit timestamp must be on or after every cited source publication/access
+day or audit verification day, so newly collected evidence cannot support a
+retroactively earlier knowledge claim.
+
 ## Historical-analysis dataset v1
 
 `src/lib/historical-analysis-dataset.ts` builds the versioned

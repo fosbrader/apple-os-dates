@@ -5,6 +5,7 @@ import {
   validateChronologyCoverage,
   validateProvenanceStatus,
   validateStatusEffectiveDate,
+  validateStatusFirstObservedAt,
 } from "./schemaValidation";
 
 interface MilestoneValue {
@@ -88,6 +89,15 @@ export const releaseVersion = defineType({
       description:
         "Date when the recorded lifecycle status became effective. Leave it empty when the date is not supported by source evidence.",
       validation: (rule) => rule.custom(validateStatusEffectiveDate),
+    }),
+    defineField({
+      name: "statusFirstObservedAt",
+      title: "Status First Observed At",
+      type: "datetime",
+      description:
+        "Managed only by the reviewed lifecycle-observation planner. This is not the lifecycle effective date and must never be derived from _updatedAt.",
+      readOnly: true,
+      validation: (rule) => rule.custom(validateStatusFirstObservedAt),
     }),
     defineField({
       name: "chronologyCoverage",

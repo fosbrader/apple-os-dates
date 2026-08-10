@@ -40,6 +40,34 @@ function referencedId(value: unknown): string | undefined {
   return normalizeDocumentId((value as ReferenceValue | undefined)?._ref);
 }
 
+function isIsoDay(value: string): boolean {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const parsed = new Date(`${value}T00:00:00.000Z`);
+  return (
+    Number.isFinite(parsed.getTime()) &&
+    parsed.toISOString().slice(0, 10) === value
+  );
+}
+
+function isIsoInstant(value: string): boolean {
+  const match =
+    /^(\d{4}-\d{2}-\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.\d+)?(?:Z|[+-](\d{2}):(\d{2}))$/.exec(
+      value,
+    );
+  if (!match || !isIsoDay(match[1])) return false;
+  const offsetHour = match[5] === undefined ? 0 : Number(match[5]);
+  const offsetMinute = match[6] === undefined ? 0 : Number(match[6]);
+  return (
+    Number(match[2]) <= 23 &&
+    Number(match[3]) <= 59 &&
+    Number(match[4]) <= 59 &&
+    offsetHour <= 14 &&
+    offsetMinute <= 59 &&
+    (offsetHour < 14 || offsetMinute === 0) &&
+    Number.isFinite(Date.parse(value))
+  );
+}
+
 export function validateStatusEffectiveDate(
   value: string | undefined,
   context: ValidationContext
@@ -86,6 +114,41 @@ export function validateStatusEffectiveDate(
   }
 
   return true;
+}
+
+export function validateStatusFirstObservedAt(
+  value: string | undefined,
+  context: ValidationContext,
+) {
+  if (!value) return true;
+  if (!isIsoInstant(value)) {
+    return "Status first observed at must be a valid ISO timestamp with an offset.";
+  }
+  const observedInstant = Date.parse(value);
+
+  const publicReleaseDate = context.document?.publicReleaseDate as
+    | string
+    | undefined;
+  const explicitStatus = context.document?.releaseStatus as string | undefined;
+  const effectiveStatus =
+    explicitStatus || (publicReleaseDate ? "released" : "active");
+  if (effectiveStatus === "active") {
+    return "Active versions cannot record a lifecycle-transition observation time.";
+  }
+
+  const effectiveDate =
+    (context.document?.statusEffectiveDate as string | undefined) ||
+    (effectiveStatus === "released" ? publicReleaseDate : undefined);
+  if (!effectiveDate) {
+    return "A lifecycle-transition observation time requires a status effective date.";
+  }
+  if (!isIsoDay(effectiveDate)) {
+    return "A lifecycle-transition observation time requires a valid status effective date.";
+  }
+  const observedDay = new Date(observedInstant).toISOString().slice(0, 10);
+  return observedDay >= effectiveDate
+    ? true
+    : "Status first observed at cannot precede the status effective date.";
 }
 
 export async function validateChronologyCoverage(
