@@ -48,7 +48,7 @@ fail-closed coverage behavior.
 Planning requires a human-reviewed JSON manifest and a fresh published-only
 snapshot. No cohort assertion, evidence identity, or explicit observation
 timestamp is invented by the planner; it only copies a reviewed timestamp or
-immutable `_createdAt` and derives the reviewable availability day of
+immutable `_createdAt` and derives the reviewable availability instant of
 explicitly cited evidence. The manifest must contain exactly one entry for
 every published `releaseVersion` in the analytical source. Partial migration
 cohorts are not eligible for apply because they cannot prove that FR-007
@@ -78,12 +78,15 @@ before the Sanity document existed; it does not claim `_createdAt` is the real
 historical transition or first editorial observation.
 
 Explicit evidence is also bound in time. For every cited `source`, the planner
-uses its valid `publishedAt` UTC day, or its valid `accessedAt` day only when
-`publishedAt` is absent. For every cited `auditBatch`, it uses the valid
-`verifiedAt` UTC day. The plan records that derived day and basis, and rejects
-an observation day earlier than any cited evidence's availability. A missing
-or malformed evidence time stops planning; a later `accessedAt` cannot override
-an existing `publishedAt`, and `_updatedAt` is never a fallback.
+uses its exact valid `publishedAt` instant, or its valid date-only `accessedAt`
+only when `publishedAt` is absent. A date-only access record is conservatively
+available at `23:59:59.999Z` on that UTC day; it never authorizes an earlier
+same-day observation. For every cited `auditBatch`, the planner uses the exact
+valid `verifiedAt` instant. The plan records that normalized UTC instant and
+basis, and rejects an observation instant earlier than any cited evidence's
+availability. A missing or malformed evidence time stops planning; a later
+`accessedAt` cannot override an existing `publishedAt`, and `_updatedAt` is
+never a fallback.
 
 Shape only (angle-bracket values must be replaced by reviewed facts; this is
 not an ingestible manifest):
@@ -142,18 +145,22 @@ ambiguous or missing evidence, stale release/graph/evidence/target revisions,
 unsupported values, unsafe lifecycle observation bounds, and no-op entries. A
 successful plan records exact IDs, old and expected new bodies, dependency
 revisions, scoped evidence refs, lifecycle-observation basis, revision-guarded
-sets, each explicit lifecycle evidence availability day and derivation basis,
-deterministic SHA-256, and exact rollback set/unset or delete-created operations.
+sets, each explicit lifecycle evidence availability instant and derivation
+basis, deterministic SHA-256, and exact rollback set/unset or delete-created
+operations.
 
 The reviewed snapshot must contain the complete full documents for these
 analytical types: `auditBatch`, `historicalReleaseMetadata`, `platform`,
 `releaseEvent`, `releaseTrain`, `releaseVersion`, and `source`. The plan binds
 the sorted ID/type/revision ledger for that entire set and a digest of the exact
 snapshot bytes. This includes every first-class release event and every legacy
-milestone embedded in a release-version revision. Plan and rollback contract
-objects reject unknown properties recursively; opaque Sanity before/after
-document bodies remain exact digest-bound payloads so unowned document fields
-can be preserved safely.
+milestone embedded in a release-version revision. A second plan-bound digest
+covers the strict canonical published projection used by the adapter, including
+every relevant release, event, milestone, relationship, lifecycle, and sidecar
+field. The live GROQ result must match it exactly before apply. Plan and rollback
+contract objects reject unknown properties recursively; opaque Sanity
+before/after document bodies remain exact digest-bound payloads so unowned
+document fields can be preserved safely.
 
 This workflow is separate from and does not change the chronology metadata
 planner introduced for issue #26.
@@ -189,8 +196,8 @@ against post-apply revisions to require a zero-residual no-op. It writes a local
 receipt with the resulting revisions and historical-dataset fingerprint.
 
 The apply preflight also re-derives every explicit lifecycle evidence
-availability day from the still-current evidence revision and requires it to
-match the reviewed plan before committing.
+availability instant from the still-current evidence revision and requires it
+to match the reviewed plan before committing.
 
 Rollback is not automated. Recovery requires fetching current post-apply
 revisions, verifying created bodies still match the plan, and applying only the
