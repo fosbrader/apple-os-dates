@@ -6,6 +6,7 @@ import { releaseVersion } from "../src/sanity/schemas/releaseVersion";
 import {
   validateChronologyCoverage,
   validateStatusEffectiveDate,
+  validateStatusFirstObservedAt,
   type ChronologyCoverageValue,
 } from "../src/sanity/schemas/schemaValidation";
 
@@ -44,8 +45,13 @@ test("release versions expose optional status and coverage metadata", () => {
   const chronologyCoverage = fields.find(
     (candidate) => candidate.name === "chronologyCoverage"
   );
+  const statusFirstObservedAt = fields.find(
+    (candidate) => candidate.name === "statusFirstObservedAt",
+  );
 
   assert.equal(statusEffectiveDate?.type, "date");
+  assert.equal(statusFirstObservedAt?.type, "datetime");
+  assert.equal(statusFirstObservedAt?.readOnly, true);
   assert.equal(chronologyCoverage?.type, "object");
   assert.deepEqual(
     chronologyCoverage?.fields?.map((field) => field.name),
@@ -62,6 +68,54 @@ test("release versions expose optional status and coverage metadata", () => {
     (releaseVersion.initialValue as Record<string, unknown>)
       .chronologyCoverage,
     { status: "unknown" }
+  );
+});
+
+test("status observation time is explicit, transition-scoped, and non-leaking", () => {
+  assert.match(
+    String(
+      validateStatusFirstObservedAt(
+        "2026-02-31T16:00:00.000Z",
+        validationContext({
+          releaseStatus: "released",
+          publicReleaseDate: "2026-02-28",
+        }),
+      ),
+    ),
+    /valid ISO timestamp/,
+  );
+  assert.match(
+    String(
+      validateStatusFirstObservedAt(
+        "2026-08-09T16:00:00.000Z",
+        validationContext({ releaseStatus: "active" }),
+      ),
+    ),
+    /Active versions/,
+  );
+  assert.match(
+    String(
+      validateStatusFirstObservedAt(
+        "2026-08-08T23:59:59.000Z",
+        validationContext({
+          releaseStatus: "released",
+          publicReleaseDate: "2026-08-09",
+          statusEffectiveDate: "2026-08-09",
+        }),
+      ),
+    ),
+    /cannot precede/,
+  );
+  assert.equal(
+    validateStatusFirstObservedAt(
+      "2026-08-09T16:00:00.000Z",
+      validationContext({
+        releaseStatus: "released",
+        publicReleaseDate: "2026-08-09",
+        statusEffectiveDate: "2026-08-09",
+      }),
+    ),
+    true,
   );
 });
 

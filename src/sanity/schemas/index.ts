@@ -4,6 +4,7 @@ import { releaseVersion } from "./releaseVersion";
 import { betaMilestone } from "./betaMilestone";
 import { source } from "./source";
 import { auditBatch } from "./auditBatch";
+import { historicalReleaseMetadata } from "./historicalReleaseMetadata";
 import {
   blockContent,
   citation,
@@ -38,6 +39,7 @@ export const schemaTypes = [
   // Source-backed release archive.
   source,
   auditBatch,
+  historicalReleaseMetadata,
   releaseChange,
   releaseBuild,
   releaseEvent,
