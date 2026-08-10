@@ -7,6 +7,7 @@ export interface ForecastShadowRunRequest {
 
 interface ForecastShadowHandlerOptions {
   runForecastShadow: (request: ForecastShadowRunRequest) => Promise<void>;
+  getForecastShadowEnabled?: () => boolean;
   getCronSecret?: () => string | undefined;
   now?: () => Date;
 }
@@ -36,17 +37,34 @@ function canonicalInstant(value: Date): string | null {
   return Number.isFinite(value.getTime()) ? value.toISOString() : null;
 }
 
+type ForecastShadowFailureReason =
+  | "disabled"
+  | "configuration"
+  | "clock"
+  | "pipeline";
+
+function logFailure(reason: ForecastShadowFailureReason): void {
+  console.error("forecast-shadow-failure", reason);
+}
+
 export function createForecastShadowHandler({
   runForecastShadow,
+  getForecastShadowEnabled = () =>
+    process.env.FORECAST_SHADOW_ENABLED === "true",
   getCronSecret = () => process.env.CRON_SECRET,
   now = () => new Date(),
 }: ForecastShadowHandlerOptions) {
   let runInProgress = false;
 
   return async function GET(request: Request): Promise<Response> {
+    if (!getForecastShadowEnabled()) {
+      logFailure("disabled");
+      return json({ error: "Forecast generation is unavailable." }, 503);
+    }
+
     const secret = getCronSecret()?.trim();
     if (!secret || secret.length < 24) {
-      console.error("Forecast shadow cron is not configured");
+      logFailure("configuration");
       return json({ error: "Forecast generation is unavailable." }, 503);
     }
 
@@ -56,7 +74,7 @@ export function createForecastShadowHandler({
 
     const requestedAt = canonicalInstant(now());
     if (!requestedAt) {
-      console.error("Forecast shadow cron received an invalid clock value");
+      logFailure("clock");
       return json({ error: "Forecast generation is unavailable." }, 503);
     }
     if (runInProgress) {
@@ -70,11 +88,8 @@ export function createForecastShadowHandler({
         scheduledFor: requestedAt.slice(0, 10),
       });
       return json({ completed: true }, 200);
-    } catch (error) {
-      console.error(
-        "Forecast shadow cron failed",
-        error instanceof Error ? error.name : "UnknownError",
-      );
+    } catch {
+      logFailure("pipeline");
       return json({ error: "Forecast generation failed." }, 503);
     } finally {
       runInProgress = false;
