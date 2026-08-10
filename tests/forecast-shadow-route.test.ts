@@ -11,6 +11,43 @@ function request(secret?: string): Request {
   });
 }
 
+test("forecast shadow cron is default-off before configuration or pipeline work", async (context) => {
+  const previousGate = process.env.FORECAST_SHADOW_ENABLED;
+  delete process.env.FORECAST_SHADOW_ENABLED;
+  context.after(() => {
+    if (previousGate === undefined) {
+      delete process.env.FORECAST_SHADOW_ENABLED;
+    } else {
+      process.env.FORECAST_SHADOW_ENABLED = previousGate;
+    }
+  });
+  const logs: unknown[][] = [];
+  context.mock.method(console, "error", (...values: unknown[]) => {
+    logs.push(values);
+  });
+  let secretReads = 0;
+  let calls = 0;
+  const handler = createForecastShadowHandler({
+    runForecastShadow: async () => {
+      calls += 1;
+    },
+    getCronSecret: () => {
+      secretReads += 1;
+      return cronSecret;
+    },
+  });
+
+  const response = await handler(request(cronSecret));
+
+  assert.equal(response.status, 503);
+  assert.deepEqual(await response.json(), {
+    error: "Forecast generation is unavailable.",
+  });
+  assert.equal(secretReads, 0);
+  assert.equal(calls, 0);
+  assert.deepEqual(logs, [["forecast-shadow-failure", "disabled"]]);
+});
+
 test("forecast shadow cron fails closed before it starts the pipeline", async (context) => {
   context.mock.method(console, "error", () => undefined);
   let calls = 0;
@@ -18,6 +55,7 @@ test("forecast shadow cron fails closed before it starts the pipeline", async (c
     runForecastShadow: async () => {
       calls += 1;
     },
+    getForecastShadowEnabled: () => true,
     getCronSecret: () => undefined,
   });
 
@@ -28,6 +66,7 @@ test("forecast shadow cron fails closed before it starts the pipeline", async (c
     runForecastShadow: async () => {
       calls += 1;
     },
+    getForecastShadowEnabled: () => true,
     getCronSecret: () => cronSecret,
   });
   assert.equal((await unauthorized(request("wrong-secret"))).status, 401);
@@ -41,6 +80,7 @@ test("forecast shadow cron supplies one stable UTC-day run identity", async () =
     runForecastShadow: async (input) => {
       calls.push(input);
     },
+    getForecastShadowEnabled: () => true,
     getCronSecret: () => cronSecret,
     now: () => new Date("2026-08-10T08:43:00.000Z"),
   });
@@ -70,6 +110,7 @@ test("forecast shadow cron rejects an invalid clock and redacts pipeline failure
     runForecastShadow: async () => {
       calls += 1;
     },
+    getForecastShadowEnabled: () => true,
     getCronSecret: () => cronSecret,
     now: () => new Date(Number.NaN),
   });
@@ -78,8 +119,13 @@ test("forecast shadow cron rejects an invalid clock and redacts pipeline failure
 
   const failed = createForecastShadowHandler({
     runForecastShadow: async () => {
-      throw new Error("private artifact forecast/artifacts/secret.json");
+      const error = new Error(
+        "private artifact forecast/artifacts/secret.json",
+      );
+      error.name = "MutableSecretErrorName";
+      throw error;
     },
+    getForecastShadowEnabled: () => true,
     getCronSecret: () => cronSecret,
     now: () => new Date("2026-08-10T08:43:00.000Z"),
   });
@@ -89,6 +135,8 @@ test("forecast shadow cron rejects an invalid clock and redacts pipeline failure
     error: "Forecast generation failed.",
   });
   assert.doesNotMatch(JSON.stringify(logs), /secret\.json|forecast\/artifacts/);
+  assert.doesNotMatch(JSON.stringify(logs), /MutableSecretErrorName/);
+  assert.deepEqual(logs.at(-1), ["forecast-shadow-failure", "pipeline"]);
 });
 
 test("forecast shadow cron rejects overlapping work in one function instance", async () => {
@@ -107,6 +155,7 @@ test("forecast shadow cron rejects overlapping work in one function instance", a
       started?.();
       await mayFinish;
     },
+    getForecastShadowEnabled: () => true,
     getCronSecret: () => cronSecret,
     now: () => new Date("2026-08-10T08:43:00.000Z"),
   });

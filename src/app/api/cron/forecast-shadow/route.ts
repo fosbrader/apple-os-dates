@@ -2,7 +2,8 @@ import { createForecastBlobStorage } from "@/lib/forecast-blob-storage";
 import { runForecastShadowPipeline } from "@/lib/forecast-shadow-pipeline";
 import {
   PUBLISHED_HISTORICAL_RELEASE_FETCH_OPTIONS,
-  publishedHistoricalReleaseSourceQuery,
+  boundedForecastShadowSourceQuery,
+  extractBoundedForecastShadowSource,
   type PublishedHistoricalReleaseSource,
 } from "@/lib/historical-release-source";
 import { client } from "@/sanity/client";
@@ -21,14 +22,15 @@ const forecastSourceClient = client.withConfig({
 });
 
 async function fetchPublishedSource(): Promise<PublishedHistoricalReleaseSource> {
-  return forecastSourceClient.fetch<PublishedHistoricalReleaseSource>(
-    publishedHistoricalReleaseSourceQuery,
+  const envelope = await forecastSourceClient.fetch<unknown>(
+    boundedForecastShadowSourceQuery,
     {},
     {
       ...PUBLISHED_HISTORICAL_RELEASE_FETCH_OPTIONS,
       cache: "no-store",
     },
   );
+  return extractBoundedForecastShadowSource(envelope);
 }
 
 export const GET = createForecastShadowHandler({

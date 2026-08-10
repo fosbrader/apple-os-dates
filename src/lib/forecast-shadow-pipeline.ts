@@ -9,6 +9,8 @@ import {
   initializeForecastPointer,
   parseForecastArtifact,
   parseForecastPointer,
+  rawArtifactDigest,
+  reconciliationRootArtifactPath,
   serializeForecastArtifact,
   type ForecastArtifactAvailabilityReason,
   type ForecastArtifactDraftV1,
@@ -23,6 +25,7 @@ import {
 import {
   buildHistoricalAnalysisDataset,
   historicalAnalysisFingerprint,
+  stableSerializeHistoricalAnalysis,
   type HistoricalAnalysisDatasetV1,
   type HistoricalCanonicalEventRow,
   type HistoricalReleaseCycleRow,
@@ -46,21 +49,53 @@ import {
   type ReleaseDateIntervalCalibrationV1,
 } from "./release-date-interval-calibration";
 import { adaptReleaseObservations } from "./release-observation-adapter";
-import type { PublishedHistoricalReleaseSource } from "./historical-release-source";
+import {
+  FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES,
+  FORECAST_SHADOW_MAX_SOURCE_COMPATIBILITY_MILESTONES,
+  FORECAST_SHADOW_MAX_SOURCE_EVENTS,
+  FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS,
+  FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
+  FORECAST_SHADOW_MAX_SOURCE_METADATA,
+  FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS,
+  FORECAST_SHADOW_MAX_SOURCE_RELEASES,
+  FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES,
+  type PublishedHistoricalReleaseSource,
+} from "./historical-release-source";
 import { buildWalkForwardEvaluation } from "./walk-forward-evaluation";
+
+export {
+  FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES,
+  FORECAST_SHADOW_MAX_SOURCE_COMPATIBILITY_MILESTONES,
+  FORECAST_SHADOW_MAX_SOURCE_EVENTS,
+  FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS,
+  FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
+  FORECAST_SHADOW_MAX_SOURCE_METADATA,
+  FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS,
+  FORECAST_SHADOW_MAX_SOURCE_RELEASES,
+  FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES,
+};
 
 export const FORECAST_SHADOW_PIPELINE_VERSION = "forecast-shadow-pipeline/v1";
 export const FORECAST_SHADOW_OPERATIONAL_MAX_BYTES = 262_144;
 export const FORECAST_SHADOW_MAX_POINTER_TRANSITIONS = 12;
-export const FORECAST_SHADOW_MAX_SOURCE_RELEASES = 2_048;
-export const FORECAST_SHADOW_MAX_SOURCE_EVENTS = 8_192;
-export const FORECAST_SHADOW_MAX_SOURCE_METADATA = 2_048;
 
 const pipelineCodeManifest = {
   version: FORECAST_SHADOW_PIPELINE_VERSION,
   algorithm:
-    "published-snapshot;explicit-sidecar;latest-complete-active-anchor;public-and-next-event-models;exact-estimator;immutable-first;generation-and-fingerprint-cas;prior-active-preserved",
+    "published-snapshot;exact-request-instant-cutoff;bounded-runtime-source;explicit-sidecar;latest-complete-active-anchor;public-and-next-event-models;exact-estimator;immutable-first;full-pointer-preflight;generation-and-fingerprint-cas;prior-active-preserved",
   operationalArtifactMaxBytes: FORECAST_SHADOW_OPERATIONAL_MAX_BYTES,
+  sourceContract: {
+    canonicalMaxBytes: FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES,
+    compatibilityMilestones:
+      FORECAST_SHADOW_MAX_SOURCE_COMPATIBILITY_MILESTONES,
+    evidenceIdMaxBytes: FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
+    evidenceIdsPerField: FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS,
+    events: FORECAST_SHADOW_MAX_SOURCE_EVENTS,
+    metadata: FORECAST_SHADOW_MAX_SOURCE_METADATA,
+    observations: FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS,
+    releases: FORECAST_SHADOW_MAX_SOURCE_RELEASES,
+    stringMaxBytes: FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES,
+  },
 } as const;
 
 export const FORECAST_SHADOW_PIPELINE_CODE_FINGERPRINT =
@@ -137,20 +172,147 @@ function assertRequest(request: ForecastShadowPipelineRequest): void {
   }
 }
 
+const FORECAST_SHADOW_MAX_SOURCE_NODES = 262_144;
+
+function failSourceContract(): never {
+  throw new TypeError("Invalid forecast shadow source contract.");
+}
+
+function assertRawObservationInstant(
+  value: unknown,
+  requestedAt: string,
+): void {
+  if (value === undefined || value === null) return;
+  if (
+    typeof value !== "string" ||
+    !validInstant(value) ||
+    value > requestedAt
+  ) {
+    failSourceContract();
+  }
+}
+
+function assertSourceValueBounds(source: PublishedHistoricalReleaseSource): void {
+  type StackEntry =
+    | { kind: "value"; value: unknown; field?: string }
+    | { kind: "exit"; value: object };
+  const ancestors = new WeakSet<object>();
+  const stack: StackEntry[] = [{ kind: "value", value: source }];
+  let nodeCount = 0;
+
+  while (stack.length > 0) {
+    const entry = stack.pop()!;
+    if (entry.kind === "exit") {
+      ancestors.delete(entry.value);
+      continue;
+    }
+    nodeCount += 1;
+    if (nodeCount > FORECAST_SHADOW_MAX_SOURCE_NODES) failSourceContract();
+
+    const { value } = entry;
+    if (
+      value === undefined ||
+      value === null ||
+      typeof value === "boolean"
+    ) {
+      continue;
+    }
+    if (typeof value === "number") {
+      if (!Number.isFinite(value)) failSourceContract();
+      continue;
+    }
+    if (typeof value === "string") {
+      if (encoder.encode(value).byteLength > FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES) {
+        failSourceContract();
+      }
+      continue;
+    }
+    if (typeof value !== "object") failSourceContract();
+
+    const object = value as object;
+    if (ancestors.has(object)) failSourceContract();
+    ancestors.add(object);
+    stack.push({ kind: "exit", value: object });
+
+    if (Array.isArray(value)) {
+      if (entry.field === "sourceEvidenceIds") {
+        if (
+          value.length > FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS ||
+          value.some(
+            (id) =>
+              typeof id !== "string" ||
+              encoder.encode(id).byteLength >
+                FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES,
+          )
+        ) {
+          failSourceContract();
+        }
+      }
+      for (let index = value.length - 1; index >= 0; index -= 1) {
+        stack.push({ kind: "value", value: value[index] });
+      }
+      continue;
+    }
+
+    const prototype = Object.getPrototypeOf(value);
+    if (prototype !== Object.prototype && prototype !== null) {
+      failSourceContract();
+    }
+    if (Object.getOwnPropertySymbols(value).length > 0) failSourceContract();
+    const entries = Object.entries(value as Record<string, unknown>);
+    for (let index = entries.length - 1; index >= 0; index -= 1) {
+      const [key, child] = entries[index]!;
+      if (encoder.encode(key).byteLength > FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES) {
+        failSourceContract();
+      }
+      if (key === "sourceEvidenceIds" && !Array.isArray(child)) {
+        failSourceContract();
+      }
+      stack.push({ kind: "value", value: child, field: key });
+    }
+  }
+}
+
 function assertSource(
   source: PublishedHistoricalReleaseSource,
+  requestedAt: string,
 ): PublishedHistoricalReleaseSource {
-  if (
-    !source ||
-    !Array.isArray(source.releases) ||
-    !Array.isArray(source.events) ||
-    !Array.isArray(source.compatibilityMilestones) ||
-    !Array.isArray(source.releaseMetadata) ||
-    source.releases.length > FORECAST_SHADOW_MAX_SOURCE_RELEASES ||
-    source.events.length > FORECAST_SHADOW_MAX_SOURCE_EVENTS ||
-    source.compatibilityMilestones.length > FORECAST_SHADOW_MAX_SOURCE_EVENTS ||
-    source.releaseMetadata.length > FORECAST_SHADOW_MAX_SOURCE_METADATA
-  ) {
+  try {
+    if (
+      !source ||
+      !Array.isArray(source.releases) ||
+      !Array.isArray(source.events) ||
+      !Array.isArray(source.compatibilityMilestones) ||
+      !Array.isArray(source.releaseMetadata) ||
+      source.releases.length > FORECAST_SHADOW_MAX_SOURCE_RELEASES ||
+      source.events.length > FORECAST_SHADOW_MAX_SOURCE_EVENTS ||
+      source.compatibilityMilestones.length >
+        FORECAST_SHADOW_MAX_SOURCE_COMPATIBILITY_MILESTONES ||
+      source.events.length + source.compatibilityMilestones.length >
+        FORECAST_SHADOW_MAX_SOURCE_OBSERVATIONS ||
+      source.releaseMetadata.length > FORECAST_SHADOW_MAX_SOURCE_METADATA
+    ) {
+      failSourceContract();
+    }
+
+    for (const release of source.releases) {
+      assertRawObservationInstant(release?.statusFirstObservedAt, requestedAt);
+    }
+    for (const event of source.events) {
+      assertRawObservationInstant(event?.firstObservedAt, requestedAt);
+    }
+    for (const milestone of source.compatibilityMilestones) {
+      assertRawObservationInstant(milestone?.firstObservedAt, requestedAt);
+    }
+
+    assertSourceValueBounds(source);
+    if (
+      encoder.encode(stableSerializeHistoricalAnalysis(source)).byteLength >
+      FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES
+    ) {
+      failSourceContract();
+    }
+  } catch {
     throw new ForecastShadowPipelineError("invalid-source");
   }
   return source;
@@ -509,7 +671,7 @@ export function buildForecastShadowArtifact(
   rawSource: PublishedHistoricalReleaseSource,
 ): ForecastArtifactV1 {
   assertRequest(request);
-  const source = assertSource(rawSource);
+  const source = assertSource(rawSource, request.requestedAt);
   const adapterResult = adaptReleaseObservations({
     asOfDate: request.scheduledFor,
     issuedAt: request.requestedAt,
@@ -600,6 +762,9 @@ async function readArtifact(
   const bytes = await storage.readExact(`forecast/artifacts/${artifactId}.json`);
   if (!bytes) throw new ForecastShadowPipelineError("invalid-storage");
   try {
+    if (bytes.byteLength > FORECAST_SHADOW_OPERATIONAL_MAX_BYTES) {
+      throw new ForecastShadowPipelineError("invalid-storage");
+    }
     const artifact = parseForecastArtifact(bytes);
     if (artifact.artifactId !== artifactId) {
       throw new ForecastShadowPipelineError("invalid-storage");
@@ -609,6 +774,92 @@ async function readArtifact(
     if (error instanceof ForecastShadowPipelineError) throw error;
     throw new ForecastShadowPipelineError("invalid-storage");
   }
+}
+
+function compatibleStoredArtifact(
+  left: ForecastArtifactV1,
+  right: ForecastArtifactV1,
+): boolean {
+  return (
+    left.artifactVersion === right.artifactVersion &&
+    left.mode === right.mode &&
+    left.provenance.historicalDataset.version ===
+      right.provenance.historicalDataset.version &&
+    left.provenance.evaluation.version ===
+      right.provenance.evaluation.version &&
+    left.provenance.publicReleaseModel.version ===
+      right.provenance.publicReleaseModel.version &&
+    left.provenance.publicReleaseCalibration.version ===
+      right.provenance.publicReleaseCalibration.version &&
+    left.provenance.nextEventModel.version ===
+      right.provenance.nextEventModel.version &&
+    left.provenance.nextEventCalibration.version ===
+      right.provenance.nextEventCalibration.version
+  );
+}
+
+interface ValidatedPointerArtifacts {
+  active: ForecastArtifactV1 | null;
+  candidate: ForecastArtifactV1 | null;
+  rollback: ForecastArtifactV1 | null;
+}
+
+async function validatePointerReferences(
+  request: ForecastShadowPipelineRequest,
+  pointer: ForecastPointerV1,
+  dependencies: ForecastShadowPipelineDependencies,
+): Promise<ValidatedPointerArtifacts> {
+  const artifacts: ValidatedPointerArtifacts = {
+    active: null,
+    candidate: null,
+    rollback: null,
+  };
+  let compatibilityAnchor: ForecastArtifactV1 | null = null;
+
+  for (const name of ["active", "candidate", "rollback"] as const) {
+    const artifactId = pointer[`${name}ArtifactId`];
+    if (!artifactId) continue;
+    const artifact = await readArtifact(dependencies.storage, artifactId);
+    if (
+      artifact.runIdentity.scheduledFor > request.scheduledFor ||
+      artifact.generatedAt > request.requestedAt ||
+      artifact.provenance.sourceIssuedAt > request.requestedAt ||
+      artifact.generatedAt.slice(0, 10) !==
+        artifact.runIdentity.scheduledFor ||
+      artifact.provenance.sourceAsOfDate !==
+        artifact.runIdentity.scheduledFor ||
+      artifact.provenance.sourceIssuedAt !== artifact.generatedAt ||
+      (compatibilityAnchor &&
+        !compatibleStoredArtifact(compatibilityAnchor, artifact))
+    ) {
+      throw new ForecastShadowPipelineError("invalid-storage");
+    }
+    compatibilityAnchor ??= artifact;
+    artifacts[name] = artifact;
+  }
+
+  if (pointer.reconciliationRootArtifactId) {
+    const rootId = pointer.reconciliationRootArtifactId;
+    const validator = dependencies.validateReconciliationRoot;
+    if (!validator) throw new ForecastShadowPipelineError("invalid-storage");
+    try {
+      const bytes = await dependencies.storage.readExact(
+        reconciliationRootArtifactPath(rootId),
+      );
+      if (
+        !bytes ||
+        rawArtifactDigest(bytes) !== rootId ||
+        !validator(bytes, rootId)
+      ) {
+        throw new ForecastShadowPipelineError("invalid-storage");
+      }
+    } catch (error) {
+      if (error instanceof ForecastShadowPipelineError) throw error;
+      throw new ForecastShadowPipelineError("invalid-storage");
+    }
+  }
+
+  return artifacts;
 }
 
 function updateInstant(requestedAt: string, previous?: ForecastPointerV1): string {
@@ -634,15 +885,6 @@ function resultFor(
       (target) => target.availability === "available",
     ).length,
   };
-}
-
-function ensureOperationalSize(artifact: ForecastArtifactV1): void {
-  if (
-    encoder.encode(serializeForecastArtifact(artifact)).byteLength >
-    FORECAST_SHADOW_OPERATIONAL_MAX_BYTES
-  ) {
-    throw new ForecastShadowPipelineError("artifact-too-large");
-  }
 }
 
 async function commitOrConflict(
@@ -698,26 +940,21 @@ export async function runForecastShadowPipeline(
       continue;
     }
 
-    if (pointer.activeArtifactId) {
-      const active = await readArtifact(
-        dependencies.storage,
-        pointer.activeArtifactId,
-      );
-      ensureOperationalSize(active);
+    const references = await validatePointerReferences(
+      request,
+      pointer,
+      dependencies,
+    );
+
+    if (references.active) {
+      const active = references.active;
       if (active.runIdentity.scheduledFor === request.scheduledFor) {
         return resultFor("already-active", active);
       }
-      if (active.runIdentity.scheduledFor > request.scheduledFor) {
-        throw new ForecastShadowPipelineError("invalid-storage");
-      }
     }
 
-    if (pointer.candidateArtifactId) {
-      const candidate = await readArtifact(
-        dependencies.storage,
-        pointer.candidateArtifactId,
-      );
-      ensureOperationalSize(candidate);
+    if (references.candidate) {
+      const candidate = references.candidate;
       if (candidate.runIdentity.scheduledFor === request.scheduledFor) {
         const activated = activateForecastPointer(
           pointer,
@@ -730,9 +967,6 @@ export async function runForecastShadowPipeline(
           continue;
         }
         return resultFor("activated", candidate);
-      }
-      if (candidate.runIdentity.scheduledFor > request.scheduledFor) {
-        throw new ForecastShadowPipelineError("invalid-storage");
       }
     }
 
