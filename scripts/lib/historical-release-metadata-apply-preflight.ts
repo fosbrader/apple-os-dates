@@ -5,7 +5,10 @@ import {
   type HistoricalReleaseMetadataV1,
 } from "../../src/lib/historical-analysis-dataset";
 import { adaptReleaseObservations } from "../../src/lib/release-observation-adapter";
-import type { PublishedHistoricalReleaseSource } from "../../src/lib/historical-release-source";
+import {
+  validatePublishedHistoricalReleaseSource,
+  type PublishedHistoricalReleaseSource,
+} from "../../src/lib/historical-release-source";
 import { historicalAnalyticalSourceDigest } from "./historical-analytical-source-binding";
 import {
   flattenedMetadataEvidence,
@@ -153,16 +156,24 @@ export function buildValidatedHistoricalPostPlanDataset(input: {
     input.manifest,
     input.plan,
   );
+  // Preserve the exact raw snapshot for the reviewed-plan digest above. Only
+  // the analytical adapter input is normalized so Sanity's optional `null`
+  // projection has the same meaning as an omitted optional field.
+  const normalizedPostPlanSource = validatePublishedHistoricalReleaseSource(
+    postPlanSource,
+    input.issuedAt,
+  );
   const adapterResult = adaptReleaseObservations({
     asOfDate: input.issuedAt.slice(0, 10),
     issuedAt: input.issuedAt,
-    releases: postPlanSource.releases,
-    events: postPlanSource.events,
-    compatibilityMilestones: postPlanSource.compatibilityMilestones,
+    releases: normalizedPostPlanSource.releases,
+    events: normalizedPostPlanSource.events,
+    compatibilityMilestones:
+      normalizedPostPlanSource.compatibilityMilestones,
   });
   const dataset = buildHistoricalAnalysisDataset({
     adapterResult,
-    releaseMetadata: postPlanSource.releaseMetadata,
+    releaseMetadata: normalizedPostPlanSource.releaseMetadata,
   });
   const issues = validateHistoricalAnalysisDataset(dataset);
   if (issues.length) {

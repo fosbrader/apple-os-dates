@@ -30,6 +30,7 @@ import { stableStringify } from "./lib/release-event-migration";
 import {
   PUBLISHED_HISTORICAL_RELEASE_FETCH_OPTIONS,
   publishedHistoricalReleaseSourceQuery,
+  validatePublishedHistoricalReleaseSource,
   type PublishedHistoricalReleaseSource,
 } from "../src/lib/historical-release-source";
 import { adaptReleaseObservations } from "../src/lib/release-observation-adapter";
@@ -486,16 +487,21 @@ async function run(): Promise<void> {
         {},
         PUBLISHED_HISTORICAL_RELEASE_FETCH_OPTIONS,
       );
+    const normalizedLiveSource = validatePublishedHistoricalReleaseSource(
+      liveSource,
+      issuedAt,
+    );
     const adapterResult = adaptReleaseObservations({
       asOfDate: issuedAt.slice(0, 10),
       issuedAt,
-      releases: liveSource.releases,
-      events: liveSource.events,
-      compatibilityMilestones: liveSource.compatibilityMilestones,
+      releases: normalizedLiveSource.releases,
+      events: normalizedLiveSource.events,
+      compatibilityMilestones:
+        normalizedLiveSource.compatibilityMilestones,
     });
     liveDataset = buildHistoricalAnalysisDataset({
       adapterResult,
-      releaseMetadata: liveSource.releaseMetadata,
+      releaseMetadata: normalizedLiveSource.releaseMetadata,
     });
     const liveDatasetIssues = validateHistoricalAnalysisDataset(liveDataset);
     if (liveDatasetIssues.length) {

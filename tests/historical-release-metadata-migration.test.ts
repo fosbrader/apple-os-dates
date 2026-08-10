@@ -294,6 +294,73 @@ test("pre-commit FR-007 validation uses the exact complete manifest cohort", () 
   );
 });
 
+test("pre-commit FR-007 validation normalizes Sanity optional nulls after exact plan binding", () => {
+  const event = {
+    _id: "event-testos-27-beta-1",
+    _type: "releaseEvent",
+    _rev: "event-rev-1",
+    stableEventId: "testos-27-beta-1",
+    releaseVersion: { _type: "reference", _ref: versionId },
+    appearanceDate: "2026-09-01",
+    channel: "developerBeta",
+    sequence: 1,
+  };
+  const plannedSnapshot = snapshot([event]);
+  const curatedManifest = parseCuratedHistoricalMetadataManifest(
+    manifest({
+      chronologyCoverage: {
+        state: "complete",
+        evidence: [
+          { id: "audit-chronology", expectedRevision: "audit-rev-1" },
+        ],
+      },
+    }),
+  );
+  const result = buildHistoricalReleaseMetadataPlan(
+    plannedSnapshot,
+    curatedManifest,
+  );
+  const projected = projectHistoricalAnalyticalSourceFromSnapshot(
+    plannedSnapshot.documents,
+  ) as unknown as PublishedHistoricalReleaseSource;
+  const groqShaped = {
+    ...projected,
+    releases: projected.releases.map((release) => ({
+      ...release,
+      lifecycle: null,
+      publicReleaseDate: null,
+      statusEffectiveOn: null,
+      statusFirstObservedAt: null,
+    })),
+    events: projected.events.map((sourceEvent) => ({
+      ...sourceEvent,
+      firstObservedAt: null,
+      sameDayOrder: null,
+      availability: null,
+      isRevision: null,
+      revisionOfId: null,
+      replacesEventId: null,
+      replacedByEventId: null,
+      closesReleaseCycle: null,
+      legacySourceId: null,
+    })),
+  } as unknown as PublishedHistoricalReleaseSource;
+
+  assert.doesNotThrow(() =>
+    assertHistoricalAnalyticalSourceMatchesPlan(result.plan, groqShaped),
+  );
+  const dataset = buildValidatedHistoricalPostPlanDataset({
+    source: groqShaped,
+    manifest: curatedManifest,
+    plan: result.plan,
+    issuedAt: "2026-09-15T12:00:00.000Z",
+  });
+  assert.deepEqual(
+    dataset.canonicalEvents.map(({ eventId, stage }) => ({ eventId, stage })),
+    [{ eventId: "event:testos-27-beta-1", stage: "developer-beta:1" }],
+  );
+});
+
 test("the approved plan binds every analytical document revision including release events", () => {
   const event = {
     _id: "event-testos-27-beta-1",
