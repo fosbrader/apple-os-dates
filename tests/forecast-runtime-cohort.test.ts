@@ -5,9 +5,12 @@ import {
   FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
   FORECAST_RUNTIME_COHORT_CONFIG,
   FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
+  FORECAST_RUNTIME_COHORT_SELECTION_MAX_BYTES,
   ForecastRuntimeCohortError,
   buildForecastRuntimeCohortSelection,
   buildHistoricalAnalysisDatasetFromPublishedSource,
+  forecastRuntimeCohortRawSourceFingerprint,
+  forecastRuntimeCohortSelectionBytes,
   projectPublishedHistoricalReleaseSourceForRuntimeCohort,
   validateForecastRuntimeCohortSelection,
   type ForecastRuntimeCohortSelectionV1,
@@ -439,6 +442,77 @@ test("active plus mandatory observations over 768 fail instead of truncating", (
   );
 });
 
+test("serialized selection artifacts fail closed before exclusions grow unbounded", () => {
+  const source = buildSource({ platforms: ["ios"] });
+  const selection = buildForecastRuntimeCohortSelection(dataset(source), source);
+  const oversized = clone(selection);
+  oversized.exclusions = Array.from({ length: 1_600 }, (_, index) => ({
+    releaseId: `zz-overflow-${String(index).padStart(4, "0")}`,
+    platformId: "inactive-platform",
+    reason: "cycle-not-included" as const,
+  }));
+  resignSelection(oversized);
+
+  assert.ok(
+    forecastRuntimeCohortSelectionBytes(oversized) >
+      FORECAST_RUNTIME_COHORT_SELECTION_MAX_BYTES,
+  );
+  assert.ok(
+    validateForecastRuntimeCohortSelection(oversized).some(
+      (issue) => issue.code === "artifact-too-large",
+    ),
+  );
+  assert.throws(
+    () =>
+      projectPublishedHistoricalReleaseSourceForRuntimeCohort(source, oversized),
+    (error: unknown) =>
+      error instanceof ForecastRuntimeCohortError &&
+      error.code === "invalid-dataset",
+  );
+
+  const expandedSource: PublishedHistoricalReleaseSource = {
+    ...source,
+    releases: [
+      ...source.releases,
+      ...Array.from({ length: 1_600 }, (_, index) => ({
+        id: `zz-overflow-${String(index).padStart(4, "0")}`,
+        lifecycle: "superseded" as const,
+        statusEffectiveOn: "2020-01-01",
+        statusFirstObservedAt: "2020-01-01T12:00:00.000Z",
+      })),
+    ],
+    releaseMetadata: [
+      ...source.releaseMetadata,
+      ...Array.from({ length: 1_600 }, (_, index) => {
+        const releaseId = `zz-overflow-${String(index).padStart(4, "0")}`;
+        return {
+          releaseId,
+          platformId: "inactive-platform",
+          productFamilyId: "inactive-family",
+          releaseClass: "major" as const,
+          releasePosition: index + 1,
+          releaseCycleId: `${releaseId}-cycle`,
+          chronologyCoverage: {
+            state: "complete" as const,
+            sourceEvidenceIds: [`coverage:${releaseId}`],
+          },
+          sourceEvidenceIds: [`metadata:${releaseId}`],
+        };
+      }),
+    ],
+  };
+  assert.throws(
+    () =>
+      buildForecastRuntimeCohortSelection(
+        dataset(expandedSource),
+        expandedSource,
+      ),
+    (error: unknown) =>
+      error instanceof ForecastRuntimeCohortError &&
+      error.code === "selection-artifact-limit",
+  );
+});
+
 test("missing joins and non-exact sources fail before selection or projection", () => {
   const exactSource = buildSource({ platforms: ["ios"] });
   const exactDataset = dataset(exactSource);
@@ -488,6 +562,96 @@ test("missing joins and non-exact sources fail before selection or projection", 
       projectPublishedHistoricalReleaseSourceForRuntimeCohort(
         driftedSource,
         selection,
+      ),
+    (error: unknown) =>
+      error instanceof ForecastRuntimeCohortError &&
+      error.code === "source-dataset-mismatch",
+  );
+});
+
+test("raw fingerprint and exact issuance instant reject same-day future drift", () => {
+  const baseSource = buildSource({ platforms: ["ios"] });
+  const exactSource: PublishedHistoricalReleaseSource = {
+    ...baseSource,
+    events: baseSource.events.map((event) =>
+      event.id === "ios-active-0-developer-1"
+        ? {
+            ...event,
+            occurredOn: AS_OF_DATE,
+            firstObservedAt: "2026-08-09T08:00:00.000Z",
+          }
+        : event,
+    ),
+  };
+  const exactDataset = dataset(exactSource);
+  const selection = buildForecastRuntimeCohortSelection(
+    exactDataset,
+    exactSource,
+  );
+  const nullAbsenceSource = {
+    ...exactSource,
+    releases: exactSource.releases.map((release) =>
+      release.id === "ios-active-0"
+        ? { ...release, statusFirstObservedAt: null }
+        : release,
+    ),
+  } as unknown as PublishedHistoricalReleaseSource;
+  const nullAbsenceDataset = dataset(nullAbsenceSource);
+  assert.equal(
+    forecastRuntimeCohortRawSourceFingerprint(nullAbsenceSource),
+    forecastRuntimeCohortRawSourceFingerprint(exactSource),
+  );
+  assert.equal(
+    nullAbsenceDataset.fingerprints.datasetFingerprint,
+    exactDataset.fingerprints.datasetFingerprint,
+  );
+  assert.doesNotThrow(() =>
+    buildForecastRuntimeCohortSelection(
+      nullAbsenceDataset,
+      nullAbsenceSource,
+    ),
+  );
+  const lateSource: PublishedHistoricalReleaseSource = {
+    ...exactSource,
+    events: exactSource.events.map((event) =>
+      event.id === "ios-active-0-developer-1"
+        ? { ...event, firstObservedAt: "2026-08-09T23:59:00.000Z" }
+        : event,
+    ),
+  };
+
+  assert.equal(
+    dataset(lateSource).fingerprints.datasetFingerprint,
+    exactDataset.fingerprints.datasetFingerprint,
+  );
+  assert.notEqual(
+    forecastRuntimeCohortRawSourceFingerprint(lateSource),
+    selection.sourceDataset.rawSourceFingerprint,
+  );
+  assert.throws(
+    () =>
+      projectPublishedHistoricalReleaseSourceForRuntimeCohort(
+        lateSource,
+        selection,
+      ),
+    (error: unknown) =>
+      error instanceof ForecastRuntimeCohortError &&
+      error.code === "source-dataset-mismatch",
+  );
+
+  const nonCanonicalSource: PublishedHistoricalReleaseSource = {
+    ...exactSource,
+    events: exactSource.events.map((event) =>
+      event.id === "ios-active-0-developer-1"
+        ? { ...event, firstObservedAt: "2026-08-09T08:00:00-04:00" }
+        : event,
+    ),
+  };
+  assert.throws(
+    () =>
+      buildForecastRuntimeCohortSelection(
+        dataset(nonCanonicalSource),
+        nonCanonicalSource,
       ),
     (error: unknown) =>
       error instanceof ForecastRuntimeCohortError &&
