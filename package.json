@@ -24,6 +24,7 @@
     "release-date:interval-calibration:validate": "tsx scripts/validate-release-date-interval-calibration.ts",
     "next-prerelease:validate": "tsx scripts/validate-next-eligible-prerelease-event.ts",
     "forecast:contracts:validate": "tsx scripts/validate-forecast-artifact-contract.ts",
+    "forecast:scoring:validate": "tsx scripts/validate-forecast-shadow-scoring.ts",
     "evidence:inventory": "tsx scripts/generate-evidence-inventory.ts --write",
     "evidence:inventory:check": "tsx scripts/generate-evidence-inventory.ts --check",
     "migration:events:plan": "tsx scripts/plan-release-event-migration.ts",
