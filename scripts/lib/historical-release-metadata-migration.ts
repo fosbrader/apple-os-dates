@@ -1,6 +1,10 @@
 import { createHash } from "node:crypto";
 
 import { historicalReleaseMetadataDocumentId } from "../../src/lib/historical-release-metadata-id";
+import {
+  historicalAnalyticalSourceDigest,
+  projectHistoricalAnalyticalSourceFromSnapshot,
+} from "./historical-analytical-source-binding";
 import { stableStringify } from "./release-event-migration";
 
 type UnknownRecord = Record<string, unknown>;
@@ -123,6 +127,7 @@ export interface HistoricalReleaseMetadataPlan {
   analyticalSnapshot: {
     documentTypes: typeof HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES;
     revisions: HistoricalAnalyticalSnapshotRevision[];
+    projectedSourceDigest: string;
   };
   curatedManifestDigest: string;
   planDigest: string;
@@ -159,7 +164,7 @@ export interface HistoricalLifecycleObservationPatch {
 export interface HistoricalLifecycleObservationEvidence
   extends CuratedEvidenceReference {
   documentType: "source" | "auditBatch";
-  availableOn: string;
+  availableAt: string;
   availabilityBasis: "publishedAt" | "accessedAt" | "verifiedAt";
 }
 
@@ -668,6 +673,9 @@ export function historicalAnalyticalSnapshotBinding(
   return {
     documentTypes: HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES,
     revisions,
+    projectedSourceDigest: historicalAnalyticalSourceDigest(
+      projectHistoricalAnalyticalSourceFromSnapshot(documents),
+    ),
   };
 }
 
@@ -677,7 +685,18 @@ export function assertHistoricalAnalyticalSnapshotMatchesPlan(
 ): HistoricalMetadataSnapshotDocument[] {
   const documents = extractHistoricalMetadataSnapshotDocuments(snapshotInput);
   const binding = historicalAnalyticalSnapshotBinding(documents);
-  if (!exactEqualDocumentBody(binding, plan.analyticalSnapshot)) {
+  if (
+    !exactEqualDocumentBody(
+      {
+        documentTypes: binding.documentTypes,
+        revisions: binding.revisions,
+      },
+      {
+        documentTypes: plan.analyticalSnapshot.documentTypes,
+        revisions: plan.analyticalSnapshot.revisions,
+      },
+    )
+  ) {
     throw new Error(
       "The complete live analytical document revision set changed since planning. Generate and approve a new plan.",
     );
@@ -685,6 +704,14 @@ export function assertHistoricalAnalyticalSnapshotMatchesPlan(
   if (sha256(documents) !== plan.sourceSnapshotDigest) {
     throw new Error(
       "The complete live analytical snapshot changed since planning. Generate and approve a new plan.",
+    );
+  }
+  if (
+    binding.projectedSourceDigest !==
+    plan.analyticalSnapshot.projectedSourceDigest
+  ) {
+    throw new Error(
+      "The projected analytical source changed since planning. Generate and approve a new plan.",
     );
   }
   return documents;
@@ -806,7 +833,7 @@ export function historicalLifecycleObservationEvidence(
         id: expected.id,
         expectedRevision: expected.expectedRevision,
         documentType: "source",
-        availableOn: new Date(publishedAt).toISOString().slice(0, 10),
+        availableAt: new Date(publishedAt).toISOString(),
         availabilityBasis: "publishedAt",
       };
     }
@@ -820,7 +847,7 @@ export function historicalLifecycleObservationEvidence(
       id: expected.id,
       expectedRevision: expected.expectedRevision,
       documentType: "source",
-      availableOn: accessedAt,
+      availableAt: `${accessedAt}T23:59:59.999Z`,
       availabilityBasis: "accessedAt",
     };
   }
@@ -835,7 +862,7 @@ export function historicalLifecycleObservationEvidence(
     id: expected.id,
     expectedRevision: expected.expectedRevision,
     documentType: "auditBatch",
-    availableOn: new Date(verifiedAt).toISOString().slice(0, 10),
+    availableAt: new Date(verifiedAt).toISOString(),
     availabilityBasis: "verifiedAt",
   };
 }
@@ -1084,7 +1111,6 @@ export function buildHistoricalReleaseMetadataPlan(
             `${entry.releaseVersionId} observation ${observedAt} predates lifecycle effective date ${statusEffectiveDate}.`,
           );
         }
-        const observedDay = new Date(observedAt).toISOString().slice(0, 10);
         const observationEvidence =
           statusPlan.strategy === "explicit"
             ? statusPlan.evidence.map((evidence, index) => {
@@ -1102,9 +1128,11 @@ export function buildHistoricalReleaseMetadataPlan(
                     evidence,
                     evidencePath,
                   );
-                if (observedDay < temporalEvidence.availableOn) {
+                if (
+                  Date.parse(observedAt) < Date.parse(temporalEvidence.availableAt)
+                ) {
                   throw new Error(
-                    `${entry.releaseVersionId} explicit observation ${observedDay} predates ${evidence.id} availability ${temporalEvidence.availableOn}.`,
+                    `${entry.releaseVersionId} explicit observation ${new Date(observedAt).toISOString()} predates ${evidence.id} availability ${temporalEvidence.availableAt}.`,
                   );
                 }
                 return temporalEvidence;
@@ -1311,7 +1339,7 @@ function recordEvidenceArtifactKeys(
           "id",
           "expectedRevision",
           "documentType",
-          "availableOn",
+          "availableAt",
           "availabilityBasis",
         ]
       : ["id", "expectedRevision"],
@@ -1476,7 +1504,7 @@ function recordPlanAndRollbackArtifactKeys(
   if (
     recordUnknownArtifactKeys(
       plan.analyticalSnapshot,
-      ["documentTypes", "revisions"],
+      ["documentTypes", "revisions", "projectedSourceDigest"],
       "plan.analyticalSnapshot",
       failures,
     )
@@ -1672,6 +1700,7 @@ export function validateHistoricalReleaseMetadataPlan(
   const snapshotRevisions = plan.analyticalSnapshot.revisions;
   if (
     !/^[a-f0-9]{64}$/.test(plan.sourceSnapshotDigest) ||
+    !/^[a-f0-9]{64}$/.test(plan.analyticalSnapshot.projectedSourceDigest) ||
     !exactEqualDocumentBody(
       plan.analyticalSnapshot.documentTypes,
       HISTORICAL_ANALYTICAL_SNAPSHOT_TYPES,
@@ -1800,7 +1829,7 @@ export function validateHistoricalReleaseMetadataPlan(
         (evidence) =>
           exactEqualDocumentBody(Object.keys(evidence).sort(compareText), [
             "availabilityBasis",
-            "availableOn",
+            "availableAt",
             "documentType",
             "expectedRevision",
             "id",
@@ -1809,12 +1838,14 @@ export function validateHistoricalReleaseMetadataPlan(
           !evidence.id.startsWith("drafts.") &&
           evidence.id.length <= 128 &&
           Boolean(evidence.expectedRevision.trim()) &&
-          isIsoDay(evidence.availableOn) &&
+          isIsoInstant(evidence.availableAt) &&
+          new Date(evidence.availableAt).toISOString() === evidence.availableAt &&
           observedDay !== undefined &&
-          observedDay >= evidence.availableOn &&
+          Date.parse(observedAt) >= Date.parse(evidence.availableAt) &&
           ((evidence.documentType === "source" &&
             (evidence.availabilityBasis === "publishedAt" ||
-              evidence.availabilityBasis === "accessedAt")) ||
+              (evidence.availabilityBasis === "accessedAt" &&
+                evidence.availableAt.endsWith("T23:59:59.999Z")))) ||
             (evidence.documentType === "auditBatch" &&
               evidence.availabilityBasis === "verifiedAt")),
       );

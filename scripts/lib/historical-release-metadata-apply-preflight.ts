@@ -6,6 +6,7 @@ import {
 } from "../../src/lib/historical-analysis-dataset";
 import { adaptReleaseObservations } from "../../src/lib/release-observation-adapter";
 import type { PublishedHistoricalReleaseSource } from "../../src/lib/historical-release-source";
+import { historicalAnalyticalSourceDigest } from "./historical-analytical-source-binding";
 import {
   flattenedMetadataEvidence,
   type CuratedHistoricalMetadataManifest,
@@ -25,6 +26,20 @@ function exactIds(values: readonly string[], path: string): string[] {
     throw new Error(`${path} must contain unique, non-empty stable IDs.`);
   }
   return [...values].sort(compareText);
+}
+
+export function assertHistoricalAnalyticalSourceMatchesPlan(
+  plan: HistoricalReleaseMetadataPlan,
+  source: unknown,
+): void {
+  if (
+    historicalAnalyticalSourceDigest(source) !==
+    plan.analyticalSnapshot.projectedSourceDigest
+  ) {
+    throw new Error(
+      "The exact projected analytical source changed or is incomplete relative to the approved plan. Generate and approve a new plan.",
+    );
+  }
 }
 
 export function assertExactHistoricalManifestCohortCoverage(
@@ -52,6 +67,7 @@ export function assertExactHistoricalManifestCohortCoverage(
       "The curated manifest and reviewed plan must exactly cover the complete published analytical release cohort.",
     );
   }
+  assertHistoricalAnalyticalSourceMatchesPlan(plan, source);
 }
 
 function plannedHistoricalReleaseMetadata(

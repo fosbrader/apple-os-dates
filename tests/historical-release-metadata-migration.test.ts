@@ -13,6 +13,10 @@ import {
   validateHistoricalReleaseMetadataPlan,
 } from "../scripts/lib/historical-release-metadata-migration";
 import {
+  projectHistoricalAnalyticalSourceFromSnapshot,
+} from "../scripts/lib/historical-analytical-source-binding";
+import {
+  assertHistoricalAnalyticalSourceMatchesPlan,
   assertExactHistoricalManifestCohortCoverage,
   buildValidatedHistoricalPostPlanDataset,
 } from "../scripts/lib/historical-release-metadata-apply-preflight";
@@ -170,7 +174,7 @@ function plannedSidecar() {
 
 function publishedSource(
   releases: PublishedHistoricalReleaseSource["releases"] = [
-    { id: versionId, lifecycle: "active" },
+    { id: versionId },
   ],
 ): PublishedHistoricalReleaseSource {
   return {
@@ -266,8 +270,8 @@ test("pre-commit FR-007 validation uses the exact complete manifest cohort", () 
   assert.equal(dataset.releaseCycles[0]?.releaseId, versionId);
 
   const partialSource = publishedSource([
-    { id: versionId, lifecycle: "active" },
-    { id: "version-testos-27-1", lifecycle: "active" },
+    { id: versionId },
+    { id: "version-testos-27-1" },
   ]);
   assert.throws(
     () =>
@@ -308,6 +312,31 @@ test("the approved plan binds every analytical document revision including relea
   assert.doesNotThrow(() =>
     assertHistoricalAnalyticalSnapshotMatchesPlan(result.plan, plannedSnapshot),
   );
+  const projectedSource = projectHistoricalAnalyticalSourceFromSnapshot(
+    plannedSnapshot.documents,
+  );
+  assert.doesNotThrow(() =>
+    assertHistoricalAnalyticalSourceMatchesPlan(result.plan, projectedSource),
+  );
+  assert.throws(
+    () =>
+      assertHistoricalAnalyticalSourceMatchesPlan(result.plan, {
+        ...projectedSource,
+        events: [],
+      }),
+    /exact projected analytical source changed or is incomplete/,
+  );
+  assert.throws(
+    () =>
+      assertHistoricalAnalyticalSourceMatchesPlan(result.plan, {
+        ...projectedSource,
+        events: projectedSource.events.map((sourceEvent) => ({
+          ...sourceEvent,
+          channel: "publicBeta",
+        })),
+      }),
+    /exact projected analytical source changed or is incomplete/,
+  );
 
   const changedRevision = structuredClone(plannedSnapshot);
   const changedEvent = changedRevision.documents.find(
@@ -334,6 +363,36 @@ test("the approved plan binds every analytical document revision including relea
     () =>
       assertHistoricalAnalyticalSnapshotMatchesPlan(result.plan, changedBytes),
     /complete live analytical snapshot changed/,
+  );
+});
+
+test("the approved projected source also binds every compatibility milestone", () => {
+  const plannedSnapshot = snapshot([], {
+    milestones: [
+      {
+        _key: "legacy-beta-1",
+        date: "2026-09-02",
+        channel: "developerBeta",
+        sequence: 1,
+        firstObservedAt: "2026-09-02T18:00:00.000Z",
+      },
+    ],
+  });
+  const result = buildHistoricalReleaseMetadataPlan(
+    plannedSnapshot,
+    manifest(),
+  );
+  const projectedSource = projectHistoricalAnalyticalSourceFromSnapshot(
+    plannedSnapshot.documents,
+  );
+  assert.equal(projectedSource.compatibilityMilestones.length, 1);
+  assert.throws(
+    () =>
+      assertHistoricalAnalyticalSourceMatchesPlan(result.plan, {
+        ...projectedSource,
+        compatibilityMilestones: [],
+      }),
+    /exact projected analytical source changed or is incomplete/,
   );
 });
 
@@ -468,7 +527,7 @@ test("plans an explicit sourced lifecycle observation and binds evidence revisio
       id: "audit-chronology",
       expectedRevision: "audit-rev-1",
       documentType: "auditBatch",
-      availableOn: "2026-09-14",
+      availableAt: "2026-09-14T12:00:00.000Z",
       availabilityBasis: "verifiedAt",
     },
   ]);
@@ -519,7 +578,7 @@ test("plans an explicit sourced lifecycle observation and binds evidence revisio
           },
         }),
       ),
-    /explicit observation 2026-09-14 predates audit-chronology availability 2026-10-01/,
+    /explicit observation 2026-09-14T18:00:00\.000Z predates audit-chronology availability 2026-10-01T12:00:00\.000Z/,
   );
 
   assert.throws(
@@ -548,7 +607,7 @@ test("plans an explicit sourced lifecycle observation and binds evidence revisio
           },
         }),
       ),
-    /explicit observation 2026-09-14 predates source-family availability 2026-10-02/,
+    /explicit observation 2026-09-14T18:00:00\.000Z predates source-family availability 2026-10-02T12:00:00\.000Z/,
   );
 
   assert.throws(
@@ -573,6 +632,80 @@ test("plans an explicit sourced lifecycle observation and binds evidence revisio
         }),
       ),
     /needs a valid verifiedAt evidence time/,
+  );
+
+  assert.throws(
+    () =>
+      buildHistoricalReleaseMetadataPlan(
+        snapshot(
+          [],
+          {
+            releaseStatus: "released",
+            publicReleaseDate: "2026-09-14",
+          },
+          {
+            auditChronology: {
+              verifiedAt: "2026-09-14T23:59:00.000Z",
+            },
+          },
+        ),
+        manifest({
+          statusFirstObservedAt: {
+            strategy: "explicit",
+            value: "2026-09-14T00:01:00.000Z",
+            evidence: [
+              { id: "audit-chronology", expectedRevision: "audit-rev-1" },
+            ],
+          },
+        }),
+      ),
+    /explicit observation 2026-09-14T00:01:00\.000Z predates audit-chronology availability 2026-09-14T23:59:00\.000Z/,
+  );
+
+  assert.throws(
+    () =>
+      buildHistoricalReleaseMetadataPlan(
+        snapshot([], {
+          releaseStatus: "released",
+          publicReleaseDate: "2026-09-14",
+        }),
+        manifest({
+          statusFirstObservedAt: {
+            strategy: "explicit",
+            value: "2026-09-14T23:59:59.998Z",
+            evidence: [
+              { id: "source-family", expectedRevision: "source-rev-1" },
+            ],
+          },
+        }),
+      ),
+    /predates source-family availability 2026-09-14T23:59:59\.999Z/,
+  );
+
+  const accessedAtBoundary = buildHistoricalReleaseMetadataPlan(
+    snapshot([], {
+      releaseStatus: "released",
+      publicReleaseDate: "2026-09-14",
+    }),
+    manifest({
+      statusFirstObservedAt: {
+        strategy: "explicit",
+        value: "2026-09-14T23:59:59.999Z",
+        evidence: [
+          { id: "source-family", expectedRevision: "source-rev-1" },
+        ],
+      },
+    }),
+  );
+  assert.deepEqual(
+    accessedAtBoundary.plan.lifecycleObservationPatches[0]?.evidence[0],
+    {
+      id: "source-family",
+      expectedRevision: "source-rev-1",
+      documentType: "source",
+      availableAt: "2026-09-14T23:59:59.999Z",
+      availabilityBasis: "accessedAt",
+    },
   );
 });
 
@@ -894,7 +1027,37 @@ test("manifest, plan, and rollback artifacts reject unknown properties recursive
       (failure) =>
         failure.includes(
           "rollback.restoreMutations[0] contains unknown properties: unreviewed",
-        ),
+      ),
+    ),
+  );
+
+  const lifecycleResult = buildHistoricalReleaseMetadataPlan(
+    snapshot([], {
+      releaseStatus: "released",
+      publicReleaseDate: "2026-09-14",
+    }),
+    manifest({
+      statusFirstObservedAt: {
+        strategy: "explicit",
+        value: "2026-09-14T18:00:00.000Z",
+        evidence: [
+          { id: "audit-chronology", expectedRevision: "audit-rev-1" },
+        ],
+      },
+    }),
+  );
+  const unknownTemporalPlan = structuredClone(lifecycleResult.plan);
+  const temporalEvidence = unknownTemporalPlan.lifecycleObservationPatches[0]
+    .evidence[0] as unknown as Record<string, unknown>;
+  temporalEvidence.availableOn = "2026-09-14";
+  assert.ok(
+    validateHistoricalReleaseMetadataPlan(
+      unknownTemporalPlan,
+      lifecycleResult.rollback,
+    ).some((failure) =>
+      failure.includes(
+        "plan.lifecycleObservationPatches[0].evidence[0] contains unknown properties: availableOn",
+      ),
     ),
   );
 });
@@ -914,6 +1077,14 @@ test("plan and rollback hashes bind every exact operation", () => {
     validateHistoricalReleaseMetadataPlan(result.plan, tamperedRollback).includes(
       "rollback does not exactly cover this plan",
     ),
+  );
+  const tamperedSourceBinding = structuredClone(result.plan);
+  tamperedSourceBinding.analyticalSnapshot.projectedSourceDigest = "0".repeat(64);
+  assert.ok(
+    validateHistoricalReleaseMetadataPlan(
+      tamperedSourceBinding,
+      result.rollback,
+    ).includes("plan identity or SHA-256 digest is invalid"),
   );
 
   const lifecycleResult = buildHistoricalReleaseMetadataPlan(
