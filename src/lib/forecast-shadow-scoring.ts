@@ -56,7 +56,8 @@ export type ForecastDataGapReason =
   | "missing-observation-instant"
   | "outcome-retracted"
   | "outcome-superseded"
-  | "source-dataset-mismatch";
+  | "source-dataset-mismatch"
+  | "terminal-or-ineligible-next-event";
 
 export type ForecastOutcomeAuditReason =
   | "outcome-date-corrected"
@@ -465,7 +466,7 @@ export function validateForecastScoreArtifact(value: unknown): ForecastScoringVa
     if (value.mode !== FORECAST_ARTIFACT_MODE) issues.push({ code: "public-mode", path: "score.mode", message: "Score v1 is private shadow only." });
     for (const field of ["forecastArtifactId", "forecastRunKey", "forecastSemanticFingerprint", "sourceDatasetFingerprint", "sourceOutcomeFingerprint", "modelFingerprint", "calibrationFingerprint"] as const) if (!isSha(value[field])) issues.push({ code: "invalid-fingerprint", path: `score.${field}`, message: "An exact SHA-256 fingerprint is required." });
     if (value.sourceDatasetVersion !== HISTORICAL_ANALYSIS_DATASET_VERSION) issues.push({ code: "unsupported-version", path: "score.sourceDatasetVersion", message: "Score must bind historical-analysis-dataset/v1." });
-    if (!isInstant(value.forecastGeneratedAt) || !isDay(value.forecastDataCutoff) || !isDay(value.anchorOccurredOn) || !isDay(value.originOn) || !isDay(value.outcomeOccurredOn) || !isDay(value.outcomeFirstObservedOn) || !isInstant(value.outcomeFirstObservedAt) || (isDay(value.outcomeFirstObservedOn) && isInstant(value.outcomeFirstObservedAt) && value.outcomeFirstObservedAt.slice(0, 10) !== value.outcomeFirstObservedOn)) issues.push({ code: "invalid-chronology", path: "score", message: "Canonical forecast and exact outcome chronology is required." });
+    if (!isInstant(value.forecastGeneratedAt) || !isDay(value.forecastDataCutoff) || !isDay(value.anchorOccurredOn) || !isDay(value.originOn) || !isDay(value.outcomeOccurredOn) || !isDay(value.outcomeFirstObservedOn) || !isInstant(value.outcomeFirstObservedAt) || (isDay(value.outcomeFirstObservedOn) && isInstant(value.outcomeFirstObservedAt) && value.outcomeFirstObservedAt.slice(0, 10) !== value.outcomeFirstObservedOn) || (isDay(value.outcomeOccurredOn) && isDay(value.outcomeFirstObservedOn) && value.outcomeFirstObservedOn < value.outcomeOccurredOn)) issues.push({ code: "invalid-chronology", path: "score", message: "Canonical forecast and exact outcome chronology is required." });
     if (!["public-release", "next-eligible-prerelease-event"].includes(value.targetKind as string) || !isText(value.targetId) || !isText(value.releaseId) || !isText(value.platformId) || !isText(value.anchorEventId) || !isText(value.modelCohortId) || !isText(value.outcomeId) || !isText(value.outcomeEventId)) issues.push({ code: "invalid-row", path: "score", message: "Stable score identities and cohort are required." });
     if (typeof value.anchorStage !== "string" || !CANONICAL_STAGE.test(value.anchorStage) || typeof value.outcomeStage !== "string" || !CANONICAL_STAGE.test(value.outcomeStage)) issues.push({ code: "invalid-row", path: "score", message: "Canonical anchor and outcome stages are required." });
     if (isText(value.anchorEventId) && isText(value.outcomeEventId) && value.anchorEventId === value.outcomeEventId) issues.push({ code: "invalid-row", path: "score.outcomeEventId", message: "The scored outcome event must be distinct from its anchor." });
@@ -549,6 +550,7 @@ function scoreEntryIssues(value: unknown, path: string): ForecastScoringValidati
   exactKeys(value, ["forecastArtifactId", "forecastGeneratedAt", "targetId", "targetKind", "releaseId", "platformId", "modelCohortId", "targetSnapshot", "scoreArtifactId", "outcomeId", "sourceDatasetFingerprint", "sourceRowFingerprint", "outcomeEventId", "outcomeStage", "outcomeOccurredOn", "outcomeFirstObservedOn", "outcomeFirstObservedAt", "outcomeSourceEvidenceIds", "actualDays", "pointDays", "signedErrorDays", "absoluteErrorDays", "coverage50", "coverage80"], path, issues);
   entryBaseIssues(value, path, issues);
   if (!isSha(value.scoreArtifactId) || !isSha(value.outcomeId) || !isSha(value.sourceDatasetFingerprint) || !isSha(value.sourceRowFingerprint) || !isText(value.outcomeEventId) || typeof value.outcomeStage !== "string" || !CANONICAL_STAGE.test(value.outcomeStage) || !isDay(value.outcomeOccurredOn) || !isDay(value.outcomeFirstObservedOn) || !isInstant(value.outcomeFirstObservedAt) || (isDay(value.outcomeFirstObservedOn) && isInstant(value.outcomeFirstObservedAt) && value.outcomeFirstObservedAt.slice(0, 10) !== value.outcomeFirstObservedOn) || !Number.isSafeInteger(value.actualDays) || (value.actualDays as number) < 1 || !isFiniteNumber(value.pointDays) || (value.pointDays as number) < 0 || !isFiniteNumber(value.signedErrorDays) || !isFiniteNumber(value.absoluteErrorDays) || typeof value.coverage50 !== "boolean" || typeof value.coverage80 !== "boolean") issues.push({ code: "invalid-row", path, message: "A score row requires exact source/outcome identity and finite scoring projections." });
+  if (isDay(value.outcomeOccurredOn) && isDay(value.outcomeFirstObservedOn) && value.outcomeFirstObservedOn < value.outcomeOccurredOn) issues.push({ code: "invalid-chronology", path: `${path}.outcomeFirstObservedOn`, message: "An outcome cannot be observed before it occurs." });
   issues.push(...epochEvidenceIssues(value.outcomeSourceEvidenceIds, `${path}.outcomeSourceEvidenceIds`));
   const snapshot = isRecord(value.targetSnapshot) ? value.targetSnapshot : null;
   if (snapshot && isDay(snapshot.anchorOccurredOn) && isDay(value.outcomeOccurredOn) && value.actualDays !== elapsedDays(snapshot.anchorOccurredOn, value.outcomeOccurredOn)) issues.push({ code: "invalid-row", path: `${path}.actualDays`, message: "Indexed actual days must match the exact target and outcome days." });
@@ -579,7 +581,7 @@ function gapEntryIssues(value: unknown, path: string): ForecastScoringValidation
   const issues: ForecastScoringValidationIssue[] = [];
   exactKeys(value, ["forecastArtifactId", "forecastGeneratedAt", "targetId", "targetKind", "releaseId", "platformId", "modelCohortId", "targetSnapshot", "gapId", "outcomeId", "reason", "sourceEvidenceIds"], path, issues);
   entryBaseIssues(value, path, issues);
-  const reasons: ForecastDataGapReason[] = ["ambiguous-outcome", "identity-mismatch", "next-event-stage-mismatch", "ambiguous-chronology", "missing-anchor-row", "missing-observation-instant", "outcome-retracted", "outcome-superseded", "source-dataset-mismatch"];
+  const reasons: ForecastDataGapReason[] = ["ambiguous-outcome", "identity-mismatch", "next-event-stage-mismatch", "ambiguous-chronology", "missing-anchor-row", "missing-observation-instant", "outcome-retracted", "outcome-superseded", "source-dataset-mismatch", "terminal-or-ineligible-next-event"];
   if (!isSha(value.gapId) || !(value.outcomeId === null || isText(value.outcomeId)) || !reasons.includes(value.reason as ForecastDataGapReason)) issues.push({ code: "invalid-row", path, message: "A deterministic data-gap identity, optional outcome, and closed reason are required." });
   issues.push(...epochEvidenceIssues(value.sourceEvidenceIds, `${path}.sourceEvidenceIds`));
   if (isSha(value.gapId)) {
@@ -661,19 +663,22 @@ export function validateForecastReconciliationIndex(value: unknown, scoreArtifac
     const reconciliationCutoffAt = isInstant(value.reconciliationCutoffAt) ? value.reconciliationCutoffAt : null;
     if (reconciliationCutoffAt && sourceForecasts.some((source) => isInstant(source.generatedAt) && source.generatedAt > reconciliationCutoffAt)) issues.push({ code: "invalid-chronology", path: "index.sourceForecasts", message: "A reconciliation snapshot cannot sample a forecast generated after its exact cutoff." });
     if (reconciliationCutoffAt && [...scores, ...pending, ...gaps].some((entry) => isInstant(entry.forecastGeneratedAt) && entry.forecastGeneratedAt > reconciliationCutoffAt)) issues.push({ code: "invalid-chronology", path: "index", message: "A reconciliation snapshot cannot include a future forecast artifact." });
+    if (reconciliationCutoffAt && scores.some((entry) => isInstant(entry.outcomeFirstObservedAt) && entry.outcomeFirstObservedAt > reconciliationCutoffAt)) issues.push({ code: "invalid-chronology", path: "index.scores", message: "A reconciliation snapshot cannot include an outcome observed after its exact cutoff." });
     const indexBudgetBytes = byteLength(stableSerializeHistoricalAnalysis(indexBudgetBody(value)));
-    const expectedStopReason: ForecastShadowEpochStopReason | null = sourceForecasts.length >= FORECAST_SHADOW_EPOCH_MAX_FORECASTS
-      ? "forecast-artifact-limit-reached"
-      : allKeys.length >= FORECAST_SHADOW_EPOCH_MAX_TARGETS
-        ? "target-row-limit-reached"
-        : audit.length >= FORECAST_SHADOW_EPOCH_MAX_AUDITS
-          ? "audit-row-limit-reached"
-          : indexBudgetBytes >= FORECAST_SHADOW_EPOCH_INDEX_BYTE_BUDGET
-            ? "index-byte-budget-reached"
-            : isDay(value.reconciliationCutoffDate) && isDay(epoch.endsOn) && value.reconciliationCutoffDate > epoch.endsOn
-              ? "epoch-end-reached"
-              : null;
-    if (value.epochStopReason !== expectedStopReason) issues.push({ code: "invalid-row", path: "index.epochStopReason", message: "Epoch stop reason must derive exactly from the fixed date, forecast, and target limits." });
+    const activeStopReasons = new Set<ForecastShadowEpochStopReason>();
+    if (sourceForecasts.length >= FORECAST_SHADOW_EPOCH_MAX_FORECASTS) activeStopReasons.add("forecast-artifact-limit-reached");
+    if (allKeys.length >= FORECAST_SHADOW_EPOCH_MAX_TARGETS) activeStopReasons.add("target-row-limit-reached");
+    if (audit.length >= FORECAST_SHADOW_EPOCH_MAX_AUDITS) activeStopReasons.add("audit-row-limit-reached");
+    if (indexBudgetBytes >= FORECAST_SHADOW_EPOCH_INDEX_BYTE_BUDGET) activeStopReasons.add("index-byte-budget-reached");
+    if (isDay(value.reconciliationCutoffDate) && isDay(epoch.endsOn) && value.reconciliationCutoffDate > epoch.endsOn) activeStopReasons.add("epoch-end-reached");
+    // A non-null value is historical transition state: the first trigger is
+    // immutable even if a later correction makes a soft byte trigger no
+    // longer observable from the current root alone. Null is valid only while
+    // no fixed stop condition is active. Reconciliation below preserves the
+    // prior non-null value and is the contextual transition validator.
+    if (value.epochStopReason === null && activeStopReasons.size > 0) {
+      issues.push({ code: "invalid-row", path: "index.epochStopReason", message: "The first fixed epoch limit must persist a stop reason." });
+    }
     if (scoreArtifacts) {
       for (const entry of scores) {
         const score = scoreArtifacts.get(entry.scoreArtifactId);
@@ -741,6 +746,27 @@ export function parseForecastReconciliationIndex(bytes: Uint8Array): ForecastRec
 }
 
 export function forecastReconciliationIndexArtifactId(value: ForecastReconciliationIndexV1): string { return rawArtifactDigest(encoder.encode(serializeForecastReconciliationIndex(value))); }
+
+/**
+ * Validate a stored reconciliation root by both its raw content address and
+ * the complete typed v1 index contract. This is the single validator used at
+ * every pointer transition and runtime preflight boundary.
+ */
+export function isValidForecastReconciliationRoot(
+  bytes: Uint8Array,
+  expectedArtifactId: string,
+): boolean {
+  try {
+    if (!isSha(expectedArtifactId) || rawArtifactDigest(bytes) !== expectedArtifactId) {
+      return false;
+    }
+    return forecastReconciliationIndexArtifactId(
+      parseForecastReconciliationIndex(bytes),
+    ) === expectedArtifactId;
+  } catch {
+    return false;
+  }
+}
 
 function targetBase(target: Extract<ForecastArtifactTargetV1, { availability: "available" }>, forecast: ForecastArtifactV1): ForecastReconciliationEntryBaseV1 {
   return {
@@ -917,7 +943,17 @@ function buildDerivedOutcome(args: { dataset: HistoricalAnalysisDatasetV1; base:
     if (intervals.length === 0 || (intervals.length === 1 && intervals[0]!.end === null)) return { pending: true };
     if (intervals.length !== 1) return { gap: makeGap(base, null, "ambiguous-outcome", snapshot.anchorSourceEvidenceIds) };
     const end = intervals[0]!.end;
-    if (!end || end.kind !== "event") return { pending: true };
+    if (!end) return { pending: true };
+    if (end.kind === "lifecycle-outcome") {
+      return {
+        gap: makeGap(
+          base,
+          end.outcomeEvidenceId,
+          "terminal-or-ineligible-next-event",
+          end.sourceEvidenceIds,
+        ),
+      };
+    }
     row = dataset.canonicalEvents.find((candidate) => candidate.eventId === end.eventId) ?? null;
     if (!row) return { gap: makeGap(base, null, "source-dataset-mismatch", end.sourceEvidenceIds) };
   }
@@ -1114,6 +1150,7 @@ export function reconcileForecastScores(args: ReconcileForecastScoresArgs): Fore
       const key = statusKey(base);
       const derived = prepared.derivedByKey.get(key)!;
       const existing = scoreEntries.get(key);
+      const existingGap = gapEntries.get(key);
       pendingEntries.delete(key);
       gapEntries.delete(key);
       if ("outcome" in derived) {
@@ -1137,6 +1174,22 @@ export function reconcileForecastScores(args: ReconcileForecastScoresArgs): Fore
           gapEntries.set(key, retractedGap);
           const audit = makeAudit(base, superseded ? "outcome-superseded" : "outcome-retracted", existing.scoreArtifactId, existing.outcomeId, null, null, args.sourceDataset.fingerprints.datasetFingerprint, retractedGap.sourceEvidenceIds);
           auditEntries.set(audit.auditId, audit);
+        } else if (
+          existingGap &&
+          existingGap.reason === "outcome-retracted" &&
+          [...auditEntries.values()].some(
+            (entry) =>
+              statusKey(entry) === key &&
+              entry.reason === "outcome-retracted" &&
+              entry.previousOutcomeFingerprint === existingGap.outcomeId &&
+              entry.sourceDatasetFingerprint ===
+                args.sourceDataset.fingerprints.datasetFingerprint,
+          )
+        ) {
+          // A correction gap is sticky until a new source-backed outcome or
+          // a new explicit gap replaces it. Do not silently downgrade the
+          // audited state to pending on an identical replay.
+          gapEntries.set(key, existingGap);
         } else if ("gap" in derived) gapEntries.set(key, derived.gap);
         else pendingEntries.set(key, { ...base, reason: "outcome-not-yet-known" });
       }
@@ -1149,7 +1202,7 @@ export function reconcileForecastScores(args: ReconcileForecastScoresArgs): Fore
   if (audit.length > FORECAST_SHADOW_EPOCH_MAX_AUDITS) throw new ForecastScoringContractError([{ code: "row-limit", path: "index.audit", message: "The fixed evaluation-epoch correction audit capacity was exceeded; reviewed archival/rollover is required." }]);
   const draft = { indexVersion: FORECAST_RECONCILIATION_INDEX_VERSION, mode: FORECAST_ARTIFACT_MODE, compatibleForecastArtifactVersion: FORECAST_ARTIFACT_VERSION, compatibleScoreVersion: FORECAST_SCORE_VERSION, reconciliationCutoffAt: args.reconciliationCutoffAt, reconciliationCutoffDate: args.reconciliationCutoffAt.slice(0, 10), evaluationEpoch: args.evaluationEpoch, epochStopReason: null, sourceForecastArtifactIds: prepared.sourceForecastArtifactIds, sourceForecasts: prepared.sourceForecasts, scores, pending, dataGaps, audit } satisfies Omit<ForecastReconciliationIndexV1, "indexFingerprint">;
   const indexBudgetBytes = byteLength(stableSerializeHistoricalAnalysis(indexBudgetBody(draft as unknown as Record<string, unknown>)));
-  const epochStopReason: ForecastShadowEpochStopReason | null = prepared.sourceForecasts.length >= FORECAST_SHADOW_EPOCH_MAX_FORECASTS
+  const currentStopReason: ForecastShadowEpochStopReason | null = prepared.sourceForecasts.length >= FORECAST_SHADOW_EPOCH_MAX_FORECASTS
     ? "forecast-artifact-limit-reached"
     : prepared.contexts.length >= FORECAST_SHADOW_EPOCH_MAX_TARGETS
       ? "target-row-limit-reached"
@@ -1160,6 +1213,7 @@ export function reconcileForecastScores(args: ReconcileForecastScoresArgs): Fore
           : args.reconciliationCutoffAt.slice(0, 10) > args.evaluationEpoch.endsOn
             ? "epoch-end-reached"
             : null;
+  const epochStopReason = previousIndex?.epochStopReason ?? currentStopReason;
   const stateProjection = { evaluationEpoch: args.evaluationEpoch, epochStopReason, sourceForecastArtifactIds: prepared.sourceForecastArtifactIds, sourceForecasts: prepared.sourceForecasts, scores, pending, dataGaps, audit };
   if (previousIndex && newScoreArtifacts.size === 0 && stableSerializeHistoricalAnalysis(stateProjection) === stableSerializeHistoricalAnalysis({ evaluationEpoch: previousIndex.evaluationEpoch, epochStopReason: previousIndex.epochStopReason, sourceForecastArtifactIds: previousIndex.sourceForecastArtifactIds, sourceForecasts: previousIndex.sourceForecasts, scores: previousIndex.scores, pending: previousIndex.pending, dataGaps: previousIndex.dataGaps, audit: previousIndex.audit })) {
     return { index: previousIndex, indexArtifactId: forecastReconciliationIndexArtifactId(previousIndex), scoreArtifacts: [], newScoreArtifactIds: [] };
@@ -1294,7 +1348,7 @@ export function validateForecastShadowHealthReport(value: unknown): ForecastScor
     });
     const failures = operations.runFailures as ForecastShadowRunFailureV1[];
     if (stableSerializeHistoricalAnalysis(failures) !== stableSerializeHistoricalAnalysis([...failures].sort((left, right) => textOrder(failureKey(left), failureKey(right)))) || new Set(failures.map((failure) => failure.runId)).size !== failures.length) issues.push({ code: "invalid-order", path: "health.operations.runFailures", message: "Run failures must be unique and in canonical order." });
-    const gapReasons = new Set<ForecastDataGapReason>(["ambiguous-outcome", "identity-mismatch", "next-event-stage-mismatch", "ambiguous-chronology", "missing-anchor-row", "missing-observation-instant", "outcome-retracted", "outcome-superseded", "source-dataset-mismatch"]);
+    const gapReasons = new Set<ForecastDataGapReason>(["ambiguous-outcome", "identity-mismatch", "next-event-stage-mismatch", "ambiguous-chronology", "missing-anchor-row", "missing-observation-instant", "outcome-retracted", "outcome-superseded", "source-dataset-mismatch", "terminal-or-ineligible-next-event"]);
     value.dataGapCounts.forEach((gap, index) => {
       const path = `health.dataGapCounts[${index}]`;
       if (!isRecord(gap)) { issues.push({ code: "invalid-row", path, message: "Data-gap count must be an object." }); return; }
@@ -1544,10 +1598,7 @@ export async function commitForecastScoreReconciliation(args: {
       storage: args.storage,
       previous: args.previousPointer,
       next: nextPointer,
-      validateReconciliationRoot: (bytes, expectedArtifactId) => {
-        try { return rawArtifactDigest(bytes) === expectedArtifactId && forecastReconciliationIndexArtifactId(parseForecastReconciliationIndex(bytes)) === expectedArtifactId; }
-        catch { return false; }
-      },
+      validateReconciliationRoot: isValidForecastReconciliationRoot,
     });
     if (committed.committed) return { committed: true, changed: true, pointer: committed.pointer, reconciliation };
     if (committed.reason === "stale-cas") return { committed: false, reason: "stale-cas" };

@@ -41,7 +41,9 @@ or data gap. A changed outcome date, evidence set, stage, identity, or
 observation instant creates a replacement score and an immutable audit row. A
 retracted or superseded outcome removes the obsolete active score and creates a
 retraction or supersession audit row. Old score artifacts remain immutable for
-audit use.
+audit use. If a next-event target reaches a verified public-release lifecycle
+outcome before another eligible prerelease event, the target closes as a
+`terminal-or-ineligible-next-event` data gap; it does not remain pending.
 
 Canonical parsers enforce byte limits before UTF-8 decode or JSON parse. Score,
 index, and health writers reject unknown properties, noncanonical order,

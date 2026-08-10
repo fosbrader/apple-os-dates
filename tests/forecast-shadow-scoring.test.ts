@@ -8,6 +8,7 @@ import {
   forecastArtifactPath,
   initializeForecastPointer,
   reconciliationRootArtifactPath,
+  rawArtifactDigest,
   serializeForecastArtifact,
   serializeForecastPointer,
   type AtomicCasResult,
@@ -20,6 +21,7 @@ import {
 import {
   buildHistoricalAnalysisDataset,
   historicalAnalysisFingerprint,
+  stableSerializeHistoricalAnalysis,
   validateHistoricalAnalysisDataset,
   type HistoricalAnalysisDatasetV1,
   type HistoricalReleaseMetadataV1,
@@ -36,7 +38,9 @@ import {
   buildForecastShadowHealthReport,
   commitForecastScoreReconciliation,
   forecastArtifactIdsRequiredForReconciliation,
+  forecastReconciliationIndexArtifactId,
   forecastScoreArtifactId,
+  isValidForecastReconciliationRoot,
   parseForecastReconciliationIndex,
   parseForecastScoreArtifact,
   parseForecastShadowHealthReport,
@@ -50,6 +54,8 @@ import {
   validateForecastShadowEvaluationEpoch,
   validateForecastShadowHealthReport,
   type ForecastOutcomeInstantBindingV1,
+  type ForecastReconciliationIndexV1,
+  type ForecastScoreArtifactV1,
   type ReconcileForecastScoresArgs,
 } from "../src/lib/forecast-shadow-scoring";
 
@@ -58,6 +64,55 @@ const EPOCH = buildForecastShadowEvaluationEpoch("2026-08-01", "2026-11-28");
 
 function sha(character: string): string { return character.repeat(64); }
 function addDays(day: string, amount: number): string { return new Date(Date.parse(`${day}T00:00:00.000Z`) + amount * 86_400_000).toISOString().slice(0, 10); }
+function scoreOutcomeFingerprint(
+  value: Pick<
+    ForecastScoreArtifactV1,
+    | "targetId"
+    | "targetKind"
+    | "releaseId"
+    | "platformId"
+    | "anchorEventId"
+    | "anchorStage"
+    | "anchorOccurredOn"
+    | "outcomeEventId"
+    | "outcomeStage"
+    | "outcomeOccurredOn"
+    | "outcomeFirstObservedOn"
+    | "outcomeFirstObservedAt"
+    | "outcomeSourceEvidenceIds"
+  >,
+): string {
+  return historicalAnalysisFingerprint({
+    targetId: value.targetId,
+    targetKind: value.targetKind,
+    releaseId: value.releaseId,
+    platformId: value.platformId,
+    anchorEventId: value.anchorEventId,
+    anchorStage: value.anchorStage,
+    anchorOccurredOn: value.anchorOccurredOn,
+    targetEventId: value.outcomeEventId,
+    targetStage: value.outcomeStage,
+    occurredOn: value.outcomeOccurredOn,
+    firstObservedOn: value.outcomeFirstObservedOn,
+    firstObservedAt: value.outcomeFirstObservedAt,
+    sourceEvidenceIds: value.outcomeSourceEvidenceIds,
+  });
+}
+function withIndexFingerprint(
+  value: Omit<ForecastReconciliationIndexV1, "indexFingerprint">,
+): ForecastReconciliationIndexV1 {
+  return {
+    ...value,
+    indexFingerprint: historicalAnalysisFingerprint(value),
+  };
+}
+function withoutIndexFingerprint(
+  value: ForecastReconciliationIndexV1,
+): Omit<ForecastReconciliationIndexV1, "indexFingerprint"> {
+  const copy: Partial<ForecastReconciliationIndexV1> = { ...value };
+  delete copy.indexFingerprint;
+  return copy as Omit<ForecastReconciliationIndexV1, "indexFingerprint">;
+}
 function interval(anchor: string, point: number, level: 0.5 | 0.8, residual: number) {
   const lower = point - residual;
   const upper = point + residual;
@@ -324,6 +379,72 @@ test("FR-015 rejects arbitrary evidence, mismatched observation days, and source
   assert.throws(() => reconcileForecastScores(reconciliationArgs(dataset, [forecast], { reconciliationCutoffAt: "2026-08-14T18:59:59.000Z" })), ForecastScoringContractError);
 });
 
+test("FR-015 stored scores reject impossible observation chronology", () => {
+  const dataset = datasetFor([{ suffix: "a" }]);
+  const forecast = buildForecastArtifact(forecastDraft(dataset));
+  const result = reconcileForecastScores(reconciliationArgs(dataset, [forecast]));
+  const score = result.scoreArtifacts[0]!.artifact;
+  const impossibleDraft = {
+    ...score,
+    outcomeFirstObservedOn: addDays(score.outcomeOccurredOn, -1),
+    outcomeFirstObservedAt: `${addDays(score.outcomeOccurredOn, -1)}T17:00:00.000Z`,
+  };
+  const sourceOutcomeFingerprint = scoreOutcomeFingerprint(impossibleDraft);
+  const impossible = {
+    ...impossibleDraft,
+    sourceOutcomeFingerprint,
+    outcomeId: sourceOutcomeFingerprint,
+  };
+  assert.ok(
+    validateForecastScoreArtifact(impossible).some(
+      (issue) => issue.code === "invalid-chronology",
+    ),
+  );
+});
+
+test("FR-015 persisted roots reject outcomes learned after reconciliation cutoff", () => {
+  const dataset = datasetFor([{ suffix: "a" }]);
+  const forecast = buildForecastArtifact(forecastDraft(dataset));
+  const result = reconcileForecastScores(reconciliationArgs(dataset, [forecast]));
+  const original = result.index.scores[0]!;
+  const afterCutoffDraft = {
+    ...original,
+    outcomeFirstObservedAt: "2026-08-14T20:00:00.000Z",
+  };
+  const outcomeId = historicalAnalysisFingerprint({
+    targetId: afterCutoffDraft.targetId,
+    targetKind: afterCutoffDraft.targetKind,
+    releaseId: afterCutoffDraft.releaseId,
+    platformId: afterCutoffDraft.platformId,
+    anchorEventId: afterCutoffDraft.targetSnapshot.anchorEventId,
+    anchorStage: afterCutoffDraft.targetSnapshot.anchorStage,
+    anchorOccurredOn: afterCutoffDraft.targetSnapshot.anchorOccurredOn,
+    targetEventId: afterCutoffDraft.outcomeEventId,
+    targetStage: afterCutoffDraft.outcomeStage,
+    occurredOn: afterCutoffDraft.outcomeOccurredOn,
+    firstObservedOn: afterCutoffDraft.outcomeFirstObservedOn,
+    firstObservedAt: afterCutoffDraft.outcomeFirstObservedAt,
+    sourceEvidenceIds: afterCutoffDraft.outcomeSourceEvidenceIds,
+  });
+  const indexBody = withoutIndexFingerprint(result.index);
+  const tampered = withIndexFingerprint({
+    ...indexBody,
+    scores: result.index.scores.map((entry) =>
+      entry === original ? { ...afterCutoffDraft, outcomeId } : entry,
+    ),
+  });
+  assert.ok(
+    validateForecastReconciliationIndex(tampered).some(
+      (issue) => issue.code === "invalid-chronology",
+    ),
+  );
+  const bytes = encoder.encode(stableSerializeHistoricalAnalysis(tampered));
+  assert.equal(
+    isValidForecastReconciliationRoot(bytes, rawArtifactDigest(bytes)),
+    false,
+  );
+});
+
 test("FR-015 canonical parsers reject alternate bytes, tampering, and oversized inputs before decode", () => {
   const dataset = datasetFor([{ suffix: "a" }]);
   const forecast = buildForecastArtifact(forecastDraft(dataset));
@@ -336,6 +457,17 @@ test("FR-015 canonical parsers reject alternate bytes, tampering, and oversized 
   assert.ok(validateForecastScoreArtifact({ ...score, surprise: true }).some((issue) => issue.code === "unknown-property"));
   const indexText = serializeForecastReconciliationIndex(result.index);
   assert.deepEqual(parseForecastReconciliationIndex(encoder.encode(indexText)), result.index);
+  assert.equal(
+    isValidForecastReconciliationRoot(
+      encoder.encode(indexText),
+      forecastReconciliationIndexArtifactId(result.index),
+    ),
+    true,
+  );
+  assert.equal(
+    isValidForecastReconciliationRoot(encoder.encode(indexText), sha("f")),
+    false,
+  );
   assert.throws(() => parseForecastReconciliationIndex(new Uint8Array(FORECAST_RECONCILIATION_INDEX_MAX_BYTES + 1)), ForecastScoringContractError);
   assert.throws(() => parseForecastShadowHealthReport(new Uint8Array(FORECAST_SHADOW_HEALTH_MAX_BYTES + 1)), ForecastScoringContractError);
   assert.ok(validateForecastReconciliationIndex({ ...result.index, indexFingerprint: sha("f") }).some((issue) => issue.code === "invalid-fingerprint"));
@@ -418,11 +550,63 @@ test("FR-015 records explicit retraction and supersession without fetching old s
   assert.ok(retracted.index.audit.some((entry) => entry.reason === "outcome-retracted"));
   assert.equal(retracted.index.scores.some((entry) => entry.targetKind === "public-release"), false);
   assert.equal(retracted.index.dataGaps.find((entry) => entry.targetKind === "public-release")?.reason, "outcome-retracted");
+  const retractedReplay = reconcileForecastScores(
+    reconciliationArgs(activeDataset, [], { previousIndex: retracted.index }),
+  );
+  assert.equal(retractedReplay.indexArtifactId, retracted.indexArtifactId);
+  assert.equal(
+    retractedReplay.index.dataGaps.find(
+      (entry) => entry.targetKind === "public-release",
+    )?.reason,
+    "outcome-retracted",
+  );
+  assert.equal(
+    retractedReplay.index.pending.some(
+      (entry) => entry.targetKind === "public-release",
+    ),
+    false,
+  );
+
+  const publicOutcomeId = baseDataset.lifecycleOutcomes.find(
+    (row) => row.releaseId === releaseId("a"),
+  )!.outcomeEvidenceId;
+  const missingBindingArgs = reconciliationArgs(baseDataset, [], {
+    previousIndex: first.index,
+    outcomeInstantBindings: outcomeBindings(baseDataset).filter(
+      (binding) => binding.evidenceId !== publicOutcomeId,
+    ),
+  });
+  const missingBindingRetraction = reconcileForecastScores(missingBindingArgs);
+  assert.equal(
+    missingBindingRetraction.index.dataGaps.find(
+      (entry) => entry.targetKind === "public-release",
+    )?.reason,
+    "outcome-retracted",
+  );
+  const missingBindingReplay = reconcileForecastScores({
+    ...missingBindingArgs,
+    previousIndex: missingBindingRetraction.index,
+  });
+  assert.equal(
+    missingBindingReplay.indexArtifactId,
+    missingBindingRetraction.indexArtifactId,
+  );
 
   const supersededDataset = datasetFor([{ suffix: "a", lifecycle: "superseded" }]);
   const superseded = reconcileForecastScores(reconciliationArgs(supersededDataset, [], { previousIndex: first.index, outcomeInstantBindings: [] }));
   assert.ok(superseded.index.audit.some((entry) => entry.reason === "outcome-superseded"));
   assert.equal(superseded.index.scores.length, 0);
+  const supersededReplay = reconcileForecastScores(
+    reconciliationArgs(supersededDataset, [], {
+      previousIndex: superseded.index,
+      outcomeInstantBindings: [],
+    }),
+  );
+  assert.equal(supersededReplay.indexArtifactId, superseded.indexArtifactId);
+  assert.equal(
+    supersededReplay.index.dataGaps[0]?.reason,
+    "outcome-superseded",
+  );
 });
 
 test("FR-015 keeps a source-backed next-stage mismatch out of model scores", () => {
@@ -432,6 +616,26 @@ test("FR-015 keeps a source-backed next-stage mismatch out of model scores", () 
   const result = reconcileForecastScores(reconciliationArgs(mismatchDataset, [forecast]));
   assert.equal(result.index.scores.some((entry) => entry.targetKind === "next-eligible-prerelease-event"), false);
   assert.equal(result.index.dataGaps.find((entry) => entry.targetKind === "next-eligible-prerelease-event")?.reason, "next-event-stage-mismatch");
+});
+
+test("FR-015 closes a next-event target when public release is the terminal endpoint", () => {
+  const dataset = datasetFor([{ suffix: "terminal", includeTargetEvent: false }]);
+  const forecast = buildForecastArtifact(forecastDraft(dataset, "terminal"));
+  const result = reconcileForecastScores(
+    reconciliationArgs(dataset, [forecast]),
+  );
+  assert.equal(
+    result.index.pending.some(
+      (entry) => entry.targetKind === "next-eligible-prerelease-event",
+    ),
+    false,
+  );
+  assert.equal(
+    result.index.dataGaps.find(
+      (entry) => entry.targetKind === "next-eligible-prerelease-event",
+    )?.reason,
+    "terminal-or-ineligible-next-event",
+  );
 });
 
 test("FR-015 bounded epoch rejects duplicate daily runs and persists a rollover stop reason", () => {
