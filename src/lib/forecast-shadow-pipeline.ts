@@ -52,6 +52,9 @@ import { buildWalkForwardEvaluation } from "./walk-forward-evaluation";
 export const FORECAST_SHADOW_PIPELINE_VERSION = "forecast-shadow-pipeline/v1";
 export const FORECAST_SHADOW_OPERATIONAL_MAX_BYTES = 262_144;
 export const FORECAST_SHADOW_MAX_POINTER_TRANSITIONS = 12;
+export const FORECAST_SHADOW_MAX_SOURCE_RELEASES = 2_048;
+export const FORECAST_SHADOW_MAX_SOURCE_EVENTS = 8_192;
+export const FORECAST_SHADOW_MAX_SOURCE_METADATA = 2_048;
 
 const pipelineCodeManifest = {
   version: FORECAST_SHADOW_PIPELINE_VERSION,
@@ -142,7 +145,11 @@ function assertSource(
     !Array.isArray(source.releases) ||
     !Array.isArray(source.events) ||
     !Array.isArray(source.compatibilityMilestones) ||
-    !Array.isArray(source.releaseMetadata)
+    !Array.isArray(source.releaseMetadata) ||
+    source.releases.length > FORECAST_SHADOW_MAX_SOURCE_RELEASES ||
+    source.events.length > FORECAST_SHADOW_MAX_SOURCE_EVENTS ||
+    source.compatibilityMilestones.length > FORECAST_SHADOW_MAX_SOURCE_EVENTS ||
+    source.releaseMetadata.length > FORECAST_SHADOW_MAX_SOURCE_METADATA
   ) {
     throw new ForecastShadowPipelineError("invalid-source");
   }

@@ -33,7 +33,9 @@ The artifact binds the exact source, dataset, evaluation, model, calibration,
 and pipeline fingerprints. The runtime cap is 256 KiB per daily artifact,
 inside the contract's 1 MiB hard limit. This keeps expected storage comfortably
 within the existing shared free-plan allocation and fails closed if source
-growth exceeds the operational budget.
+growth exceeds the operational budget. Raw source arrays are also bounded at
+2,048 releases, 8,192 events or compatibility milestones, and 2,048 metadata
+sidecars before model execution.
 
 ## Idempotency and overlap
 

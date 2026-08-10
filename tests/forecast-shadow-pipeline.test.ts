@@ -336,6 +336,37 @@ test("FR-014 never skips a later public event to reuse an earlier beta", () => {
   );
 });
 
+test("FR-014 enforces its operational artifact budget below the hard contract cap", () => {
+  const oversized = source();
+  oversized.releaseMetadata = oversized.releaseMetadata.map((entry, index) =>
+    index === 0
+      ? { ...entry, sourceEvidenceIds: [`evidence-${"x".repeat(300_000)}`] }
+      : entry,
+  );
+  assert.throws(
+    () => buildForecastShadowArtifact(request, oversized),
+    (error: unknown) =>
+      error instanceof ForecastShadowPipelineError &&
+      error.code === "artifact-too-large",
+  );
+});
+
+test("FR-014 rejects an unbounded source collection before model execution", () => {
+  const unbounded = {
+    ...source(),
+    releases: Array.from(
+      { length: 2_049 },
+      (_, index) => ({ id: `active-${index}`, lifecycle: "active" as const }),
+    ),
+  };
+  assert.throws(
+    () => buildForecastShadowArtifact(request, unbounded),
+    (error: unknown) =>
+      error instanceof ForecastShadowPipelineError &&
+      error.code === "invalid-source",
+  );
+});
+
 test("FR-014 rejects mismatched run identity before reading source or storage", async () => {
   const storage = new MemoryStorage();
   let fetches = 0;
