@@ -659,6 +659,108 @@ test("raw fingerprint and exact issuance instant reject same-day future drift", 
   );
 });
 
+test("standalone selection validation requires canonical UTC issuance", () => {
+  const source = buildSource({ platforms: ["ios"] });
+  const selection = buildForecastRuntimeCohortSelection(dataset(source), source);
+  const offset = clone(selection);
+  offset.sourceDataset.issuedAt = "2026-08-09T08:43:00.000-04:00";
+  resignSelection(offset);
+
+  assert.ok(
+    validateForecastRuntimeCohortSelection(offset).some(
+      (issue) =>
+        issue.code === "invalid-source-dataset" &&
+        issue.path === "sourceDataset",
+    ),
+  );
+});
+
+test("standalone selection validation bounds and sanitizes every identity", () => {
+  const source = buildSource({
+    platforms: ["ios"],
+    completedPerPlatform: 13,
+  });
+  const selection = buildForecastRuntimeCohortSelection(dataset(source), source);
+  const activeReleaseId = "ios-active-0";
+  const withReleaseId = (releaseId: string) => {
+    const forged = clone(selection);
+    const active = forged.selectedCycles.find(
+      (cycle) => cycle.releaseId === activeReleaseId,
+    );
+    assert.ok(active);
+    active.releaseId = releaseId;
+    forged.selectedCycles = [...forged.selectedCycles].sort((left, right) =>
+      left.releaseId < right.releaseId ? -1 : left.releaseId > right.releaseId ? 1 : 0,
+    );
+    forged.selectedReleaseIds = forged.selectedCycles.map(
+      (cycle) => cycle.releaseId,
+    );
+    return resignSelection(forged);
+  };
+
+  const exactly512Utf8Bytes = withReleaseId("é".repeat(256));
+  assert.deepEqual(
+    validateForecastRuntimeCohortSelection(exactly512Utf8Bytes),
+    [],
+  );
+
+  for (const unsafeIdentity of [
+    "bad\nidentity",
+    "bad\u0085identity",
+    "bad\u202eidentity",
+    "bad\u2028identity",
+    " padded-identity",
+    "é".repeat(257),
+  ]) {
+    assert.ok(
+      validateForecastRuntimeCohortSelection(
+        withReleaseId(unsafeIdentity),
+      ).some(
+        (issue) =>
+          issue.path === "selectedReleaseIds" ||
+          issue.path.startsWith("selectedCycles"),
+      ),
+    );
+  }
+
+  const unsafePlatform = clone(selection);
+  const bidiPlatform = "ios\u2066spoof";
+  unsafePlatform.activePlatformIds = [bidiPlatform];
+  unsafePlatform.selectedCycles = unsafePlatform.selectedCycles.map((cycle) => ({
+    ...cycle,
+    platformId: bidiPlatform,
+  }));
+  unsafePlatform.perPlatformCounts = unsafePlatform.perPlatformCounts.map(
+    (count) => ({ ...count, platformId: bidiPlatform }),
+  );
+  unsafePlatform.exclusions = unsafePlatform.exclusions.map((exclusion) => ({
+    ...exclusion,
+    platformId: bidiPlatform,
+  }));
+  resignSelection(unsafePlatform);
+  const platformIssues = validateForecastRuntimeCohortSelection(unsafePlatform);
+  assert.ok(
+    platformIssues.some(
+      (issue) =>
+        issue.path === "activePlatformIds" ||
+        issue.path.endsWith(".platformId"),
+    ),
+  );
+
+  const unsafeExclusion = clone(selection);
+  assert.ok(unsafeExclusion.exclusions.length > 0);
+  unsafeExclusion.exclusions[0].releaseId = "excluded\u200fspoof";
+  unsafeExclusion.exclusions = [...unsafeExclusion.exclusions].sort((left, right) =>
+    left.releaseId < right.releaseId ? -1 : left.releaseId > right.releaseId ? 1 : 0,
+  );
+  resignSelection(unsafeExclusion);
+  assert.ok(
+    validateForecastRuntimeCohortSelection(unsafeExclusion).some(
+      (issue) => issue.code === "invalid-exclusion",
+    ),
+  );
+});
+
 test("projection rejects a structurally valid, re-signed active/inactive forgery", () => {
   const source = buildSource({
     platforms: ["ios"],
