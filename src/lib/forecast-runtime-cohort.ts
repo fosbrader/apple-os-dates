@@ -24,6 +24,7 @@ export const FORECAST_RUNTIME_COHORT_CONFIG = {
   mandatoryCompletedCyclesPerPlatform: 8,
   maxAdditionalCompletedCyclesPerPlatform: 4,
   maxSelectedObservations: 768,
+  maxSerializedSelectionBytes: 131_072,
   observationUnit:
     "raw-event-or-compatibility-milestone-or-public-lifecycle-outcome/v1",
   completedCycleRanking:
@@ -34,6 +35,9 @@ export const FORECAST_RUNTIME_COHORT_CONFIG = {
 
 export type ForecastRuntimeCohortConfig =
   typeof FORECAST_RUNTIME_COHORT_CONFIG;
+
+export const FORECAST_RUNTIME_COHORT_SELECTION_MAX_BYTES =
+  FORECAST_RUNTIME_COHORT_CONFIG.maxSerializedSelectionBytes;
 
 export type ForecastRuntimeCohortSelectionRole =
   | "active"
@@ -88,6 +92,7 @@ export interface ForecastRuntimeCohortSelectionV1 {
   sourceDataset: {
     version: typeof HISTORICAL_ANALYSIS_DATASET_VERSION;
     fingerprint: string;
+    rawSourceFingerprint: string;
     asOfDate: string;
     issuedAt: string;
   };
@@ -111,7 +116,8 @@ export type ForecastRuntimeCohortErrorCode =
   | "active-release-limit"
   | "active-platform-limit"
   | "mandatory-history-underflow"
-  | "selected-observation-limit";
+  | "selected-observation-limit"
+  | "selection-artifact-limit";
 
 export class ForecastRuntimeCohortError extends Error {
   constructor(public readonly code: ForecastRuntimeCohortErrorCode) {
@@ -130,6 +136,7 @@ export type ForecastRuntimeCohortValidationCode =
   | "invalid-exclusion"
   | "invalid-count"
   | "invalid-order"
+  | "artifact-too-large"
   | "invalid-fingerprint";
 
 export interface ForecastRuntimeCohortValidationIssue {
@@ -216,7 +223,7 @@ function isCanonicalTextArray(value: unknown): value is readonly string[] {
 function runtimeCodeManifest() {
   return {
     algorithm:
-      "exact-source-rebuild;all-active;outcome-ranked-eight-mandatory;four-round-robin;whole-cycle-raw-observation-cap;strict-v1",
+      "exact-raw-source-fingerprint-and-instant;exact-source-rebuild;all-active;outcome-ranked-eight-mandatory;four-round-robin;whole-cycle-raw-observation-cap;bounded-selection-artifact;strict-v1",
     historicalDatasetVersion: HISTORICAL_ANALYSIS_DATASET_VERSION,
     selectionVersion: FORECAST_RUNTIME_COHORT_SELECTION_VERSION,
   } as const;
@@ -227,6 +234,105 @@ export const FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT =
 
 export const FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT =
   historicalAnalysisFingerprint(FORECAST_RUNTIME_COHORT_CONFIG);
+
+function rawRowSort(left: unknown, right: unknown): number {
+  return compareText(
+    stableSerializeHistoricalAnalysis(left),
+    stableSerializeHistoricalAnalysis(right),
+  );
+}
+
+function normalizedRawObject(
+  value: Readonly<Record<string, unknown>>,
+): Record<string, unknown> {
+  const normalized: Record<string, unknown> = {};
+  for (const [key, entry] of Object.entries(value)) {
+    if (entry === null || entry === undefined) continue;
+    if (Array.isArray(entry)) {
+      normalized[key] = entry.map((item) =>
+        isRecord(item) ? normalizedRawObject(item) : item,
+      );
+      continue;
+    }
+    normalized[key] = isRecord(entry) ? normalizedRawObject(entry) : entry;
+  }
+  return normalized;
+}
+
+function normalizedRawSource(source: PublishedHistoricalReleaseSource) {
+  return {
+    releases: source.releases
+      .map((release) =>
+        normalizedRawObject(release as unknown as Record<string, unknown>),
+      )
+      .sort(rawRowSort),
+    events: source.events
+      .map((event) =>
+        normalizedRawObject(event as unknown as Record<string, unknown>),
+      )
+      .sort(rawRowSort),
+    compatibilityMilestones: source.compatibilityMilestones
+      .map((milestone) =>
+        normalizedRawObject(milestone as unknown as Record<string, unknown>),
+      )
+      .sort(rawRowSort),
+    releaseMetadata: source.releaseMetadata
+      .map((metadata) =>
+        normalizedRawObject({
+          ...metadata,
+          sourceEvidenceIds: [...metadata.sourceEvidenceIds].sort(compareText),
+          chronologyCoverage: {
+            ...metadata.chronologyCoverage,
+            sourceEvidenceIds: [
+              ...metadata.chronologyCoverage.sourceEvidenceIds,
+            ].sort(compareText),
+          },
+        }),
+      )
+      .sort(rawRowSort),
+  };
+}
+
+/** SHA-256 over every raw field projected into the runtime, independent of row order. */
+export function forecastRuntimeCohortRawSourceFingerprint(
+  source: PublishedHistoricalReleaseSource,
+): string {
+  return historicalAnalysisFingerprint(normalizedRawSource(source));
+}
+
+function isCanonicalInstantAtOrBefore(
+  value: unknown,
+  issuedAt: string,
+): boolean {
+  if (value === null || value === undefined) return true;
+  if (!isIsoInstant(value)) return false;
+  const parsed = new Date(value);
+  return (
+    parsed.toISOString() === value &&
+    parsed.getTime() <= new Date(issuedAt).getTime()
+  );
+}
+
+function assertRawObservationInstants(
+  source: PublishedHistoricalReleaseSource,
+  issuedAt: string,
+): void {
+  if (
+    source.releases.some(
+      (release) =>
+        !isCanonicalInstantAtOrBefore(release.statusFirstObservedAt, issuedAt),
+    ) ||
+    source.events.some(
+      (event) => !isCanonicalInstantAtOrBefore(event.firstObservedAt, issuedAt),
+    ) ||
+    source.compatibilityMilestones.some(
+      (milestone) =>
+        !isCanonicalInstantAtOrBefore(milestone.firstObservedAt, issuedAt),
+    )
+  ) {
+    throw new ForecastRuntimeCohortError("source-dataset-mismatch");
+  }
+}
 
 function buildDatasetFromSource(
   source: PublishedHistoricalReleaseSource,
@@ -327,6 +433,7 @@ function assertExactSource(
   }
 
   const rawObservationCounts = assertSourceJoins(source);
+  assertRawObservationInstants(source, dataset.provenance.sourceIssuedAt);
   const sourceIds = sortedUnique(source.releases.map((release) => release.id));
   const datasetIds = dataset.releaseCycles.map((cycle) => cycle.releaseId);
   if (
@@ -622,6 +729,8 @@ export function buildForecastRuntimeCohortSelection(
     sourceDataset: {
       version: dataset.datasetVersion,
       fingerprint: dataset.fingerprints.datasetFingerprint,
+      rawSourceFingerprint:
+        forecastRuntimeCohortRawSourceFingerprint(source),
       asOfDate: dataset.provenance.sourceAsOfDate,
       issuedAt: dataset.provenance.sourceIssuedAt,
     },
@@ -642,6 +751,12 @@ export function buildForecastRuntimeCohortSelection(
       resultFingerprint: resultFingerprint(core),
     },
   };
+  if (
+    forecastRuntimeCohortSelectionBytes(artifact) >
+    FORECAST_RUNTIME_COHORT_SELECTION_MAX_BYTES
+  ) {
+    throw new ForecastRuntimeCohortError("selection-artifact-limit");
+  }
   const issues = validateForecastRuntimeCohortSelection(artifact);
   if (issues.length > 0) {
     throw new ForecastRuntimeCohortError("invalid-dataset");
@@ -689,9 +804,10 @@ function projectedAnalyticalCore(
 }
 
 /**
- * Filter the exact source to whole selected cycles. The full source is rebound
- * to the selection fingerprint first, and no event inside a selected release
- * is dropped.
+ * Filter the exact source to whole selected cycles. The full raw source and
+ * rebuilt dataset must reproduce the exact authoritative selection first. The
+ * projected dataset must preserve the selected analytical subset, and no event
+ * inside a selected release is dropped.
  */
 export function projectPublishedHistoricalReleaseSourceForRuntimeCohort(
   source: PublishedHistoricalReleaseSource,
@@ -703,6 +819,13 @@ export function projectPublishedHistoricalReleaseSourceForRuntimeCohort(
   let rebuilt: HistoricalAnalysisDatasetV1;
   try {
     assertSourceJoins(source);
+    assertRawObservationInstants(source, selection.sourceDataset.issuedAt);
+    if (
+      forecastRuntimeCohortRawSourceFingerprint(source) !==
+      selection.sourceDataset.rawSourceFingerprint
+    ) {
+      throw new ForecastRuntimeCohortError("source-dataset-mismatch");
+    }
     rebuilt = buildDatasetFromSource(source, {
       asOfDate: selection.sourceDataset.asOfDate,
       issuedAt: selection.sourceDataset.issuedAt,
@@ -837,6 +960,25 @@ export function validateForecastRuntimeCohortSelection(
   ) {
     return issues;
   }
+  try {
+    if (
+      encoder.encode(stableSerializeHistoricalAnalysis(value)).byteLength >
+      FORECAST_RUNTIME_COHORT_SELECTION_MAX_BYTES
+    ) {
+      issues.push({
+        code: "artifact-too-large",
+        path: "selection",
+        message: `Selection artifact exceeds ${FORECAST_RUNTIME_COHORT_SELECTION_MAX_BYTES} bytes.`,
+      });
+    }
+  } catch {
+    issues.push({
+      code: "invalid-input",
+      path: "selection",
+      message: "Selection must contain JSON-compatible values.",
+    });
+    return issues;
+  }
   if (value.selectionVersion !== FORECAST_RUNTIME_COHORT_SELECTION_VERSION) {
     issues.push({
       code: "invalid-version",
@@ -861,6 +1003,7 @@ export function validateForecastRuntimeCohortSelection(
     pushUnexpectedProperties(issues, value.sourceDataset, "sourceDataset", [
       "version",
       "fingerprint",
+      "rawSourceFingerprint",
       "asOfDate",
       "issuedAt",
     ])
@@ -869,6 +1012,8 @@ export function validateForecastRuntimeCohortSelection(
       value.sourceDataset.version !== HISTORICAL_ANALYSIS_DATASET_VERSION ||
       typeof value.sourceDataset.fingerprint !== "string" ||
       !SHA_256.test(value.sourceDataset.fingerprint) ||
+      typeof value.sourceDataset.rawSourceFingerprint !== "string" ||
+      !SHA_256.test(value.sourceDataset.rawSourceFingerprint) ||
       !isIsoDay(value.sourceDataset.asOfDate) ||
       !isIsoInstant(value.sourceDataset.issuedAt)
     ) {
