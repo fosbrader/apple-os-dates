@@ -3,10 +3,13 @@ import test from "node:test";
 import {
   PublicApiRequestError,
   createPublicApiDetailResponse,
+  createPublicApiHistoricalAnalysisResponse,
   createPublicApiListResponse,
+  createPublicApiManifest,
   createPublicApiSearchResponse,
   publicApiDetailPath,
   publicApiErrorResponse,
+  publicApiHistoricalAnalysisPath,
   validatePublicApiSearchRequest,
 } from "../src/lib/public-api";
 import { createPublicApiOpenApi } from "../src/lib/public-api/openapi";
@@ -14,6 +17,7 @@ import type {
   PublicResearchDatasets,
   ResearchSearchIndex,
 } from "../src/lib/research/types";
+import { historicalAnalysisReportFixture } from "./fixtures/historical-analysis-report";
 
 const datasets: PublicResearchDatasets = {
   releases: [
@@ -220,7 +224,10 @@ test("the public API search returns a ranked page with the total count", () => {
   assert.equal(response.pagination.total, 2);
   assert.equal(response.pagination.returned, 1);
   assert.equal(response.pagination.next, null);
-  assert.equal(response.pagination.previous, "/api/v1/search/?q=ios&limit=1&offset=0");
+  assert.equal(
+    response.pagination.previous,
+    "/api/v1/search/?q=ios&limit=1&offset=0",
+  );
   assert.equal(response.data[0].kind, "release");
   assert.equal(typeof response.data[0].score, "number");
   assert.equal("text" in response.data[0], false);
@@ -241,6 +248,53 @@ test("the public API rejects a punctuation-only search before data is loaded", (
       error instanceof PublicApiRequestError &&
       error.code === "INVALID_PARAMETER" &&
       error.parameter === "q",
+  );
+});
+
+test("the public API returns one validated historical-analysis snapshot", () => {
+  const report = historicalAnalysisReportFixture();
+  const path = publicApiHistoricalAnalysisPath();
+  const response = createPublicApiHistoricalAnalysisResponse(
+    report,
+    `https://example.test${path}`,
+  );
+
+  assert.equal(response.generated_at, report.provenance.source_issued_at);
+  assert.equal(response.data.report_fingerprint, report.report_fingerprint);
+  assert.deepEqual(response.links, {
+    self: path,
+    openapi: "/api/v1/openapi.json",
+    analytics: "/analytics/",
+  });
+  assert.throws(
+    () =>
+      createPublicApiHistoricalAnalysisResponse(
+        report,
+        `https://example.test${path}?limit=1`,
+      ),
+    (error: unknown) =>
+      error instanceof PublicApiRequestError &&
+      error.code === "UNKNOWN_PARAMETER" &&
+      error.parameter === "limit",
+  );
+  assert.throws(
+    () =>
+      createPublicApiHistoricalAnalysisResponse(
+        { ...report, report_fingerprint: "f".repeat(64) },
+        `https://example.test${path}`,
+      ),
+    (error: unknown) =>
+      error instanceof PublicApiRequestError &&
+      error.status === 503 &&
+      error.code === "HISTORICAL_ANALYSIS_UNAVAILABLE",
+  );
+  assert.deepEqual(
+    createPublicApiManifest("2026-08-10T12:00:00.000Z").historical_analysis,
+    {
+      method: "GET",
+      path,
+      description: "Read validated historical cadence results and methodology.",
+    },
   );
 });
 
@@ -284,16 +338,21 @@ test("the OpenAPI document uses the API allowlist and correct scalar types", () 
     openapi: string;
     paths: Record<string, unknown>;
     components: {
-      schemas: Record<string, {
-        required?: string[];
-        properties?: Record<string, { type?: string | string[] }>;
-      }>;
+      schemas: Record<
+        string,
+        {
+          required?: string[];
+          properties?: Record<string, { type?: string | string[] }>;
+        }
+      >;
     };
   };
 
   assert.equal(document.openapi, "3.1.0");
   assert.ok(document.paths["/api/v1/events/"]);
   assert.ok(document.paths["/api/v1/events/{id}"]);
+  assert.ok(document.paths["/api/v1/historical-analysis/"]);
+  assert.ok(document.components.schemas.HistoricalAnalysisReport);
   assert.deepEqual(
     document.components.schemas.events.properties?.source_count.type,
     "integer",

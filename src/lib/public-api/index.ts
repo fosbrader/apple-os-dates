@@ -1,7 +1,9 @@
 import { checkRateLimit } from "@vercel/firewall";
 import {
-  selectPublicColumns,
-} from "@/lib/research/serialize";
+  validateHistoricalAnalysisReport,
+  type HistoricalAnalysisReportV1,
+} from "@/lib/historical-analysis-report";
+import { selectPublicColumns } from "@/lib/research/serialize";
 import type {
   PublicResearchDatasets,
   PublicResearchRow,
@@ -24,6 +26,7 @@ import {
   isPublicApiDatasetName,
   publicApiCollectionPath,
   publicApiDetailPath,
+  publicApiHistoricalAnalysisPath,
   publicApiOpenApiPath,
   publicApiRootPath,
   publicApiSearchPath,
@@ -40,7 +43,8 @@ const configuredRateLimitWindow = Number.parseInt(
   10,
 );
 const publicApiRateLimitWindow =
-  Number.isSafeInteger(configuredRateLimitWindow) && configuredRateLimitWindow > 0
+  Number.isSafeInteger(configuredRateLimitWindow) &&
+  configuredRateLimitWindow > 0
     ? configuredRateLimitWindow
     : 60;
 
@@ -104,6 +108,17 @@ export interface PublicApiSearchResponse {
   links: {
     self: string;
     openapi: string;
+  };
+}
+
+export interface PublicApiHistoricalAnalysisResponse {
+  api_version: typeof PUBLIC_API_VERSION;
+  generated_at: string;
+  data: HistoricalAnalysisReportV1;
+  links: {
+    self: string;
+    openapi: string;
+    analytics: string;
   };
 }
 
@@ -173,11 +188,7 @@ export interface PublicApiSearchRequest extends PublicApiListRequest {
   search_filters: ResearchSearchFilters;
 }
 
-function badRequest(
-  code: string,
-  message: string,
-  parameter?: string,
-): never {
+function badRequest(code: string, message: string, parameter?: string): never {
   throw new PublicApiRequestError(400, code, message, parameter);
 }
 
@@ -224,11 +235,7 @@ function parsePositiveInteger(
   }
 
   if (!/^(?:0|[1-9]\d*)$/.test(value)) {
-    badRequest(
-      "INVALID_PARAMETER",
-      `Use a whole number for ${name}.`,
-      name,
-    );
+    badRequest("INVALID_PARAMETER", `Use a whole number for ${name}.`, name);
   }
 
   const parsed = Number(value);
@@ -249,11 +256,7 @@ function parsePositiveInteger(
   }
 
   if (name === "offset" && parsed > 1_000_000) {
-    badRequest(
-      "INVALID_PARAMETER",
-      "Set offset to 1000000 or less.",
-      name,
-    );
+    badRequest("INVALID_PARAMETER", "Set offset to 1000000 or less.", name);
   }
 
   return parsed;
@@ -273,9 +276,8 @@ function isValidUtcTime(value: string): boolean {
   }
 
   return (
-    /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,3})?)?Z$/.test(
-      value,
-    ) && !Number.isNaN(Date.parse(value))
+    /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,3})?)?Z$/.test(value) &&
+    !Number.isNaN(Date.parse(value))
   );
 }
 
@@ -386,11 +388,7 @@ export function validatePublicApiSearchRequest(
   const parsed = parseListRequest(url, ["q", ...filters]);
   const query = parsed.filters.get("q");
   if (!query) {
-    badRequest(
-      "MISSING_PARAMETER",
-      "Send a search term in q.",
-      "q",
-    );
+    badRequest("MISSING_PARAMETER", "Send a search term in q.", "q");
   }
   if (!hasResearchSearchTerm(query)) {
     badRequest(
@@ -422,12 +420,38 @@ export function validatePublicApiSearchRequest(
   };
 }
 
+/** Historical analysis has one complete snapshot and accepts no query fields. */
+export function validatePublicApiHistoricalAnalysisRequest(
+  requestUrl: string,
+): void {
+  const url = new URL(requestUrl);
+  const names = [...new Set(url.searchParams.keys())];
+  for (const name of names) {
+    if (url.searchParams.getAll(name).length > 1) {
+      badRequest(
+        "DUPLICATE_PARAMETER",
+        "Send each query parameter one time.",
+        name,
+      );
+    }
+  }
+  if (names.length > 0) {
+    badRequest(
+      "UNKNOWN_PARAMETER",
+      "This endpoint does not accept query parameters.",
+      names[0],
+    );
+  }
+}
+
 function valueMatches(
   actual: PublicResearchRow[string],
   expected: string,
 ): boolean {
   if (Array.isArray(actual)) {
-    return actual.some((value) => normalizedValue(value) === normalizedValue(expected));
+    return actual.some(
+      (value) => normalizedValue(value) === normalizedValue(expected),
+    );
   }
   if (actual === null) return false;
   if (typeof actual === "boolean") return String(actual) === expected;
@@ -490,10 +514,7 @@ function resourceListPath(
   return `${resourcePath(dataset)}${query ? `?${query}` : ""}`;
 }
 
-function resourceDetailPath(
-  dataset: PublicApiDatasetName,
-  id: string,
-): string {
+function resourceDetailPath(dataset: PublicApiDatasetName, id: string): string {
   return publicApiDetailPath(dataset, id);
 }
 
@@ -552,7 +573,8 @@ function detailLinks(
   }
 
   if (dataset === "occurrences") {
-    const targetKind = typeof row.target_kind === "string" ? row.target_kind : "";
+    const targetKind =
+      typeof row.target_kind === "string" ? row.target_kind : "";
     const targetId = typeof row.target_id === "string" ? row.target_id : "";
     const target = targetPath(targetKind, targetId);
     if (target) links.target = target;
@@ -560,7 +582,8 @@ function detailLinks(
   }
 
   if (dataset === "citations") {
-    const targetKind = typeof row.target_kind === "string" ? row.target_kind : "";
+    const targetKind =
+      typeof row.target_kind === "string" ? row.target_kind : "";
     const targetId = typeof row.target_id === "string" ? row.target_id : "";
     const target = targetPath(targetKind, targetId);
     if (target) links.target = target;
@@ -573,9 +596,7 @@ function detailLinks(
   return links;
 }
 
-export function resolvePublicApiDataset(
-  value: string,
-): PublicApiDatasetName {
+export function resolvePublicApiDataset(value: string): PublicApiDatasetName {
   if (!isPublicApiDatasetName(value)) {
     throw new PublicApiRequestError(
       404,
@@ -660,33 +681,35 @@ export function createPublicApiSearchResponse(
     request.limit,
     request.offset,
   );
-  const data = page.results.map((result: ResearchSearchResult): PublicApiSearchResult => ({
-    search_id: result.document.id,
-    kind: result.document.kind,
-    title: result.document.title,
-    href: result.document.href,
-    record: {
-      dataset: result.document.api_dataset,
-      id: result.document.record_id,
-      api_path: resourceDetailPath(
-        result.document.api_dataset,
-        result.document.record_id,
-      ),
-    },
-    vendor: result.document.vendor,
-    platform: result.document.platform,
-    family: result.document.family,
-    version: result.document.version,
-    date: result.document.date,
-    status: result.document.status,
-    channel: result.document.channel,
-    build_number: result.document.build_number,
-    change_type: result.document.change_type,
-    documented_status: result.document.documented_status,
-    evidence_state: result.document.evidence_state,
-    publishers: result.document.publishers,
-    score: result.score,
-  }));
+  const data = page.results.map(
+    (result: ResearchSearchResult): PublicApiSearchResult => ({
+      search_id: result.document.id,
+      kind: result.document.kind,
+      title: result.document.title,
+      href: result.document.href,
+      record: {
+        dataset: result.document.api_dataset,
+        id: result.document.record_id,
+        api_path: resourceDetailPath(
+          result.document.api_dataset,
+          result.document.record_id,
+        ),
+      },
+      vendor: result.document.vendor,
+      platform: result.document.platform,
+      family: result.document.family,
+      version: result.document.version,
+      date: result.document.date,
+      status: result.document.status,
+      channel: result.document.channel,
+      build_number: result.document.build_number,
+      change_type: result.document.change_type,
+      documented_status: result.document.documented_status,
+      evidence_state: result.document.evidence_state,
+      publishers: result.document.publishers,
+      score: result.score,
+    }),
+  );
 
   return {
     api_version: PUBLIC_API_VERSION,
@@ -702,6 +725,30 @@ export function createPublicApiSearchResponse(
     links: {
       self: relativeUrl(url),
       openapi: publicApiOpenApiPath(),
+    },
+  };
+}
+
+export function createPublicApiHistoricalAnalysisResponse(
+  report: HistoricalAnalysisReportV1,
+  requestUrl: string,
+): PublicApiHistoricalAnalysisResponse {
+  validatePublicApiHistoricalAnalysisRequest(requestUrl);
+  if (validateHistoricalAnalysisReport(report).length > 0) {
+    throw new PublicApiRequestError(
+      503,
+      "HISTORICAL_ANALYSIS_UNAVAILABLE",
+      "Historical analysis is temporarily unavailable.",
+    );
+  }
+  return {
+    api_version: PUBLIC_API_VERSION,
+    generated_at: report.provenance.source_issued_at,
+    data: report,
+    links: {
+      self: relativeUrl(new URL(requestUrl)),
+      openapi: publicApiOpenApiPath(),
+      analytics: "/analytics/",
     },
   };
 }
@@ -727,6 +774,11 @@ export function createPublicApiManifest(
         description: definition.description,
       }),
     ),
+    historical_analysis: {
+      method: "GET",
+      path: publicApiHistoricalAnalysisPath(),
+      description: "Read validated historical cadence results and methodology.",
+    },
     search: {
       method: "GET",
       path: publicApiSearchPath(),
@@ -735,9 +787,7 @@ export function createPublicApiManifest(
   };
 }
 
-export function publicApiHeaders(
-  additionalHeaders?: HeadersInit,
-): HeadersInit {
+export function publicApiHeaders(additionalHeaders?: HeadersInit): HeadersInit {
   return {
     "Content-Type": "application/json; charset=utf-8",
     "Cache-Control": PUBLIC_CACHE,
@@ -811,6 +861,7 @@ export {
   canonicalPublicApiPathname,
   publicApiCollectionPath,
   publicApiDetailPath,
+  publicApiHistoricalAnalysisPath,
   publicApiOpenApiPath,
   publicApiRootPath,
   publicApiSearchPath,

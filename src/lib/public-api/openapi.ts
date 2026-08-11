@@ -1,4 +1,16 @@
-import { publicApiDatasetFields, type PublicApiFieldDefinition } from "./fields";
+import {
+  publicApiDatasetFields,
+  type PublicApiFieldDefinition,
+} from "./fields";
+import {
+  HISTORICAL_ANALYSIS_REPORT_MAX_BREAKDOWN_ROWS,
+  HISTORICAL_ANALYSIS_REPORT_VERSION,
+} from "@/lib/historical-analysis-report";
+import {
+  WALK_FORWARD_BASELINES,
+  WALK_FORWARD_EVALUATION_VERSION,
+  WALK_FORWARD_MINIMUM_TRAINING_OUTCOMES,
+} from "@/lib/walk-forward-evaluation";
 import {
   RESEARCH_EXPORT_LICENSE,
   RESEARCH_EXPORT_LICENSE_SCOPE,
@@ -13,6 +25,7 @@ import {
   PUBLIC_API_SEARCH_FILTERS,
   PUBLIC_API_VERSION,
   publicApiCollectionPath,
+  publicApiHistoricalAnalysisPath,
   publicApiOpenApiPath,
   publicApiRootPath,
   publicApiSearchPath,
@@ -94,7 +107,7 @@ function filterParameters(filters: readonly PublicApiFilterDefinition[]) {
 }
 
 function responseReference(name: string) {
-  return { "$ref": `#/components/responses/${name}` };
+  return { $ref: `#/components/responses/${name}` };
 }
 
 function collectionPath(dataset: PublicApiDatasetName) {
@@ -114,7 +127,7 @@ function collectionPath(dataset: PublicApiDatasetName) {
           description: "The requested record page.",
           content: {
             "application/json": {
-              schema: { "$ref": `#/components/schemas/${dataset}Collection` },
+              schema: { $ref: `#/components/schemas/${dataset}Collection` },
             },
           },
         },
@@ -149,7 +162,7 @@ function detailPath(dataset: PublicApiDatasetName) {
           description: "The requested record.",
           content: {
             "application/json": {
-              schema: { "$ref": `#/components/schemas/${dataset}Detail` },
+              schema: { $ref: `#/components/schemas/${dataset}Detail` },
             },
           },
         },
@@ -165,6 +178,7 @@ function detailPath(dataset: PublicApiDatasetName) {
 function apiResponseSchema(
   itemSchema: Record<string, unknown>,
   hasPagination: boolean,
+  linksSchema?: Record<string, unknown>,
 ) {
   return {
     type: "object",
@@ -190,14 +204,274 @@ function apiResponseSchema(
       },
       data: itemSchema,
       ...(hasPagination
-        ? { pagination: { "$ref": "#/components/schemas/Pagination" } }
+        ? { pagination: { $ref: "#/components/schemas/Pagination" } }
         : {}),
-      links: {
+      links: linksSchema ?? {
         type: "object",
         additionalProperties: { type: "string" },
         description: "Relative canonical API paths related to this response.",
       },
     },
+  };
+}
+
+function historicalAnalysisSchemas(): Record<string, unknown> {
+  const nullableNumber = {
+    type: ["number", "null"],
+  };
+  const metric = {
+    type: "object",
+    additionalProperties: false,
+    required: [
+      "baseline",
+      "group",
+      "key",
+      "score_count",
+      "reportable",
+      "unavailable_reason",
+      "mae_days",
+      "median_absolute_error_days",
+      "signed_bias_days",
+      "inclusive_coverage_50",
+      "inclusive_coverage_80",
+    ],
+    properties: {
+      baseline: { type: "string", enum: WALK_FORWARD_BASELINES },
+      group: {
+        type: "string",
+        enum: ["overall", "family", "stage", "horizon"],
+      },
+      key: {
+        type: "string",
+        description: "Stable identifier for the metric group.",
+      },
+      score_count: {
+        type: "integer",
+        minimum: 0,
+        description: "Scored walk-forward predictions in this row.",
+      },
+      reportable: {
+        type: "boolean",
+        description: "True when the row meets the fixed sample threshold.",
+      },
+      unavailable_reason: {
+        type: ["string", "null"],
+        enum: ["minimum-score-count", null],
+      },
+      mae_days: nullableNumber,
+      median_absolute_error_days: nullableNumber,
+      signed_bias_days: nullableNumber,
+      inclusive_coverage_50: {
+        type: ["number", "null"],
+        minimum: 0,
+        maximum: 1,
+      },
+      inclusive_coverage_80: {
+        type: ["number", "null"],
+        minimum: 0,
+        maximum: 1,
+      },
+    },
+  };
+
+  return {
+    HistoricalAnalysisMetric: metric,
+    HistoricalAnalysisReport: {
+      type: "object",
+      additionalProperties: false,
+      required: [
+        "report_version",
+        "status",
+        "provenance",
+        "cohort",
+        "exclusions",
+        "overall_results",
+        "breakdowns",
+        "uncertainty",
+        "methodology",
+        "report_fingerprint",
+      ],
+      properties: {
+        report_version: {
+          type: "string",
+          const: HISTORICAL_ANALYSIS_REPORT_VERSION,
+        },
+        status: { type: "string", const: "available" },
+        provenance: {
+          type: "object",
+          additionalProperties: false,
+          required: [
+            "source_as_of_date",
+            "source_issued_at",
+            "historical_dataset_version",
+            "historical_dataset_fingerprint",
+            "walk_forward_evaluation_version",
+            "walk_forward_evaluation_fingerprint",
+            "report_code_fingerprint",
+          ],
+          properties: {
+            source_as_of_date: { type: "string", format: "date" },
+            source_issued_at: { type: "string", format: "date-time" },
+            historical_dataset_version: { type: "string" },
+            historical_dataset_fingerprint: {
+              type: "string",
+              pattern: "^[a-f0-9]{64}$",
+            },
+            walk_forward_evaluation_version: {
+              type: "string",
+              const: WALK_FORWARD_EVALUATION_VERSION,
+            },
+            walk_forward_evaluation_fingerprint: {
+              type: "string",
+              pattern: "^[a-f0-9]{64}$",
+            },
+            report_code_fingerprint: {
+              type: "string",
+              pattern: "^[a-f0-9]{64}$",
+            },
+          },
+        },
+        cohort: {
+          type: "object",
+          additionalProperties: false,
+          required: [
+            "release_cycle_count",
+            "included_release_cycle_count",
+            "superseded_release_cycle_count",
+            "complete_chronology_cycle_count",
+            "unknown_chronology_cycle_count",
+            "eligible_interval_count",
+            "excluded_interval_count",
+            "scored_prediction_count",
+          ],
+          properties: Object.fromEntries(
+            [
+              "release_cycle_count",
+              "included_release_cycle_count",
+              "superseded_release_cycle_count",
+              "complete_chronology_cycle_count",
+              "unknown_chronology_cycle_count",
+              "eligible_interval_count",
+              "excluded_interval_count",
+              "scored_prediction_count",
+            ].map((name) => [name, { type: "integer", minimum: 0 }]),
+          ),
+        },
+        exclusions: {
+          type: "array",
+          items: {
+            type: "object",
+            additionalProperties: false,
+            required: ["reason", "interval_count"],
+            properties: {
+              reason: {
+                type: "string",
+                enum: [
+                  "invalid-or-unavailable-interval",
+                  "missing-anchor",
+                  "missing-endpoint",
+                  "endpoint-not-after-origin",
+                  "unknown-horizon",
+                ],
+              },
+              interval_count: { type: "integer", minimum: 1 },
+            },
+          },
+        },
+        overall_results: {
+          type: "array",
+          minItems: WALK_FORWARD_BASELINES.length,
+          maxItems: WALK_FORWARD_BASELINES.length,
+          items: { $ref: "#/components/schemas/HistoricalAnalysisMetric" },
+        },
+        breakdowns: {
+          type: "array",
+          maxItems: HISTORICAL_ANALYSIS_REPORT_MAX_BREAKDOWN_ROWS,
+          items: { $ref: "#/components/schemas/HistoricalAnalysisMetric" },
+        },
+        uncertainty: {
+          type: "object",
+          additionalProperties: false,
+          required: [
+            "minimum_training_outcomes",
+            "minimum_reportable_scores",
+            "empirical_intervals_included",
+          ],
+          properties: {
+            minimum_training_outcomes: {
+              type: "integer",
+              const: WALK_FORWARD_MINIMUM_TRAINING_OUTCOMES,
+            },
+            minimum_reportable_scores: {
+              type: "integer",
+              const: WALK_FORWARD_MINIMUM_TRAINING_OUTCOMES,
+            },
+            empirical_intervals_included: { type: "boolean" },
+          },
+        },
+        methodology: {
+          type: "object",
+          additionalProperties: false,
+          required: ["design", "target_unit", "training_cutoff", "baselines"],
+          properties: {
+            design: { type: "string", const: "walk-forward" },
+            target_unit: {
+              type: "string",
+              const: "source-backed-stage-interval",
+            },
+            training_cutoff: {
+              type: "string",
+              const: "known-at-origin",
+            },
+            baselines: {
+              type: "array",
+              minItems: WALK_FORWARD_BASELINES.length,
+              maxItems: WALK_FORWARD_BASELINES.length,
+              items: {
+                type: "object",
+                additionalProperties: false,
+                required: ["id", "estimator", "cohort_order"],
+                properties: {
+                  id: { type: "string", enum: WALK_FORWARD_BASELINES },
+                  estimator: { type: "string", const: "median" },
+                  cohort_order: {
+                    type: "array",
+                    items: { type: "string" },
+                  },
+                },
+              },
+            },
+          },
+        },
+        report_fingerprint: {
+          type: "string",
+          pattern: "^[a-f0-9]{64}$",
+        },
+      },
+    },
+    HistoricalAnalysisResponse: apiResponseSchema(
+      { $ref: "#/components/schemas/HistoricalAnalysisReport" },
+      false,
+      {
+        type: "object",
+        additionalProperties: false,
+        required: ["self", "openapi", "analytics"],
+        properties: {
+          self: {
+            type: "string",
+            description: "Canonical path for this report.",
+          },
+          openapi: {
+            type: "string",
+            description: "Canonical path for the OpenAPI document.",
+          },
+          analytics: {
+            type: "string",
+            description: "Public page that summarizes this report.",
+          },
+        },
+      },
+    ),
   };
 }
 
@@ -227,13 +501,13 @@ export function createPublicApiOpenApi() {
         [
           `${name}Collection`,
           apiResponseSchema(
-            { type: "array", items: { "$ref": `#/components/schemas/${name}` } },
+            { type: "array", items: { $ref: `#/components/schemas/${name}` } },
             true,
           ),
         ],
         [
           `${name}Detail`,
-          apiResponseSchema({ "$ref": `#/components/schemas/${name}` }, false),
+          apiResponseSchema({ $ref: `#/components/schemas/${name}` }, false),
         ],
       ];
     }),
@@ -258,6 +532,10 @@ export function createPublicApiOpenApi() {
     },
     tags: [
       { name: "Records", description: "Read public archive records." },
+      {
+        name: "Analysis",
+        description: "Read validated historical timing analysis.",
+      },
       { name: "Search", description: "Search public archive records." },
       { name: "Reference", description: "Read API contract files." },
     ],
@@ -294,6 +572,30 @@ export function createPublicApiOpenApi() {
           },
         },
       },
+      [publicApiHistoricalAnalysisPath()]: {
+        get: {
+          tags: ["Analysis"],
+          summary: "Get historical timing analysis",
+          description:
+            "Get bounded walk-forward results from the validated historical dataset. The response includes cohort size, exclusions, uncertainty, methodology, and provenance. It does not include active or shadow forecast candidates.",
+          operationId: "getHistoricalAnalysis",
+          responses: {
+            "200": {
+              description: "The validated historical-analysis report.",
+              content: {
+                "application/json": {
+                  schema: {
+                    $ref: "#/components/schemas/HistoricalAnalysisResponse",
+                  },
+                },
+              },
+            },
+            "400": responseReference("BadRequest"),
+            "429": responseReference("RateLimited"),
+            "503": responseReference("Unavailable"),
+          },
+        },
+      },
       ...datasetPaths,
       [publicApiSearchPath()]: {
         get: {
@@ -307,7 +609,8 @@ export function createPublicApiOpenApi() {
               name: "q",
               in: "query",
               required: true,
-              description: "Send one or more letters or numbers. All search terms must match.",
+              description:
+                "Send one or more letters or numbers. All search terms must match.",
               schema: { type: "string", minLength: 1, maxLength: 200 },
             },
             ...paginationParameters(),
@@ -318,7 +621,7 @@ export function createPublicApiOpenApi() {
               description: "The ranked result page.",
               content: {
                 "application/json": {
-                  schema: { "$ref": "#/components/schemas/SearchCollection" },
+                  schema: { $ref: "#/components/schemas/SearchCollection" },
                 },
               },
             },
@@ -332,17 +635,31 @@ export function createPublicApiOpenApi() {
     components: {
       schemas: {
         ...datasetSchemas,
+        ...historicalAnalysisSchemas(),
         Pagination: {
           type: "object",
           additionalProperties: false,
-          required: ["limit", "offset", "returned", "total", "next", "previous"],
+          required: [
+            "limit",
+            "offset",
+            "returned",
+            "total",
+            "next",
+            "previous",
+          ],
           properties: {
             limit: { type: "integer", description: "Requested page size." },
-            offset: { type: "integer", description: "Requested record offset." },
+            offset: {
+              type: "integer",
+              description: "Requested record offset.",
+            },
             returned: { type: "integer", description: "Records in data." },
             total: { type: "integer", description: "All matching records." },
             next: { type: ["string", "null"], description: "Next page path." },
-            previous: { type: ["string", "null"], description: "Previous page path." },
+            previous: {
+              type: ["string", "null"],
+              description: "Previous page path.",
+            },
           },
         },
         SearchRecord: {
@@ -358,7 +675,8 @@ export function createPublicApiOpenApi() {
             id: { type: "string", description: "Exact public record ID." },
             api_path: {
               type: "string",
-              description: "Canonical relative API path for the factual record.",
+              description:
+                "Canonical relative API path for the factual record.",
             },
           },
         },
@@ -386,11 +704,23 @@ export function createPublicApiOpenApi() {
             "score",
           ],
           properties: {
-            search_id: { type: "string", description: "Stable search-index identifier." },
-            kind: { type: "string", enum: ["release", "event", "build", "change"] },
-            title: { type: "string", description: "Display title of the search match." },
-            href: { type: "string", description: "Relative Version Record page path." },
-            record: { "$ref": "#/components/schemas/SearchRecord" },
+            search_id: {
+              type: "string",
+              description: "Stable search-index identifier.",
+            },
+            kind: {
+              type: "string",
+              enum: ["release", "event", "build", "change"],
+            },
+            title: {
+              type: "string",
+              description: "Display title of the search match.",
+            },
+            href: {
+              type: "string",
+              description: "Relative Version Record page path.",
+            },
+            record: { $ref: "#/components/schemas/SearchRecord" },
             vendor: { type: "string" },
             platform: { type: ["string", "null"] },
             family: { type: ["string", "null"] },
@@ -407,7 +737,10 @@ export function createPublicApiOpenApi() {
           },
         },
         SearchCollection: apiResponseSchema(
-          { type: "array", items: { "$ref": "#/components/schemas/SearchResult" } },
+          {
+            type: "array",
+            items: { $ref: "#/components/schemas/SearchResult" },
+          },
           true,
         ),
         Error: {
@@ -421,9 +754,18 @@ export function createPublicApiOpenApi() {
               additionalProperties: false,
               required: ["code", "message"],
               properties: {
-                code: { type: "string", description: "Stable machine-readable error code." },
-                message: { type: "string", description: "Short error explanation." },
-                parameter: { type: "string", description: "Invalid request parameter, if applicable." },
+                code: {
+                  type: "string",
+                  description: "Stable machine-readable error code.",
+                },
+                message: {
+                  type: "string",
+                  description: "Short error explanation.",
+                },
+                parameter: {
+                  type: "string",
+                  description: "Invalid request parameter, if applicable.",
+                },
               },
             },
           },
@@ -432,21 +774,34 @@ export function createPublicApiOpenApi() {
       responses: {
         BadRequest: {
           description: "The request has an invalid parameter.",
-          content: { "application/json": { schema: { "$ref": "#/components/schemas/Error" } } },
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/Error" },
+            },
+          },
         },
         NotFound: {
           description: "The requested record does not exist.",
-          content: { "application/json": { schema: { "$ref": "#/components/schemas/Error" } } },
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/Error" },
+            },
+          },
         },
         RateLimited: {
           description: "A configured API rate limit rejected the request.",
           headers: {
             "Retry-After": {
-              description: "Seconds to wait before retrying, when supplied by the limiter.",
+              description:
+                "Seconds to wait before retrying, when supplied by the limiter.",
               schema: { type: "integer", minimum: 1 },
             },
           },
-          content: { "application/json": { schema: { "$ref": "#/components/schemas/Error" } } },
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/Error" },
+            },
+          },
         },
         Unavailable: {
           description: "The API cannot answer this request now.",
@@ -456,7 +811,11 @@ export function createPublicApiOpenApi() {
               schema: { type: "integer", minimum: 1 },
             },
           },
-          content: { "application/json": { schema: { "$ref": "#/components/schemas/Error" } } },
+          content: {
+            "application/json": {
+              schema: { $ref: "#/components/schemas/Error" },
+            },
+          },
         },
       },
     },

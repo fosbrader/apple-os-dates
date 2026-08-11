@@ -1,6 +1,9 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { publicApiDatasetFields, type PublicApiFieldDefinition } from "@/lib/public-api/fields";
+import {
+  publicApiDatasetFields,
+  type PublicApiFieldDefinition,
+} from "@/lib/public-api/fields";
 import {
   PUBLIC_API_DATASETS,
   PUBLIC_API_DATASET_NAMES,
@@ -9,6 +12,7 @@ import {
   PUBLIC_API_SEARCH_FILTERS,
   PUBLIC_API_VERSION,
   publicApiCollectionPath,
+  publicApiHistoricalAnalysisPath,
   publicApiOpenApiPath,
   publicApiRootPath,
   publicApiSearchPath,
@@ -22,7 +26,7 @@ import { CopyCodeButton } from "./CopyCodeButton";
 import styles from "./api-reference.module.css";
 
 const pageDescription =
-  "Read Version Record public release data through a versioned API. Use short, direct API instructions.";
+  "Read Version Record public release data and validated historical timing analysis through a versioned API.";
 
 export const metadata = createPageMetadata({
   title: "Public API Reference",
@@ -65,7 +69,11 @@ function Code({ children }: { children: ReactNode }) {
 function CodeBlock({ children, label }: { children: string; label: string }) {
   return (
     <div className={styles.codePanel}>
-      <CopyCodeButton value={children} label={label} className={styles.copyButton} />
+      <CopyCodeButton
+        value={children}
+        label={label}
+        className={styles.copyButton}
+      />
       <pre className={styles.codeBlock}>
         <code>{children}</code>
       </pre>
@@ -84,7 +92,11 @@ function fieldType(field: PublicApiFieldDefinition): string {
   return field.nullable ? `${type} or null` : type;
 }
 
-function ParameterList({ filters }: { filters: readonly PublicApiFilterDefinition[] }) {
+function ParameterList({
+  filters,
+}: {
+  filters: readonly PublicApiFilterDefinition[];
+}) {
   return (
     <dl className={styles.definitionList}>
       {paginationParameters.map((parameter) => (
@@ -151,7 +163,8 @@ function EndpointCard({ dataset }: { dataset: PublicApiDatasetName }) {
           Open {dataset} example
         </a>
         <span>
-          Use the returned <Code>links.self</Code> path to get one {definition.singular}.
+          Use the returned <Code>links.self</Code> path to get one{" "}
+          {definition.singular}.
         </span>
       </div>
 
@@ -169,7 +182,13 @@ function EndpointCard({ dataset }: { dataset: PublicApiDatasetName }) {
   );
 }
 
-function ReferenceLink({ href, children }: { href: string; children: ReactNode }) {
+function ReferenceLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: ReactNode;
+}) {
   return (
     <a className={styles.referenceLink} href={href}>
       {children}
@@ -181,6 +200,7 @@ function ReferenceLink({ href, children }: { href: string; children: ReactNode }
 export default function ApiReferencePage() {
   const eventsPath = publicApiCollectionPath("events");
   const searchPath = publicApiSearchPath();
+  const historicalAnalysisPath = publicApiHistoricalAnalysisPath();
   const curlExample = `curl -sS "https://www.versionrecord.com${eventsPath}?platform=ios&channel=developer_beta&limit=3"`;
   const responseExample = `{
   "api_version": "${PUBLIC_API_VERSION}",
@@ -213,6 +233,7 @@ export default function ApiReferencePage() {
   }
 }`;
   const searchExample = `${searchPath}?q=ios&kind=event&limit=3`;
+  const historicalAnalysisExample = `curl -sS "https://www.versionrecord.com${historicalAnalysisPath}"`;
 
   return (
     <div className={styles.page}>
@@ -225,7 +246,9 @@ export default function ApiReferencePage() {
             events, builds, changes, citations, and provenance.
           </p>
           <div className={styles.heroActions}>
-            <ReferenceLink href={publicApiRootPath()}>Open API root</ReferenceLink>
+            <ReferenceLink href={publicApiRootPath()}>
+              Open API root
+            </ReferenceLink>
             <ReferenceLink href={publicApiOpenApiPath()}>
               Get OpenAPI JSON
             </ReferenceLink>
@@ -267,8 +290,8 @@ export default function ApiReferencePage() {
               <p className={styles.cardLabel}>Use canonical paths</p>
               <p>
                 Collection and search paths end with <Code>/</Code>. Detail
-                paths can vary when an ID contains a period. Follow the
-                returned <Code>links.self</Code> or <Code>record.api_path</Code>
+                paths can vary when an ID contains a period. Follow the returned{" "}
+                <Code>links.self</Code> or <Code>record.api_path</Code>
                 value. This avoids an HTTP redirect before a browser CORS
                 preflight reaches the API.
               </p>
@@ -288,18 +311,26 @@ export default function ApiReferencePage() {
               this response snapshot. Use each record’s <Code>updated_at</Code>
               when you need its individual update time.
             </p>
-            <CodeBlock label="the example API response">{responseExample}</CodeBlock>
+            <CodeBlock label="the example API response">
+              {responseExample}
+            </CodeBlock>
             <dl className={styles.responseTerms}>
               <div>
-                <dt><Code>data</Code></dt>
+                <dt>
+                  <Code>data</Code>
+                </dt>
                 <dd>The requested records or search results.</dd>
               </div>
               <div>
-                <dt><Code>pagination</Code></dt>
+                <dt>
+                  <Code>pagination</Code>
+                </dt>
                 <dd>Page size, position, total, and direct page paths.</dd>
               </div>
               <div>
-                <dt><Code>links</Code></dt>
+                <dt>
+                  <Code>links</Code>
+                </dt>
                 <dd>Canonical API paths related to the response.</dd>
               </div>
             </dl>
@@ -318,6 +349,65 @@ export default function ApiReferencePage() {
                 <EndpointCard key={dataset} dataset={dataset} />
               ))}
             </div>
+          </section>
+
+          <section className={styles.section} id="historical-analysis">
+            <p className={styles.eyebrow}>Historical analysis</p>
+            <h2>Check measured timing results.</h2>
+            <p>
+              Read one validated historical-analysis snapshot. It measures two
+              median baselines against dated release intervals. It does not
+              return active forecasts or private forecast artifacts.
+            </p>
+            <div className={styles.searchPanel}>
+              <div>
+                <span className={styles.method}>GET</span>
+                <Code>{historicalAnalysisPath}</Code>
+              </div>
+              <a
+                href={historicalAnalysisPath}
+                aria-label="Open the historical-analysis API response"
+              >
+                Open historical analysis
+              </a>
+            </div>
+            <CodeBlock label="the historical-analysis API request">
+              {historicalAnalysisExample}
+            </CodeBlock>
+            <div className={styles.callout}>
+              <p className={styles.cardLabel}>No query parameters</p>
+              <p>
+                Send the canonical path with no query string. The response is
+                one complete cohort, with its exclusions, sample rules,
+                methodology, and fingerprints.
+              </p>
+            </div>
+            <dl className={styles.responseTerms}>
+              <div>
+                <dt>
+                  <Code>data.cohort</Code>
+                </dt>
+                <dd>
+                  Counts for release cycles, intervals, and scored predictions.
+                </dd>
+              </div>
+              <div>
+                <dt>
+                  <Code>data.overall_results</Code>
+                </dt>
+                <dd>Error and interval-coverage results for each baseline.</dd>
+              </div>
+              <div>
+                <dt>
+                  <Code>data.provenance</Code>
+                </dt>
+                <dd>Source date, snapshot time, versions, and fingerprints.</dd>
+              </div>
+            </dl>
+            <p className={styles.filterNote}>
+              The API returns <Code>503</Code> when it cannot build a complete
+              validated report. It does not return incomplete analysis.
+            </p>
           </section>
 
           <section className={styles.section} id="search">
@@ -374,11 +464,13 @@ export default function ApiReferencePage() {
               </div>
               <div>
                 <Code>429</Code>
-                <p>Wait for <Code>Retry-After</Code> before you retry.</p>
+                <p>
+                  Wait for <Code>Retry-After</Code> before you retry.
+                </p>
               </div>
               <div>
                 <Code>503</Code>
-                <p>Wait 60 seconds. Then send the request again.</p>
+                <p>The API cannot make a complete response now. Try later.</p>
               </div>
             </div>
             <CodeBlock label="the example API error response">{`{
@@ -420,7 +512,8 @@ export default function ApiReferencePage() {
                 <h3>Evidence and rights</h3>
                 <p>
                   Use citation and provenance records with material claims.
-                  Public factual fields use <a href={RESEARCH_EXPORT_LICENSE_URL}>CC0 1.0</a>.
+                  Public factual fields use{" "}
+                  <a href={RESEARCH_EXPORT_LICENSE_URL}>CC0 1.0</a>.
                 </p>
               </div>
             </div>
