@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: submission-monitor
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   reconcile:

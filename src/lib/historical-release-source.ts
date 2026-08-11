@@ -555,6 +555,25 @@ export function validatePublishedForecastShadowSource(
     failSource("invalid-source");
   }
 
+  const metadataByReleaseId = new Map<string, HistoricalReleaseMetadataV1>();
+  for (const metadata of analytical.releaseMetadata) {
+    if (
+      metadataByReleaseId.has(metadata.releaseId) ||
+      !analyticalReleaseIds.includes(metadata.releaseId)
+    ) {
+      failSource("invalid-source");
+    }
+    metadataByReleaseId.set(metadata.releaseId, metadata);
+  }
+  if (metadataByReleaseId.size !== analyticalReleaseIds.length) {
+    failSource("invalid-source");
+  }
+  for (const release of raw.legacyForecastReleases) {
+    if (metadataByReleaseId.get(release.id)?.platformId !== release.platform.id) {
+      failSource("invalid-source");
+    }
+  }
+
   const analyticalMilestones = new Map<string, CompatibilityMilestoneInput>();
   for (const milestone of analytical.compatibilityMilestones) {
     const key = `${milestone.releaseId}\u0000${milestone.id}`;
@@ -583,7 +602,6 @@ export function validatePublishedForecastShadowSource(
   ) {
     failSource("invalid-source");
   }
-
   return {
     ...analytical,
     compatibilityMilestones:

@@ -16,6 +16,7 @@ test("submission monitor trusts only its GitHub Actions issue", async () => {
   assert.match(workflow, /ISSUE_AUTHOR: app\/github-actions/);
   assert.match(workflow, /cron: "17 13 \* \* \*"/);
   assert.doesNotMatch(workflow, /\*\/6/);
+  assert.match(workflow, /cancel-in-progress: true/);
   assert.match(workflow, /in:title author:\$\{ISSUE_AUTHOR\}/);
   assert.match(workflow, /--json number,state,title,body,author/);
   assert.equal(

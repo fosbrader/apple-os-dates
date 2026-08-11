@@ -378,17 +378,36 @@ test("FR-012 snapshots an available current public heuristic only after exact an
   unlinked.legacyForecastMilestones = unlinked.legacyForecastMilestones.filter(
     (milestone) => milestone.releaseId !== "active",
   );
-  const unavailable = buildForecastShadowArtifact(
-    {
-      requestedAt: `${originDay}T08:43:00.000Z`,
-      scheduledFor: originDay,
-    },
-    unlinked,
-  ).targets.find((candidate) => candidate.targetKind === "public-release");
-  assert.equal(unavailable?.benchmarks[1]?.availability, "unavailable");
-  if (unavailable?.benchmarks[1]?.availability === "unavailable") {
-    assert.equal(unavailable.benchmarks[1].reason, "anchor-mapping-unproven");
-  }
+  assert.throws(
+    () =>
+      buildForecastShadowArtifact(
+        {
+          requestedAt: `${originDay}T08:43:00.000Z`,
+          scheduledFor: originDay,
+        },
+        unlinked,
+      ),
+    ForecastShadowPipelineError,
+  );
+
+  const wrongPlatform = source();
+  wrongPlatform.legacyForecastReleases = wrongPlatform.legacyForecastReleases.map(
+    (release) =>
+      release.id === "history-00"
+        ? { ...release, platform: { ...release.platform, id: "ipados" } }
+        : release,
+  );
+  assert.throws(
+    () =>
+      buildForecastShadowArtifact(
+        {
+          requestedAt: `${originDay}T08:43:00.000Z`,
+          scheduledFor: originDay,
+        },
+        wrongPlatform,
+      ),
+    ForecastShadowPipelineError,
+  );
 });
 
 test("FR-014 activates once and a same-day rerun performs no fetch or write", async () => {
