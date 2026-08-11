@@ -48,6 +48,10 @@ import {
   type ForecastBlobPutOptions,
   type ForecastBlobPutResult,
 } from "../src/lib/forecast-blob-storage";
+import {
+  FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
+  FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
+} from "../src/lib/forecast-runtime-cohort";
 
 const encoder = new TextEncoder();
 const productionEnvironment = {
@@ -77,6 +81,20 @@ function artifactDraft(
       historicalDataset: {
         version: "historical-analysis-dataset/v1",
         fingerprint: sha("1"),
+      },
+      runtimeCohort: {
+        selectionVersion: "forecast-runtime-cohort-selection/v1",
+        selectionFingerprint: sha("9"),
+        selectionCodeFingerprint: FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
+        selectionConfigFingerprint: FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
+        fullHistoricalDataset: {
+          version: "historical-analysis-dataset/v1",
+          fingerprint: sha("a"),
+        },
+        fullRawSourceFingerprint: sha("b"),
+        projectedRawSourceFingerprint: sha("c"),
+        selectedReleaseCount: 9,
+        selectedObservationCount: 24,
       },
       evaluation: {
         version: "walk-forward-evaluation/v1",

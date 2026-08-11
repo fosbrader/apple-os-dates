@@ -1,7 +1,9 @@
 # Forecast runtime cohort
 
-FR-014 defines a standalone, deterministic capacity boundary for the private
-daily shadow forecast. It is not wired into the forecast pipeline yet.
+FR-014 defines the deterministic capacity boundary for the private daily
+shadow forecast. The pipeline applies it after rebuilding the complete
+validated snapshot and before any walk-forward evaluation, model fitting, or
+private/simple-baseline prediction work.
 
 ## Fixed v1 limits
 
@@ -109,10 +111,14 @@ The benchmark reports phase elapsed times, selected observations, and artifact
 size. It intentionally has no wall-clock pass/fail threshold because developer
 machines and hosted runtimes differ.
 
-Pipeline integration remains a separate reviewed change. It must apply the
-projection before walk-forward evaluation and model fitting, preserve the exact
-instant observation cutoff, and measure the full daily route within the Vercel
-function budget.
+The pipeline rebuilds the projection before walk-forward evaluation and model
+fitting, preserves the exact instant observation cutoff, and binds the full
+dataset, selection result, full raw source, and projected raw source into the
+immutable forecast artifact. The frozen current-public-heuristic comparator is
+deliberately separate: it retains the entire already-bounded legacy source so
+the benchmark measures the existing site behavior. Its distinct source
+fingerprint prevents that wider comparison input from being mistaken for the
+private model cohort.
 
 The 768-observation cap is a downstream model-work cap only. It does not replace
 the pipeline's existing upstream limits: 512 releases, 2,048 raw events and

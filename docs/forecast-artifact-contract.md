@@ -6,12 +6,16 @@ not connect Vercel Blob, a cron job, an API, Sanity, or the public UI.
 ## Immutable artifact
 
 `forecast-artifact/v1` has one fixed mode: `private-shadow`. Its provenance
-binds the source cutoff and evidence, historical dataset, walk-forward
+binds the source cutoff and evidence, the projected historical dataset used by
+private model work, the full historical dataset and raw source that produced
+the authoritative runtime cohort, the projected raw source, walk-forward
 evaluation, public-release model and calibration, next-event model and
 calibration, the frozen current public heuristic, and the artifact-builder
 code. Component versions must be exact v1 versions. Fingerprints are SHA-256
 digests. The current-heuristic provenance binds both its exact bounded legacy
-source snapshot and its frozen algorithm fingerprint.
+source snapshot and its frozen algorithm fingerprint; it is intentionally
+separate from the projected private-model cohort so it continues to represent
+the existing site heuristic.
 
 Targets use the `public-release` or `next-eligible-prerelease-event` tag. An
 available target identifies the exact upstream point estimator and has a finite

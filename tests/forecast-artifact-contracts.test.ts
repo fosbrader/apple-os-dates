@@ -32,6 +32,10 @@ import {
   type ImmutablePutResult,
 } from "../src/lib/forecast-artifact-contracts";
 import { NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT } from "../src/lib/next-eligible-prerelease-event";
+import {
+  FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
+  FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
+} from "../src/lib/forecast-runtime-cohort";
 
 const encoder = new TextEncoder();
 function sha(char: string): string { return char.repeat(64); }
@@ -58,6 +62,20 @@ function draft(generatedAt = "2026-08-09T20:00:00.000Z"): ForecastArtifactDraftV
     sourceIssuedAt: "2026-08-09T19:55:00.000Z",
     sourceEvidenceIds: ["evidence-a", "evidence-b"],
     historicalDataset: { version: "historical-analysis-dataset/v1" as const, fingerprint: sha("1") },
+    runtimeCohort: {
+      selectionVersion: "forecast-runtime-cohort-selection/v1" as const,
+      selectionFingerprint: sha("9"),
+      selectionCodeFingerprint: FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
+      selectionConfigFingerprint: FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
+      fullHistoricalDataset: {
+        version: "historical-analysis-dataset/v1" as const,
+        fingerprint: sha("a"),
+      },
+      fullRawSourceFingerprint: sha("b"),
+      projectedRawSourceFingerprint: sha("c"),
+      selectedReleaseCount: 9,
+      selectedObservationCount: 24,
+    },
     evaluation: { version: "walk-forward-evaluation/v1" as const, fingerprint: sha("2") },
     publicReleaseModel: { version: "release-date-candidates/v1" as const, fingerprint: sha("3") },
     publicReleaseCalibration: { version: "release-date-interval-calibration/v1" as const, fingerprint: sha("4") },
@@ -233,6 +251,16 @@ test("FR-012 binds evidence, models, calibration, intervals, metrics, rows, size
   assert.ok(validateForecastArtifact(tampered({ ...publicTarget, calibrationFingerprint: sha("9") })).length > 0);
   assert.ok(validateForecastArtifact(tampered({ ...publicTarget, sourceEvidenceIds: ["not-in-provenance"] })).length > 0);
   assert.ok(validateForecastArtifact({ ...artifact, provenance: { ...artifact.provenance, publicReleaseModel: { ...artifact.provenance.publicReleaseModel, version: "release-date-candidates/v2" } } }).length > 0);
+  assert.ok(validateForecastArtifact({
+    ...artifact,
+    provenance: {
+      ...artifact.provenance,
+      runtimeCohort: {
+        ...artifact.provenance.runtimeCohort,
+        selectedObservationCount: 769,
+      },
+    },
+  }).some((issue) => issue.path === "provenance.runtimeCohort"));
   if (publicTarget.availability === "available") {
     const hierarchical = draft();
     const hierarchicalTarget = hierarchical.targets.find((target) => target.targetKind === "public-release" && target.availability === "available")!;

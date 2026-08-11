@@ -23,6 +23,10 @@ import {
 } from "../src/lib/forecast-artifact-contracts";
 import { NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT } from "../src/lib/next-eligible-prerelease-event";
 import {
+  FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
+  FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
+} from "../src/lib/forecast-runtime-cohort";
+import {
   buildHistoricalAnalysisDataset,
   historicalAnalysisFingerprint,
   stableSerializeHistoricalAnalysis,
@@ -389,6 +393,20 @@ function forecastDraft(dataset: HistoricalAnalysisDatasetV1, suffixes: string | 
       sourceIssuedAt: `${scheduledFor}T19:55:00.000Z`,
       sourceEvidenceIds,
       historicalDataset: { version: "historical-analysis-dataset/v1", fingerprint: dataset.fingerprints.datasetFingerprint },
+      runtimeCohort: {
+        selectionVersion: "forecast-runtime-cohort-selection/v1",
+        selectionFingerprint: sha("9"),
+        selectionCodeFingerprint: FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
+        selectionConfigFingerprint: FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
+        fullHistoricalDataset: {
+          version: "historical-analysis-dataset/v1",
+          fingerprint: dataset.fingerprints.datasetFingerprint,
+        },
+        fullRawSourceFingerprint: sha("a"),
+        projectedRawSourceFingerprint: sha("b"),
+        selectedReleaseCount: selected.length,
+        selectedObservationCount: 24,
+      },
       evaluation: { version: "walk-forward-evaluation/v1", fingerprint: sha("2") },
       publicReleaseModel: { version: "release-date-candidates/v1", fingerprint: sha("3") },
       publicReleaseCalibration: { version: "release-date-interval-calibration/v1", fingerprint: sha("4") },

@@ -30,6 +30,12 @@ import {
   FORECAST_SHADOW_MAX_SOURCE_STRING_BYTES,
   type PublishedForecastShadowSource,
 } from "../src/lib/historical-release-source";
+import {
+  buildForecastRuntimeCohortSelection,
+  buildHistoricalAnalysisDatasetFromPublishedSource,
+  forecastRuntimeCohortRawSourceFingerprint,
+  projectPublishedHistoricalReleaseSourceForRuntimeCohort,
+} from "../src/lib/forecast-runtime-cohort";
 
 const encoder = new TextEncoder();
 
@@ -37,11 +43,23 @@ function day(index: number): string {
   return new Date(Date.UTC(2024, 0, 1 + index)).toISOString().slice(0, 10);
 }
 
-function source(options: { reverse?: boolean; activeTail?: "public" } = {}): PublishedForecastShadowSource {
+function source(options: {
+  reverse?: boolean;
+  activeTail?: "public";
+  historicalEventsPerRelease?: number;
+} = {}): PublishedForecastShadowSource {
   const historicalIds = Array.from(
     { length: 24 },
     (_, index) => `history-${String(index).padStart(2, "0")}`,
   );
+  const historicalEventOffsets =
+    options.historicalEventsPerRelease === undefined ||
+    options.historicalEventsPerRelease === 2
+      ? [0, 4]
+      : Array.from(
+          { length: options.historicalEventsPerRelease },
+          (_, index) => index * 2,
+        );
   const releases: PublishedForecastShadowSource["releases"][number][] =
     historicalIds.map((id, index) => ({
       id,
@@ -54,28 +72,16 @@ function source(options: { reverse?: boolean; activeTail?: "public" } = {}): Pub
   const events: PublishedForecastShadowSource["events"][number][] =
     historicalIds.flatMap((id, index) => {
       const base = index * 16;
-      return [
-        {
-          id: `${id}-dev-1`,
-          releaseId: id,
-          occurredOn: day(base),
-          firstObservedAt: `${day(base)}T12:00:00.000Z`,
-          channel: "developerBeta",
-          sequence: 1,
-          availability: "available",
-          legacySourceId: `${id}-legacy-dev-1`,
-        },
-        {
-          id: `${id}-dev-2`,
-          releaseId: id,
-          occurredOn: day(base + 4),
-          firstObservedAt: `${day(base + 4)}T12:00:00.000Z`,
-          channel: "developerBeta",
-          sequence: 2,
-          availability: "available",
-          legacySourceId: `${id}-legacy-dev-2`,
-        },
-      ];
+      return historicalEventOffsets.map((offset, eventIndex) => ({
+        id: `${id}-dev-${eventIndex + 1}`,
+        releaseId: id,
+        occurredOn: day(base + offset),
+        firstObservedAt: `${day(base + offset)}T12:00:00.000Z`,
+        channel: "developerBeta" as const,
+        sequence: eventIndex + 1,
+        availability: "available" as const,
+        legacySourceId: `${id}-legacy-dev-${eventIndex + 1}`,
+      }));
     });
   events.push({
     id: "active-dev-1",
@@ -116,28 +122,16 @@ function source(options: { reverse?: boolean; activeTail?: "public" } = {}): Pub
   const compatibilityMilestones: PublishedForecastShadowSource["compatibilityMilestones"][number][] =
     historicalIds.flatMap((id, index) => {
       const base = index * 16;
-      return [
-        {
-          id: `${id}-legacy-dev-1`,
-          releaseId: id,
-          occurredOn: day(base),
-          displayLabel: "Beta 1",
-          firstObservedAt: `${day(base)}T12:00:00.000Z`,
-          channel: "developerBeta" as const,
-          sequence: 1,
-          availability: "available" as const,
-        },
-        {
-          id: `${id}-legacy-dev-2`,
-          releaseId: id,
-          occurredOn: day(base + 4),
-          displayLabel: "Beta 2",
-          firstObservedAt: `${day(base + 4)}T12:00:00.000Z`,
-          channel: "developerBeta" as const,
-          sequence: 2,
-          availability: "available" as const,
-        },
-      ];
+      return historicalEventOffsets.map((offset, eventIndex) => ({
+        id: `${id}-legacy-dev-${eventIndex + 1}`,
+        releaseId: id,
+        occurredOn: day(base + offset),
+        displayLabel: `Beta ${eventIndex + 1}`,
+        firstObservedAt: `${day(base + offset)}T12:00:00.000Z`,
+        channel: "developerBeta" as const,
+        sequence: eventIndex + 1,
+        availability: "available" as const,
+      }));
     });
   compatibilityMilestones.push({
     id: "active-legacy-dev-1",
@@ -167,10 +161,12 @@ function source(options: { reverse?: boolean; activeTail?: "public" } = {}): Pub
   const legacyForecastMilestones: PublishedForecastShadowSource["legacyForecastMilestones"] = [
     ...historicalIds.flatMap((id, index) => {
       const base = index * 16;
-      return [
-        { id: `${id}-legacy-dev-1`, releaseId: id, label: "Beta 1", occurredOn: day(base) },
-        { id: `${id}-legacy-dev-2`, releaseId: id, label: "Beta 2", occurredOn: day(base + 4) },
-      ];
+      return historicalEventOffsets.map((offset, eventIndex) => ({
+        id: `${id}-legacy-dev-${eventIndex + 1}`,
+        releaseId: id,
+        label: `Beta ${eventIndex + 1}`,
+        occurredOn: day(base + offset),
+      }));
     }),
     { id: "active-legacy-dev-1", releaseId: "active", label: "Beta 1", occurredOn: day(24 * 16) },
   ];
@@ -281,8 +277,14 @@ function storePointer(
 }
 
 test("FR-014 builds deterministic exact-estimator public and next-event targets", () => {
-  const first = buildForecastShadowArtifact(request, source());
-  const reversed = buildForecastShadowArtifact(request, source({ reverse: true }));
+  const first = buildForecastShadowArtifact(
+    request,
+    source({ historicalEventsPerRelease: 4 }),
+  );
+  const reversed = buildForecastShadowArtifact(
+    request,
+    source({ reverse: true, historicalEventsPerRelease: 4 }),
+  );
 
   assert.deepEqual(first, reversed);
   assert.equal(first.targets.length, 2);
@@ -350,6 +352,54 @@ test("FR-014 builds deterministic exact-estimator public and next-event targets"
       ),
     ),
   );
+});
+
+test("FR-014 fits private models only on the verified whole-cycle runtime projection", () => {
+  const raw = source();
+  const cutoff = {
+    asOfDate: request.scheduledFor,
+    issuedAt: request.requestedAt,
+  };
+  const fullDataset = buildHistoricalAnalysisDatasetFromPublishedSource(
+    raw,
+    cutoff,
+  );
+  const selection = buildForecastRuntimeCohortSelection(fullDataset, raw);
+  const projected = projectPublishedHistoricalReleaseSourceForRuntimeCohort(
+    raw,
+    selection,
+  );
+  const projectedDataset = buildHistoricalAnalysisDatasetFromPublishedSource(
+    projected,
+    cutoff,
+  );
+  const artifact = buildForecastShadowArtifact(request, raw);
+
+  assert.equal(selection.selectedReleaseIds.length, 13);
+  assert.ok(!selection.selectedReleaseIds.includes("history-00"));
+  assert.equal(
+    artifact.provenance.historicalDataset.fingerprint,
+    projectedDataset.fingerprints.datasetFingerprint,
+  );
+  assert.notEqual(
+    artifact.provenance.historicalDataset.fingerprint,
+    fullDataset.fingerprints.datasetFingerprint,
+  );
+  assert.deepEqual(artifact.provenance.runtimeCohort, {
+    selectionVersion: selection.selectionVersion,
+    selectionFingerprint: selection.fingerprints.resultFingerprint,
+    selectionCodeFingerprint: selection.fingerprints.codeFingerprint,
+    selectionConfigFingerprint: selection.fingerprints.configFingerprint,
+    fullHistoricalDataset: {
+      version: fullDataset.datasetVersion,
+      fingerprint: fullDataset.fingerprints.datasetFingerprint,
+    },
+    fullRawSourceFingerprint: selection.sourceDataset.rawSourceFingerprint,
+    projectedRawSourceFingerprint:
+      forecastRuntimeCohortRawSourceFingerprint(projected),
+    selectedReleaseCount: selection.selectedReleaseIds.length,
+    selectedObservationCount: selection.selectedObservationCount,
+  });
 });
 
 test("FR-012 snapshots an available current public heuristic only after exact anchor proof", () => {
@@ -542,7 +592,7 @@ test("FR-014 enforces its operational artifact budget below the hard contract ca
     sourceEvidenceIds: Array.from(
       { length: FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_IDS },
       (_, evidenceIndex) =>
-        `evidence-${String(index).padStart(3, "0")}-${String(evidenceIndex).padStart(3, "0")}-${"x".repeat(72)}`,
+        `evidence-${String(index).padStart(3, "0")}-${String(evidenceIndex).padStart(3, "0")}-${"x".repeat(FORECAST_SHADOW_MAX_SOURCE_EVIDENCE_ID_BYTES - 32)}`,
     ),
   }));
   assert.throws(

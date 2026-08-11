@@ -33,7 +33,6 @@ import {
   type FrozenCurrentPublicHeuristicSnapshotV1,
 } from "./forecast-origin-benchmarks";
 import {
-  buildHistoricalAnalysisDataset,
   historicalAnalysisFingerprint,
   type HistoricalAnalysisDatasetV1,
   type HistoricalCanonicalEventRow,
@@ -62,7 +61,6 @@ import {
   type ReleaseDateCalibratedIntervalV1,
   type ReleaseDateIntervalCalibrationV1,
 } from "./release-date-interval-calibration";
-import { adaptReleaseObservations } from "./release-observation-adapter";
 import {
   FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES,
   FORECAST_SHADOW_MAX_SOURCE_COMPATIBILITY_MILESTONES,
@@ -79,6 +77,13 @@ import {
   validatePublishedForecastShadowSource,
   type PublishedForecastShadowSource,
 } from "./historical-release-source";
+import {
+  buildForecastRuntimeCohortSelection,
+  buildHistoricalAnalysisDatasetFromPublishedSource,
+  forecastRuntimeCohortRawSourceFingerprint,
+  projectPublishedHistoricalReleaseSourceForRuntimeCohort,
+  type ForecastRuntimeCohortSelectionV1,
+} from "./forecast-runtime-cohort";
 import { buildWalkForwardEvaluation } from "./walk-forward-evaluation";
 
 export {
@@ -103,7 +108,7 @@ export const FORECAST_SHADOW_MAX_POINTER_TRANSITIONS = 12;
 const pipelineCodeManifest = {
   version: FORECAST_SHADOW_PIPELINE_VERSION,
   algorithm:
-    "published-snapshot;exact-request-instant-cutoff;bounded-runtime-source;explicit-sidecar;latest-complete-active-anchor;public-and-next-event-models;immutable-origin-benchmarks;exact-cohort-members;exact-estimator;immutable-first;full-pointer-preflight;generation-and-fingerprint-cas;prior-active-preserved",
+    "published-snapshot;exact-request-instant-cutoff;bounded-runtime-source;exact-full-source-rebuild;whole-cycle-runtime-cohort-projection-before-model-work;explicit-sidecar;latest-complete-active-anchor;public-and-next-event-models;immutable-origin-benchmarks;exact-cohort-members;exact-estimator;immutable-first;full-pointer-preflight;generation-and-fingerprint-cas;prior-active-preserved",
   operationalArtifactMaxBytes: FORECAST_SHADOW_OPERATIONAL_MAX_BYTES,
   sourceContract: {
     canonicalMaxBytes: FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES,
@@ -921,23 +926,95 @@ function buildTargetsAndExclusions(
   return { targets, exclusions };
 }
 
+interface ForecastShadowRuntimeCohortContext {
+  /** Full normalized source used to establish the selection and frozen comparator. */
+  source: PublishedForecastShadowSource;
+  fullDataset: HistoricalAnalysisDatasetV1;
+  selection: ForecastRuntimeCohortSelectionV1;
+  /**
+   * The exact whole-cycle projection used for all private-model and simple
+   * baseline work. It has already been rebuilt and matched to `selection`.
+   */
+  projectedSource: PublishedForecastShadowSource;
+  dataset: HistoricalAnalysisDatasetV1;
+}
+
+/**
+ * Build the bounded model context from one validated source snapshot. The
+ * selector first proves the complete source reproduces `fullDataset`; the
+ * projector then proves the smaller source is exactly the selected analytical
+ * subset. Legacy rows are filtered by the same selected release IDs and pass
+ * the shadow-source validator again, so any projected-source consumer has the
+ * same whole-cycle boundary as model work. The separate frozen current-site
+ * comparator deliberately retains the full bounded source below: it measures
+ * the actual legacy heuristic, and its distinct fingerprint makes that wider
+ * comparison input explicit in the artifact.
+ */
+function buildForecastShadowRuntimeCohortContext(
+  request: ForecastShadowPipelineRequest,
+  rawSource: PublishedForecastShadowSource,
+): ForecastShadowRuntimeCohortContext {
+  const source = assertSource(rawSource, request.requestedAt);
+  const cutoff = {
+    asOfDate: request.scheduledFor,
+    issuedAt: request.requestedAt,
+  } as const;
+  try {
+    const fullDataset = buildHistoricalAnalysisDatasetFromPublishedSource(
+      source,
+      cutoff,
+    );
+    const selection = buildForecastRuntimeCohortSelection(fullDataset, source);
+    const projectedHistorical =
+      projectPublishedHistoricalReleaseSourceForRuntimeCohort(source, selection);
+    const selectedReleaseIds = new Set(selection.selectedReleaseIds);
+    const projectedSource = assertSource(
+      {
+        ...projectedHistorical,
+        compatibilityMilestones: source.compatibilityMilestones.filter(
+          (milestone) => selectedReleaseIds.has(milestone.releaseId),
+        ),
+        legacyForecastReleases: source.legacyForecastReleases.filter(
+          (release) => selectedReleaseIds.has(release.id),
+        ),
+        legacyForecastMilestones: source.legacyForecastMilestones.filter(
+          (milestone) => selectedReleaseIds.has(milestone.releaseId),
+        ),
+      },
+      request.requestedAt,
+    );
+    const dataset = buildHistoricalAnalysisDatasetFromPublishedSource(
+      projectedSource,
+      cutoff,
+    );
+    if (dataset.releaseCycles.length !== selection.selectedReleaseIds.length) {
+      throw new ForecastShadowPipelineError("invalid-source");
+    }
+    return {
+      source,
+      fullDataset,
+      selection,
+      projectedSource,
+      dataset,
+    };
+  } catch (error) {
+    if (error instanceof ForecastShadowPipelineError) throw error;
+    throw new ForecastShadowPipelineError("invalid-source");
+  }
+}
+
 export function buildForecastShadowArtifact(
   request: ForecastShadowPipelineRequest,
   rawSource: PublishedForecastShadowSource,
 ): ForecastArtifactV1 {
   assertRequest(request);
-  const source = assertSource(rawSource, request.requestedAt);
-  const adapterResult = adaptReleaseObservations({
-    asOfDate: request.scheduledFor,
-    issuedAt: request.requestedAt,
-    releases: source.releases,
-    events: source.events,
-    compatibilityMilestones: source.compatibilityMilestones,
-  });
-  const dataset = buildHistoricalAnalysisDataset({
-    adapterResult,
-    releaseMetadata: source.releaseMetadata,
-  });
+  const {
+    source,
+    fullDataset,
+    selection,
+    projectedSource,
+    dataset,
+  } = buildForecastShadowRuntimeCohortContext(request, rawSource);
   const evaluation = buildWalkForwardEvaluation(dataset);
   const candidates = buildReleaseDateCandidates(dataset);
   const calibration = buildReleaseDateIntervalCalibration(candidates);
@@ -946,7 +1023,7 @@ export function buildForecastShadowArtifact(
   try {
     currentSnapshot = buildFrozenCurrentPublicHeuristicSnapshot({
       source,
-      dataset,
+      dataset: fullDataset,
       requestedAt: request.requestedAt,
       scheduledFor: request.scheduledFor,
     });
@@ -976,6 +1053,21 @@ export function buildForecastShadowArtifact(
         historicalDataset: {
           version: dataset.datasetVersion,
           fingerprint: dataset.fingerprints.datasetFingerprint,
+        },
+        runtimeCohort: {
+          selectionVersion: selection.selectionVersion,
+          selectionFingerprint: selection.fingerprints.resultFingerprint,
+          selectionCodeFingerprint: selection.fingerprints.codeFingerprint,
+          selectionConfigFingerprint: selection.fingerprints.configFingerprint,
+          fullHistoricalDataset: {
+            version: fullDataset.datasetVersion,
+            fingerprint: fullDataset.fingerprints.datasetFingerprint,
+          },
+          fullRawSourceFingerprint: selection.sourceDataset.rawSourceFingerprint,
+          projectedRawSourceFingerprint:
+            forecastRuntimeCohortRawSourceFingerprint(projectedSource),
+          selectedReleaseCount: selection.selectedReleaseIds.length,
+          selectedObservationCount: selection.selectedObservationCount,
         },
         evaluation: {
           version: evaluation.evaluationVersion,

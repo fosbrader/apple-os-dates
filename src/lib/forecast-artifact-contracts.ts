@@ -17,6 +17,13 @@ import {
   type EligiblePrereleaseStage,
 } from "./next-eligible-prerelease-event";
 import {
+  FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT,
+  FORECAST_RUNTIME_COHORT_CONFIG,
+  FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT,
+  FORECAST_RUNTIME_COHORT_SELECTION_VERSION,
+} from "./forecast-runtime-cohort";
+import { FORECAST_SHADOW_MAX_SOURCE_RELEASES } from "./historical-release-source";
+import {
   RELEASE_DATE_CANDIDATES,
   RELEASE_DATE_CANDIDATES_VERSION,
   type ReleaseDateCandidateId,
@@ -83,6 +90,26 @@ export interface ForecastArtifactProvenanceV1 {
   sourceIssuedAt: string;
   sourceEvidenceIds: readonly string[];
   historicalDataset: { version: typeof HISTORICAL_ANALYSIS_DATASET_VERSION; fingerprint: string };
+  /**
+   * Binds the full, validated source and the authoritative whole-cycle
+   * selection that produced the smaller model dataset above. The selected
+   * dataset remains the direct model/benchmark source; the full fingerprints
+   * make the capacity decision independently auditable.
+   */
+  runtimeCohort: {
+    selectionVersion: typeof FORECAST_RUNTIME_COHORT_SELECTION_VERSION;
+    selectionFingerprint: string;
+    selectionCodeFingerprint: typeof FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT;
+    selectionConfigFingerprint: typeof FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT;
+    fullHistoricalDataset: {
+      version: typeof HISTORICAL_ANALYSIS_DATASET_VERSION;
+      fingerprint: string;
+    };
+    fullRawSourceFingerprint: string;
+    projectedRawSourceFingerprint: string;
+    selectedReleaseCount: number;
+    selectedObservationCount: number;
+  };
   evaluation: { version: typeof WALK_FORWARD_EVALUATION_VERSION; fingerprint: string };
   publicReleaseModel: { version: typeof RELEASE_DATE_CANDIDATES_VERSION; fingerprint: string };
   publicReleaseCalibration: { version: typeof RELEASE_DATE_INTERVAL_CALIBRATION_VERSION; fingerprint: string };
@@ -379,10 +406,34 @@ function componentIssues(value: unknown, path: string, version: string): Forecas
 function provenanceIssues(value: unknown): ForecastContractValidationIssue[] {
   if (!isRecord(value)) return [{ code: "invalid-provenance", path: "provenance", message: "Provenance is required." }];
   const issues: ForecastContractValidationIssue[] = [];
-  exactKeys(value, ["sourceAsOfDate", "sourceIssuedAt", "sourceEvidenceIds", "historicalDataset", "evaluation", "publicReleaseModel", "publicReleaseCalibration", "nextEventModel", "nextEventCalibration", "currentPublicHeuristic", "codeFingerprint"], "provenance", issues);
+  exactKeys(value, ["sourceAsOfDate", "sourceIssuedAt", "sourceEvidenceIds", "historicalDataset", "runtimeCohort", "evaluation", "publicReleaseModel", "publicReleaseCalibration", "nextEventModel", "nextEventCalibration", "currentPublicHeuristic", "codeFingerprint"], "provenance", issues);
   if (!isDay(value.sourceAsOfDate) || !isInstant(value.sourceIssuedAt)) issues.push({ code: "invalid-provenance", path: "provenance", message: "A valid source cutoff and canonical issuance timestamp are required." });
   issues.push(...evidenceIssues(value.sourceEvidenceIds, "provenance.sourceEvidenceIds"));
   issues.push(...componentIssues(value.historicalDataset, "provenance.historicalDataset", HISTORICAL_ANALYSIS_DATASET_VERSION));
+  if (!isRecord(value.runtimeCohort)) {
+    issues.push({ code: "invalid-provenance", path: "provenance.runtimeCohort", message: "A source-bound runtime cohort selection is required." });
+  } else {
+    exactKeys(value.runtimeCohort, ["selectionVersion", "selectionFingerprint", "selectionCodeFingerprint", "selectionConfigFingerprint", "fullHistoricalDataset", "fullRawSourceFingerprint", "projectedRawSourceFingerprint", "selectedReleaseCount", "selectedObservationCount"], "provenance.runtimeCohort", issues);
+    if (
+      value.runtimeCohort.selectionVersion !== FORECAST_RUNTIME_COHORT_SELECTION_VERSION ||
+      !isSha(value.runtimeCohort.selectionFingerprint) ||
+      value.runtimeCohort.selectionCodeFingerprint !==
+        FORECAST_RUNTIME_COHORT_CODE_FINGERPRINT ||
+      value.runtimeCohort.selectionConfigFingerprint !==
+        FORECAST_RUNTIME_COHORT_CONFIG_FINGERPRINT ||
+      !isSha(value.runtimeCohort.fullRawSourceFingerprint) ||
+      !isSha(value.runtimeCohort.projectedRawSourceFingerprint) ||
+      !isCount(value.runtimeCohort.selectedReleaseCount) ||
+      !isCount(value.runtimeCohort.selectedObservationCount) ||
+      value.runtimeCohort.selectedReleaseCount >
+        FORECAST_SHADOW_MAX_SOURCE_RELEASES ||
+      value.runtimeCohort.selectedObservationCount >
+        FORECAST_RUNTIME_COHORT_CONFIG.maxSelectedObservations
+    ) {
+      issues.push({ code: "invalid-provenance", path: "provenance.runtimeCohort", message: "Runtime selection provenance must bind the exact v1 selector, full/projected source fingerprints, and bounded counts." });
+    }
+    issues.push(...componentIssues(value.runtimeCohort.fullHistoricalDataset, "provenance.runtimeCohort.fullHistoricalDataset", HISTORICAL_ANALYSIS_DATASET_VERSION));
+  }
   issues.push(...componentIssues(value.evaluation, "provenance.evaluation", WALK_FORWARD_EVALUATION_VERSION));
   issues.push(...componentIssues(value.publicReleaseModel, "provenance.publicReleaseModel", RELEASE_DATE_CANDIDATES_VERSION));
   issues.push(...componentIssues(value.publicReleaseCalibration, "provenance.publicReleaseCalibration", RELEASE_DATE_INTERVAL_CALIBRATION_VERSION));
@@ -801,7 +852,7 @@ export type ReconciliationRootValidator = (bytes: Uint8Array, expectedArtifactId
 export type ForecastCommitResult = { committed: true; pointer: ForecastPointerV1 } | { committed: false; reason: "invalid" | "immutable-collision" | "missing-artifact" | "incompatible-artifact" | "non-atomic-adapter" | "stale-cas" | "storage-failure" };
 
 function compatibleArtifact(left: ForecastArtifactV1, right: ForecastArtifactV1): boolean {
-  return left.artifactVersion === right.artifactVersion && left.mode === right.mode && left.provenance.historicalDataset.version === right.provenance.historicalDataset.version && left.provenance.evaluation.version === right.provenance.evaluation.version && left.provenance.publicReleaseModel.version === right.provenance.publicReleaseModel.version && left.provenance.publicReleaseCalibration.version === right.provenance.publicReleaseCalibration.version && left.provenance.nextEventModel.version === right.provenance.nextEventModel.version && left.provenance.nextEventCalibration.version === right.provenance.nextEventCalibration.version && left.provenance.currentPublicHeuristic.version === right.provenance.currentPublicHeuristic.version;
+  return left.artifactVersion === right.artifactVersion && left.mode === right.mode && left.provenance.historicalDataset.version === right.provenance.historicalDataset.version && left.provenance.runtimeCohort.selectionVersion === right.provenance.runtimeCohort.selectionVersion && left.provenance.evaluation.version === right.provenance.evaluation.version && left.provenance.publicReleaseModel.version === right.provenance.publicReleaseModel.version && left.provenance.publicReleaseCalibration.version === right.provenance.publicReleaseCalibration.version && left.provenance.nextEventModel.version === right.provenance.nextEventModel.version && left.provenance.nextEventCalibration.version === right.provenance.nextEventCalibration.version && left.provenance.currentPublicHeuristic.version === right.provenance.currentPublicHeuristic.version;
 }
 
 async function loadArtifact(storage: ForecastContractStorage, artifactId: string): Promise<ForecastArtifactV1 | null> { const bytes = await storage.readExact(forecastArtifactPath(artifactId)); if (!bytes) return null; try { const artifact = parseForecastArtifact(bytes); return artifact.artifactId === artifactId ? artifact : null; } catch { return null; } }

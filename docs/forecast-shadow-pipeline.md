@@ -25,16 +25,19 @@ first observed later on the same day cannot enter an earlier run.
 The pipeline supplies the scheduled UTC day and request instant explicitly to
 the pure observation adapter. It then builds and validates, in order:
 
-1. the source-backed historical-analysis dataset;
-2. leakage-safe walk-forward evaluation;
-3. public-release candidate comparison;
-4. calibrated 50% and 80% public-release intervals;
-5. the calibrated next-eligible-prerelease-event model; and
-6. a frozen current-public-heuristic snapshot from the bounded compatibility
+1. the complete source-backed historical-analysis dataset;
+2. the exact whole-cycle runtime cohort and its independently verified source
    projection;
-7. exact origin-time selected, current-heuristic, and simple-baseline
+3. the projected source-backed dataset used by private model work;
+4. leakage-safe walk-forward evaluation;
+5. public-release candidate comparison;
+6. calibrated 50% and 80% public-release intervals;
+7. the calibrated next-eligible-prerelease-event model; and
+8. a frozen current-public-heuristic snapshot from the complete bounded
+   compatibility projection;
+9. exact origin-time selected, current-heuristic, and simple-baseline
    benchmark rows; and
-8. one canonical `forecast-artifact/v1` document.
+10. one canonical `forecast-artifact/v1` document.
 
 Only included, active cycles with explicit complete chronology can produce a
 target. The latest known canonical event is always used. A later GM or public
@@ -44,8 +47,13 @@ exact selected candidate (`platform-stage-median` or
 `next-event-timing-median`. Unavailable targets and excluded cycles retain typed
 reasons; the pipeline does not invent missing dates or chronology.
 
-The artifact binds the exact source, dataset, evaluation, model, calibration,
-frozen-current-heuristic, and pipeline fingerprints. Each target also retains
+The artifact binds the exact full source/dataset, authoritative runtime
+selection, projected model source/dataset, evaluation, model, calibration,
+frozen-current-heuristic, and pipeline fingerprints. Private and simple
+benchmark model work uses only the projection. The current-public-heuristic
+benchmark deliberately uses the full already-bounded legacy projection so it
+continues to represent the existing site behavior; it has its own distinct
+source fingerprint. Each target also retains
 its exact product family, model-training components, calibration-residual IDs,
 and three origin-time benchmark rows. The selected row is cross-bound to the
 target prediction and fingerprints. The current heuristic is comparable only
