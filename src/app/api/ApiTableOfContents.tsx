@@ -13,6 +13,7 @@ const sections = [
     id: dataset,
     label: dataset[0].toUpperCase() + dataset.slice(1),
   })),
+  { id: "historical-analysis", label: "Historical analysis" },
   { id: "search", label: "Search" },
   { id: "errors", label: "Errors" },
   { id: "rules", label: "Rules and rights" },
@@ -30,7 +31,10 @@ export function ApiTableOfContents() {
       (entries) => {
         const current = entries
           .filter((entry) => entry.isIntersecting)
-          .sort((left, right) => left.boundingClientRect.top - right.boundingClientRect.top)
+          .sort(
+            (left, right) =>
+              left.boundingClientRect.top - right.boundingClientRect.top,
+          )
           .at(0);
         if (current?.target.id) setActiveId(current.target.id);
       },

@@ -1,15 +1,10 @@
 import { getAnalyticsData, getAllPlatforms } from "@/lib/sanity.fetch";
 import { AnalyticsDashboard } from "@/components/analytics/AnalyticsDashboard";
+import { HistoricalAnalysisReport } from "@/components/analytics/HistoricalAnalysisReport";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
-import {
-  absoluteUrl,
-  createPageMetadata,
-  latestDate,
-} from "@/lib/site";
-import {
-  appleReleaseDatasetId,
-  factualDataset,
-} from "@/lib/structured-data";
+import { getPublicHistoricalAnalysisReport } from "@/lib/public-historical-analysis";
+import { absoluteUrl, createPageMetadata, latestDate } from "@/lib/site";
+import { appleReleaseDatasetId, factualDataset } from "@/lib/structured-data";
 import { buildAnalyticsViewModel } from "@/lib/view-models/analytics";
 
 const analyticsDescription =
@@ -22,9 +17,10 @@ export const metadata = createPageMetadata({
 });
 
 export default async function AnalyticsPage() {
-  const [data, platforms] = await Promise.all([
+  const [data, platforms, historicalAnalysis] = await Promise.all([
     getAnalyticsData(),
     getAllPlatforms(),
+    getPublicHistoricalAnalysisReport().catch(() => null),
   ]);
   const canonical = absoluteUrl("/analytics/");
   const analytics = buildAnalyticsViewModel(data, platforms);
@@ -93,6 +89,7 @@ export default async function AnalyticsPage() {
             platforms={analytics.platforms}
           />
         </div>
+        <HistoricalAnalysisReport report={historicalAnalysis} />
       </div>
     </>
   );

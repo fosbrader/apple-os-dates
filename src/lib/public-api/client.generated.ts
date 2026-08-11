@@ -179,6 +179,26 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/historical-analysis/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * Get historical timing analysis
+         * @description Get bounded walk-forward results from the validated historical dataset. The response includes cohort size, exclusions, uncertainty, methodology, and provenance. It does not include active or shadow forecast candidates.
+         */
+        get: operations["getHistoricalAnalysis"];
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/occurrences/": {
         parameters: {
             query?: never;
@@ -633,6 +653,104 @@ export interface components {
             /** @description Relative canonical API paths related to this response. */
             links: {
                 [key: string]: string;
+            };
+        };
+        HistoricalAnalysisMetric: {
+            /** @enum {string} */
+            baseline: "platform-stage-median" | "seasonal-median";
+            /** @enum {string} */
+            group: "overall" | "family" | "stage" | "horizon";
+            inclusive_coverage_50: number | null;
+            inclusive_coverage_80: number | null;
+            /** @description Stable identifier for the metric group. */
+            key: string;
+            mae_days: number | null;
+            median_absolute_error_days: number | null;
+            /** @description True when the row meets the fixed sample threshold. */
+            reportable: boolean;
+            /** @description Scored walk-forward predictions in this row. */
+            score_count: number;
+            signed_bias_days: number | null;
+            /** @enum {string|null} */
+            unavailable_reason: "minimum-score-count" | null;
+        };
+        HistoricalAnalysisReport: {
+            breakdowns: components["schemas"]["HistoricalAnalysisMetric"][];
+            cohort: {
+                complete_chronology_cycle_count: number;
+                eligible_interval_count: number;
+                excluded_interval_count: number;
+                included_release_cycle_count: number;
+                release_cycle_count: number;
+                scored_prediction_count: number;
+                superseded_release_cycle_count: number;
+                unknown_chronology_cycle_count: number;
+            };
+            exclusions: {
+                interval_count: number;
+                /** @enum {string} */
+                reason: "invalid-or-unavailable-interval" | "missing-anchor" | "missing-endpoint" | "endpoint-not-after-origin" | "unknown-horizon";
+            }[];
+            methodology: {
+                baselines: {
+                    cohort_order: string[];
+                    /** @constant */
+                    estimator: "median";
+                    /** @enum {string} */
+                    id: "platform-stage-median" | "seasonal-median";
+                }[];
+                /** @constant */
+                design: "walk-forward";
+                /** @constant */
+                target_unit: "source-backed-stage-interval";
+                /** @constant */
+                training_cutoff: "known-at-origin";
+            };
+            overall_results: components["schemas"]["HistoricalAnalysisMetric"][];
+            provenance: {
+                historical_dataset_fingerprint: string;
+                historical_dataset_version: string;
+                report_code_fingerprint: string;
+                /** Format: date */
+                source_as_of_date: string;
+                /** Format: date-time */
+                source_issued_at: string;
+                walk_forward_evaluation_fingerprint: string;
+                /** @constant */
+                walk_forward_evaluation_version: "walk-forward-evaluation/v1";
+            };
+            report_fingerprint: string;
+            /** @constant */
+            report_version: "historical-analysis-report/v1";
+            /** @constant */
+            status: "available";
+            uncertainty: {
+                empirical_intervals_included: boolean;
+                /** @constant */
+                minimum_reportable_scores: 8;
+                /** @constant */
+                minimum_training_outcomes: 8;
+            };
+        };
+        HistoricalAnalysisResponse: {
+            /**
+             * @description Major API contract version.
+             * @constant
+             */
+            api_version: "v1";
+            data: components["schemas"]["HistoricalAnalysisReport"];
+            /**
+             * Format: date-time
+             * @description UTC time when this response snapshot was created. It is not the last update time for every record.
+             */
+            generated_at: string;
+            links: {
+                /** @description Public page that summarizes this report. */
+                analytics: string;
+                /** @description Canonical path for the OpenAPI document. */
+                openapi: string;
+                /** @description Canonical path for this report. */
+                self: string;
             };
         };
         occurrences: {
@@ -1249,6 +1367,29 @@ export interface operations {
             };
             400: components["responses"]["BadRequest"];
             404: components["responses"]["NotFound"];
+            429: components["responses"]["RateLimited"];
+            503: components["responses"]["Unavailable"];
+        };
+    };
+    getHistoricalAnalysis: {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        requestBody?: never;
+        responses: {
+            /** @description The validated historical-analysis report. */
+            200: {
+                headers: {
+                    [name: string]: unknown;
+                };
+                content: {
+                    "application/json": components["schemas"]["HistoricalAnalysisResponse"];
+                };
+            };
+            400: components["responses"]["BadRequest"];
             429: components["responses"]["RateLimited"];
             503: components["responses"]["Unavailable"];
         };
