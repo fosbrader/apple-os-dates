@@ -88,6 +88,18 @@ replacement evidence all fail closed with a ledger exclusion. Invalid global
 `asOfDate` or `issuedAt` values throw `ReleaseObservationInputError` before any
 result is produced, preserving the result type's validated-dataset guarantee.
 
+Release lifecycle observations follow the same knowledge-time boundary.
+`releaseVersion.statusFirstObservedAt` is projected when present; otherwise
+the adapter's `issuedAt` fallback cannot prove historical availability before
+the current snapshot. FR-021's
+[`historical-release-metadata.md`](historical-release-metadata.md) workflow
+adds that optional timestamp only through a revision-guarded explicit-evidence
+or conservative immutable-`_createdAt` plan. `_updatedAt` is forbidden because
+later editorial changes would leak future knowledge into older backtests.
+An explicit timestamp must be on or after every cited source publication/access
+day or audit verification day, so newly collected evidence cannot support a
+retroactively earlier knowledge claim.
+
 ## Historical-analysis dataset v1
 
 `src/lib/historical-analysis-dataset.ts` builds the versioned
@@ -330,3 +342,49 @@ in the standalone validator:
 ```sh
 npm run next-prerelease:validate -- path/to/next-eligible-prerelease-event.json
 ```
+
+## Forecast artifact and pointer v1 (FR-012)
+
+`src/lib/forecast-artifact-contracts.ts` defines the private-shadow-only,
+storage-neutral `forecast-artifact/v1` and `forecast-pointer/v1` boundary. It
+binds the historical, evaluation, model, calibration, evidence, cutoff, and
+code provenance required to reproduce or reject a forecast. Available targets
+must contain a finite median and nested calibrated 50%/80% numeric and calendar
+bounds. Unavailable targets cannot contain invented prediction dates.
+
+Artifacts are canonical, bounded, immutable, and content-addressed. The small
+mutable pointer uses generation plus previous-pointer fingerprint CAS and keeps
+candidate, active, rollback, and reconciliation-root identities separate.
+Every v1 pointer remains private (`publicReadEnabled: false`). See
+`docs/forecast-artifact-contract.md` for the example artifact construction,
+transition table, reconciliation reservation, and rollback rules.
+
+## Prospective scoring and private shadow health v1 (FR-015)
+
+`src/lib/forecast-shadow-scoring.ts` scores only immutable, available
+predictions. It derives outcomes from validated historical dataset rows plus an
+exact evidence-keyed observation-time binding. It does not accept arbitrary
+caller-authored outcome records. Public-release and next-eligible-event
+identity remain separate. Same-day ambiguity, missing evidence, supersession,
+retraction, and next-stage mismatches become explicit data gaps rather than
+model errors.
+
+The scorer binds and evaluates the exact upstream selected point. It does not
+silently call the FR-009 hierarchical smoothed-median candidate a raw median.
+Scores and reconciliation snapshots are canonical content-addressed artifacts;
+the reconciliation root advances through the FR-012 atomic pointer transition.
+Same logical-run retries are byte-idempotent. Outcome corrections replace the
+active score and retain an immutable audit row.
+
+The free-plan path reads one self-contained prior root and fetches an old
+forecast only for a new or corrected score transition. A fixed 120-day epoch
+admits one canonical run per scheduled day and stops at predeclared forecast,
+target, audit, or byte limits. Rollover requires operator review.
+
+Private health output separates operations from statistical reportability.
+Forecast-state counts partition exactly. Model metrics give equal weight to
+each unique realized source event and stay unavailable below eight unique
+events. The production schedule must remain disabled until forecast artifacts
+also store immutable origin-time current-heuristic and simple-baseline
+predictions. See `docs/forecast-shadow-scoring.md` for the complete eligibility,
+persistence, rollover, and integration contract.

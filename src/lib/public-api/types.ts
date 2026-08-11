@@ -29,9 +29,7 @@ export function publicApiRootPath(): string {
   return publicApiPath([]);
 }
 
-export function publicApiCollectionPath(
-  dataset: PublicApiDatasetName,
-): string {
+export function publicApiCollectionPath(dataset: PublicApiDatasetName): string {
   return publicApiPath([dataset]);
 }
 
@@ -48,6 +46,10 @@ export function publicApiSearchPath(): string {
 
 export function publicApiOpenApiPath(): string {
   return publicApiPath(["openapi.json"]);
+}
+
+export function publicApiHistoricalAnalysisPath(): string {
+  return publicApiPath(["historical-analysis"]);
 }
 
 /** Return the canonical API pathname while preserving a caller's query. */
@@ -377,7 +379,5 @@ export const PUBLIC_API_SEARCH_FILTERS: readonly PublicApiFilterDefinition[] = [
 export function isPublicApiDatasetName(
   value: string,
 ): value is PublicApiDatasetName {
-  return PUBLIC_API_DATASET_NAMES.includes(
-    value as PublicApiDatasetName,
-  );
+  return PUBLIC_API_DATASET_NAMES.includes(value as PublicApiDatasetName);
 }

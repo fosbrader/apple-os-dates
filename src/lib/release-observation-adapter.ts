@@ -34,7 +34,7 @@ export interface ReleaseObservationVersionInput {
   publicReleaseDate?: string;
   statusEffectiveOn?: string;
   /** First observation of the lifecycle fact, when separately known. */
-  statusFirstObservedAt?: string;
+  statusFirstObservedAt?: string | null;
 }
 
 export interface CompatibilityMilestoneInput {
@@ -51,7 +51,7 @@ export interface CompatibilityMilestoneInput {
   sameDayOrder?: number;
   availability?: ForecastAnalysisAvailability;
   isRevision?: boolean;
-  firstObservedAt?: string;
+  firstObservedAt?: string | null;
   displayLabel?: string;
   note?: string;
 }
@@ -63,7 +63,7 @@ export interface FirstClassReleaseEventInput {
   id: string;
   releaseId: string;
   occurredOn: string;
-  firstObservedAt?: string;
+  firstObservedAt?: string | null;
   channel: ForecastAnalysisChannel;
   sequence?: number;
   sameDayOrder?: number;
@@ -209,7 +209,7 @@ function isIsoDay(value: string | undefined): value is string {
   );
 }
 
-function utcDay(value: string | undefined): string | null {
+function utcDay(value: string | null | undefined): string | null {
   if (
     !value ||
     !ISO_INSTANT.test(value) ||
@@ -221,8 +221,13 @@ function utcDay(value: string | undefined): string | null {
   return Number.isNaN(parsed.getTime()) ? null : parsed.toISOString().slice(0, 10);
 }
 
-function observedDay(value: string | undefined, issuedDay: string): string {
-  return value === undefined ? issuedDay : (utcDay(value) ?? "");
+function observedDay(
+  value: string | null | undefined,
+  issuedDay: string,
+): string {
+  return value === undefined || value === null
+    ? issuedDay
+    : (utcDay(value) ?? "");
 }
 
 function compareText(left: string, right: string): number {
@@ -472,6 +477,7 @@ export function adaptReleaseObservations(
       lifecycle !== "active" &&
       (!isIsoDay(effectiveOn) ||
         (release.statusFirstObservedAt !== undefined &&
+          release.statusFirstObservedAt !== null &&
           !utcDay(release.statusFirstObservedAt)) ||
         (firstObservedOn !== null && firstObservedOn < effectiveOn))
     ) {

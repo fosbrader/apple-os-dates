@@ -2,8 +2,7 @@ name: Quality checks
 
 on:
   pull_request:
-  push:
-    branches: [main]
+    types: [opened, reopened, synchronize, ready_for_review]
   workflow_dispatch:
 
 permissions:
@@ -15,22 +14,23 @@ concurrency:
 
 jobs:
   verify:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.pull_request.draft == false }}
     name: Verify application
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
-      - run: npm run lint
-      - run: npm test
+      - run: npm ci --prefer-offline --no-audit --no-fund
+      - run: npm run api:client:check
+      - run: npx tsc --noEmit
       - run: npm run data:build:check
-      - run: npm run data:validate
       - run: npm run forecast:validate
       - run: npm run evidence:inventory:check
       - run: npm run research:validate
-      - run: npm run api:contract
+      - run: npm run lint
+      - run: npm test
       - run: npm run build

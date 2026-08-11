@@ -197,6 +197,12 @@ terminal sources become deterministic version citations. Rollback entries
 separate fields to restore from fields to unset, so a missing old value is
 never written as data.
 
+FR-021's separate historical-analysis sidecar and guarded, manifest-only
+migration workflow are documented in
+[`docs/historical-release-metadata.md`](docs/historical-release-metadata.md).
+It preserves this chronology metadata planner unchanged and contains no
+production values or automatic cohort inference.
+
 The historical reconciler remains available as a guarded chronology tool:
 
 ```sh

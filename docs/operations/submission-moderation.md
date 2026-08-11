@@ -204,10 +204,11 @@ Closing it alone does not resolve the conflict.
 
 ## Operation
 
-GitHub schedules the workflow for 00:17, 06:17, 12:17, and 18:17 UTC. Scheduled
-runs can start later during GitHub service load; the schedule is polling, not
-an exact alerting deadline. The scheduled trigger runs only from the default
-branch.
+GitHub schedules the workflow once each day at 13:17 UTC. This keeps routine
+Actions use low on the free GitHub plan. Scheduled runs can start later during
+GitHub service load; the schedule is polling, not an exact alerting deadline.
+The scheduled trigger runs only from the default branch. Use the manual action
+when a same-day check is needed.
 
 An open issue is a queue-attention signal, not a per-submission notification.
 Before closing the work, run the safe `list` command again so a report that

@@ -472,7 +472,7 @@ test("a same-day ordering conflict prevents a first-class overlay", () => {
   );
 });
 
-test("issuedAt fallback applies only when firstObservedAt is absent", () => {
+test("issuedAt fallback applies when firstObservedAt is absent or Sanity null", () => {
   const fixture = releaseObservationFixture();
   fixture.releases = [{ id: "release.ios.27", lifecycle: "active" }];
   fixture.events = [];
@@ -486,9 +486,18 @@ test("issuedAt fallback applies only when firstObservedAt is absent", () => {
       availability: "available",
     },
     {
-      id: "public-beta-1",
+      id: "beta-2",
       releaseId: "release.ios.27",
       occurredOn: "2026-07-02",
+      firstObservedAt: null,
+      channel: "developerBeta",
+      sequence: 2,
+      availability: "available",
+    },
+    {
+      id: "public-beta-1",
+      releaseId: "release.ios.27",
+      occurredOn: "2026-07-03",
       firstObservedAt: "not-a-timestamp",
       channel: "publicBeta",
       sequence: 1,
@@ -505,6 +514,10 @@ test("issuedAt fallback applies only when firstObservedAt is absent", () => {
     [
       {
         evidenceId: "legacy:release.ios.27:beta-1",
+        firstObservedOn: "2026-08-09",
+      },
+      {
+        evidenceId: "legacy:release.ios.27:beta-2",
         firstObservedOn: "2026-08-09",
       },
     ],

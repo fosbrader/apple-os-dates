@@ -5,7 +5,10 @@ import { buildHistoricalAnalysisDataset } from "../src/lib/historical-analysis-d
 import { adaptReleaseObservations } from "../src/lib/release-observation-adapter";
 import {
   NEXT_ELIGIBLE_PRERELEASE_EVENT_MINIMUM_EXAMPLES,
+  NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT,
+  NEXT_EVENT_SIMPLE_BASELINE_VERSION,
   buildNextEligiblePrereleaseEventModel,
+  buildNextEventSimpleBaseline,
   predictNextEligiblePrereleaseEvent,
   validateNextEligiblePrereleaseEventModel,
 } from "../src/lib/next-eligible-prerelease-event";
@@ -107,6 +110,54 @@ test("FR-011 is deterministic, prerelease-only, platform-bounded, and strictly c
     const terminalArtifact = buildNextEligiblePrereleaseEventModel(terminalDataset);
     assert.equal(predictNextEligiblePrereleaseEvent(terminalDataset, "active", terminalArtifact), null);
   }
+});
+
+test("FR-012 simple next-event baseline freezes pooled stage mode, predicted-stage median, and exact members", () => {
+  const dataset = source({ count: 24, firstDeveloperEndpoints: 24 });
+  const model = buildNextEligiblePrereleaseEventModel(dataset);
+  const baseline = buildNextEventSimpleBaseline(dataset, "active", model);
+  const reversedDataset = source({ count: 24, firstDeveloperEndpoints: 24, reverse: true });
+  const reversed = buildNextEventSimpleBaseline(
+    reversedDataset,
+    "active",
+    buildNextEligiblePrereleaseEventModel(reversedDataset),
+  );
+  assert.deepEqual(baseline, reversed);
+  assert.ok(baseline?.availability === "available");
+  if (baseline?.availability === "available") {
+    assert.equal(baseline.baselineVersion, NEXT_EVENT_SIMPLE_BASELINE_VERSION);
+    assert.equal(baseline.codeFingerprint, NEXT_EVENT_SIMPLE_BASELINE_CODE_FINGERPRINT);
+    assert.equal(baseline.predictedEligibleStage, "developer-beta");
+    assert.equal(baseline.pointDays, 4);
+    assert.equal(baseline.stageCohort.trainingCount, 24);
+    assert.equal(baseline.timingCohort.trainingCount, 24);
+    assert.deepEqual(
+      baseline.stageCohort.trainingTargetIds,
+      [...baseline.stageCohort.trainingTargetIds].sort(),
+    );
+    assert.deepEqual(
+      baseline.timingCohort.trainingTargetIds,
+      model.targets.map((target) => target.targetId).sort(),
+    );
+  }
+
+  const weakDataset = source({ count: 8, tie: true });
+  const weak = buildNextEventSimpleBaseline(
+    weakDataset,
+    "active",
+    buildNextEligiblePrereleaseEventModel(weakDataset),
+  );
+  assert.ok(weak?.availability === "unavailable");
+  if (weak?.availability === "unavailable") assert.equal(weak.reason, "weak-stage-mode");
+
+  const sparseDataset = source({ count: 7, firstDeveloperEndpoints: 7 });
+  const sparse = buildNextEventSimpleBaseline(
+    sparseDataset,
+    "active",
+    buildNextEligiblePrereleaseEventModel(sparseDataset),
+  );
+  assert.ok(sparse?.availability === "unavailable");
+  if (sparse?.availability === "unavailable") assert.equal(sparse.reason, "minimum-training-examples");
 });
 
 test("FR-011 requires a unique 60 percent modal next stage and fails closed on terminal and same-day ambiguity", () => {

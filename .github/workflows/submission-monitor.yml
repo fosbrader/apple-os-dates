@@ -2,7 +2,7 @@ name: Submission monitor
 
 on:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 13 * * *"
   workflow_dispatch:
 
 permissions:
@@ -10,7 +10,7 @@ permissions:
 
 concurrency:
   group: submission-monitor
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   reconcile:
