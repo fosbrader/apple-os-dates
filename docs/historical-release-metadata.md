@@ -130,6 +130,21 @@ not an ingestible manifest):
 
 ## Offline plan
 
+Before curating a manifest, capture a fresh published snapshot and a local
+review queue:
+
+```sh
+npm run migration:historical-metadata:capture -- --write-artifacts
+```
+
+This read-only command uses the published Sanity API without a token. It
+writes an ignored snapshot and a bounded review queue under
+`.migration-artifacts/`. The queue includes exact revisions, linked source or
+audit candidates, and lifecycle-review state. Its assertion fields are
+intentionally `null`; it is **not** an ingestible manifest and it never
+derives product family, release class, release position, cycle, chronology, or
+evidence choices from display labels.
+
 The planner has no Sanity client and rejects apply, mutation, production, and
 user-token flags:
 
