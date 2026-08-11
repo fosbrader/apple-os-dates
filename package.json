@@ -18,6 +18,7 @@
     "data:build:check": "tsx scripts/build-release-data.ts",
     "data:validate": "tsx scripts/validate-release-data.ts",
     "forecast:validate": "tsx scripts/validate-forecasts.ts",
+    "forecast:source:readiness": "tsx scripts/check-forecast-source-readiness.ts",
     "historical:validate": "tsx scripts/validate-historical-analysis-dataset.ts",
     "walk-forward:validate": "tsx scripts/validate-walk-forward-evaluation.ts",
     "release-date:validate": "tsx scripts/validate-release-date-candidates.ts",

@@ -87,6 +87,22 @@ planning. The production route uses only the bounded query. The compatibility
 rows are a narrow, flat projection for the frozen comparator; they do not
 replace the canonical analytical source.
 
+## Release-day readiness check
+
+After publishing release records, run this local command:
+
+```sh
+npm run forecast:source:readiness
+```
+
+It reads the published Sanity CDN and checks the bounded source envelope,
+canonical byte budget, source shape, and complete sidecar coverage. It does
+not use a token or write to Sanity, Blob, Vercel, GitHub, or a cron schedule.
+It exits nonzero when historical analysis is not ready. Until the reviewed
+sidecar migration is complete, `metadata-coverage-incomplete` is expected.
+This check is not an activation approval; use the full gate below before any
+private forecast run.
+
 Every comparator is built during the scheduled run with the same exact source
 date and request instant as the selected forecast. Release states, milestones,
 and observation metadata later than that origin are excluded. The current
