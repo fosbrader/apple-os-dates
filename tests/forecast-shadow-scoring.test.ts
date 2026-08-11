@@ -324,11 +324,76 @@ function originBenchmarks(args: {
   ];
 }
 
-function forecastDraft(dataset: HistoricalAnalysisDatasetV1, suffixes: string | readonly string[] = "a", options: { scheduledFor?: string; generatedAt?: string; includeNext?: boolean; sameTargetId?: boolean } = {}): ForecastArtifactDraftV1 {
+function withAvailableComparators(
+  benchmarks: readonly ForecastArtifactBenchmarkV1[],
+  args: {
+    targetKind: "public-release" | "next-eligible-prerelease-event";
+    anchorOn: string;
+  },
+): ForecastArtifactBenchmarkV1[] {
+  return benchmarks.map((benchmark) => {
+    if (benchmark.benchmarkId === "current-public-heuristic") {
+      if (args.targetKind !== "public-release" || benchmark.availability !== "unavailable") {
+        return benchmark;
+      }
+      const { reason, ...base } = benchmark;
+      void reason;
+      const currentRange = interval(args.anchorOn, 9, 0.5, 3);
+      return {
+        ...base,
+        availability: "available",
+        cohorts: [{ binding: "inline", role: "model-training", cohortId: "current-public-model", memberIds: ["current-01", "current-02", "current-03"], memberCount: 3 }],
+        prediction: {
+          targetKind: "public-release",
+          pointDays: 9,
+          pointCalendarDate: addDays(args.anchorOn, 9),
+          roundingRule: "outward-floor-half-up-ceil/v1",
+          empiricalRange: { level: 0.5, lowerDays: currentRange.lowerDays, upperDays: currentRange.upperDays, lowerCalendarDate: currentRange.lowerCalendarDate, upperCalendarDate: currentRange.upperCalendarDate },
+        },
+      };
+    }
+    if (benchmark.benchmarkId !== "simple-baseline" || benchmark.availability !== "unavailable") {
+      return benchmark;
+    }
+    const { reason, ...base } = benchmark;
+    void reason;
+    if (args.targetKind === "public-release") {
+      return {
+        ...base,
+        availability: "available",
+        cohorts: [{ binding: "inline", role: "model-training", cohortId: "simple-public-model", memberIds: Array.from({ length: 8 }, (_, index) => `simple-public-${String(index).padStart(2, "0")}`), memberCount: 8 }],
+        prediction: {
+          targetKind: "public-release",
+          pointDays: 8,
+          pointCalendarDate: addDays(args.anchorOn, 8),
+          roundingRule: "outward-floor-half-up-ceil/v1",
+        },
+      };
+    }
+    return {
+      ...base,
+      availability: "available",
+      cohorts: [
+        { binding: "inline", role: "stage-training", cohortId: "simple-next-stage", memberIds: Array.from({ length: 8 }, (_, index) => `simple-stage-${String(index).padStart(2, "0")}`), memberCount: 8 },
+        { binding: "inline", role: "timing-training", cohortId: "simple-next-timing", memberIds: Array.from({ length: 8 }, (_, index) => `simple-timing-${String(index).padStart(2, "0")}`), memberCount: 8 },
+      ],
+      prediction: {
+        targetKind: "next-eligible-prerelease-event",
+        pointDays: 6,
+        pointCalendarDate: addDays(args.anchorOn, 6),
+        roundingRule: "outward-floor-half-up-ceil/v1",
+        predictedEligibleStage: "public-beta",
+      },
+    };
+  });
+}
+
+function forecastDraft(dataset: HistoricalAnalysisDatasetV1, suffixes: string | readonly string[] = "a", options: { scheduledFor?: string; generatedAt?: string; includeNext?: boolean; sameTargetId?: boolean; includeAvailableComparators?: boolean } = {}): ForecastArtifactDraftV1 {
   const selected = typeof suffixes === "string" ? [suffixes] : [...suffixes];
   const scheduledFor = options.scheduledFor ?? "2026-08-09";
   const generatedAt = options.generatedAt ?? `${scheduledFor}T20:00:00.000Z`;
   const includeNext = options.includeNext ?? true;
+  const includeAvailableComparators = options.includeAvailableComparators ?? false;
   const targets: ForecastArtifactTargetV1[] = [];
   const currentSourceFingerprint = sha("8");
   for (const suffix of selected) {
@@ -356,7 +421,9 @@ function forecastDraft(dataset: HistoricalAnalysisDatasetV1, suffixes: string | 
       calibrationFingerprint: sha("4"),
       cohort: { modelCohortId: "ios-public-hierarchical", modelTrainingCohorts: [{ role: "model-training", cohortId: "ios-public-hierarchical", memberIds: publicModelTrainingIds, memberCount: 12 }], modelTrainingCount: 12, calibrationPoolId: "ios-public", calibrationResidualIds: publicCalibrationIds, calibrationResidualCount: 8 },
       prediction: publicPrediction,
-      benchmarks: originBenchmarks({ targetKind: "public-release", datasetFingerprint: dataset.fingerprints.datasetFingerprint, modelFingerprint: sha("3"), calibrationFingerprint: sha("4"), currentSourceFingerprint, modelComponents: [{ role: "model-training", cohortId: "ios-public-hierarchical", memberIds: publicModelTrainingIds }], calibrationPoolId: "ios-public", calibrationResidualIds: publicCalibrationIds, pointDays: publicPrediction.pointDays, pointCalendarDate: publicPrediction.pointCalendarDate, fifty: publicFifty }),
+      benchmarks: includeAvailableComparators
+        ? withAvailableComparators(originBenchmarks({ targetKind: "public-release", datasetFingerprint: dataset.fingerprints.datasetFingerprint, modelFingerprint: sha("3"), calibrationFingerprint: sha("4"), currentSourceFingerprint, modelComponents: [{ role: "model-training", cohortId: "ios-public-hierarchical", memberIds: publicModelTrainingIds }], calibrationPoolId: "ios-public", calibrationResidualIds: publicCalibrationIds, pointDays: publicPrediction.pointDays, pointCalendarDate: publicPrediction.pointCalendarDate, fifty: publicFifty }), { targetKind: "public-release", anchorOn: publicAnchor.occurredOn })
+        : originBenchmarks({ targetKind: "public-release", datasetFingerprint: dataset.fingerprints.datasetFingerprint, modelFingerprint: sha("3"), calibrationFingerprint: sha("4"), currentSourceFingerprint, modelComponents: [{ role: "model-training", cohortId: "ios-public-hierarchical", memberIds: publicModelTrainingIds }], calibrationPoolId: "ios-public", calibrationResidualIds: publicCalibrationIds, pointDays: publicPrediction.pointDays, pointCalendarDate: publicPrediction.pointCalendarDate, fifty: publicFifty }),
     });
     const nextModelTrainingIds = Array.from({ length: 10 }, (_, index) => `next-model-${String(index).padStart(2, "0")}`);
     const nextCalibrationIds = Array.from({ length: 8 }, (_, index) => `next-residual-${String(index).padStart(2, "0")}`);
@@ -380,7 +447,9 @@ function forecastDraft(dataset: HistoricalAnalysisDatasetV1, suffixes: string | 
       cohort: { modelCohortId: "ios-next-stage", modelTrainingCohorts: [{ role: "stage-training", cohortId: "ios-next-stage-mode", memberIds: nextModelTrainingIds, memberCount: 10 }, { role: "timing-training", cohortId: "ios-next-stage-timing", memberIds: nextModelTrainingIds, memberCount: 10 }], modelTrainingCount: 10, calibrationPoolId: "ios-next-stage", calibrationResidualIds: nextCalibrationIds, calibrationResidualCount: 8 },
       prediction: nextPrediction,
       benchmarks: [
-        ...originBenchmarks({ targetKind: "next-eligible-prerelease-event", datasetFingerprint: dataset.fingerprints.datasetFingerprint, modelFingerprint: sha("5"), calibrationFingerprint: sha("6"), currentSourceFingerprint, modelComponents: [{ role: "stage-training", cohortId: "ios-next-stage-mode", memberIds: nextModelTrainingIds }, { role: "timing-training", cohortId: "ios-next-stage-timing", memberIds: nextModelTrainingIds }], calibrationPoolId: "ios-next-stage", calibrationResidualIds: nextCalibrationIds, pointDays: nextPrediction.pointDays, pointCalendarDate: nextPrediction.pointCalendarDate, fifty: nextFifty, predictedEligibleStage: "public-beta" }),
+        ...(includeAvailableComparators
+          ? withAvailableComparators(originBenchmarks({ targetKind: "next-eligible-prerelease-event", datasetFingerprint: dataset.fingerprints.datasetFingerprint, modelFingerprint: sha("5"), calibrationFingerprint: sha("6"), currentSourceFingerprint, modelComponents: [{ role: "stage-training", cohortId: "ios-next-stage-mode", memberIds: nextModelTrainingIds }, { role: "timing-training", cohortId: "ios-next-stage-timing", memberIds: nextModelTrainingIds }], calibrationPoolId: "ios-next-stage", calibrationResidualIds: nextCalibrationIds, pointDays: nextPrediction.pointDays, pointCalendarDate: nextPrediction.pointCalendarDate, fifty: nextFifty, predictedEligibleStage: "public-beta" }), { targetKind: "next-eligible-prerelease-event", anchorOn: nextAnchor.occurredOn })
+          : originBenchmarks({ targetKind: "next-eligible-prerelease-event", datasetFingerprint: dataset.fingerprints.datasetFingerprint, modelFingerprint: sha("5"), calibrationFingerprint: sha("6"), currentSourceFingerprint, modelComponents: [{ role: "stage-training", cohortId: "ios-next-stage-mode", memberIds: nextModelTrainingIds }, { role: "timing-training", cohortId: "ios-next-stage-timing", memberIds: nextModelTrainingIds }], calibrationPoolId: "ios-next-stage", calibrationResidualIds: nextCalibrationIds, pointDays: nextPrediction.pointDays, pointCalendarDate: nextPrediction.pointCalendarDate, fifty: nextFifty, predictedEligibleStage: "public-beta" })),
       ],
     });
   }
@@ -441,6 +510,15 @@ test("FR-015 derives and scores exact outcomes only from validated historical ro
   assert.equal(result.index.scores.length, 2);
   assert.equal(result.index.pending.length, 0);
   assert.equal(result.index.dataGaps.length, 0);
+  assert.equal(result.index.unavailableBenchmarks.length, 4);
+  assert.equal(
+    result.index.unavailableBenchmarks.find(
+      (entry) =>
+        entry.targetKind === "next-eligible-prerelease-event" &&
+        entry.benchmarkId === "current-public-heuristic",
+    )?.reason,
+    "incomparable-target-definition",
+  );
   const publicScore = result.scoreArtifacts.find((record) => record.artifact.targetKind === "public-release")!;
   assert.equal(publicScore.artifact.pointEstimator, "hierarchical-platform-cadence");
   assert.equal(publicScore.artifact.actualDays, 13);
@@ -454,6 +532,121 @@ test("FR-015 derives and scores exact outcomes only from validated historical ro
   assert.equal(validateForecastScoreArtifact(publicScore.artifact).length, 0);
   const scoreMap = new Map(result.scoreArtifacts.map((record) => [record.artifactId, record.artifact]));
   assert.deepEqual(validateForecastReconciliationIndex(result.index, scoreMap, new Map([[forecast.artifactId, forecast]])), []);
+});
+
+test("FR-015 scores each frozen available benchmark and records incomparable rows separately", () => {
+  const dataset = datasetFor([{ suffix: "a" }]);
+  const forecast = buildForecastArtifact(
+    forecastDraft(dataset, "a", { includeAvailableComparators: true }),
+  );
+  const result = reconcileForecastScores(reconciliationArgs(dataset, [forecast]));
+  assert.equal(result.index.scores.length, 5);
+  assert.equal(result.index.pending.length, 0);
+  assert.equal(result.index.dataGaps.length, 0);
+  assert.equal(result.index.unavailableBenchmarks.length, 1);
+  assert.deepEqual(result.index.unavailableBenchmarks[0] && {
+    targetKind: result.index.unavailableBenchmarks[0].targetKind,
+    benchmarkId: result.index.unavailableBenchmarks[0].benchmarkId,
+    reason: result.index.unavailableBenchmarks[0].reason,
+  }, {
+    targetKind: "next-eligible-prerelease-event",
+    benchmarkId: "current-public-heuristic",
+    reason: "incomparable-target-definition",
+  });
+
+  const publicScores = result.scoreArtifacts
+    .map((record) => record.artifact)
+    .filter((score) => score.targetKind === "public-release")
+    .sort((left, right) => left.benchmarkId.localeCompare(right.benchmarkId));
+  assert.deepEqual(
+    publicScores.map((score) => score.benchmarkId),
+    ["current-public-heuristic", "selected-private-model", "simple-baseline"],
+  );
+  const publicByBenchmark = new Map(publicScores.map((score) => [score.benchmarkId, score]));
+  assert.equal(
+    publicByBenchmark.get("current-public-heuristic")?.pointEstimator,
+    "current-public-heuristic",
+  );
+  assert.equal(
+    publicByBenchmark.get("current-public-heuristic")
+      ?.forecastBenchmarkSourceFingerprint,
+    sha("8"),
+  );
+  assert.deepEqual(
+    publicByBenchmark
+      .get("selected-private-model")
+      ?.intervals.map((interval) => interval.level),
+    [0.5, 0.8],
+  );
+  assert.deepEqual(
+    publicByBenchmark
+      .get("current-public-heuristic")
+      ?.intervals.map((interval) => interval.level),
+    [0.5],
+  );
+  assert.deepEqual(
+    publicByBenchmark.get("simple-baseline")?.intervals,
+    [],
+  );
+  const selectedScore = publicByBenchmark.get("selected-private-model")!;
+  const currentScore = publicByBenchmark.get("current-public-heuristic")!;
+  assert.ok(
+    validateForecastScoreArtifact({
+      ...selectedScore,
+      intervals: selectedScore.intervals.filter((interval) => interval.level === 0.5),
+    }).some((issue) => issue.path === "score.intervals"),
+  );
+  assert.ok(
+    validateForecastScoreArtifact({
+      ...currentScore,
+      calibrationFingerprint: sha("f"),
+    }).some((issue) => issue.path === "score"),
+  );
+  const nextScores = result.scoreArtifacts
+    .map((record) => record.artifact)
+    .filter((score) => score.targetKind === "next-eligible-prerelease-event")
+    .sort((left, right) => left.benchmarkId.localeCompare(right.benchmarkId));
+  assert.deepEqual(
+    nextScores.map((score) => [score.benchmarkId, score.pointEstimator]),
+    [
+      ["selected-private-model", "next-event-timing-median"],
+      ["simple-baseline", "next-event-simple-baseline"],
+    ],
+  );
+  assert.ok(
+    new Set(result.scoreArtifacts.map((record) => record.artifactId)).size ===
+      result.scoreArtifacts.length,
+  );
+  const scoreMap = new Map(
+    result.scoreArtifacts.map((record) => [record.artifactId, record.artifact]),
+  );
+  assert.deepEqual(
+    validateForecastReconciliationIndex(
+      result.index,
+      scoreMap,
+      new Map([[forecast.artifactId, forecast]]),
+    ),
+    [],
+  );
+  const indexBody = withoutIndexFingerprint(result.index);
+  const orphanUnavailable = {
+    ...result.index.unavailableBenchmarks[0]!,
+    targetId: "orphan:benchmark-row",
+  };
+  const withOrphanUnavailable = withIndexFingerprint({
+    ...indexBody,
+    unavailableBenchmarks: [
+      ...indexBody.unavailableBenchmarks,
+      orphanUnavailable,
+    ],
+  });
+  assert.ok(
+    validateForecastReconciliationIndex(
+      withOrphanUnavailable,
+      scoreMap,
+      new Map([[forecast.artifactId, forecast]]),
+    ).some((issue) => issue.code === "incompatible-artifact"),
+  );
 });
 
 test("FR-015 matches candidates by target kind plus target ID", () => {
@@ -849,10 +1042,12 @@ test("FR-015 health separates operations from statistics and weights unique real
   });
   assert.equal(report.operations.status, "degraded");
   assert.equal(report.statistics.status, "reportable");
-  assert.deepEqual(report.summary, { forecastCount: 9, scoredCount: 8, pendingCount: 0, dataGapCount: 1, runFailureCount: 1 });
-  const overall = report.metrics.find((metric) => metric.targetKind === "public-release" && metric.groupKind === "overall")!;
+  assert.deepEqual(report.summary, { forecastCount: 9, unavailableBenchmarkCount: 18, scoredCount: 8, pendingCount: 0, dataGapCount: 1, runFailureCount: 1 });
+  const overall = report.metrics.find((metric) => metric.targetKind === "public-release" && metric.benchmarkId === "selected-private-model" && metric.groupKind === "overall")!;
   assert.equal(overall.availability, "available");
   assert.equal(overall.realizedEventCount, 8);
+  assert.equal(overall.coverage50EventCount, 8);
+  assert.equal(overall.coverage80EventCount, 8);
   assert.equal(report.operations.runFailures[0]?.safeSummary, "The private forecast run exceeded its time limit.");
   assert.equal(report.dataGapCounts[0]?.reason, "missing-observation-instant");
   assert.match(renderForecastShadowHealthReport(report), /unique events=8/);

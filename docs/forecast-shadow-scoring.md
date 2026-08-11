@@ -30,20 +30,26 @@ family. Targets are matched by both `targetKind` and `targetId`.
 
 ## Scores and corrections
 
-FR-015 scores the exact selected point and calibrated intervals stored in the
-source `forecast-artifact/v1`. It does not recompute a point or change its
-estimator identity. Score artifacts retain the source forecast, model,
-calibration, cohort, anchor evidence, outcome evidence, and complete immutable
-outcome projection.
+FR-015 scores every origin-time **available** benchmark stored in the source
+`forecast-artifact/v1`: the selected private model, the frozen current public
+heuristic, and the simple baseline. It does not recompute a point or change an
+estimator identity. Score artifacts retain the source forecast, benchmark,
+model, calibration, cohort, anchor evidence, outcome evidence, and complete
+immutable outcome projection.
 
-Every available forecast target has exactly one active state: score, pending,
-or data gap. A changed outcome date, evidence set, stage, identity, or
-observation instant creates a replacement score and an immutable audit row. A
-retracted or superseded outcome removes the obsolete active score and creates a
-retraction or supersession audit row. Old score artifacts remain immutable for
-audit use. If a next-event target reaches a verified public-release lifecycle
-outcome before another eligible prerelease event, the target closes as a
-`terminal-or-ineligible-next-event` data gap; it does not remain pending.
+Every available `(forecast, target, benchmark)` row has exactly one active
+state: score, pending, or data gap. An unavailable origin benchmark is recorded
+separately with its immutable reason; it is never relabeled as a pending
+outcome, data-quality gap, or model error. For example, the current public
+heuristic has no semantically comparable next-event target and remains an
+explicit `incomparable-target-definition` row. A changed outcome date, evidence
+set, stage, identity, or observation instant creates a replacement score and an
+immutable audit row. A retracted or superseded outcome removes the obsolete
+active score and creates a retraction or supersession audit row. Old score
+artifacts remain immutable for audit use. If a next-event target reaches a
+verified public-release lifecycle outcome before another eligible prerelease
+event, the target closes as a `terminal-or-ineligible-next-event` data gap; it
+does not remain pending.
 
 Canonical parsers enforce byte limits before UTF-8 decode or JSON parse. Score,
 index, and health writers reject unknown properties, noncanonical order,
@@ -57,8 +63,9 @@ grow without limit on the free hosting plan. The v1 epoch fixes these limits:
 - 120 calendar days and at most 120 sampled forecast artifacts.
 - One canonical `daily-shadow` run key per scheduled day. A retry cannot become
   an extra statistical sample.
-- At most 32 available targets in one sampled forecast and 512 target states in
-  the epoch.
+- At most 32 available targets in one sampled forecast, which is at most 96
+  closed benchmark rows, and 512 available-or-unavailable benchmark rows in the
+  epoch.
 - At most 512 correction audit rows, 128 evidence IDs in one state row, and a
   768 KiB soft index budget below the 1 MiB parser limit.
 
@@ -75,8 +82,8 @@ cherry-picked sampling.
 
 ## Incremental daily storage path
 
-The reconciliation root carries a canonical target snapshot and the outcome
-and metric projection needed for each state. A normal daily run reads and
+The reconciliation root carries a canonical target/benchmark snapshot and the
+outcome and metric projection needed for each state. A normal daily run reads and
 validates the exact prior content-addressed root once. It does not reread every
 historical forecast or score object.
 
@@ -84,8 +91,8 @@ The planner requests an old forecast artifact only when a prior pending or gap
 state becomes scoreable, or when a corrected outcome needs a replacement
 score. Retractions and unchanged scores need no historical artifact read. A
 commit writes only new scores, one new immutable root, and the FR-012 pointer
-CAS. If the target states, audits, sampled forecasts, and epoch stop state did
-not change, reconciliation reuses the prior root; it does not write a new root
+CAS. If the target/benchmark states, audits, sampled forecasts, and epoch stop
+state did not change, reconciliation reuses the prior root; it does not write a new root
 only to advance a cutoff. An exact replay also returns before the nonadvancing
 pointer timestamp check and does not perform a CAS.
 
@@ -99,28 +106,34 @@ Operational health and statistical reportability are separate. Operational
 health covers freshness, run failures, pending targets, data gaps, and audit
 activity. Statistical metrics never count those states as model errors.
 
-Forecast coverage counts forecast states. Model performance gives equal weight
-to each unique realized source event. If daily forecast origins point to the
-same realized event, the report averages their errors and coverage within that
-event first. It then aggregates the event-level values. MAE, median absolute
-error, signed bias, and 50%/80% coverage remain unavailable until the group has
-eight unique realized events. Platform and model-cohort forecast-state counts
-must partition their target-kind totals exactly.
+Forecast coverage counts available benchmark states; unavailable origin
+comparators are reported separately and never enter an outcome denominator.
+Model performance gives equal weight to each unique realized source event. If
+daily forecast origins point to the same realized event, the report averages
+their errors and coverage within that event first. It then aggregates the
+event-level values separately for each target kind and benchmark. The selected
+model retains its frozen 50% and 80% intervals, a comparator can retain only
+its frozen 50% empirical range, and a point-only simple baseline reports
+coverage as unavailable rather than fabricated. MAE, median absolute error,
+and signed bias remain unavailable until the group has eight unique realized
+events; an available point metric may therefore correctly have null interval
+coverage. Platform and model-cohort forecast-state counts must partition their
+target-kind/benchmark totals exactly.
 
 Run failures accept only closed codes and fixed safe summaries. The report does
 not retain raw error messages.
 
-## Schedule-enablement blocker
+## Activation boundary
 
 FR-015 can score only immutable predictions present at forecast origin. The
-current source artifact stores the selected model prediction. It does not yet
-store the origin-time current-heuristic and simple-baseline predictions needed
-for the full FR-014/FR-015 benchmark comparison.
+forecast artifact now retains the selected model, current public heuristic, and
+simple-baseline origin snapshots, including explicit unavailable reasons. Never
+reconstruct a benchmark after the outcome is known.
 
-Do not enable the daily production schedule or claim forecast-quality readiness
-until the forecast artifact and runtime emit all three immutable origin-time
-predictions: selected model, current heuristic, and simple baseline. Never
-reconstruct those benchmark values after the outcome is known.
+This remains private shadow infrastructure. It does not activate a cron
+schedule, public forecast route, Sanity write, or production storage adapter.
+Those deployment gates need their own reviewed configuration and operational
+runbook.
 
 ## Runtime integration order
 
@@ -132,8 +145,8 @@ reconstruct those benchmark values after the outcome is known.
 6. Write the new immutable root and advance the private pointer with CAS.
 7. Build private health from the self-contained index. Use complete artifact
    maps only for an offline deep audit.
-8. Keep the schedule disabled until benchmark origin snapshots and the epoch
-   rollover runbook are integrated and reviewed.
+8. Keep the schedule disabled until its storage, credential, monitoring, and
+   epoch-rollover runbook are integrated and reviewed.
 
 Validate stored canonical score, index, or health JSON with:
 
