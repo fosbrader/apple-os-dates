@@ -121,10 +121,11 @@ fingerprint prevents that wider comparison input from being mistaken for the
 private model cohort.
 
 The 768-observation cap is a downstream model-work cap only. It does not replace
-the pipeline's existing upstream limits: 512 releases, 2,048 raw events and
-milestones, 2 MiB of serialized source input, and the exact issuance-instant
-cutoff. Integration must retain all of those stricter fetch and normalization
-guards before it calls this selector.
+the pipeline's existing upstream limits: 512 releases, 2,304 first-class
+events, 2,304 compatibility milestones, 4,608 combined observations, 2 MiB of
+serialized source input, and the exact issuance-instant cutoff. Integration
+must retain all of those stricter fetch and normalization guards before it calls
+this selector.
 
 Integration also has an explicit source-boundary dependency. Call the shared
 `validatePublishedHistoricalReleaseSource` normalizer before building the full

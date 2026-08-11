@@ -3,8 +3,11 @@
 `src/lib/forecast-shadow-scoring.ts` is the storage-neutral FR-015 core. It
 defines canonical contracts for outcome-time bindings, immutable scores,
 reconciliation indexes, correction audits, bounded evaluation epochs, and
-private health reports. It does not add a public route, Sanity write, scheduled
-job, or production storage adapter.
+private health reports. `src/lib/forecast-shadow-reconciliation-run.ts` is the
+default-off private orchestration layer: it runs the forecast pipeline, reuses
+its one bounded source snapshot for reconciliation, and advances only the
+private pointer with CAS. Neither module adds a public route, Sanity write,
+schedule, or production activation.
 
 ## Source and time rules
 
@@ -130,22 +133,29 @@ forecast artifact now retains the selected model, current public heuristic, and
 simple-baseline origin snapshots, including explicit unavailable reasons. Never
 reconstruct a benchmark after the outcome is known.
 
-This remains private shadow infrastructure. It does not activate a cron
-schedule, public forecast route, Sanity write, or production storage adapter.
-Those deployment gates need their own reviewed configuration and operational
-runbook.
+This remains private shadow infrastructure. The route needs both an explicit
+feature flag and a reviewed, bounded epoch start/end configuration before it
+can call the runner. It does not activate a cron schedule, public forecast
+route, Sanity write, or production storage adapter. Those deployment gates need
+their own reviewed configuration and operational runbook.
 
 ## Runtime integration order
 
-1. Build and validate the historical dataset and exact observation bindings.
-2. Load and digest-check the prior reconciliation root, if one exists.
-3. Call `forecastArtifactIdsRequiredForReconciliation`.
-4. Load only the returned prior forecast artifacts by exact digest.
-5. Call `reconcileForecastScores` and write only `newScoreArtifactIds`.
-6. Write the new immutable root and advance the private pointer with CAS.
-7. Build private health from the self-contained index. Use complete artifact
+1. Build or reuse the daily private forecast artifact through the default-off
+   pipeline, using one exact bounded source snapshot. If there is no included
+   active cycle, skip generation rather than fabricate an empty artifact and
+   reconcile the prior active private artifact instead.
+2. Reuse that source to build the full validated historical dataset and exact
+   observation bindings; do not restrict this outcome work to the current
+   runtime cohort.
+3. Load and digest-check the prior reconciliation root, if one exists.
+4. Call `forecastArtifactIdsRequiredForReconciliation`.
+5. Load only the returned prior forecast artifacts by exact digest.
+6. Call `reconcileForecastScores` and write only `newScoreArtifactIds`.
+7. Write the new immutable root and advance the private pointer with CAS.
+8. Build private health from the self-contained index. Use complete artifact
    maps only for an offline deep audit.
-8. Keep the schedule disabled until its storage, credential, monitoring, and
+9. Keep the schedule disabled until its storage, credential, monitoring, and
    epoch-rollover runbook are integrated and reviewed.
 
 Validate stored canonical score, index, or health JSON with:

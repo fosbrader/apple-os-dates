@@ -1,12 +1,13 @@
 # Daily private forecast pipeline
 
-FR-014 can build and activate one private shadow forecast candidate for each
-UTC day. The route is implemented at `/api/cron/forecast-shadow/`. It is
-default-off. The server must set `FORECAST_SHADOW_ENABLED=true` before the
-route reads configuration, Sanity, or Blob storage. The Vercel cron schedule
-remains absent until the historical metadata migration and dedicated private
-Blob configuration pass their separate gates. The route has no public forecast
-response.
+FR-014/FR-015 can build or reuse one private shadow forecast candidate for each
+UTC day, then reconcile prior immutable forecasts against newly observed,
+source-backed outcomes. The route is implemented at
+`/api/cron/forecast-shadow/`. It is default-off. The server must set
+`FORECAST_SHADOW_ENABLED=true` before the route reads its evaluation-epoch
+configuration, Sanity, or Blob storage. The Vercel cron schedule remains absent
+until the historical metadata migration and dedicated private Blob configuration
+pass their separate gates. The route has no public forecast response.
 
 ## Input and model execution
 
@@ -70,12 +71,12 @@ source growth exceeds the operational budget.
 The runtime source contract applies these limits before model execution:
 
 - 512 releases;
-- 2,048 first-class events;
-- 2,048 compatibility milestones;
-- 4,096 combined events and milestones;
+- 2,304 first-class events;
+- 2,304 compatibility milestones;
+- 4,608 combined events and milestones;
 - 512 metadata sidecars;
 - 512 legacy-heuristic release rows;
-- 2,048 legacy-heuristic milestone rows;
+- 2,304 legacy-heuristic milestone rows;
 - 2 MiB of canonical source JSON;
 - 512 UTF-8 bytes per string;
 - 128 evidence IDs per evidence field; and
@@ -93,6 +94,17 @@ heuristic additionally requires an exact proof that its latest compatibility
 milestone maps to the canonical analytical anchor. If release or anchor mapping
 cannot be proved, its benchmark is unavailable with a typed reason. No later
 run backfills a historical comparator from current Sanity state.
+
+After activation or a same-day artifact reuse, the reconciliation runner uses
+that same bounded source snapshot to rebuild the complete historical dataset
+and evidence-keyed observation-instant bindings. It then atomically reconciles
+prior pending forecasts against newly known outcomes. The full validated source
+is intentionally used for this step: the current runtime cohort may no longer
+contain an older forecasted release, but its outcome must remain scoreable.
+When the snapshot has no included active cycle, the runner does not invent an
+empty forecast artifact. It skips generation and reconciles the last active
+private artifact; a missing prior artifact fails closed instead of recording an
+empty state.
 
 ## Idempotency and overlap
 
@@ -133,12 +145,15 @@ Do not add the `43 8 * * *` Vercel schedule until all of these are complete:
 - the dedicated private forecast Blob store is linked to Production only;
 - `FORECAST_BLOB_STORE_ID`, rotating Vercel OIDC, and `CRON_SECRET` have been
   verified without a long-lived Blob-token fallback; and
+- `FORECAST_SHADOW_EPOCH_STARTS_ON` and `FORECAST_SHADOW_EPOCH_ENDS_ON` define
+  one reviewed, immutable UTC evaluation window no longer than 120 days; and
 - a guarded manual invocation has verified private write, activation, retry,
-  and rollback behavior.
+  rollback, and outcome reconciliation behavior.
 
 Keep `FORECAST_SHADOW_ENABLED` unset or set to `false` until those checks pass.
 Set it to exactly `true` only in the environment that is ready to run the
-private pipeline. Do not expose this variable with a `NEXT_PUBLIC_` prefix.
+private pipeline. The epoch variables are required only after that gate is
+enabled. Do not expose any of these variables with a `NEXT_PUBLIC_` prefix.
 
 The eventual Hobby cron may run within Vercel's documented hourly window. The
 08:43 UTC schedule keeps that window on the same UTC day. The function duration

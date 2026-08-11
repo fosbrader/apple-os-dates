@@ -228,11 +228,11 @@ function evidenceForDataset(dataset: HistoricalAnalysisDatasetV1): string[] {
   ]);
 }
 
-function evidenceForTarget(
-  cycle: HistoricalReleaseCycleRow,
-  anchor: HistoricalCanonicalEventRow,
-): string[] {
-  return uniqueSorted([...cycle.sourceEvidenceIds, ...anchor.sourceEvidenceIds]);
+function evidenceForTarget(anchor: HistoricalCanonicalEventRow): string[] {
+  // A target snapshot's anchor evidence must later compare exactly with the
+  // canonical anchor event during outcome reconciliation. Cycle inclusion
+  // evidence remains bound by the artifact-wide source provenance.
+  return uniqueSorted(anchor.sourceEvidenceIds);
 }
 
 function orderedCycleEvents(
@@ -498,7 +498,7 @@ function targetBase(
     anchorStage: anchor.stage,
     anchorOccurredOn: anchor.occurredOn,
     originOn: dataset.provenance.sourceAsOfDate,
-    sourceEvidenceIds: evidenceForTarget(cycle, anchor),
+    sourceEvidenceIds: evidenceForTarget(anchor),
     modelFingerprint,
     calibrationFingerprint,
   } as const;

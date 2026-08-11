@@ -1,6 +1,9 @@
 import { createForecastBlobStorage } from "@/lib/forecast-blob-storage";
-import { runForecastShadowPipeline } from "@/lib/forecast-shadow-pipeline";
-import { isValidForecastReconciliationRoot } from "@/lib/forecast-shadow-scoring";
+import { runForecastShadowWithReconciliation } from "@/lib/forecast-shadow-reconciliation-run";
+import {
+  buildForecastShadowEvaluationEpoch,
+  isValidForecastReconciliationRoot,
+} from "@/lib/forecast-shadow-scoring";
 import {
   PUBLISHED_HISTORICAL_RELEASE_FETCH_OPTIONS,
   boundedForecastShadowSourceQuery,
@@ -34,13 +37,25 @@ async function fetchPublishedSource(): Promise<PublishedForecastShadowSource> {
   return extractBoundedForecastShadowSource(envelope);
 }
 
+function configuredEvaluationEpoch() {
+  const startsOn = process.env.FORECAST_SHADOW_EPOCH_STARTS_ON?.trim();
+  const endsOn = process.env.FORECAST_SHADOW_EPOCH_ENDS_ON?.trim();
+  if (!startsOn || !endsOn) {
+    throw new Error("Forecast evaluation epoch is not configured.");
+  }
+  return buildForecastShadowEvaluationEpoch(startsOn, endsOn);
+}
+
 export const GET = createForecastShadowHandler({
   runForecastShadow: async (request) => {
-    await runForecastShadowPipeline(request, {
-      storage: createForecastBlobStorage({
-        reconciliationRootValidator: isValidForecastReconciliationRoot,
-      }),
+    const evaluationEpoch = configuredEvaluationEpoch();
+    const storage = createForecastBlobStorage({
+      reconciliationRootValidator: isValidForecastReconciliationRoot,
+    });
+    await runForecastShadowWithReconciliation(request, {
+      storage,
       fetchPublishedSource,
+      evaluationEpoch,
       validateReconciliationRoot: isValidForecastReconciliationRoot,
     });
   },

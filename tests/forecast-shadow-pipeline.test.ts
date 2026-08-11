@@ -20,6 +20,15 @@ import {
   buildForecastShadowArtifact,
   runForecastShadowPipeline,
 } from "../src/lib/forecast-shadow-pipeline";
+import {
+  ForecastShadowReconciledRunError,
+  runForecastShadowWithReconciliation,
+} from "../src/lib/forecast-shadow-reconciliation-run";
+import {
+  buildForecastShadowEvaluationEpoch,
+  isValidForecastReconciliationRoot,
+  parseForecastReconciliationIndex,
+} from "../src/lib/forecast-shadow-scoring";
 import { stableSerializeHistoricalAnalysis } from "../src/lib/historical-analysis-dataset";
 import {
   FORECAST_SHADOW_MAX_SOURCE_CANONICAL_BYTES,
@@ -188,11 +197,40 @@ function source(options: {
   };
 }
 
+function sourceWithResolvedActiveRelease(
+  input: PublishedForecastShadowSource,
+): PublishedForecastShadowSource {
+  return {
+    ...input,
+    releases: input.releases.map((release) =>
+      release.id === "active"
+        ? {
+            ...release,
+            lifecycle: "released" as const,
+            publicReleaseDate: "2026-08-10",
+            statusEffectiveOn: "2026-08-10",
+            statusFirstObservedAt: "2026-08-10T08:42:00.000Z",
+          }
+        : release,
+    ),
+    legacyForecastReleases: input.legacyForecastReleases.map((release) =>
+      release.id === "active"
+        ? {
+            ...release,
+            lifecycle: "released" as const,
+            publicReleaseDate: "2026-08-10",
+          }
+        : release,
+    ),
+  };
+}
+
 class MemoryStorage implements ForecastContractStorage {
   readonly atomicPointerCas = true;
   readonly files = new Map<string, Uint8Array>();
   failImmutable = false;
   blockActivation = false;
+  failNextReconciliationPointerCas = false;
 
   async readExact(path: string): Promise<Uint8Array | null> {
     return this.files.get(path)?.slice() ?? null;
@@ -223,6 +261,19 @@ class MemoryStorage implements ForecastContractStorage {
       this.blockActivation &&
       next.transition === "activate-shadow"
     ) {
+      return {
+        status: "mismatch",
+        atomic: true,
+        observedPreviousFingerprint,
+        observedPreviousGeneration,
+      };
+    }
+    if (
+      this.failNextReconciliationPointerCas &&
+      next.reconciliationRootArtifactId !==
+        current?.reconciliationRootArtifactId
+    ) {
+      this.failNextReconciliationPointerCas = false;
       return {
         status: "mismatch",
         atomic: true,
@@ -304,6 +355,7 @@ test("FR-014 builds deterministic exact-estimator public and next-event targets"
       ),
     );
     assert.equal(publicTarget.anchorEventId, "event:active-dev-1");
+    assert.deepEqual(publicTarget.sourceEvidenceIds, ["event:active-dev-1"]);
     assert.equal(publicTarget.productFamilyId, "iphone");
     assert.deepEqual(
       publicTarget.benchmarks.map((benchmark) => benchmark.benchmarkId),
@@ -486,6 +538,228 @@ test("FR-014 activates once and a same-day rerun performs no fetch or write", as
   assert.equal(rerun.status, "already-active");
   assert.equal(rerun.artifactId, first.artifactId);
   assert.equal(fetches, 1);
+});
+
+test("FR-015 reconciles the active private forecast from one shared source snapshot", async () => {
+  const storage = new MemoryStorage();
+  const epoch = buildForecastShadowEvaluationEpoch("2026-08-09", "2026-11-28");
+  let fetches = 0;
+  const dependencies = {
+    storage,
+    fetchPublishedSource: async () => {
+      fetches += 1;
+      return source({ historicalEventsPerRelease: 4 });
+    },
+    evaluationEpoch: epoch,
+    validateReconciliationRoot: isValidForecastReconciliationRoot,
+  };
+
+  const first = await runForecastShadowWithReconciliation(request, dependencies);
+  assert.equal(first.pipeline.status, "activated");
+  assert.equal(first.reconciliation.changed, true);
+  assert.equal(fetches, 1, "artifact and reconciliation share one source fetch");
+  const firstPointer = parseForecastPointer(
+    storage.files.get(FORECAST_POINTER_PATH)!,
+  );
+  assert.equal(
+    firstPointer.reconciliationRootArtifactId,
+    first.reconciliation.reconciliationRootArtifactId,
+  );
+  const rootBytes = storage.files.get(
+    reconciliationRootArtifactPath(first.reconciliation.reconciliationRootArtifactId),
+  )!;
+  assert.equal(
+    isValidForecastReconciliationRoot(
+      rootBytes,
+      first.reconciliation.reconciliationRootArtifactId,
+    ),
+    true,
+  );
+  const index = parseForecastReconciliationIndex(rootBytes);
+  assert.ok(index.pending.length > 0);
+  assert.ok(index.unavailableBenchmarks.length > 0);
+  assert.equal(first.health.summary.forecastCount, index.pending.length);
+
+  const replay = await runForecastShadowWithReconciliation(request, dependencies);
+  assert.equal(replay.pipeline.status, "already-active");
+  assert.equal(replay.reconciliation.changed, false);
+  assert.equal(fetches, 2, "same-day reconciliation still reads one fresh source snapshot");
+  const replayPointer = parseForecastPointer(
+    storage.files.get(FORECAST_POINTER_PATH)!,
+  );
+  assert.equal(
+    replayPointer.reconciliationRootArtifactId,
+    firstPointer.reconciliationRootArtifactId,
+  );
+});
+
+test("FR-015 scores an earlier forecast when a later published release resolves it", async () => {
+  const storage = new MemoryStorage();
+  const epoch = buildForecastShadowEvaluationEpoch("2026-08-09", "2026-11-28");
+  let currentSource = source({ historicalEventsPerRelease: 4 });
+  const dependencies = {
+    storage,
+    fetchPublishedSource: async () => currentSource,
+    evaluationEpoch: epoch,
+    validateReconciliationRoot: isValidForecastReconciliationRoot,
+  };
+
+  const origin = await runForecastShadowWithReconciliation(request, dependencies);
+  assert.equal(origin.pipeline.status, "activated");
+  assert.equal(origin.health.summary.scoredCount, 0);
+  assert.ok(origin.health.summary.pendingCount > 0);
+  if (origin.pipeline.status !== "activated") {
+    throw new Error("Expected an origin forecast artifact.");
+  }
+  const originArtifact = parseForecastArtifact(
+    storage.files.get(`forecast/artifacts/${origin.pipeline.artifactId}.json`)!,
+  );
+  const originPublicTarget = originArtifact.targets.find(
+    (target) =>
+      target.availability === "available" &&
+      target.targetKind === "public-release",
+  );
+  assert.ok(originPublicTarget?.availability === "available");
+  if (originPublicTarget?.availability !== "available") {
+    throw new Error("Expected an available origin public-release target.");
+  }
+  const availablePublicBenchmarkIds = originPublicTarget.benchmarks
+    .filter((benchmark) => benchmark.availability === "available")
+    .map((benchmark) => benchmark.benchmarkId);
+  assert.ok(availablePublicBenchmarkIds.length > 0);
+
+  currentSource = sourceWithResolvedActiveRelease(currentSource);
+
+  const resolved = await runForecastShadowWithReconciliation(
+    {
+      requestedAt: "2026-08-10T08:43:00.000Z",
+      scheduledFor: "2026-08-10",
+    },
+    dependencies,
+  );
+
+  assert.equal(resolved.pipeline.status, "skipped-no-active-cycles");
+  assert.equal(resolved.pipeline.targetCount, 0);
+  assert.equal(
+    resolved.reconciliation.newScoreArtifactIds.length,
+    availablePublicBenchmarkIds.length,
+  );
+  assert.equal(
+    resolved.health.summary.scoredCount,
+    availablePublicBenchmarkIds.length,
+  );
+  assert.ok(resolved.health.summary.dataGapCount >= 1);
+});
+
+test("FR-015 fails closed when no active cycle has no prior private artifact", async () => {
+  const storage = new MemoryStorage();
+  const epoch = buildForecastShadowEvaluationEpoch("2026-08-09", "2026-11-28");
+  let fetches = 0;
+
+  await assert.rejects(
+    () =>
+      runForecastShadowWithReconciliation(
+        {
+          requestedAt: "2026-08-10T08:43:00.000Z",
+          scheduledFor: "2026-08-10",
+        },
+        {
+          storage,
+          fetchPublishedSource: async () => {
+            fetches += 1;
+            return sourceWithResolvedActiveRelease(
+              source({ historicalEventsPerRelease: 4 }),
+            );
+          },
+          evaluationEpoch: epoch,
+          validateReconciliationRoot: isValidForecastReconciliationRoot,
+        },
+      ),
+    (error: unknown) =>
+      error instanceof ForecastShadowReconciledRunError &&
+      error.code === "invalid-storage",
+  );
+  assert.equal(fetches, 1);
+  assert.equal(storage.files.size, 0);
+});
+
+test("FR-015 retries one stale reconciliation pointer CAS without refetching", async () => {
+  const storage = new MemoryStorage();
+  storage.failNextReconciliationPointerCas = true;
+  const epoch = buildForecastShadowEvaluationEpoch("2026-08-09", "2026-11-28");
+  let fetches = 0;
+
+  const result = await runForecastShadowWithReconciliation(request, {
+    storage,
+    fetchPublishedSource: async () => {
+      fetches += 1;
+      return source({ historicalEventsPerRelease: 4 });
+    },
+    evaluationEpoch: epoch,
+    validateReconciliationRoot: isValidForecastReconciliationRoot,
+  });
+
+  assert.equal(result.pipeline.status, "activated");
+  assert.equal(result.reconciliation.changed, true);
+  assert.equal(fetches, 1);
+  assert.equal(storage.failNextReconciliationPointerCas, false);
+  assert.equal(
+    parseForecastPointer(storage.files.get(FORECAST_POINTER_PATH)!)
+      .reconciliationRootArtifactId,
+    result.reconciliation.reconciliationRootArtifactId,
+  );
+});
+
+test("FR-015 rejects an invalid evaluation epoch before source or storage work", async () => {
+  const storage = new MemoryStorage();
+  const epoch = buildForecastShadowEvaluationEpoch("2026-08-09", "2026-11-28");
+  let fetches = 0;
+  const dependencies = {
+    storage,
+    fetchPublishedSource: async () => {
+      fetches += 1;
+      return source({ historicalEventsPerRelease: 4 });
+    },
+    evaluationEpoch: { ...epoch, maxAuditRows: 0 } as unknown as typeof epoch,
+    validateReconciliationRoot: isValidForecastReconciliationRoot,
+  };
+  await assert.rejects(
+    () => runForecastShadowWithReconciliation(request, dependencies),
+    (error: unknown) =>
+      error instanceof ForecastShadowReconciledRunError &&
+      error.code === "invalid-evaluation-epoch",
+  );
+  assert.equal(fetches, 0);
+  assert.equal(storage.files.size, 0);
+});
+
+test("FR-015 rejects a noncanonical scheduled day before source or storage work", async () => {
+  const storage = new MemoryStorage();
+  const epoch = buildForecastShadowEvaluationEpoch("2026-08-09", "2026-11-28");
+  let fetches = 0;
+  await assert.rejects(
+    () =>
+      runForecastShadowWithReconciliation(
+        {
+          requestedAt: "2026-08-09T08:43:00.000Z",
+          scheduledFor: "2026-08-10",
+        },
+        {
+          storage,
+          fetchPublishedSource: async () => {
+            fetches += 1;
+            return source({ historicalEventsPerRelease: 4 });
+          },
+          evaluationEpoch: epoch,
+          validateReconciliationRoot: isValidForecastReconciliationRoot,
+        },
+      ),
+    (error: unknown) =>
+      error instanceof ForecastShadowReconciledRunError &&
+      error.code === "invalid-request",
+  );
+  assert.equal(fetches, 0);
+  assert.equal(storage.files.size, 0);
 });
 
 test("FR-014 resumes an interrupted candidate without rebuilding source", async () => {
