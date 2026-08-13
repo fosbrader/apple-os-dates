@@ -5,21 +5,87 @@ import { useEffect, useSyncExternalStore } from "react";
 type Theme = "system" | "light" | "dark";
 const THEME_CHANGE_EVENT = "apple-os-dates-theme-change";
 
+interface ThemeStorageReader {
+  getItem(key: string): string | null;
+}
+
+interface ThemeStorageWriter {
+  setItem(key: string, value: string): void;
+}
+
+export interface ThemePreferenceSnapshot {
+  storageAvailable: boolean;
+  theme: Theme;
+}
+
+let transientTheme: Theme = "system";
+let preferTransientTheme = false;
+
 function isTheme(value: string | null): value is Theme {
   return value === "system" || value === "light" || value === "dark";
 }
 
+export function readThemePreference(
+  storage: ThemeStorageReader | null,
+  fallback: Theme = "system",
+): ThemePreferenceSnapshot {
+  if (!storage) {
+    return { storageAvailable: false, theme: fallback };
+  }
+
+  try {
+    const stored = storage.getItem("theme");
+    return {
+      storageAvailable: true,
+      theme: isTheme(stored) ? stored : "system",
+    };
+  } catch {
+    return { storageAvailable: false, theme: fallback };
+  }
+}
+
+export function storeThemePreference(
+  storage: ThemeStorageWriter | null,
+  theme: Theme,
+): boolean {
+  if (!storage) return false;
+
+  try {
+    storage.setItem("theme", theme);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function getBrowserStorage(): Storage | null {
+  try {
+    return window.localStorage;
+  } catch {
+    return null;
+  }
+}
+
 function getStoredTheme(): Theme {
   if (typeof window === "undefined") return "system";
-  const stored = localStorage.getItem("theme");
-  return isTheme(stored) ? stored : "system";
+  if (preferTransientTheme) return transientTheme;
+
+  const snapshot = readThemePreference(getBrowserStorage(), transientTheme);
+  transientTheme = snapshot.theme;
+  preferTransientTheme = !snapshot.storageAvailable;
+  return snapshot.theme;
 }
 
 function subscribeToTheme(onStoreChange: () => void) {
-  window.addEventListener("storage", onStoreChange);
+  function onStorage() {
+    preferTransientTheme = false;
+    onStoreChange();
+  }
+
+  window.addEventListener("storage", onStorage);
   window.addEventListener(THEME_CHANGE_EVENT, onStoreChange);
   return () => {
-    window.removeEventListener("storage", onStoreChange);
+    window.removeEventListener("storage", onStorage);
     window.removeEventListener(THEME_CHANGE_EVENT, onStoreChange);
   };
 }
@@ -49,8 +115,9 @@ export function ThemeToggle() {
   function cycleTheme() {
     const next: Theme =
       theme === "system" ? "dark" : theme === "dark" ? "light" : "system";
+    transientTheme = next;
     applyTheme(next);
-    localStorage.setItem("theme", next);
+    preferTransientTheme = !storeThemePreference(getBrowserStorage(), next);
     window.dispatchEvent(new Event(THEME_CHANGE_EVENT));
   }
 

@@ -17,6 +17,7 @@ const exploreLinks = [
 
 const projectLinks = [
   { href: "/about/", label: "About" },
+  { href: "/news/", label: "Site news" },
   { href: "/methodology/", label: "Methodology" },
   { href: "/sources/", label: "Editorial policy" },
   { href: "/corrections/", label: "Corrections" },
@@ -44,7 +45,7 @@ export function Footer() {
         </p>
         <Link href="/contact/" className="text-link">
           Report an issue
-          <span aria-hidden="true">↗</span>
+          <span aria-hidden="true">→</span>
         </Link>
       </div>
 
@@ -99,14 +100,18 @@ export function Footer() {
         </p>
         <p>Structured archive data is published under CC0; editorial prose is protected.</p>
         <p className="site-footer__version">
-          <span>
-            Site version <strong>{siteVersion}</strong>
+          <span className="site-footer__version-meta">
+            Build version <strong>{siteVersion}</strong>
           </span>
-          <span>
-            Updated{" "}
+          <span className="site-footer__version-meta">
+            Built{" "}
             <time dateTime={siteUpdatedAt}>
               {formatSiteUpdatedAt(siteUpdatedAt)}
             </time>
+          </span>
+          <span className="site-footer__version-note">
+            This build version identifies the deployed site code, not content
+            freshness. Archive data and editorial content can update separately.
           </span>
         </p>
       </div>

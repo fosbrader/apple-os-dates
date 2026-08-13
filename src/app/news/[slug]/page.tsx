@@ -245,10 +245,10 @@ export default async function ArticlePage({
         {isDraftPreview && socialImageUrl ? (
           <aside
             aria-label="Rich link preview"
-            className="mx-auto w-full max-w-[38rem] space-y-3 rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-4 shadow-sm"
+            className="mx-auto w-full max-w-[38rem] space-y-3 rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] p-4 shadow-sm"
           >
             <p className="section-kicker">Rich link preview</p>
-            <div className="overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--background)]">
+            <div className="overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg-subtle)]">
               <Image
                 alt="Version Record launch article social preview"
                 className="h-auto w-full"
@@ -267,7 +267,7 @@ export default async function ArticlePage({
                 <p className="font-mono text-[0.65rem] uppercase tracking-[0.12em] text-[var(--text-tertiary)]">
                   versionrecord.com
                 </p>
-                <p className="text-base font-semibold text-[var(--text-primary)]">
+                <p className="text-base font-semibold text-[var(--text)]">
                   {page.title}
                 </p>
                 <p className="line-clamp-2 text-sm text-[var(--text-secondary)]">
