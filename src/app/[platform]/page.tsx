@@ -353,7 +353,7 @@ export default async function PlatformPage({
                                   className="text-[var(--text-tertiary)] group-hover:text-[var(--accent)]"
                                   aria-hidden="true"
                                 >
-                                  ↗
+                                  →
                                 </span>
                               </Link>
                             </td>

@@ -8,6 +8,17 @@ interface CopyCodeButtonProps {
   className: string;
 }
 
+type CopyStatus = "idle" | "copied" | "failed";
+
+export function copyStatusAnnouncement(
+  status: CopyStatus,
+  label: string,
+): string {
+  if (status === "copied") return `Copied ${label}.`;
+  if (status === "failed") return `Could not copy ${label}.`;
+  return "";
+}
+
 function copyWithFallback(value: string): boolean {
   const textarea = document.createElement("textarea");
   textarea.value = value;
@@ -26,7 +37,7 @@ export function CopyCodeButton({
   label,
   className,
 }: CopyCodeButtonProps) {
-  const [status, setStatus] = useState<"idle" | "copied" | "failed">("idle");
+  const [status, setStatus] = useState<CopyStatus>("idle");
 
   async function copy() {
     try {
@@ -45,13 +56,23 @@ export function CopyCodeButton({
     status === "copied" ? "Copied" : status === "failed" ? "Copy failed" : "Copy";
 
   return (
-    <button
-      type="button"
-      className={className}
-      onClick={copy}
-      aria-label={`Copy ${label}`}
-    >
-      {statusText}
-    </button>
+    <>
+      <button
+        type="button"
+        className={className}
+        onClick={copy}
+        aria-label={`Copy ${label}`}
+      >
+        {statusText}
+      </button>
+      <span
+        className="sr-only"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      >
+        {copyStatusAnnouncement(status, label)}
+      </span>
+    </>
   );
 }

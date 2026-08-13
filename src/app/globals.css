@@ -3086,10 +3086,15 @@ body:has(#sanity) > main {
   font-weight: 700;
 }
 
-.site-footer__version span + span::before {
+.site-footer__version-meta + .site-footer__version-meta::before {
   margin-right: 0.5rem;
   color: var(--text-tertiary);
   content: "\00b7";
+}
+
+.site-footer__version-note {
+  flex-basis: 100%;
+  color: var(--text-tertiary);
 }
 
 /* ─── Motion and form controls ─────────────────────────────────────── */
@@ -3325,7 +3330,7 @@ option {
     display: block;
   }
 
-  .site-footer__lead .button {
+  .site-footer__lead .text-link {
     margin-top: 1.4rem;
   }
 
@@ -3341,7 +3346,7 @@ option {
     margin-top: 0.6rem;
   }
 
-  .site-footer__version span + span::before {
+  .site-footer__version-meta + .site-footer__version-meta::before {
     display: none;
   }
 

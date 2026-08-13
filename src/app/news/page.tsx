@@ -83,7 +83,7 @@ export default async function NewsPage() {
 
             return (
               <li key={article._id}>
-                <article className="grid overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--surface)] md:grid-cols-[minmax(17rem,0.8fr)_minmax(0,1.2fr)]">
+                <article className="grid overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] md:grid-cols-[minmax(17rem,0.8fr)_minmax(0,1.2fr)]">
                   {article.image?.url ? (
                     <Link
                       aria-label={`Read ${article.title}`}
@@ -107,7 +107,7 @@ export default async function NewsPage() {
                   <div className="flex flex-col justify-between gap-8 p-6 sm:p-8">
                     <div className="space-y-4">
                       <p className="section-kicker">Project update</p>
-                      <h2 className="font-serif text-3xl leading-tight tracking-[-0.025em] text-[var(--text-primary)]">
+                      <h2 className="font-serif text-3xl leading-tight tracking-[-0.025em] text-[var(--text)]">
                         <Link className="hover:text-[var(--accent)]" href={href}>
                           {article.title}
                         </Link>

@@ -17,6 +17,14 @@ const applePlatforms = [
 const legacyHosts = [
   "apple-os-dates.vercel.app",
 ];
+const securityHeaders = [
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  {
+    key: "Permissions-Policy",
+    value: "camera=(), microphone=(), geolocation=()",
+  },
+];
 
 /**
  * Canonical URLs are bimodal: leaf segments containing a period (version
@@ -48,6 +56,7 @@ function legacyPlatformRedirects(
 
 const nextConfig: NextConfig = {
   basePath,
+  poweredByHeader: false,
   trailingSlash: true,
   env: {
     NEXT_PUBLIC_SITE_VERSION: siteBuildMetadata.version,
@@ -57,6 +66,14 @@ const nextConfig: NextConfig = {
   // serverless output tracing bundles them.
   outputFileTracingIncludes: {
     "/**": ["./src/assets/fonts/*.woff"],
+  },
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: securityHeaders,
+      },
+    ];
   },
   async redirects() {
     return [
