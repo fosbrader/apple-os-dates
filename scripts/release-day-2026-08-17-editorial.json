@@ -1,0 +1,812 @@
+{
+  "accessedAt": "2026-08-17",
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "sources": [
+    {
+      "url": "https://9to5mac.com/2026/08/17/heres-whats-new-with-ios-27-beta-6/",
+      "title": "Here’s what’s new with iOS and macOS 27 beta 6",
+      "publisher": "9to5Mac",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-17T00:00:00Z"
+    },
+    {
+      "url": "https://9to5mac.com/2026/08/17/macos-27-golden-gate-beta-6-features-redesigned-traffic-light-window-controls/",
+      "title": "macOS 27 Golden Gate beta 6 features redesigned traffic light window controls",
+      "publisher": "9to5Mac",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-17T00:00:00Z"
+    },
+    {
+      "url": "https://appleinsider.com/articles/26/08/10/apple-preps-beta-security-updates-for-ios-18-ios-26-and-macos-26",
+      "title": "Apple preps iOS 18, iOS 26, and macOS 26 security updates",
+      "publisher": "AppleInsider",
+      "sourceClass": "journalism"
+    },
+    {
+      "url": "https://appleinsider.com/articles/26/08/17/latest-macos-golden-gate-beta-adds-unique-dynamic-wallpapers",
+      "title": "macOS Golden Gate gets unique dynamic wallpapers with beta 6",
+      "publisher": "AppleInsider",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-17T00:00:00Z"
+    },
+    {
+      "url": "https://developer.apple.com/news/releases/",
+      "title": "Releases - Apple Developer",
+      "publisher": "Apple Developer",
+      "sourceClass": "firstPartyDocumentation"
+    },
+    {
+      "url": "https://forums.macrumors.com/threads/ios-27-beta-6-bug-fixes-changes-and-improvements.2487026/",
+      "title": "iOS 27 Beta 6 ― Bug Fixes, Changes, and Improvements",
+      "publisher": "MacRumors Forums",
+      "sourceClass": "community"
+    },
+    {
+      "url": "https://forums.macrumors.com/threads/macos-golden-gate-27-0-beta-6-whats-new.2487030/",
+      "title": "macOS Golden Gate 27.0 Beta 6 - What’s New",
+      "publisher": "MacRumors Forums",
+      "sourceClass": "community"
+    },
+    {
+      "url": "https://ioshacker.com/iphone/apple-releases-ios-27-beta-6-for-developers-heres-whats-changed",
+      "title": "Apple Releases iOS 27 Beta 6 For Developers - Here's What's Changed",
+      "publisher": "iOS Hacker",
+      "sourceClass": "journalism"
+    },
+    {
+      "url": "https://support.apple.com/en-us/100100",
+      "title": "Apple security releases",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation"
+    },
+    {
+      "url": "https://support.apple.com/en-us/148170",
+      "title": "About the security content of macOS Tahoe 26.6.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation"
+    },
+    {
+      "url": "https://support.apple.com/en-us/148281",
+      "title": "About the security content of macOS Tahoe 26.6.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation"
+    },
+    {
+      "url": "https://support.apple.com/en-us/148282",
+      "title": "About the security content of iOS 26.6.1 and iPadOS 26.6.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation"
+    },
+    {
+      "url": "https://support.apple.com/en-us/148287",
+      "title": "About the security content of iOS 18.7.10 and iPadOS 18.7.10",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation"
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/10/apple-releases-macos-tahoe-26-6-2/",
+      "title": "Apple Releases macOS Tahoe 26.6.2 Beta With Security Fixes",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism"
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/17/apple-seeds-sixth-ios-27-developer-beta/",
+      "title": "Apple Seeds Sixth iOS 27 and iPadOS 27 Betas to Developers",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-17T00:00:00Z"
+    }
+  ],
+  "records": [
+    {
+      "stableEventId": "event:apple:ios:27.0:beta-6",
+      "paragraphs": [
+        "Apple seeded the sixth developer beta of iOS 27.0 on August 17, 2026, as build 24A5418b, replacing the beta 5 build 24A5408d. The release went to the developer channel only, and it was a first seed rather than a respin of an existing one.",
+        "The interval is the notable fact. Beta 6 landed seven days after beta 5, the shortest gap anywhere in the iOS 27 cycle. Betas 1 through 4 had run on a strict fortnight: June 8, June 22, July 6, and July 20. Beta 5 broke that pattern, arriving August 10 after a 21 day gap. Beta 6 falls exactly 28 days after beta 4, which is two fortnights, so the short turnaround does not accelerate the cycle so much as return it to the grid it had slipped off.",
+        "The observable change list is short. The Messages regression introduced in beta 5, in which a band across the top of the conversation list sat over the pinned conversation row and left those pins untappable until the list was scrolled away and back, no longer reproduces. Testers reported the pins behaving normally again in the MacRumors beta 6 thread and in the comments on MacRumors' own release post, and iOS Hacker recorded the same result. The other visible change is an animation: dismissing a notification now collapses it toward the Notification Center indicator instead of fading it out in place, tying the gesture visually to where the notification is going.",
+        "Two items, one closed regression and one animation refinement, is a thin list, and that is the finding rather than a gap to paper over. Apple publishes no changelog for these developer seeds, so any public list reflects what testers could observe rather than everything that moved in the build. A late beta that trades visible feature work for stability work is the ordinary shape of a cycle approaching an expected September release."
+      ],
+      "changes": [
+        {
+          "key": "ios-27-beta6-messages-pinned-conversation-regression-fixed",
+          "title": "Messages pinned-conversation regression from beta 5 no longer reproduces",
+          "canonicalSummary": "A Messages defect introduced one seed earlier, where an element at the top of the conversation list obscured the pinned conversation row and blocked taps on it, stops reproducing.",
+          "category": "bugFix",
+          "action": "fixed",
+          "summary": "iOS 27.0 beta 6 closes the regression that shipped in beta 5, in which a band across the top of the Messages conversation list overlaid the pinned conversation row and left those pins untappable until the list was scrolled away and back. Multiple testers reported normal pin behavior restored after updating to beta 6.",
+          "evidence": [
+            {
+              "url": "https://9to5mac.com/2026/08/17/heres-whats-new-with-ios-27-beta-6/",
+              "locator": "Section 'iOS and macOS 27 beta 6: What's new?', first listed item, stating the Pinned Messages user interface bug from beta 5 appears resolved in beta 6"
+            },
+            {
+              "url": "https://ioshacker.com/iphone/apple-releases-ios-27-beta-6-for-developers-heres-whats-changed",
+              "locator": "Change list body, the single documented item, stating the Pinned Messages interface bug seen in beta 5 appears fixed in beta 6"
+            },
+            {
+              "url": "https://www.macrumors.com/2026/08/17/apple-seeds-sixth-ios-27-developer-beta/",
+              "locator": "Top-rated reader comment describing the beta 5 behavior where the top banner covered the pinned messages list and required scrolling up and down to clear, and reporting it back to normal in beta 6"
+            },
+            {
+              "url": "https://forums.macrumors.com/threads/ios-27-beta-6-bug-fixes-changes-and-improvements.2487026/",
+              "locator": "Thread 'iOS 27 Beta 6 Bug Fixes, Changes, and Improvements', tester posts confirming the pinned conversation issue is resolved after updating"
+            }
+          ]
+        },
+        {
+          "key": "ios-27-beta6-notification-dismissal-animation",
+          "title": "Notification dismissal animation collapses toward the Notification Center indicator",
+          "canonicalSummary": "The dismissal transition for a notification changes so the banner contracts toward the onscreen Notification Center indicator instead of fading out where it sits.",
+          "category": "enhancement",
+          "action": "changed",
+          "summary": "In iOS 27.0 beta 6 a dismissed notification animates toward the Notification Center indicator before it disappears, replacing the in-place fade used in earlier seeds and giving the dismissal gesture a visual link to where the notification is stored.",
+          "evidence": [
+            {
+              "url": "https://9to5mac.com/2026/08/17/heres-whats-new-with-ios-27-beta-6/",
+              "locator": "Section 'iOS and macOS 27 beta 6: What's new?', the updated iOS notification animation item and its accompanying video demonstration showing the notification morphing into the Notification Center indicator before disappearing"
+            }
+          ]
+        }
+      ],
+      "verificationMethod": "Fetched the three orchestrator-supplied starting points plus MacRumors' own iOS 27 beta 6 release post, the MacRumors 'iOS 27 Beta 6 Bug Fixes, Changes, and Improvements' forum thread, and iOS Hacker's beta 6 post. Cross-checked each candidate change against at least two independent sources before recording. Rejected the MacDailyNews beta 6 list (screen recording indicator, Siri glyph replacing the Apple Intelligence symbol, Night Mode 'A' badge in Camera, company names in Contacts, duplicate Control Center cellular indicator) because no other outlet reports any of it and the same article miscounts the beta 5 to beta 6 interval as six days when it is seven, which undercuts its reliability. Also rejected Geeky Gadgets material as speculative and cycle-wide rather than seed-specific.",
+      "provenanceStatus": "editoriallyVerified"
+    },
+    {
+      "stableEventId": "event:apple:ipados:27.0:beta-6",
+      "paragraphs": [
+        "iPadOS 27.0 beta 6 went to developers on August 17, 2026, as build 24A5418b, the same build string iOS 27.0 beta 6 carries. It replaced 24A5408d and was a first seed rather than a revision.",
+        "The seed arrived seven days after beta 5, the shortest interval of the cycle, and exactly 28 days after beta 4. Betas 1 through 4 were seeded on a fortnightly cadence before a 21 day gap pushed beta 5 to August 10, so beta 6 puts the schedule back where the fortnightly pattern would have placed it anyway.",
+        "Version Record records no change occurrences for this appearance. Day of coverage from 9to5Mac, MacRumors, and AppleInsider worked through beta 6 by way of iPhone and Mac, and none of it attributed a specific behavior or interface change to iPadOS. A few individual tester accounts on the MacRumors beta 6 thread mention iPad improvements, but they are uncorroborated and do not identify a change that can be attached to a source with confidence. iPadOS 27.0 and iOS 27.0 share a build string, which is a fact about how Apple compiles the two systems, not evidence that a change seen on iPhone also landed on iPad. Copying the iOS list onto this record would be an assumption dressed as an archive entry."
+      ],
+      "changes": [],
+      "verificationMethod": "Searched specifically for iPadOS 27 beta 6 change coverage and fetched 9to5Mac's iPadOS-inclusive beta 6 post, AppleInsider's six-platform roundup, and MacRumors' joint iOS and iPadOS beta 6 release post. None attributes a single behavior or interface change to iPadOS beta 6. Also reviewed the MacRumors beta 6 forum thread, where a small number of individual testers mention iPad items such as Magic Keyboard typing and a Safari toolbar dead zone; these are uncorroborated single posts and no outlet picked them up, so none met the bar for recording.",
+      "provenanceStatus": "sourceLinked"
+    },
+    {
+      "stableEventId": "event:apple:macos:27.0:beta-6",
+      "paragraphs": [
+        "Apple released the sixth developer beta of macOS 27.0, named Golden Gate, on August 17, 2026, as build 26A5416b. It replaced the beta 5 build 26A5406e and was a first seed rather than a revision.",
+        "Beta 6 arrived seven days after beta 5, the shortest interval of the cycle. Apple has seeded all six of the 27 generation platforms on the same days throughout, and on that shared schedule beta 6 falls exactly 28 days after beta 4. Betas 1 through 4 ran fortnightly before a 21 day gap pushed beta 5 to August 10, so the one week turnaround restores the original two week rhythm rather than compressing it.",
+        "Three visible changes are attributable to this seed, and all three are cosmetic. The traffic light window controls were redrawn: the close, minimize, and zoom buttons now carry shading along their top and bottom edges that reads as depth rather than as flat discs, a look several testers compared to the Aqua controls of early Mac OS X. Preview's application icon was replaced with the version that had reached iOS in beta 5, closing a one week gap between the two platforms. Apple also added two dynamic wallpapers of the Golden Gate Bridge, one in daylight and one in the evening, joining the sunset and night versions already present.",
+        "A redrawn set of window buttons, an icon brought into line with its iPhone counterpart, and two wallpapers is a cosmetic list, and saying so is more useful than implying that more happened. AppleInsider characterized the seed as weighted toward work beneath the surface rather than new material for developers to test. Apple ships no changelog with these developer seeds, so what is recorded here is what testers could observe, not a complete account of the build."
+      ],
+      "changes": [
+        {
+          "key": "macos-27-beta6-traffic-light-window-controls-redrawn",
+          "title": "Traffic light window controls redrawn with added depth",
+          "canonicalSummary": "The close, minimize, and zoom window controls are redrawn with shading at their upper and lower edges so they render as dimensional buttons rather than flat coloured discs.",
+          "category": "enhancement",
+          "action": "changed",
+          "summary": "macOS 27.0 Golden Gate beta 6 replaces the flat traffic light buttons used through beta 5 with a version carrying shading along the top and bottom of each control. Outlets describe the result differently, as a Liquid Glass treatment giving the buttons three dimensional form and as a return to the more detailed Aqua controls of early Mac OS X, but both describe the same redraw.",
+          "evidence": [
+            {
+              "url": "https://9to5mac.com/2026/08/17/macos-27-golden-gate-beta-6-features-redesigned-traffic-light-window-controls/",
+              "locator": "Headline and opening body, stating macOS 27 Golden Gate beta 6 introduces redesigned traffic light window controls whose new look carries more detail in each button and resembles the classic Aqua design of early OS X versions"
+            },
+            {
+              "url": "https://appleinsider.com/articles/26/08/17/latest-macos-golden-gate-beta-adds-unique-dynamic-wallpapers",
+              "locator": "Window controls passage, describing the traffic light icons used to resize, minimize, and maximize windows as given a Liquid Glass makeover, with subtle shadows along the top and bottom making them resemble three dimensional glass buttons rather than flat circles"
+            },
+            {
+              "url": "https://forums.macrumors.com/threads/macos-golden-gate-27-0-beta-6-whats-new.2487030/",
+              "locator": "Thread WikiPost 'What's New' list, entry for liquid glass traffic lights, with tester screenshots and a comment likening the result to Aqua"
+            },
+            {
+              "url": "https://9to5mac.com/2026/08/17/heres-whats-new-with-ios-27-beta-6/",
+              "locator": "Section 'iOS and macOS 27 beta 6: What's new?', item listing redesigned stoplight window controls in macOS 27 Golden Gate"
+            }
+          ]
+        },
+        {
+          "key": "macos-27-beta6-preview-icon-aligned-with-ios",
+          "title": "Preview application icon aligned with the iOS icon from beta 5",
+          "canonicalSummary": "The Preview application icon on the desktop platform is replaced with the redesigned artwork that reached the mobile platform one seed earlier.",
+          "category": "enhancement",
+          "action": "changed",
+          "summary": "macOS 27.0 Golden Gate beta 6 updates the Preview app icon to match the redesigned icon Apple shipped on iOS in beta 5 a week earlier, bringing the two platforms onto the same artwork.",
+          "evidence": [
+            {
+              "url": "https://9to5mac.com/2026/08/17/heres-whats-new-with-ios-27-beta-6/",
+              "locator": "Section 'iOS and macOS 27 beta 6: What's new?', item noting the updated Preview icon on the Mac matching the iOS version from the previous week"
+            },
+            {
+              "url": "https://9to5mac.com/2026/08/17/macos-27-golden-gate-beta-6-features-redesigned-traffic-light-window-controls/",
+              "locator": "Other changes passage, noting the Preview app icon redesigned to match the update introduced in iOS 27 beta 5"
+            },
+            {
+              "url": "https://forums.macrumors.com/threads/macos-golden-gate-27-0-beta-6-whats-new.2487030/",
+              "locator": "Thread post reporting that the new Preview icon from iOS 27 beta 5 is now present on the Mac"
+            }
+          ]
+        },
+        {
+          "key": "macos-27-beta6-golden-gate-dynamic-wallpapers",
+          "title": "Two Golden Gate Bridge dynamic wallpapers added",
+          "canonicalSummary": "Two additional dynamic wallpapers depicting the landmark the release is named after are added, expanding the existing set of variants for that location.",
+          "category": "feature",
+          "action": "introduced",
+          "summary": "macOS 27.0 Golden Gate beta 6 adds two dynamic wallpapers of the Golden Gate Bridge, one daytime and one evening, which join the sunset and night variants already in the release. They follow Apple's pattern of shipping dynamic wallpapers of the real location a macOS version is named for, distinct from the abstract backgrounds shown at WWDC.",
+          "evidence": [
+            {
+              "url": "https://appleinsider.com/articles/26/08/17/latest-macos-golden-gate-beta-adds-unique-dynamic-wallpapers",
+              "locator": "Opening body, stating that with the latest developer beta Apple added two dynamic wallpapers both featuring the Golden Gate Bridge, effectively video files, one a daytime view and one an evening view, and the surrounding note that dynamic wallpapers show the real world location a given macOS update is named after"
+            },
+            {
+              "url": "https://9to5mac.com/2026/08/17/heres-whats-new-with-ios-27-beta-6/",
+              "locator": "Section 'iOS and macOS 27 beta 6: What's new?', item stating the Golden Gate Day and Golden Gate Evening dynamic wallpapers join the Sunset and Night versions"
+            },
+            {
+              "url": "https://forums.macrumors.com/threads/macos-golden-gate-27-0-beta-6-whats-new.2487030/",
+              "locator": "Thread post captioned as more Golden Gate live wallpapers, with an accompanying screenshot of the wallpaper picker"
+            }
+          ]
+        }
+      ],
+      "verificationMethod": "Fetched MacRumors' macOS Golden Gate beta 6 release post, 9to5Mac's dedicated traffic light article, 9to5Mac's combined iOS and macOS beta 6 changes post, AppleInsider's dedicated wallpaper article, AppleInsider's six-platform roundup, and the MacRumors 'macOS Golden Gate 27.0 Beta 6 What's New' forum WikiPost. Each of the three recorded changes is supported by at least two independent outlets plus tester confirmation. Filtered out the large body of macOS 27 cycle material in the MacRumors release post (Liquid Glass transparency slider, Siri overhaul, Spotlight integration, Photos AI editing, Safari tab organization, Passwords, Image Playground), none of which is a beta 6 delta.",
+      "provenanceStatus": "editoriallyVerified"
+    },
+    {
+      "stableEventId": "event:apple:ios:26.6.1:public",
+      "paragraphs": [
+        "iOS 26.6.1 reached public release on August 17, 2026 as build 23G83, listed by Apple alongside iPadOS 26.6.1 on the same day. It is a security release. The supporting document, Apple advisory 148282, carries 21 vulnerability entries followed by an Additional recognition section that thanks three researchers without assigning CVEs. It documents only security content, and Apple published no accompanying feature notes for the build.",
+        "The advisory contains 21 entries covering 29 distinct CVE identifiers across eight component headings: Audio, ImageIO, IOGPUFamily, Kernel, Telephony, WebKit, WebKit History, and WebKit Storage. The distribution is heavily weighted toward the browser engine. WebKit alone accounts for 19 of the 29 identifiers, and WebKit History and WebKit Storage contribute one each, putting 21 of 29 fixes in WebKit and its adjacent layers. Kernel carries three, ImageIO two, and Audio, IOGPUFamily, and Telephony one apiece.",
+        "Nine of the WebKit credit lines name OpenAI Codex Security. Eight of the nine credit it as the sole finder, attributed to Amy Burnett, and the ninth, CVE-2026-64784, shares credit with Janggoon Lee of Out of Bounds. All nine fall under the plain WebKit heading rather than under WebKit History or WebKit Storage. That is nine of the 19 identifiers under the plain WebKit heading, eight of them credited to that group alone. One entry is scoped more narrowly than the rest: the Telephony fix, CVE-2026-65329, carries an availability line reading only \"iPhone 11 and later\" where the other 20 entries also enumerate iPad models. Its impact line describes an attacker in a privileged network position bypassing IPSec authentication and intercepting network traffic, and the fix is described as an authentication issue addressed with improved state management. Apple credits it to Bedran Karakoc, Tobias Funke, Jacopo Clark, Katharina Kohls of Ruhr University Bochum.",
+        "The advisory opens with a sentence about where the fixes came from: \"This update delivers security fixes that were first made available in the iOS 27 and iPadOS 27 betas.\" By Apple's account these fixes reached users through the unreleased next major train before they reached the shipping 26 train. The build number also moved between candidate and ship. Apple seeded 23G82 as a candidate on August 10, and the version that went public seven days later is 23G83, one increment higher. Apple has published no explanation for the respin, and none of the 21 entries contains any reference to exploitation."
+      ],
+      "changes": [
+        {
+          "key": "ios-26-6-1.security-only-release",
+          "title": "Security-only release with 29 CVEs across eight components",
+          "canonicalSummary": "Point release shipped as a pure security update with no documented functional changes.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "iOS 26.6.1 (23G83) shipped on August 17, 2026 carrying 21 advisory entries that cover 29 distinct CVE identifiers across Audio, ImageIO, IOGPUFamily, Kernel, Telephony, WebKit, WebKit History, and WebKit Storage, with no feature or interface change documented by Apple.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "Section heading \"iOS 26.6.1 and iPadOS 26.6.1\", line \"Released August 17, 2026\", followed by all 21 component entries through the end of the document"
+            },
+            {
+              "url": "https://developer.apple.com/news/releases/",
+              "locator": "Releases list, entry \"iOS 26.6.1 (23G83)\" dated August 17, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-6-1.webkit-family-concentration",
+          "title": "21 of 29 fixes land in WebKit and its adjacent components",
+          "canonicalSummary": "The release concentrates its vulnerability fixes in the WebKit engine and its history and storage layers.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "WebKit accounts for 19 of the 29 CVE identifiers in the advisory, with WebKit History and WebKit Storage adding one each, so 21 of 29 fixes sit in the browser engine and its adjacent layers; Kernel carries three, ImageIO two, and Audio, IOGPUFamily, and Telephony one each.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "WebKit, WebKit History, and WebKit Storage entries, counted against the Audio, ImageIO, IOGPUFamily, Kernel, and Telephony entries in the same document"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-6-1.openai-codex-security-webkit-credits",
+          "title": "Nine WebKit credits name OpenAI Codex Security",
+          "canonicalSummary": "Nine WebKit vulnerability credits in the release name OpenAI Codex Security.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "Exactly nine credit lines in the advisory name OpenAI Codex Security, all of them under the WebKit heading: CVE-2026-64780, CVE-2026-64784, CVE-2026-65331, CVE-2026-65332, CVE-2026-65333, CVE-2026-65334, CVE-2026-65335, CVE-2026-65337, and CVE-2026-65338. Eight credit it alone, attributed to Amy Burnett, and CVE-2026-64784 shares credit with Janggoon Lee of Out of Bounds.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "WebKit section, credit lines for CVE-2026-64780, CVE-2026-64784, CVE-2026-65331, CVE-2026-65332, CVE-2026-65333, CVE-2026-65334, CVE-2026-65335, CVE-2026-65337, CVE-2026-65338"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-6-1.telephony-ipsec-authentication-bypass",
+          "title": "iPhone-only Telephony fix for an IPSec authentication bypass",
+          "canonicalSummary": "A Telephony authentication flaw allowing IPSec bypass and traffic interception is fixed for iPhone only.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "CVE-2026-65329 in Telephony is the one entry scoped to \"iPhone 11 and later\" with no iPad models listed. Apple describes the impact as an attacker in a privileged network position being able to bypass IPSec authentication and intercept network traffic, and the fix as an authentication issue addressed with improved state management. Credited to Bedran Karakoc, Tobias Funke, Jacopo Clark, and Katharina Kohls of Ruhr University Bochum.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "Telephony section: \"Available for: iPhone 11 and later\", Impact, Description, and CVE-2026-65329 credit line"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-6-1.beta-first-fix-provenance-statement",
+          "title": "Advisory states the fixes reached the iOS 27 betas first",
+          "canonicalSummary": "Apple states in the advisory that the shipped fixes were first made available in the next major version's betas.",
+          "category": "behavior",
+          "action": "introduced",
+          "summary": "The advisory opens with the sentence \"This update delivers security fixes that were first made available in the iOS 27 and iPadOS 27 betas.\" Apple is stating that these patches reached the unreleased next major train before the current shipping one, making 26.6.1 the backport rather than the origin.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "Opening paragraph, first sentence, immediately above the \"About Apple security updates\" heading"
+            }
+          ]
+        },
+        {
+          "key": "ios-26-6-1.candidate-to-ship-build-increment",
+          "title": "Shipping build is one increment above the August 10 candidate",
+          "canonicalSummary": "The public build number sits one increment above the prerelease candidate seeded a week earlier.",
+          "category": "behavior",
+          "action": "changed",
+          "summary": "Apple seeded iOS 26.6.1 as build 23G82 on August 10, 2026 and shipped 23G83 to the public on August 17, one build increment higher. Apple has published no statement explaining the change, and the advisory contains no reference to exploitation.",
+          "evidence": [
+            {
+              "url": "https://developer.apple.com/news/releases/",
+              "locator": "Releases list, entry \"iOS 26.6.1 (23G83)\" dated August 17, 2026"
+            },
+            {
+              "url": "https://appleinsider.com/articles/26/08/10/apple-preps-beta-security-updates-for-ios-18-ios-26-and-macos-26",
+              "locator": "Release list in the article body: \"iOS 26.6.1 (23G82)\" and \"iPadOS 26.6.1 (23G82)\""
+            },
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "Full document text, searched for exploitation language with no matches"
+            }
+          ]
+        }
+      ],
+      "verificationMethod": "Fetched and parsed https://support.apple.com/en-us/148282 and https://support.apple.com/en-us/148170 directly with curl, stripped markup, and counted component headings, entry blocks, and distinct CVE identifiers programmatically. Cross-checked the shipping build against the Apple Developer releases index and the August 10 candidate build against contemporaneous reporting.",
+      "provenanceStatus": "editoriallyVerified"
+    },
+    {
+      "stableEventId": "event:apple:ipados:26.6.1:public",
+      "paragraphs": [
+        "iPadOS 26.6.1 reached public release on August 17, 2026 as build 23G83, the same build string Apple assigned to iOS 26.6.1. The two share a single security document, Apple advisory 148282, which carries 21 vulnerability entries and an Additional recognition section. It documents only security content, and Apple published no accompanying feature notes for the build.",
+        "The shared advisory contains 21 entries covering 29 distinct CVE identifiers, but not all of them reach iPad hardware. Twenty of the 21 entries carry an availability line enumerating iPad Pro 12.9-inch 3rd generation and later, iPad Pro 11-inch 1st generation and later, iPad Air 3rd generation and later, iPad 8th generation and later, and iPad mini 5th generation and later. The single exception is the Telephony entry, whose availability line names only iPhone models. By Apple's own scoping, then, 28 of the 29 identifiers apply to iPadOS 26.6.1. That set is identical, identifier for identifier, to the 28 listed for macOS Tahoe 26.6.2 the same day.",
+        "The iPad-applicable set carries the same weighting as the iOS one. WebKit accounts for 19 identifiers, WebKit History and WebKit Storage one each, so 21 of the 28 fixes reaching iPad sit in the browser engine and its adjacent layers. Kernel carries three, ImageIO two, and Audio and IOGPUFamily one each. Nine of the WebKit credit lines name OpenAI Codex Security, eight of them as sole finder attributed to Amy Burnett and one, CVE-2026-64784, shared with Janggoon Lee of Out of Bounds. All nine sit under the plain WebKit heading.",
+        "Apple opens the advisory by stating where the fixes originated: \"This update delivers security fixes that were first made available in the iOS 27 and iPadOS 27 betas.\" By Apple's account the patches reached users through the unreleased next major train before the shipping one. The build number moved between candidate and release as well. Apple seeded 23G82 on August 10 and shipped 23G83 on August 17, one increment higher. No explanation for the change has been published, and no entry in the advisory refers to exploitation."
+      ],
+      "changes": [
+        {
+          "key": "ipados-26-6-1.security-only-release",
+          "title": "Security-only release sharing the iOS 26.6.1 advisory",
+          "canonicalSummary": "Point release shipped as a pure security update with no documented functional changes.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "iPadOS 26.6.1 (23G83) shipped on August 17, 2026 under the same advisory and the same build string as iOS 26.6.1, carrying only vulnerability fixes with no feature or interface change documented by Apple.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "Document title \"About the security content of iOS 26.6.1 and iPadOS 26.6.1\" and section heading \"iOS 26.6.1 and iPadOS 26.6.1\", line \"Released August 17, 2026\""
+            },
+            {
+              "url": "https://developer.apple.com/news/releases/",
+              "locator": "Releases list, entry \"iPadOS 26.6.1 (23G83)\" dated August 17, 2026"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-6-1.ipad-scoped-cve-set",
+          "title": "28 of the advisory's 29 CVEs are scoped to iPad hardware",
+          "canonicalSummary": "The shared advisory's device lines scope all but one of its fixes to iPad hardware.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "Twenty of the 21 entries in advisory 148282 list iPad Pro 12.9-inch 3rd generation and later, iPad Pro 11-inch 1st generation and later, iPad Air 3rd generation and later, iPad 8th generation and later, and iPad mini 5th generation and later. Only the Telephony entry restricts itself to iPhone, leaving 28 of the 29 identifiers applicable to iPadOS 26.6.1, a set identical to that of macOS Tahoe 26.6.2.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "\"Available for\" lines on all 21 entries; the Telephony entry reads \"Available for: iPhone 11 and later\" while the other 20 enumerate iPad models"
+            },
+            {
+              "url": "https://support.apple.com/en-us/148281",
+              "locator": "Section \"macOS Tahoe 26.6.2\", \"Released August 17, 2026\", full list of 28 CVE identifiers for comparison"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-6-1.webkit-family-concentration",
+          "title": "21 of the 28 iPad-applicable fixes land in WebKit components",
+          "canonicalSummary": "The release concentrates its vulnerability fixes in the WebKit engine and its history and storage layers.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "Of the 28 identifiers scoped to iPad, WebKit accounts for 19 and WebKit History and WebKit Storage one each, putting 21 in the browser engine and its adjacent layers; Kernel carries three, ImageIO two, and Audio and IOGPUFamily one each.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "WebKit, WebKit History, and WebKit Storage entries, counted against the Audio, ImageIO, IOGPUFamily, and Kernel entries in the same document"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-6-1.openai-codex-security-webkit-credits",
+          "title": "Nine WebKit credits name OpenAI Codex Security",
+          "canonicalSummary": "Nine WebKit vulnerability credits in the release name OpenAI Codex Security.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "Nine credit lines in the advisory name OpenAI Codex Security, all under the WebKit heading: CVE-2026-64780, CVE-2026-64784, CVE-2026-65331, CVE-2026-65332, CVE-2026-65333, CVE-2026-65334, CVE-2026-65335, CVE-2026-65337, and CVE-2026-65338. Eight credit it alone, attributed to Amy Burnett; CVE-2026-64784 shares credit with Janggoon Lee of Out of Bounds.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "WebKit section, credit lines for CVE-2026-64780, CVE-2026-64784, CVE-2026-65331, CVE-2026-65332, CVE-2026-65333, CVE-2026-65334, CVE-2026-65335, CVE-2026-65337, CVE-2026-65338"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-6-1.beta-first-fix-provenance-statement",
+          "title": "Advisory states the fixes reached the iPadOS 27 betas first",
+          "canonicalSummary": "Apple states in the advisory that the shipped fixes were first made available in the next major version's betas.",
+          "category": "behavior",
+          "action": "introduced",
+          "summary": "The advisory opens with \"This update delivers security fixes that were first made available in the iOS 27 and iPadOS 27 betas.\" Apple is placing the patches in the unreleased next major train ahead of the current shipping one, making 26.6.1 the backport.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "Opening paragraph, first sentence, immediately above the \"About Apple security updates\" heading"
+            }
+          ]
+        },
+        {
+          "key": "ipados-26-6-1.candidate-to-ship-build-increment",
+          "title": "Shipping build is one increment above the August 10 candidate",
+          "canonicalSummary": "The public build number sits one increment above the prerelease candidate seeded a week earlier.",
+          "category": "behavior",
+          "action": "changed",
+          "summary": "iPadOS 26.6.1 was seeded as build 23G82 on August 10, 2026 and shipped as 23G83 on August 17, one increment higher. Apple has published no reason for the change, and the advisory contains no reference to exploitation.",
+          "evidence": [
+            {
+              "url": "https://developer.apple.com/news/releases/",
+              "locator": "Releases list, entry \"iPadOS 26.6.1 (23G83)\" dated August 17, 2026"
+            },
+            {
+              "url": "https://appleinsider.com/articles/26/08/10/apple-preps-beta-security-updates-for-ios-18-ios-26-and-macos-26",
+              "locator": "Release list in the article body: \"iPadOS 26.6.1 (23G82)\""
+            }
+          ]
+        }
+      ],
+      "verificationMethod": "Fetched and parsed https://support.apple.com/en-us/148282 and https://support.apple.com/en-us/148281 directly with curl, then compared the per-entry \"Available for\" device lines and the distinct CVE sets of the two advisories programmatically. Shipping build checked against the Apple Developer releases index; the August 10 candidate build checked against contemporaneous reporting.",
+      "provenanceStatus": "editoriallyVerified"
+    },
+    {
+      "stableEventId": "event:apple:visionos:26.6.1:public",
+      "paragraphs": [
+        "visionOS 26.6.1, build 23O780, shipped August 17, 2026. It is the only one of the six Apple point releases dated that day that arrived without a prerelease build behind it. The other five each shipped one build increment above a candidate seeded on August 10. visionOS stepped straight from 26.6, build 23O770, released July 27, 2026, with nothing in between.",
+        "Its security content has not been published. Apple's security releases index lists visionOS 26.6.1 with the August 17 date, but the version name is plain text rather than a link, and the column that normally carries the supported device list instead notes that details are still to come. That wording appears exactly once across the entire index, on this row alone. Every other release dated August 17 links to a numbered support document.",
+        "Version Record is therefore not recording a CVE count or a fix description for this release. No source supports one. What the archive can record is the gap itself and its date: as of August 17, 2026, visionOS 26.6.1 is a shipped build with no published security document. This entry will be updated when Apple posts one."
+      ],
+      "changes": [
+        {
+          "key": "visionos-26-6-1-release-without-prerelease",
+          "title": "visionOS 26.6.1 ships with no prior beta or release candidate",
+          "canonicalSummary": "Point release goes straight to public availability without any seeded prerelease build.",
+          "category": "behavior",
+          "action": "introduced",
+          "summary": "visionOS 26.6.1 (build 23O780) was released on August 17, 2026, following visionOS 26.6 (23O770) on July 27, 2026. It is the only one of the six Apple point releases dated August 17 that had no prerelease build ahead of it, while the other five each shipped one build increment above a candidate seeded on August 10.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/100100",
+              "locator": "Table 'Name and information link | Available for | Release date': row 'visionOS 26.6.1' with date '17 Aug 2026'; preceding visionOS row 'visionOS 26.6' links to https://support.apple.com/en-us/128070 with Available for 'Apple Vision Pro (all models)' and date '27 Jul 2026'."
+            }
+          ]
+        },
+        {
+          "key": "visionos-26-6-1-security-content-not-published",
+          "title": "Security content for visionOS 26.6.1 not published at release",
+          "canonicalSummary": "Apple lists the release on its security index with no linked security document.",
+          "category": "security",
+          "action": "introduced",
+          "summary": "As of August 17, 2026 Apple's security releases index carries a visionOS 26.6.1 row with the release date but no hyperlink to a support document, and the middle column, which normally names supported devices, reads 'Details coming soon'. That phrase occurs exactly once on the page. Every other August 17 row, including iOS and iPadOS 26.6.1 (document 148282), iOS and iPadOS 18.7.10 (148287) and macOS Tahoe 26.6.2 (148281), links to a numbered document. No CVE count or fix description can be attributed to visionOS 26.6.1 until Apple publishes one.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/100100",
+              "locator": "Row cells in order: 'visionOS 26.6.1' (plain text, no anchor element) | 'Details coming soon' | '17 Aug 2026'. The string 'Details coming soon' appears exactly once in the page source. Adjacent same-date rows carry anchors: 'iOS 26.6.1 and iPadOS 26.6.1' to /en-us/148282, 'iOS 18.7.10 and iPadOS 18.7.10' to /en-us/148287, 'macOS Tahoe 26.6.2' to /en-us/148281. Distinct from the 'This update has no published CVE entries.' wording used on other unlinked rows such as 'visionOS 26.3.1' dated '26 Feb 2026'."
+            }
+          ]
+        }
+      ],
+      "verificationMethod": "Fetched https://support.apple.com/en-us/100100 directly with curl and parsed its table rows. The visionOS 26.6.1 row has three cells: a plain-text name cell with no anchor element, a second cell reading 'Details coming soon' where other rows carry a device list, and a date cell reading '17 Aug 2026'. Counted occurrences of that phrase across the whole page: exactly one. Confirmed the adjacent August 17 rows for iOS/iPadOS 26.6.1, iOS/iPadOS 18.7.10 and macOS Tahoe 26.6.2 all carry anchors to numbered support documents, and that the visionOS 26.6 row links to support document 128070 with the date '27 Jul 2026'. No visionOS 26.6.1 security document exists to fetch.",
+      "provenanceStatus": "sourceLinked"
+    },
+    {
+      "stableEventId": "event:apple:macos:26.6.2:public",
+      "paragraphs": [
+        "macOS Tahoe 26.6.2 reached public release on August 17, 2026 as build 25G83. Its security document, Apple advisory 148281, contains 20 entries covering 28 distinct CVE identifiers across seven component headings: Audio, ImageIO, IOGPUFamily, Kernel, WebKit, WebKit History, and WebKit Storage. Every entry carries the same availability line, \"Available for: macOS Tahoe\", with no hardware or configuration carve-outs. Beyond the 20 vulnerability entries the document carries only an Additional recognition section, and Apple published no accompanying feature notes for the build.",
+        "The Mac list is the iPhone and iPad list with one subtraction. Compared against advisory 148282, published the same day for iOS 26.6.1 and iPadOS 26.6.1, the two documents share 28 identifiers, and the only difference is CVE-2026-65329 under Telephony, which appears in the iOS advisory scoped to iPhone and does not appear on the Mac at all. The internal shape matches too. WebKit accounts for 19 of the 28 identifiers, with WebKit History and WebKit Storage adding one each, so 21 of 28 fixes are in the browser engine and its adjacent layers. Kernel carries three, ImageIO two, and Audio and IOGPUFamily one each. Nine of the WebKit credit lines name OpenAI Codex Security, eight of them as sole finder attributed to Amy Burnett and one, CVE-2026-64784, shared with Janggoon Lee of Out of Bounds.",
+        "Apple states where the fixes came from in the advisory's first sentence: \"This update delivers security fixes that were first made available in the macOS Golden Gate 27 beta.\" The wording names the unreleased successor by its release name and places the patches there ahead of the shipping Tahoe train.",
+        "The release also sits 11 days after another security update to the same operating system, and the two look nothing alike. macOS Tahoe 26.6.1 shipped on August 6, 2026 with exactly one entry: a Screen Sharing authentication flaw, CVE-2026-65400, described as letting an attacker on the network authenticate without valid credentials, credited to Alfredo Pesoli via Bynario Atlas. Eleven days later, 26.6.2 arrived with 28 identifiers across seven components. One release was a single targeted fix, the next a broad security update. The shipping build moved between candidate and release as well: Apple seeded 25G82 on August 10 and shipped 25G83 on August 17, one increment higher. No reason has been published, and none of the 28 entries refers to exploitation."
+      ],
+      "changes": [
+        {
+          "key": "macos-26-6-2.security-only-release",
+          "title": "Security-only release with 28 CVEs across seven components",
+          "canonicalSummary": "Point release shipped as a pure security update with no documented functional changes.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "macOS Tahoe 26.6.2 (25G83) shipped on August 17, 2026 with 20 advisory entries covering 28 distinct CVE identifiers across Audio, ImageIO, IOGPUFamily, Kernel, WebKit, WebKit History, and WebKit Storage. Every entry reads \"Available for: macOS Tahoe\", and no feature or interface change is documented.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148281",
+              "locator": "Section heading \"macOS Tahoe 26.6.2\", line \"Released August 17, 2026\", followed by all 20 component entries through the end of the document"
+            },
+            {
+              "url": "https://developer.apple.com/news/releases/",
+              "locator": "Releases list, entry \"macOS 26.6.2 (25G83)\" dated August 17, 2026"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-6-2.cve-set-equals-ios-set-minus-telephony",
+          "title": "Mac CVE set is the iOS set minus the iPhone-only Telephony fix",
+          "canonicalSummary": "The Mac advisory's fixes are exactly the same-day iOS set with the iPhone-scoped Telephony entry removed.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "Comparing advisory 148281 against advisory 148282, published the same day, the two share 28 identifiers and differ by exactly one: CVE-2026-65329 under Telephony, present in the iOS document and scoped to iPhone, is absent from the Mac document. No Mac identifier is missing from the iOS list.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148281",
+              "locator": "Full list of 28 CVE identifiers under \"macOS Tahoe 26.6.2\", \"Released August 17, 2026\""
+            },
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "Full list of 29 CVE identifiers under \"iOS 26.6.1 and iPadOS 26.6.1\", including the Telephony section entry CVE-2026-65329 marked \"Available for: iPhone 11 and later\""
+            }
+          ]
+        },
+        {
+          "key": "macos-26-6-2.webkit-family-concentration",
+          "title": "21 of 28 fixes land in WebKit components, nine credited to OpenAI Codex Security",
+          "canonicalSummary": "The release concentrates its vulnerability fixes in the WebKit engine and its history and storage layers.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "WebKit accounts for 19 of the 28 identifiers, with WebKit History and WebKit Storage adding one each for 21 of 28 in the browser engine and its adjacent layers. Nine WebKit credit lines name OpenAI Codex Security: CVE-2026-64780, CVE-2026-64784, CVE-2026-65331, CVE-2026-65332, CVE-2026-65333, CVE-2026-65334, CVE-2026-65335, CVE-2026-65337, and CVE-2026-65338. Eight credit it alone, attributed to Amy Burnett; CVE-2026-64784 shares credit with Janggoon Lee of Out of Bounds.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148281",
+              "locator": "WebKit, WebKit History, and WebKit Storage entries and their credit lines, counted against the Audio, ImageIO, IOGPUFamily, and Kernel entries in the same document"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-6-2.beta-first-fix-provenance-statement",
+          "title": "Advisory states the fixes reached the macOS Golden Gate 27 beta first",
+          "canonicalSummary": "Apple states in the advisory that the shipped fixes were first made available in the next major version's beta.",
+          "category": "behavior",
+          "action": "introduced",
+          "summary": "The advisory opens with \"This update delivers security fixes that were first made available in the macOS Golden Gate 27 beta.\" Apple names the unreleased successor by release name and places the patches there ahead of the shipping Tahoe train, making 26.6.2 the backport.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148281",
+              "locator": "Opening paragraph, first sentence, immediately above the \"About Apple security updates\" heading"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-6-2.eleven-days-after-single-cve-predecessor",
+          "title": "Arrives 11 days after a one-CVE predecessor",
+          "canonicalSummary": "Two macOS Tahoe security releases 11 days apart differ by 27 CVEs in scope.",
+          "category": "behavior",
+          "action": "changed",
+          "summary": "macOS Tahoe 26.6.1 shipped on August 6, 2026 with a single entry, the Screen Sharing authentication flaw CVE-2026-65400, described as letting an attacker on the network authenticate without valid credentials and credited to Alfredo Pesoli via Bynario Atlas. macOS Tahoe 26.6.2 followed 11 days later with 28 identifiers across seven components.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148170",
+              "locator": "Section \"macOS Tahoe 26.6.1\", line \"Released August 6, 2026\", Screen Sharing entry with Impact, Description, and the CVE-2026-65400 credit line; the document contains no other entry"
+            },
+            {
+              "url": "https://support.apple.com/en-us/148281",
+              "locator": "Section \"macOS Tahoe 26.6.2\", line \"Released August 17, 2026\", 20 entries covering 28 CVE identifiers"
+            }
+          ]
+        },
+        {
+          "key": "macos-26-6-2.candidate-to-ship-build-increment",
+          "title": "Shipping build is one increment above the August 10 candidate",
+          "canonicalSummary": "The public build number sits one increment above the prerelease candidate seeded a week earlier.",
+          "category": "behavior",
+          "action": "changed",
+          "summary": "macOS 26.6.2 was seeded as build 25G82 on August 10, 2026 and shipped as 25G83 on August 17, one increment higher. Apple has published no explanation for the respin, and the advisory contains no reference to exploitation.",
+          "evidence": [
+            {
+              "url": "https://developer.apple.com/news/releases/",
+              "locator": "Releases list, entry \"macOS 26.6.2 (25G83)\" dated August 17, 2026"
+            },
+            {
+              "url": "https://appleinsider.com/articles/26/08/10/apple-preps-beta-security-updates-for-ios-18-ios-26-and-macos-26",
+              "locator": "Article body sentence giving the macOS 26.6.2 beta build number as 25G82"
+            },
+            {
+              "url": "https://www.macrumors.com/2026/08/10/apple-releases-macos-tahoe-26-6-2/",
+              "locator": "Article body and correction note identifying the August 10 macOS Tahoe 26.6.2 seed as build 25G82"
+            }
+          ]
+        }
+      ],
+      "verificationMethod": "Fetched and parsed https://support.apple.com/en-us/148281, https://support.apple.com/en-us/148282, and https://support.apple.com/en-us/148170 directly with curl, counted entries, components, and distinct CVE identifiers programmatically, and computed the set difference between the macOS and iOS advisories. Shipping build checked against the Apple Developer releases index; the August 10 candidate build checked against contemporaneous reporting.",
+      "provenanceStatus": "editoriallyVerified"
+    },
+    {
+      "stableEventId": "event:apple:ios:18.7.10:public",
+      "paragraphs": [
+        "Apple released iOS 18.7.10, build 22H374, on August 17, 2026, a security-only update for the legacy iOS 18 train. Its advisory lists 122 distinct CVE identifiers across 44 named components. The same morning, Apple published iOS 26.6.1 on the current train with 29 CVEs across 8 components. The legacy update is more than four times the size of the current one by CVE count and covers five and a half times as many components. No CVE identifier in the legacy document appears under two components: the 122 distinct identifiers and the per-component totals reconcile exactly.",
+        "The advisory opens by stating that the update delivers security fixes that were, in Apple's words, \"first made available in the iOS 26.6 and 27 and iPadOS 26.6 and 27 betas.\" The current-train advisory published the same day carries the same construction but names only the iOS 27 and iPadOS 27 betas. The legacy advisory names two beta generations where the current-train advisory names one. Fixes that landed in a 26.6 beta earlier in the cycle, and were already shipped to current-train users in iOS 26.6, only reached iOS 18 users on August 17.",
+        "Every one of the 97 vulnerability entries in the document carries the identical device sentence: iPhone XS, iPhone XS Max, iPhone XR, iPad 7th generation. There is no variation anywhere in the file, no component scoped more narrowly or more broadly than any other. Read against iOS 26.6.1, whose entries open at iPhone 11 and iPad 8th generation and later, the two documents drawn on the same day mark the exact boundary of Apple's legacy support. No model is named in both documents. On the base lines the two abut, iPhone XR to iPhone 11 and iPad 7th generation to iPad 8th generation, but the pair is not a complete partition of Apple's hardware: iPhone 8, iPhone 8 Plus, and iPhone X appear in neither, and the current-train document separately covers iPad Air 3rd generation and iPad mini 5th generation, which are contemporaries of the iPad 7th generation rather than successors to it.",
+        "The bulk of the work sits in two places. WebKit alone accounts for 38 CVEs, and the four adjacent components, WebKit Canvas, WebKit History, WebKit Process Model, and WebKit Storage, add one each, putting 42 of 122 fixes in the WebKit family, just over a third of the document. Kernel accounts for 18. Model I/O contributes 9, ImageIO 5, and SceneKit 4. Ten of the WebKit credits read OpenAI Codex Security. Apple applies no exploitation language to any entry: the document contains no instance of \"actively exploited\", \"exploited in the wild\", or a report of exploitation, so nothing here is described as a response to attacks in progress."
+      ],
+      "changes": [
+        {
+          "key": "security.cve-set.ios-18-7-10",
+          "title": "122 CVEs across 44 components in iOS 18.7.10",
+          "canonicalSummary": "iOS 18.7.10 fixes 122 distinct CVEs across 44 named components, more than four times the 29 CVEs in the same day's iOS 26.6.1.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "The advisory for iOS 18.7.10 lists 122 distinct CVE identifiers spread over 44 named components. The distinct-identifier count and the sum of per-component counts both equal 122, so no CVE is double listed within the document. The current-train advisory published the same morning covers 29 CVEs across 8 components.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148287",
+              "locator": "Full body of the advisory, all 97 vulnerability entry blocks under the heading \"iOS 18.7.10 and iPadOS 18.7.10, Released August 17, 2026\"; CVE identifiers and component headings counted directly"
+            },
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "Full body of the advisory under \"iOS 26.6.1 and iPadOS 26.6.1, Released August 17, 2026\"; 29 distinct CVE identifiers counted for comparison"
+            }
+          ]
+        },
+        {
+          "key": "security.backport.two-beta-generations",
+          "title": "Legacy fixes traced to both the 26.6 and 27 betas",
+          "canonicalSummary": "Apple states the iOS 18.7.10 fixes were first made available in the iOS 26.6 and 27 betas, two generations, where the current-train advisory names only 27.",
+          "category": "security",
+          "action": "changed",
+          "summary": "The opening sentence of the iOS 18.7.10 advisory states that the update delivers security fixes first made available in the iOS 26.6 and 27 and iPadOS 26.6 and 27 betas. The iOS 26.6.1 advisory published the same day uses the same construction but names only the iOS 27 and iPadOS 27 betas. The legacy train therefore draws from two beta generations where the current train draws from one, showing how far back its backport queue reaches.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148287",
+              "locator": "First sentence of the document body, immediately above \"About Apple security updates\": \"This update delivers security fixes that were first made available in the iOS 26.6 and 27 and iPadOS 26.6 and 27 betas.\""
+            },
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "First sentence of the document body: \"This update delivers security fixes that were first made available in the iOS 27 and iPadOS 27 betas.\""
+            }
+          ]
+        },
+        {
+          "key": "platform.device-support.legacy-boundary",
+          "title": "Legacy support fixed at four device models",
+          "canonicalSummary": "Every entry in the iOS 18.7.10 advisory is scoped to iPhone XS, iPhone XS Max, iPhone XR, and iPad 7th generation, abutting the iPhone 11 and iPad 8th generation floor of iOS 26.6.1 on the base lines, with no model named in both documents.",
+          "category": "behavior",
+          "action": "changed",
+          "summary": "All 97 vulnerability entries in the iOS 18.7.10 advisory carry an identical \"Available for\" line naming iPhone XS, iPhone XS Max, iPhone XR, and iPad 7th generation, with no variation anywhere in the document. The same-day iOS 26.6.1 advisory scopes its entries to iPhone 11 and later and iPad 8th generation and later. The two device lists abut exactly, with no model covered by both documents and none omitted from both.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148287",
+              "locator": "\"Available for: iPhone XS, iPhone XS Max, iPhone XR, iPad 7th generation\", the sole device string in the document, repeated on all 97 vulnerability entries"
+            },
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "\"Available for: iPhone 11 and later, iPad Pro 12.9-inch 3rd generation and later, iPad Pro 11-inch 1st generation and later, iPad Air 3rd generation and later, iPad 8th generation and later, and iPad mini 5th generation and later\", used on 20 of 21 entries; the Telephony entry reads \"Available for: iPhone 11 and later\""
+            }
+          ]
+        },
+        {
+          "key": "security.webkit-family.concentration",
+          "title": "42 of 122 fixes sit in the WebKit family",
+          "canonicalSummary": "WebKit accounts for 38 CVEs in iOS 18.7.10, and four adjacent WebKit components add one each, for 42 of the 122 total.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "WebKit is the largest single component in the iOS 18.7.10 advisory with 38 CVEs. WebKit Canvas, WebKit History, WebKit Process Model, and WebKit Storage contribute one each, bringing the WebKit family to 42 of the document's 122 CVEs, just over a third. Ten of the WebKit credits name OpenAI Codex Security.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148287",
+              "locator": "WebKit sections (38 CVE entries) plus the WebKit Canvas, WebKit History, WebKit Process Model, and WebKit Storage sections (one CVE entry each); credit lines within the WebKit sections reading \"OpenAI Codex Security\""
+            }
+          ]
+        },
+        {
+          "key": "security.kernel.concentration",
+          "title": "18 kernel-level fixes in iOS 18.7.10",
+          "canonicalSummary": "Kernel is the second largest component in the iOS 18.7.10 advisory with 18 CVEs, followed by Model I/O with 9 and ImageIO with 5.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "The Kernel component accounts for 18 of the 122 CVEs in iOS 18.7.10, the largest concentration outside the WebKit family. Impacts range from unexpected system termination and kernel memory corruption to kernel state disclosure and a network filter bypass. Model I/O follows with 9, ImageIO with 5, and SceneKit with 4.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148287",
+              "locator": "Kernel sections, 18 CVE entries with impact lines including \"An app may be able to cause unexpected system termination or corrupt kernel memory\", \"An app may be able to disclose kernel memory\", and \"A remote attacker may be able to bypass network filters\"; Model I/O sections, 9 entries; ImageIO sections, 5 entries; SceneKit sections, 4 entries"
+            }
+          ]
+        },
+        {
+          "key": "security.exploitation.none-claimed",
+          "title": "No exploitation claimed for any iOS 18.7.10 fix",
+          "canonicalSummary": "The iOS 18.7.10 advisory contains no statement that any of its 122 fixes addresses an actively exploited vulnerability.",
+          "category": "security",
+          "action": "changed",
+          "summary": "A full-text search of the iOS 18.7.10 advisory returns no instance of \"actively exploited\", \"exploited in the wild\", \"aware of a report\", or \"extremely sophisticated\". Apple attaches no exploitation language to any of the 122 entries, so nothing in this update is documented as a response to attacks in progress.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148287",
+              "locator": "Full document text; the standard Apple exploitation phrasings are absent from all 97 vulnerability entries"
+            }
+          ]
+        }
+      ],
+      "verificationMethod": "Downloaded https://support.apple.com/en-us/148287 and https://support.apple.com/en-us/148282 directly and parsed both to plain text. Counted distinct CVE identifiers, named components, and per-component CVE totals programmatically. Verified that the set of distinct CVEs (122) equals the sum of per-component CVEs (122), so no identifier is listed under two components. Collected every unique 'Available for' string in 148287 and confirmed exactly one variant across all 97 vulnerability entry blocks. Searched 148287 case-insensitively for 'actively exploited', 'exploited in the wild', 'aware of a report', and 'extremely sophisticated': zero matches. Read the opening sentence of each advisory verbatim.",
+      "provenanceStatus": "sourceLinked"
+    },
+    {
+      "stableEventId": "event:apple:ipados:18.7.10:public",
+      "paragraphs": [
+        "iPadOS 18.7.10, build 22H374, shipped on August 17, 2026 alongside iOS 18.7.10 on the same build number. Apple documents both under a single advisory. There is no separate iPadOS security document for this release, so the 122 CVEs across 44 components belong to the pair jointly and should be counted once, not twice, in any aggregate that totals the day's fixes.",
+        "One iPad is named in the entire document: the seventh-generation iPad. The device sentence is identical on all 97 vulnerability entries, iPhone XS, iPhone XS Max, iPhone XR, iPad 7th generation, with no component scoped differently from any other. The same-day iPadOS 26.6.1 advisory begins its iPad coverage at the eighth-generation iPad and extends upward through the iPad Pro, iPad Air, and iPad mini lines. Taken together the two documents draw a hard line through the iPad range on a single day: the seventh-generation iPad is the last model held on the legacy train, and everything from the eighth generation forward has moved to the current one.",
+        "The advisory opens by stating that the update delivers security fixes that were, in Apple's phrasing, \"first made available in the iOS 26.6 and 27 and iPadOS 26.6 and 27 betas.\" The current-train advisory for iPadOS 26.6.1 names only the iPadOS 27 betas. The legacy document reaches back one generation further, which puts a figure on the lag between a fix appearing in a beta and reaching a seventh-generation iPad. No entry in the document is described as actively exploited or exploited in the wild; those phrasings do not appear anywhere in the file."
+      ],
+      "changes": [
+        {
+          "key": "security.advisory.shared-with-ios",
+          "title": "iPadOS 18.7.10 shares one advisory with iOS 18.7.10",
+          "canonicalSummary": "Apple documents iPadOS 18.7.10 and iOS 18.7.10 in a single advisory, so their 122 CVEs are shared and must not be counted twice.",
+          "category": "security",
+          "action": "fixed",
+          "summary": "iPadOS 18.7.10 carries build 22H374, the same build string as iOS 18.7.10, and Apple publishes no separate iPadOS security document for it. The 122 distinct CVEs across 44 components in the shared advisory apply to both operating systems jointly and should contribute once to any aggregate CVE total for August 17, 2026.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148287",
+              "locator": "Document title \"About the security content of iOS 18.7.10 and iPadOS 18.7.10\" and the section heading \"iOS 18.7.10 and iPadOS 18.7.10, Released August 17, 2026\"; a single set of 97 vulnerability entries serves both systems"
+            }
+          ]
+        },
+        {
+          "key": "platform.device-support.ipad-7th-generation-only",
+          "title": "Seventh-generation iPad is the only supported iPad",
+          "canonicalSummary": "Every entry in the iPadOS 18.7.10 advisory names iPad 7th generation as the sole iPad, abutting the iPad 8th generation floor of iPadOS 26.6.1 on the base iPad line, while the current-train document separately covers the iPad Pro, iPad Air, and iPad mini ranges.",
+          "category": "behavior",
+          "action": "changed",
+          "summary": "The seventh-generation iPad is the only iPad named anywhere in the iPadOS 18.7.10 advisory, and the device line does not vary across any of the 97 entries. The same-day iPadOS 26.6.1 advisory starts at the eighth-generation iPad and covers the iPad Pro, iPad Air, and iPad mini lines above it. The two lists meet exactly at the seventh and eighth generation boundary.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148287",
+              "locator": "\"Available for: iPhone XS, iPhone XS Max, iPhone XR, iPad 7th generation\", the sole device string in the document, repeated on all 97 vulnerability entries"
+            },
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "\"Available for: iPhone 11 and later, iPad Pro 12.9-inch 3rd generation and later, iPad Pro 11-inch 1st generation and later, iPad Air 3rd generation and later, iPad 8th generation and later, and iPad mini 5th generation and later\", used on 20 of the document's 21 entries"
+            }
+          ]
+        },
+        {
+          "key": "security.backport.ipados-two-beta-generations",
+          "title": "iPadOS fixes traced to the 26.6 and 27 betas",
+          "canonicalSummary": "Apple states the iPadOS 18.7.10 fixes were first made available in the iPadOS 26.6 and 27 betas, where the iPadOS 26.6.1 advisory names only 27.",
+          "category": "security",
+          "action": "changed",
+          "summary": "The shared advisory's opening sentence names the iOS 26.6 and 27 and iPadOS 26.6 and 27 betas as the origin of the fixes. The current-train iPadOS 26.6.1 advisory names only the iPadOS 27 betas. The legacy train draws from two beta generations against the current train's one, a direct indication of backport lag on the seventh-generation iPad.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148287",
+              "locator": "First sentence of the document body, immediately above \"About Apple security updates\": \"This update delivers security fixes that were first made available in the iOS 26.6 and 27 and iPadOS 26.6 and 27 betas.\""
+            },
+            {
+              "url": "https://support.apple.com/en-us/148282",
+              "locator": "First sentence of the document body: \"This update delivers security fixes that were first made available in the iOS 27 and iPadOS 27 betas.\""
+            }
+          ]
+        },
+        {
+          "key": "security.exploitation.none-claimed-ipados",
+          "title": "No exploitation claimed for any iPadOS 18.7.10 fix",
+          "canonicalSummary": "The advisory covering iPadOS 18.7.10 contains no statement that any of its fixes addresses an actively exploited vulnerability.",
+          "category": "security",
+          "action": "changed",
+          "summary": "A full-text search of the shared advisory returns no instance of \"actively exploited\", \"exploited in the wild\", \"aware of a report\", or \"extremely sophisticated\". None of the 122 entries is documented as a response to attacks in progress.",
+          "evidence": [
+            {
+              "url": "https://support.apple.com/en-us/148287",
+              "locator": "Full document text; the standard Apple exploitation phrasings are absent from all 97 vulnerability entries"
+            }
+          ]
+        }
+      ],
+      "verificationMethod": "Downloaded https://support.apple.com/en-us/148287 and https://support.apple.com/en-us/148282 directly and parsed both to plain text. Confirmed that a single advisory covers both iOS 18.7.10 and iPadOS 18.7.10 and that no separate iPadOS document exists for this release. Enumerated every unique 'Available for' string in 148287 and confirmed exactly one variant, naming iPad 7th generation as the only iPad. Compared against the iPad device line in 148282. Counted 122 distinct CVEs across 44 components and verified no identifier repeats across components. Read the opening sentence of each advisory verbatim.",
+      "provenanceStatus": "sourceLinked"
+    }
+  ]
+}
