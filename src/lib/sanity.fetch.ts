@@ -42,6 +42,21 @@ const fetchOptions = {
 } as const;
 
 /**
+ * `correction` documents are not readable by anonymous dataset reads, the same
+ * restriction that applies to `sitePage` (see the publishedClient in
+ * ./articles.ts). Reading them with the public client silently returns an empty
+ * list rather than an error, which is why the corrections ledger rendered its
+ * empty state even with a published, approved correction in the dataset.
+ *
+ * Keep the read token server-only and pin the published perspective.
+ */
+const restrictedReadClient = client.withConfig({
+  token: process.env.SANITY_API_READ_TOKEN?.trim(),
+  perspective: "published",
+  useCdn: false,
+});
+
+/**
  * The all-version timeline and analytics queries can span hundreds of release
  * records. Keep each event response under Next's 2 MB data-cache limit while
  * preserving the existing per-version read model.
@@ -298,7 +313,11 @@ export async function getAllEventRoutes(): Promise<ReleaseEventRoute[]> {
 export async function getPublishedCorrections(): Promise<
   PublishedCorrection[]
 > {
-  return client.fetch(publishedCorrectionsQuery, {}, fetchOptions);
+  return restrictedReadClient.fetch(
+    publishedCorrectionsQuery,
+    {},
+    fetchOptions,
+  );
 }
 
 export async function getActiveBetas(): Promise<ReleaseVersion[]> {
