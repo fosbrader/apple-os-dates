@@ -31,7 +31,8 @@
     "sanity:coverage:report": "sanity exec scripts/report-content-coverage.ts --with-user-token --",
     "sanity:launch:check": "sanity exec scripts/ingest-launch-content.ts --with-user-token -- --content scripts/apple-launch-content-2026.json",
     "sanity:history:check": "sanity exec scripts/reconcile-release-history.ts --with-user-token",
-    "sanity:history:apply": "sanity exec scripts/reconcile-release-history.ts --with-user-token -- --apply"
+    "sanity:history:apply": "sanity exec scripts/reconcile-release-history.ts --with-user-token -- --apply",
+    "audit:apple-coverage": "tsx scripts/audit-apple-release-coverage.ts"
   },
   "repository": {
     "type": "git",
