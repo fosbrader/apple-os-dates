@@ -38,8 +38,8 @@ test("the offline seed inventory is deterministic and records exact local counts
 
   assert.deepEqual(first, second);
   assert.equal(first.inventory.counts.releaseVersions, 410);
-  assert.equal(first.inventory.counts.eventRecords, 1_979);
-  assert.equal(first.inventory.counts.legacyMilestones, 1_979);
+  assert.equal(first.inventory.counts.eventRecords, 1_991);
+  assert.equal(first.inventory.counts.legacyMilestones, 1_991);
   assert.equal(first.inventory.counts.sources, 107);
   assert.equal(first.inventory.counts.conflicts, 0);
   assert.doesNotThrow(() => assertValidEvidenceInventory(first, seed()));

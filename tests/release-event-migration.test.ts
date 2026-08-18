@@ -52,7 +52,7 @@ test("the audited seed produces a deterministic, lossless candidate plan", () =>
 
   assert.equal(versions.length, 410);
   assert.equal(first.summary.releaseVersions, 410);
-  assert.equal(first.summary.releaseEvents, 1_979);
+  assert.equal(first.summary.releaseEvents, 1_991);
   assert.equal(
     first.versionStates.filter(
       (state) => state.normalizedReleaseStatus === "superseded",
@@ -95,7 +95,7 @@ test("the audited seed projects to required schema-ready event fields", () => {
   const plan = buildReleaseEventMigrationPlan(versions);
   const projection = projectSchemaReadyMigration(plan);
 
-  assert.equal(projection.releaseEvents.length, 1_979);
+  assert.equal(projection.releaseEvents.length, 1_991);
   assert.equal(projection.releaseBuilds.length, 0);
   assert.equal(projection.withheldBuildCandidates.length, 0);
   assert.ok(

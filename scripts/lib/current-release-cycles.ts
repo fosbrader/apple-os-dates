@@ -302,6 +302,8 @@ const cycles: CycleDefinition[] = [
           watchos: "07202026l",
         },
       },
+      { label: "Beta 5", dates: "2026-08-10" },
+      { label: "Beta 6", dates: "2026-08-17" },
     ],
   },
 ];

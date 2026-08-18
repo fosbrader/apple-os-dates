@@ -5,8 +5,8 @@ This checked-in inventory is generated solely from `scripts/seed-data.json`. It 
 ## Inputs and identity boundary
 
 - Input: `scripts/seed-data.json`
-- Legacy source SHA-256: `82211a4f37bcdc99dac5b4253574e1f2887e5e943d83c3a8dd13359f8b5277ca`
-- Migration-plan SHA-256: `52d0bf5e1172f6b37aad4f5e2b64716efe299723689a07c1ee6c596a4c2fff1a`
+- Legacy source SHA-256: `705f659e21d756d91626374b9980d867b69e3be167ba38679a0b33893f463704`
+- Migration-plan SHA-256: `554043a263041bbbf98063de939677f2042ce641678ebe1a08843a8e0a7a6fe9`
 - Release-event record IDs are the planner's stable legacy source IDs. A seed milestone without a live Sanity key is explicitly marked synthetic; a supplied live key remains live-key identity.
 - Each source carries a machine-readable source-date and access-date state. The checked-in seed has no observed source or access dates, so those states are explicitly unknown rather than inferred.
 
@@ -15,9 +15,9 @@ This checked-in inventory is generated solely from `scripts/seed-data.json`. It 
 | Item | Count |
 | --- | ---: |
 | Release versions | 410 |
-| Legacy milestones / event records | 1979 |
+| Legacy milestones / event records | 1991 |
 | Observed source URLs | 107 |
-| Source-linked event records | 149 |
+| Source-linked event records | 161 |
 | Missing-evidence event records | 1830 |
 | Conflicting-evidence event records | 0 |
 | Quarantined event records | 1830 |

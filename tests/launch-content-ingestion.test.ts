@@ -885,7 +885,7 @@ test("the audited 410-version snapshot keeps its existing migration behavior", (
   );
   const result = buildLaunchContentPlan(documents, emptyBundle());
   assert.equal(result.migrationPlan.summary.releaseVersions, 410);
-  assert.equal(result.migrationPlan.summary.releaseEvents, 1_979);
+  assert.equal(result.migrationPlan.summary.releaseEvents, 1_991);
   assert.equal(result.plan.summary.versionCreates, 0);
   assert.equal(
     result.plan.creates.filter(
