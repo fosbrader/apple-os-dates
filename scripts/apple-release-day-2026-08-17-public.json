@@ -1,0 +1,463 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-08-17",
+  "sources": [
+    {
+      "url": "https://developer.apple.com/news/releases/",
+      "title": "Releases - Apple Developer",
+      "publisher": "Apple Developer",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": [
+        "iOS",
+        "iPadOS",
+        "macOS",
+        "visionOS",
+        "build numbers",
+        "public release"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/148282",
+      "title": "About the security content of iOS 26.6.1 and iPadOS 26.6.1",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "topics": [
+        "iOS",
+        "iPadOS",
+        "26.6.1",
+        "security update",
+        "CVE"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/148281",
+      "title": "About the security content of macOS Tahoe 26.6.2",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "topics": [
+        "macOS",
+        "Tahoe",
+        "26.6.2",
+        "security update",
+        "CVE"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/148287",
+      "title": "About the security content of iOS 18.7.10 and iPadOS 18.7.10",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "topics": [
+        "iOS",
+        "iPadOS",
+        "18.7.10",
+        "legacy train",
+        "security update",
+        "CVE"
+      ]
+    },
+    {
+      "url": "https://support.apple.com/en-us/100100",
+      "title": "Apple security releases",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": [
+        "security releases",
+        "index",
+        "visionOS"
+      ]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-visionos-26-6-1",
+      "identity": {
+        "releaseTrainId": "train-visionos-26",
+        "platformId": "platform-visionos",
+        "version": "26.6.1",
+        "releaseStatus": "released",
+        "publicReleaseDate": "2026-08-17"
+      },
+      "authorship": "originalSynthesis",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "visionOS 26.6.1 (23O780); August 17, 2026"
+        },
+        {
+          "url": "https://support.apple.com/en-us/100100",
+          "locator": "visionOS 26.6.1; 17 Aug 2026; advisory listed without a linked document"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      }
+    }
+  ],
+  "events": [
+    {
+      "target": {
+        "releaseVersionId": "version-ios-26-6-1",
+        "routeAlias": "public"
+      },
+      "identity": {
+        "releaseVersionId": "version-ios-26-6-1",
+        "platformId": "platform-ios",
+        "stableEventId": "event:apple:ios:26.6.1:public",
+        "label": "Public",
+        "routeAlias": "public",
+        "channel": "public",
+        "appearanceDate": "2026-08-17",
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": true
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released iOS 26.6.1 to the public on August 17, 2026 as build 23G83, seven days after seeding build 23G82 as the release candidate. The update is security-only, and Apple's advisory lists twenty-nine distinct CVE identifiers across eight components.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "iOS 26.6.1 (23G83); August 17, 2026"
+        },
+        {
+          "url": "https://support.apple.com/en-us/148282",
+          "locator": "iOS 26.6.1 and iPadOS 26.6.1; Released August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-26-6-1",
+        "routeAlias": "public"
+      },
+      "identity": {
+        "releaseVersionId": "version-ipados-26-6-1",
+        "platformId": "platform-ipados",
+        "stableEventId": "event:apple:ipados:26.6.1:public",
+        "label": "Public",
+        "routeAlias": "public",
+        "channel": "public",
+        "appearanceDate": "2026-08-17",
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": true
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released iPadOS 26.6.1 to the public on August 17, 2026 as build 23G83, seven days after seeding build 23G82 as the release candidate. It shares a security advisory with iOS 26.6.1 covering twenty-nine distinct CVE identifiers.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "iPadOS 26.6.1 (23G83); August 17, 2026"
+        },
+        {
+          "url": "https://support.apple.com/en-us/148282",
+          "locator": "iOS 26.6.1 and iPadOS 26.6.1; Released August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-visionos-26-6-1",
+        "routeAlias": "public"
+      },
+      "identity": {
+        "releaseVersionId": "version-visionos-26-6-1",
+        "platformId": "platform-visionos",
+        "stableEventId": "event:apple:visionos:26.6.1:public",
+        "label": "Public",
+        "routeAlias": "public",
+        "channel": "public",
+        "appearanceDate": "2026-08-17",
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": true
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released visionOS 26.6.1 on August 17, 2026 as build 23O780. Alone among the six point releases that shipped that day it had no prior beta or release candidate, stepping directly from visionOS 26.6. Its security advisory was not published alongside the release.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "visionOS 26.6.1 (23O780); August 17, 2026"
+        },
+        {
+          "url": "https://support.apple.com/en-us/100100",
+          "locator": "visionOS 26.6.1; 17 Aug 2026; advisory listed without a linked document"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-macos-26-6-2",
+        "routeAlias": "public"
+      },
+      "identity": {
+        "releaseVersionId": "version-macos-26-6-2",
+        "platformId": "platform-macos",
+        "stableEventId": "event:apple:macos:26.6.2:public",
+        "label": "Public",
+        "routeAlias": "public",
+        "channel": "public",
+        "appearanceDate": "2026-08-17",
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": true
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released macOS Tahoe 26.6.2 on August 17, 2026 as build 25G83, seven days after seeding build 25G82 as the first beta and eleven days after macOS 26.6.1 reached the public. The advisory lists twenty-eight distinct CVE identifiers across seven components.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "macOS 26.6.2 (25G83); August 17, 2026"
+        },
+        {
+          "url": "https://support.apple.com/en-us/148281",
+          "locator": "macOS Tahoe 26.6.2; Released August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ios-18-7-10",
+        "routeAlias": "public"
+      },
+      "identity": {
+        "releaseVersionId": "version-ios-18-7-10",
+        "platformId": "platform-ios",
+        "stableEventId": "event:apple:ios:18.7.10:public",
+        "label": "Public",
+        "routeAlias": "public",
+        "channel": "public",
+        "appearanceDate": "2026-08-17",
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": true
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released iOS 18.7.10 on August 17, 2026 as build 22H374, seven days after seeding build 22H373 as the release candidate. The advisory lists one hundred twenty-two distinct CVE identifiers across forty-four components, and every entry names the same four devices: iPhone XS, iPhone XS Max, iPhone XR, and the seventh-generation iPad.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "iOS 18.7.10 (22H374); August 17, 2026"
+        },
+        {
+          "url": "https://support.apple.com/en-us/148287",
+          "locator": "iOS 18.7.10 and iPadOS 18.7.10; Released August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    },
+    {
+      "target": {
+        "releaseVersionId": "version-ipados-18-7-10",
+        "routeAlias": "public"
+      },
+      "identity": {
+        "releaseVersionId": "version-ipados-18-7-10",
+        "platformId": "platform-ipados",
+        "stableEventId": "event:apple:ipados:18.7.10:public",
+        "label": "Public",
+        "routeAlias": "public",
+        "channel": "public",
+        "appearanceDate": "2026-08-17",
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": true
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released iPadOS 18.7.10 on August 17, 2026 as build 22H374, seven days after seeding build 22H373 as the release candidate. On the iPad side the advisory names a single supported device, the seventh-generation iPad.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "iPadOS 18.7.10 (22H374); August 17, 2026"
+        },
+        {
+          "url": "https://support.apple.com/en-us/148287",
+          "locator": "iOS 18.7.10 and iPadOS 18.7.10; Released August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    }
+  ],
+  "builds": [
+    {
+      "releaseVersionId": "version-ios-26-6-1",
+      "platformId": "platform-ios",
+      "buildNumber": "23G83",
+      "eventTargets": [
+        {
+          "releaseVersionId": "version-ios-26-6-1",
+          "routeAlias": "public"
+        }
+      ],
+      "authorship": "originalSynthesis",
+      "summary": "Public iOS 26.6.1 build released August 17, 2026. It is one increment above the 23G82 release candidate seeded on August 10, so the candidate did not ship unchanged. The identifier is platform-scoped even though iPadOS 26.6.1 carries the same characters.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "iOS 26.6.1 (23G83); August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-ipados-26-6-1",
+      "platformId": "platform-ipados",
+      "buildNumber": "23G83",
+      "eventTargets": [
+        {
+          "releaseVersionId": "version-ipados-26-6-1",
+          "routeAlias": "public"
+        }
+      ],
+      "authorship": "originalSynthesis",
+      "summary": "Public iPadOS 26.6.1 build released August 17, 2026. It is one increment above the 23G82 release candidate seeded on August 10. The identifier is platform-scoped even though iOS 26.6.1 carries the same characters.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "iPadOS 26.6.1 (23G83); August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-visionos-26-6-1",
+      "platformId": "platform-visionos",
+      "buildNumber": "23O780",
+      "eventTargets": [
+        {
+          "releaseVersionId": "version-visionos-26-6-1",
+          "routeAlias": "public"
+        }
+      ],
+      "authorship": "originalSynthesis",
+      "summary": "Public visionOS 26.6.1 build released August 17, 2026. No prerelease build of this version was distributed beforehand.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "visionOS 26.6.1 (23O780); August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-macos-26-6-2",
+      "platformId": "platform-macos",
+      "buildNumber": "25G83",
+      "eventTargets": [
+        {
+          "releaseVersionId": "version-macos-26-6-2",
+          "routeAlias": "public"
+        }
+      ],
+      "authorship": "originalSynthesis",
+      "summary": "Public macOS Tahoe 26.6.2 build released August 17, 2026. It is one increment above the 25G82 beta seeded on August 10.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "macOS 26.6.2 (25G83); August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-ios-18-7-10",
+      "platformId": "platform-ios",
+      "buildNumber": "22H374",
+      "eventTargets": [
+        {
+          "releaseVersionId": "version-ios-18-7-10",
+          "routeAlias": "public"
+        }
+      ],
+      "authorship": "originalSynthesis",
+      "summary": "Public iOS 18.7.10 build released August 17, 2026 on the legacy iOS 18 train. It is one increment above the 22H373 release candidate seeded on August 10. The identifier is platform-scoped even though iPadOS 18.7.10 carries the same characters.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "iOS 18.7.10 (22H374); August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-ipados-18-7-10",
+      "platformId": "platform-ipados",
+      "buildNumber": "22H374",
+      "eventTargets": [
+        {
+          "releaseVersionId": "version-ipados-18-7-10",
+          "routeAlias": "public"
+        }
+      ],
+      "authorship": "originalSynthesis",
+      "summary": "Public iPadOS 18.7.10 build released August 17, 2026 on the legacy iPadOS 18 train. It is one increment above the 22H373 release candidate seeded on August 10. The identifier is platform-scoped even though iOS 18.7.10 carries the same characters.",
+      "citations": [
+        {
+          "url": "https://developer.apple.com/news/releases/",
+          "locator": "iPadOS 18.7.10 (22H374); August 17, 2026"
+        }
+      ],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {
+        "status": "readyForReview"
+      },
+      "isIndexable": false
+    }
+  ]
+}
