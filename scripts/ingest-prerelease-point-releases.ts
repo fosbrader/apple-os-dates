@@ -120,8 +120,11 @@ const SOURCES: SourceInput[] = [
   {
     canonicalUrl:
       "https://appleinsider.com/articles/26/08/10/apple-preps-beta-security-updates-for-ios-18-ios-26-and-macos-26",
-    title:
-      "Apple releases betas for iOS 18.7.10, iOS 26.6.1, and macOS 26.6.2",
+    // The article's own headline. An earlier hand-written title here invented
+    // one the publisher never used, and also called the iPhone and iPad builds
+    // betas when the article describes them as release candidates. Source
+    // titles must come from the page, not from memory.
+    title: "Apple preps beta security updates for iOS 18, iOS 26, and macOS 26",
     publisher: "AppleInsider",
     sourceClass: "journalism",
     publishedAt: "2026-08-10T00:00:00Z",
