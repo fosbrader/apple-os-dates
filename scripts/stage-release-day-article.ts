@@ -1,5 +1,5 @@
 /**
- * Stages the 2026-08-17 release-day article as a Sanity draft.
+ * Stages a checked-in site article as a Sanity draft.
  *
  * This command only creates or updates `drafts.sitePage.<slug>`. It never
  * publishes and never stamps `publishedAt`, `updatedAt`, or an approved review
@@ -7,11 +7,14 @@
  * `scripts/publish-site-article.ts`, which requires the live news-readiness
  * endpoint to pass and an exact plan SHA.
  *
- * Content comes from `scripts/release-day-2026-08-17-article.json` so the prose
- * stays reviewable as data rather than buried in code.
+ * Content comes from a checked-in JSON file so the prose stays reviewable as
+ * data rather than buried in code. The August 17 article remains the default
+ * for backward compatibility; pass `--content` for another article.
  *
  * Dry run (default):
  *   npx sanity exec scripts/stage-release-day-article.ts --with-user-token
+ *   npx sanity exec scripts/stage-release-day-article.ts --with-user-token -- \
+ *     --content scripts/release-sweep-2026-08-24-article.json
  *
  * Apply:
  *   npx sanity exec scripts/stage-release-day-article.ts --with-user-token -- \
@@ -20,14 +23,14 @@
 
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
-import { join } from "node:path";
+import { join, resolve } from "node:path";
 import { getCliClient } from "sanity/cli";
 
 const apiVersion = "2024-01-01";
 const expectedProjectId = "lh3yswzu";
 const expectedDataset = "production";
-const accessedAt = "2026-08-17";
-const contentPath = join(__dirname, "release-day-2026-08-17-article.json");
+const defaultAccessedAt = "2026-08-17";
+const defaultContentPath = join(__dirname, "release-day-2026-08-17-article.json");
 
 function sha256(v: string): string {
   return createHash("sha256").update(v).digest("hex");
@@ -57,6 +60,7 @@ interface CitationInput {
 }
 interface ArticleContent {
   target: { projectId: string; dataset: string };
+  accessedAt?: string;
   documentId: string;
   title: string;
   slug: string;
@@ -65,6 +69,11 @@ interface ArticleContent {
   paragraphs: string[];
   citations: CitationInput[];
   reviewNotes: string;
+}
+
+function argumentValue(flag: string): string | undefined {
+  const index = process.argv.indexOf(flag);
+  return index >= 0 ? process.argv[index + 1] : undefined;
 }
 
 function assertNoDashes(value: string, where: string): void {
@@ -98,8 +107,13 @@ async function main(): Promise<void> {
   const argv = process.argv.slice(2);
   const apply = argv.includes("--apply");
   const confirmed = argv.includes("--confirm-production");
+  const contentArgument = argumentValue("--content");
+  const contentPath = contentArgument
+    ? resolve(process.cwd(), contentArgument)
+    : defaultContentPath;
 
   const content: ArticleContent = JSON.parse(readFileSync(contentPath, "utf8"));
+  const accessedAt = content.accessedAt ?? defaultAccessedAt;
 
   const client = getCliClient({ apiVersion }).withConfig({
     perspective: "raw",

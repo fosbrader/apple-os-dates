@@ -1,4 +1,4 @@
-import { client } from "@/sanity/client";
+import { serverReadClient } from "@/sanity/server-client";
 import { eventLabelSlug } from "@/lib/release-routes";
 import { APPLE_VENDOR } from "@/lib/vendors";
 import {
@@ -89,7 +89,7 @@ async function fetchPublicResearchPages(
   pageQuery: string,
   pageSize: number,
 ): Promise<RawRecord[]> {
-  const count = await client.fetch<number>(countQuery, {}, fetchOptions);
+  const count = await serverReadClient.fetch<number>(countQuery, {}, fetchOptions);
   const ranges = publicResearchPageRanges(count, pageSize);
   const records: RawRecord[] = [];
 
@@ -104,7 +104,7 @@ async function fetchPublicResearchPages(
     );
     const pages = await Promise.all(
       batch.map(({ offset, end }) =>
-        client.fetch<RawRecord[]>(
+        serverReadClient.fetch<RawRecord[]>(
           pageQuery,
           { offset, end },
           fetchOptions,
@@ -126,7 +126,7 @@ async function getRawResearchSnapshot(): Promise<RawResearchSnapshot> {
     auditBatches,
     corrections,
   ] = await Promise.all([
-    client.fetch<RawRecord[]>(
+    serverReadClient.fetch<RawRecord[]>(
       publicResearchReleasesQuery,
       {},
       fetchOptions,
@@ -136,7 +136,7 @@ async function getRawResearchSnapshot(): Promise<RawResearchSnapshot> {
       publicResearchEventsPageQuery,
       PUBLIC_RESEARCH_EVENT_PAGE_SIZE,
     ),
-    client.fetch<RawRecord[]>(
+    serverReadClient.fetch<RawRecord[]>(
       publicResearchBuildsQuery,
       {},
       fetchOptions,
@@ -146,12 +146,12 @@ async function getRawResearchSnapshot(): Promise<RawResearchSnapshot> {
       publicResearchChangesPageQuery,
       PUBLIC_RESEARCH_CHANGE_PAGE_SIZE,
     ),
-    client.fetch<RawRecord[]>(
+    serverReadClient.fetch<RawRecord[]>(
       publicResearchAuditBatchesQuery,
       {},
       fetchOptions,
     ),
-    client.fetch<RawRecord[]>(
+    serverReadClient.fetch<RawRecord[]>(
       publicResearchCorrectionsQuery,
       {},
       fetchOptions,

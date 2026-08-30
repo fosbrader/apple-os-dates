@@ -46,7 +46,7 @@ interface SanityMilestone {
   date: string;
   note?: string;
   sourceUrl: string;
-  sourceLabel: "Apple Developer";
+  sourceLabel: string;
   isRevision: boolean;
 }
 

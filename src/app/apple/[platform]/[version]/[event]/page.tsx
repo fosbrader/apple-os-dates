@@ -10,8 +10,6 @@ import { ProvenancePanel } from "@/components/editorial/Provenance";
 import { ReleaseChanges } from "@/components/editorial/ReleaseChanges";
 import { JsonLd, type JsonLdValue } from "@/components/seo/JsonLd";
 import {
-  getAllEventRoutes,
-  getAnalyticsData,
   getReleaseEventDetail,
   getVersionDetail,
   getVersionEvents,
@@ -77,38 +75,10 @@ async function findEvent({ platform, version, event }: EventPageParams) {
   return { release, releaseEvent, events };
 }
 
-export async function generateStaticParams() {
-  const [releases, firstClassRoutes] = await Promise.all([
-    getAnalyticsData(),
-    getAllEventRoutes(),
-  ]);
-  const params = new Map<
-    string,
-    { platform: string; version: string; event: string }
-  >();
-
-  for (const release of releases) {
-    const platform = release.releaseTrain.platform.slug.current;
-
-    for (const event of legacyEventsForVersion(release)) {
-      const route = {
-        platform,
-        version: release.version,
-        event: event.slug?.current ?? event._id,
-      };
-      params.set(`${route.platform}:${route.version}:${route.event}`, route);
-    }
-  }
-
-  for (const route of firstClassRoutes) {
-    params.set(`${route.platform}:${route.version}:${route.event}`, {
-      platform: route.platform,
-      version: route.version,
-      event: route.event,
-    });
-  }
-
-  return Array.from(params.values());
+export function generateStaticParams() {
+  // The release-event corpus grows indefinitely. Let ISR generate each event
+  // route on first request instead of enumerating thousands of pages per build.
+  return [];
 }
 
 export async function generateMetadata({

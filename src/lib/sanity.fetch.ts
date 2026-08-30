@@ -1,4 +1,4 @@
-import { client } from "@/sanity/client";
+import { serverReadClient } from "@/sanity/server-client";
 import type {
   ChangeOccurrence,
   HistoricalContext,
@@ -40,21 +40,6 @@ import {
 const fetchOptions = {
   next: { revalidate: 60 },
 } as const;
-
-/**
- * `correction` documents are not readable by anonymous dataset reads, the same
- * restriction that applies to `sitePage` (see the publishedClient in
- * ./articles.ts). Reading them with the public client silently returns an empty
- * list rather than an error, which is why the corrections ledger rendered its
- * empty state even with a published, approved correction in the dataset.
- *
- * Keep the read token server-only and pin the published perspective.
- */
-const restrictedReadClient = client.withConfig({
-  token: process.env.SANITY_API_READ_TOKEN?.trim(),
-  perspective: "published",
-  useCdn: false,
-});
 
 /**
  * The all-version timeline and analytics queries can span hundreds of release
@@ -117,7 +102,7 @@ async function getEventsByVersionId(
       batches
         .slice(index, index + RELEASE_EVENT_BATCH_CONCURRENCY)
         .map((releaseVersionIds) =>
-          client.fetch<VersionScopedReleaseEvent[]>(
+          serverReadClient.fetch<VersionScopedReleaseEvent[]>(
             releaseEventsForVersionsQuery,
             { releaseVersionIds },
             fetchOptions,
@@ -192,13 +177,13 @@ function compareVersionsDescending(
 }
 
 export async function getAllPlatforms(): Promise<Platform[]> {
-  return client.fetch(allPlatformsQuery, {}, fetchOptions);
+  return serverReadClient.fetch(allPlatformsQuery, {}, fetchOptions);
 }
 
 export async function getPlatformVersions(
   platform: string
 ): Promise<ReleaseVersionSummary[]> {
-  const versions = await client.fetch<ReleaseVersionSummary[]>(
+  const versions = await serverReadClient.fetch<ReleaseVersionSummary[]>(
     platformVersionsQuery,
     { platform },
     fetchOptions
@@ -213,7 +198,7 @@ export async function getVersionDetail(
   version: string
 ): Promise<ReleaseVersion | null> {
   const [detail, events] = await Promise.all([
-    client.fetch<ReleaseVersion | null>(
+    serverReadClient.fetch<ReleaseVersion | null>(
       versionDetailQuery,
       { platform, version },
       fetchOptions,
@@ -228,7 +213,7 @@ export async function getVersionEvents(
   platform: string,
   version: string,
 ): Promise<ReleaseEvent[]> {
-  return client.fetch(
+  return serverReadClient.fetch(
     versionEventsQuery,
     { platform, version },
     fetchOptions,
@@ -270,7 +255,7 @@ export async function getVersionChanges(
   platform: string,
   version: string,
 ): Promise<ChangeOccurrence[]> {
-  const result = await client.fetch<VersionChangeTargets>(
+  const result = await serverReadClient.fetch<VersionChangeTargets>(
     versionChangesQuery,
     { platform, version },
     fetchOptions,
@@ -283,7 +268,7 @@ export async function getReleaseEventDetail(
   version: string,
   event: string,
 ): Promise<ReleaseEvent | null> {
-  return client.fetch(
+  return serverReadClient.fetch(
     releaseEventDetailQuery,
     { platform, version, event },
     fetchOptions,
@@ -295,7 +280,7 @@ export async function getReleaseBuildDetail(
   version: string,
   build: string,
 ): Promise<ReleaseBuild | null> {
-  return client.fetch(
+  return serverReadClient.fetch(
     releaseBuildDetailQuery,
     { platform, version, build },
     fetchOptions,
@@ -303,17 +288,17 @@ export async function getReleaseBuildDetail(
 }
 
 export async function getAllBuildRoutes(): Promise<ReleaseBuildRoute[]> {
-  return client.fetch(allBuildRoutesQuery, {}, fetchOptions);
+  return serverReadClient.fetch(allBuildRoutesQuery, {}, fetchOptions);
 }
 
 export async function getAllEventRoutes(): Promise<ReleaseEventRoute[]> {
-  return client.fetch(allEventRoutesQuery, {}, fetchOptions);
+  return serverReadClient.fetch(allEventRoutesQuery, {}, fetchOptions);
 }
 
 export async function getPublishedCorrections(): Promise<
   PublishedCorrection[]
 > {
-  return restrictedReadClient.fetch(
+  return serverReadClient.fetch(
     publishedCorrectionsQuery,
     {},
     fetchOptions,
@@ -321,7 +306,7 @@ export async function getPublishedCorrections(): Promise<
 }
 
 export async function getActiveBetas(): Promise<ReleaseVersion[]> {
-  const versions = await client.fetch<ReleaseVersion[]>(
+  const versions = await serverReadClient.fetch<ReleaseVersion[]>(
     activeBetasQuery,
     {},
     fetchOptions,
@@ -330,7 +315,7 @@ export async function getActiveBetas(): Promise<ReleaseVersion[]> {
 }
 
 export async function getRecentReleases(): Promise<ReleaseVersionSummary[]> {
-  const versions = await client.fetch<ReleaseVersionSummary[]>(
+  const versions = await serverReadClient.fetch<ReleaseVersionSummary[]>(
     recentReleasesQuery,
     {},
     fetchOptions,
@@ -339,7 +324,7 @@ export async function getRecentReleases(): Promise<ReleaseVersionSummary[]> {
 }
 
 export async function getTimelineData(): Promise<ReleaseVersion[]> {
-  const versions = await client.fetch<ReleaseVersion[]>(
+  const versions = await serverReadClient.fetch<ReleaseVersion[]>(
     timelineDataQuery,
     {},
     fetchOptions
@@ -355,7 +340,7 @@ export async function getTimelineData(): Promise<ReleaseVersion[]> {
 }
 
 export async function getAnalyticsData(): Promise<ReleaseVersion[]> {
-  const versions = await client.fetch<ReleaseVersion[]>(
+  const versions = await serverReadClient.fetch<ReleaseVersion[]>(
     analyticsDataQuery,
     {},
     fetchOptions,
@@ -364,11 +349,11 @@ export async function getAnalyticsData(): Promise<ReleaseVersion[]> {
 }
 
 export async function getPlatformTrains(platform: string) {
-  return client.fetch(platformTrainsQuery, { platform }, fetchOptions);
+  return serverReadClient.fetch(platformTrainsQuery, { platform }, fetchOptions);
 }
 
 export async function getAllVersionRoutes(): Promise<ReleaseVersionRoute[]> {
-  return client.fetch(allVersionRoutesQuery, {}, fetchOptions);
+  return serverReadClient.fetch(allVersionRoutesQuery, {}, fetchOptions);
 }
 
 /**
@@ -380,7 +365,7 @@ export async function getHistoricalContext(
   platform: string,
   version: string
 ): Promise<HistoricalContext> {
-  const completed = await client.fetch<ReleaseVersion[]>(
+  const completed = await serverReadClient.fetch<ReleaseVersion[]>(
     completedVersionsQuery,
     { platform, version },
     fetchOptions

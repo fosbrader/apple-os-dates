@@ -1,0 +1,120 @@
+{
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-08-29",
+  "documentId": "sitePage.apple-release-sweep-2026-08-24",
+  "title": "Eight Apple builds landed August 24, after macOS 26.7 RC exposed unreleased hardware",
+  "slug": "apple-release-sweep-2026-08-24",
+  "summary": "Apple seeded beta 7 across six operating systems and second release candidates for macOS Tahoe 26.7 and macOS Sequoia 15.8 on August 24, 2026. The macOS 26.7 candidate followed a first RC that reporters found packed with references and assets for unannounced hardware, including a camera-equipped AirPods demonstration. A later report says RC 2 removed that material, but Apple has not documented the cleanup and Version Record has not independently compared the binaries.",
+  "seo": {
+    "title": "Apple's August 24 Builds and the macOS 26.7 Hardware Leak",
+    "description": "Apple shipped six OS 27 beta 7 builds and two macOS RC 2 builds on August 24, after macOS 26.7 RC exposed unreleased hardware references."
+  },
+  "paragraphs": [
+    "Eight distinct, platform-scoped Apple builds appeared on August 24, 2026. Six were developer beta 7 builds for the OS 27 cycle. Two were second release candidates for older Mac branches: macOS Tahoe 26.7 build 25G224 and macOS Sequoia 15.8 build 24H20. Apple's developer feed documents the six beta builds. The two Mac candidates were reported separately and do not appear in that feed.",
+    "The most consequential context sits one week earlier. Reporters inspecting macOS Tahoe 26.7 RC build 25G220 found references and assets for more than ten unannounced products. A separate inspection found a demonstration video associated with camera-equipped AirPods identified as B790, along with an image-stream error string naming the left earbud. Those are facts about material reported inside a distributed build. They are not confirmation that Apple will ship any particular product, name, design, or schedule.",
+    "MacRumors later relayed an explanation that an internal development branch was likely merged into the shipping branch by mistake. Apple has not published that explanation. Tech Times then reported that RC 2 removed the unannounced-device references, media assets, and staging code. Version Record has not independently compared the two binaries, so the cleanup is recorded as an attributed report rather than an Apple-confirmed change.",
+    "## What shipped",
+    "The August 24 developer builds were iOS 27 beta 7 and iPadOS 27 beta 7 at 24A5424a, macOS 27 beta 7 at 26A5421a, tvOS 27 beta 7 at 24J5358a, visionOS 27 beta 7 at 24M5359a, and watchOS 27 beta 7 at 24R5358a. The release candidates were macOS Tahoe 26.7 RC 2 at 25G224 and macOS Sequoia 15.8 RC 2 at 24H20.",
+    "Every beta 7 build string ends in the letter a. That shared suffix is observable, but it is not a cross-platform promise about readiness. Apple assigns and advances builds independently by platform, and the archive keeps identical strings on separate platform-scoped records.",
+    "## The cadence is weekly now",
+    "Developer beta 5 arrived August 10, beta 6 followed August 17, and beta 7 followed August 24. That is two consecutive seven-day intervals across all six OS 27 platforms. It is a clear change from the longer gap before beta 5, but cadence alone does not establish the date or build of a public release.",
+    "Public Beta 5 reached iOS, iPadOS, macOS, and tvOS on August 24 using the same platform build identifiers as beta 7. watchOS Public Beta 5 followed on August 25 at 24R5358a. Reporting on the beta program says visionOS 27 has no public-beta track, so the absence of a visionOS public-beta event is intentional rather than a missing row.",
+    "## The archive gap was larger than the release-day gap",
+    "The release sweep also exposed 24 missing public-beta channel events across iOS, iPadOS, macOS, tvOS, and watchOS. Those appearances span Public Beta 1 through Public Beta 5. The repair preserves a useful macOS detail: Public Beta 4 first appeared as build 26A5416a on August 17 and was replaced by build 26A5416b on August 18. Treating the second build as a revision keeps one public-beta milestone with two sourced appearances instead of inventing another numbered beta.",
+    "Apple's security-release index showed no newer public release across the six archived operating-system platforms after August 17 when reviewed on August 29. Safari 26.6.1 appears on August 18, but Safari is outside this operating-system archive. The August 24 sweep is therefore a prerelease wave, not a public OS release day.",
+    "## What the record supports",
+    "The record supports eight August 24 builds, a five-platform public-beta wave split across August 24 and 25, and an unusually broad leak in the first macOS 26.7 candidate. It also supports a reported cleanup in RC 2. It does not support turning internal identifiers into a product roadmap, treating the cleanup as independently verified, or predicting when the public releases will arrive."
+  ],
+  "citations": [
+    {
+      "url": "https://developer.apple.com/news/releases/",
+      "locator": "Six August 24, 2026 entries: iOS 27 beta 7 24A5424a, iPadOS 27 beta 7 24A5424a, macOS 27 beta 7 26A5421a, tvOS 27 beta 7 24J5358a, visionOS 27 beta 7 24M5359a, watchOS 27 beta 7 24R5358a",
+      "title": "Releases - Apple Developer",
+      "publisher": "Apple Developer",
+      "sourceClass": "firstPartyDocumentation"
+    },
+    {
+      "url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/",
+      "locator": "Second candidates released August 24, 2026: macOS Tahoe 26.7 build 25G224 and macOS Sequoia 15.8 build 24H20",
+      "title": "Second Release Candidates for macOS Tahoe 26.7 and macOS Sequoia 15.8 now available",
+      "publisher": "9to5Mac",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-24T00:00:00Z"
+    },
+    {
+      "url": "https://9to5mac.com/2026/08/17/apple-rolls-out-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8/",
+      "locator": "First candidates released August 17, 2026: macOS Tahoe 26.7 build 25G220 and macOS Sequoia 15.8 build 24H16",
+      "title": "Apple rolls out macOS Tahoe 26.7 and macOS Sequoia 15.8 RCs",
+      "publisher": "9to5Mac",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-17T00:00:00Z"
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/17/macos-26-7-unreleased-apple-devices/",
+      "locator": "Article body listing unannounced product references found in macOS Tahoe 26.7 RC",
+      "title": "macOS Tahoe 26.7 is Full of References to Unreleased Apple Products",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-17T00:00:00Z"
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/17/camera-equipped-airpods-macos-26-7/",
+      "locator": "Article body describing the B790 camera-equipped AirPods demonstration video and image-stream string found in macOS Tahoe 26.7 RC",
+      "title": "Apple's Camera-Equipped AirPods Confirmed: See Them in Action",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-17T00:00:00Z"
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/24/how-apple-leaked-itself/",
+      "locator": "Analysis attributing the leak to a likely internal development-branch merge while distinguishing the explanation from Apple's public record",
+      "title": "How Apple Leaked Itself",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-24T00:00:00Z"
+    },
+    {
+      "url": "https://www.techtimes.com/articles/325521/20260825/apple-erases-its-own-leak-macos-267-rc2-scrubs-foldable-iphone-camera-airpods-code.htm",
+      "locator": "Article reporting that macOS 26.7 RC 2 removed internal hardware references, media assets, and staging code",
+      "title": "Apple Erases Its Own Leak: macOS 26.7 RC2 Scrubs Foldable iPhone, Camera AirPods from Code",
+      "publisher": "Tech Times",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-25T00:00:00Z"
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/24/apple-releases-ios-27-public-beta-5/",
+      "locator": "Public Beta 5 released August 24, 2026 for iOS 27, iPadOS 27, macOS 27, and tvOS 27",
+      "title": "Apple Releases New iOS 27, iPadOS 27, macOS 27, and tvOS 27 Public Betas",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-24T00:00:00Z"
+    },
+    {
+      "url": "https://www.macobserver.com/news/apple-releases-watchos-27-public-beta-5-for-apple-watch-users/",
+      "locator": "watchOS 27 Public Beta 5 build 24R5358a released August 25, 2026",
+      "title": "Apple Releases watchOS 27 Public Beta 5 for Apple Watch Users",
+      "publisher": "The Mac Observer",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-25T00:00:00Z"
+    },
+    {
+      "url": "https://9to5mac.com/2026/06/22/apple-releases-beta-2-for-tvos-27-visionos-27-and-more/",
+      "locator": "Article stating that Apple does not offer a public beta for visionOS 27",
+      "title": "Apple releases beta 2 for tvOS 27, visionOS 27, and more",
+      "publisher": "9to5Mac",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-06-22T00:00:00Z"
+    },
+    {
+      "url": "https://support.apple.com/en-us/100100",
+      "locator": "Apple security releases table reviewed August 29, 2026; no archived public OS release later than August 17, while Safari 26.6.1 appears August 18",
+      "title": "Apple security releases",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation"
+    }
+  ],
+  "reviewNotes": "Source-backed release-sweep article reviewed August 29, 2026. Apple Developer is the primary source for the six beta 7 builds. The two RC 2 builds are independently reported because they are absent from Apple's developer feed. The RC 1 hardware artifacts are described only as reported build contents. The internal-branch explanation and RC 2 cleanup are explicitly attributed, and the article states that Apple has not confirmed either explanation and Version Record has not independently compared the binaries. Public-beta backfill counts were derived from the checked-in ingestion manifest and verified against its cited release reports. No product roadmap or public-release date is inferred."
+}
