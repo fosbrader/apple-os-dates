@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import test from "node:test";
+import { serverReadClient } from "../src/sanity/server-client";
 
 const eventPageSource = readFileSync(
   path.resolve(
@@ -48,7 +49,7 @@ test("release event pages render on demand instead of fanning out at build time"
   );
 });
 
-test("server archive reads bypass the CDN when a read token is configured", () => {
+test("server archive reads share the origin-backed server transport", () => {
   assert.match(
     sanityFetchSource,
     /import \{ serverReadClient \} from "@\/sanity\/server-client";/,
@@ -82,7 +83,7 @@ test("research and search reads share the authenticated server transport", () =>
   assert.match(researchDataSource, /serverReadClient\.fetch/);
 });
 
-test("the shared server reader prefers the deployed token and falls back locally", () => {
+test("the shared server reader bypasses the CDN with or without a token", () => {
   assert.ok(existsSync(serverClientPath), "the shared server reader must exist");
   const serverClientSource = readFileSync(serverClientPath, "utf8");
 
@@ -93,8 +94,9 @@ test("the shared server reader prefers the deployed token and falls back locally
   );
   assert.match(
     serverClientSource,
-    /export const serverReadClient = client\.withConfig\(\{[\s\S]*?useCdn:\s*!readToken,[\s\S]*?\}\);/,
+    /export const serverReadClient = client\.withConfig\(\{[\s\S]*?useCdn:\s*false,[\s\S]*?\}\);/,
   );
+  assert.equal(serverReadClient.config().useCdn, false);
 });
 
 test("the release-sweep finalizer compares Sanity values canonically", () => {

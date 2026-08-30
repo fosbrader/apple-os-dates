@@ -12,5 +12,5 @@ const readToken =
 export const serverReadClient = client.withConfig({
   ...(readToken ? { token: readToken } : {}),
   perspective: "published",
-  useCdn: !readToken,
+  useCdn: false,
 });
