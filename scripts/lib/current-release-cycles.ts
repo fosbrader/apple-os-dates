@@ -32,6 +32,9 @@ interface MilestoneDefinition {
   directArchiveIds?: boolean;
   sourceIds?: PlatformValues;
   sourceUrl?: string;
+  sourceUrls?: PlatformValues;
+  sourceLabel?: string;
+  sourceLabels?: PlatformValues;
 }
 
 interface CycleDefinition {
@@ -46,7 +49,7 @@ export interface CurrentReleaseMilestone {
   date: string;
   note?: string;
   sourceUrl: string;
-  sourceLabel: "Apple Developer";
+  sourceLabel: string;
   isRevision: boolean;
 }
 
@@ -285,10 +288,25 @@ const cycles: CycleDefinition[] = [
         dates: {
           ios: "2026-07-13",
           ipados: "2026-07-13",
+          macos: "2026-07-13",
+          tvos: "2026-07-13",
+          watchos: "2026-07-13",
         },
         notes: {
+          ios: "Build 24A5380h",
           ipados: "Build 24A5380l",
+          macos: "Build 26A5378n",
+          tvos: "Build 24J5315i",
+          watchos: "Build 24R5315i",
         },
+        sourceUrls: {
+          ios: "https://www.macrumors.com/2026/07/13/apple-seeds-ios-27-public-beta-1/",
+          ipados: "https://www.macrumors.com/2026/07/13/apple-seeds-ios-27-public-beta-1/",
+          macos: "https://www.macrumors.com/2026/07/13/macos-golden-gate-public-beta/",
+          tvos: "https://www.macrumors.com/2026/07/13/watchos-27-public-beta/",
+          watchos: "https://www.macrumors.com/2026/07/13/watchos-27-public-beta/",
+        },
+        sourceLabel: "MacRumors",
       },
       {
         label: "Beta 4",
@@ -302,8 +320,152 @@ const cycles: CycleDefinition[] = [
           watchos: "07202026l",
         },
       },
+      {
+        label: "Public Beta 2",
+        dates: {
+          ios: "2026-07-22",
+          ipados: "2026-07-22",
+          macos: "2026-07-22",
+          tvos: "2026-07-22",
+          watchos: "2026-07-22",
+        },
+        notes: {
+          ios: "Build 24A5390f",
+          ipados: "Build 24A5390f",
+          macos: "Build 26A5388g",
+          tvos: "Build 24J5325d",
+          watchos: "Build 24R5325h",
+        },
+        sourceUrls: {
+          ios: "https://www.macrumors.com/2026/07/22/apple-seeds-ios-27-public-beta-2/",
+          ipados: "https://www.macrumors.com/2026/07/22/apple-seeds-ios-27-public-beta-2/",
+          macos: "https://9to5mac.com/2026/07/22/macos-27-public-beta-2-now-available-heres-how-to-install-it/",
+          tvos: "https://www.macrumors.com/2026/07/22/watchos-27-public-beta-2/",
+          watchos: "https://www.macrumors.com/2026/07/22/watchos-27-public-beta-2/",
+        },
+        sourceLabels: {
+          ios: "MacRumors",
+          ipados: "MacRumors",
+          macos: "9to5Mac",
+          tvos: "MacRumors",
+          watchos: "MacRumors",
+        },
+      },
       { label: "Beta 5", dates: "2026-08-10" },
+      {
+        label: "Public Beta 3",
+        dates: {
+          ios: "2026-08-11",
+          ipados: "2026-08-11",
+          macos: "2026-08-11",
+          tvos: "2026-08-11",
+          watchos: "2026-08-11",
+        },
+        notes: {
+          ios: "Build 24A5408d",
+          ipados: "Build 24A5408d",
+          macos: "Build 26A5406e",
+          tvos: "Build 24J5346a",
+          watchos: "Build 24R5347a",
+        },
+        sourceUrls: {
+          ios: "https://www.macrumors.com/2026/08/11/apple-releases-ios-27-public-beta-3/",
+          ipados: "https://www.macrumors.com/2026/08/11/apple-releases-ios-27-public-beta-3/",
+          macos: "https://9to5mac.com/2026/08/11/apple-rolls-out-macos-27-golden-gate-public-beta-3-heres-how-to-install-it/",
+          tvos: "https://www.macrumors.com/2026/08/11/apple-releases-watchos-27-b3/",
+          watchos: "https://www.macrumors.com/2026/08/11/apple-releases-watchos-27-b3/",
+        },
+        sourceLabels: {
+          ios: "MacRumors",
+          ipados: "MacRumors",
+          macos: "9to5Mac",
+          tvos: "MacRumors",
+          watchos: "MacRumors",
+        },
+      },
       { label: "Beta 6", dates: "2026-08-17" },
+      {
+        label: "Public Beta 4",
+        dates: {
+          ios: "2026-08-17",
+          ipados: "2026-08-17",
+          macos: "2026-08-17",
+          tvos: "2026-08-17",
+          watchos: "2026-08-18",
+        },
+        notes: {
+          ios: "Build 24A5418b",
+          ipados: "Build 24A5418b",
+          macos: "Build 26A5416a; replaced August 18",
+          tvos: "Build 24J5353b",
+          watchos: "Build 24R5353a",
+        },
+        sourceUrls: {
+          ios: "https://www.macrumors.com/2026/08/17/apple-ios-27-public-beta-4/",
+          ipados: "https://www.macrumors.com/2026/08/17/apple-ios-27-public-beta-4/",
+          macos: "https://www.macrumors.com/2026/08/17/apple-ios-27-public-beta-4/",
+          tvos: "https://www.macrumors.com/2026/08/17/apple-ios-27-public-beta-4/",
+          watchos: "https://9to5mac.com/2026/08/18/apple-releases-public-beta-4-for-ios-27-macos-27-ipados-27-tvos-27/?extended-comments=1",
+        },
+        sourceLabels: {
+          ios: "MacRumors",
+          ipados: "MacRumors",
+          macos: "MacRumors",
+          tvos: "MacRumors",
+          watchos: "9to5Mac",
+        },
+      },
+      {
+        label: "Public Beta 4 v2",
+        dates: { macos: "2026-08-18" },
+        notes: { macos: "Build 26A5416b; replaced build 26A5416a" },
+        sourceUrl:
+          "https://9to5mac.com/2026/08/18/apple-releases-public-beta-4-for-ios-27-macos-27-ipados-27-tvos-27/?extended-comments=1",
+        sourceLabel: "9to5Mac",
+      },
+      {
+        label: "Beta 7",
+        dates: "2026-08-24",
+        notes: {
+          ios: "Build 24A5424a",
+          ipados: "Build 24A5424a",
+          macos: "Build 26A5421a",
+          tvos: "Build 24J5358a",
+          visionos: "Build 24M5359a",
+          watchos: "Build 24R5358a",
+        },
+      },
+      {
+        label: "Public Beta 5",
+        dates: {
+          ios: "2026-08-24",
+          ipados: "2026-08-24",
+          macos: "2026-08-24",
+          tvos: "2026-08-24",
+          watchos: "2026-08-25",
+        },
+        notes: {
+          ios: "Build 24A5424a",
+          ipados: "Build 24A5424a",
+          macos: "Build 26A5421a",
+          tvos: "Build 24J5358a",
+          watchos: "Build 24R5358a",
+        },
+        sourceUrls: {
+          ios: "https://9to5mac.com/2026/08/24/new-public-betas-now-available-for-ios-27-ipados-27-macos-27-golden-gate-more/",
+          ipados: "https://9to5mac.com/2026/08/24/new-public-betas-now-available-for-ios-27-ipados-27-macos-27-golden-gate-more/",
+          macos: "https://9to5mac.com/2026/08/24/new-public-betas-now-available-for-ios-27-ipados-27-macos-27-golden-gate-more/",
+          tvos: "https://9to5mac.com/2026/08/24/new-public-betas-now-available-for-ios-27-ipados-27-macos-27-golden-gate-more/",
+          watchos: "https://www.macobserver.com/news/apple-releases-watchos-27-public-beta-5-for-apple-watch-users/",
+        },
+        sourceLabels: {
+          ios: "9to5Mac",
+          ipados: "9to5Mac",
+          macos: "9to5Mac",
+          tvos: "9to5Mac",
+          watchos: "The Mac Observer",
+        },
+      },
     ],
   },
 ];
@@ -325,6 +487,11 @@ function milestoneSource(
   platform: CurrentReleasePlatform,
   date: string,
 ): string {
+  const platformSourceUrl = milestone.sourceUrls?.[platform.slug];
+  if (platformSourceUrl) {
+    return platformSourceUrl;
+  }
+
   const explicitSourceId = milestone.sourceIds?.[platform.slug];
   if (explicitSourceId) {
     return `${appleDeveloperReleasesUrl}?id=${explicitSourceId}`;
@@ -344,6 +511,17 @@ function milestoneSource(
   return appleDeveloperReleasesUrl;
 }
 
+function milestoneSourceLabel(
+  milestone: MilestoneDefinition,
+  platform: CurrentReleasePlatform,
+): string {
+  return (
+    milestone.sourceLabels?.[platform.slug] ||
+    milestone.sourceLabel ||
+    "Apple Developer"
+  );
+}
+
 export function buildCurrentReleaseVersions(): CurrentReleaseVersion[] {
   return cycles.flatMap((cycle) =>
     currentReleasePlatforms.map((platform) => {
@@ -360,7 +538,7 @@ export function buildCurrentReleaseVersions(): CurrentReleaseVersion[] {
               date,
               ...(note ? { note } : {}),
               sourceUrl: milestoneSource(milestone, platform, date),
-              sourceLabel: "Apple Developer",
+              sourceLabel: milestoneSourceLabel(milestone, platform),
               isRevision: /\bv\d+\b/i.test(milestone.label),
             },
           ];

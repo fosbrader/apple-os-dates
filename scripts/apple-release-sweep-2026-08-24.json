@@ -1,0 +1,692 @@
+{
+  "formatVersion": 1,
+  "target": {
+    "projectId": "lh3yswzu",
+    "dataset": "production"
+  },
+  "accessedAt": "2026-08-29",
+  "sources": [
+    {
+      "url": "https://developer.apple.com/news/releases/",
+      "title": "Releases - Apple Developer",
+      "publisher": "Apple Developer",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["iOS", "iPadOS", "macOS", "tvOS", "visionOS", "watchOS", "developer beta", "build numbers"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes",
+      "title": "iOS & iPadOS 27 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["iOS", "iPadOS", "27", "Beta 7", "release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes",
+      "title": "macOS 27 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["macOS", "27", "Beta 7", "release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-27-release-notes",
+      "title": "tvOS 27 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["tvOS", "27", "Beta 7", "release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-27-release-notes",
+      "title": "visionOS 27 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["visionOS", "27", "Beta 7", "release notes"]
+    },
+    {
+      "url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-27-release-notes",
+      "title": "watchOS 27 Release Notes",
+      "publisher": "Apple Developer",
+      "sourceClass": "developerDocs",
+      "topics": ["watchOS", "27", "Beta 7", "release notes"]
+    },
+    {
+      "url": "https://9to5mac.com/2026/08/17/apple-rolls-out-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8/",
+      "title": "Apple rolls out macOS Tahoe 26.7 and macOS Sequoia 15.8 RCs",
+      "publisher": "9to5Mac",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "topics": ["macOS", "Tahoe", "Sequoia", "release candidate", "build numbers"]
+    },
+    {
+      "url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/",
+      "title": "Second Release Candidates for macOS Tahoe 26.7 and macOS Sequoia 15.8 now available",
+      "publisher": "9to5Mac",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "topics": ["macOS", "Tahoe", "Sequoia", "RC 2", "build numbers"]
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/17/macos-26-7-unreleased-apple-devices/",
+      "title": "macOS Tahoe 26.7 is Full of References to Unreleased Apple Products",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "topics": ["macOS", "26.7", "release candidate", "unreleased product references"]
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/17/camera-equipped-airpods-macos-26-7/",
+      "title": "Apple's Camera-Equipped AirPods Confirmed: See Them in Action",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-17T00:00:00Z",
+      "topics": ["macOS", "26.7", "AirPods", "Visual Intelligence", "B790"]
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/24/how-apple-leaked-itself/",
+      "title": "How Apple Leaked Itself",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "topics": ["macOS", "26.7", "release candidate", "internal branch"]
+    },
+    {
+      "url": "https://www.techtimes.com/articles/325521/20260825/apple-erases-its-own-leak-macos-267-rc2-scrubs-foldable-iphone-camera-airpods-code.htm",
+      "title": "Apple Erases Its Own Leak: macOS 26.7 RC2 Scrubs Foldable iPhone, Camera AirPods from Code",
+      "publisher": "Tech Times",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-25T00:00:00Z",
+      "topics": ["macOS", "26.7", "RC 2", "reported cleanup", "AirPods"]
+    },
+    {
+      "url": "https://www.macrumors.com/2026/08/24/apple-releases-ios-27-public-beta-5/",
+      "title": "Apple Releases New iOS 27, iPadOS 27, macOS 27, and tvOS 27 Public Betas",
+      "publisher": "MacRumors",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-24T00:00:00Z",
+      "topics": ["iOS", "iPadOS", "macOS", "tvOS", "Public Beta 5"]
+    },
+    {
+      "url": "https://www.macobserver.com/news/apple-releases-watchos-27-public-beta-5-for-apple-watch-users/",
+      "title": "Apple Releases watchOS 27 Public Beta 5 for Apple Watch Users",
+      "publisher": "The Mac Observer",
+      "sourceClass": "journalism",
+      "publishedAt": "2026-08-25T00:00:00Z",
+      "topics": ["watchOS", "27", "Public Beta 5", "build number"]
+    },
+    {
+      "url": "https://support.apple.com/en-us/100100",
+      "title": "Apple security releases",
+      "publisher": "Apple Support",
+      "sourceClass": "firstPartyDocumentation",
+      "topics": ["Apple security releases", "public releases", "release dates"]
+    }
+  ],
+  "versions": [
+    {
+      "releaseVersionId": "version-macos-26-7",
+      "authorship": "originalSynthesis",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "macOS Tahoe 26.7 entered release-candidate testing on August 17, 2026 as build 25G220, followed one week later by RC 2 build 25G224. Neither appearance was a public release, and Apple had not added 26.7 to its security-release index as of August 29.",
+            "citations": [
+              {"url": "https://9to5mac.com/2026/08/17/apple-rolls-out-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8/", "locator": "macOS Tahoe 26.7 release candidate, build 25G220, August 17, 2026"},
+              {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "macOS Tahoe 26.7 RC 2, build 25G224, August 24, 2026"},
+              {"url": "https://support.apple.com/en-us/100100", "locator": "Apple security releases table reviewed August 29, 2026; no macOS Tahoe 26.7 public row"}
+            ]
+          },
+          {
+            "text": "The first candidate became notable because reporters inspecting the distributed build found references and assets for unannounced hardware, including a demonstration video associated with camera-equipped AirPods. Those artifacts establish what was present in the build; they do not confirm a product name, launch date, or commercial release.",
+            "citations": [
+              {"url": "https://www.macrumors.com/2026/08/17/macos-26-7-unreleased-apple-devices/", "locator": "Article body listing unreleased product references found in macOS Tahoe 26.7 RC"},
+              {"url": "https://www.macrumors.com/2026/08/17/camera-equipped-airpods-macos-26-7/", "locator": "Article body describing the AirPods demonstration video and B790 code string found in the RC"}
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {"url": "https://9to5mac.com/2026/08/17/apple-rolls-out-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8/", "locator": "macOS Tahoe 26.7 RC, build 25G220"},
+        {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "macOS Tahoe 26.7 RC 2, build 25G224"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"}
+    },
+    {
+      "releaseVersionId": "version-macos-15-8",
+      "authorship": "originalSynthesis",
+      "overview": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "macOS Sequoia 15.8 entered release-candidate testing on August 17, 2026 as build 24H16. Apple followed with RC 2 build 24H20 on August 24, advancing the numeric portion of the build by four over seven days.",
+            "citations": [
+              {"url": "https://9to5mac.com/2026/08/17/apple-rolls-out-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8/", "locator": "macOS Sequoia 15.8 release candidate, build 24H16, August 17, 2026"},
+              {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "macOS Sequoia 15.8 RC 2, build 24H20, August 24, 2026"}
+            ]
+          },
+          {
+            "text": "Both records are prerelease appearances. Apple had not listed macOS Sequoia 15.8 as a public security release as of August 29, so the archive does not assign a public release date or infer security contents from the candidate label.",
+            "citations": [
+              {"url": "https://support.apple.com/en-us/100100", "locator": "Apple security releases table reviewed August 29, 2026; no macOS Sequoia 15.8 public row"},
+              {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "RC 2 distribution and build number"}
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {"url": "https://9to5mac.com/2026/08/17/apple-rolls-out-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8/", "locator": "macOS Sequoia 15.8 RC, build 24H16"},
+        {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "macOS Sequoia 15.8 RC 2, build 24H20"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"}
+    }
+  ],
+  "events": [
+    {
+      "target": {"stableEventId": "event:apple:macos:26.7:rc"},
+      "authorship": "originalSynthesis",
+      "summary": "Apple seeded macOS Tahoe 26.7 RC build 25G220 on August 17, 2026. Reporting based on inspection of the distributed build found references and assets for unannounced hardware, including a camera-equipped AirPods demonstration video. Version Record records those artifacts without treating them as confirmation of future products or release timing.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple seeded the first macOS Tahoe 26.7 release candidate on August 17, 2026 as build 25G220. The candidate arrived alongside macOS Sequoia 15.8 RC, outside Apple's rolling developer releases feed.",
+            "citations": [
+              {"url": "https://9to5mac.com/2026/08/17/apple-rolls-out-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8/", "locator": "macOS Tahoe 26.7 release candidate, build 25G220, August 17, 2026"},
+              {"url": "https://developer.apple.com/news/releases/", "locator": "Releases feed reviewed for August 17, 2026 entries"}
+            ]
+          },
+          {
+            "text": "The build drew attention for what reporters found inside it. MacRumors documented references to more than ten unannounced products, while a separate inspection found a demonstration video and code string associated with camera-equipped AirPods identified as B790.",
+            "citations": [
+              {"url": "https://www.macrumors.com/2026/08/17/macos-26-7-unreleased-apple-devices/", "locator": "Article body enumerating unreleased product references in the RC"},
+              {"url": "https://www.macrumors.com/2026/08/17/camera-equipped-airpods-macos-26-7/", "locator": "Article body describing the demonstration video and B790 image-stream string"}
+            ]
+          },
+          {
+            "text": "A later MacRumors analysis relayed the view that an internal development branch was likely merged into the shipping branch by mistake. Apple has not published that explanation. The archive therefore separates the observed artifacts from the reported explanation and from any prediction about what Apple will sell.",
+            "citations": [
+              {"url": "https://www.macrumors.com/2026/08/24/how-apple-leaked-itself/", "locator": "Article discussion of the likely internal-branch merge explanation and its attribution"},
+              {"url": "https://www.macrumors.com/2026/08/17/camera-equipped-airpods-macos-26-7/", "locator": "Reported build contents"}
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {"url": "https://9to5mac.com/2026/08/17/apple-rolls-out-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8/", "locator": "macOS Tahoe 26.7 RC, build 25G220"},
+        {"url": "https://www.macrumors.com/2026/08/17/camera-equipped-airpods-macos-26-7/", "locator": "Camera-equipped AirPods video and B790 code string found in the RC"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-macos-26-7", "routeAlias": "rc-2"},
+      "identity": {
+        "releaseVersionId": "version-macos-26-7",
+        "platformId": "platform-macos",
+        "stableEventId": "event:apple:macos:26.7:rc-2",
+        "label": "RC 2",
+        "routeAlias": "rc-2",
+        "channel": "releaseCandidate",
+        "appearanceDate": "2026-08-24",
+        "sequence": 2,
+        "isRevision": true,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple seeded macOS Tahoe 26.7 RC 2 on August 24, 2026 as build 25G224, seven days after build 25G220. One outlet reports that the second candidate removed the unannounced-product references and media found in RC 1. Apple has not documented that cleanup, and Version Record records it as reported rather than confirmed.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "macOS Tahoe 26.7 RC 2 arrived on August 24, 2026 as build 25G224, one week after RC build 25G220. The numeric part of the build advanced by four, matching the movement from 24H16 to 24H20 in the macOS Sequoia 15.8 candidate released beside it.",
+            "citations": [
+              {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "RC 2 build numbers 25G224 and 24H20; one week after the first candidates"},
+              {"url": "https://9to5mac.com/2026/08/17/apple-rolls-out-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8/", "locator": "First-candidate build numbers 25G220 and 24H16"}
+            ]
+          },
+          {
+            "text": "The second candidate followed the unusually broad leak in RC 1, where reporters found unannounced-device references and a camera-equipped AirPods demonstration video. Tech Times reports that RC 2 removed those references, media assets, and staging code.",
+            "citations": [
+              {"url": "https://www.macrumors.com/2026/08/17/camera-equipped-airpods-macos-26-7/", "locator": "AirPods demonstration video and B790 code string found in RC 1"},
+              {"url": "https://www.techtimes.com/articles/325521/20260825/apple-erases-its-own-leak-macos-267-rc2-scrubs-foldable-iphone-camera-airpods-code.htm", "locator": "Article reporting that RC 2 removed internal hardware references, media assets, and staging code"}
+            ]
+          },
+          {
+            "text": "Apple has not published a change note confirming that cleanup, and Version Record has not independently compared the two binaries. The removal is therefore an attributed report, not a confirmed Apple changelog item. The existence of artifacts in RC 1 also remains separate from whether any referenced product will ship.",
+            "citations": [
+              {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "RC 2 release report listing builds without an Apple cleanup note"},
+              {"url": "https://www.macrumors.com/2026/08/24/how-apple-leaked-itself/", "locator": "Analysis distinguishing build artifacts, reported explanation, and expected cleanup"}
+            ]
+          }
+        ]
+      },
+      "changes": [
+        {
+          "key": "apple-b790-camera-airpods-references-in-shipped-builds",
+          "title": "Shipped builds reference unannounced camera-equipped AirPods (B790)",
+          "canonicalSummary": "Builds Apple seeded carry the identifier B790, reported as camera-equipped AirPods, alongside identifiers for other unannounced hardware.",
+          "category": "other",
+          "action": "removed",
+          "inheritance": "delta",
+          "summary": "Tech Times reports that macOS Tahoe 26.7 RC 2 removed the unannounced-product references, media assets, and staging code found in RC 1, including the camera-equipped AirPods material. Apple has not documented the cleanup, and Version Record has not independently compared the binaries, so this occurrence remains reported rather than confirmed.",
+          "documentedStatus": "undocumented",
+          "evidenceState": "reported",
+          "verificationMethod": "Attributed to Tech Times' comparison report. No Apple change note was available and Version Record did not independently inspect the RC 2 binary.",
+          "citations": [
+            {"url": "https://www.techtimes.com/articles/325521/20260825/apple-erases-its-own-leak-macos-267-rc2-scrubs-foldable-iphone-camera-airpods-code.htm", "locator": "Article reporting removal of internal hardware references, media assets, and staging code in build 25G224"}
+          ]
+        }
+      ],
+      "citations": [
+        {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "macOS Tahoe 26.7 RC 2, build 25G224, August 24, 2026"},
+        {"url": "https://www.techtimes.com/articles/325521/20260825/apple-erases-its-own-leak-macos-267-rc2-scrubs-foldable-iphone-camera-airpods-code.htm", "locator": "Reported cleanup in RC 2"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-macos-15-8", "routeAlias": "rc-2"},
+      "identity": {
+        "releaseVersionId": "version-macos-15-8",
+        "platformId": "platform-macos",
+        "stableEventId": "event:apple:macos:15.8:rc-2",
+        "label": "RC 2",
+        "routeAlias": "rc-2",
+        "channel": "releaseCandidate",
+        "appearanceDate": "2026-08-24",
+        "sequence": 2,
+        "isRevision": true,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple seeded macOS Sequoia 15.8 RC 2 on August 24, 2026 as build 24H20, seven days after the first candidate build 24H16. This is a prerelease appearance, not a public release, and no detailed change list accompanied the report.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple released the second macOS Sequoia 15.8 candidate on August 24, 2026 as build 24H20. It followed build 24H16 by seven days and advanced the numeric portion of the build by four.",
+            "citations": [
+              {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "macOS Sequoia 15.8 RC 2, build 24H20, August 24, 2026"},
+              {"url": "https://9to5mac.com/2026/08/17/apple-rolls-out-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8/", "locator": "macOS Sequoia 15.8 first candidate, build 24H16, August 17, 2026"}
+            ]
+          },
+          {
+            "text": "The report describes the candidate as likely to carry important security fixes but does not provide a detailed change list. Version Record therefore records the appearance and build without converting that expectation into a documented security claim.",
+            "citations": [
+              {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "Article discussion of likely security fixes and the reported build number"},
+              {"url": "https://support.apple.com/en-us/100100", "locator": "Apple security releases table reviewed August 29, 2026; no macOS Sequoia 15.8 public row"}
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "macOS Sequoia 15.8 RC 2, build 24H20"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-ios-27-0", "routeAlias": "beta-7"},
+      "identity": {
+        "releaseVersionId": "version-ios-27-0",
+        "platformId": "platform-ios",
+        "stableEventId": "event:apple:ios:27.0:beta-7",
+        "label": "Beta 7",
+        "routeAlias": "beta-7",
+        "channel": "developerBeta",
+        "appearanceDate": "2026-08-24",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released iOS 27.0 developer beta 7 on August 24, 2026 as build 24A5424a, seven days after beta 6. The fifth public beta followed the same day on the same build string.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple released iOS 27.0 developer beta 7 on August 24, 2026 as build 24A5424a. It arrived seven days after beta 6, making this the second consecutive weekly developer seed after the 21 day gap between betas 4 and 5.",
+            "citations": [
+              {"url": "https://developer.apple.com/news/releases/", "locator": "iOS 27.0 beta 7 (24A5424a); August 24, 2026"}
+            ]
+          },
+          {
+            "text": "Apple's live iOS and iPadOS 27 release notes identify the document as current for beta 7, while reporting on the same-day public wave identifies iOS 27 Public Beta 5. No platform-specific change is inferred here beyond what those sources document.",
+            "citations": [
+              {"url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes", "locator": "Current iOS & iPadOS 27 Beta 7 release notes"},
+              {"url": "https://www.macrumors.com/2026/08/24/apple-releases-ios-27-public-beta-5/", "locator": "iOS 27 Public Beta 5 released August 24, 2026"}
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {"url": "https://developer.apple.com/news/releases/", "locator": "iOS 27.0 beta 7 (24A5424a); August 24, 2026"},
+        {"url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes", "locator": "iOS & iPadOS 27 Beta 7 release notes"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-ipados-27-0", "routeAlias": "beta-7"},
+      "identity": {
+        "releaseVersionId": "version-ipados-27-0",
+        "platformId": "platform-ipados",
+        "stableEventId": "event:apple:ipados:27.0:beta-7",
+        "label": "Beta 7",
+        "routeAlias": "beta-7",
+        "channel": "developerBeta",
+        "appearanceDate": "2026-08-24",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released iPadOS 27.0 developer beta 7 on August 24, 2026 as build 24A5424a, seven days after beta 6. The fifth public beta followed the same day on the same platform-scoped build string.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple released iPadOS 27.0 developer beta 7 on August 24, 2026 as build 24A5424a. It arrived seven days after beta 6 and carries the same characters as the iOS build, while remaining a separate platform-scoped build record.",
+            "citations": [
+              {"url": "https://developer.apple.com/news/releases/", "locator": "iPadOS 27.0 beta 7 (24A5424a); August 24, 2026"}
+            ]
+          },
+          {
+            "text": "Apple's live iOS and iPadOS 27 release notes identify beta 7 as the current document state. Public Beta 5 followed on August 24, but the shared identifier is not used to copy iOS-only observations onto the iPadOS record.",
+            "citations": [
+              {"url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes", "locator": "Current iOS & iPadOS 27 Beta 7 release notes"},
+              {"url": "https://www.macrumors.com/2026/08/24/apple-releases-ios-27-public-beta-5/", "locator": "iPadOS 27 Public Beta 5 released August 24, 2026"}
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {"url": "https://developer.apple.com/news/releases/", "locator": "iPadOS 27.0 beta 7 (24A5424a); August 24, 2026"},
+        {"url": "https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes", "locator": "iOS & iPadOS 27 Beta 7 release notes"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-macos-27-0", "routeAlias": "beta-7"},
+      "identity": {
+        "releaseVersionId": "version-macos-27-0",
+        "platformId": "platform-macos",
+        "stableEventId": "event:apple:macos:27.0:beta-7",
+        "label": "Beta 7",
+        "routeAlias": "beta-7",
+        "channel": "developerBeta",
+        "appearanceDate": "2026-08-24",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released macOS 27.0 developer beta 7 on August 24, 2026 as build 26A5421a, seven days after beta 6. macOS 27 Public Beta 5 and second release candidates for macOS 26.7 and 15.8 appeared the same day.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple released macOS 27.0 developer beta 7 on August 24, 2026 as build 26A5421a. The seed followed beta 6 by seven days, extending the weekly cadence that began after beta 5.",
+            "citations": [
+              {"url": "https://developer.apple.com/news/releases/", "locator": "macOS 27.0 beta 7 (26A5421a); August 24, 2026"}
+            ]
+          },
+          {
+            "text": "The current macOS 27 release notes are labeled for beta 7. The same day also produced macOS 27 Public Beta 5 and second candidates for macOS Tahoe 26.7 and macOS Sequoia 15.8, placing three Mac release tracks on the ledger without turning any of them into a public macOS release.",
+            "citations": [
+              {"url": "https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes", "locator": "Current macOS 27 Beta 7 release notes"},
+              {"url": "https://www.macrumors.com/2026/08/24/apple-releases-ios-27-public-beta-5/", "locator": "macOS 27 Public Beta 5 released August 24, 2026"},
+              {"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "macOS 26.7 and 15.8 RC 2 released August 24, 2026"}
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {"url": "https://developer.apple.com/news/releases/", "locator": "macOS 27.0 beta 7 (26A5421a); August 24, 2026"},
+        {"url": "https://developer.apple.com/documentation/macos-release-notes/macos-27-release-notes", "locator": "macOS 27 Beta 7 release notes"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-tvos-27-0", "routeAlias": "beta-7"},
+      "identity": {
+        "releaseVersionId": "version-tvos-27-0",
+        "platformId": "platform-tvos",
+        "stableEventId": "event:apple:tvos:27.0:beta-7",
+        "label": "Beta 7",
+        "routeAlias": "beta-7",
+        "channel": "developerBeta",
+        "appearanceDate": "2026-08-24",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released tvOS 27.0 developer beta 7 on August 24, 2026 as build 24J5358a, seven days after beta 6. Public Beta 5 followed on the same day.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple released tvOS 27.0 developer beta 7 on August 24, 2026 as build 24J5358a. It followed beta 6 by seven days and was one of six OS 27 developer builds Apple listed for the date.",
+            "citations": [
+              {"url": "https://developer.apple.com/news/releases/", "locator": "tvOS 27.0 beta 7 (24J5358a); August 24, 2026"}
+            ]
+          },
+          {
+            "text": "Apple's live tvOS 27 release notes identify beta 7 as the current document state, and Public Beta 5 followed on August 24. No additional platform-specific change is added to the record without a source that attributes it to this seed.",
+            "citations": [
+              {"url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-27-release-notes", "locator": "Current tvOS 27 Beta 7 release notes"},
+              {"url": "https://www.macrumors.com/2026/08/24/apple-releases-ios-27-public-beta-5/", "locator": "tvOS 27 Public Beta 5 released August 24, 2026"}
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {"url": "https://developer.apple.com/news/releases/", "locator": "tvOS 27.0 beta 7 (24J5358a); August 24, 2026"},
+        {"url": "https://developer.apple.com/documentation/tvos-release-notes/tvos-27-release-notes", "locator": "tvOS 27 Beta 7 release notes"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-visionos-27-0", "routeAlias": "beta-7"},
+      "identity": {
+        "releaseVersionId": "version-visionos-27-0",
+        "platformId": "platform-visionos",
+        "stableEventId": "event:apple:visionos:27.0:beta-7",
+        "label": "Beta 7",
+        "routeAlias": "beta-7",
+        "channel": "developerBeta",
+        "appearanceDate": "2026-08-24",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released visionOS 27.0 developer beta 7 on August 24, 2026 as build 24M5359a, seven days after beta 6. The verified record is limited to the appearance, build, and Apple's current release notes.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple released visionOS 27.0 developer beta 7 on August 24, 2026 as build 24M5359a. The seed arrived seven days after beta 6 and was listed with the five other OS 27 developer betas released that day.",
+            "citations": [
+              {"url": "https://developer.apple.com/news/releases/", "locator": "visionOS 27.0 beta 7 (24M5359a); August 24, 2026"}
+            ]
+          },
+          {
+            "text": "Apple's live visionOS 27 release notes identify beta 7 as the current document state. Version Record found no cited, seed-specific user-facing change that met the archive's evidence threshold, so this page does not fill that gap with inference.",
+            "citations": [
+              {"url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-27-release-notes", "locator": "Current visionOS 27 Beta 7 release notes"},
+              {"url": "https://developer.apple.com/news/releases/", "locator": "visionOS 27.0 beta 7 release entry"}
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {"url": "https://developer.apple.com/news/releases/", "locator": "visionOS 27.0 beta 7 (24M5359a); August 24, 2026"},
+        {"url": "https://developer.apple.com/documentation/visionos-release-notes/visionos-27-release-notes", "locator": "visionOS 27 Beta 7 release notes"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"},
+      "isIndexable": true
+    },
+    {
+      "target": {"releaseVersionId": "version-watchos-27-0", "routeAlias": "beta-7"},
+      "identity": {
+        "releaseVersionId": "version-watchos-27-0",
+        "platformId": "platform-watchos",
+        "stableEventId": "event:apple:watchos:27.0:beta-7",
+        "label": "Beta 7",
+        "routeAlias": "beta-7",
+        "channel": "developerBeta",
+        "appearanceDate": "2026-08-24",
+        "sequence": 7,
+        "isRevision": false,
+        "availabilityState": "available",
+        "closesReleaseCycle": false
+      },
+      "authorship": "originalSynthesis",
+      "summary": "Apple released watchOS 27.0 developer beta 7 on August 24, 2026 as build 24R5358a, seven days after beta 6. Public Beta 5 followed on August 25 with the same build identifier.",
+      "article": {
+        "authorship": "originalSynthesis",
+        "blocks": [
+          {
+            "text": "Apple released watchOS 27.0 developer beta 7 on August 24, 2026 as build 24R5358a. It followed beta 6 by seven days and completed the six-platform developer wave listed by Apple for the date.",
+            "citations": [
+              {"url": "https://developer.apple.com/news/releases/", "locator": "watchOS 27.0 beta 7 (24R5358a); August 24, 2026"}
+            ]
+          },
+          {
+            "text": "The current watchOS 27 release notes are labeled for beta 7. The public channel followed on August 25, when Public Beta 5 was reported with the same build identifier, one day behind the developer appearance.",
+            "citations": [
+              {"url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-27-release-notes", "locator": "Current watchOS 27 Beta 7 release notes"},
+              {"url": "https://www.macobserver.com/news/apple-releases-watchos-27-public-beta-5-for-apple-watch-users/", "locator": "watchOS 27 Public Beta 5, build 24R5358a, August 25, 2026"}
+            ]
+          }
+        ]
+      },
+      "citations": [
+        {"url": "https://developer.apple.com/news/releases/", "locator": "watchOS 27.0 beta 7 (24R5358a); August 24, 2026"},
+        {"url": "https://developer.apple.com/documentation/watchos-release-notes/watchos-27-release-notes", "locator": "watchOS 27 Beta 7 release notes"}
+      ],
+      "provenanceStatus": "editoriallyVerified",
+      "editorialReview": {"status": "approved", "reviewedAt": "2026-08-29T16:00:00Z"},
+      "isIndexable": true
+    }
+  ],
+  "builds": [
+    {
+      "releaseVersionId": "version-ios-27-0",
+      "platformId": "platform-ios",
+      "buildNumber": "24A5424a",
+      "eventTargets": [{"releaseVersionId": "version-ios-27-0", "routeAlias": "beta-7"}],
+      "authorship": "originalSynthesis",
+      "summary": "Prerelease iOS 27.0 build distributed as developer beta 7 on August 24, 2026.",
+      "citations": [{"url": "https://developer.apple.com/news/releases/", "locator": "iOS 27.0 beta 7 (24A5424a); August 24, 2026"}],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {"status": "readyForReview"},
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-ipados-27-0",
+      "platformId": "platform-ipados",
+      "buildNumber": "24A5424a",
+      "eventTargets": [{"releaseVersionId": "version-ipados-27-0", "routeAlias": "beta-7"}],
+      "authorship": "originalSynthesis",
+      "summary": "Prerelease iPadOS 27.0 build distributed as developer beta 7 on August 24, 2026.",
+      "citations": [{"url": "https://developer.apple.com/news/releases/", "locator": "iPadOS 27.0 beta 7 (24A5424a); August 24, 2026"}],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {"status": "readyForReview"},
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-macos-27-0",
+      "platformId": "platform-macos",
+      "buildNumber": "26A5421a",
+      "eventTargets": [{"releaseVersionId": "version-macos-27-0", "routeAlias": "beta-7"}],
+      "authorship": "originalSynthesis",
+      "summary": "Prerelease macOS 27.0 build distributed as developer beta 7 on August 24, 2026.",
+      "citations": [{"url": "https://developer.apple.com/news/releases/", "locator": "macOS 27.0 beta 7 (26A5421a); August 24, 2026"}],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {"status": "readyForReview"},
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-tvos-27-0",
+      "platformId": "platform-tvos",
+      "buildNumber": "24J5358a",
+      "eventTargets": [{"releaseVersionId": "version-tvos-27-0", "routeAlias": "beta-7"}],
+      "authorship": "originalSynthesis",
+      "summary": "Prerelease tvOS 27.0 build distributed as developer beta 7 on August 24, 2026.",
+      "citations": [{"url": "https://developer.apple.com/news/releases/", "locator": "tvOS 27.0 beta 7 (24J5358a); August 24, 2026"}],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {"status": "readyForReview"},
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-visionos-27-0",
+      "platformId": "platform-visionos",
+      "buildNumber": "24M5359a",
+      "eventTargets": [{"releaseVersionId": "version-visionos-27-0", "routeAlias": "beta-7"}],
+      "authorship": "originalSynthesis",
+      "summary": "Prerelease visionOS 27.0 build distributed as developer beta 7 on August 24, 2026.",
+      "citations": [{"url": "https://developer.apple.com/news/releases/", "locator": "visionOS 27.0 beta 7 (24M5359a); August 24, 2026"}],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {"status": "readyForReview"},
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-watchos-27-0",
+      "platformId": "platform-watchos",
+      "buildNumber": "24R5358a",
+      "eventTargets": [{"releaseVersionId": "version-watchos-27-0", "routeAlias": "beta-7"}],
+      "authorship": "originalSynthesis",
+      "summary": "Prerelease watchOS 27.0 build distributed as developer beta 7 on August 24, 2026.",
+      "citations": [{"url": "https://developer.apple.com/news/releases/", "locator": "watchOS 27.0 beta 7 (24R5358a); August 24, 2026"}],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {"status": "readyForReview"},
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-macos-26-7",
+      "platformId": "platform-macos",
+      "buildNumber": "25G224",
+      "eventTargets": [{"releaseVersionId": "version-macos-26-7", "routeAlias": "rc-2"}],
+      "authorship": "originalSynthesis",
+      "summary": "Second macOS Tahoe 26.7 release-candidate build distributed on August 24, 2026.",
+      "citations": [{"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "macOS Tahoe 26.7 RC 2, build 25G224"}],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {"status": "readyForReview"},
+      "isIndexable": false
+    },
+    {
+      "releaseVersionId": "version-macos-15-8",
+      "platformId": "platform-macos",
+      "buildNumber": "24H20",
+      "eventTargets": [{"releaseVersionId": "version-macos-15-8", "routeAlias": "rc-2"}],
+      "authorship": "originalSynthesis",
+      "summary": "Second macOS Sequoia 15.8 release-candidate build distributed on August 24, 2026.",
+      "citations": [{"url": "https://9to5mac.com/2026/08/24/second-release-candidates-for-macos-tahoe-26-7-and-macos-sequoia-15-8-now-available/", "locator": "macOS Sequoia 15.8 RC 2, build 24H20"}],
+      "provenanceStatus": "sourceLinked",
+      "editorialReview": {"status": "readyForReview"},
+      "isIndexable": false
+    }
+  ]
+}

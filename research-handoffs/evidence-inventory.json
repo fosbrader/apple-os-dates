@@ -3,21 +3,21 @@
   "counts": {
     "conflictingEvents": 0,
     "conflicts": 0,
-    "eventRecords": 1991,
-    "legacyMilestones": 1991,
-    "linkedEvents": 161,
+    "eventRecords": 2021,
+    "legacyMilestones": 2021,
+    "linkedEvents": 191,
     "missingEvents": 1830,
     "quarantinedEvents": 1830,
     "quarantinedVersions": 360,
     "releaseVersions": 410,
-    "sources": 107
+    "sources": 120
   },
   "formatVersion": 1,
   "input": {
-    "migrationPlanDigest": "554043a263041bbbf98063de939677f2042ce641678ebe1a08843a8e0a7a6fe9",
+    "migrationPlanDigest": "10081be95a7c07151968c780ce8d2f76c10afcd764ba5db1b7a22e51a35e538f",
     "mode": "offline-legacy-seed",
     "path": "scripts/seed-data.json",
-    "sourceDigest": "705f659e21d756d91626374b9980d867b69e3be167ba38679a0b33893f463704"
+    "sourceDigest": "f232ef60d0c763142a27f3789d40322f0d063ca75a32be9cdd8b6cbc7ade351c"
   },
   "quarantinedRecordIds": [
     "version-ios-1-0:synthetic-cbc16f1083fe0e649693d4e2-1",
@@ -13338,10 +13338,10 @@
     },
     {
       "appearanceDate": "2026-07-13",
-      "candidateDocumentId": "release-event-f62cd9ad438e0004c17f5b2c",
+      "candidateDocumentId": "release-event-139de2ace5cf714b16edca75",
       "channel": "publicBeta",
       "evidenceIds": [
-        "evidence-source-aebfbc8f95b89c33fb298314"
+        "evidence-source-7168be722f16a7a544d8bf62"
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Public Beta 1",
@@ -13349,7 +13349,7 @@
       "platform": "iOS",
       "platformId": "platform-ios",
       "quarantineReasons": [],
-      "recordId": "version-ios-27-0:synthetic-eda87ace2cad757409663936-1",
+      "recordId": "version-ios-27-0:synthetic-a5cc93a2fd9ea6daecca1875-1",
       "releaseVersionId": "version-ios-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -13373,6 +13373,24 @@
       "version": "27.0"
     },
     {
+      "appearanceDate": "2026-07-22",
+      "candidateDocumentId": "release-event-f2bc5ff2ecc8d275eac4184d",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-7b2a804b12722fec6a1a7d13"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 2",
+      "legacySequence": 5,
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "quarantineReasons": [],
+      "recordId": "version-ios-27-0:synthetic-35a1d3bb32a966b3541634c3-1",
+      "releaseVersionId": "version-ios-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
       "appearanceDate": "2026-08-10",
       "candidateDocumentId": "release-event-500f6efccd3af6dbe006ba07",
       "channel": "developerBeta",
@@ -13381,11 +13399,29 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 5",
-      "legacySequence": 5,
+      "legacySequence": 6,
       "platform": "iOS",
       "platformId": "platform-ios",
       "quarantineReasons": [],
       "recordId": "version-ios-27-0:synthetic-5c364ff3cda555718e84e7a1-1",
+      "releaseVersionId": "version-ios-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-11",
+      "candidateDocumentId": "release-event-50ba56d2b43a0bc483dcdf49",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-ed850a27921e915d86680e5c"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 3",
+      "legacySequence": 7,
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "quarantineReasons": [],
+      "recordId": "version-ios-27-0:synthetic-ea80d646d94eba86c91bb58e-1",
       "releaseVersionId": "version-ios-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -13399,11 +13435,65 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 6",
-      "legacySequence": 6,
+      "legacySequence": 8,
       "platform": "iOS",
       "platformId": "platform-ios",
       "quarantineReasons": [],
       "recordId": "version-ios-27-0:synthetic-03fc998e660cfd3722df36e3-1",
+      "releaseVersionId": "version-ios-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-17",
+      "candidateDocumentId": "release-event-787f4f25cfeddd4295088362",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-c57d6f809bf2e3f18b50d488"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 4",
+      "legacySequence": 9,
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "quarantineReasons": [],
+      "recordId": "version-ios-27-0:synthetic-0c5fc9e79f81a2231c0e4afc-1",
+      "releaseVersionId": "version-ios-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-24",
+      "candidateDocumentId": "release-event-e3375eb0bea541e956c88f09",
+      "channel": "developerBeta",
+      "evidenceIds": [
+        "evidence-source-aebfbc8f95b89c33fb298314"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Beta 7",
+      "legacySequence": 10,
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "quarantineReasons": [],
+      "recordId": "version-ios-27-0:synthetic-613dd78f2193135e00906611-1",
+      "releaseVersionId": "version-ios-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-24",
+      "candidateDocumentId": "release-event-64af94e655c95d475dd25fa9",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-44c4e1ed04f9f4b086d1ed0a"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 5",
+      "legacySequence": 11,
+      "platform": "iOS",
+      "platformId": "platform-ios",
+      "quarantineReasons": [],
+      "recordId": "version-ios-27-0:synthetic-99f514e0ffcf6e4d9c283a0c-1",
       "releaseVersionId": "version-ios-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -19638,10 +19728,10 @@
     },
     {
       "appearanceDate": "2026-07-13",
-      "candidateDocumentId": "release-event-476048b29f31624eb39058ee",
+      "candidateDocumentId": "release-event-c379b74ead4be57f11e0d166",
       "channel": "publicBeta",
       "evidenceIds": [
-        "evidence-source-aebfbc8f95b89c33fb298314"
+        "evidence-source-7168be722f16a7a544d8bf62"
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Public Beta 1",
@@ -19649,7 +19739,7 @@
       "platform": "iPadOS",
       "platformId": "platform-ipados",
       "quarantineReasons": [],
-      "recordId": "version-ipados-27-0:synthetic-40ca11be99d7b5b3afe8827a-1",
+      "recordId": "version-ipados-27-0:synthetic-c7a84454d8e02e6ec17b955e-1",
       "releaseVersionId": "version-ipados-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -19691,6 +19781,24 @@
       "version": "27.0"
     },
     {
+      "appearanceDate": "2026-07-22",
+      "candidateDocumentId": "release-event-986f6256290e7c91a8d5b495",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-7b2a804b12722fec6a1a7d13"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 2",
+      "legacySequence": 6,
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "quarantineReasons": [],
+      "recordId": "version-ipados-27-0:synthetic-35a1d3bb32a966b3541634c3-1",
+      "releaseVersionId": "version-ipados-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
       "appearanceDate": "2026-08-10",
       "candidateDocumentId": "release-event-a1c92e023abbff404152f11a",
       "channel": "developerBeta",
@@ -19699,11 +19807,29 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 5",
-      "legacySequence": 6,
+      "legacySequence": 7,
       "platform": "iPadOS",
       "platformId": "platform-ipados",
       "quarantineReasons": [],
       "recordId": "version-ipados-27-0:synthetic-5c364ff3cda555718e84e7a1-1",
+      "releaseVersionId": "version-ipados-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-11",
+      "candidateDocumentId": "release-event-ec158ad7eb459460687f1699",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-ed850a27921e915d86680e5c"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 3",
+      "legacySequence": 8,
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "quarantineReasons": [],
+      "recordId": "version-ipados-27-0:synthetic-ea80d646d94eba86c91bb58e-1",
       "releaseVersionId": "version-ipados-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -19717,11 +19843,65 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 6",
-      "legacySequence": 7,
+      "legacySequence": 9,
       "platform": "iPadOS",
       "platformId": "platform-ipados",
       "quarantineReasons": [],
       "recordId": "version-ipados-27-0:synthetic-03fc998e660cfd3722df36e3-1",
+      "releaseVersionId": "version-ipados-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-17",
+      "candidateDocumentId": "release-event-56e09e39de7a71a92b94bca9",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-c57d6f809bf2e3f18b50d488"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 4",
+      "legacySequence": 10,
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "quarantineReasons": [],
+      "recordId": "version-ipados-27-0:synthetic-0c5fc9e79f81a2231c0e4afc-1",
+      "releaseVersionId": "version-ipados-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-24",
+      "candidateDocumentId": "release-event-e2bf8f50ce47b7e91e296a15",
+      "channel": "developerBeta",
+      "evidenceIds": [
+        "evidence-source-aebfbc8f95b89c33fb298314"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Beta 7",
+      "legacySequence": 11,
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "quarantineReasons": [],
+      "recordId": "version-ipados-27-0:synthetic-613dd78f2193135e00906611-1",
+      "releaseVersionId": "version-ipados-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-24",
+      "candidateDocumentId": "release-event-d7b6260fa5de0edbd91ecf0a",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-44c4e1ed04f9f4b086d1ed0a"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 5",
+      "legacySequence": 12,
+      "platform": "iPadOS",
+      "platformId": "platform-ipados",
+      "quarantineReasons": [],
+      "recordId": "version-ipados-27-0:synthetic-99f514e0ffcf6e4d9c283a0c-1",
       "releaseVersionId": "version-ipados-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -23489,6 +23669,24 @@
       "version": "27.0"
     },
     {
+      "appearanceDate": "2026-07-13",
+      "candidateDocumentId": "release-event-b4bda7e5431d70b6624b7faf",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-ae49123afc6db9ea7274a738"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 1",
+      "legacySequence": 4,
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "quarantineReasons": [],
+      "recordId": "version-macos-27-0:synthetic-d1806b125b8dab4c8677a506-1",
+      "releaseVersionId": "version-macos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
       "appearanceDate": "2026-07-20",
       "candidateDocumentId": "release-event-7d4a7be13273f27815c66481",
       "channel": "developerBeta",
@@ -23497,11 +23695,29 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 4",
-      "legacySequence": 4,
+      "legacySequence": 5,
       "platform": "macOS",
       "platformId": "platform-macos",
       "quarantineReasons": [],
       "recordId": "version-macos-27-0:synthetic-20c830293ef985e02202ddb5-1",
+      "releaseVersionId": "version-macos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-07-22",
+      "candidateDocumentId": "release-event-b4fa4594ae3cbec8fd072e46",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-3f3c4677f29155720b65ef8e"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 2",
+      "legacySequence": 6,
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "quarantineReasons": [],
+      "recordId": "version-macos-27-0:synthetic-941be3af444d2e7e1ebc4d43-1",
       "releaseVersionId": "version-macos-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -23515,11 +23731,47 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 5",
-      "legacySequence": 5,
+      "legacySequence": 7,
       "platform": "macOS",
       "platformId": "platform-macos",
       "quarantineReasons": [],
       "recordId": "version-macos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
+      "releaseVersionId": "version-macos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-11",
+      "candidateDocumentId": "release-event-63c05d50b18706bedde43a67",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-3f786955fdea620575074156"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 3",
+      "legacySequence": 8,
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "quarantineReasons": [],
+      "recordId": "version-macos-27-0:synthetic-773904d59607df215e1fe38d-1",
+      "releaseVersionId": "version-macos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-17",
+      "candidateDocumentId": "release-event-1beb00e6489169d3020ca96f",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-c57d6f809bf2e3f18b50d488"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 4",
+      "legacySequence": 10,
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "quarantineReasons": [],
+      "recordId": "version-macos-27-0:synthetic-33c2b008572c98f814443927-1",
       "releaseVersionId": "version-macos-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -23533,11 +23785,65 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 6",
-      "legacySequence": 6,
+      "legacySequence": 9,
       "platform": "macOS",
       "platformId": "platform-macos",
       "quarantineReasons": [],
       "recordId": "version-macos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1",
+      "releaseVersionId": "version-macos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-18",
+      "candidateDocumentId": "release-event-d4d35c2b8026c2c88422e1b1",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-c9367521b16d1783c9ea9420"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 4 v2",
+      "legacySequence": 11,
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "quarantineReasons": [],
+      "recordId": "version-macos-27-0:synthetic-21b91e976a4e6ec2cba03bb7-1",
+      "releaseVersionId": "version-macos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-24",
+      "candidateDocumentId": "release-event-846f46366721f2cc5ad536d2",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-44c4e1ed04f9f4b086d1ed0a"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 5",
+      "legacySequence": 13,
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "quarantineReasons": [],
+      "recordId": "version-macos-27-0:synthetic-7d9e237ff7f24c525134c466-1",
+      "releaseVersionId": "version-macos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-24",
+      "candidateDocumentId": "release-event-742791158e7a28eff7660024",
+      "channel": "developerBeta",
+      "evidenceIds": [
+        "evidence-source-aebfbc8f95b89c33fb298314"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Beta 7",
+      "legacySequence": 12,
+      "platform": "macOS",
+      "platformId": "platform-macos",
+      "quarantineReasons": [],
+      "recordId": "version-macos-27-0:synthetic-88cf2f4a9a997f37004e7dac-1",
       "releaseVersionId": "version-macos-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -29807,6 +30113,24 @@
       "version": "27.0"
     },
     {
+      "appearanceDate": "2026-07-13",
+      "candidateDocumentId": "release-event-bf49892eaafbb677ab2a23d0",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-fa51e766b2beed103f9e71d0"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 1",
+      "legacySequence": 3,
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "quarantineReasons": [],
+      "recordId": "version-tvos-27-0:synthetic-20e7da091c73be06056f017d-1",
+      "releaseVersionId": "version-tvos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
       "appearanceDate": "2026-07-20",
       "candidateDocumentId": "release-event-a27e057343f2906c8da284ec",
       "channel": "developerBeta",
@@ -29815,11 +30139,29 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 4",
-      "legacySequence": 3,
+      "legacySequence": 4,
       "platform": "tvOS",
       "platformId": "platform-tvos",
       "quarantineReasons": [],
       "recordId": "version-tvos-27-0:synthetic-7937e3d7436e7a7fc1549f70-1",
+      "releaseVersionId": "version-tvos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-07-22",
+      "candidateDocumentId": "release-event-f53e546f5361d37f6a94d754",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-5fef861ac2ac209181897cf4"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 2",
+      "legacySequence": 5,
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "quarantineReasons": [],
+      "recordId": "version-tvos-27-0:synthetic-294370e0e0d53825a207a40d-1",
       "releaseVersionId": "version-tvos-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -29833,11 +30175,47 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 5",
-      "legacySequence": 4,
+      "legacySequence": 6,
       "platform": "tvOS",
       "platformId": "platform-tvos",
       "quarantineReasons": [],
       "recordId": "version-tvos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
+      "releaseVersionId": "version-tvos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-11",
+      "candidateDocumentId": "release-event-315d1b51a7338ef320937330",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-94aa69bcc0d71237a793184d"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 3",
+      "legacySequence": 7,
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "quarantineReasons": [],
+      "recordId": "version-tvos-27-0:synthetic-411c90add40e2e151eb6a226-1",
+      "releaseVersionId": "version-tvos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-17",
+      "candidateDocumentId": "release-event-cc87547a06f643c2f2809bec",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-c57d6f809bf2e3f18b50d488"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 4",
+      "legacySequence": 9,
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "quarantineReasons": [],
+      "recordId": "version-tvos-27-0:synthetic-22e493d6a7feee15b89424be-1",
       "releaseVersionId": "version-tvos-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -29851,11 +30229,47 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 6",
-      "legacySequence": 5,
+      "legacySequence": 8,
       "platform": "tvOS",
       "platformId": "platform-tvos",
       "quarantineReasons": [],
       "recordId": "version-tvos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1",
+      "releaseVersionId": "version-tvos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-24",
+      "candidateDocumentId": "release-event-140541480ab52393d338dcd9",
+      "channel": "developerBeta",
+      "evidenceIds": [
+        "evidence-source-aebfbc8f95b89c33fb298314"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Beta 7",
+      "legacySequence": 10,
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "quarantineReasons": [],
+      "recordId": "version-tvos-27-0:synthetic-0650371a1669aee059e027de-1",
+      "releaseVersionId": "version-tvos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-24",
+      "candidateDocumentId": "release-event-6bd77c761e4de414cb90a098",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-44c4e1ed04f9f4b086d1ed0a"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 5",
+      "legacySequence": 11,
+      "platform": "tvOS",
+      "platformId": "platform-tvos",
+      "quarantineReasons": [],
+      "recordId": "version-tvos-27-0:synthetic-516e341f36326e60eabf4031-1",
       "releaseVersionId": "version-tvos-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -31710,6 +32124,24 @@
       "platformId": "platform-visionos",
       "quarantineReasons": [],
       "recordId": "version-visionos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1",
+      "releaseVersionId": "version-visionos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-24",
+      "candidateDocumentId": "release-event-f5f3cb9cc98e8690a86667aa",
+      "channel": "developerBeta",
+      "evidenceIds": [
+        "evidence-source-aebfbc8f95b89c33fb298314"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Beta 7",
+      "legacySequence": 6,
+      "platform": "visionOS",
+      "platformId": "platform-visionos",
+      "quarantineReasons": [],
+      "recordId": "version-visionos-27-0:synthetic-90e968f8fcde74f932b3d326-1",
       "releaseVersionId": "version-visionos-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -37637,6 +38069,24 @@
       "version": "27.0"
     },
     {
+      "appearanceDate": "2026-07-13",
+      "candidateDocumentId": "release-event-a38f9644ac1ab400f3dea5a5",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-fa51e766b2beed103f9e71d0"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 1",
+      "legacySequence": 3,
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "quarantineReasons": [],
+      "recordId": "version-watchos-27-0:synthetic-2cd79a0ebef981f94e3d1d26-1",
+      "releaseVersionId": "version-watchos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
       "appearanceDate": "2026-07-20",
       "candidateDocumentId": "release-event-fbc7ae865e9f0c73b95849e8",
       "channel": "developerBeta",
@@ -37645,11 +38095,29 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 4",
-      "legacySequence": 3,
+      "legacySequence": 4,
       "platform": "watchOS",
       "platformId": "platform-watchos",
       "quarantineReasons": [],
       "recordId": "version-watchos-27-0:synthetic-fdc4ec40c4e062307057f9ec-1",
+      "releaseVersionId": "version-watchos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-07-22",
+      "candidateDocumentId": "release-event-b0bc3df89b49566b4d801413",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-5fef861ac2ac209181897cf4"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 2",
+      "legacySequence": 5,
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "quarantineReasons": [],
+      "recordId": "version-watchos-27-0:synthetic-56a25fc05e691bc57f0faa3f-1",
       "releaseVersionId": "version-watchos-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -37663,11 +38131,29 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 5",
-      "legacySequence": 4,
+      "legacySequence": 6,
       "platform": "watchOS",
       "platformId": "platform-watchos",
       "quarantineReasons": [],
       "recordId": "version-watchos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
+      "releaseVersionId": "version-watchos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-11",
+      "candidateDocumentId": "release-event-8039a28632b8dd7e9ebd49f4",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-94aa69bcc0d71237a793184d"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 3",
+      "legacySequence": 7,
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "quarantineReasons": [],
+      "recordId": "version-watchos-27-0:synthetic-17831e79c646022e857fa38a-1",
       "releaseVersionId": "version-watchos-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -37681,11 +38167,65 @@
       ],
       "identitySource": "syntheticFingerprint",
       "label": "Beta 6",
-      "legacySequence": 5,
+      "legacySequence": 8,
       "platform": "watchOS",
       "platformId": "platform-watchos",
       "quarantineReasons": [],
       "recordId": "version-watchos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1",
+      "releaseVersionId": "version-watchos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-18",
+      "candidateDocumentId": "release-event-bd9143b5c4abf196e552f94a",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-c9367521b16d1783c9ea9420"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 4",
+      "legacySequence": 9,
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "quarantineReasons": [],
+      "recordId": "version-watchos-27-0:synthetic-d107ce72d2ec3a2277f7e194-1",
+      "releaseVersionId": "version-watchos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-24",
+      "candidateDocumentId": "release-event-e2f3363691ed59c53d67e2d0",
+      "channel": "developerBeta",
+      "evidenceIds": [
+        "evidence-source-aebfbc8f95b89c33fb298314"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Beta 7",
+      "legacySequence": 10,
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "quarantineReasons": [],
+      "recordId": "version-watchos-27-0:synthetic-89136acdecdc475153a3484a-1",
+      "releaseVersionId": "version-watchos-27-0",
+      "sourceCoverage": "linked",
+      "version": "27.0"
+    },
+    {
+      "appearanceDate": "2026-08-25",
+      "candidateDocumentId": "release-event-12dc62164737ec6eb9986888",
+      "channel": "publicBeta",
+      "evidenceIds": [
+        "evidence-source-93be4585529f457bd034a045"
+      ],
+      "identitySource": "syntheticFingerprint",
+      "label": "Public Beta 5",
+      "legacySequence": 11,
+      "platform": "watchOS",
+      "platformId": "platform-watchos",
+      "quarantineReasons": [],
+      "recordId": "version-watchos-27-0:synthetic-1c2e3d3db53c9c75c87e1160-1",
       "releaseVersionId": "version-watchos-27-0",
       "sourceCoverage": "linked",
       "version": "27.0"
@@ -40114,17 +40654,27 @@
     {
       "eventRecordIds": [
         "version-ios-27-0:synthetic-03fc998e660cfd3722df36e3-1",
+        "version-ios-27-0:synthetic-0c5fc9e79f81a2231c0e4afc-1",
         "version-ios-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
         "version-ios-27-0:synthetic-10888c72ace4879a125cb62b-1",
+        "version-ios-27-0:synthetic-35a1d3bb32a966b3541634c3-1",
         "version-ios-27-0:synthetic-5c364ff3cda555718e84e7a1-1",
         "version-ios-27-0:synthetic-5e48ff13ed1847533c9b45db-1",
+        "version-ios-27-0:synthetic-613dd78f2193135e00906611-1",
         "version-ios-27-0:synthetic-7ebc5460bf867a0e862d1c60-1",
-        "version-ios-27-0:synthetic-eda87ace2cad757409663936-1"
+        "version-ios-27-0:synthetic-99f514e0ffcf6e4d9c283a0c-1",
+        "version-ios-27-0:synthetic-a5cc93a2fd9ea6daecca1875-1",
+        "version-ios-27-0:synthetic-ea80d646d94eba86c91bb58e-1"
       ],
       "evidenceIds": [
+        "evidence-source-44c4e1ed04f9f4b086d1ed0a",
+        "evidence-source-7168be722f16a7a544d8bf62",
+        "evidence-source-7b2a804b12722fec6a1a7d13",
         "evidence-source-aebfbc8f95b89c33fb298314",
         "evidence-source-bf2c3690c73b27e079832184",
-        "evidence-source-d2159939f07e456c2b917c99"
+        "evidence-source-c57d6f809bf2e3f18b50d488",
+        "evidence-source-d2159939f07e456c2b917c99",
+        "evidence-source-ed850a27921e915d86680e5c"
       ],
       "platform": "iOS",
       "platformId": "platform-ios",
@@ -42018,19 +42568,29 @@
     {
       "eventRecordIds": [
         "version-ipados-27-0:synthetic-03fc998e660cfd3722df36e3-1",
+        "version-ipados-27-0:synthetic-0c5fc9e79f81a2231c0e4afc-1",
         "version-ipados-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
-        "version-ipados-27-0:synthetic-40ca11be99d7b5b3afe8827a-1",
+        "version-ipados-27-0:synthetic-35a1d3bb32a966b3541634c3-1",
         "version-ipados-27-0:synthetic-5c364ff3cda555718e84e7a1-1",
+        "version-ipados-27-0:synthetic-613dd78f2193135e00906611-1",
         "version-ipados-27-0:synthetic-7d0a60f4363ddcf6dc37ea2c-1",
         "version-ipados-27-0:synthetic-7ebc5460bf867a0e862d1c60-1",
+        "version-ipados-27-0:synthetic-99f514e0ffcf6e4d9c283a0c-1",
         "version-ipados-27-0:synthetic-9ba9d9528587072fb484ed3f-1",
+        "version-ipados-27-0:synthetic-c7a84454d8e02e6ec17b955e-1",
+        "version-ipados-27-0:synthetic-ea80d646d94eba86c91bb58e-1",
         "version-ipados-27-0:synthetic-f555c6ae26accbb05f399f16-1"
       ],
       "evidenceIds": [
+        "evidence-source-44c4e1ed04f9f4b086d1ed0a",
         "evidence-source-6cd1eb997820bfc22f515831",
+        "evidence-source-7168be722f16a7a544d8bf62",
+        "evidence-source-7b2a804b12722fec6a1a7d13",
         "evidence-source-aebfbc8f95b89c33fb298314",
         "evidence-source-bb307afda65eb4f0687e1f1a",
-        "evidence-source-e5e46d29cd0ce7f0ffe7143f"
+        "evidence-source-c57d6f809bf2e3f18b50d488",
+        "evidence-source-e5e46d29cd0ce7f0ffe7143f",
+        "evidence-source-ed850a27921e915d86680e5c"
       ],
       "platform": "iPadOS",
       "platformId": "platform-ipados",
@@ -42705,15 +43265,28 @@
         "version-macos-27-0:synthetic-06610eaa4e06f6611ad270e7-1",
         "version-macos-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
         "version-macos-27-0:synthetic-20c830293ef985e02202ddb5-1",
+        "version-macos-27-0:synthetic-21b91e976a4e6ec2cba03bb7-1",
+        "version-macos-27-0:synthetic-33c2b008572c98f814443927-1",
         "version-macos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
+        "version-macos-27-0:synthetic-773904d59607df215e1fe38d-1",
+        "version-macos-27-0:synthetic-7d9e237ff7f24c525134c466-1",
         "version-macos-27-0:synthetic-7ebc5460bf867a0e862d1c60-1",
         "version-macos-27-0:synthetic-8266665d4791a7c7a846d0b3-1",
-        "version-macos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1"
+        "version-macos-27-0:synthetic-88cf2f4a9a997f37004e7dac-1",
+        "version-macos-27-0:synthetic-941be3af444d2e7e1ebc4d43-1",
+        "version-macos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1",
+        "version-macos-27-0:synthetic-d1806b125b8dab4c8677a506-1"
       ],
       "evidenceIds": [
         "evidence-source-2238df06b83f22c7d3e9ce58",
+        "evidence-source-3f3c4677f29155720b65ef8e",
+        "evidence-source-3f786955fdea620575074156",
+        "evidence-source-44c4e1ed04f9f4b086d1ed0a",
         "evidence-source-85419762ba80e89f1e1ed1df",
+        "evidence-source-ae49123afc6db9ea7274a738",
         "evidence-source-aebfbc8f95b89c33fb298314",
+        "evidence-source-c57d6f809bf2e3f18b50d488",
+        "evidence-source-c9367521b16d1783c9ea9420",
         "evidence-source-d90ab033fb30313a8ea0c405"
       ],
       "platform": "macOS",
@@ -43657,17 +44230,28 @@
     },
     {
       "eventRecordIds": [
+        "version-tvos-27-0:synthetic-0650371a1669aee059e027de-1",
         "version-tvos-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
         "version-tvos-27-0:synthetic-1a7e0f956d546d5e41e0292a-1",
+        "version-tvos-27-0:synthetic-20e7da091c73be06056f017d-1",
+        "version-tvos-27-0:synthetic-22e493d6a7feee15b89424be-1",
+        "version-tvos-27-0:synthetic-294370e0e0d53825a207a40d-1",
         "version-tvos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
+        "version-tvos-27-0:synthetic-411c90add40e2e151eb6a226-1",
+        "version-tvos-27-0:synthetic-516e341f36326e60eabf4031-1",
         "version-tvos-27-0:synthetic-7937e3d7436e7a7fc1549f70-1",
         "version-tvos-27-0:synthetic-7ebc5460bf867a0e862d1c60-1",
         "version-tvos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1"
       ],
       "evidenceIds": [
         "evidence-source-015ad323327993f06f26e832",
+        "evidence-source-44c4e1ed04f9f4b086d1ed0a",
+        "evidence-source-5fef861ac2ac209181897cf4",
         "evidence-source-86fc33df1a74138703f80d3a",
-        "evidence-source-aebfbc8f95b89c33fb298314"
+        "evidence-source-94aa69bcc0d71237a793184d",
+        "evidence-source-aebfbc8f95b89c33fb298314",
+        "evidence-source-c57d6f809bf2e3f18b50d488",
+        "evidence-source-fa51e766b2beed103f9e71d0"
       ],
       "platform": "tvOS",
       "platformId": "platform-tvos",
@@ -44065,6 +44649,7 @@
         "version-visionos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
         "version-visionos-27-0:synthetic-415381743ccc2307b9f872c3-1",
         "version-visionos-27-0:synthetic-7ebc5460bf867a0e862d1c60-1",
+        "version-visionos-27-0:synthetic-90e968f8fcde74f932b3d326-1",
         "version-visionos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1",
         "version-visionos-27-0:synthetic-fbbbaea713b3b14ea2cf2408-1"
       ],
@@ -44325,15 +44910,26 @@
     {
       "eventRecordIds": [
         "version-watchos-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
+        "version-watchos-27-0:synthetic-17831e79c646022e857fa38a-1",
+        "version-watchos-27-0:synthetic-1c2e3d3db53c9c75c87e1160-1",
+        "version-watchos-27-0:synthetic-2cd79a0ebef981f94e3d1d26-1",
         "version-watchos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
+        "version-watchos-27-0:synthetic-56a25fc05e691bc57f0faa3f-1",
+        "version-watchos-27-0:synthetic-89136acdecdc475153a3484a-1",
         "version-watchos-27-0:synthetic-9f62abb7d7e764595e90325d-1",
         "version-watchos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1",
+        "version-watchos-27-0:synthetic-d107ce72d2ec3a2277f7e194-1",
         "version-watchos-27-0:synthetic-f432bbd8db4ccdbe3b1a1b89-1",
         "version-watchos-27-0:synthetic-fdc4ec40c4e062307057f9ec-1"
       ],
       "evidenceIds": [
         "evidence-source-151f08c9fa1f3530ad39f6b9",
+        "evidence-source-5fef861ac2ac209181897cf4",
+        "evidence-source-93be4585529f457bd034a045",
+        "evidence-source-94aa69bcc0d71237a793184d",
         "evidence-source-aebfbc8f95b89c33fb298314",
+        "evidence-source-c9367521b16d1783c9ea9420",
+        "evidence-source-fa51e766b2beed103f9e71d0",
         "evidence-source-fee54e752e2b0bb86e4a8680"
       ],
       "platform": "watchOS",
@@ -45567,6 +46163,69 @@
       },
       "conflictIds": [],
       "coverage": "observed",
+      "evidenceId": "evidence-source-3f3c4677f29155720b65ef8e",
+      "linkedRecordIds": [
+        "event:version-macos-27-0:synthetic-941be3af444d2e7e1ebc4d43-1"
+      ],
+      "observedLabels": [
+        "9to5Mac"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://9to5mac.com/2026/07/22/macos-27-public-beta-2-now-available-heres-how-to-install-it/"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
+      "evidenceId": "evidence-source-3f786955fdea620575074156",
+      "linkedRecordIds": [
+        "event:version-macos-27-0:synthetic-773904d59607df215e1fe38d-1"
+      ],
+      "observedLabels": [
+        "9to5Mac"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://9to5mac.com/2026/08/11/apple-rolls-out-macos-27-golden-gate-public-beta-3-heres-how-to-install-it/"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
+      "evidenceId": "evidence-source-44c4e1ed04f9f4b086d1ed0a",
+      "linkedRecordIds": [
+        "event:version-ios-27-0:synthetic-99f514e0ffcf6e4d9c283a0c-1",
+        "event:version-ipados-27-0:synthetic-99f514e0ffcf6e4d9c283a0c-1",
+        "event:version-macos-27-0:synthetic-7d9e237ff7f24c525134c466-1",
+        "event:version-tvos-27-0:synthetic-516e341f36326e60eabf4031-1"
+      ],
+      "observedLabels": [
+        "9to5Mac"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://9to5mac.com/2026/08/24/new-public-betas-now-available-for-ios-27-ipados-27-macos-27-golden-gate-more/"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
       "evidenceId": "evidence-source-4bee8db890f22c69ef8aefe4",
       "linkedRecordIds": [
         "event:version-visionos-27-0:synthetic-fbbbaea713b3b14ea2cf2408-1"
@@ -45704,6 +46363,27 @@
         "state": "unknown"
       },
       "url": "https://developer.apple.com/news/releases/?id=05042026b"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
+      "evidenceId": "evidence-source-5fef861ac2ac209181897cf4",
+      "linkedRecordIds": [
+        "event:version-tvos-27-0:synthetic-294370e0e0d53825a207a40d-1",
+        "event:version-watchos-27-0:synthetic-56a25fc05e691bc57f0faa3f-1"
+      ],
+      "observedLabels": [
+        "MacRumors"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://www.macrumors.com/2026/07/22/watchos-27-public-beta-2/"
     },
     {
       "accessDate": {
@@ -45872,6 +46552,27 @@
       },
       "conflictIds": [],
       "coverage": "observed",
+      "evidenceId": "evidence-source-7168be722f16a7a544d8bf62",
+      "linkedRecordIds": [
+        "event:version-ios-27-0:synthetic-a5cc93a2fd9ea6daecca1875-1",
+        "event:version-ipados-27-0:synthetic-c7a84454d8e02e6ec17b955e-1"
+      ],
+      "observedLabels": [
+        "MacRumors"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://www.macrumors.com/2026/07/13/apple-seeds-ios-27-public-beta-1/"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
       "evidenceId": "evidence-source-73390e3d4da469b092fa7a60",
       "linkedRecordIds": [
         "event:version-tvos-26-4:synthetic-06dca99deed68f0105553d60-1"
@@ -45944,6 +46645,27 @@
         "state": "unknown"
       },
       "url": "https://developer.apple.com/news/releases/?id=03182026f"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
+      "evidenceId": "evidence-source-7b2a804b12722fec6a1a7d13",
+      "linkedRecordIds": [
+        "event:version-ios-27-0:synthetic-35a1d3bb32a966b3541634c3-1",
+        "event:version-ipados-27-0:synthetic-35a1d3bb32a966b3541634c3-1"
+      ],
+      "observedLabels": [
+        "MacRumors"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://www.macrumors.com/2026/07/22/apple-seeds-ios-27-public-beta-2/"
     },
     {
       "accessDate": {
@@ -46172,6 +46894,26 @@
       },
       "conflictIds": [],
       "coverage": "observed",
+      "evidenceId": "evidence-source-93be4585529f457bd034a045",
+      "linkedRecordIds": [
+        "event:version-watchos-27-0:synthetic-1c2e3d3db53c9c75c87e1160-1"
+      ],
+      "observedLabels": [
+        "The Mac Observer"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://www.macobserver.com/news/apple-releases-watchos-27-public-beta-5-for-apple-watch-users/"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
       "evidenceId": "evidence-source-93d688d8a40b578ae9b9c62e",
       "linkedRecordIds": [
         "event:version-visionos-26-4:synthetic-6c7bd1e710dd8e3d248eaf39-1"
@@ -46224,6 +46966,27 @@
         "state": "unknown"
       },
       "url": "https://developer.apple.com/news/releases/?id=03092026f"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
+      "evidenceId": "evidence-source-94aa69bcc0d71237a793184d",
+      "linkedRecordIds": [
+        "event:version-tvos-27-0:synthetic-411c90add40e2e151eb6a226-1",
+        "event:version-watchos-27-0:synthetic-17831e79c646022e857fa38a-1"
+      ],
+      "observedLabels": [
+        "MacRumors"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://www.macrumors.com/2026/08/11/apple-releases-watchos-27-b3/"
     },
     {
       "accessDate": {
@@ -46453,6 +47216,26 @@
       },
       "conflictIds": [],
       "coverage": "observed",
+      "evidenceId": "evidence-source-ae49123afc6db9ea7274a738",
+      "linkedRecordIds": [
+        "event:version-macos-27-0:synthetic-d1806b125b8dab4c8677a506-1"
+      ],
+      "observedLabels": [
+        "MacRumors"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://www.macrumors.com/2026/07/13/macos-golden-gate-public-beta/"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
       "evidenceId": "evidence-source-aeb650854178f0733eeabaa5",
       "linkedRecordIds": [
         "version:version-ios-11-0",
@@ -46484,15 +47267,15 @@
         "event:version-ios-27-0:synthetic-03fc998e660cfd3722df36e3-1",
         "event:version-ios-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
         "event:version-ios-27-0:synthetic-5c364ff3cda555718e84e7a1-1",
+        "event:version-ios-27-0:synthetic-613dd78f2193135e00906611-1",
         "event:version-ios-27-0:synthetic-7ebc5460bf867a0e862d1c60-1",
-        "event:version-ios-27-0:synthetic-eda87ace2cad757409663936-1",
         "event:version-ipados-26-6:synthetic-10561783a0d9d130c64049e6-1",
         "event:version-ipados-26-6:synthetic-818b9d157cea7f3a0e903e53-1",
         "event:version-ipados-26-6:synthetic-f5a264307eb80b3cd1acf183-1",
         "event:version-ipados-27-0:synthetic-03fc998e660cfd3722df36e3-1",
         "event:version-ipados-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
-        "event:version-ipados-27-0:synthetic-40ca11be99d7b5b3afe8827a-1",
         "event:version-ipados-27-0:synthetic-5c364ff3cda555718e84e7a1-1",
+        "event:version-ipados-27-0:synthetic-613dd78f2193135e00906611-1",
         "event:version-ipados-27-0:synthetic-7ebc5460bf867a0e862d1c60-1",
         "event:version-macos-26-6:synthetic-10561783a0d9d130c64049e6-1",
         "event:version-macos-26-6:synthetic-818b9d157cea7f3a0e903e53-1",
@@ -46500,10 +47283,12 @@
         "event:version-macos-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
         "event:version-macos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
         "event:version-macos-27-0:synthetic-7ebc5460bf867a0e862d1c60-1",
+        "event:version-macos-27-0:synthetic-88cf2f4a9a997f37004e7dac-1",
         "event:version-macos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1",
         "event:version-tvos-26-6:synthetic-10561783a0d9d130c64049e6-1",
         "event:version-tvos-26-6:synthetic-818b9d157cea7f3a0e903e53-1",
         "event:version-tvos-26-6:synthetic-f5a264307eb80b3cd1acf183-1",
+        "event:version-tvos-27-0:synthetic-0650371a1669aee059e027de-1",
         "event:version-tvos-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
         "event:version-tvos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
         "event:version-tvos-27-0:synthetic-7ebc5460bf867a0e862d1c60-1",
@@ -46514,12 +47299,14 @@
         "event:version-visionos-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
         "event:version-visionos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
         "event:version-visionos-27-0:synthetic-7ebc5460bf867a0e862d1c60-1",
+        "event:version-visionos-27-0:synthetic-90e968f8fcde74f932b3d326-1",
         "event:version-visionos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1",
         "event:version-watchos-26-6:synthetic-10561783a0d9d130c64049e6-1",
         "event:version-watchos-26-6:synthetic-818b9d157cea7f3a0e903e53-1",
         "event:version-watchos-26-6:synthetic-f5a264307eb80b3cd1acf183-1",
         "event:version-watchos-27-0:synthetic-0ec2102ff0956d2fe26f85f2-1",
         "event:version-watchos-27-0:synthetic-409346a0825c30f1d7813bfe-1",
+        "event:version-watchos-27-0:synthetic-89136acdecdc475153a3484a-1",
         "event:version-watchos-27-0:synthetic-9f62abb7d7e764595e90325d-1",
         "event:version-watchos-27-0:synthetic-cd3307df6b3eedecbf7eb5f2-1"
       ],
@@ -46781,6 +47568,50 @@
         "state": "unknown"
       },
       "url": "https://developer.apple.com/news/releases/?id=04272026b"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
+      "evidenceId": "evidence-source-c57d6f809bf2e3f18b50d488",
+      "linkedRecordIds": [
+        "event:version-ios-27-0:synthetic-0c5fc9e79f81a2231c0e4afc-1",
+        "event:version-ipados-27-0:synthetic-0c5fc9e79f81a2231c0e4afc-1",
+        "event:version-macos-27-0:synthetic-33c2b008572c98f814443927-1",
+        "event:version-tvos-27-0:synthetic-22e493d6a7feee15b89424be-1"
+      ],
+      "observedLabels": [
+        "MacRumors"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://www.macrumors.com/2026/08/17/apple-ios-27-public-beta-4/"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
+      "evidenceId": "evidence-source-c9367521b16d1783c9ea9420",
+      "linkedRecordIds": [
+        "event:version-macos-27-0:synthetic-21b91e976a4e6ec2cba03bb7-1",
+        "event:version-watchos-27-0:synthetic-d107ce72d2ec3a2277f7e194-1"
+      ],
+      "observedLabels": [
+        "9to5Mac"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://9to5mac.com/2026/08/18/apple-releases-public-beta-4-for-ios-27-macos-27-ipados-27-tvos-27/?extended-comments=1"
     },
     {
       "accessDate": {
@@ -47154,6 +47985,27 @@
       },
       "conflictIds": [],
       "coverage": "observed",
+      "evidenceId": "evidence-source-ed850a27921e915d86680e5c",
+      "linkedRecordIds": [
+        "event:version-ios-27-0:synthetic-ea80d646d94eba86c91bb58e-1",
+        "event:version-ipados-27-0:synthetic-ea80d646d94eba86c91bb58e-1"
+      ],
+      "observedLabels": [
+        "MacRumors"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://www.macrumors.com/2026/08/11/apple-releases-ios-27-public-beta-3/"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
       "evidenceId": "evidence-source-edff09b257169beebcac1128",
       "linkedRecordIds": [
         "event:version-ios-26-5:synthetic-08a9bdeb07efaeebd1975c16-1"
@@ -47231,6 +48083,27 @@
         "state": "unknown"
       },
       "url": "https://developer.apple.com/news/releases/?id=05112026b"
+    },
+    {
+      "accessDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "conflictIds": [],
+      "coverage": "observed",
+      "evidenceId": "evidence-source-fa51e766b2beed103f9e71d0",
+      "linkedRecordIds": [
+        "event:version-tvos-27-0:synthetic-20e7da091c73be06056f017d-1",
+        "event:version-watchos-27-0:synthetic-2cd79a0ebef981f94e3d1d26-1"
+      ],
+      "observedLabels": [
+        "MacRumors"
+      ],
+      "sourceDate": {
+        "reason": "not-present-in-local-seed",
+        "state": "unknown"
+      },
+      "url": "https://www.macrumors.com/2026/07/13/watchos-27-public-beta/"
     },
     {
       "accessDate": {
