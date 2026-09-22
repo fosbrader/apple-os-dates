@@ -1,5 +1,10 @@
 # Version Record
 
+> Retired September 21, 2026. The website, Vercel hosting, and Sanity CMS have
+> been removed. This repository is retained as a historical source archive.
+> Setup and deployment instructions below describe the former service;
+> the original hosted resources no longer exist.
+
 Version Record is an independent, source-backed software release archive. It
 records release families, versions, channel appearances, verified builds,
 release notes, community-observed changes, citations, corrections, and
